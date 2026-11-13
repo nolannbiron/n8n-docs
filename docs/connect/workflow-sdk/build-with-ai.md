@@ -1,26 +1,43 @@
 ---
+contentType: howto
 description: >-
   Everything an AI coding agent needs to write n8n workflows as code: the MCP
   builder tools, the docs servers, Markdown access, and the recommended order.
-contentType: howto
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Build with AI
 
-This page lists what an AI coding agent needs to write [Workflow SDK](README.md) code for your n8n instance, and the order in which to use it. Point your agent here, or paste the table into its instructions.
+This page lists what an AI coding agent needs to write [Workflow SDK](./) code for your n8n instance, and the order in which to use it. Point your agent here, or paste the table into its instructions.
 
 ## What to connect
 
-| Resource | Where | Use it for |
-| --- | --- | --- |
-| n8n MCP server | Your instance, see [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md) | The builder tools below, plus workflow, execution, and credential management on your instance |
-| GitBook docs MCP server | `https://docs.n8n.io/~gitbook/mcp` | Searching and reading the n8n docs, see [Connect to the n8n docs MCP server](../connect-to-n8n-docs-mcp-server.md) |
-| Kapa.ai docs MCP server | `https://n8n.mcp.kapa.ai` | Questions the docs alone don't answer: forum threads and blog posts |
-| Docs as Markdown | Append `.md` to any docs URL, or fetch `https://docs.n8n.io/llms.txt` for the index | Reading a page without HTML |
-| n8n CLI skill | `n8n-cli skill install --global`, see [n8n CLI](../n8n-cli.md) | Managing workflows from the terminal with JSON, without an MCP server |
+| Resource                | Where                                                                               | Use it for                                                                                                         |
+| ----------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| n8n MCP server          | Your instance, see [Connect to n8n MCP server](../connect-to-n8n-mcp-server/)       | The builder tools below, plus workflow, execution, and credential management on your instance                      |
+| GitBook docs MCP server | `https://docs.n8n.io/~gitbook/mcp`                                                  | Searching and reading the n8n docs, see [Connect to the n8n docs MCP server](../connect-to-n8n-docs-mcp-server.md) |
+| Kapa.ai docs MCP server | `https://n8n.mcp.kapa.ai`                                                           | Questions the docs alone don't answer: forum threads and blog posts                                                |
+| Docs as Markdown        | Append `.md` to any docs URL, or fetch `https://docs.n8n.io/llms.txt` for the index | Reading a page without HTML                                                                                        |
+| n8n CLI skill           | `n8n-cli skill install --global`, see [n8n CLI](../n8n-cli.md)                      | Managing workflows from the terminal with JSON, without an MCP server                                              |
 
 The SDK itself ships inside n8n as the `@n8n/workflow-sdk` package. Your agent doesn't install it.
 
@@ -28,17 +45,17 @@ The SDK itself ships inside n8n as the `@n8n/workflow-sdk` package. Your agent d
 
 These tools on the n8n MCP server read and write Workflow SDK code. Parameters and output are in the [MCP server tools reference](../connect-to-n8n-mcp-server/mcp-server-tools-reference.md#workflow-builder). The tools are available from n8n 2.12.0 unless the table says otherwise.
 
-| Tool | What it returns |
-| --- | --- |
-| `get_workflow_sdk_reference` | The SDK reference: import statement, patterns, expressions, functions, rules, guidelines, and design guidance. Call it first. |
-| `get_workflow_best_practices` | A guide for one workflow technique, such as `chatbot` or `data_extraction`. Pass `list` to see the techniques. Available from n8n 2.26.0. |
-| `search_nodes` | Node ids and the resource or operation values a node needs, from a service name or a task. |
-| `get_node_types` | TypeScript type definitions for the nodes you plan to use, with their parameters. |
-| `explore_node_resources` | Live options for a node, such as the channels a Slack credential can see. Available from n8n 2.27.0. |
-| `validate_node_config` | Checks one node configuration against its schema. Available from n8n 2.25.1. |
-| `validate_workflow` | Checks a whole file. Returns errors and a hint when the code is invalid. |
-| `create_workflow_from_code` | Saves validated code as a new workflow and returns its URL. |
-| `update_workflow` | Applies an ordered batch of partial changes to an existing workflow, such as `addNode`, `updateNodeParameters`, or `addConnection`. It doesn't take a new file. |
+| Tool                          | What it returns                                                                                                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `get_workflow_sdk_reference`  | The SDK reference: import statement, patterns, expressions, functions, rules, guidelines, and design guidance. Call it first.                                   |
+| `get_workflow_best_practices` | A guide for one workflow technique, such as `chatbot` or `data_extraction`. Pass `list` to see the techniques. Available from n8n 2.26.0.                       |
+| `search_nodes`                | Node ids and the resource or operation values a node needs, from a service name or a task.                                                                      |
+| `get_node_types`              | TypeScript type definitions for the nodes you plan to use, with their parameters.                                                                               |
+| `explore_node_resources`      | Live options for a node, such as the channels a Slack credential can see. Available from n8n 2.27.0.                                                            |
+| `validate_node_config`        | Checks one node configuration against its schema. Available from n8n 2.25.1.                                                                                    |
+| `validate_workflow`           | Checks a whole file. Returns errors and a hint when the code is invalid.                                                                                        |
+| `create_workflow_from_code`   | Saves validated code as a new workflow and returns its URL.                                                                                                     |
+| `update_workflow`             | Applies an ordered batch of partial changes to an existing workflow, such as `addNode`, `updateNodeParameters`, or `addConnection`. It doesn't take a new file. |
 
 ## The order that works
 
@@ -60,7 +77,7 @@ Agents that skip the reference guess the syntax and loop on validation errors. G
 
 Paste this into your agent and change the last sentence:
 
-```text
+```
 You build n8n workflows as Workflow SDK code through the n8n MCP server.
 Before writing code, call get_workflow_sdk_reference and read the patterns section.
 For each node, call search_nodes and get_node_types to get the exact type id, version, and parameter names.

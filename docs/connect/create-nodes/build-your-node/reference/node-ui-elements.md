@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Node UI elements
@@ -415,7 +417,7 @@ Use the drag and drop component when you want users to pre-fill name and value p
 
 You can see an example in n8n's [Edit Fields (Set) node](https://github.com/n8n-io/n8n/tree/0faeab1228e26d69a2a93bdb2f89523cca1e4036/packages/nodes-base/nodes/Set/v2):
 
-![A gif showing the drag and drop action, as well as changing a field to fixed](<../../../.gitbook/assets/drag-drop-fixed-toggle (1).gif>)
+![A gif showing the drag and drop action, as well as changing a field to fixed](../../../.gitbook/assets/drag-drop-fixed-toggle.gif)
 
 ## Fixed collection <a href="#fixed-collection" id="fixed-collection"></a>
 
@@ -817,8 +819,8 @@ return [returnData];
 
 For a live example of a dynamic hint in a programmatic-style node, view the [Split Out node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Transform/SplitOut/SplitOut.node.ts#L266).
 
-[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
-
 ## Related resources
 
 * [Node building reference](./)
+
+[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

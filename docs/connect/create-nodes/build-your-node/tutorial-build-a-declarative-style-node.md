@@ -2,15 +2,32 @@
 contentType: tutorial
 nodeTitle: 'Tutorial: Build a declarative-style node'
 originalFilePath: integrations/creating-nodes/build/declarative-style-node.md
-originalUrl: 'https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node'
+originalUrl: https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node
 url: >-
   https://docs.n8n.io/connect/create-nodes/build-your-node/tutorial-build-a-declarative-style-node
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Build a declarative-style node <a href="#build-a-declarative-style-node" id="build-a-declarative-style-node"></a>
+# Tutorial: Build a declarative-style node
 
 This tutorial walks through building a declarative-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](../plan-your-node/choose-a-node-building-style.md) for more information.
 
@@ -23,9 +40,9 @@ You need the following installed on your development machine:
 
 You need some understanding of:
 
-- JavaScript/TypeScript
-- REST APIs
-- git
+* JavaScript/TypeScript
+* REST APIs
+* git
 
 ## Build your node <a href="#build-your-node" id="build-your-node"></a>
 
@@ -39,17 +56,12 @@ n8n has a built-in NASA node. To avoid clashing with the existing node, you'll g
 
 ### Step 1: Set up the project <a href="#step-1-set-up-the-project" id="step-1-set-up-the-project"></a>
 
-
-n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
+n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter.
 
 Clone the repository and navigate into the directory:
 
 1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
-2. Clone your new repository:
-		```shell
-		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-nasa-pics
-		cd n8n-nodes-nasa-pics
-		```
+2. Clone your new repository: `shell git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-nasa-pics cd n8n-nodes-nasa-pics`
 
 The starter contains example nodes and credentials. Delete the following directories and files:
 
@@ -60,10 +72,10 @@ The starter contains example nodes and credentials. Delete the following directo
 
 Now create the following directories and files:
 
-`nodes/NasaPics`  
-`nodes/NasaPics/NasaPics.node.json`  
-`nodes/NasaPics/NasaPics.node.ts`  
-`credentials/NasaPicsApi.credentials.ts`  
+`nodes/NasaPics`\
+`nodes/NasaPics/NasaPics.node.json`\
+`nodes/NasaPics/NasaPics.node.ts`\
+`credentials/NasaPicsApi.credentials.ts`
 
 These are the key files required for any node. Refer to [Node file structure](../plan-your-node/choose-node-file-structure.md) for more information on required files and recommended organization.
 
@@ -77,7 +89,6 @@ npm i
 
 Save [the NASA SVG logo](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg) as `nasapics.svg` in `nodes/NasaPics/`.
 
-
 n8n recommends using an SVG for your node icon, but you can also use PNG. If using PNG, the icon resolution should be 60x60px. Node icons should have a square or near-square aspect ratio.
 
 {% hint style="info" %}
@@ -86,10 +97,9 @@ n8n recommends using an SVG for your node icon, but you can also use PNG. If usi
 If you want to use a Font Awesome icon in your node, download and embed the image. Don't set `defaults.color`: it only tints Font Awesome icons, and n8n 3.0 removes it.
 {% endhint %}
 
-
 ### Step 3: Create the node <a href="#step-3-create-the-node" id="step-3-create-the-node"></a>
 
-Every node must have a base file. Refer to [Node base file](reference/base-files/README.md) for detailed information about base file parameters.
+Every node must have a base file. Refer to [Node base file](reference/base-files/) for detailed information about base file parameters.
 
 In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](../plan-your-node/choose-node-file-structure.md) for more information.
 
@@ -111,6 +121,7 @@ The node must export an interface that implements INodeType. This interface must
 
 Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
 {% endhint %}
+
 ```typescript
 export class NasaPics implements INodeType {
 	description: INodeTypeDescription = {
@@ -349,7 +360,6 @@ For this tutorial, you'll add one additional field, to allow users to pick a dat
 }
 ```
 
-
 ### Step 4: Set up authentication and a credential test <a href="#step-4-set-up-authentication-and-a-credential-test" id="step-4-set-up-authentication-and-a-credential-test"></a>
 
 The NASA API requires users to authenticate with an API key. You can also send a request to check that the API key works.
@@ -396,7 +406,6 @@ export class NasaPicsApi implements ICredentialType {
 ```
 
 For more information about credentials files and options, refer to [Credentials file](reference/credentials-files.md).
-
 
 ### Step 5: Add node metadata <a href="#step-5-add-node-metadata" id="step-5-add-node-metadata"></a>
 
@@ -485,40 +494,47 @@ You need to update the `package.json` to include your own information, such as y
 
 ## Test your node <a href="#test-your-node" id="test-your-node"></a>
 
-You can test your node as you build it by running it in a local n8n instance with the [`n8n-node` tool](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/using-the-n8n-node-tool). `n8n-node` includes n8n, so you don't need a global n8n installation.
+You can test your node as you build it by running it in a local n8n instance with the [`n8n-node` tool](using-the-n8n-node-tool.md). `n8n-node` includes n8n, so you don't need a global n8n installation.
 
-1. In your project's root directory, run the `dev` command:
-	```shell
-	npm run dev
-	```
-	This runs `n8n-node dev`, which builds your node, links it into the n8n custom nodes directory, starts a local n8n instance with your node loaded, and rebuilds your node when you change a file.
+1.  In your project's root directory, run the `dev` command:
 
-	{% hint style="info" %}
-	**Custom nodes directory**
+    ```shell
+    npm run dev
+    ```
 
-	`n8n-node dev` uses its own n8n user folder, `.n8n-node-cli`, so it doesn't touch an existing n8n installation. The default location depends on your operating system:
-	- For Windows: `C:\Users\<username>\.n8n-node-cli\.n8n\custom`
-	- For Linux: `/home/<username>/.n8n-node-cli/.n8n/custom`
-	- For macOS: `/Users/<username>/.n8n-node-cli/.n8n/custom`
+    This runs `n8n-node dev`, which builds your node, links it into the n8n custom nodes directory, starts a local n8n instance with your node loaded, and rebuilds your node when you change a file.
 
-	To test against an n8n instance you run yourself, pass `--external-n8n` and set `--custom-user-folder <path>` to that instance's user folder (the parent of its `.n8n` directory). Set `N8N_DEV_RELOAD=true` on that instance so it picks up your changes.
+{% hint style="info" %}
+**Custom nodes directory**
 
-	Note: `.n8n-node-cli` and `.n8n` are hidden folders, so your file browser may not show them.
-	{% endhint %}
+```
+`n8n-node dev` uses its own n8n user folder, `.n8n-node-cli`, so it doesn't touch an existing n8n installation. The default location depends on your operating system:
+- For Windows: `C:\Users\<username>\.n8n-node-cli\.n8n\custom`
+- For Linux: `/home/<username>/.n8n-node-cli/.n8n/custom`
+- For macOS: `/Users/<username>/.n8n-node-cli/.n8n/custom`
+
+To test against an n8n instance you run yourself, pass `--external-n8n` and set `--custom-user-folder <path>` to that instance's user folder (the parent of its `.n8n` directory). Set `N8N_DEV_RELOAD=true` on that instance so it picks up your changes.
+
+Note: `.n8n-node-cli` and `.n8n` are hidden folders, so your file browser may not show them.
+```
+{% endhint %}
+
 2. Open `http://localhost:5678` in your browser and sign in to your n8n instance.
 3. Open a workflow and search for your node in the nodes panel.
 
-	{% hint style="info" %}
-	**Node names**
+{% hint style="info" %}
+**Node names**
 
-	Make sure you search using the node name, not the package name. For example, if your npm package name is `n8n-nodes-weather-nodes`, and the package contains nodes named `rain`, `sun`, `snow`, you should search for `rain`, not `weather-nodes`.
-	{% endhint %}
+```
+Make sure you search using the node name, not the package name. For example, if your npm package name is `n8n-nodes-weather-nodes`, and the package contains nodes named `rain`, `sun`, `snow`, you should search for `rain`, not `weather-nodes`.
+```
+{% endhint %}
 
 Add the node to your workflow and test it as you develop. To stop n8n, press `ctrl` + `c`.
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-* [Deploy your node](../deploy-your-node/README.md).
+* [Deploy your node](../deploy-your-node/).
 * View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo). Note that the main node is declarative, while the trigger node is in programmatic style.
 * Learn about [node versioning](reference/versioning.md).
 
@@ -528,4 +544,4 @@ Add the node to your workflow and test it as you develop. To stop n8n, press `ct
 * [Set up your development environment](set-up-your-development-environment.md)
 * [Using the n8n-node tool](using-the-n8n-node-tool.md)
 * [Tutorial: Build a programmatic-style node](tutorial-build-a-programmatic-style-node.md)
-* [Reference](reference/README.md)
+* [Reference](reference/)

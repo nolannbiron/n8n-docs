@@ -2,15 +2,32 @@
 contentType: tutorial
 nodeTitle: 'Tutorial: Build a programmatic-style node'
 originalFilePath: integrations/creating-nodes/build/programmatic-style-node.md
-originalUrl: 'https://docs.n8n.io/integrations/creating-nodes/build/programmatic-style-node'
+originalUrl: https://docs.n8n.io/integrations/creating-nodes/build/programmatic-style-node
 url: >-
   https://docs.n8n.io/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Build a programmatic-style node <a href="#build-a-programmatic-style-node" id="build-a-programmatic-style-node"></a>
+# Tutorial: Build a programmatic-style node
 
 This tutorial walks through building a programmatic-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](../plan-your-node/choose-a-node-building-style.md) for more information.
 
@@ -23,11 +40,10 @@ You need the following installed on your development machine:
 
 You need some understanding of:
 
-- JavaScript/TypeScript
-- REST APIs
-- git
-- Expressions[^1] in n8n
-
+* JavaScript/TypeScript
+* REST APIs
+* git
+* Expressions[^1] in n8n
 
 ## Build your node <a href="#build-your-node" id="build-your-node"></a>
 
@@ -41,16 +57,12 @@ n8n has a built-in SendGrid node. To avoid clashing with the existing node, you'
 
 ### Step 1: Set up the project <a href="#step-1-set-up-the-project" id="step-1-set-up-the-project"></a>
 
-n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
+n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter.
 
 Clone the repository and navigate into the directory:
 
 1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
-2. Clone your new repository:
-		```shell
-		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-friendgrid
-		cd n8n-nodes-friendgrid
-		```
+2. Clone your new repository: `shell git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-friendgrid cd n8n-nodes-friendgrid`
 
 The starter contains example nodes and credentials. Delete the following directories and files:
 
@@ -61,10 +73,10 @@ The starter contains example nodes and credentials. Delete the following directo
 
 Now create the following directories and files:
 
-`nodes/FriendGrid`  
-`nodes/FriendGrid/FriendGrid.node.json`  
-`nodes/FriendGrid/FriendGrid.node.ts`  
-`credentials/FriendGridApi.credentials.ts`  
+`nodes/FriendGrid`\
+`nodes/FriendGrid/FriendGrid.node.json`\
+`nodes/FriendGrid/FriendGrid.node.ts`\
+`credentials/FriendGridApi.credentials.ts`
 
 These are the key files required for any node. Refer to [Node file structure](../plan-your-node/choose-node-file-structure.md) for more information on required files and recommended organization.
 
@@ -78,7 +90,6 @@ npm i
 
 Save [the SendGrid SVG logo](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg) as `friendGrid.svg` in `nodes/FriendGrid/`.
 
-
 n8n recommends using an SVG for your node icon, but you can also use PNG. If using PNG, the icon resolution should be 60x60px. Node icons should have a square or near-square aspect ratio.
 
 {% hint style="info" %}
@@ -87,10 +98,9 @@ n8n recommends using an SVG for your node icon, but you can also use PNG. If usi
 If you want to use a Font Awesome icon in your node, download and embed the image. Don't set `defaults.color`: it only tints Font Awesome icons, and n8n 3.0 removes it.
 {% endhint %}
 
-
 ### Step 3: Define the node in the base file <a href="#step-3-define-the-node-in-the-base-file" id="step-3-define-the-node-in-the-base-file"></a>
 
-Every node must have a base file. Refer to [Node base file](reference/base-files/README.md) for detailed information about base file parameters.
+Every node must have a base file. Refer to [Node base file](reference/base-files/) for detailed information about base file parameters.
 
 In this example, the file is `FriendGrid.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](../plan-your-node/choose-node-file-structure.md) for more information.
 
@@ -119,6 +129,7 @@ The node must export an interface that implements `INodeType`. This interface mu
 
 Make sure the class name and the file name match. For example, given a class `FriendGrid`, the filename must be `FriendGrid.node.ts`.
 {% endhint %}
+
 ```typescript
 export class FriendGrid implements INodeType {
 	description: INodeTypeDescription = {
@@ -364,7 +375,6 @@ Users can provide data in two ways:
 
 `getInputData()`, and the subsequent loop, allows the node to handle situations where data comes from a previous node. This includes supporting multiple inputs. This means that if, for example, the previous node outputs contact information for five people, your FriendGrid node can create five contacts.
 
-
 ### Step 5: Set up authentication <a href="#step-5-set-up-authentication" id="step-5-set-up-authentication"></a>
 
 The SendGrid API requires users to authenticate with an API key.
@@ -443,7 +453,6 @@ Add the following code to the JSON file:
 
 For more information on these parameters, refer to [Node codex files](reference/codex-files.md).
 
-
 ### Step 7: Update the npm package details <a href="#step-7-update-the-npm-package-details" id="step-7-update-the-npm-package-details"></a>
 
 Your npm package details are in the `package.json` at the root of the project. It's essential to include the `n8n` object with links to the credentials and base node file. Update this file to include the following information:
@@ -498,49 +507,52 @@ Your npm package details are in the `package.json` at the root of the project. I
 
 You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
-
-
 ## Test your node <a href="#test-your-node" id="test-your-node"></a>
 
-You can test your node as you build it by running it in a local n8n instance with the [`n8n-node` tool](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/using-the-n8n-node-tool). `n8n-node` includes n8n, so you don't need a global n8n installation.
+You can test your node as you build it by running it in a local n8n instance with the [`n8n-node` tool](using-the-n8n-node-tool.md). `n8n-node` includes n8n, so you don't need a global n8n installation.
 
-1. In your project's root directory, run the `dev` command:
-	```shell
-	npm run dev
-	```
-	This runs `n8n-node dev`, which builds your node, links it into the n8n custom nodes directory, starts a local n8n instance with your node loaded, and rebuilds your node when you change a file.
+1.  In your project's root directory, run the `dev` command:
 
-	{% hint style="info" %}
-	**Custom nodes directory**
+    ```shell
+    npm run dev
+    ```
 
-	`n8n-node dev` uses its own n8n user folder, `.n8n-node-cli`, so it doesn't touch an existing n8n installation. The default location depends on your operating system:
-	- For Windows: `C:\Users\<username>\.n8n-node-cli\.n8n\custom`
-	- For Linux: `/home/<username>/.n8n-node-cli/.n8n/custom`
-	- For macOS: `/Users/<username>/.n8n-node-cli/.n8n/custom`
+    This runs `n8n-node dev`, which builds your node, links it into the n8n custom nodes directory, starts a local n8n instance with your node loaded, and rebuilds your node when you change a file.
 
-	To test against an n8n instance you run yourself, pass `--external-n8n` and set `--custom-user-folder <path>` to that instance's user folder (the parent of its `.n8n` directory). Set `N8N_DEV_RELOAD=true` on that instance so it picks up your changes.
+{% hint style="info" %}
+**Custom nodes directory**
 
-	Note: `.n8n-node-cli` and `.n8n` are hidden folders, so your file browser may not show them.
-	{% endhint %}
+```
+`n8n-node dev` uses its own n8n user folder, `.n8n-node-cli`, so it doesn't touch an existing n8n installation. The default location depends on your operating system:
+- For Windows: `C:\Users\<username>\.n8n-node-cli\.n8n\custom`
+- For Linux: `/home/<username>/.n8n-node-cli/.n8n/custom`
+- For macOS: `/Users/<username>/.n8n-node-cli/.n8n/custom`
+
+To test against an n8n instance you run yourself, pass `--external-n8n` and set `--custom-user-folder <path>` to that instance's user folder (the parent of its `.n8n` directory). Set `N8N_DEV_RELOAD=true` on that instance so it picks up your changes.
+
+Note: `.n8n-node-cli` and `.n8n` are hidden folders, so your file browser may not show them.
+```
+{% endhint %}
+
 2. Open `http://localhost:5678` in your browser and sign in to your n8n instance.
 3. Open a workflow and search for your node in the nodes panel.
 
-	{% hint style="info" %}
-	**Node names**
+{% hint style="info" %}
+**Node names**
 
-	Make sure you search using the node name, not the package name. For example, if your npm package name is `n8n-nodes-weather-nodes`, and the package contains nodes named `rain`, `sun`, `snow`, you should search for `rain`, not `weather-nodes`.
-	{% endhint %}
+```
+Make sure you search using the node name, not the package name. For example, if your npm package name is `n8n-nodes-weather-nodes`, and the package contains nodes named `rain`, `sun`, `snow`, you should search for `rain`, not `weather-nodes`.
+```
+{% endhint %}
 
 Add the node to your workflow and test it as you develop. To stop n8n, press `ctrl` + `c`.
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-* [Deploy your node](../deploy-your-node/README.md).
+* [Deploy your node](../deploy-your-node/).
 * View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost). This is an example of a more complex programmatic node structure.
 * Learn about [node versioning](reference/versioning.md).
 * Make sure you understand key concepts: [item linking](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) and [data structures](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure).
-
-[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
 
 ## Related resources
 
@@ -548,4 +560,6 @@ Add the node to your workflow and test it as you develop. To stop n8n, press `ct
 * [Set up your development environment](set-up-your-development-environment.md)
 * [Using the n8n-node tool](using-the-n8n-node-tool.md)
 * [Tutorial: Build a declarative-style node](tutorial-build-a-declarative-style-node.md)
-* [Reference](reference/README.md)
+* [Reference](reference/)
+
+[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

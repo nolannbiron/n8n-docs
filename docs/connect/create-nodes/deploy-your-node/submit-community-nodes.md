@@ -2,28 +2,45 @@
 contentType: howto
 nodeTitle: Submit community nodes
 originalFilePath: integrations/creating-nodes/deploy/submit-community-nodes.md
-originalUrl: 'https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes'
+originalUrl: https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes
 url: >-
   https://docs.n8n.io/connect/create-nodes/deploy-your-node/submit-community-nodes
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Submit community nodes <a href="#submit-community-nodes" id="submit-community-nodes"></a>
+# Submit community nodes
 
 Community nodes are npm packages, hosted in the npm registry.
 
 When building a node to submit to the community node repository, use the following resources to make sure your node setup is correct:
 
-* n8n recommends using the [`n8n-node` CLI tool](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/using-the-n8n-node-tool) to build and test your node. In particular, this is important if you plan on [submitting your node for verification](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/deploy-your-node/submit-community-nodes#submit-your-node-for-verification-by-n8n). This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
+* n8n recommends using the [`n8n-node` CLI tool](../build-your-node/using-the-n8n-node-tool.md) to build and test your node. In particular, this is important if you plan on [submitting your node for verification](submit-community-nodes.md#submit-your-node-for-verification-by-n8n). This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
 * View [n8n's own nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes) for examples of patterns you can use in your nodes.
-* Refer to the documentation on [building your own nodes](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/overview).
+* Refer to the documentation on [building your own nodes](../overview.md).
 * Make sure your node respects the following standards for community nodes.
 
 ## Standards <a href="#standards" id="standards"></a>
 
-Developing with the [`n8n-node` tool](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/using-the-n8n-node-tool) ensures that your node adheres to the following standards required to make your node available in the n8n community node repository:
+Developing with the [`n8n-node` tool](../build-your-node/using-the-n8n-node-tool.md) ensures that your node adheres to the following standards required to make your node available in the n8n community node repository:
 
 * Make sure the package name starts with `n8n-nodes-` or `@<scope>/n8n-nodes-`. For example, `n8n-nodes-weather` or `@weatherPlugins/n8n-nodes-weather`.
 * Include `n8n-community-node-package` in your package keywords.
@@ -62,9 +79,9 @@ Configure npm to trust your repository's GitHub Actions workflow so it can publi
 1. Log in to [npmjs.com](https://www.npmjs.com/) and open your package's settings.
 2. Under **Publish access > Trusted Publishers**, click **Add a publisher**.
 3. Select **GitHub Actions** and fill in:
-   - **Repository owner**: your GitHub username or organisation
-   - **Repository name**: your repository name
-   - **Workflow name**: `publish.yml` (the filename, not the workflow `name:` field)
+   * **Repository owner**: your GitHub username or organisation
+   * **Repository name**: your repository name
+   * **Workflow name**: `publish.yml` (the filename, not the workflow `name:` field)
 
 To use a token instead, create a Granular Access Token on npmjs.com and store it as `NPM_TOKEN` in your repository's Actions secrets. See the comments in the workflow file for details.
 
@@ -80,13 +97,14 @@ From May 1st 2026, nodes submitted for verification through the [n8n Creator Por
 
 Before submitting your node for review by n8n, you must:
 
-* Start from the [`n8n-node` tool](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/using-the-n8n-node-tool) generated scaffolding. While this isn't strictly required, n8n strongly suggests using the `n8n-node` CLI tool for any community node you plan to submit for verification. Using the tool ensures that your node follows the expected conventions and adheres to the community node requirements.
-* Make sure that your node follows the [technical guidelines for verified community nodes](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/verification-guidelines) and that all automated checks pass. Specifically, verified community nodes aren't allowed to use any run-time dependencies.
-* Ensure that your node follows the [UX guidelines](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/ux-guidelines).
+* Start from the [`n8n-node` tool](../build-your-node/using-the-n8n-node-tool.md) generated scaffolding. While this isn't strictly required, n8n strongly suggests using the `n8n-node` CLI tool for any community node you plan to submit for verification. Using the tool ensures that your node follows the expected conventions and adheres to the community node requirements.
+* Make sure that your node follows the [technical guidelines for verified community nodes](../build-your-node/reference/verification-guidelines.md) and that all automated checks pass. Specifically, verified community nodes aren't allowed to use any run-time dependencies.
+* Ensure that your node follows the [UX guidelines](../build-your-node/reference/ux-guidelines.md).
 * Make sure that the node has appropriate documentation in the form of a README in the [npm package](https://docs.npmjs.com/about-package-readme-files) or a related public repository.
 * Publish your node to npm using a GitHub Actions workflow with provenance, as described in **Publishing to npm**. n8n will fetch it from there for final vetting.
 
 ## Ready to submit? <a href="#ready-to-submit" id="ready-to-submit"></a>
+
 If your node meets all the above requirements, sign up or log in to the [n8n Creator Portal](https://creators.n8n.io/nodes) and submit your node for verification.
 
 Reviews can take up to four weeks. n8n emails you as your submission moves through review.

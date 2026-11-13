@@ -1,8 +1,5 @@
 ---
 title: n8n public REST API Documentation and Guides
-description: >-
-  Use n8n's public REST API to perform tasks programmatically instead of
-  through the GUI.
 contentType: overview
 search:
   boost: 5
@@ -11,22 +8,42 @@ hide:
   - kapaButton
 nodeTitle: n8n API
 originalFilePath: api/index.md
-originalUrl: 'https://docs.n8n.io/api'
-url: 'https://docs.n8n.io/connect/'
+originalUrl: https://docs.n8n.io/api
+url: https://docs.n8n.io/connect/
+description: >-
+  Use n8n's public REST API to perform tasks programmatically instead of through
+  the GUI.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# n8n public REST API <a href="#n8n-public-rest-api" id="n8n-public-rest-api"></a>
+# n8n API
 
 {% hint style="info" %}
 **Feature availability**
 
 The n8n API is available on:
 
-- **n8n Cloud:** Starter, Pro, Enterprise
-- **Self-hosted:** All editions
+* **n8n Cloud:** Starter, Pro, Enterprise
+* **Self-hosted:** All editions
 
 It isn't available on the free trial.
 {% endhint %}
@@ -47,13 +64,17 @@ n8n provides an [n8n API node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/bu
 ## Choose your interaction method <a href="#choose-your-interaction-method" id="choose-your-interaction-method"></a>
 
 ### REST API (this section) <a href="#rest-api-this-section" id="rest-api-this-section"></a>
+
 Interact with n8n directly using HTTP requests. Ideal for:
+
 * Custom integrations and applications
 * Language-agnostic HTTP calls
 * Direct REST API usage in workflows
 
 ### n8n CLI (recommended for developers) <a href="#n8n-cli-recommended-for-developers" id="n8n-cli-recommended-for-developers"></a>
+
 Use [n8n CLI](../n8n-cli.md) for a command-line experience. It wraps the public API and is a good fit for:
+
 * Command-line automation and scripting
 * CI/CD pipeline integration
 * AI agent integration (Claude Code, Cursor, etc.)
@@ -74,12 +95,12 @@ The API documentation assumes you are familiar with REST APIs. If you're not, th
 Trying out the API in the [playground](use-an-api-playground.md) can help you understand how APIs work. If you're worried about changing live data, consider setting up a test workflow, or test n8n instance, to explore safely.
 {% endhint %}
 
-[^1]: APIs, or application programming interfaces, offer programmatic access to a service's data and functionality. APIs make it easier for software to interact with external systems. They're often offered as an alternative to traditional user-focused interfaces accessed through web browsers or UI.
-
 ## Related resources
 
 * [Connect](../)
 * [n8n CLI](../n8n-cli.md)
-* [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md)
+* [Connect to n8n MCP server](../connect-to-n8n-mcp-server/)
 * [Connect to the n8n docs MCP server](../connect-to-n8n-docs-mcp-server.md)
-* [Create nodes](../create-nodes/README.md)
+* [Create nodes](../create-nodes/)
+
+[^1]: APIs, or application programming interfaces, offer programmatic access to a service's data and functionality. APIs make it easier for software to interact with external systems. They're often offered as an alternative to traditional user-focused interfaces accessed through web browsers or UI.

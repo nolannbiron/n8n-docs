@@ -1,20 +1,37 @@
 ---
 title: MCP client connection examples
 description: >-
-  Copy-paste connection commands and configuration for Lovable, Claude
-  Desktop, Claude Code, Codex, Gemini CLI, Cursor, VS Code, Windsurf, and
-  Google ADK agents.
+  Copy-paste connection commands and configuration for Lovable, Claude Desktop,
+  Claude Code, Codex, Gemini CLI, Cursor, VS Code, Windsurf, and Google ADK
+  agents.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# MCP client connection examples <a href="#mcp-client-connection-examples" id="mcp-client-connection-examples"></a>
+# MCP client connection examples
 
-These examples show the exact commands and configuration for connecting specific clients to n8n's MCP server. Before using them, [enable MCP access](../connect-to-n8n-mcp-server.md#enabling-mcp-access) on your instance and choose an authentication method, see [Connecting MCP clients](../connect-to-n8n-mcp-server.md#setting-up-mcp-authentication).
+These examples show the exact commands and configuration for connecting specific clients to n8n's MCP server. Before using them, [enable MCP access](./#enabling-mcp-access) on your instance and choose an authentication method, see [Connecting MCP clients](./#setting-up-mcp-authentication).
 
 {% hint style="info" %}
-The **Connect a client** dialog (available from n8n 2.33.0) provides one-click setup to connect Claude.ai, Cursor, and VS Code. It also provides interactive setup steps for Claude Code, Codex, Gemini CLI, ChatGPT, and Windsurf. See [Using OAuth (recommended)](../connect-to-n8n-mcp-server.md#using-oauth2) for how to open the dialog and pick your client.
+The **Connect a client** dialog (available from n8n 2.33.0) provides one-click setup to connect Claude.ai, Cursor, and VS Code. It also provides interactive setup steps for Claude Code, Codex, Gemini CLI, ChatGPT, and Windsurf. See [Using OAuth (recommended)](./#using-oauth2) for how to open the dialog and pick your client.
 
 The examples below are useful if interactive steps aren't shown in n8n for your chosen client, for reference purposes, or for manual configuration.
 {% endhint %}
@@ -301,9 +318,9 @@ For more details, see [Connect ADK agent to n8n](https://google.github.io/adk-do
 
 ## Troubleshooting
 
-If a client doesn't connect using the steps above, see [Troubleshooting](../connect-to-n8n-mcp-server.md#troubleshooting) on the main MCP server page.
+If a client doesn't connect using the steps above, see [Troubleshooting](./#troubleshooting) on the main MCP server page.
 
 ## Related resources
 
-* [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md)
+* [Connect to n8n MCP server](./)
 * [MCP server tools reference](mcp-server-tools-reference.md)

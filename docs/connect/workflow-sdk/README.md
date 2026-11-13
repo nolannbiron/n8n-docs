@@ -1,11 +1,28 @@
 ---
+contentType: overview
 description: >-
   Describe n8n workflows as TypeScript code with the Workflow SDK, the format
   that the n8n MCP server builder tools and n8n AI use to create workflows.
-contentType: overview
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Workflow SDK
@@ -24,7 +41,7 @@ The Workflow SDK builder tools on the n8n MCP server are available from n8n 2.12
 
 Three parts of n8n read Workflow SDK code:
 
-* The [n8n MCP server](../connect-to-n8n-mcp-server.md) builder tools. `validate_workflow` checks the code, `create_workflow_from_code` saves it as a workflow, and `update_workflow` changes an existing workflow. Refer to the [MCP server tools reference](../connect-to-n8n-mcp-server/mcp-server-tools-reference.md#workflow-builder).
+* The [n8n MCP server](../connect-to-n8n-mcp-server/) builder tools. `validate_workflow` checks the code, `create_workflow_from_code` saves it as a workflow, and `update_workflow` changes an existing workflow. Refer to the [MCP server tools reference](../connect-to-n8n-mcp-server/mcp-server-tools-reference.md#workflow-builder).
 * n8n AI, which writes Workflow SDK code when it builds a workflow for you.
 * AI coding agents such as Claude Code or Cursor, when they connect to the n8n MCP server.
 
@@ -32,8 +49,8 @@ Three parts of n8n read Workflow SDK code:
 
 There are two ways to turn SDK code into a workflow on your instance:
 
-* **Through the n8n MCP server.** Send the code to `validate_workflow`, then to `create_workflow_from_code`. The instance parses the code, so you don't install anything. This needs n8n 2.12.0 or later, and an owner or admin must first [enable MCP access](../connect-to-n8n-mcp-server.md#enabling-mcp-access). The [Quickstart](quickstart.md) walks through this path.
-* **Locally, with the package.** Install `@n8n/workflow-sdk` from npm. Convert the code to workflow JSON with `parseWorkflowCodeToBuilder`, then check it with `validateWorkflowBuilder`. Then create the workflow from that JSON with the [n8n API](../n8n-api/README.md) or the [n8n CLI](../n8n-cli.md). The parser doesn't accept `import` lines, so remove them before you parse. Refer to [Convert code to workflow JSON](https://github.com/n8n-io/n8n/blob/master/packages/@n8n/workflow-sdk/README.md#convert-code-to-workflow-json) in the SDK README.
+* **Through the n8n MCP server.** Send the code to `validate_workflow`, then to `create_workflow_from_code`. The instance parses the code, so you don't install anything. This needs n8n 2.12.0 or later, and an owner or admin must first [enable MCP access](../connect-to-n8n-mcp-server/#enabling-mcp-access). The [Quickstart](quickstart.md) walks through this path.
+* **Locally, with the package.** Install `@n8n/workflow-sdk` from npm. Convert the code to workflow JSON with `parseWorkflowCodeToBuilder`, then check it with `validateWorkflowBuilder`. Then create the workflow from that JSON with the [n8n API](../n8n-api/) or the [n8n CLI](../n8n-cli.md). The parser doesn't accept `import` lines, so remove them before you parse. Refer to [Convert code to workflow JSON](https://github.com/n8n-io/n8n/blob/master/packages/@n8n/workflow-sdk/README.md#convert-code-to-workflow-json) in the SDK README.
 
 The n8n API and the n8n CLI work with workflow JSON. They don't read SDK code.
 
@@ -98,16 +115,16 @@ The SDK reference lives with the SDK code:
 
 ## Which package is this
 
-`@n8n/workflow-sdk` describes workflows. It isn't the n8n public API client, it isn't the `@n8n/cli` command-line tool, and it isn't the framework for building [custom nodes](../create-nodes/README.md). For the MCP path you don't need to install it, because the n8n instance parses the code. Install it to convert code locally, or to get TypeScript types in your editor.
+`@n8n/workflow-sdk` describes workflows. It isn't the n8n public API client, it isn't the `@n8n/cli` command-line tool, and it isn't the framework for building [custom nodes](../create-nodes/). For the MCP path you don't need to install it, because the n8n instance parses the code. Install it to convert code locally, or to get TypeScript types in your editor.
 
 The Workflow SDK works with n8n Cloud and self-hosted instances.
 
 ## Related resources
 
 * [Connect](../)
-* [n8n API](../n8n-api/README.md)
+* [n8n API](../n8n-api/)
 * [n8n CLI](../n8n-cli.md)
-* [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md)
+* [Connect to n8n MCP server](../connect-to-n8n-mcp-server/)
 * [Connect to the n8n docs MCP server](../connect-to-n8n-docs-mcp-server.md)
-* [Create nodes](../create-nodes/README.md)
+* [Create nodes](../create-nodes/)
 * [MCP server tools reference](../connect-to-n8n-mcp-server/mcp-server-tools-reference.md#workflow-builder)

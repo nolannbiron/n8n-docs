@@ -1,16 +1,33 @@
 ---
-description: >-
-  Write an n8n workflow as TypeScript code, check it with the n8n MCP
-  server, and create it on your instance.
 contentType: tutorial
+description: >-
+  Write an n8n workflow as TypeScript code, check it with the n8n MCP server,
+  and create it on your instance.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Create your first workflow from code
+# Quickstart
 
-In this tutorial you write a workflow file with the [Workflow SDK](README.md), check it with `validate_workflow`, and save it to your instance with `create_workflow_from_code`.
+In this tutorial you write a workflow file with the [Workflow SDK](./), check it with `validate_workflow`, and save it to your instance with `create_workflow_from_code`.
 
 {% hint style="info" %}
 **Prompt for coding agents**
@@ -20,7 +37,7 @@ Connect to the n8n MCP server, call `get_workflow_sdk_reference`, then write a W
 
 ## What you will need
 
-* An n8n instance with [MCP access enabled](../connect-to-n8n-mcp-server.md#enabling-mcp-access) and an MCP client connected to it. The [client connection examples](../connect-to-n8n-mcp-server/mcp-client-examples.md) cover Claude Code, Claude Desktop, and Cursor.
+* An n8n instance with [MCP access enabled](../connect-to-n8n-mcp-server/#enabling-mcp-access) and an MCP client connected to it. The [client connection examples](../connect-to-n8n-mcp-server/mcp-client-examples.md) cover Claude Code, Claude Desktop, and Cursor.
 * No local install. The instance parses the code.
 
 ## What you will learn
@@ -31,7 +48,6 @@ Connect to the n8n MCP server, call `get_workflow_sdk_reference`, then write a W
 
 {% stepper %}
 {% step %}
-
 ## Write the workflow file
 
 Create `github-stars.ts` with this content. It has a manual trigger, one HTTP Request node, and one Edit Fields (Set) node:
@@ -85,7 +101,6 @@ Three rules to keep in mind:
 {% endstep %}
 
 {% step %}
-
 ## Check the code
 
 Ask your MCP client to call `validate_workflow` with the full file as the `code` parameter. A valid file returns:
@@ -98,7 +113,6 @@ If `valid` is `false`, the response has an `errors` list and often a `hint`. Fix
 {% endstep %}
 
 {% step %}
-
 ## Create the workflow
 
 Call `create_workflow_from_code` with the same `code`. The response has the `workflowId` and a `url`. Open the URL, run the workflow once from the editor, and check that the Keep stars node outputs a `stars` field.
@@ -107,7 +121,6 @@ The tool assigns credentials it finds on the instance to nodes that need them. I
 {% endstep %}
 
 {% step %}
-
 ## Add a branch
 
 Replace the Keep stars node with an If node that routes popular repositories one way and the rest another way. Add one Edit Fields node per branch. Every If condition needs `options`, `conditions`, and `combinator`. The complete file:

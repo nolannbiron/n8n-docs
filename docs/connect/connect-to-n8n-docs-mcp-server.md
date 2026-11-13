@@ -20,6 +20,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Connect to the n8n docs MCP server
@@ -28,10 +30,10 @@ The n8n documentation publishes two [Model Context Protocol (MCP)](https://model
 
 The two servers draw on different sources, so pick the one that fits how you want your AI tool to answer:
 
-| Server | Sources | Best for |
-|--------|---------|----------|
-| **GitBook docs server** | The published n8n docs only | Searching and reading exact documentation pages. The docs are the single, authoritative source. |
-| **Kapa.ai server** | The docs, the [community forum](https://community.n8n.io/), and the [n8n blog](https://blog.n8n.io/) | Broader questions that the docs alone don't cover, such as troubleshooting and real-world examples. This is the same engine that powers the AI Assistant on the docs site. |
+| Server                  | Sources                                                                                              | Best for                                                                                                                                                                   |
+| ----------------------- | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **GitBook docs server** | The published n8n docs only                                                                          | Searching and reading exact documentation pages. The docs are the single, authoritative source.                                                                            |
+| **Kapa.ai server**      | The docs, the [community forum](https://community.n8n.io/), and the [n8n blog](https://blog.n8n.io/) | Broader questions that the docs alone don't cover, such as troubleshooting and real-world examples. This is the same engine that powers the AI Assistant on the docs site. |
 
 You can connect both. Use the GitBook server when you want answers grounded in the docs, and the Kapa.ai server when you want answers drawn from n8n's wider knowledge base.
 
@@ -41,10 +43,10 @@ Both servers use HTTP transport, so your AI tool needs to support remote MCP ser
 
 Use the endpoint for the server you want:
 
-| Server | URL |
-|--------|-----|
+| Server              | URL                                |
+| ------------------- | ---------------------------------- |
 | GitBook docs server | `https://docs.n8n.io/~gitbook/mcp` |
-| Kapa.ai server | `https://n8n.mcp.kapa.ai` |
+| Kapa.ai server      | `https://n8n.mcp.kapa.ai`          |
 
 ## Connect your AI tool
 
@@ -117,7 +119,7 @@ The exact configuration steps and file locations vary between tools and versions
 ## Related resources
 
 * [Connect](./)
-* [n8n API](n8n-api/README.md)
+* [n8n API](n8n-api/)
 * [n8n CLI](n8n-cli.md)
-* [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
-* [Create nodes](create-nodes/README.md)
+* [Connect to n8n MCP server](connect-to-n8n-mcp-server/)
+* [Create nodes](create-nodes/)

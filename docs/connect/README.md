@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Connect
@@ -47,7 +49,7 @@ Best for:
 * Triggering and monitoring executions from external systems
 * Automating workflow and credential management
 
-Start with [n8n API](n8n-api/README.md).
+Start with [n8n API](n8n-api/).
 {% endtab %}
 
 {% tab title="n8n CLI" %}
@@ -71,8 +73,8 @@ Best for:
 * Discovering and executing workflows from an AI agent
 * Managing workflows through an MCP client
 
-Start with [Connect to n8n MCP server](connect-to-n8n-mcp-server.md).
+Start with [Connect to n8n MCP server](connect-to-n8n-mcp-server/).
 {% endtab %}
 {% endtabs %}
 
-You can also describe workflows as code with the [Workflow SDK](workflow-sdk/README.md). To let AI tools search the docs, connect an MCP client to [the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md). To add a custom integration to n8n, [create your own node](create-nodes/README.md).
+You can also describe workflows as code with the [Workflow SDK](workflow-sdk/). To let AI tools search the docs, connect an MCP client to [the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md). To add a custom integration to n8n, [create your own node](create-nodes/).
