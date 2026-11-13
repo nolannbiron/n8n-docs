@@ -1,4 +1,4 @@
-# Summary
+# Table of contents
 
 * [Administer](README.md)
 * [Understand feature availability](understand-feature-availability.md)
@@ -10,9 +10,9 @@
   * [Set permissions and roles (RBAC)](manage-users-and-access/set-permissions-and-roles-rbac/README.md)
     * [See available roles](manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md)
     * [Organize work in projects](manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md)
-    * [Custom roles](manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md)
-      * [Create custom project roles](manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles.md)
-      * [Create custom instance roles](manage-users-and-access/set-permissions-and-roles-rbac/create-custom-instance-roles.md)
+    * [Custom roles](manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles/README.md)
+      * [Create custom project roles](manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles/create-custom-project-roles.md)
+      * [Create custom instance roles](manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles/create-custom-instance-roles.md)
   * [Verify user identity](manage-users-and-access/verify-user-identity/README.md)
     * [Require two-factor auth](manage-users-and-access/verify-user-identity/require-two-factor-auth.md)
     * [Connect LDAP](manage-users-and-access/verify-user-identity/connect-ldap.md)

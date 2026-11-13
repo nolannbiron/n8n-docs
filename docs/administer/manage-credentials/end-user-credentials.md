@@ -1,9 +1,28 @@
 ---
-description: Let each user connect their own account to a credential, so a workflow runs with the credentials of the person who triggers it.
+status: preview
+description: >-
+  Let each user connect their own account to a credential, so a workflow runs
+  with the credentials of the person who triggers it.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
-status: preview
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 tags:
   - tag: preview
     primary: true
@@ -20,8 +39,8 @@ With fixed credentials, everyone who runs a workflow uses the same account, whic
 
 End-user credentials are available on:
 
-- **n8n Cloud:** Enterprise
-- **Self-hosted:** Enterprise
+* **n8n Cloud:** Enterprise
+* **Self-hosted:** Enterprise
 {% endhint %}
 
 {% hint style="info" %}
@@ -57,7 +76,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 ## Requirements and limitations
 
 * **Enterprise only:** End-user credentials require an Enterprise plan.
-* **Controlled creation:** By default, only [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md) can create end-user credentials. Grant this permission to other users through [custom roles](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md). Limiting who can create them keeps credential management central: an admin sets up a template once and shares it to the projects that need it, rather than many users each setting up their own.
+* **Controlled creation:** By default, only [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md) can create end-user credentials. Grant this permission to other users through [custom roles](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles/). Limiting who can create them keeps credential management central: an admin sets up a template once and shares it to the projects that need it, rather than many users each setting up their own.
 * **Team projects only:** You can only create end-user credentials in team projects, not in personal projects. This keeps them centrally managed, where an admin sets up the credential template, rather than individual users creating their own in personal projects.
 * **OAuth credentials only:** End-user credentials support OAuth-based credential types only.
 * **One connection per user:** Each user can connect a single account per end-user credential template.

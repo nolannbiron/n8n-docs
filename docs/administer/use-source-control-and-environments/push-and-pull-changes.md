@@ -1,18 +1,35 @@
 ---
 title: Push and pull
-description: 'Send work to Git, and fetch work from Git to your instance.'
 contentType: howto
 nodeTitle: Push and pull changes
 originalFilePath: source-control-environments/using/push-pull.md
-originalUrl: 'https://docs.n8n.io/source-control-environments/using/push-pull'
+originalUrl: https://docs.n8n.io/source-control-environments/using/push-pull
 url: >-
   https://docs.n8n.io/administer/use-source-control-and-environments/push-and-pull-changes
+description: Send work to Git, and fetch work from Git to your instance.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Push and pull <a href="#push-and-pull" id="push-and-pull"></a>
+# Push and pull changes
 
 If your n8n instance connects to a Git repository, you need to keep your work in sync with Git.
 
@@ -38,15 +55,7 @@ To pull work from Git, select **Pull** <img src="../.gitbook/assets/pull-icon.pn
 
 <summary>View screenshot</summary>
 
-<figure markdown>
-	<img src="../../assets/pull-push-menu-closed.png" alt="">
-	<figcaption>Pull and push buttons when menu is closed</figcaption>
-</figure>
 
-<figure markdown>
-	<img src="../../assets/pull-push-menu-open.png" alt="">
-	<figcaption>Pull and push buttons when menu is open</figcaption>
-</figure>
 
 </details>
 
@@ -68,7 +77,7 @@ If the original owner is a user:
 
 If the same owner is available on both instances (matching email), the owner remains the same. If the original owner isn't on the new instance, n8n sets the user performing the pull as the workflow owner.
 
-If the original owner is a [project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md):
+If the original owner is a [project](../manage-users-and-access/set-permissions-and-roles-rbac/):
 
 n8n matches the project by its ID. If no project with that ID exists on the new instance, n8n creates one with the same ID and name. The user who pulls becomes its project admin. n8n then imports the workflows and credentials into the project.
 
@@ -100,7 +109,7 @@ You must be an instance owner, instance admin, or project admin to push changes 
 
 To push work to Git:
 
-1. Select **Push** <img src="../../assets/push-icon.png" alt="Push icon" data-size="line"> in the main menu.
+1. Select **Push**  in the main menu.
 2.  In the **Commit and push changes** modal, select which workflows and data tables you want to push. You can filter by status (new, modified, deleted) and search for items. n8n automatically pushes tags, and variable and credential stubs.
 
     n8n pushes the current saved version, not the published version, of the workflow. You need to then separately publish versions on the remote server.
@@ -146,9 +155,9 @@ On pull:
 
 * If the tag, variable or credential doesn't exist, n8n creates it.
 * If the tag, variable or credential already exists, n8n doesn't update it, unless:
-	* You set the value of a variable using the API or externally. The new value overwrites any existing value.
-	* The credential name has changed. n8n uses the version in Git.
-	* The name of a tag has changed. n8n updates the tag name. Be careful when renaming tags as tag names are unique and this could cause database issues when it comes to uniqueness during the pull process.
+  * You set the value of a variable using the API or externally. The new value overwrites any existing value.
+  * The credential name has changed. n8n uses the version in Git.
+  * The name of a tag has changed. n8n updates the tag name. Be careful when renaming tags as tag names are unique and this could cause database issues when it comes to uniqueness during the pull process.
 
 On push:
 

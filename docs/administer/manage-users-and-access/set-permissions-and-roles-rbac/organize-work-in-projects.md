@@ -27,6 +27,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Organize work in projects
@@ -36,8 +38,8 @@ layout:
 
 RBAC is available on:
 
-- **n8n Cloud:** All plans
-- **Self-hosted:** Registered Community, Business, Enterprise
+* **n8n Cloud:** All plans
+* **Self-hosted:** Registered Community, Business, Enterprise
 
 Different plans have different numbers of projects and roles.
 {% endhint %}
@@ -99,7 +101,7 @@ Workflow and credential owners can move workflows or credentials (changing owner
 Moving workflows or credentials removes all existing sharing. Be aware that this could impact other workflows currently sharing these resources.
 {% endhint %}
 
-1.  Select **Workflow menu** <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Workflow menu icon" data-size="line"> or **Credential menu** <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Workflow menu icon" data-size="line"> > **Move**.<br>
+1.  Select **Workflow menu** <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Workflow menu icon" data-size="line"> or **Credential menu** <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Workflow menu icon" data-size="line"> > **Move**.<br>
 
     <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Moving workflows with credentials</strong></p><p>When moving a workflow with credentials you have permission to share, you can choose to share the credentials as well. This ensures that the workflow continues to have access to the credentials it needs to execute. n8n will note any credentials that can't be moved (credentials you don't have permission to share).</p></div>
 2. Select the project or user you want to move to.
@@ -113,10 +115,10 @@ Project members can select their own personal credentials in any workflow in a t
 
 Only the owner and people they share the credential with directly can run or publish workflows with it. To let every project member use it, share it with the project. Refer to [Use personal credentials in projects](../../manage-credentials/use-personal-credentials-in-projects.md).
 
-[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
-
 ## Related resources
 
 * [Set permissions and roles (RBAC)](./)
 * [See available roles](see-available-roles.md)
-* [Custom roles](create-custom-roles.md)
+* [Custom roles](create-custom-roles/)
+
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
