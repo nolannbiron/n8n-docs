@@ -1,9 +1,27 @@
 ---
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
-# Test and improve AI workflows <a href="#test-and-improve-ai-workflows" id="test-and-improve-ai-workflows"></a>
+
+# Test and improve AI workflows
 
 Use n8n evaluations to build reliable AI workflows and compare output against known test cases.
 
@@ -18,6 +36,6 @@ Use n8n evaluations to build reliable AI workflows and compare output against kn
 
 * [Integrate AI](../)
 * [MCP servers](../mcp-servers.md)
-* [Understand AI components](../understand-ai-components/README.md)
+* [Understand AI components](../understand-ai-components/)
 * [LangChain in n8n](../langchain-in-n8n.md)
-* [AI examples](../ai-examples.md)
+* [AI examples](../ai-examples/)

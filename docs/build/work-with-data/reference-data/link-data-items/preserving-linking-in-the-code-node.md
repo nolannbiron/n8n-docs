@@ -2,16 +2,34 @@
 contentType: howto
 nodeTitle: Preserving linking in the Code node
 originalFilePath: data/data-mapping/data-item-linking/item-linking-code-node.md
-originalUrl: 'https://docs.n8n.io/data/data-mapping/data-item-linking/item-linking-code-node'
+originalUrl: https://docs.n8n.io/data/data-mapping/data-item-linking/item-linking-code-node
 url: >-
   https://docs.n8n.io/build/work-with-data/reference-data/link-data-items/preserving-linking-in-the-code-node
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Preserving linking in the Code node <a href="#preserving-linking-in-the-code-node" id="preserving-linking-in-the-code-node"></a>
-When referencing a previous node you need to know which item to use. This is solved by item linking. Most nodes automatically link every output item to an input item, creating a chain of items that you can work back along to access previous items. For a deeper conceptual overview of this topic, refer to [Item linking concepts](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data/link-data-items/how-items-link-through-workflows). This document focuses on practical usage examples.
+# Preserving linking in the Code node
+
+When referencing a previous node you need to know which item to use. This is solved by item linking. Most nodes automatically link every output item to an input item, creating a chain of items that you can work back along to access previous items. For a deeper conceptual overview of this topic, refer to [Item linking concepts](how-items-link-through-workflows.md). This document focuses on practical usage examples.
 
 When using the Code node, there are some scenarios where you need to manually supply item linking information if you want to be able to use `$("<node-name>").item` later in the workflow. All these scenarios only apply if you have more than one incoming item. n8n automatically handles item linking for single items.
 
@@ -21,7 +39,7 @@ These scenarios are when you:
 * Return new items.
 * Want to manually control the item linking.
 
-[n8n's automatic item linking](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) handles the other scenarios.
+[n8n's automatic item linking](how-items-link-through-workflows.md) handles the other scenarios.
 
 To control item linking, set `pairedItem` when returning data. For example, to link to the item at index 0:
 
@@ -36,7 +54,6 @@ To control item linking, set `pairedItem` when returning data. For example, to l
 	}
 ]
 ```
-
 
 ### `pairedItem` usage example <a href="#paireditem-usage-example" id="paireditem-usage-example"></a>
 
@@ -116,5 +133,3 @@ Each new item now links to the item used to create it.
 * [Accessing linked items in the Code node](accessing-linked-items-in-the-code-node.md)
 * [Item linking errors](item-linking-errors.md)
 * [Item linking for node creators](item-linking-for-node-creators.md)
-
-

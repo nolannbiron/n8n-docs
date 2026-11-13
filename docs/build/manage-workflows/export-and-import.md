@@ -24,6 +24,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Export and import
@@ -44,7 +46,7 @@ To select all nodes or a group of nodes, click and drag: ![Select a group of nod
 
 ## From the Editor UI menu <a href="#from-the-editor-ui-menu" id="from-the-editor-ui-menu"></a>
 
-From the Canvas header, select the Workflow menu <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="Workflow menu icon" data-size="line"> to see the following options:
+From the Canvas header, select the Workflow menu <img src="../.gitbook/assets/three-dots-horizontal.png" alt="Workflow menu icon" data-size="line"> to see the following options:
 
 * **Download**: Downloads your current workflow as a JSON file to your computer.
 * **Import from URL**: Imports workflow JSON from a URL, for example, [this workflow JSON file on GitHub](https://raw.githubusercontent.com/n8n-io/self-hosted-ai-starter-kit/refs/heads/main/n8n/demo-data/workflows/srOnR8PAY3u4RSwb.json).
@@ -54,7 +56,7 @@ From the Canvas header, select the Workflow menu <img src="../.gitbook/assets/th
 
 ### Using the n8n CLI
 
-The `n8n-cli package` commands bundle workflows into a portable `.n8np` file you can import into another instance. See [n8n packages](n8n-packages/README.md), and [Export a package](n8n-packages/export-a-package.md) for the available options. n8n packages are in Preview and may change in future releases.
+The `n8n-cli package` commands bundle workflows into a portable `.n8np` file you can import into another instance. See [n8n packages](n8n-packages/), and [Export a package](n8n-packages/export-a-package.md) for the available options. n8n packages are in Preview and may change in future releases.
 
 {% hint style="info" %}
 The n8n CLI is the method n8n recommends for moving workflows between instances from the command line. It runs from any machine with network access, carries the folders, projects, and references a workflow needs, and checks an import before writing anything.
@@ -66,12 +68,12 @@ The n8n CLI is the method n8n recommends for moving workflows between instances 
 * Import: See the [import commands](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/use-the-command-line#import-entities) for importing workflows or credentials.
 
 {% hint style="info" %}
-n8n recommends the [n8n CLI](#using-the-n8n-cli) over the Server CLI export and import commands for new work. We plan to deprecated Server CLI export and import commands, though this is not yet scheduled.
+n8n recommends the [n8n CLI](export-and-import.md#using-the-n8n-cli) over the Server CLI export and import commands for new work. We plan to deprecated Server CLI export and import commands, though this is not yet scheduled.
 {% endhint %}
 
 ## From the n8n API
 
-The n8n API can export and import [n8n packages](n8n-packages/README.md), which carry workflows along with the folders, projects, and references they need. n8n packages are in Preview and may change in future releases.
+The n8n API can export and import [n8n packages](n8n-packages/), which carry workflows along with the folders, projects, and references they need. n8n packages are in Preview and may change in future releases.
 
 To move a single workflow as JSON instead, use the workflow endpoints in the [n8n API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api).
 
@@ -83,5 +85,5 @@ To move a single workflow as JSON instead, use the workflow endpoints in the [n8
 * [Favorite items](favorite-items.md)
 * [View change history](view-change-history.md)
 * [Review workflows](workflow-reviews.md)
-* [n8n packages](n8n-packages/README.md)
+* [n8n packages](n8n-packages/)
 * [Share with others](share-with-others.md)

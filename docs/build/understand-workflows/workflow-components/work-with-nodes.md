@@ -26,6 +26,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Work with nodes
@@ -53,7 +55,7 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 
 ### Add a node to an existing workflow <a href="#add-a-node-to-an-existing-workflow" id="add-a-node-to-an-existing-workflow"></a>
 
-Select the **Add node** <img src="../../.gitbook/assets/add-node-small (1).png" alt="Add node icon" data-size="line"> connector. n8n opens the nodes panel, where you can search or browse all nodes.
+Select the **Add node** <img src="../../.gitbook/assets/add-node-small.png" alt="Add node icon" data-size="line"> connector. n8n opens the nodes panel, where you can search or browse all nodes.
 
 ## Node operations: Triggers and Actions <a href="#node-operations-triggers-and-actions" id="node-operations-triggers-and-actions"></a>
 
@@ -61,7 +63,7 @@ When you add a node to a workflow, n8n displays a list of available operations. 
 
 There are two types of operation:
 
-* Triggers start a workflow in response to specific events or conditions in your services. When you select a Trigger, n8n adds a trigger node to your workflow, with the Trigger operation you chose pre-selected. When you search for a node in n8n, Trigger operations have a bolt icon <img src="../../../assets/trigger.png" alt="Trigger icon" data-size="line">.
+* Triggers start a workflow in response to specific events or conditions in your services. When you select a Trigger, n8n adds a trigger node to your workflow, with the Trigger operation you chose pre-selected. When you search for a node in n8n, Trigger operations have a bolt icon .
 * Actions are operations that represent specific tasks within a workflow, which you can use to manipulate data, perform operations on external systems, and trigger events in other systems as part of your workflows. When you select an Action, n8n adds a node to your workflow, with the Action operation you chose pre-selected.
 
 ## Node controls <a href="#node-controls" id="node-controls"></a>
@@ -70,8 +72,8 @@ To view node controls, hover over the node on the canvas:
 
 * **Execute step** <img src="../../.gitbook/assets/play-node.png" alt="Execute step icon" data-size="line">: Run the node.
 * **Deactivate** <img src="../../.gitbook/assets/power-off.png" alt="Deactivate node icon" data-size="line">: Deactivate the node.
-* **Delete** <img src="../../.gitbook/assets/delete-node (1).png" alt="Delete node icon" data-size="line">: Delete the node.
-* **Node context menu** <img src="../../.gitbook/assets/node-context-menu (1).png" alt="Node context menu icon" data-size="line">: Select node actions. Available actions:
+* **Delete** <img src="../../.gitbook/assets/delete-node.png" alt="Delete node icon" data-size="line">: Delete the node.
+* **Node context menu** <img src="../../.gitbook/assets/node-context-menu.png" alt="Node context menu icon" data-size="line">: Select node actions. Available actions:
   * Open node
   * Execute step
   * Rename node
@@ -105,10 +107,6 @@ You can document your workflow using node notes:
 * **Notes**: Note to save with the node.
 * **Display note in flow**: If active, n8n displays the note in the workflow as a subtitle.
 
-[^1]: In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.
-[^2]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.
-[^3]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.
-
 ## Related resources
 
 * [Workflow components](./)
@@ -116,3 +114,9 @@ You can document your workflow using node notes:
 * [Add notes and documentation](add-notes-and-documentation.md)
 * [Canvas Groups](canvas-groups.md)
 * [Find your workflow ID](find-your-workflow-id.md)
+
+[^1]: In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.
+
+[^2]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.
+
+[^3]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.

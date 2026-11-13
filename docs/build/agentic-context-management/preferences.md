@@ -79,7 +79,7 @@ Two AI surfaces read preferences:
 
 | Surface                                                                                                                 | When it reads preferences                                                                                                                        |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [n8n Assistant](../ways-of-building-workflows/n8n-assistant.md)                                                         | On every message you send, so a preference you save or edit applies from your next message, even in an open conversation.                        |
+| [n8n Assistant](../ways-of-building-workflows/n8n-assistant/)                                                           | On every message you send, so a preference you save or edit applies from your next message, even in an open conversation.                        |
 | MCP clients connected to the [n8n MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server) | When the client calls the `get_user_preferences` tool. The n8n MCP server tells clients to call it before they create or change anything in n8n. |
 
 If a preference conflicts with something you ask for directly, the AI tool follows your request and tells you which preference it set aside.
@@ -231,7 +231,7 @@ Check that the preference's scope covers the project you're working in. In n8n A
 ## Related resources
 
 * [Agentic context management](./)
-* [Use n8n Assistant](../ways-of-building-workflows/n8n-assistant.md)
+* [Use n8n Assistant](../ways-of-building-workflows/n8n-assistant/)
 * [Use n8n MCP server](../ways-of-building-workflows/connect-to-n8n-mcp-server.md)
 * [Connect to n8n MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server)
 * [MCP server tools reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server/mcp-server-tools-reference)

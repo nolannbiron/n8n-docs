@@ -77,7 +77,7 @@ Instance-level MCP isn't the only way n8n works with MCP:
 ## Related resources
 
 * [Ways of building workflows](./)
-* [Use n8n Assistant](n8n-assistant.md)
+* [Use n8n Assistant](n8n-assistant/)
 * [Use templates](use-templates.md)
 * [Use Ask n8n AI](use-the-ai-assistant.md)
 * [Use Chat Hub](chat-hub.md)

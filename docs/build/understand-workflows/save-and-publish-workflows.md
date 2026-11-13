@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Save and publish workflows
@@ -114,8 +116,8 @@ If workflow reviews are enabled for your instance, you can submit a version for 
 
 Named versions are available on:
 
-- **n8n Cloud:** Pro, Enterprise
-- **Self-hosted:** Business, Enterprise
+* **n8n Cloud:** Pro, Enterprise
+* **Self-hosted:** Business, Enterprise
 {% endhint %}
 
 Named versions let you give a meaningful name and description to any workflow version. This helps you identify important milestones in your workflow's development. Named versions are also protected from automatic [version history pruning](../manage-workflows/view-change-history.md), so they persist indefinitely.
@@ -132,7 +134,7 @@ To name a version from the canvas header:
 To name a version from the version history page:
 
 1. Open the version history by selecting the history icon in the header.
-2. On the version you want to name, select **Options** <img src="../.gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line">.
+2. On the version you want to name, select **Options** <img src="../.gitbook/assets/three-dot-options-menu.png" alt="Options icon" data-size="line">.
 3. Select **Name version**.
 4. Enter a name and optional description.
 5. Select **Save**.
@@ -160,5 +162,5 @@ Unpublish a workflow from either:
 * [Create and run workflows](create-and-run-workflows.md)
 * [Create and edit credentials](create-and-edit-credentials.md)
 * [Use Gateway credits](use-gateway-credits.md)
-* [Workflow components](workflow-components/README.md)
-* [Understand executions](understand-executions/README.md)
+* [Workflow components](workflow-components/)
+* [Understand executions](understand-executions/)

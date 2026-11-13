@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Create and run workflows
@@ -31,13 +33,13 @@ A workflow[^1] is a collection of nodes connected together to automate a process
 
 ## Create a workflow <a href="#create-a-workflow" id="create-a-workflow"></a>
 
-1. Select the <img src="../.gitbook/assets/universal-resource-button (1).png" alt="universal create resource icon" data-size="line"> **button** in the upper-left corner of the side menu. Select workflow.
+1. Select the <img src="../.gitbook/assets/universal-resource-button.png" alt="universal create resource icon" data-size="line"> **button** in the upper-left corner of the side menu. Select workflow.
 2. If your n8n instance supports projects, you'll also need to choose whether to create the workflow inside your **personal space** or a specific **project** you have access to. If you're using the community version, you'll always create workflows inside your personal space.
 3. Get started by adding a trigger node: select **Add first step...**
 
 Or:
 
-1. Select the <img src="../.gitbook/assets/universal-resource-button (1).png" alt="universal create resource icon" data-size="line"> **create** button in the upper-right corner from either the **Overview** page or a specific **project**. Select workflow.
+1. Select the <img src="../.gitbook/assets/universal-resource-button.png" alt="universal create resource icon" data-size="line"> **create** button in the upper-right corner from either the **Overview** page or a specific **project**. Select workflow.
 2. If you're doing this from the **Overview** page, you'll create the workflow inside your personal space. If you're doing this from inside a project, you'll create the workflow inside that specific project.
 3. Get started by adding a trigger node: select **Add first step...**
 
@@ -59,14 +61,15 @@ To publish your workflow, open your workflow and click **Publish**. The option t
 
 Published workflows run whenever its trigger conditions are met.
 
-[^1]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.
-[^2]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.
-
 ## Related resources
 
 * [Understand workflows](./)
 * [Save and publish workflows](save-and-publish-workflows.md)
 * [Create and edit credentials](create-and-edit-credentials.md)
 * [Use Gateway credits](use-gateway-credits.md)
-* [Workflow components](workflow-components/README.md)
-* [Understand executions](understand-executions/README.md)
+* [Workflow components](workflow-components/)
+* [Understand executions](understand-executions/)
+
+[^1]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.
+
+[^2]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.

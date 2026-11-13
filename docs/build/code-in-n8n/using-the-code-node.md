@@ -2,32 +2,49 @@
 contentType:
   - integration
   - reference
-tags:
-  - code node
-  - code
 hide:
   - tags
 nodeTitle: Using the Code node
 originalFilePath: code/code-node.md
-originalUrl: 'https://docs.n8n.io/code/code-node'
-url: 'https://docs.n8n.io/build/code-in-n8n/using-the-code-node'
+originalUrl: https://docs.n8n.io/code/code-node
+url: https://docs.n8n.io/build/code-in-n8n/using-the-code-node
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+tags:
+  - code node
+  - code
 ---
 
-# Using the Code node <a href="#using-the-code-node" id="using-the-code-node"></a>
+# Using the Code node
 
 Use the Code node to write custom JavaScript or Python and run it as a step in your workflow.
 
 {% hint style="info" %}
 **Coding in n8n**
 
-This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the [Code](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n) section. It includes:
+This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the [Code](./) section. It includes:
 
-* Reference documentation on [Built-in methods and variables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/use-built-in-shortcuts)
-* Guidance on [Handling dates](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/handle-special-data-types/work-with-dates-and-times) and [Querying JSON](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/handle-special-data-types/query-json-data)
-* A growing collection of examples in the [Cookbook](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/cookbook/code-node)
+* Reference documentation on [Built-in methods and variables](use-built-in-shortcuts/)
+* Guidance on [Handling dates](../work-with-data/handle-special-data-types/work-with-dates-and-times.md) and [Querying JSON](../work-with-data/handle-special-data-types/query-json-data.md)
+* A growing collection of examples in the [Cookbook](cookbook/code-node/)
 {% endhint %}
 
 {% hint style="info" %}
@@ -75,7 +92,7 @@ If you use n8n Cloud, you can't import external npm modules. n8n makes two modul
 
 ### Built-in methods and variables <a href="#built-in-methods-and-variables" id="built-in-methods-and-variables"></a>
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/use-built-in-shortcuts) for more information.
+n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](use-built-in-shortcuts/) for more information.
 
 The syntax to use the built-in methods and variables is `$variableName` or `$methodName()`. Type `$` in the Code node or expressions editor to see a list of suggested methods and variables.
 
@@ -101,7 +118,7 @@ The Code node takes longer to process Python than JavaScript. This is due to the
 
 ### Built-in methods and variables <a href="#built-in-methods-and-variables" id="built-in-methods-and-variables"></a>
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/use-built-in-shortcuts) for more information.
+n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](use-built-in-shortcuts/) for more information.
 
 The syntax to use the built-in methods and variables is `_variableName` or `_methodName()`. Type `_` in the Code node to see a list of suggested methods and variables.
 
@@ -142,8 +159,8 @@ There are two places where you can use code in n8n: the Code node and the expres
 
 When working with the Code node, you need to understand the following concepts:
 
-* [Data structure](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure): understand the data you receive in the Code node, and requirements for outputting data from the node.
-* [Item linking](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data/link-data-items): learn how data items work, and how to link to items from previous nodes. You need to handle item linking in your code when the number of input and output items doesn't match.
+* [Data structure](../work-with-data/understand-n8ns-data-structure.md): understand the data you receive in the Code node, and requirements for outputting data from the node.
+* [Item linking](../work-with-data/reference-data/link-data-items/): learn how data items work, and how to link to items from previous nodes. You need to handle item linking in your code when the number of input and output items doesn't match.
 
 ### Built-in methods and variables <a href="#built-in-methods-and-variables" id="built-in-methods-and-variables"></a>
 
@@ -153,7 +170,7 @@ n8n includes built-in methods and variables. These provide support for:
 * Accessing data about workflows, executions, and your n8n environment
 * Convenience variables to help with data and time
 
-Refer to [Built-in methods and variables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/use-built-in-shortcuts) for more information.
+Refer to [Built-in methods and variables](use-built-in-shortcuts/) for more information.
 
 ## Use AI in the Code node <a href="#use-ai-in-the-code-node" id="use-ai-in-the-code-node"></a>
 
@@ -161,6 +178,6 @@ Refer to [Built-in methods and variables](https://app.gitbook.com/s/BZpIXw3wFsNV
 
 * [Code in n8n](./)
 * [Get coding help from AI](get-coding-help-from-ai.md)
-* [Use built-in shortcuts](use-built-in-shortcuts.md)
+* [Use built-in shortcuts](use-built-in-shortcuts/)
 * [Define custom variables](define-custom-variables.md)
-* [Cookbook](cookbook/README.md)
+* [Cookbook](cookbook/)

@@ -24,6 +24,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # View change history
@@ -33,8 +35,8 @@ layout:
 
 Full workflow history is available on:
 
-- **n8n Cloud:** Enterprise
-- **Self-hosted:** Enterprise
+* **n8n Cloud:** Enterprise
+* **Self-hosted:** Enterprise
 {% endhint %}
 
 Versions from the last 24 hours are available for all users. Versions from the last five days are available on n8n Cloud Pro.
@@ -72,7 +74,7 @@ To view a workflow's history:
 
 You can restore a previous workflow version, or make a copy of it:
 
-1. On the version you want to restore or copy, select **Options** <img src="../.gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line">.
+1. On the version you want to restore or copy, select **Options** <img src="../.gitbook/assets/three-dot-options-menu.png" alt="Options icon" data-size="line">.
 2. Choose what you want to do:
    * **Restore version**: replace your current workflow with the selected version.
    * **Clone to new workflow**: create a new workflow based on the selected version.
@@ -88,5 +90,5 @@ You can restore a previous workflow version, or make a copy of it:
 * [Favorite items](favorite-items.md)
 * [Review workflows](workflow-reviews.md)
 * [Export and import](export-and-import.md)
-* [n8n packages](n8n-packages/README.md)
+* [n8n packages](n8n-packages/)
 * [Share with others](share-with-others.md)

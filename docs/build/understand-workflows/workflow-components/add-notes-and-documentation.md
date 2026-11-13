@@ -24,6 +24,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Add notes and documentation
@@ -77,7 +79,7 @@ You can:
 * Drag a sticky note anywhere on the canvas.
 * Drag sticky notes behind nodes. You can use this to visually group nodes.
 * Resize sticky notes by hovering over the edge of the note and dragging to resize.
-* Change the color: select the **Options** menu <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line"> to open the color selector.
+* Change the color: select the **Options** menu <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Options icon" data-size="line"> to open the color selector.
 
 ## Writing in Markdown <a href="#writing-in-markdown" id="writing-in-markdown"></a>
 
@@ -129,9 +131,7 @@ For example:
 
 To embed your own video, copy the above syntax, replacing `ZCuL2e4zC_4` with your video ID. The YouTube video ID is the string that follows `v=` in the YouTube URL.
 
-See [Workflow components](README.md) for other elements you can add to a workflow.
-
-[^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
+See [Workflow components](./) for other elements you can add to a workflow.
 
 ## Related resources
 
@@ -140,3 +140,5 @@ See [Workflow components](README.md) for other elements you can add to a workflo
 * [Connect nodes together](connect-nodes-together.md)
 * [Canvas Groups](canvas-groups.md)
 * [Find your workflow ID](find-your-workflow-id.md)
+
+[^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.

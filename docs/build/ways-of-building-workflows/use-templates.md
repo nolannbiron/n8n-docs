@@ -1,16 +1,33 @@
 ---
-description: Use workflow templates
 contentType: howto
 nodeTitle: Use templates
 originalFilePath: workflows/templates.md
-originalUrl: 'https://docs.n8n.io/workflows/templates'
-url: 'https://docs.n8n.io/build/ways-of-building-workflows/use-templates'
+originalUrl: https://docs.n8n.io/workflows/templates
+url: https://docs.n8n.io/build/ways-of-building-workflows/use-templates
+description: Use workflow templates
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Workflow templates <a href="#workflow-templates" id="workflow-templates"></a>
+# Use templates
 
 When creating a new workflow, you can choose whether to start with an empty workflow, or use an existing template[^1].
 
@@ -26,7 +43,6 @@ Select <img src="../.gitbook/assets/templates.png" alt="View templates icon" dat
 
 If you use n8n's template library, this takes you to browse [Workflows on the n8n website](https://n8n.io/workflows/). If you use a custom library provided by your organization, you'll be able to search and browse the templates within the app.
 
-
 ## Add your workflow to the n8n library <a href="#add-your-workflow-to-the-n8n-library" id="add-your-workflow-to-the-n8n-library"></a>
 
 To share your own workflow in the template library, follow [Create workflow templates](https://app.gitbook.com/s/MtULFJy2jwinjt5V0GTy/create-templates). The guide covers quality requirements, testing, documentation, and submission through the Creator Dashboard.
@@ -41,23 +57,23 @@ Your API must provide the same endpoints and data structure as n8n's.
 
 The endpoints are:
 
-| Method | Path | Purpose |
-| ------ | ---- | ------- |
-| GET | `/templates/workflows/<id>` | Fetch template metadata for preview/browsing |
-| GET | `/workflows/templates/<id>` | Fetch workflow data to import onto canvas |
-| GET | `/templates/search` | Search for workflow templates |
-| GET | `/templates/collections/<id>` | Get a specific template collection |
-| GET | `/templates/collections` | List all template collections |
-| GET | `/templates/categories` | List all template categories |
-| GET | `/health` | Health check endpoint |
+| Method | Path                          | Purpose                                      |
+| ------ | ----------------------------- | -------------------------------------------- |
+| GET    | `/templates/workflows/<id>`   | Fetch template metadata for preview/browsing |
+| GET    | `/workflows/templates/<id>`   | Fetch workflow data to import onto canvas    |
+| GET    | `/templates/search`           | Search for workflow templates                |
+| GET    | `/templates/collections/<id>` | Get a specific template collection           |
+| GET    | `/templates/collections`      | List all template collections                |
+| GET    | `/templates/categories`       | List all template categories                 |
+| GET    | `/health`                     | Health check endpoint                        |
 
 {% hint style="warning" %}
 **Critical: Two different response formats required**
 
 The two workflow endpoints require **different response formats**:
 
-- **`/templates/workflows/{id}`**: Returns the template itself, which includes the workflow in the `workflow` key
-- **`/workflows/templates/{id}`**: Returns the workflow the template contains
+* **`/templates/workflows/{id}`**: Returns the template itself, which includes the workflow in the `workflow` key
+* **`/workflows/templates/{id}`**: Returns the workflow the template contains
 
 See Schemas below for details.
 {% endhint %}
@@ -67,7 +83,7 @@ See Schemas below for details.
 The `/templates/search` endpoint accepts the following query parameters:
 
 | Parameter  | Type                                         | Description                                      |
-|------------|----------------------------------------------|--------------------------------------------------|
+| ---------- | -------------------------------------------- | ------------------------------------------------ |
 | `page`     | integer                                      | The page of results to return                    |
 | `rows`     | integer                                      | The maximum number of results to return per page |
 | `category` | comma-separated list of strings (categories) | The categories to search within                  |
@@ -76,7 +92,7 @@ The `/templates/search` endpoint accepts the following query parameters:
 The `/templates/collections` endpoint accepts the following query parameters:
 
 | Parameter  | Type                                         | Description                     |
-|------------|----------------------------------------------|---------------------------------|
+| ---------- | -------------------------------------------- | ------------------------------- |
 | `category` | comma-separated list of strings (categories) | The categories to search within |
 | `search`   | string                                       | The search query                |
 
@@ -120,7 +136,7 @@ Used by `/templates/workflows/{id}` endpoint (wrapped in a `workflow` key).
 
 This schema describes the template metadata used for displaying templates in search/browse UI. It includes a nested `workflow` property that contains the actual importable workflow definition.
 
-```json title="Workflow item data schema"
+```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Generated schema for Root",
@@ -397,7 +413,7 @@ This schema describes the template metadata used for displaying templates in sea
 
 <summary>Show <code>category</code> item data schema</summary>
 
-```json title="Category item data schema"
+```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
@@ -422,7 +438,7 @@ This schema describes the template metadata used for displaying templates in sea
 
 <summary>Show <code>collection</code> item data schema</summary>
 
-```json title="Collection item data schema"
+```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
@@ -475,20 +491,16 @@ This schema describes the template metadata used for displaying templates in sea
 
 You can also interactively explore n8n's API endpoints:
 
-[https://api.n8n.io/templates/categories](https://api.n8n.io/templates/categories)
-[https://api.n8n.io/templates/collections](https://api.n8n.io/templates/collections)
-[https://api.n8n.io/templates/search](https://api.n8n.io/templates/search)
-[https://api.n8n.io/health](https://api.n8n.io/health)
-
+[https://api.n8n.io/templates/categories](https://api.n8n.io/templates/categories) [https://api.n8n.io/templates/collections](https://api.n8n.io/templates/collections) [https://api.n8n.io/templates/search](https://api.n8n.io/templates/search) [https://api.n8n.io/health](https://api.n8n.io/health)
 
 You can [contact us](mailto:help@n8n.io) for more support.
-
-[^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
 
 ## Related resources
 
 * [Ways of building workflows](./)
-* [Use n8n Assistant](n8n-assistant.md)
+* [Use n8n Assistant](n8n-assistant/)
 * [Use n8n MCP server](connect-to-n8n-mcp-server.md)
 * [Use Ask n8n AI](use-the-ai-assistant.md)
 * [Use Chat Hub](chat-hub.md)
+
+[^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.

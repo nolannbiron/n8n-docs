@@ -24,6 +24,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Get coding help from AI
@@ -45,9 +47,9 @@ If you've already written some code on the **Code** tab, the AI generated code w
 To use ChatGPT to generate code in the Code node:
 
 1. In the Code node, set **Language** to **JavaScript**.
-1. Select the **Ask AI** tab.
-1. Write your query.
-1. Select **Generate Code**. n8n sends your query to ChatGPT, then displays the result in the **Code** tab.
+2. Select the **Ask AI** tab.
+3. Write your query.
+4. Select **Generate Code**. n8n sends your query to ChatGPT, then displays the result in the **Code** tab.
 
 ## Usage limits <a href="#usage-limits" id="usage-limits"></a>
 
@@ -198,7 +200,7 @@ return [{ json: { slackMessage } }];
 
 If your incoming data contains nested fields, using dot notation to reference them can help the AI understand what data you want.
 
-![Code node with an AI prompt referencing nested data using dot notation, such as personal_info.first_name](../.gitbook/assets/reference-data-dot-notation.png)
+![Code node with an AI prompt referencing nested data using dot notation, such as personal\_info.first\_name](../.gitbook/assets/reference-data-dot-notation.png)
 
 To try the example yourself, download the example workflow and import it into n8n:
 
@@ -235,8 +237,8 @@ The AI-generated code may work without any changes, but you may have to edit it.
 
 * [Code in n8n](./)
 * [Using the Code node](using-the-code-node.md)
-* [Use built-in shortcuts](use-built-in-shortcuts.md)
+* [Use built-in shortcuts](use-built-in-shortcuts/)
 * [Define custom variables](define-custom-variables.md)
-* [Cookbook](cookbook/README.md)
+* [Cookbook](cookbook/)
 
 Pluralsight offer a short guide on [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding), which includes example prompts.

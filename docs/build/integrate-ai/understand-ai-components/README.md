@@ -1,9 +1,27 @@
 ---
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
-# Understand AI components <a href="#understand-ai-components" id="understand-ai-components"></a>
+
+# Understand AI components
 
 Learn the core building blocks of AI workflows in n8n: chains, agents, memory, tools, and vector databases.
 
@@ -22,5 +40,5 @@ Learn the core building blocks of AI workflows in n8n: chains, agents, memory, t
 * [Integrate AI](../)
 * [MCP servers](../mcp-servers.md)
 * [LangChain in n8n](../langchain-in-n8n.md)
-* [Test and improve AI workflows](../test-and-improve-ai-workflows/README.md)
-* [AI examples](../ai-examples.md)
+* [Test and improve AI workflows](../test-and-improve-ai-workflows/)
+* [AI examples](../ai-examples/)

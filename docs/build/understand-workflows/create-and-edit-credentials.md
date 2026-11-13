@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Create and edit credentials
@@ -35,13 +37,13 @@ On n8n Cloud, supported AI models and services don't need a credential at all: s
 
 ## Create a credential <a href="#create-a-credential" id="create-a-credential"></a>
 
-1. Select the <img src="../.gitbook/assets/universal-resource-button (1).png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-left corner of the side menu. Select credential.
+1. Select the <img src="../.gitbook/assets/universal-resource-button.png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-left corner of the side menu. Select credential.
 2. If your n8n instance supports projects[^1], you'll also need to choose whether to create the credential inside your personal space or a specific project you have access to. If you're using the community version, you'll create the credential inside your personal space.
 3. Select the app or service you wish to connect to.
 
 Or:
 
-1. Using the <img src="../.gitbook/assets/universal-resource-button (1).png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-right corner from either the **Overview** page or a specific project. Select Credential.
+1. Using the <img src="../.gitbook/assets/universal-resource-button.png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-right corner from either the **Overview** page or a specific project. Select Credential.
 2. If you're doing this from the **Overview** page, you'll create the credential inside your personal space. If you're doing this from inside a project, you'll create the credential inside that specific project.
 3. Select the app or service you wish to connect to.
 
@@ -96,8 +98,8 @@ You can use expressions[^2] to set credentials dynamically as your workflow runs
 To load the template into your n8n instance:
 
 1. Download the workflow JSON file.
-1. Open a new workflow in your n8n instance.
-1. Copy in the JSON, or select **Workflow menu** <img src="../assets/three-dots-horizontal.png" alt="Workflow menu icon" data-size="line"> > **Import from file...**.
+2. Open a new workflow in your n8n instance.
+3. Copy in the JSON, or select **Workflow menu**  > **Import from file...**.
 
 The example workflows use Sticky Notes to guide you:
 
@@ -106,14 +108,15 @@ The example workflows use Sticky Notes to guide you:
 * Orange: you need to change something to make the workflow work.
 * Blue: draws attention to a key feature of the example.
 
-[^1]: n8n projects allow you to separate workflows, variables, and credentials into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources.
-[^2]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
-
 ## Related resources
 
 * [Understand workflows](./)
 * [Create and run workflows](create-and-run-workflows.md)
 * [Save and publish workflows](save-and-publish-workflows.md)
 * [Use Gateway credits](use-gateway-credits.md)
-* [Workflow components](workflow-components/README.md)
-* [Understand executions](understand-executions/README.md)
+* [Workflow components](workflow-components/)
+* [Understand executions](understand-executions/)
+
+[^1]: n8n projects allow you to separate workflows, variables, and credentials into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources.
+
+[^2]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

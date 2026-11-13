@@ -26,6 +26,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Connect nodes together
@@ -36,7 +38,7 @@ A connection establishes a link between nodes to route data through the workflow
 
 ## Create a connection <a href="#create-a-connection" id="create-a-connection"></a>
 
-To create a connection between two nodes, select the grey dot or **Add node** <img src="../../.gitbook/assets/add-node-small (1).png" alt="Add node icon" data-size="line"> on the right side of a node and slide the arrow to the grey rectangle on the left side of the following node.
+To create a connection between two nodes, select the grey dot or **Add node** <img src="../../.gitbook/assets/add-node-small.png" alt="Add node icon" data-size="line"> on the right side of a node and slide the arrow to the grey rectangle on the left side of the following node.
 
 ## Delete a connection <a href="#delete-a-connection" id="delete-a-connection"></a>
 

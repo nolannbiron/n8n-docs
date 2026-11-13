@@ -1,25 +1,42 @@
 ---
 title: Custom variables
-description: Custom variables allow you to store and reuse values in n8n workflows.
 contentType: howto
 nodeTitle: Define custom variables
 originalFilePath: code/variables.md
-originalUrl: 'https://docs.n8n.io/code/variables'
-url: 'https://docs.n8n.io/build/code-in-n8n/define-custom-variables'
+originalUrl: https://docs.n8n.io/code/variables
+url: https://docs.n8n.io/build/code-in-n8n/define-custom-variables
+description: Custom variables allow you to store and reuse values in n8n workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Custom variables <a href="#custom-variables" id="custom-variables"></a>
+# Define custom variables
 
 {% hint style="info" %}
 **Feature availability**
 
 Custom variables are available on:
 
-- **n8n Cloud:** Pro, Enterprise
-- **Self-hosted:** Business, Enterprise
+* **n8n Cloud:** Pro, Enterprise
+* **Self-hosted:** Business, Enterprise
 
 Only instance owners and admins can create variables.
 {% endhint %}
@@ -43,9 +60,9 @@ To create a new variable:
 1. On the **Variables** tab, select **Add Variable**.
 2. Enter a **Key** and **Value**. The maximum key length is 50 characters, and the maximum value length is 1000 characters. n8n limits the characters you can use in the key and value to lowercase and uppercase letters, numbers, and underscores (`A-Z`, `a-z`, `0-9`, `_`).
 3. Select the **Scope** (only available when creating from the overview page):
-    * **Global**: The variable is available across all projects in the n8n instance.
-    * **Project**: The variable is available only within a specific project (you can select which project).
-    * When creating from a project page, the scope is automatically set to that project.
+   * **Global**: The variable is available across all projects in the n8n instance.
+   * **Project**: The variable is available only within a specific project (you can select which project).
+   * When creating from a project page, the scope is automatically set to that project.
 4. Select **Save**. The variable is now available for use in workflows according to its scope.
 
 ## Edit and delete variables <a href="#edit-and-delete-variables" id="edit-and-delete-variables"></a>
@@ -76,12 +93,12 @@ When a project-scoped variable has the same key as a global variable, the projec
 
 Variables are read-only. You must use the UI to change the values. If you need to set and access custom data within your workflow, use [Workflow static data](cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md).
 
-[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
-
 ## Related resources
 
 * [Code in n8n](./)
 * [Using the Code node](using-the-code-node.md)
 * [Get coding help from AI](get-coding-help-from-ai.md)
-* [Use built-in shortcuts](use-built-in-shortcuts.md)
-* [Cookbook](cookbook/README.md)
+* [Use built-in shortcuts](use-built-in-shortcuts/)
+* [Cookbook](cookbook/)
+
+[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

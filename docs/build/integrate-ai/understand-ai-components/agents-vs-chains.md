@@ -27,6 +27,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Agents vs chains
@@ -49,8 +51,8 @@ This workflow uses:
 To load the template into your n8n instance:
 
 1. Download the workflow JSON file.
-1. Open a new workflow in your n8n instance.
-1. Copy in the JSON, or select **Workflow menu** <img src="../assets/three-dots-horizontal.png" alt="Workflow menu icon" data-size="line"> > **Import from file...**.
+2. Open a new workflow in your n8n instance.
+3. Copy in the JSON, or select **Workflow menu**  > **Import from file...**.
 
 The example workflows use Sticky Notes to guide you:
 
@@ -58,11 +60,6 @@ The example workflows use Sticky Notes to guide you:
 * Green: instructions to run the workflow.
 * Orange: you need to change something to make the workflow work.
 * Blue: draws attention to a key feature of the example.
-
-[^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
-[^2]: AI chains allow you to interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this).
-[^3]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.
-[^4]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.
 
 ## Related resources
 
@@ -73,3 +70,11 @@ The example workflows use Sticky Notes to guide you:
 * [How tools work](how-tools-work.md)
 * [Store and search data with vectors](store-and-search-data-with-vectors.md)
 * [Retrieve relevant context](retrieve-relevant-context.md)
+
+[^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
+
+[^2]: AI chains allow you to interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this).
+
+[^3]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.
+
+[^4]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.

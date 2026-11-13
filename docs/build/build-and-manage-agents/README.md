@@ -22,6 +22,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 tags:
   - tag: preview
     primary: true
@@ -36,8 +38,8 @@ An agent is an autonomous assistant you build in n8n. Each agent has a language 
 
 Agents are available on:
 
-- **n8n Cloud:** All plans
-- **Self-hosted:** All plans from n8n 2.32.3. See [Self-hosted](#self-hosted) for setup details.
+* **n8n Cloud:** All plans
+* **Self-hosted:** All plans from n8n 2.32.3. See [Self-hosted](./#self-hosted) for setup details.
 {% endhint %}
 
 {% hint style="info" %}
@@ -89,7 +91,7 @@ Agents, fixed workflows, and workflows that use AI for specific steps each suit 
 
 ### What you can build with agents
 
-Use agents to answer questions using your uploaded files and connected services, take actions in tools like Slack, Google Sheets, or Linear, and trigger or coordinate workflows to complete larger tasks. Agents can also delegate to other agents and run on a schedule. See [Sub-agents](#add-sub-agents) and [Schedules](#run-agents-on-a-schedule) below.
+Use agents to answer questions using your uploaded files and connected services, take actions in tools like Slack, Google Sheets, or Linear, and trigger or coordinate workflows to complete larger tasks. Agents can also delegate to other agents and run on a schedule. See [Sub-agents](./#add-sub-agents) and [Schedules](./#run-agents-on-a-schedule) below.
 
 ### How agents work
 
@@ -101,18 +103,18 @@ Each conversation with an agent is a **session**, which n8n stores so you can re
 
 Configure these parts of an agent in the Agent Builder:
 
-| Part               | What it does                                                                                                    |
-| ------------------ | --------------------------------------------------------------------------------------------------------------- |
-| **Model**          | The language model that reasons and generates responses. Choose a provider and model when you set up the agent. |
-| **Instructions**   | The system prompt that describes the agent's role, tone, and constraints.                                       |
-| **Tools**          | Actions the agent can take: workflows, custom code, built-in n8n integrations, and [MCP servers](../integrate-ai/mcp-servers.md).                 |
-| **Web search**     | Lets the agent search the web for current information, using the model's native search tool or a fallback service. |
-| **Skills**         | Reusable behavior bundles that package instructions with the tools needed for a specific task.                  |
-| **Channels**       | Places people can reach the agent, like Slack, Telegram, or Linear.                                             |
-| **Schedules**      | Tasks the agent runs on a recurring basis once published.                                                       |
-| **Sub-agents**     | Other published agents this agent can delegate work to.                                                         |
-| **Knowledge base** | Files the agent can search and read for context (n8n Cloud, or self-hosted in Preview with a configured sandbox). |
-| **Memory**         | Session memory keeps the current conversation. Episodic memory recalls context from earlier sessions.           |
+| Part               | What it does                                                                                                                      |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**          | The language model that reasons and generates responses. Choose a provider and model when you set up the agent.                   |
+| **Instructions**   | The system prompt that describes the agent's role, tone, and constraints.                                                         |
+| **Tools**          | Actions the agent can take: workflows, custom code, built-in n8n integrations, and [MCP servers](../integrate-ai/mcp-servers.md). |
+| **Web search**     | Lets the agent search the web for current information, using the model's native search tool or a fallback service.                |
+| **Skills**         | Reusable behavior bundles that package instructions with the tools needed for a specific task.                                    |
+| **Channels**       | Places people can reach the agent, like Slack, Telegram, or Linear.                                                               |
+| **Schedules**      | Tasks the agent runs on a recurring basis once published.                                                                         |
+| **Sub-agents**     | Other published agents this agent can delegate work to.                                                                           |
+| **Knowledge base** | Files the agent can search and read for context (n8n Cloud, or self-hosted in Preview with a configured sandbox).                 |
+| **Memory**         | Session memory keeps the current conversation. Episodic memory recalls context from earlier sessions.                             |
 
 Model, Instructions, Tools, Skills, Knowledge, Memory, and Sub-agents are configured while building the agent. Channels and Schedules take effect once you publish.
 
@@ -135,7 +137,7 @@ Build agents in the Agent Builder. Start with a name and a model, add instructio
 {% hint style="info" %}
 **Use n8n Assistant**
 
-Describe what you want the agent to do to the [n8n Assistant](../ways-of-building-workflows/n8n-assistant.md). It suggests instructions, tools, and skills to add. Refine the suggestions in the Agent Builder as you go.
+Describe what you want the agent to do to the [n8n Assistant](../ways-of-building-workflows/n8n-assistant/). It suggests instructions, tools, and skills to add. Refine the suggestions in the Agent Builder as you go.
 {% endhint %}
 
 #### Choose a model
@@ -152,7 +154,7 @@ Keep instructions specific; if the agent doesn't behave as expected, refine the 
 
 In the **Tools** section, select **Add tool** and pick from built-in tools (n8n integrations like Slack or Google Sheets), workflows in the same project, custom tools defined by a JSON schema, or external tools using [MCP servers](../integrate-ai/mcp-servers.md).
 
-The agent decides which tool to use based on your instructions and the task, using the credentials you attach when you add the tool. For sensitive tools, you can require approval before the agent runs them. See [Approve tool calls](#approve-tool-calls).
+The agent decides which tool to use based on your instructions and the task, using the credentials you attach when you add the tool. For sensitive tools, you can require approval before the agent runs them. See [Approve tool calls](./#approve-tool-calls).
 
 #### Enable web search
 
@@ -181,7 +183,7 @@ Add files the agent can search and read from the **Knowledge** tab. Supported fi
 {% hint style="info" %}
 **Feature availability**
 
-Knowledge bases are available on n8n Cloud. On self-hosted, they need a configured sandbox. See [Self-hosted](#self-hosted).
+Knowledge bases are available on n8n Cloud. On self-hosted, they need a configured sandbox. See [Self-hosted](./#self-hosted).
 {% endhint %}
 
 {% hint style="info" %}
@@ -268,7 +270,7 @@ Available channels:
 * **Slack**
 * **Telegram**
 * **Linear**
-* **Microsoft Teams**: see [Connect an agent to Microsoft Teams](microsoft-teams/README.md)
+* **Microsoft Teams**: see [Connect an agent to Microsoft Teams](microsoft-teams/)
 
 Open the **Channels** section on the agent and follow the setup for the channel you want. Each channel has its own connection and permission model.
 
@@ -342,12 +344,12 @@ Agents share the same execution quota as workflows. Executions from your agents 
 
 ## Related resources
 
-* [Build](../README.md)
-* [Understand workflows](../understand-workflows/README.md)
-* [Ways of building workflows](../ways-of-building-workflows/README.md)
-* [Manage workflows](../manage-workflows/README.md)
-* [Flow logic](../flow-logic/README.md)
-* [Work with data](../work-with-data/README.md)
-* [Code in n8n](../code-in-n8n/README.md)
-* [Integrate AI](../integrate-ai/README.md)
+* [Build](../)
+* [Understand workflows](../understand-workflows/)
+* [Ways of building workflows](../ways-of-building-workflows/)
+* [Manage workflows](../manage-workflows/)
+* [Flow logic](../flow-logic/)
+* [Work with data](../work-with-data/)
+* [Code in n8n](../code-in-n8n/)
+* [Integrate AI](../integrate-ai/)
 * [Keyboard shortcuts](../keyboard-shortcuts.md)

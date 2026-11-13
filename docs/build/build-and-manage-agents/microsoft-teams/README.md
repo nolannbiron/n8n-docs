@@ -2,7 +2,9 @@
 title: Connect an agent to Microsoft Teams
 status: preview
 description: >-
-  Connect an n8n agent to Microsoft Teams so people can chat with it in direct messages, team channels, and group chats. Covers how it works, where people can use it, how it listens, files, and limitations.
+  Connect an n8n agent to Microsoft Teams so people can chat with it in direct
+  messages, team channels, and group chats. Covers how it works, where people
+  can use it, how it listens, files, and limitati
 layout:
   width: default
   title:
@@ -20,6 +22,8 @@ layout:
   tags:
     visible: true
   actions:
+    visible: true
+  anchors:
     visible: true
 tags:
   - tag: preview
@@ -56,12 +60,12 @@ See [Set up the Teams channel](set-up-the-teams-channel.md) for the steps. Both 
 
 A Teams agent has four components: three resources on the Microsoft side and one credential in n8n.
 
-| Component | What it does |
-| --- | --- |
-| **Microsoft Entra app registration** | Gives the bot its identity. It's a single-tenant app, so it only works in your organization. |
-| **Azure Bot** | Receives messages from Teams and forwards them to n8n. It uses the free F0 tier and has the Microsoft Teams channel turned on. |
-| **Teams app package** | A zip file with the app manifest and icons. People add this app in Teams to reach the agent. |
-| **Microsoft Entra Service Principal credential** | Stores the tenant ID, client ID, and client secret of the app registration in n8n. |
+| Component                                        | What it does                                                                                                                   |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| **Microsoft Entra app registration**             | Gives the bot its identity. It's a single-tenant app, so it only works in your organization.                                   |
+| **Azure Bot**                                    | Receives messages from Teams and forwards them to n8n. It uses the free F0 tier and has the Microsoft Teams channel turned on. |
+| **Teams app package**                            | A zip file with the app manifest and icons. People add this app in Teams to reach the agent.                                   |
+| **Microsoft Entra Service Principal credential** | Stores the tenant ID, client ID, and client secret of the app registration in n8n.                                             |
 
 When someone messages the agent in Teams:
 
@@ -82,13 +86,13 @@ The Teams channel runs the published version of the agent. Until you publish the
 
 In the **Choose where it works** step, you decide where people can reach the agent. Direct chat is always on. You can also turn on team channels, group chats, and whether the agent reads every message there.
 
-| Option | Where people use it | How a conversation starts | Permission it adds | Who approves it |
-| --- | --- | --- | --- | --- |
-| **Direct chat** | One-to-one chat with the agent | Open the app and send a message | None | Nobody |
-| **Team channels** | Channels in teams that added the app | Add the app to a team, then @mention the agent in a channel | `ChannelMessage.Read.Group` | The team owner, when adding the app |
-| **Group and meeting chats** | Group chats and meeting chats that added the app | Add the app to a chat, then @mention the agent | `ChatMessage.Read.Chat` | The person adding the app to the chat |
-| **Read all channel messages** | Team channels | Any message in the channel | None beyond **Team channels** | The team owner, when adding the app |
-| **Read all group-chat messages** | Group and meeting chats | Any message in the chat | None beyond **Group and meeting chats** | The person adding the app to the chat |
+| Option                           | Where people use it                              | How a conversation starts                                   | Permission it adds                      | Who approves it                       |
+| -------------------------------- | ------------------------------------------------ | ----------------------------------------------------------- | --------------------------------------- | ------------------------------------- |
+| **Direct chat**                  | One-to-one chat with the agent                   | Open the app and send a message                             | None                                    | Nobody                                |
+| **Team channels**                | Channels in teams that added the app             | Add the app to a team, then @mention the agent in a channel | `ChannelMessage.Read.Group`             | The team owner, when adding the app   |
+| **Group and meeting chats**      | Group chats and meeting chats that added the app | Add the app to a chat, then @mention the agent              | `ChatMessage.Read.Chat`                 | The person adding the app to the chat |
+| **Read all channel messages**    | Team channels                                    | Any message in the channel                                  | None beyond **Team channels**           | The team owner, when adding the app   |
+| **Read all group-chat messages** | Group and meeting chats                          | Any message in the chat                                     | None beyond **Group and meeting chats** | The person adding the app to the chat |
 
 The permissions in this table are resource-specific consent (RSC) permissions. They're part of the app package and only apply to the team or chat that adds the app. They let the agent read messages and pasted images in that team or chat. They don't give access to anything else in your organization.
 
@@ -147,7 +151,7 @@ In direct chats, Teams sends files with the message itself. You don't need any e
 
 In team channels and group chats, Teams doesn't include files in the message. n8n reads the message again through Microsoft Graph to find them:
 
-* **Pasted images** work with the RSC permission the app already has (`ChannelMessage.Read.Group` or `ChatMessage.Read.Chat`, see [Where people can use the agent](#where-people-can-use-the-agent)). You don't need anything else.
+* **Pasted images** work with the RSC permission the app already has (`ChannelMessage.Read.Group` or `ChatMessage.Read.Chat`, see [Where people can use the agent](./#where-people-can-use-the-agent)). You don't need anything else.
 * **Attached files** are stored in SharePoint or OneDrive. To download them, the app registration needs the Microsoft Graph **application** permission `Files.Read.All`, with admin consent. See [Microsoft Graph permissions](set-up-the-teams-channel.md#microsoft-graph-permissions).
 
 Even with `Files.Read.All`, n8n only downloads a file if one of these is true:
@@ -161,11 +165,11 @@ This keeps the agent from opening files that aren't part of the conversation.
 
 If n8n can't download a file, it tells the agent why, so the agent can explain it to the person who sent it:
 
-| Reason | What to do |
-| --- | --- |
-| No administrator has approved the permissions yet | Approve them as described in [Approve access](set-up-the-teams-channel.md#approve-access), then wait up to an hour. |
-| The app in Teams is missing a permission | Upload or publish the latest app package. Older packages may not have the RSC permissions. |
-| The file isn't in the channel's files and the sender doesn't own it | Ask the person to share the file in the channel or from their own OneDrive. |
+| Reason                                                              | What to do                                                                                                          |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| No administrator has approved the permissions yet                   | Approve them as described in [Approve access](set-up-the-teams-channel.md#approve-access), then wait up to an hour. |
+| The app in Teams is missing a permission                            | Upload or publish the latest app package. Older packages may not have the RSC permissions.                          |
+| The file isn't in the channel's files and the sender doesn't own it | Ask the person to share the file in the channel or from their own OneDrive.                                         |
 
 ## Limitations
 

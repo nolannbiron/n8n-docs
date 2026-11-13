@@ -4,8 +4,25 @@ description: >-
   Connect the n8n Browser Use extension so n8n Assistant can work in your
   browser and set up credentials for you.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Work with Browser Use
@@ -19,7 +36,7 @@ Browser Use runs in your real browser profile, so it can use the sites you're al
 
 Browser Use is available on:
 
-- **n8n Cloud:** Starter, Pro
+* **n8n Cloud:** Starter, Pro
 
 It isn't available on self-hosted n8n.
 {% endhint %}
@@ -28,15 +45,15 @@ It isn't available on self-hosted n8n.
 
 With Browser Use connected, you can ask n8n Assistant to:
 
-- **Set up credentials:** create an API key or app in a service's console and save it as an n8n credential. See [Set up credentials with Browser Use](#set-up-credentials-with-browser-use).
-- **Browse and research:** open pages, follow links, and read page content.
-- **Fill in forms:** type text, select options, upload files, and submit forms.
-- **Work with tabs:** open, switch between, and close tabs.
+* **Set up credentials:** create an API key or app in a service's console and save it as an n8n credential. See [Set up credentials with Browser Use](browser-use.md#set-up-credentials-with-browser-use).
+* **Browse and research:** open pages, follow links, and read page content.
+* **Fill in forms:** type text, select options, upload files, and submit forms.
+* **Work with tabs:** open, switch between, and close tabs.
 
 ## Requirements
 
-- Google Chrome or another Chromium-based browser, such as Microsoft Edge or Brave. Browser Use isn't available on phones and tablets.
-- An instance admin must turn on **Browser use** in **Settings** > **Assistant**.
+* Google Chrome or another Chromium-based browser, such as Microsoft Edge or Brave. Browser Use isn't available on phones and tablets.
+* An instance admin must turn on **Browser use** in **Settings** > **Assistant**.
 
 ## Connect Browser Use
 
@@ -55,7 +72,7 @@ If the popup closes or doesn't appear, select **Try again** in n8n.
 
 To have n8n Assistant create a credential for you, ask for it in the chat. For example:
 
-```text
+```
 Use my browser to create an OpenAI API key and save it as an n8n credential.
 ```
 
@@ -69,12 +86,12 @@ The secret goes straight from the page into the n8n credential. n8n Assistant ne
 
 ## Control what Browser Use can access
 
-- **Tabs:** n8n Assistant can only use tabs it opens itself and tabs you share when you connect. Shared tabs apply to the current connection only.
-- **Sites:** before n8n Assistant uses a new site, it asks for permission. Select **Allow once** for the current response, **Allow for session** for the rest of the conversation, or **Deny**.
-- **Secrets on pages:** n8n hides API keys, passwords, and other secrets from n8n Assistant when it reads a page. It also blocks screenshots of pages that show secrets.
-- **Admin permissions:** instance admins can change these in **Settings** > **Assistant** > **Permissions**. Each can be **Allow**, **Ask first** (default), or **Block**:
-  - **Fetch URLs** (in **Web**): controls the site prompt above. **Allow** skips it, and **Block** stops n8n Assistant from opening sites. This setting also applies to n8n Assistant's web access outside Browser Use.
-  - **Create credentials from a browser session** (in **Credentials**): controls whether n8n Assistant asks before it saves a credential it set up in your browser.
+* **Tabs:** n8n Assistant can only use tabs it opens itself and tabs you share when you connect. Shared tabs apply to the current connection only.
+* **Sites:** before n8n Assistant uses a new site, it asks for permission. Select **Allow once** for the current response, **Allow for session** for the rest of the conversation, or **Deny**.
+* **Secrets on pages:** n8n hides API keys, passwords, and other secrets from n8n Assistant when it reads a page. It also blocks screenshots of pages that show secrets.
+* **Admin permissions:** instance admins can change these in **Settings** > **Assistant** > **Permissions**. Each can be **Allow**, **Ask first** (default), or **Block**:
+  * **Fetch URLs** (in **Web**): controls the site prompt above. **Allow** skips it, and **Block** stops n8n Assistant from opening sites. This setting also applies to n8n Assistant's web access outside Browser Use.
+  * **Create credentials from a browser session** (in **Credentials**): controls whether n8n Assistant asks before it saves a credential it set up in your browser.
 
 {% hint style="warning" %}
 Browser Use acts with your signed-in sessions. Check which site and action n8n Assistant is asking about before you approve a request.
@@ -88,10 +105,10 @@ Disconnecting ends the current connection only. If you selected **Always allow `
 
 ## Limitations
 
-- n8n Assistant can't sign in, complete two-factor authentication, or solve CAPTCHAs for you. It asks you to do these steps.
-- It can't read files you download or open internal browser pages, such as `chrome://` pages.
-- Browser Use only works while your browser is open and connected. It can't run as part of a published workflow.
-- You can connect one browser at a time.
+* n8n Assistant can't sign in, complete two-factor authentication, or solve CAPTCHAs for you. It asks you to do these steps.
+* It can't read files you download or open internal browser pages, such as `chrome://` pages.
+* Browser Use only works while your browser is open and connected. It can't run as part of a published workflow.
+* You can connect one browser at a time.
 
 ## Troubleshooting
 
@@ -113,4 +130,4 @@ The extension shows **Can't connect to `<host>`** when the instance isn't an n8n
 
 ## Related resources
 
-* [Use n8n Assistant](../n8n-assistant.md)
+* [Use n8n Assistant](./)

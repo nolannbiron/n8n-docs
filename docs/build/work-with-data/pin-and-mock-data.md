@@ -1,17 +1,34 @@
 ---
 title: Data mocking and pinning
-description: Ways to mock and pin data in your n8n workflow during development.
 contentType: howto
 nodeTitle: Pin and mock data
 originalFilePath: data/data-pinning.md
-originalUrl: 'https://docs.n8n.io/data/data-pinning'
-url: 'https://docs.n8n.io/build/work-with-data/pin-and-mock-data'
+originalUrl: https://docs.n8n.io/data/data-pinning
+url: https://docs.n8n.io/build/work-with-data/pin-and-mock-data
+description: Ways to mock and pin data in your n8n workflow during development.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Pinning and mocking data <a href="#pinning-and-mocking-data" id="pinning-and-mocking-data"></a>
+# Pin and mock data
 
 When developing workflows, you might want to test your logic without repeatedly calling external systems or working with live data. n8n provides two related features to help with this:
 
@@ -46,11 +63,11 @@ The Customer Datastore node provides a fake dataset to work with. Add and execut
 
 **Use this approach when**: You need some test data when exploring n8n, and you don't have a real use-case to work with.
 
-Once you've created or obtained test data you want to reuse across multiple workflow executions, use [Data pinning](#data-pinning) to save it for consistent testing.
+Once you've created or obtained test data you want to reuse across multiple workflow executions, use [Data pinning](pin-and-mock-data.md#data-pinning) to save it for consistent testing.
 
 ## Data pinning <a href="#data-pinning" id="data-pinning"></a>
 
-You can 'pin' data during workflow development. Data pinning means saving the output data of a node and using the saved data instead of fetching fresh data in future workflow executions. 
+You can 'pin' data during workflow development. Data pinning means saving the output data of a node and using the saved data instead of fetching fresh data in future workflow executions.
 
 You can use this when working with data from external sources to avoid having to repeat requests to the external system. This can save time and resources:
 
@@ -66,7 +83,7 @@ You can only pin data for nodes that have a single main output ("error" outputs 
 To pin data in a node:
 
 1. Run the node to load data.
-2. In the **OUTPUT** view, select **Pin data** <img src="../../assets/data-pinning-button.png" alt="Pin data icon" data-size="line">. When data pinning is active, the button is disabled and a "This data is pinned" banner is displayed in the **OUTPUT** view.
+2. In the **OUTPUT** view, select **Pin data** . When data pinning is active, the button is disabled and a "This data is pinned" banner is displayed in the **OUTPUT** view.
 
 {% hint style="info" %}
 **Nodes that output binary data**
@@ -109,22 +126,19 @@ You can copy data from nodes in previous workflow executions:
 5. Double click the node whose data you want to copy.
 6. If it's table layout, select **JSON** to switch to JSON view.
 7. There are two ways to copy the JSON:
-  1. Select the JSON you want by highlighting it, like selecting text. Then use `ctrl` + `c` to copy it.
-  2. Select the JSON you want to copy by clicking on a parameter. Then:
-    1. Hover over the JSON. n8n displays the **Copy** <img src="../.gitbook/assets/copy-data.png" alt="Copy data icon" data-size="line"> button.
-    2. Select **Copy** <img src="../.gitbook/assets/copy-data.png" alt="Copy data icon" data-size="line">.
-    3. You can choose what to copy:
-        * **Copy Item Path** and **Copy Parameter Path** give you expressions that access parts of the JSON.
-        * **Copy Value**: copies the entire selected JSON.
-8. Return to the workflow you're working on:  
+8. Select the JSON you want by highlighting it, like selecting text. Then use `ctrl` + `c` to copy it.
+9. Select the JSON you want to copy by clicking on a parameter. Then: 1. Hover over the JSON. n8n displays the **Copy** <img src="../.gitbook/assets/copy-data.png" alt="Copy data icon" data-size="line"> button. 2. Select **Copy** <img src="../.gitbook/assets/copy-data.png" alt="Copy data icon" data-size="line">. 3. You can choose what to copy:
+   * **Copy Item Path** and **Copy Parameter Path** give you expressions that access parts of the JSON.
+   * **Copy Value**: copies the entire selected JSON.
+10. Return to the workflow you're working on:
     1. Open the left menu.
     2. Select **Workflows**.
     3. Select **Open**.
     4. Select the workflow you want to open.
-9. Open the node where you want to use the copied data.
-10. If there is no data, run the node to load data.
-11. In the **OUTPUT** view, select **JSON** to switch to JSON view. 
-12. Select **Edit** <img src="../.gitbook/assets/edit-data.png" alt="Edit data icon" data-size="line">.
+11. Open the node where you want to use the copied data.
+12. If there is no data, run the node to load data.
+13. In the **OUTPUT** view, select **JSON** to switch to JSON view.
+14. Select **Edit** <img src="../.gitbook/assets/edit-data.png" alt="Edit data icon" data-size="line">.
 15. Paste in the data from the previous execution.
 16. Select **Save**. n8n saves your data changes and pins your data.
 
@@ -144,8 +158,8 @@ This approach gives you complete control over your test data while ensuring cons
 * [Work with data](./)
 * [Understand n8n's data structure](understand-n8ns-data-structure.md)
 * [Expressions versus data nodes](expressions-versus-data-nodes.md)
-* [Reference data](reference-data/README.md)
-* [Transform data](transform-data/README.md)
+* [Reference data](reference-data/)
+* [Transform data](transform-data/)
 * [Filter out unwanted data](filter-out-unwanted-data.md)
-* [Handle special data types](handle-special-data-types/README.md)
+* [Handle special data types](handle-special-data-types/)
 * [Data tables](data-tables.md)

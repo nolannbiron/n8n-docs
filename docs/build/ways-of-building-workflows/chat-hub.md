@@ -23,9 +23,11 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
-# Chat Hub
+# Use Chat Hub
 
 ## Overview <a href="#overview" id="overview"></a>
 
@@ -72,8 +74,8 @@ The Chat user is a role for people in your organization who want to use workflow
 
 The Chat user role is available on:
 
-- **n8n Cloud:** Pro, Enterprise
-- **Self-hosted:** Business, Enterprise
+* **n8n Cloud:** Pro, Enterprise
+* **Self-hosted:** Business, Enterprise
 {% endhint %}
 
 ### Provider settings <a href="#provider-settings" id="provider-settings"></a>
@@ -96,7 +98,7 @@ To manage these settings, go to **Settings > Chat** and edit the providers.
 ## Related resources
 
 * [Ways of building workflows](./)
-* [Use n8n Assistant](n8n-assistant.md)
+* [Use n8n Assistant](n8n-assistant/)
 * [Use n8n MCP server](connect-to-n8n-mcp-server.md)
 * [Use templates](use-templates.md)
 * [Use Ask n8n AI](use-the-ai-assistant.md)

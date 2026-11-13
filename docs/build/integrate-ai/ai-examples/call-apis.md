@@ -26,6 +26,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Call APIs
@@ -48,8 +50,8 @@ This workflow uses:
 To load the template into your n8n instance:
 
 1. Download the workflow JSON file.
-1. Open a new workflow in your n8n instance.
-1. Copy in the JSON, or select **Workflow menu** <img src="../assets/three-dots-horizontal.png" alt="Workflow menu icon" data-size="line"> > **Import from file...**.
+2. Open a new workflow in your n8n instance.
+3. Copy in the JSON, or select **Workflow menu**  > **Import from file...**.
 
 The example workflows use Sticky Notes to guide you:
 
@@ -58,13 +60,13 @@ The example workflows use Sticky Notes to guide you:
 * Orange: you need to change something to make the workflow work.
 * Blue: draws attention to a key feature of the example.
 
-[^1]: APIs, or application programming interfaces, offer programmatic access to a service's data and functionality. APIs make it easier for software to interact with external systems. They're often offered as an alternative to traditional user-focused interfaces accessed through web browsers or UI.
-
 ## Related resources
 
-* [AI examples](../ai-examples.md)
+* [AI examples](./)
 * [Use Google Sheets as a data source](use-google-sheets-as-a-data-source.md)
 * [Use website content](use-website-content.md)
 * [Human-in-the-loop for tools](human-in-the-loop-for-tools.md)
 * [Set a human fallback for AI workflows](set-a-human-fallback-for-ai-workflows.md)
 * [Use AI for parameters](use-ai-for-parameters.md)
+
+[^1]: APIs, or application programming interfaces, offer programmatic access to a service's data and functionality. APIs make it easier for software to interact with external systems. They're often offered as an alternative to traditional user-focused interfaces accessed through web browsers or UI.

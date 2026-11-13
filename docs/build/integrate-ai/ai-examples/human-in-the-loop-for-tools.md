@@ -1,24 +1,41 @@
 ---
 title: Human-in-the-loop for AI tool calls
-description: >-
-  Learn how to require human approval before an AI Agent executes specific tools
-  in n8n.
 contentType: explanation
 nodeTitle: Human-in-the-loop for tools
 originalFilePath: advanced-ai/human-in-the-loop-tools.md
-originalUrl: 'https://docs.n8n.io/advanced-ai/human-in-the-loop-tools'
-url: 'https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools'
+originalUrl: https://docs.n8n.io/advanced-ai/human-in-the-loop-tools
+url: https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools
+description: >-
+  Learn how to require human approval before an AI Agent executes specific tools
+  in n8n.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Human-in-the-loop for AI tool calls <a href="#human-in-the-loop-for-ai-tool-calls" id="human-in-the-loop-for-ai-tool-calls"></a>
+# Human-in-the-loop for tools
 
 You can require human approval before an AI Agent executes a specific tool. When a tool requires human review, the workflow pauses and waits for a person to take one of the following actions:
 
-- **Approve**: The tool executes with the input specified by the AI.
-- **Deny**: The action is canceled and doesn't run.
+* **Approve**: The tool executes with the input specified by the AI.
+* **Deny**: The action is canceled and doesn't run.
 
 This feature allows for selective oversight of tool use within AI workflows, making it easier to apply additional review to tools with higher risk, such as sending messages, modifying records, or deleting data.
 
@@ -26,10 +43,10 @@ This feature allows for selective oversight of tool use within AI workflows, mak
 
 Human-in-the-loop (HITL) review is useful when:
 
-- **Tools perform irreversible actions**: Deleting data, sending external communications, or making purchases.
-- **Compliance requirements exist**: Regulated industries may require human approval for certain automated actions.
-- **High-value decisions are involved**: Actions that have significant business impact benefit from human oversight.
-- **You're building trust in AI workflows**: Start with human review enabled, then reduce oversight as confidence grows.
+* **Tools perform irreversible actions**: Deleting data, sending external communications, or making purchases.
+* **Compliance requirements exist**: Regulated industries may require human approval for certain automated actions.
+* **High-value decisions are involved**: Actions that have significant business impact benefit from human oversight.
+* **You're building trust in AI workflows**: Start with human review enabled, then reduce oversight as confidence grows.
 
 HITL can be applied to all tools connected to an AI Agent node, or just selected individual tools, offering more precise control than general output gating.
 
@@ -64,23 +81,21 @@ In your workflow, click the **Tools** connector on an AI Agent node to open the 
 1. Add the tools that require approval to the human review step's tool connector.
 2. Configure each tool as you normally would.
 
-
-
 ## Available approval channels <a href="#available-approval-channels" id="available-approval-channels"></a>
 
 You can use any of the following services as your human review channel:
 
-| Channel | Description |
-|---------|-------------|
-| [Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chat) | n8n's built-in chat interface |
-| [Slack](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack) | Send approval requests to a Slack channel or DM |
-| [Discord](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.discord) | Send approval requests to a Discord channel |
-| [Telegram](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.telegram) | Send approval requests through Telegram |
-| [Microsoft Teams](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftteams) | Send approval requests to a Teams channel or chat |
-| [Gmail](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail) | Send approval requests via email |
-| [WhatsApp Business Cloud](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.whatsapp) | Send approval requests through WhatsApp |
-| [Google Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlechat) | Send approval requests to Google Chat |
-| [Microsoft Outlook](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftoutlook) | Send approval requests via Outlook email |
+| Channel                                                                                                               | Description                                       |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| [Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chat)                    | n8n's built-in chat interface                     |
+| [Slack](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack)                        | Send approval requests to a Slack channel or DM   |
+| [Discord](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.discord)                    | Send approval requests to a Discord channel       |
+| [Telegram](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.telegram)                  | Send approval requests through Telegram           |
+| [Microsoft Teams](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftteams)     | Send approval requests to a Teams channel or chat |
+| [Gmail](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail)                        | Send approval requests via email                  |
+| [WhatsApp Business Cloud](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.whatsapp)   | Send approval requests through WhatsApp           |
+| [Google Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlechat)             | Send approval requests to Google Chat             |
+| [Microsoft Outlook](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftoutlook) | Send approval requests via Outlook email          |
 
 ## Using expressions in human review tools <a href="#using-expressions-in-human-review-tools" id="using-expressions-in-human-review-tools"></a>
 
@@ -88,9 +103,9 @@ You can use any of the following services as your human review channel:
 
 When configuring the human review step, you can use the `$tool` variable to construct a message for the reviewer that provides context about what the AI is trying to do. This variable has two properties:
 
-| Property | Description |
-|----------|-------------|
-| `$tool.name` | The name of the tool the AI Agent is trying to call. This is the node name as shown on the canvas in n8n. |
+| Property           | Description                                                                                                                                                          |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$tool.name`       | The name of the tool the AI Agent is trying to call. This is the node name as shown on the canvas in n8n.                                                            |
 | `$tool.parameters` | The parameters the AI Agent is trying to use in the tool call. This includes any fields in the tool's input schema that are configured with `$fromAI()` expressions. |
 
 **Example message configuration:**
@@ -118,11 +133,9 @@ Make sure you include the tool setup and human review steps in your system promp
 
 Consider including:
 
-- Which tools require human approval
-- What happens when approval is denied
-- How the AI should respond to rejections (for example, inform the user, suggest alternatives, or ask for clarification)
-
-
+* Which tools require human approval
+* What happens when approval is denied
+* How the AI should respond to rejections (for example, inform the user, suggest alternatives, or ask for clarification)
 
 ## Chaining and sub-agents <a href="#chaining-and-subagents" id="chaining-and-subagents"></a>
 
@@ -130,12 +143,12 @@ When using an AI Agent as a tool for another AI Agent, human review steps in the
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-- [AI examples](../ai-examples.md)
-- [Use Google Sheets as a data source](use-google-sheets-as-a-data-source.md)
-- [Call APIs](call-apis.md)
-- [Use website content](use-website-content.md)
-- [Set a human fallback for AI workflows](set-a-human-fallback-for-ai-workflows.md)
-- [Use AI for parameters](use-ai-for-parameters.md)
-- [AI Agent node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
-- [Tools Agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent)
-- [What is a tool in AI?](../understand-ai-components/how-tools-work.md)
+* [AI examples](./)
+* [Use Google Sheets as a data source](use-google-sheets-as-a-data-source.md)
+* [Call APIs](call-apis.md)
+* [Use website content](use-website-content.md)
+* [Set a human fallback for AI workflows](set-a-human-fallback-for-ai-workflows.md)
+* [Use AI for parameters](use-ai-for-parameters.md)
+* [AI Agent node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
+* [Tools Agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent)
+* [What is a tool in AI?](../understand-ai-components/how-tools-work.md)
