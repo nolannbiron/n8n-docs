@@ -93,7 +93,7 @@ What happens to a missed run, and to any backlog behind it, depends on the trigg
 - **Run the Most Recent Missed Execution.** The backlog collapses into a single catch-up run for the node, at the most recent missed time across all its trigger rules, then the schedule resumes.
 - **Run the Most Recent Missed Execution Per Rule.** Like the previous policy, but each trigger rule catches up on its own, so a node with several trigger rules can fire one catch-up run per rule.
 
-From n8n 2.36.0, a Schedule Trigger node added from that version on chooses the policy with the **If Execution Is Missed** node option; see the [Schedule Trigger node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger#node-options). Trigger nodes that poll (such as Google Sheets Trigger or Airtable Trigger) always skip missed runs, and polling resumes from the next scheduled run.
+From n8n 2.36.0, a Schedule Trigger node added from that version on chooses the policy with the **If Execution Is Missed** node option; see the [Schedule Trigger node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.scheduletrigger#node-options). Trigger nodes that poll (such as Google Sheets Trigger or Airtable Trigger) always skip missed runs, and polling resumes from the next scheduled run.
 
 Whatever the policy, the schedule's clock advances past the backlog: no policy replays it run by run. A one-off schedule has no next occurrence to resume from, so a catch-up policy still runs it late, while skipping discards it for good.
 

@@ -53,7 +53,7 @@ You can choose to keep data:
 {% hint style="info" %}
 **0.236.0 and below**
 
-n8n removed this execution behavior in n8n 1.0. This section applies to workflows using the **v0 (legacy)** workflow execution order. By default, this is all workflows built before n8n 1.0. You can change the execution order in your [workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings).
+n8n removed this execution behavior in n8n 1.0. This section applies to workflows using the **v0 (legacy)** workflow execution order. By default, this is all workflows built before n8n 1.0. You can change the execution order in your [workflow settings](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/configure-workflow-settings).
 {% endhint %}
 If you add a Merge node to a workflow containing an If node, it can result in both output data streams of the If node executing.
 
@@ -65,7 +65,7 @@ For example, in the screenshot below there's a workflow containing an Edit Field
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Splitting with conditionals](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/split-with-conditionals) for more information on using conditionals to create complex logic in n8n.
+Refer to [Splitting with conditionals](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/split-with-conditionals) for more information on using conditionals to create complex logic in n8n.
 
 If you need more than two conditional outputs, use the [Switch node](n8n-nodes-base.switch.md).
 

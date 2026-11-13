@@ -22,7 +22,7 @@ layout:
 
 Use this node to save metadata for workflow executions. You can then search by this data in the **Executions** list.
 
-You can retrieve custom execution data during workflow execution using the Code node. Refer to [Custom executions data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/customize-executions-data) for more information.
+You can retrieve custom execution data during workflow execution using the Code node. Refer to [Custom executions data](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/understand-executions/customize-executions-data) for more information.
 
 {% hint style="info" %}
 **Feature availability**

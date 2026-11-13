@@ -38,9 +38,9 @@ Nodes[^1] are the key building blocks of a workflow[^2]. They perform a range of
 
 n8n provides a collection of built-in nodes, as well as the ability to create your own nodes. Refer to:
 
-* [Built-in integrations](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/node-types) to browse the node library.
-* [Community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) for guidance on finding and installing community-created nodes.
-* [Creating nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview) to start building your own nodes.
+* [Built-in integrations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/node-types) to browse the node library.
+* [Community nodes](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/community-nodes/installation-and-management) for guidance on finding and installing community-created nodes.
+* [Creating nodes](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/overview) to start building your own nodes.
 
 ## Add a node to your workflow <a href="#add-a-node-to-your-workflow" id="add-a-node-to-your-workflow"></a>
 
@@ -98,7 +98,7 @@ When active or set, they do the following:
   * **Stop Workflow**: Halts the entire workflow when an error occurs, preventing further node execution.
   * **Continue**: Proceeds to the next node despite the error, using the last valid data.
   * **Continue (using error output)**: Continues workflow execution, passing error information to the next node for potential handling.
-* **Custom Span Attributes**: Add custom key-value attributes to a node's OpenTelemetry span. Keys are plain text, and values support expressions. This setting only appears if you enable OpenTelemetry tracing and have a self-hosted Enterprise license. Refer to [Custom span attributes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes) for details.
+* **Custom Span Attributes**: Add custom key-value attributes to a node's OpenTelemetry span. Keys are plain text, and values support expressions. This setting only appears if you enable OpenTelemetry tracing and have a self-hosted Enterprise license. Refer to [Custom span attributes](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes) for details.
 
 You can document your workflow using node notes:
 

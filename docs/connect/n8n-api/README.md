@@ -33,7 +33,7 @@ It isn't available on the free trial.
 
 Using n8n's public API[^1], you can programmatically perform many of the same tasks as you can in the GUI. For supported POSTs, an [idempotency key](idempotency.md) returns the first successful response instead of running the request again.
 
-n8n provides an [n8n API node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) to access the API in your workflows.
+n8n provides an [n8n API node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.n8n) to access the API in your workflows.
 
 ## In this section
 

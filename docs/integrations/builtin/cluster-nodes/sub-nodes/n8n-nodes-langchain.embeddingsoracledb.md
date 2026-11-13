@@ -54,6 +54,6 @@ The node loads available models from the `USER_MINING_MODELS` view in the config
 
 Refer to [Oracle's ONNX model import documentation](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/import-onnx-models-oracle-ai-database-end-end-example.html) for more information about importing ONNX models into Oracle Database.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 [^1]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.

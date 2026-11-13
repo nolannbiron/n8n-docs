@@ -18,7 +18,7 @@ layout:
 
 # HTTP Request node <a href="#http-request-node" id="http-request-node"></a>
 
-The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests to query data from any app or service with a REST API. You can use the HTTP Request node as a regular node or attached to an [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) to use as a [tool](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-tools-work){ data-preview }.
+The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests to query data from any app or service with a REST API. You can use the HTTP Request node as a regular node or attached to an [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) to use as a [tool](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/understand-ai-components/how-tools-work){ data-preview }.
 
 When using this node, you're creating a REST API call. You need some understanding of basic API terminology and concepts.
 
@@ -236,7 +236,7 @@ Configure the pagination settings:
     * **Update a Parameter in Each Request**: Use this when you need to dynamically set parameters for each request.
     * **Response Contains Next URL**: Use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
 
-For example setups, refer to [HTTP Request node cookbook | Pagination](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/cookbook/http-request-node/pagination).
+For example setups, refer to [HTTP Request node cookbook | Pagination](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/cookbook/http-request-node/pagination).
 
 n8n provides built-in variables for working with HTTP node requests and responses when using pagination:
 
@@ -260,7 +260,7 @@ Different APIs implement pagination in different ways. Check the API documentati
 
 Use this option if you need to specify an HTTP proxy.
 
-Enter the **Proxy** the request should use. This takes precedence over global settings defined with the [`HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY` environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment).
+Enter the **Proxy** the request should use. This takes precedence over global settings defined with the [`HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY` environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment).
 
 ### Timeout <a href="#timeout" id="timeout"></a>
 
@@ -270,7 +270,7 @@ Enter the **Timeout** time to wait in milliseconds.
 
 ## Tool-only options <a href="#tool-only-options" id="tool-only-options"></a>
 
-The following options are only available when attached to an [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) as a [tool](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-tools-work){ data-preview }.
+The following options are only available when attached to an [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) as a [tool](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/understand-ai-components/how-tools-work){ data-preview }.
 
 ### Optimize Response <a href="#optimize-response" id="optimize-response"></a>
 

@@ -33,26 +33,26 @@ layout:
 
 # n8n
 
-A node to integrate with n8n itself. This node allows you to consume the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) in your workflows.
+A node to integrate with n8n itself. This node allows you to consume the [n8n API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api) in your workflows.
 
-Refer to the [n8n REST API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) for more information on using the n8n API. Refer to [API endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference) for working with the API endpoints directly.
+Refer to the [n8n REST API documentation](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api) for more information on using the n8n API. Refer to [API endpoint reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/api-reference) for working with the API endpoints directly.
 
 {% hint style="info" %}
 **Credentials**
 
-Refer to the [API authentication documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/authentication) for authentication information for this node.
+Refer to the [API authentication documentation](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/authentication) for authentication information for this node.
 {% endhint %}
 
 {% hint style="warning" %}
 **SSL**
 
-This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](n8n-nodes-base.httprequest/README.md) to call the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api). The HTTP Request node has options to [provide the SSL certificate](../credentials/httprequest.md#provide-an-ssl-certificate).
+This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](n8n-nodes-base.httprequest/README.md) to call the [n8n API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api). The HTTP Request node has options to [provide the SSL certificate](../credentials/httprequest.md#provide-an-ssl-certificate).
 {% endhint %}
 
 {% hint style="info" %}
 **Rate limits**
 
-From n8n 2.47.0, your instance can limit requests to the n8n public API. When the limits are on and your workflow sends too many requests, this node fails with a `429` response. To send fewer requests at a time, add **Batching** in **Request Options**. Refer to [API rate limits](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/rate-limits#calls-from-an-n8n-workflow).
+From n8n 2.47.0, your instance can limit requests to the n8n public API. When the limits are on and your workflow sends too many requests, this node fails with a `429` response. To send fewer requests at a time, add **Batching** in **Request Options**. Refer to [API rate limits](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/rate-limits#calls-from-an-n8n-workflow).
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>
@@ -170,7 +170,7 @@ Configure this operation with this parameter:
   * `connections`
   * `settings`
 
-Refer to [n8n API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference) for more information.
+Refer to [n8n API reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/api-reference) for more information.
 
 ## Get many workflows <a href="#get-many-workflows" id="get-many-workflows"></a>
 
@@ -200,7 +200,7 @@ Configure this operation with these parameters:
   * `connections`
   * `settings`
 
-Refer to the [n8n API | Update a workflow documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/build-and-run/workflows) for more information.
+Refer to the [n8n API | Update a workflow documentation](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/build-and-run/workflows) for more information.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

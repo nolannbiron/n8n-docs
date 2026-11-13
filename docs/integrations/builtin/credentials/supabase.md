@@ -38,7 +38,7 @@ You can use these credentials to authenticate the following nodes:
 * [Supabase](../app-nodes/n8n-nodes-base.supabase/README.md): Use a secret key or OAuth2.
 * [Supabase Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md): Use a secret key.
 
-You can also use the OAuth2 credential to connect the Supabase MCP server from the [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) registry.
+You can also use the OAuth2 credential to connect the Supabase MCP server from the [MCP servers](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/mcp-servers) registry.
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

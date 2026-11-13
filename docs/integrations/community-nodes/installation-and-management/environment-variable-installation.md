@@ -33,7 +33,7 @@ Set the following environment variables on your n8n instance, then restart:
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage installed community packages from environment variables. When `true`, n8n reconciles the installed packages against `N8N_COMMUNITY_PACKAGES` on every startup, installing missing packages, correcting versions, and **uninstalling any currently-installed packages that aren't in the list**. The **Community nodes** settings page becomes read-only: you can't install, update, or uninstall packages from the UI while this is enabled. |
-| `N8N_COMMUNITY_PACKAGES` | JSON string | - | JSON array of community packages to install. Each entry is an object with a `name` (required) and optional `version` and `checksum` fields. You can also embed the version in the name as `<package-name>@<version>`. See [environment variable installation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management/environment-variable-installation) for the full per-field reference. |
+| `N8N_COMMUNITY_PACKAGES` | JSON string | - | JSON array of community packages to install. Each entry is an object with a `name` (required) and optional `version` and `checksum` fields. You can also embed the version in the name as `<package-name>@<version>`. See [environment variable installation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/community-nodes/installation-and-management/environment-variable-installation) for the full per-field reference. |
 
 {% hint style="info" %}
 **Community packages must be enabled**
@@ -74,7 +74,7 @@ Example with all three fields:
 If a package isn't in the vetted-packages registry and `N8N_UNVERIFIED_PACKAGES_ENABLED` is `false`, n8n fails to start. Either pin a `checksum` for the package, set `N8N_UNVERIFIED_PACKAGES_ENABLED=true`, or pick a vetted package.
 {% endhint %}
 
-For the supported ways to set environment variables, see [Configuration methods](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration).
+For the supported ways to set environment variables, see [Configuration methods](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration).
 
 ## Manage packages <a href="#manage-packages" id="manage-packages"></a>
 

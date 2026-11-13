@@ -151,7 +151,7 @@ The **Signature Secret** field is also required for [Approvals in Slack](../app-
 Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
 {% endhint %}
 
-If you're [self-hosting n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) and need to configure OAuth2 from scratch, you'll need a [Slack](https://slack.com/) account and:
+If you're [self-hosting n8n](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) and need to configure OAuth2 from scratch, you'll need a [Slack](https://slack.com/) account and:
 
 - A **Client ID**
 - A **Client Secret**

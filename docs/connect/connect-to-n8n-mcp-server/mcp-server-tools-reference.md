@@ -1452,7 +1452,7 @@ Restore a workflow to a previous version from its history. Re-applies that versi
 {% hint style="info" %}
 **Feature availability**
 
-Agent management tools are available from n8n 2.34.0, when the workflow builder and the agents module are both enabled on the instance. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details.
+Agent management tools are available from n8n 2.34.0, when the workflow builder and the agents module are both enabled on the instance. See [Build and manage agents](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents) for details.
 {% endhint %}
 
 {% hint style="info" %}
@@ -2364,7 +2364,7 @@ From n8n 2.48.0, the preferences tools no longer depend on the `111_context_pref
 In earlier versions, the tools are on by default but stay off on a self-hosted instance with telemetry turned off (`N8N_DIAGNOSTICS_ENABLED=false`), or one that can't reach n8n's feature flag service. To turn them on in those versions, set `N8N_FEATURE_FLAG_OVERRIDES` to `{"111_context_preferences":"variant"}`, preserving any other entries in the JSON object, then restart n8n. The value must be the string `"variant"`, not `true`. With preferences off, n8n doesn't register these tools and doesn't offer their OAuth scopes on the consent screen.
 {% endhint %}
 
-[Preferences](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/agentic-context-management/preferences) are short instructions, such as "Name nodes in English", that the user wants every AI tool to apply when it works in n8n. These tools let an MCP client read the preferences that apply to the current user, and save, change, or remove them.
+[Preferences](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/agentic-context-management/preferences) are short instructions, such as "Name nodes in English", that the user wants every AI tool to apply when it works in n8n. These tools let an MCP client read the preferences that apply to the current user, and save, change, or remove them.
 
 Two OAuth scopes cover these tools:
 

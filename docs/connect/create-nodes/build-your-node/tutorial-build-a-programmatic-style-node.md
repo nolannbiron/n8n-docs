@@ -502,7 +502,7 @@ You need to update the `package.json` to include your own information, such as y
 
 ## Test your node <a href="#test-your-node" id="test-your-node"></a>
 
-You can test your node as you build it by running it in a local n8n instance with the [`n8n-node` tool](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/using-the-n8n-node-tool). `n8n-node` includes n8n, so you don't need a global n8n installation.
+You can test your node as you build it by running it in a local n8n instance with the [`n8n-node` tool](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/using-the-n8n-node-tool). `n8n-node` includes n8n, so you don't need a global n8n installation.
 
 1. In your project's root directory, run the `dev` command:
 	```shell
@@ -538,7 +538,7 @@ Add the node to your workflow and test it as you develop. To stop n8n, press `ct
 * [Deploy your node](../deploy-your-node/README.md).
 * View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost). This is an example of a more complex programmatic node structure.
 * Learn about [node versioning](reference/versioning.md).
-* Make sure you understand key concepts: [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) and [data structures](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure).
+* Make sure you understand key concepts: [item linking](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) and [data structures](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure).
 
 [^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
 

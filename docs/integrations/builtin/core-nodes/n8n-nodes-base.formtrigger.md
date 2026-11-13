@@ -91,7 +91,7 @@ Only users logged in to this n8n instance can view or submit the form.
 * Unauthenticated form submissions receive a 401 response.
 * By default, n8n adds the submitting user's ID, email, first name, and last name to the output data. Turn off **Include User in Output** in [Node options](#node-options) to exclude this.
 
-When you select **n8n User Auth**, a **Require Workflow Execute Permission** toggle appears. Turn it on to require that the triggering user also has permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't submit the form. This is useful with [end-user credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials), where each user runs the workflow with their own connected account.
+When you select **n8n User Auth**, a **Require Workflow Execute Permission** toggle appears. Turn it on to require that the triggering user also has permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't submit the form. This is useful with [end-user credentials](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/end-user-credentials), where each user runs the workflow with their own connected account.
 
 ### Form URLs <a href="#form-urls" id="form-urls"></a>
 
@@ -137,7 +137,7 @@ Every field has the following settings:
 	- Select **Custom HTML** to insert arbitrary HTML.
 		- You can include elements like links, images, video, and more. You can't include `<script>`, `<style>`, or `<input>` elements. For more information, see [HTML security and allowed tags](#html-security-and-allowed-tags).
 		- By default, Custom HTML fields aren't included in the node output. To include the Custom HTML content in the output, fill out the associated **Element Name** field.
-    - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information on formatting dates.
+    - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information on formatting dates.
 	- Select **Dropdown List** > **Add Field Option** to add multiple options. By default, the dropdown is single-choice. To make it multiple-choice, turn on **Multiple Choice**.
 	- Select **Radio Buttons** to include radio button elements in the form.
 	- Select **Hidden Field** to include a form element without displaying it on the form. You can set a default value using the **Field Value** parameter or pass values for the field using [query parameters](#set-default-selections-with-query-parameters).
@@ -161,7 +161,7 @@ Select **Add Option** to view more configuration options:
 * **Form Path**: The final segment of the form's URL, for both testing and production. Replaces the automatically generated UUID as the final component. Available from node version 2.2. In earlier versions, **Form Path** is a main parameter (refer to [Form Path](#form-path)).
 * **Ignore Bots**: Turn on to ignore requests from bots like link previewers and web crawlers.
 * **Include User in Output**: Only relevant when **Authentication** is set to **n8n User Auth**. Turn off to exclude the submitting user's ID, email, first name, and last name from the node's output (turned on by default).
-* **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output.
+* **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/configure-workflow-settings) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output.
 * **Custom Form Styling**: Override the default styling of the public form interface with CSS. The field pre-populates with the default styling so you can change only what you need to.
 
 ## Customizing Form Trigger node behavior <a href="#customizing-form-trigger-node-behavior" id="customizing-form-trigger-node-behavior"></a>
@@ -187,7 +187,7 @@ You can use one of the following options to add authentication to your form:
 
 The n8n Form Trigger automatically sanitizes HTML content in the **Form Description** field and **Custom HTML** form elements to prevent security vulnerabilities. While HTML is supported for formatting, certain tags and attributes are restricted.
 
-n8n also serves form pages in a browser sandbox, so the browser doesn't send cookies when someone submits the form. If you self-host n8n and put forms behind an authentication proxy that uses a session cookie, refer to [Serve forms from a separate hostname behind an authentication proxy](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy#serve-forms-from-a-separate-hostname-behind-an-authentication-proxy).
+n8n also serves form pages in a browser sandbox, so the browser doesn't send cookies when someone submits the form. If you self-host n8n and put forms behind an authentication proxy that uses a session cookie, refer to [Serve forms from a separate hostname behind an authentication proxy](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy#serve-forms-from-a-separate-hostname-behind-an-authentication-proxy).
 
 ### Allowed HTML Tags <a href="#allowed-html-tags" id="allowed-html-tags"></a>
 

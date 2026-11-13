@@ -185,7 +185,7 @@ A feature's availability and maturity can be limited in four ways:
 * **Preview status**: whether the feature is in Preview.
 * **Enterprise readiness**: whether the feature is Enterprise ready.
 
-[Plan/platform and version limits](#plan-platform-and-version-limits) share one documentation system. [Preview status](#preview-status) and [Enterprise readiness](#enterprise-readiness) work differently and are always documented separately. For what each one means, refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+[Plan/platform and version limits](#plan-platform-and-version-limits) share one documentation system. [Preview status](#preview-status) and [Enterprise readiness](#enterprise-readiness) work differently and are always documented separately. For what each one means, refer to [Understand feature availability](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/understand-feature-availability).
 
 ### Plan, platform, and version limits
 
@@ -326,7 +326,7 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus for n8n instance v
 
 ### Preview status
 
-A Preview feature may change in breaking ways, including API shapes, exports, node parameters, or execution outcomes, and n8n may remove it. Don't rely on it in production workflows. For the full lifecycle, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
+A Preview feature may change in breaking ways, including API shapes, exports, node parameters, or execution outcomes, and n8n may remove it. Don't rely on it in production workflows. For the full lifecycle, see [Understand feature availability](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
 
 Capitalize "Preview" as the maturity label ("is in Preview", "a Preview feature", "In Preview from n8n 2.20.0"). Use "Preview", not "beta". Leave unrelated senses of the word (a link preview, a UI preview action) lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`) as literal identifiers, not prose.
 
@@ -351,7 +351,7 @@ tags:
 ---
 ```
 
-See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for a working example.
+See [Build and manage agents](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents) for a working example.
 
 **Inline or passing mention:** for a small control, or a whole feature or node named in prose with no heading of its own:
 
@@ -369,14 +369,14 @@ The Data table node is in Preview and may change in future releases.
 
 ### Enterprise readiness
 
-For what Enterprise ready and Limited enterprise readiness mean, and how they differ from Preview, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-readiness).
+For what Enterprise ready and Limited enterprise readiness mean, and how they differ from Preview, see [Understand feature availability](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/understand-feature-availability#enterprise-readiness).
 
 Write "Enterprise ready" for a feature that meets every Enterprise requirement that applies to it, and "Limited enterprise readiness" (lowercase "enterprise", the literal label in the n8n interface) for one that doesn't. An Enterprise ready feature carries nothing in the docs, so don't add a hint for it. A feature that isn't available on Enterprise at all doesn't carry this label. That's a plan or platform limit, so use a **Feature availability** hint instead.
 
 **Page or section:** title the hint `**Limited enterprise readiness**`, not `**Feature availability**` or `**Preview status**`.
 
 * Name the feature in the first sentence.
-* List the Enterprise capabilities the feature supports, in a bullet list. Use the names from the [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) list.
+* List the Enterprise capabilities the feature supports, in a bullet list. Use the names from the [Enterprise capabilities](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/understand-feature-availability#enterprise-capabilities) list.
 * If every listed capability has the same level of readiness, say so in the sentence ("partially supports the following Enterprise capabilities") and list the names alone, as on the n8n Assistant page. If the levels differ, put **Full** or **Partial** after each name, as in the example below.
 * End with a sentence saying other Enterprise capabilities either don't apply to the feature or it doesn't support them yet, followed by "See [Understand feature availability](link) for the full list of Enterprise capabilities." Don't list the unsupported or non-applicable capabilities, and don't say whether n8n plans to close a gap.
 
@@ -389,7 +389,7 @@ The Example feature has Limited enterprise readiness. It supports the following 
 - **SSO:** Full
 - **External secrets:** Partial
 
-Other Enterprise capabilities either don't apply to the Example feature or it doesn't support them yet. Refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
+Other Enterprise capabilities either don't apply to the Example feature or it doesn't support them yet. Refer to [Understand feature availability](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
 {% endhint %}
 ```
 
@@ -567,7 +567,7 @@ Build the URL from two parts:
 For example, to link from a page in the `administer` space to `docs/deploy/host-n8n/configure-n8n/user-management.md` in the `deploy` space:
 
 ```
-[link to a page](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/user-management)
+[link to a page](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/user-management)
 ```
 
 Use this form only for a page in a *different* space. For a page in the space you're already editing, use a relative `.md` link instead. GitBook renders both forms, but a space URL drops out of GitBook's rename tracking, so the link breaks when someone moves the target page. It also escapes the revision on a GitBook preview, resolving against published content instead of your changes. The `internal-links` CI check reports these as `same-space-absolute`.

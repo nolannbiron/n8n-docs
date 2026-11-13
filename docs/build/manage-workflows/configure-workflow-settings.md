@@ -63,8 +63,8 @@ Sets the timezone for this workflow. The timezone setting is important for the S
 
 You can set your n8n instance's timezone to configure the default timezone workflows use:
 
-* [Set a n8n Cloud instance timezone](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/set-your-timezone)
-* [Configure the timezone for self-hosted instances](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization)
+* [Set a n8n Cloud instance timezone](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/configure-cloud/set-your-timezone)
+* [Configure the timezone for self-hosted instances](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization)
 
 If you don't configure the workflow or instance timezone, n8n defaults to the EDT (New York) timezone.
 
@@ -100,19 +100,19 @@ Controls whether n8n redacts execution data from production (non-manually trigge
 
 Controls whether n8n redacts execution data from manually triggered executions. When set to **Redact**, n8n hides the input and output data of each node and replaces it with a redacted indicator.
 
-If your instance admin [enforces data redaction instance-wide](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data#instance-level-enforcement), n8n locks the settings covered by the enforced scope to **Redact**. You can't turn them off here.
+If your instance admin [enforces data redaction instance-wide](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/redact-execution-data#instance-level-enforcement), n8n locks the settings covered by the enforced scope to **Redact**. You can't turn them off here.
 
-Refer to [Execution data redaction](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data) for details on redaction policies, revealing data, and permission requirements.
+Refer to [Execution data redaction](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/redact-execution-data) for details on redaction policies, revealing data, and permission requirements.
 
 ### Estimated time saved <a href="#estimated-time-saved" id="estimated-time-saved"></a>
 
 An estimate of the number of minutes each of execution of this workflow saves you.
 
-Setting this lets n8n calculate the amount of time saved for [insights](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights).
+Setting this lets n8n calculate the amount of time saved for [insights](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/track-usage-with-insights).
 
 ### Custom span attributes <a href="#custom-span-attributes" id="custom-span-attributes"></a>
 
-Add custom key-value attributes to the workflow's OpenTelemetry span. Refer to [Custom span attributes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes) for details.
+Add custom key-value attributes to the workflow's OpenTelemetry span. Refer to [Custom span attributes](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes) for details.
 
 [^1]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.
 

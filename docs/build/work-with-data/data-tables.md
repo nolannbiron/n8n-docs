@@ -37,13 +37,13 @@ You can create, filter, and manage data tables and their data in three ways: usi
 
 Use data tables inside workflows to store and manage data, enabling automated creation, retrieval, updates, and deletions as your workflow runs.
 
-See the [Data Table node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable) for full documentation.
+See the [Data Table node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.datatable) for full documentation.
 
 ### DataTable API endpoint <a href="#datatable-api-endpoint" id="datatable-api-endpoint"></a>
 
 Work with data tables programmatically using the `/datatables` endpoint in the n8n API.
 
-See the [API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/build-and-run/data-tables) for full documentation.
+See the [API reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/build-and-run/data-tables) for full documentation.
 
 ### Data table tab <a href="#data-table-tab" id="data-table-tab"></a>
 

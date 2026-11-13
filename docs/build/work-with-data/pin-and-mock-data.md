@@ -32,7 +32,7 @@ Create test data to work with during development. You can create mock data in se
 
 ### Generate custom data using the Code or Edit Fields nodes <a href="#generate-custom-data-using-the-code-or-edit-fields-nodes" id="generate-custom-data-using-the-code-or-edit-fields-nodes"></a>
 
-You can create a custom dataset in your workflow using either the [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) or the [Edit Fields (Set) node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.set).
+You can create a custom dataset in your workflow using either the [Code node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) or the [Edit Fields (Set) node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.set).
 
 In the Code node, you can create any data set you want, and return it as the node output. In the Edit Fields node, select **Add fields** to add your custom data.
 

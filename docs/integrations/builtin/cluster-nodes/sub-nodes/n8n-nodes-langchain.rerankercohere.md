@@ -55,7 +55,7 @@ Choose the reranking model to use. You can find out more about the available mod
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 [^1]: Reranking is a technique that refines the order of a list of candidate documents to improve the relevance of search results. Retrieval-Augmented Generation (RAG) and other applications use reranking to prioritize the most relevant information for generation or downstream tasks.
 [^2]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

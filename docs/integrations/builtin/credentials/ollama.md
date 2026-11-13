@@ -51,7 +51,7 @@ Create and run an [Ollama](https://ollama.com/) instance with one user. Refer to
 
 Refer to [Ollama's API documentation](https://github.com/ollama/ollama/blob/main/docs/api.md) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Using instance URL <a href="#using-instance-url" id="using-instance-url"></a>
 

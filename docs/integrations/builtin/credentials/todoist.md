@@ -53,7 +53,7 @@ Refer to [Find your API token](https://todoist.com/help/articles/find-your-api-t
 Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
 {% endhint %}
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need a [Todoist](https://todoist.com/) account and:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you'll need a [Todoist](https://todoist.com/) account and:
 
 - A **Client ID**
 - A **Client Secret**

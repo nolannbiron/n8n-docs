@@ -23,7 +23,7 @@ layout:
 {% hint style="info" %}
 **File-based configuration**
 
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
 {% endhint %}
 
 Server-Side Request Forgery (SSRF) is an attack that tricks a server into making HTTP requests to addresses an attacker chooses, such as internal-only targets like `localhost`, private network ranges, or a cloud provider's metadata endpoint (`169.254.169.254`). Because workflows can build request URLs from user-controlled input, n8n can guard outbound requests whose destination comes from that input.

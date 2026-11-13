@@ -39,7 +39,7 @@ Expressions have the advantage of providing an immediate preview of the computed
 
 ### Code node <a href="#code-node" id="code-node"></a>
 
-The [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) is a dedicated node where you write JavaScript or Python that runs as a workflow step. It gives you access to incoming data from previous nodes, which you can manipulate by adding, removing, or updating items. You can create any custom function you need and use n8n's built-in methods and variables through `$` syntax.
+The [Code node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) is a dedicated node where you write JavaScript or Python that runs as a workflow step. It gives you access to incoming data from previous nodes, which you can manipulate by adding, removing, or updating items. You can create any custom function you need and use n8n's built-in methods and variables through `$` syntax.
 
 **When to use the Code node:**
 
@@ -60,12 +60,12 @@ This node generates code snippets based on a short natural-language prompt. It's
 
 n8n provides a collection of nodes to transform data:
 
-* [Aggregate](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aggregate): take separate items, or portions of them, and group them together into individual items.
-* [Limit](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.limit): remove items beyond a defined maximum number.
-* [Remove Duplicates](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates): identify and delete items that are identical across all fields or a subset of fields.
-* [Sort](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.sort): organize lists in a desired ordering, or generate a random selection.
-* [Split Out](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitout): separate a single data item containing a list into multiple items.
-* [Summarize](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.summarize): aggregate items together, like Excel pivot tables.
+* [Aggregate](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.aggregate): take separate items, or portions of them, and group them together into individual items.
+* [Limit](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.limit): remove items beyond a defined maximum number.
+* [Remove Duplicates](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.removeduplicates): identify and delete items that are identical across all fields or a subset of fields.
+* [Sort](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.sort): organize lists in a desired ordering, or generate a random selection.
+* [Split Out](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.splitout): separate a single data item containing a list into multiple items.
+* [Summarize](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.summarize): aggregate items together, like Excel pivot tables.
 
 **When to use data transformation nodes:**
 

@@ -189,7 +189,7 @@ Use Update Documents mode to update documents in a vector database by ID. Fill i
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 {% hint style="info" %}
 **Azure AI Search semantic reranking**
@@ -376,8 +376,8 @@ For authentication troubleshooting including API key errors, refer to the [crede
 * [Azure AI Search REST API reference](https://learn.microsoft.com/rest/api/searchservice/)
 * [OData filter syntax for Azure AI Search](https://learn.microsoft.com/azure/search/search-query-odata-filter)
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Self-hosted AI Starter Kit <a href="#self-hosted-ai-starter-kit" id="self-hosted-ai-starter-kit"></a>
 
-New to working with AI and using self-hosted n8n? Try n8n's [self-hosted AI Starter Kit](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/deploy-with-the-ai-starter-kit) to get started with a proof-of-concept or demo playground using Ollama, Qdrant, and PostgreSQL.
+New to working with AI and using self-hosted n8n? Try n8n's [self-hosted AI Starter Kit](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/deploy-with-the-ai-starter-kit) to get started with a proof-of-concept or demo playground using Ollama, Qdrant, and PostgreSQL.

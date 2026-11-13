@@ -13,7 +13,7 @@ layout:
 
 # Hardening task runners <a href="#hardening-task-runners" id="hardening-task-runners"></a>
 
-[Task runners](../set-up-task-runners.md) are responsible for executing code from the [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code). While Code node executions are secure, you can follow these recommendations to further harden your task runners.
+[Task runners](../set-up-task-runners.md) are responsible for executing code from the [Code node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code). While Code node executions are secure, you can follow these recommendations to further harden your task runners.
 
 ## Run task runners as sidecars in external mode <a href="#run-task-runners-as-sidecars-in-external-mode" id="run-task-runners-as-sidecars-in-external-mode"></a>
 

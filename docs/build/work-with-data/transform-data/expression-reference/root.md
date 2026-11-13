@@ -361,7 +361,7 @@ When in a ‘Merge’ node, always uses the first input connector.
 
 ## **`$secrets`** <a href="#dollarsecrets" id="dollarsecrets"></a>
 
-**Description:** The secrets from an <a href="https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-secrets">external secrets vault</a>, if configured. Secret values are never displayed to the user. Only available in credential fields.
+**Description:** The secrets from an <a href="https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-secrets">external secrets vault</a>, if configured. Secret values are never displayed to the user. Only available in credential fields.
 
 **Syntax:** **`$secrets`**
 

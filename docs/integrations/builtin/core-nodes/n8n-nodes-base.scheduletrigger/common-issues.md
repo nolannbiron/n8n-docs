@@ -54,9 +54,9 @@ If the Schedule Trigger node runs at the wrong time, it may mean that you need t
 
 ### Adjust the timezone globally <a href="#adjust-the-timezone-globally" id="adjust-the-timezone-globally"></a>
 
-If you're using [n8n Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud), follow the instructions on the [set the Cloud instance timezone](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/set-your-timezone) page to ensure that n8n executes in sync with your local time.
+If you're using [n8n Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud), follow the instructions on the [set the Cloud instance timezone](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/configure-cloud/set-your-timezone) page to ensure that n8n executes in sync with your local time.
 
-If you're [self hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n), set your global timezone using the [`GENERIC_TIMEZONE` environment variable](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization).
+If you're [self hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n), set your global timezone using the [`GENERIC_TIMEZONE` environment variable](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization).
 
 ### Adjust the timezone for an individual workflow <a href="#adjust-the-timezone-for-an-individual-workflow" id="adjust-the-timezone-for-an-individual-workflow"></a>
 

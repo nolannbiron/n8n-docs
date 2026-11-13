@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Configure using environment variables**
 
-Configuring SAML using environment variables instead of the UI is available from n8n 2.18.0. See [SSO environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/sso).
+Configuring SAML using environment variables instead of the UI is available from n8n 2.18.0. See [SSO environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/sso).
 {% endhint %}
 
 ## Enable SAML <a href="#enable-saml" id="enable-saml"></a>

@@ -80,7 +80,7 @@ Two AI surfaces read preferences:
 | Surface                                                                                                                 | When it reads preferences                                                                                                                        |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [n8n Assistant](../ways-of-building-workflows/n8n-assistant.md)                                                         | On every message you send, so a preference you save or edit applies from your next message, even in an open conversation.                        |
-| MCP clients connected to the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) | When the client calls the `get_user_preferences` tool. The n8n MCP server tells clients to call it before they create or change anything in n8n. |
+| MCP clients connected to the [n8n MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server) | When the client calls the `get_user_preferences` tool. The n8n MCP server tells clients to call it before they create or change anything in n8n. |
 
 If a preference conflicts with something you ask for directly, the AI tool follows your request and tells you which preference it set aside.
 
@@ -175,9 +175,9 @@ When you connect an MCP client with OAuth, n8n asks you to approve two permissio
 | **Read AI preferences**                  | `aiPreference:read`  | `get_user_preferences`                                                   |
 | **Save, update and undo AI preferences** | `aiPreference:write` | `save_user_preference`, `update_user_preference`, `undo_user_preference` |
 
-n8n only offers these permissions when preferences are on for your instance. If you connected a client before preferences were on, reconnect it to grant them. See [Reviewing and revoking client access](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server#revoking-client-access).
+n8n only offers these permissions when preferences are on for your instance. If you connected a client before preferences were on, reconnect it to grant them. See [Reviewing and revoking client access](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server#revoking-client-access).
 
-For each tool's parameters and output, see [User preferences](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#user-preferences) in the MCP server tools reference.
+For each tool's parameters and output, see [User preferences](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server/mcp-server-tools-reference#user-preferences) in the MCP server tools reference.
 
 ## Write effective preferences
 
@@ -233,5 +233,5 @@ Check that the preference's scope covers the project you're working in. In n8n A
 * [Agentic context management](./)
 * [Use n8n Assistant](../ways-of-building-workflows/n8n-assistant.md)
 * [Use n8n MCP server](../ways-of-building-workflows/connect-to-n8n-mcp-server.md)
-* [Connect to n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server)
-* [MCP server tools reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference)
+* [Connect to n8n MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server)
+* [MCP server tools reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server/mcp-server-tools-reference)

@@ -29,7 +29,7 @@ All operations respect the permissions of the user and the scope of the API key.
 
 ## n8n CLI versus server CLI <a href="#n8n-cli-versus-server-cli" id="n8n-cli-versus-server-cli"></a>
 
-If you need to manage your n8n instance (backups, license management, emergency resets), see the [Server CLI](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line), a built-in tool that runs on the same machine as n8n.
+If you need to manage your n8n instance (backups, license management, emergency resets), see the [Server CLI](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/use-the-command-line), a built-in tool that runs on the same machine as n8n.
 
 | Aspect | n8n CLI | Server CLI |
 |--------|---------|-----------|
@@ -190,7 +190,7 @@ n8n-cli package import --file=export.n8np --project-id=<project-id> --conflict-p
 n8n-cli package import --file=export.n8np --project-id=<project-id> --data-table-schema-conflict-policy=overwrite-non-destructive
 ```
 
-See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) for what makes up a package, and [Import a package](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages/import-a-package) for every available flag.
+See [n8n packages](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/n8n-packages) for what makes up a package, and [Import a package](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/n8n-packages/import-a-package) for every available flag.
 
 ## Related resources
 

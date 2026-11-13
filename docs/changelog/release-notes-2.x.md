@@ -61,10 +61,10 @@ Current `beta`: 2.48.4
 
 The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
 
-* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version)
 * Self-hosted options:
-    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
-    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
+    * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
 
 ## Semantic versioning in n8n <a href="#semantic-versioning-in-n8n" id="semantic-versioning-in-n8n"></a>
 
@@ -535,7 +535,7 @@ This release contains bug fixes and features.
 {% hint style="info" %}
 ### Connect to MCP servers with less setup <a href="#connect-to-mcp-servers-with-less-setup" id="connect-to-mcp-servers-with-less-setup"></a>
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 <br>
 
@@ -543,7 +543,7 @@ Initial coverage includes some of the most used services in the official MCP reg
 
 <br>
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -734,7 +734,7 @@ This release contains bug fixes and features.
 {% hint style="info" %}
 ### Microsoft Agent 365 Trigger node <a href="#microsoft-agent-365-trigger-node" id="microsoft-agent-365-trigger-node"></a>
 
-The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant permissions to a SharePoint site, just like a teammate.
+The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant permissions to a SharePoint site, just like a teammate.
 
 <img src=".gitbook/assets/microsoft_agent_365.png" alt="A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow." data-size="original">
 
@@ -742,7 +742,7 @@ The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqK
 
 You build the agent in n8n using the Microsoft Agent 365 Trigger node:
 
-* Add a system prompt and give the agent access to tools, MCP servers, and your existing workflows using [sub-workflows as tools](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/break-workflows-into-smaller-parts).
+* Add a system prompt and give the agent access to tools, MCP servers, and your existing workflows using [sub-workflows as tools](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/break-workflows-into-smaller-parts).
 * Set up the agent on the Microsoft side (see the [Microsoft Agent 365 documentation](https://learn.microsoft.com/en-us/microsoft-agent-365/) for the configuration steps). This gives the agent an Entra ID identity with an email address that you can @mention, email, or grant SharePoint permissions to.
 * Microsoft handles identity, lifecycle, security, and compliance for the agent on their side (via Entra ID, Purview, and Defender). n8n handles workflow-level governance like RBAC, credential management, and execution logs.
 
@@ -1194,20 +1194,20 @@ What's new:
 
 * Project admins manage their own vault connections from project settings.
 * Project editors can use project-scoped secrets in credentials once the instance admin enables access.
-* [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) now include five secrets scopes: list, read, create, update, and delete.
+* [Custom roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) now include five secrets scopes: list, read, create, update, and delete.
 * Instance admins/owners no longer need to be project members for secrets to resolve.
 
 **For instance admins:** go to **Settings > External Secrets** and enable the **System Roles** toggle, or use custom roles for more granular control.
 
 **For project admins:** go to **Project Settings > External Secrets** to create and manage project-level connections. Instance-level connections shared with you appear as read-only.
 
-Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information. Project-scoped external secrets are available on n8n Enterprise.
+Refer to [External secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) for more information. Project-scoped external secrets are available on n8n Enterprise.
 
 ### Folder-based filtering in the push and pull dialog (Enterprise) <a href="#folder-based-filtering-in-the-push-and-pull-dialog-enterprise" id="folder-based-filtering-in-the-push-and-pull-dialog-enterprise"></a>
 
 The push and pull dialogs now include a **Folder** filter alongside Status and Owner. Selecting a folder scopes the list to workflows in that folder and its subfolders, shown as a hierarchical tree with folder-level checkboxes. Text search also matches folder names.
 
-Folder-based filtering is available on n8n Enterprise (requires [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/set-up-source-control) configured).
+Folder-based filtering is available on n8n Enterprise (requires [Environments](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/use-source-control-and-environments/set-up-source-control) configured).
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -1246,7 +1246,7 @@ This release contains bug fixes and features.
 
 ### 1Password is now available as an external secrets provider (Enterprise) <a href="#id-1password-is-now-available-as-an-external-secrets-provider-enterprise" id="id-1password-is-now-available-as-an-external-secrets-provider-enterprise"></a>
 
-n8n now supports 1Password Connect Server as an [external secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) provider, alongside HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager.
+n8n now supports 1Password Connect Server as an [external secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) provider, alongside HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager.
 
 Secrets are fetched at runtime and never stored in n8n: 1Password stays the single source of truth. Multi-field items are available as structured sub-paths: `$secrets.<vault>.<item>.<field>`.
 
@@ -1320,7 +1320,7 @@ Setting up credentials on n8n Cloud is now much simpler. For supported services,
 
 ### Custom roles: Assignments tab (Enterprise) <a href="#custom-roles-assignments-tab-enterprise" id="custom-roles-assignments-tab-enterprise"></a>
 
-Instance admins now have a dedicated **Assignments** tab on each [custom role](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) showing every user assigned to that role, which project they're in, and a direct link to manage them — no more navigating project by project.
+Instance admins now have a dedicated **Assignments** tab on each [custom role](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) showing every user assigned to that role, which project they're in, and a direct link to manage them — no more navigating project by project.
 
 Custom roles are available on n8n Enterprise.
 
@@ -1328,11 +1328,11 @@ Custom roles are available on n8n Enterprise.
 
 Instance admins can now create vault connections scoped to a specific project. Secrets from that connection appear only within that project's credentials, not across the instance. Instance-level connections are unaffected.
 
-Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information. Project-scoped external secrets are available on n8n Enterprise.
+Refer to [External secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) for more information. Project-scoped external secrets are available on n8n Enterprise.
 
 ### Workflow execute as a separate permission scope (Enterprise) <a href="#workflow-execute-as-a-separate-permission-scope-enterprise" id="workflow-execute-as-a-separate-permission-scope-enterprise"></a>
 
-`workflow:execute` is now a distinct scope in [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), separate from editing and publishing. Users can be granted run access without being able to modify the workflow, which is a common compliance requirement for sensitive workflows.
+`workflow:execute` is now a distinct scope in [custom project roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), separate from editing and publishing. Users can be granted run access without being able to modify the workflow, which is a common compliance requirement for sensitive workflows.
 
 This scope is available on n8n Enterprise.
 
@@ -1388,7 +1388,7 @@ This release contains bug fixes and features.
 
 ### Multiple connections per external secrets provider <a href="#multiple-connections-per-external-secrets-provider" id="multiple-connections-per-external-secrets-provider"></a>
 
-You can now set up more than one connection for a single [external secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) provider. The updated UI makes it easier to configure and manage multiple connections under the same provider type.
+You can now set up more than one connection for a single [external secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) provider. The updated UI makes it easier to configure and manage multiple connections under the same provider type.
 
 ### Performance improvements for large workflow and credential volumes <a href="#performance-improvements-for-large-workflow-and-credential-volumes" id="performance-improvements-for-large-workflow-and-credential-volumes"></a>
 
@@ -1492,7 +1492,7 @@ Available policies include:
 * **Sharing**: control whether users can share workflows and credentials from their personal space.
 * **Workflow publishing**: control whether users can publish workflows from their personal space.
 
-This release builds on the recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), to better support policy-driven governance.
+This release builds on the recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), to better support policy-driven governance.
 
 Personal space policies are available on n8n Enterprise.
 
@@ -1584,7 +1584,7 @@ This makes it easier to audit who has access to which projects and credentials w
 
 ### More granular workflow permissions <a href="#more-granular-workflow-permissions" id="more-granular-workflow-permissions"></a>
 
-Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) have been split into two separate scopes: **workflow:publish** and **workflow:unpublish**. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
+Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) have been split into two separate scopes: **workflow:publish** and **workflow:unpublish**. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
 
 ### Performance and stability improvements <a href="#performance-and-stability-improvements" id="performance-and-stability-improvements"></a>
 
@@ -1603,7 +1603,7 @@ Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJ
 
 #### Motorhead node <a href="#motorhead-node" id="motorhead-node"></a>
 
-The [Motorhead](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead) memory node is now deprecated because the Motorhead project is no longer maintained. The node is hidden from the nodes panel for new selections, but existing workflows using this node will continue to work.
+The [Motorhead](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead) memory node is now deprecated because the Motorhead project is no longer maintained. The node is hidden from the nodes panel for new selections, but existing workflows using this node will continue to work.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -1752,7 +1752,7 @@ Start with a workflow where an AI Agent is connected to one or more tools.
 3. Configure the approval step in the added node’s parameters. Depending on the integration, you can define the approver, the message they receive, the available actions (for example, approve or deny), and the associated buttons.<br>
 
 \
-Get precise control over where human judgment is required, without limiting what your agent can do. Learn more [here](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/human-in-the-loop-for-tools).
+Get precise control over where human judgment is required, without limiting what your agent can do. Learn more [here](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/human-in-the-loop-for-tools).
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>

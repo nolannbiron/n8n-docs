@@ -29,7 +29,7 @@ Core nodes can be actions or triggers[^2]. Whereas most nodes connect to a speci
 
 ## Cluster nodes <a href="#cluster-nodes" id="cluster-nodes"></a>
 
-[Cluster nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#cluster-node-n8n) are node groups that work together to provide functionality in an n8n workflow. Instead of using a single node, you use a [root node](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#root-node-n8n) and one or more [sub-nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#sub-node-n8n) that extend the functionality of the node.
+[Cluster nodes](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/key-concept-glossary#cluster-node-n8n) are node groups that work together to provide functionality in an n8n workflow. Instead of using a single node, you use a [root node](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/key-concept-glossary#root-node-n8n) and one or more [sub-nodes](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/key-concept-glossary#sub-node-n8n) that extend the functionality of the node.
 
 ![A workflow diagram with one root node connected to two sub-nodes](../../../../assets/root-sub-nodes.png)
 
@@ -41,13 +41,13 @@ Nodes in n8n can then request that credential information. As another layer of s
 
 To make sure that the data is secure, it gets saved to the database encrypted. n8n uses a random personal encryption key, which it automatically generates on the first run of n8n and then saves under `~/.n8n/config`.
 
-To learn more about creating, managing, and sharing credentials, refer to [Manage credentials](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/create-and-edit-credentials).
+To learn more about creating, managing, and sharing credentials, refer to [Manage credentials](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/create-and-edit-credentials).
 
 ## Community nodes <a href="#community-nodes" id="community-nodes"></a>
 
 n8n supports community nodes. Refer to [Community nodes](../community-nodes/installation-and-management/README.md) for guidance on installing and using these nodes.
 
-For help building and publishing your own community nodes to [npm](https://www.npmjs.com/), refer to [Create nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview) for more information.
+For help building and publishing your own community nodes to [npm](https://www.npmjs.com/), refer to [Create nodes](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/overview) for more information.
 
 See [Built-in nodes](./) for other integration topics.
 

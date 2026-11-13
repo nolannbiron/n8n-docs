@@ -34,20 +34,20 @@ layout:
 
 This document contains instructions for creating a generic Google OAuth2 API credential for use with [custom operations](../../custom-api-actions-for-existing-nodes.md).
 
-* [Google Calendar](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlecalendar)
-* [Google Calendar Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger)
-* [Google Chat](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlechat)
-* [Google Contacts](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlecontacts)
-* [Google Docs](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledocs)
-* [Google Drive](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledrive)
-* [Google Drive Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger)
-* [Google Mail](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail)
-* [Google Mail Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger)
-* [Google Sheets](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlesheets)
-* [Google Sheets Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger)
-* [Google Slides](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googleslides)
-* [Google Tasks](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googletasks)
-* [YouTube](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.youtube)
+* [Google Calendar](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecalendar)
+* [Google Calendar Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger)
+* [Google Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlechat)
+* [Google Contacts](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecontacts)
+* [Google Docs](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledocs)
+* [Google Drive](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive)
+* [Google Drive Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger)
+* [Google Mail](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail)
+* [Google Mail Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger)
+* [Google Sheets](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlesheets)
+* [Google Sheets Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger)
+* [Google Slides](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googleslides)
+* [Google Tasks](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googletasks)
+* [YouTube](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.youtube)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -121,7 +121,7 @@ If you haven't used OAuth in your Google Cloud project before, you'll need to [c
 8. In the left-hand menu, select **Branding**.
 9. In the **Authorized domains** section, select **Add domain**:
    * If you're using n8n's Cloud service, add `n8n.cloud`
-   * If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n), add the domain of your n8n instance.
+   * If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n), add the domain of your n8n instance.
 10. Select **Save** at the bottom of the page.
 
 ### Create your Google OAuth client credentials <a href="#create-your-google-oauth-client-credentials" id="create-your-google-oauth-client-credentials"></a>

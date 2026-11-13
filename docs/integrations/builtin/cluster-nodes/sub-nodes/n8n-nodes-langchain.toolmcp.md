@@ -24,7 +24,7 @@ The MCP Client Tool node is a [Model Context Protocol (MCP)](https://modelcontex
 {% hint style="info" %}
 **Already in the registry?**
 
-If the service you want is available in n8n's [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers/) registry, you can connect it straight from the node panel without adding a credential. Use this node for MCP servers that aren't in the registry yet.
+If the service you want is available in n8n's [MCP servers](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/mcp-servers/) registry, you can connect it straight from the node panel without adding a credential. Use this node for MCP servers that aren't in the registry yet.
 {% endhint %}
 
 ## Credentials
@@ -56,5 +56,5 @@ Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) a
 
 Refer to [LangChain's documentation on tools](https://langchain-ai.github.io/langgraphjs/how-tos/tool-calling/) for more information about tools in LangChain.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 

@@ -19,7 +19,7 @@ Credential overwrites let you set credential data globally. This data isn't visi
 
 In the Editor UI, n8n hides all overwritten fields by default, so users can authenticate with OAuth using the "Connect" button on the credential.
 
-For the environment variables used to configure credential overwrites, refer to [Credentials environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/credentials).
+For the environment variables used to configure credential overwrites, refer to [Credentials environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/credentials).
 
 Watch a tutorial on credential overwrites, including how to set them up [using the REST API](#using-the-rest-api) with a [ready-made workflow template](https://n8n.io/workflows/17052-register-credential-overwrites-on-startup-with-the-n8n-api/):
 

@@ -32,9 +32,9 @@ executionId = _execution.id
 
 ## `execution.resumeUrl` <a href="#executionresumeurl" id="executionresumeurl"></a>
 
-The webhook URL to call to resume a [waiting](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait) workflow.
+The webhook URL to call to resume a [waiting](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait) workflow.
 
-See the [Wait > On webhook call](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait#on-webhook-call) documentation to learn more.
+See the [Wait > On webhook call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait#on-webhook-call) documentation to learn more.
 
 `execution.resumeUrl` is available in workflows containing a Wait node, along with a node that waits for a webhook response.
 

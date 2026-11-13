@@ -47,7 +47,7 @@ n8n uses Git-based source control to support environments. Linking your n8n inst
 
 ## Related sections
 
-* [Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables): reusable values.
+* [Variables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/define-custom-variables): reusable values.
 * [External secrets](../manage-credentials/use-external-secret-stores.md): manage credentials[^1] with an external secrets vault.
 
 ## Related resources

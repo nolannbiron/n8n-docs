@@ -65,7 +65,7 @@ For sub-nodes, also labels any executed parent nodes (up to and including the ro
 
 </div>
 
-When using loops (with the [Loop over Items](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitinbatches) node), when any node within the loop is dirty, the initial node of the loop is also considered dirty:
+When using loops (with the [Loop over Items](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.splitinbatches) node), when any node within the loop is dirty, the initial node of the loop is also considered dirty:
 
 ![Loop Over Items node marked dirty because a node inside its loop is dirty](../../.gitbook/assets/dirty-loop.png)
 

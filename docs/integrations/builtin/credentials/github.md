@@ -89,7 +89,7 @@ Then, in your n8n credential:
 Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
 {% endhint %}
 
-If you're [self-hosting n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n), create a new GitHub [OAuth app](https://docs.github.com/en/apps/oauth-apps):
+If you're [self-hosting n8n](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n), create a new GitHub [OAuth app](https://docs.github.com/en/apps/oauth-apps):
 
 1. Open your GitHub profile [Settings](https://github.com/settings/profile).
 2. In the left navigation, select [**Developer settings**](https://github.com/settings/apps).

@@ -84,7 +84,7 @@ n8n never auto publishes archived workflows, regardless of the auto publish sett
 
 After a pull with auto publish enabled, n8n displays a results modal showing which workflows were successfully published and which failed. Publishing can fail if a workflow has validation errors or missing credentials.
 
-Auto publish is also available through the [API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference) using the `autoPublish` parameter on the pull endpoint, with values `none`, `published`, or `all`.
+Auto publish is also available through the [API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/api-reference) using the `autoPublish` parameter on the pull endpoint, with values `none`, `published`, or `all`.
 
 ### Pulling may cause brief service interruption <a href="#pulling-may-cause-brief-service-interruption" id="pulling-may-cause-brief-service-interruption"></a>
 

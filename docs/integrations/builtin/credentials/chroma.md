@@ -33,9 +33,9 @@ Create and run a [Chroma](https://www.trychroma.com/home) instance. Refer to the
 
 Refer to [Chroma's documentation](https://docs.trychroma.com/docs/overview/getting-started) for more information about the service. Also refer to [Chroma Cloud](https://docs.trychroma.com/cloud/getting-started) for using cloud instance.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

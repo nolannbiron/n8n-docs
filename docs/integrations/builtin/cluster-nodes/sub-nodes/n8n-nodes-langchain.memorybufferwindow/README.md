@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the Simple Memory node supports, 
 {% hint style="warning" %}
 **Don't use this node if running n8n in queue mode**
 
-If your n8n instance uses [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode), this node doesn't work in an active production workflow. This is because n8n can't guarantee that every call to Simple Memory will go to the same worker.
+If your n8n instance uses [queue mode](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/enable-queue-mode), this node doesn't work in an active production workflow. This is because n8n can't guarantee that every call to Simple Memory will go to the same worker.
 {% endhint %}
 
 {% hint style="info" %}
@@ -57,7 +57,7 @@ Configure these parameters to configure the node:
 
 Refer to [LangChain's short-term memory documentation](https://docs.langchain.com/oss/javascript/langchain/short-term-memory) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

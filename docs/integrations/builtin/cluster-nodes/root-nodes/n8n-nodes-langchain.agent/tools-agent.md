@@ -44,7 +44,7 @@ The Tools Agent implements [LangChain's tool calling](https://docs.langchain.com
 
 Refer to [AI Agent](./README.md) for more information on the AI Agent node itself.
 
-You can use this agent with the [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
+You can use this agent with the [Chat Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chattrigger) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
 
 This agent supports the following chat models:
 
@@ -197,9 +197,9 @@ Choose from:
 
 This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
 
-* [Auto-fixing Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
-* [Item List Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
-* [Structured Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
+* [Auto-fixing Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
+* [Item List Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
+* [Structured Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -225,7 +225,7 @@ This could be useful for further refining the agent's behavior based on the step
 
 ### Tracing Metadata <a href="#tracing-metadata" id="tracing-metadata"></a>
 
-Add custom key-value metadata to tracing events for this agent. This is useful for filtering and debugging runs in tracing tools like [LangSmith](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance).
+Add custom key-value metadata to tracing events for this agent. This is useful for filtering and debugging runs in tracing tools like [LangSmith](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance).
 
 Entries with empty keys or values are ignored.
 
@@ -249,7 +249,7 @@ Refer to the main AI Agent node's [Templates and examples](./README.md#templates
 
 ## Dynamic parameters for tools with `$fromAI()` <a href="#dynamic-parameters-for-tools-with-dollarfromai" id="dynamic-parameters-for-tools-with-dollarfromai"></a>
 
-To learn how to dynamically populate parameters for app node tools, refer to [Let AI specify tool parameters with `$fromAI()`](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters).
+To learn how to dynamically populate parameters for app node tools, refer to [Let AI specify tool parameters with `$fromAI()`](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/use-ai-for-parameters).
 
 ## Human review for tool calls <a href="#human-review-for-tool-calls" id="human-review-for-tool-calls"></a>
 
@@ -264,7 +264,7 @@ To add a human review step:
 
 When the AI wants to use a gated tool, the workflow pauses and sends an approval request through your chosen channel. The recipient can approve (tool executes) or deny (action canceled).
 
-For detailed setup instructions and best practices, refer to [Human-in-the-loop for AI tool calls](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/human-in-the-loop-for-tools).
+For detailed setup instructions and best practices, refer to [Human-in-the-loop for AI tool calls](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/human-in-the-loop-for-tools).
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

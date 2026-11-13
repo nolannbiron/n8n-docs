@@ -82,7 +82,7 @@ Refer to the Ollama [Models Library documentation](https://ollama.com/library) f
 
 Refer to [LangChain's Ollama documentation](https://docs.langchain.com/oss/javascript/integrations/llms/ollama) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
@@ -90,4 +90,4 @@ For common questions or issues and suggested solutions, refer to [Common issues]
 
 ## Self-hosted AI Starter Kit <a href="#self-hosted-ai-starter-kit" id="self-hosted-ai-starter-kit"></a>
 
-New to working with AI and using self-hosted n8n? Try n8n's [self-hosted AI Starter Kit](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/deploy-with-the-ai-starter-kit) to get started with a proof-of-concept or demo playground using Ollama, Qdrant, and PostgreSQL.
+New to working with AI and using self-hosted n8n? Try n8n's [self-hosted AI Starter Kit](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/deploy-with-the-ai-starter-kit) to get started with a proof-of-concept or demo playground using Ollama, Qdrant, and PostgreSQL.

@@ -72,7 +72,7 @@ Choose whether and how to restrict access to the chat. Select from:
   * Select or create a **Credential for Basic Auth** with a username and password. All users must use the same username and password.
 * **n8n User Auth**: Only users logged in to an n8n account can use the chat.
 
-When you select **n8n User Auth**, a **Require Workflow Execute Permission** toggle appears. Turn it on to require that the triggering user also has permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't use the chat. This is useful with [end-user credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials), where each user runs the workflow with their own connected account.
+When you select **n8n User Auth**, a **Require Workflow Execute Permission** toggle appears. Turn it on to require that the triggering user also has permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't use the chat. This is useful with [end-user credentials](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/end-user-credentials), where each user runs the workflow with their own connected account.
 
 #### Initial Message(s) <a href="#initial-messages" id="initial-messages"></a>
 
@@ -186,7 +186,7 @@ Use this option when building a workflow with steps after the agent or chain tha
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Set the chat response manually <a href="#set-the-chat-response-manually" id="set-the-chat-response-manually"></a>
 

@@ -37,7 +37,7 @@ Light evaluation allows you to run the examples in a test dataset through your w
 {% hint style="info" %}
 **Credentials for Google Sheets**
 
-Evaluations use data tables or Google Sheets to store the test dataset. To use Google Sheets as a dataset source, configure a [Google Sheets credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/google).
+Evaluations use data tables or Google Sheets to store the test dataset. To use Google Sheets as a dataset source, configure a [Google Sheets credential](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/google).
 {% endhint %}
 
 Light evaluations take place in the 'Editor' tab of your workflow, although you’ll find instructions on how to set it up in the 'Evaluations' tab.
@@ -72,7 +72,7 @@ Leave the actual output column or columns blank, since you'll be filling them du
 
 #### Insert an evaluation trigger to pull in your dataset <a href="#insert-an-evaluation-trigger-to-pull-in-your-dataset" id="insert-an-evaluation-trigger-to-pull-in-your-dataset"></a>
 
-Each time the [evaluation trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.evaluationtrigger) runs, it will output a single item representing one row of your dataset.
+Each time the [evaluation trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.evaluationtrigger) runs, it will output a single item representing one row of your dataset.
 
 Clicking the 'Evaluate all' button to the left of the evaluation trigger will run your workflow multiple times in sequence, once for each row in your dataset. This is a special behavior of the evaluation trigger.
 
@@ -96,7 +96,7 @@ If you have multiple triggers in your workflow you will need to [merge their bra
 
 To populate the output column(s) of your dataset when the evaluation runs:
 
-- Insert the 'Set outputs' action of the [evaluation node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.evaluation)
+- Insert the 'Set outputs' action of the [evaluation node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.evaluation)
 - Wire it up to your workflow at a point after it has produced the outputs you're evaluating
 - In the node's parameters, map the workflow outputs into the correct dataset column
 

@@ -21,7 +21,7 @@ All logging options described in this document (except Log streaming) are availa
 - **n8n Cloud:** All plans
 - **Self-hosted:** All editions
 
-[Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) is available on:
+[Log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems) is available on:
 
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise

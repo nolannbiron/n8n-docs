@@ -98,7 +98,7 @@ You can also configure this operation with these **Options**:
 	* **Tentative**
 * **UID**: Enter a universally unique ID (UID) for the event. The UID should be globally unique. The node automatically generates a UID if you don't enter one.
 * **URL**: Enter a URL associated with the event.
-* **Use Workflow Timezone**: Whether to use UTC time zone (turned off) or the workflow's timezone (turned on). Set the workflow's timezone in the [Workflow Settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings).
+* **Use Workflow Timezone**: Whether to use UTC time zone (turned off) or the workflow's timezone (turned on). Set the workflow's timezone in the [Workflow Settings](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/configure-workflow-settings).
 
 ### Convert to JSON <a href="#convert-to-json" id="convert-to-json"></a>
 

@@ -37,7 +37,7 @@ To use log streaming, you have to add a streaming destination.
 {% hint style="info" %}
 **Self-hosted users**
 
-If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs#log-streaming). You can also manage destinations from environment variables, see [Configure log streaming destinations using environment variables](#configure-using-environment-variables).
+If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs#log-streaming). You can also manage destinations from environment variables, see [Configure log streaming destinations using environment variables](#configure-using-environment-variables).
 {% endhint %}
 
 ## Per-process event log files <a href="#per-process-event-log-files" id="per-process-event-log-files"></a>
@@ -49,12 +49,12 @@ By default, n8n writes the event log to `<n8n-user-folder>/n8nEventLog.log`, wit
 {% hint style="warning" %}
 **Shared writable filesystems**
 
-If multiple n8n processes share one writable volume, for example [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode) workers backed by a shared persistent volume on NFS or EFS, they must not write to the same event log file. Concurrent appends from multiple processes can interleave or corrupt the file, leading to recovery failures and lost events.
+If multiple n8n processes share one writable volume, for example [queue mode](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/enable-queue-mode) workers backed by a shared persistent volume on NFS or EFS, they must not write to the same event log file. Concurrent appends from multiple processes can interleave or corrupt the file, leading to recovery failures and lost events.
 {% endhint %}
 
-To avoid this, set [`N8N_EVENTBUS_LOGWRITER_LOGFULLPATH`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs#log-streaming) on each process to a unique absolute path that ends in `.log`. n8n uses the configured path verbatim and doesn't append a process-type suffix, so your orchestrator owns uniqueness across processes.
+To avoid this, set [`N8N_EVENTBUS_LOGWRITER_LOGFULLPATH`](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs#log-streaming) on each process to a unique absolute path that ends in `.log`. n8n uses the configured path verbatim and doesn't append a process-type suffix, so your orchestrator owns uniqueness across processes.
 
-The companion variable [`N8N_EVENTBUS_LOGWRITER_MAXTOTALMESSAGESPERFILE`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs#log-streaming) bounds how many lines n8n parses from a single event log file during recovery, so a corrupted file can't exhaust process memory.
+The companion variable [`N8N_EVENTBUS_LOGWRITER_MAXTOTALMESSAGESPERFILE`](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs#log-streaming) bounds how many lines n8n parses from a single event log file during recovery, so a corrupted file can't exhaust process memory.
 
 Notes:
 
@@ -181,7 +181,7 @@ The following events are available. You can choose which events to stream in **S
 	* Job failed
 	* Job stalled
 
-Two sets of audit events mention packages, and they're unrelated. **Package installed**, **Package updated**, and **Package deleted** cover [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) installed on the instance. The **n8n package** events cover [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages), the portable archives you use to move workflows between instances.
+Two sets of audit events mention packages, and they're unrelated. **Package installed**, **Package updated**, and **Package deleted** cover [community nodes](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/community-nodes/installation-and-management) installed on the instance. The **n8n package** events cover [n8n packages](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/n8n-packages), the portable archives you use to move workflows between instances.
 
 ### Workflow events
 
@@ -242,7 +242,7 @@ To stream all six, subscribe your destination to `n8n.audit.promotions`. In **Se
 MCP audit events are available from n8n 2.34.0.
 {% endhint %}
 
-The three **MCP** audit events cover the instance MCP server, which you turn on in **Settings** > **Instance-level MCP**. They don't cover workflows that use the **MCP Server Trigger** node. See [Connect to n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) for the difference between the two.
+The three **MCP** audit events cover the instance MCP server, which you turn on in **Settings** > **Instance-level MCP**. They don't cover workflows that use the **MCP Server Trigger** node. See [Connect to n8n MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server) for the difference between the two.
 
 | Event name | Sent when |
 | --- | --- |
@@ -280,7 +280,7 @@ n8n supports three destination types:
 
 ## Configure using environment variables <a href="#configure-using-environment-variables" id="configure-using-environment-variables"></a>
 
-If you self-host n8n, you can manage log streaming destinations from environment variables instead of the UI. This is available from n8n 2.19.0. Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` and provide your destinations as a JSON array in `N8N_LOG_STREAMING_DESTINATIONS`. n8n reapplies these on every startup and locks the **Log Streaming** UI as read-only. See [Manage instance settings using environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/manage-settings-using-environment-variables) for the full pattern.
+If you self-host n8n, you can manage log streaming destinations from environment variables instead of the UI. This is available from n8n 2.19.0. Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` and provide your destinations as a JSON array in `N8N_LOG_STREAMING_DESTINATIONS`. n8n reapplies these on every startup and locks the **Log Streaming** UI as read-only. See [Manage instance settings using environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/manage-settings-using-environment-variables) for the full pattern.
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
@@ -439,7 +439,7 @@ N8N_LOG_STREAMING_DESTINATIONS='[
 ]'
 ```
 
-If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws#log-streaming) for the module-specific setup.
+If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws#log-streaming) for the module-specific setup.
 
 ## Related resources
 

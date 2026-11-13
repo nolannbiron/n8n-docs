@@ -220,7 +220,7 @@ Refer to [Node options](n8n-nodes-base.editimage.md#node-options) for optional c
   * **tiff**
   * **WebP**
 
-The **Text** operation also includes the option for **Font Name or ID**. Select the text font from the dropdown or specify an ID using an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
+The **Text** operation also includes the option for **Font Name or ID**. Select the text font from the dropdown or specify an ID using an [expression](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes).
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

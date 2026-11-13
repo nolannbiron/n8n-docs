@@ -16,15 +16,15 @@ User management in n8n allows you to invite people to work in your n8n instance.
 
 This document describes how to configure your n8n instance to support user management, and the steps to start inviting users.
 
-Refer to the main [User management](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access) guide for more information about usage, including:
+Refer to the main [User management](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access) guide for more information about usage, including:
 
-* [Managing users](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/add-and-remove-users)
-* [Instance roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/understand-instance-roles)
-* [Best practices](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/follow-best-practices)
+* [Managing users](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/add-and-remove-users)
+* [Instance roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/understand-instance-roles)
+* [Best practices](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/follow-best-practices)
 
-For LDAP setup information, refer to [LDAP](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/connect-ldap).
+For LDAP setup information, refer to [LDAP](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/connect-ldap).
 
-For SAML setup information, refer to [SAML](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-saml).
+For SAML setup information, refer to [SAML](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/use-saml).
 
 {% hint style="warning" %}
 **Feature availability**

@@ -52,7 +52,7 @@ When you enable this setting:
 
 To stop enforcing 2FA, toggle the switch off. Users who already set up 2FA keep it enabled but new users are no longer required to configure it.
 
-Refer to [Two-factor authentication](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/require-two-factor-auth) for more information on how individual users can set up 2FA.
+Refer to [Two-factor authentication](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/require-two-factor-auth) for more information on how individual users can set up 2FA.
 
 ## Personal space policies <a href="#personal-space-policies" id="personal-space-policies"></a>
 
@@ -114,7 +114,7 @@ To enable workflow reviews:
 1. Navigate to **Settings** > **Policies**.
 2. In the **Workflow reviews** section, turn on **Enable workflow reviews**.
 
-When the setting is off, users can't create or manage reviews. Turning the feature off also lifts the publish block for workflows that still have an open review. For how to submit, approve, and publish after you enable the feature, refer to [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews).
+When the setting is off, users can't create or manage reviews. Turning the feature off also lifts the publish block for workflows that still have an open review. For how to submit, approve, and publish after you enable the feature, refer to [Workflow reviews](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/workflow-reviews).
 
 ## Enforce execution data redaction <a href="#enforce-execution-data-redaction" id="enforce-execution-data-redaction"></a>
 

@@ -93,7 +93,7 @@ Apply matches content on the instance like this:
 - **By name and scope:** variables.
 - **By ID, then by name:** tags.
 
-Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) to export and import this content.
+Promote and apply use [n8n packages](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/n8n-packages) to export and import this content.
 
 ## If Apply stops
 

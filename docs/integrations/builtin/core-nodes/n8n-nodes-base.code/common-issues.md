@@ -56,8 +56,8 @@ In n8n, all data passed between nodes is an array of objects. Each of these obje
 
 To troubleshoot this error, check the following:
 
-* Read the [data structure](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure) to understand the data you receive in the Code node and the requirements for outputting data from the node.
-* Understand how data items work and how to connect data items from previous nodes with [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items).
+* Read the [data structure](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure) to understand the data you receive in the Code node and the requirements for outputting data from the node.
+* Understand how data items work and how to connect data items from previous nodes with [item linking](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data/link-data-items).
 
 ## A 'json' property isn't an object <a href="#a-json-property-isnt-an-object" id="a-json-property-isnt-an-object"></a>
 
@@ -91,7 +91,7 @@ To resolve this, ensure that the `json` key references an object in your return 
 
 This error may occur when your Code node doesn't return anything or if it returns an unexpected result.
 
-To resolve this, ensure that your Code node returns the [expected data structure](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure):
+To resolve this, ensure that your Code node returns the [expected data structure](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure):
 
 ```javascript
 [
@@ -125,21 +125,21 @@ This error occurs if you try to use `require` in the Code node and n8n can't fin
 {% hint style="warning" %}
 **Only for self-hosted**
 
-n8n doesn't support importing modules in the [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud) version.
+n8n doesn't support importing modules in the [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud) version.
 {% endhint %}
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, follow these steps:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, follow these steps:
 
 * Install the module into your n8n environment.
-  * If you are running n8n with [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm), install the module in the same environment as n8n.
-  * If you are running n8n with [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker), you need to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/) that includes your module.
-* Set the `NODE_FUNCTION_ALLOW_BUILTIN` and `NODE_FUNCTION_ALLOW_EXTERNAL` [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-modules-in-code-node) to allow importing modules.
+  * If you are running n8n with [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm), install the module in the same environment as n8n.
+  * If you are running n8n with [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker), you need to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/) that includes your module.
+* Set the `NODE_FUNCTION_ALLOW_BUILTIN` and `NODE_FUNCTION_ALLOW_EXTERNAL` [environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-modules-in-code-node) to allow importing modules.
 
 ## Using global variables <a href="#using-global-variables" id="using-global-variables"></a>
 
 Sometimes you may wish to set and retrieve simple global data related to a workflow across and within executions. For example, you may wish to include the date of the previous report when compiling a report with a list of project updates.
 
-To set, update, and retrieve data directly to a workflow, use the [static data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata) functions within your code. You can manage data either globally or tied to specific nodes.
+To set, update, and retrieve data directly to a workflow, use the [static data](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata) functions within your code. You can manage data either globally or tied to specific nodes.
 
 {% hint style="info" %}
 **Use Remove Duplicates when possible**

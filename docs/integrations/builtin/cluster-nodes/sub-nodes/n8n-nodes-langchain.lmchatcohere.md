@@ -59,5 +59,5 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 Refer to [Cohere's API documentation](https://docs.cohere.com/v2/reference/about) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 

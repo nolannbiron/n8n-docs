@@ -9,14 +9,14 @@ layout:
 
 # Track Time Saved node
 
-Use the Track Time Saved node to record how many minutes a workflow saves, based on the path an execution actually takes. n8n adds up every Track Time Saved node that runs during an execution and reports the total in [Insights](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights).
+Use the Track Time Saved node to record how many minutes a workflow saves, based on the path an execution actually takes. n8n adds up every Track Time Saved node that runs during an execution and reports the total in [Insights](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/track-usage-with-insights).
 
 Use this node when different paths through a workflow save different amounts of time. If every execution saves the same amount, set a fixed value on the workflow instead and you don't need this node.
 
 {% hint style="info" %}
 **Set the workflow to Dynamic first**
 
-This node only counts if the workflow's **Estimated time saved** setting is set to **Dynamic**. See [Setting the time saved by a workflow](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#setting-the-time-saved-by-a-workflow).
+This node only counts if the workflow's **Estimated time saved** setting is set to **Dynamic**. See [Setting the time saved by a workflow](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/track-usage-with-insights#setting-the-time-saved-by-a-workflow).
 {% endhint %}
 
 ## Node parameters
@@ -49,5 +49,5 @@ If the workflow uses **Fixed** rather than **Dynamic** for **Estimated time save
 
 ## Related resources
 
-* [Track usage with Insights](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights): the Insights dashboard and the workflow-level time saved setting.
-* [Workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings): where you set **Estimated time saved**.
+* [Track usage with Insights](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/track-usage-with-insights): the Insights dashboard and the workflow-level time saved setting.
+* [Workflow settings](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/configure-workflow-settings): where you set **Estimated time saved**.

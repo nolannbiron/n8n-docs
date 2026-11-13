@@ -19,7 +19,7 @@ layout:
 
 # Evaluation Trigger node <a href="#evaluation-trigger-node" id="evaluation-trigger-node"></a>
 
-Use the Evaluation Trigger node when setting up [evaluations](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test) to validate your AI workflow reliability. During evaluation, the Evaluation Trigger node reads your evaluation dataset from Google Sheets, sending the items through the workflow one at a time, in sequence.
+Use the Evaluation Trigger node when setting up [evaluations](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test) to validate your AI workflow reliability. During evaluation, the Evaluation Trigger node reads your evaluation dataset from Google Sheets, sending the items through the workflow one at a time, in sequence.
 
 On this page, you'll find the Evaluation Trigger node parameters and options.
 
@@ -51,7 +51,7 @@ The Evaluation Trigger node uses data tables or Google Sheets to store the test 
         * **Limit Rows**: Whether to limit the number of rows in the sheet to process.
             * **Max Rows to Process**: When **Limit Rows** is enabled, the maximum number of rows to read and process during the evaluation.
         * **Filters:** Filter the evaluation dataset based on column values.
-            * **Column**: Choose a sheet column you want to filter by. Select **From list** to choose the column name from the dropdown list, or **By ID** to specify an ID using an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
+            * **Column**: Choose a sheet column you want to filter by. Select **From list** to choose the column name from the dropdown list, or **By ID** to specify an ID using an [expression](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes).
             * **Value**: The column value you want to filter by. The evaluation will only process rows with the given value for the selected column.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
@@ -61,8 +61,8 @@ The Evaluation Trigger node uses data tables or Google Sheets to store the test 
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-To learn more about n8n evaluations, check out the [evaluations documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test)
+To learn more about n8n evaluations, check out the [evaluations documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test)
 
 n8n provides an app node for evaluations. Refer to the [Evaluation node documentation](n8n-nodes-base.evaluation.md) for more information.
 
-For common questions or issues and suggested solutions, refer to the evaluations [tips and common issues](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/fix-common-issues) page.
+For common questions or issues and suggested solutions, refer to the evaluations [tips and common issues](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/test-and-improve-ai-workflows/fix-common-issues) page.

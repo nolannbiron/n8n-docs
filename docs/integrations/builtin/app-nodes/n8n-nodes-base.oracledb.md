@@ -32,7 +32,7 @@ For advanced Oracle Database features like Transparent Application Continuity (T
 {% hint style="info" %}
 **This node can be used as an AI tool**
 
-This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters).
+This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/use-ai-for-parameters).
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>
@@ -78,7 +78,7 @@ Enter these parameters:
 
 - **Credential to connect with**: Create or select an existing [Oracle Database credential](../credentials/oracledb.md).
 - **Operation**: Execute SQL **Execute SQL**.
-- **Statement**: The SQL statement to execute. You can use n8n [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes) and positional parameters like `:1`, `:2`, or named parameters like `:name`, `:id` to use with [Use bind parameters](#use-bind-parameters).
+- **Statement**: The SQL statement to execute. You can use n8n [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes) and positional parameters like `:1`, `:2`, or named parameters like `:name`, `:id` to use with [Use bind parameters](#use-bind-parameters).
 To run a PL/SQL procedure, for example `demo`, you can use:
 ```sql
 BEGIN
@@ -111,7 +111,7 @@ Enter these parameters:
 #### Insert options <a href="#insert-options" id="insert-options"></a>
 
 - **Auto Commit**: When this property is set to true, the transaction in the current connection is automatically committed at the end of statement execution.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes).
 - **Statement Batching**: The way to send statements to the database:
 	- **Single Statement**: A single statement for all incoming items.
 	- **Independently**: Execute one statement per incoming item of the execution.
@@ -134,7 +134,7 @@ Enter these parameters:
 #### Insert or Update options <a href="#insert-or-update-options" id="insert-or-update-options"></a>
 
 - **Auto Commit**: When this property is set to true, the transaction in the current connection is automatically committed at the end of statement execution.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes).
 - **Statement Batching**: The way to send statements to the database:
 	- **Single Statement**: A single statement for all incoming items.
 	- **Independently**: Execute one statement per incoming item of the execution.
@@ -186,7 +186,7 @@ Enter these parameters:
 #### Update options <a href="#update-options" id="update-options"></a>
 
 - **Auto Commit**: When this property is set to true, the transaction in the current connection is automatically committed at the end of statement execution.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes).
 - **Statement Batching**: The way to send statements to the database:
 	- **Single Statement**: A single statement for all incoming items.
 	- **Independently**: Execute one statement per incoming item of the execution.

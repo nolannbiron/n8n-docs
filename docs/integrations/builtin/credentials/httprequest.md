@@ -276,7 +276,7 @@ Use this generic authentication if your app or service expects static authentica
 
 Simplified Custom Auth works like [Custom auth](httprequest.md#using-custom-auth): JSON that n8n merges into every request that uses the credential. The difference is that the JSON is a template containing `{{placeholder}}` markers instead of the secrets themselves. The credential form shows one field per placeholder, and n8n replaces each marker with the field's value when it sends a request.
 
-This split exists so n8n Assistant can prepare the setup part for you. When [n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant) builds a workflow for a service that has no dedicated n8n credential, it creates this credential type: it prepares the template, the fields, and the test URL from the service's API documentation, and you only paste the secret values into the form. It also records the service's API host so that n8n only offers the credential to nodes calling the same service.
+This split exists so n8n Assistant can prepare the setup part for you. When [n8n Assistant](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/ways-of-building-workflows/n8n-assistant) builds a workflow for a service that has no dedicated n8n credential, it creates this credential type: it prepares the template, the fields, and the test URL from the service's API documentation, and you only paste the secret values into the form. It also records the service's API host so that n8n only offers the credential to nodes calling the same service.
 
 You can also set up the credential yourself. Select **Edit setup** in the credential modal and enter:
 

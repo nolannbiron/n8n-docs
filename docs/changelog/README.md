@@ -40,7 +40,7 @@ Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-not
 For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking-changes.md), [v3.0 migration tool](v30-migration-tool.md), [v2.0 breaking changes](v20-breaking-changes.md), [v2.0 migration tool](v20-migration-tool.md), and [v1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
-For what Preview, GA, deprecated, and removed mean, what Enterprise readiness means, and how n8n's version numbers work, refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+For what Preview, GA, deprecated, and removed mean, what Enterprise readiness means, and how n8n's version numbers work, refer to [Understand feature availability](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/understand-feature-availability).
 
 {% hint style="info" %}
 **Stable and Beta versions**
@@ -64,13 +64,13 @@ After you upgrade, you may notice:
 * **Hidden execution data:** n8n hides the data of executions that used a credential you can't use, including data returned from sub-workflows.
 * **A clearer Sharing tab:** it lists people and projects together, shows projects that use the credential without a share as **Can view**, and lets you share with them in one step.
 
-Existing published workflows keep running. Learn more in [Use personal credentials in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-personal-credentials-in-projects).
+Existing published workflows keep running. Learn more in [Use personal credentials in projects](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-personal-credentials-in-projects).
 
 ## Durable scheduler on by default for Schedule Trigger nodes
 
 **Released:** 2026-10-20 in n8n 2.45
 
-Schedule Trigger nodes now run on the durable scheduler by default, on every instance, with no environment variable to set. The scheduler stores each run in the database before it's due, so a restart no longer drops pending runs. A run missed during downtime still fires within its grace period. Past that, the trigger's [misfire policy](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler#misfire-policy) decides what happens. In a multi-main setup, one main claims each run, instead of a single leader firing them all.
+Schedule Trigger nodes now run on the durable scheduler by default, on every instance, with no environment variable to set. The scheduler stores each run in the database before it's due, so a restart no longer drops pending runs. A run missed during downtime still fires within its grace period. Past that, the trigger's [misfire policy](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/durable-scheduler#misfire-policy) decides what happens. In a multi-main setup, one main claims each run, instead of a single leader firing them all.
 
 Existing Schedule Trigger nodes switch over on upgrade, without republishing. One timing detail changes: "every N seconds" and "every N minutes" schedules now run a steady N apart, counted from when you published the workflow. They no longer align to clock boundaries. Hourly, daily, weekly, monthly, and custom cron schedules fire as before in everyday use. They differ only in rare leap-year, 53rd-week, and daylight-saving edge cases, where the durable scheduler fixes an off-by-one-period error.
 
@@ -81,7 +81,7 @@ You can keep the previous behavior while you adapt:
 
 Both variables are now deprecated, and n8n logs a warning at startup if you set either one. A future version will remove them, along with the in-memory scheduler. This release also removes the Skip Durable Scheduler node setting and its `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` flag.
 
-Poll triggers and system tasks stay on their current schedulers. Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler).
+Poll triggers and system tasks stay on their current schedulers. Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/durable-scheduler).
 
 ## Control which nodes users can add and run, per instance or per project
 
@@ -95,7 +95,7 @@ n8n checks policies when workflows are saved, published, and run, and when agent
 
 To get started, create an API key with the `nodeTypePolicy:manage` scope and read the current policy with `GET /api/v1/node-type-policies/instance`. Add your rules, then send the whole policy back with `PUT`, including the `version` you read. Changes take effect within about one second.
 
-Learn more in the [Node Type Policies documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/control-node-availability).
+Learn more in the [Node Type Policies documentation](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/control-node-availability).
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -135,7 +135,7 @@ Agents suit jobs where the next step depends on the last answer: a question in S
 * **Tools:** n8n nodes, MCP servers, and your own workflows.
 * **Skills, sub-agents, knowledge files, and memory,** plus a stored session for every conversation.
 
-Agents and workflows call each other. An agent can use any workflow as a tool: the agent decides when the workflow runs, and the workflow runs the way you built it, with its own credentials. For example, an agent can add a note to your CRM through a workflow without ever holding write access to the CRM. In the other direction, the [Message an Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.messageanagent) node calls an agent from inside a workflow and passes its answer to the next node.
+Agents and workflows call each other. An agent can use any workflow as a tool: the agent decides when the workflow runs, and the workflow runs the way you built it, with its own credentials. For example, an agent can add a note to your CRM through a workflow without ever holding write access to the CRM. In the other direction, the [Message an Agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.messageanagent) node calls an agent from inside a workflow and passes its answer to the next node.
 
 Connect one agent to Slack, Telegram, Linear, or Discord, run it on a schedule, and call it from your workflows. Edit a draft while your team keeps using the published version. When you publish, every place the agent is connected gets the update. Mark sensitive tools to require approval before the agent runs them, and review each session's tool calls, inputs, and outputs.
 
@@ -147,7 +147,7 @@ One turn with an agent counts as one execution. Calls to workflow tools and sub-
 Agents are in Preview. They can make mistakes, and their behavior may change while they're in development. Test before you publish, and require approval on tools that write to your systems.
 {% endhint %}
 
-Learn more in [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) and the [launch blog post](https://blog.n8n.io/introducing-n8n-agents/). On self-hosted n8n, agents need some extra setup from n8n 2.32.3: refer to [Self-hosted](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#self-hosted).
+Learn more in [Build and manage agents](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents) and the [launch blog post](https://blog.n8n.io/introducing-n8n-agents/). On self-hosted n8n, agents need some extra setup from n8n 2.32.3: refer to [Self-hosted](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents#self-hosted).
 
 {% hint style="info" %}
 **Availability:** All plans. On Enterprise, agents are in Preview, with additional governance features on the way.
@@ -163,7 +163,7 @@ Until now each of those runs counted like any other execution. Handling a failur
 
 Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like.
 
-The change applies on Cloud from 2.38, and on self-hosted Business and Enterprise instances from 2.28.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) to set one up.
+The change applies on Cloud from 2.38, and on self-hosted Business and Enterprise instances from 2.28.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/handle-errors-gracefully) to set one up.
 
 ## Use AI models and tool services without setting up provider accounts or credentials
 
@@ -205,9 +205,9 @@ On a brand-new instance, one command sets up everything except the model key:
 curl -fsSL https://get.n8n.io | sh
 ```
 
-It installs n8n with Docker Compose and pre-configures the sandbox and SearXNG web search, both free. Open the editor, add your model API key in the instance's AI settings, and start building. On an existing Docker install, the [n8n Assistant setup guide](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) covers the sandbox and search options for each deployment shape, in environment variables or in the UI.
+It installs n8n with Docker Compose and pre-configures the sandbox and SearXNG web search, both free. Open the editor, add your model API key in the instance's AI settings, and start building. On an existing Docker install, the [n8n Assistant setup guide](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-n8n-assistant) covers the sandbox and search options for each deployment shape, in environment variables or in the UI.
 
-n8n Assistant requires Docker. npm installs will stop working with n8n 3.0 in October, so new installs should use the [one-line setup](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/one-line-setup) or [Docker Compose](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-using-docker-compose).
+n8n Assistant requires Docker. npm installs will stop working with n8n 3.0 in October, so new installs should use the [one-line setup](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/one-line-setup) or [Docker Compose](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-using-docker-compose).
 
 {% hint style="warning" %}
 **Preview status**
@@ -215,7 +215,7 @@ n8n Assistant requires Docker. npm installs will stop working with n8n 3.0 in Oc
 n8n Assistant is in Preview. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
 {% endhint %}
 
-Learn more in the [n8n Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant).
+Learn more in the [n8n Assistant documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/ways-of-building-workflows/n8n-assistant).
 
 {% hint style="info" %}
 **Feature availability**
@@ -227,13 +227,13 @@ Self-hosted Enterprise support is coming. Enterprise customers who want to try n
 
 **Released:** 2026-08-04 in [n8n 2.34](release-notes.md#n8n234)
 
-Your queue mode workers can now return a webhook response however large the payload. In queue mode the worker runs the execution, but the client that made the request stays connected to the main or webhook instance, so a response from a [Respond to Webhook](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.respondtowebhook) node has to travel back through the queue. Redis holds the whole response while that message is in flight, which is why n8n caps it at 64 MiB by default (`N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX`). A response that serialized to more than that failed the node: a wide result set from a database query, a batch of aggregated API calls, or a CSV or XML document assembled in the workflow.
+Your queue mode workers can now return a webhook response however large the payload. In queue mode the worker runs the execution, but the client that made the request stays connected to the main or webhook instance, so a response from a [Respond to Webhook](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.respondtowebhook) node has to travel back through the queue. Redis holds the whole response while that message is in flight, which is why n8n caps it at 64 MiB by default (`N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX`). A response that serialized to more than that failed the node: a wide result set from a database query, a batch of aggregated API calls, or a CSV or XML document assembled in the workflow.
 
-Set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED=true` on your workers and n8n stores a response body above that limit in [binary data storage](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/handle-binary-data) instead. The queue message then carries only a reference, the main instance streams the body from storage to the client, and n8n deletes the stored copy once it delivers the response, so nothing accumulates. Redis memory stays flat no matter how large the response gets.
+Set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED=true` on your workers and n8n stores a response body above that limit in [binary data storage](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/handle-binary-data) instead. The queue message then carries only a reference, the main instance streams the body from storage to the client, and n8n deletes the stored copy once it delivers the response, so nothing accumulates. Redis memory stays flat no matter how large the response gets.
 
 Offloading needs a `N8N_DEFAULT_BINARY_DATA_MODE` that stores data (any mode except `default`) and storage that every instance can read. n8n recommends `s3` or `azure`, since both stream the body a chunk at a time. Only a main instance running n8n 2.34.0 or later can read an offloaded body, so the variable ships turned off: upgrade your main and webhook instances first, then enable it on your workers.
 
-Refer to [Large webhook responses](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode#large-webhook-responses) for the full configuration, upgrade order, and troubleshooting.
+Refer to [Large webhook responses](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/enable-queue-mode#large-webhook-responses) for the full configuration, upgrade order, and troubleshooting.
 
 ## Read and write SharePoint Excel workbooks directly in n8n
 
@@ -243,7 +243,7 @@ You can now read and write Excel workbooks stored in SharePoint document librari
 
 The node supports two authentication methods: sign in as a person using a Microsoft OAuth2 credential with the `Sites.ReadWrite.All` (or `Sites.Read.All`) scope, or sign in as an app using a Microsoft Entra Service Principal credential for unattended workflows that require no user interaction.
 
-Learn more in the [Microsoft Excel (SharePoint) node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftexcelsharepoint).
+Learn more in the [Microsoft Excel (SharePoint) node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftexcelsharepoint).
 
 ## Schedule Trigger runs survive restarts and scale across mains
 
@@ -258,11 +258,11 @@ To opt in, set two environment variables and restart your instance:
 1. Set `N8N_SCHEDULER_ENABLED=true` to enable the durable scheduler.
 2. Set `N8N_USE_WORKFLOW_PUBLICATION_SERVICE=true` so the scheduler takes over Schedule Trigger nodes. Without this second flag, Schedule Trigger nodes keep running on the in-memory scheduler and n8n logs a warning.
 
-Your existing Schedule Trigger nodes switch automatically without republishing. The defaults suit most instances, but you can tune timing precision, storage, and load with additional environment variables including `N8N_SCHEDULER_MATERIALIZATION_WINDOW`, `N8N_SCHEDULER_EXECUTOR_INTERVAL`, `N8N_SCHEDULER_RETENTION`, and `N8N_SCHEDULER_FAILED_RETENTION`. See the [Scheduler environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler) page for the full set. To monitor the scheduler, set `N8N_METRICS=true` and `N8N_METRICS_INCLUDE_SCHEDULER_METRICS=true` to expose Prometheus metrics for queue depth, scheduling lag, dispatch throughput, retries, and dead-letters.
+Your existing Schedule Trigger nodes switch automatically without republishing. The defaults suit most instances, but you can tune timing precision, storage, and load with additional environment variables including `N8N_SCHEDULER_MATERIALIZATION_WINDOW`, `N8N_SCHEDULER_EXECUTOR_INTERVAL`, `N8N_SCHEDULER_RETENTION`, and `N8N_SCHEDULER_FAILED_RETENTION`. See the [Scheduler environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler) page for the full set. To monitor the scheduler, set `N8N_METRICS=true` and `N8N_METRICS_INCLUDE_SCHEDULER_METRICS=true` to expose Prometheus metrics for queue depth, scheduling lag, dispatch throughput, retries, and dead-letters.
 
 The durable scheduler shipped as a Preview feature in this release and became generally available in n8n 2.36. n8n recommends testing in a non-production environment first. How a run that was missed during downtime is handled depends on the trigger's misfire policy.
 
-Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler).
+Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/durable-scheduler).
 
 ## Configure instance settings programmatically via REST API
 
@@ -274,7 +274,7 @@ You can now read and update instance-level settings through the n8n public REST 
 
 To use these endpoints, generate an API key with the `securitySettings:manage` scope. Scopes are fixed on a key when you create it, so an existing key won't pick up a new scope: issue a new one. Settings endpoints for log streaming and SAML followed in n8n 2.32, OpenTelemetry in n8n 2.33, and OIDC and LDAP in n8n 2.34.
 
-Learn more in the [security policy API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/security-policy).
+Learn more in the [security policy API documentation](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-settings/security-policy).
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -290,13 +290,13 @@ For Slack and Telegram, you can go further with the new Advanced Interactivity o
 
 To enable approvals in Slack, your n8n instance must be reachable from Slack over public HTTPS. You will need to turn on Interactivity in your Slack app, set the **Request URL** to `https://<your-n8n-instance>/webhook-waiting-slack`, and paste your app's signing secret into the **Signature Secret** field of your Slack credential. Then, in the Slack node, set **Response Type** to **Approval** and turn on **Capture Who Responded** under the **Advanced Interactivity** section. For Telegram, your instance must be reachable over public HTTPS on a port Telegram supports for webhooks (443, 80, 88, or 8443). Enable **Approve Within Chat** in the same section: n8n registers the webhook for you using your existing Telegram credential, with no additional setup on Telegram's side.
 
-Learn more in the [Approvals in Slack documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack/approvals).
+Learn more in the [Approvals in Slack documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack/approvals).
 
 ## App-only authentication for Microsoft nodes
 
 **Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)
 
-You can now authenticate Microsoft nodes with a [Microsoft Entra Service Principal](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoftentraserviceprincipal), so workflows run as an application instead of a signed-in user. OneDrive and Outlook gained the option in n8n 2.29; Excel 365, Microsoft Teams, and Microsoft To Do follow in n8n 2.30, all sharing a single app-only credential.
+You can now authenticate Microsoft nodes with a [Microsoft Entra Service Principal](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/microsoftentraserviceprincipal), so workflows run as an application instead of a signed-in user. OneDrive and Outlook gained the option in n8n 2.29; Excel 365, Microsoft Teams, and Microsoft To Do follow in n8n 2.30, all sharing a single app-only credential.
 
 Until now, Microsoft automations were tied to a person's OAuth session: when that person left the company or their token expired, the workflow broke. With app-only authentication, the workflow authenticates non-interactively with tenant-level permissions and targets the user, mailbox, drive, or site you specify: read a shared mailbox, process files in any user's drive, or post to Teams channels with nobody logged in. OAuth2 remains the default everywhere, so existing workflows are untouched, and operations that only make sense for a signed-in user are disabled per node with a clear error.
 
@@ -306,7 +306,7 @@ _OneDrive and Outlook support released in n8n 2.29 (2026-06-30)._
 
 **Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)
 
-The [Kafka credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/kafka) now supports mutual TLS: provide a CA certificate, client certificate, and private key (PEM) to connect to brokers that require client-certificate authentication. mTLS applies to the Kafka node, the Kafka Trigger, and the credential test, and n8n validates that certificate and key match before you save.
+The [Kafka credential](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/kafka) now supports mutual TLS: provide a CA certificate, client certificate, and private key (PEM) to connect to brokers that require client-certificate authentication. mTLS applies to the Kafka node, the Kafka Trigger, and the credential test, and n8n validates that certificate and key match before you save.
 
 ## n8n Assistant: describe a goal, get a working automation
 
@@ -326,7 +326,7 @@ Every workflow it builds is a normal n8n workflow: a visible canvas you can open
 This feature is in Preview. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
 {% endhint %}
 
-Learn more in the [n8n Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant).
+Learn more in the [n8n Assistant documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/ways-of-building-workflows/n8n-assistant).
 
 {% hint style="info" %}
 **Availability:** n8n Cloud at release. Self-hosted setup followed in n8n 2.35: refer to [n8n Assistant on self-hosted n8n](./#n8n-assistant-on-self-hosted-n8n-set-up-in-minutes).
@@ -347,13 +347,13 @@ We've shipped a number of updates to the n8n MCP server over the past few weeks.
 * **Faster, targeted edits.** Workflow updates now change only the nodes that need to change instead of rewriting the whole thing (n8n 2.22).
 * **List and choose credentials.** You can now list the credentials on your instance and pick the right one when several could apply, for example among five Gmail credentials (n8n 2.21).
 
-Learn more in the [n8n MCP server documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server).
+Learn more in the [n8n MCP server documentation](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server).
 
 ## GitHub App authentication
 
 **Released:** 2026-06-30 in [n8n 2.29](release-notes.md#n8n229)
 
-The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) and [GitHub Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.githubtrigger) can now authenticate as a GitHub App, alongside the existing personal access token and OAuth2 options.
+The [GitHub node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.github) and [GitHub Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.githubtrigger) can now authenticate as a GitHub App, alongside the existing personal access token and OAuth2 options.
 
 A personal access token belongs to a person. The workflow that triages issues or merges release PRs runs with one engineer's identity and access, so it stops working the day they change teams or leave. Until then, its actions appear in the audit log as that engineer working by hand.
 
@@ -377,7 +377,7 @@ Three states guide you as you work with custom date ranges:
 
 To use this, open the Insights dashboard, choose a date range with the date range picker, and check the alert banner at the top of the dashboard. If you see a partial or no-data alert, adjust your range to align with the dates your retention policy covers. Note that the alerts reflect your current retention configuration and do not extend how long execution data is stored.
 
-Learn more in the [insights retention documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection).
+Learn more in the [insights retention documentation](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection).
 
 {% hint style="info" %}
 **Availability:** Pro, Business, and Enterprise.
@@ -395,13 +395,13 @@ To create a group, select a connected run of nodes by dragging a box around them
 
 A Canvas Group is saved with the workflow, so anyone who opens it sees the same structure. Whether a group is collapsed or expanded is a personal preference stored in your browser, so your view stays put when you come back without changing what teammates see. A few rules decide which nodes you can combine into one group: triggers stay outside them, the nodes have to form one connected chain, and an AI node keeps its sub-nodes (chat model, memory, and tools) inside the same group.
 
-Learn more in the [Canvas Groups documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/canvas-groups).
+Learn more in the [Canvas Groups documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/workflow-components/canvas-groups).
 
 ## GitHub node: manage the full pull request lifecycle
 
 **Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
-The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) now has a dedicated Pull Request resource. The whole life of a pull request is available as node operations, instead of hand-rolled HTTP Request calls against the GitHub API.
+The [GitHub node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.github) now has a dedicated Pull Request resource. The whole life of a pull request is available as node operations, instead of hand-rolled HTTP Request calls against the GitHub API.
 
 Create a pull request from one branch into another, including drafts and PRs from a fork. Update its title, body, state, or base branch as it moves along, and close or reopen it. Fetch a single PR to read its current state, and create or edit comments on it. Merge with the method your repository is configured for: merge commit, squash, or rebase, with merge queues handled for you.
 
@@ -409,13 +409,13 @@ Two operations return the change itself rather than its metadata. Get Diff and G
 
 All of this was possible with the HTTP Request node, but you had to know the REST paths, assemble the payload for each call, and interpret GitHub's responses yourself. The native operations take a repository and the fields each operation needs. Errors surface exactly as GitHub returns them, so a refused merge tells you why.
 
-Refer to the [GitHub node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github#operations) for the full list of operations.
+Refer to the [GitHub node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.github#operations) for the full list of operations.
 
 ## Webhook node: Only Run If
 
 **Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
-The [Webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) gains an expression-based Only run if option that rejects requests that don't match a condition before an execution starts. Filter out health checks, retries, or irrelevant events at the door instead of starting a run that immediately exits: fewer no-op executions, less noise in your execution list, and saved execution quota.
+The [Webhook node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.webhook) gains an expression-based Only run if option that rejects requests that don't match a condition before an execution starts. Filter out health checks, retries, or irrelevant events at the door instead of starting a run that immediately exits: fewer no-op executions, less noise in your execution list, and saved execution quota.
 
 ## One credential for multiple Microsoft nodes
 
@@ -429,7 +429,7 @@ Nothing changes for existing workflows. On saved nodes the Authentication dropdo
 
 _Microsoft OneDrive support released in n8n 2.27 (2026-06-16)._
 
-Learn more in the [Microsoft credentials documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoft).
+Learn more in the [Microsoft credentials documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/microsoft).
 
 ## Move workflows between instances as packages
 
@@ -447,7 +447,7 @@ This makes it easy to promote workflows from development to production, back up 
 This feature is in Preview. The package format and APIs are still under development, and breaking changes may occur without a major version bump.
 {% endhint %}
 
-Learn more in the [n8n Packages documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages).
+Learn more in the [n8n Packages documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/n8n-packages).
 
 ## Configure OpenTelemetry tracing from the UI
 
@@ -463,7 +463,7 @@ n8n also propagates W3C trace context in both directions. A `traceparent` header
 
 On self-hosted instances, environment variables keep working and take precedence. Each field's tooltip names the variable it maps to, and n8n disables any field whose variable you've set. Leave a variable unset to manage that setting from the UI. You need to be an instance owner or admin to configure tracing.
 
-Learn more in the [OpenTelemetry tracing documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry).
+Learn more in the [OpenTelemetry tracing documentation](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry).
 
 ## Web search for AI agents
 
@@ -475,7 +475,7 @@ Your AI agents can now search the web out of the box. Enable web search from the
 
 **Released:** 2026-06-02 in [n8n 2.25.1](release-notes.md#n8n2251)
 
-The [Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger) (node version 2.6 and later) adds an n8n User Auth authentication option. It limits a form to people signed in to your n8n instance. Select it from the node's **Authentication** dropdown and the form stops being public. Visitors who aren't signed in are redirected to the n8n login page, and a submission without a valid session is rejected with a 401.
+The [Form Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.formtrigger) (node version 2.6 and later) adds an n8n User Auth authentication option. It limits a form to people signed in to your n8n instance. Select it from the node's **Authentication** dropdown and the form stops being public. Visitors who aren't signed in are redirected to the n8n login page, and a submission without a valid session is rejected with a 401.
 
 This is about attribution as much as access. Every submission carries the authenticated user's ID, email, and first and last name alongside the form fields, taken from their n8n account rather than from anything they typed. Nobody can file a request under a colleague's name, and you don't need to ask for an email address at all. Downstream nodes can act on the submitter: open the ticket under their name, send the confirmation to their real address, or check them against an approver list. To keep those details out of your execution data, turn off **Include User in Output**.
 
@@ -485,21 +485,21 @@ That makes the Form Trigger a practical front door for internal requests: access
 
 **Released:** 2026-05-27 in [n8n 2.23](release-notes.md#n8n223)
 
-The [Odoo node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.odoo) has been rebuilt as v2, while existing v1 workflows keep working unchanged. The new version supports API-key authentication for Odoo 19+, searchable resource locators so you pick records from a list instead of pasting IDs, and dynamic field mapping on create and update that shows the actual fields of your Odoo instance, with read-only and computed fields hidden so you can't write to what can't be written. Contact, Opportunity, Activity, and Custom resources round out the coverage, and the node selects the right API transport for your Odoo version automatically.
+The [Odoo node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.odoo) has been rebuilt as v2, while existing v1 workflows keep working unchanged. The new version supports API-key authentication for Odoo 19+, searchable resource locators so you pick records from a list instead of pasting IDs, and dynamic field mapping on create and update that shows the actual fields of your Odoo instance, with read-only and computed fields hidden so you can't write to what can't be written. Contact, Opportunity, Activity, and Custom resources round out the coverage, and the node selects the right API transport for your Odoo version automatically.
 
 ### Oracle Database as a vector store
 
-New [Oracle DB Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreoracledb) and [Oracle ONNX Embedding](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb) nodes bring retrieval-augmented generation to data that lives in Oracle. Insert, load, and retrieve documents (including retrieve-as-tool for AI agents) with configurable distance strategies and metadata filtering that supports nested AND/OR conditions. Embeddings are generated by an ONNX model loaded in the database itself, so vectors and source data stay in one place. Requires an ONNX model in the database.
+New [Oracle DB Vector Store](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreoracledb) and [Oracle ONNX Embedding](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb) nodes bring retrieval-augmented generation to data that lives in Oracle. Insert, load, and retrieve documents (including retrieve-as-tool for AI agents) with configurable distance strategies and metadata filtering that supports nested AND/OR conditions. Embeddings are generated by an ONNX model loaded in the database itself, so vectors and source data stay in one place. Requires an ONNX model in the database.
 
 ## Connect to MCP servers with less setup
 
 **Released:** 2026-05-19 in [n8n 2.22](release-notes.md#n8n222)
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 Initial coverage includes some of the most-used services in the official MCP registry (Apify, Linear, monday.com, Notion, and PostHog), and we'll expand the list to cover more services soon.
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
 
 {% embed url="https://youtu.be/RGhHFbLMXhQ" %}
 Connect to MCP servers with less setup
@@ -511,7 +511,7 @@ Connect to MCP servers with less setup
 
 You can now attach custom span attributes to OpenTelemetry traces at the node, workflow, and project level, letting you filter and group execution spans by tenant, environment, customer ID, or any other dimension. Attribute values support expressions, so they can pull live data from webhook payloads or API responses at runtime rather than relying on hardcoded values. Configure tags in node or workflow settings when tracing is enabled (`N8N_OTEL_ENABLED=true`).
 
-Learn more in the [custom span attributes documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes).
+Learn more in the [custom span attributes documentation](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes).
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -531,17 +531,17 @@ This is part of a broader hardening pass across releases: the Linear Trigger gai
 
 **Released:** 2026-05-12 in [n8n 2.21](release-notes.md#n8n221)
 
-The [Jira node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) and [Jira Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.jiratrigger) add a Cloud (OAuth2) authentication option using Atlassian's OAuth 2.0 authorization code flow (3LO). Connect through auth.atlassian.com with your Atlassian cloud ID resolved and cached automatically. No more creating and rotating API tokens by hand for Jira Cloud.
+The [Jira node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jira) and [Jira Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.jiratrigger) add a Cloud (OAuth2) authentication option using Atlassian's OAuth 2.0 authorization code flow (3LO). Connect through auth.atlassian.com with your Atlassian cloud ID resolved and cached automatically. No more creating and rotating API tokens by hand for Jira Cloud.
 
 ## Microsoft Agent 365 Trigger node
 
 **Released:** 2026-05-05 in [n8n 2.20](release-notes.md#n8n220)
 
-The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant SharePoint permissions to, just like a teammate.
+The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant SharePoint permissions to, just like a teammate.
 
 <figure><img src=".gitbook/assets/microsoft_agent_365.png" alt="A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow."><figcaption><p>A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across<br>Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.</p></figcaption></figure>
 
-You build the agent in n8n using the trigger node: add a system prompt and give it access to tools, MCP servers, and your existing workflows using [sub-workflows as tools](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/break-workflows-into-smaller-parts). You then set the agent up on the Microsoft side, which gives it an Entra ID identity with an email address. Microsoft handles identity, lifecycle, security, and compliance (via Entra ID, Purview, and Defender); n8n handles workflow-level governance like RBAC, credential management, and execution logs.
+You build the agent in n8n using the trigger node: add a system prompt and give it access to tools, MCP servers, and your existing workflows using [sub-workflows as tools](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/break-workflows-into-smaller-parts). You then set the agent up on the Microsoft side, which gives it an Entra ID identity with an email address. Microsoft handles identity, lifecycle, security, and compliance (via Entra ID, Purview, and Defender); n8n handles workflow-level governance like RBAC, credential management, and execution logs.
 
 If you already use n8n with Microsoft services through individual nodes (Outlook, Teams, SharePoint, and so on), those workflows continue to work as before. Agent 365 is a new path for teams that want their agents to show up _inside_ Microsoft apps and interact like a member of the team. The node requires a Microsoft 365 tenant.
 
@@ -551,7 +551,7 @@ For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8
 
 **Released:** 2026-05-05 in [n8n 2.20](release-notes.md#n8n220)
 
-Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights).
+Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/track-usage-with-insights).
 
 ## IdP role mapping inside n8n
 
@@ -581,13 +581,13 @@ This makes deployment configuration the single source of truth, so you can stand
 
 **Released:** 2026-04-21 in [n8n 2.18](release-notes.md#n8n218)
 
-You can now mark projects, folders, workflows, and data tables as [favorites](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/favorite-items), so the resources you work with every day are one click away instead of a search away.
+You can now mark projects, folders, workflows, and data tables as [favorites](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/favorite-items), so the resources you work with every day are one click away instead of a search away.
 
 ## New model providers: Moonshot Kimi and Alibaba Cloud Model Studio
 
 **Released:** 2026-04-13 in [n8n 2.17](release-notes.md#n8n217)
 
-Two model providers join n8n's AI lineup natively. Moonshot Kimi arrives as both a [chat-model sub-node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot) for AI Agents (with a dynamic model list, defaulting to kimi-k2.5) and a [standalone node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.moonshot) with multi-turn chat, tool calling, built-in web search, thinking mode, JSON responses, and image analysis. [Alibaba Cloud Model Studio](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.alibabacloud) brings the Qwen family: chat with web search and agent-tool support, vision-language image analysis, text-to-image, and text- and image-to-video generation with automatic download of results.
+Two model providers join n8n's AI lineup natively. Moonshot Kimi arrives as both a [chat-model sub-node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot) for AI Agents (with a dynamic model list, defaulting to kimi-k2.5) and a [standalone node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.moonshot) with multi-turn chat, tool calling, built-in web search, thinking mode, JSON responses, and image analysis. [Alibaba Cloud Model Studio](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.alibabacloud) brings the Qwen family: chat with web search and agent-tool support, vision-language image analysis, text-to-image, and text- and image-to-video generation with automatic download of results.
 
 More providers followed in later releases:
 
@@ -595,7 +595,7 @@ More providers followed in later releases:
 
 _Released in n8n 2.18 (2026-04-21)._
 
-A [MiniMax chat-model sub-node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax) (OpenAI-compatible API, default MiniMax-M2.7, with a Hide Thinking option that strips reasoning traces for clean responses) plus a [standalone MiniMax node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.minimax) covering chat, image generation, asynchronous video generation, and text-to-speech with voice, emotion, speed, and pitch controls.
+A [MiniMax chat-model sub-node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax) (OpenAI-compatible API, default MiniMax-M2.7, with a Hide Thinking option that strips reasoning traces for clean responses) plus a [standalone MiniMax node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.minimax) covering chat, image generation, asynchronous video generation, and text-to-speech with voice, emotion, speed, and pitch controls.
 
 ### NVIDIA Nemotron embeddings
 
@@ -621,7 +621,7 @@ The embedding system holds an asymmetric private key and signs short-lived JWTs 
 
 Instance and project admins can now redact execution data. When enabled, sensitive data from production runs is never displayed in the UI, and isn't fetched from the database until a user with the reveal permission explicitly requests it. Manual executions can be left fully visible so developers can keep building and debugging without interruption. Every reveal is logged as an audit event.
 
-Redaction is configured per workflow under Workflow settings, and reveal access is granted via project or instance settings to specific users only. See the [execution data redaction docs](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data).
+Redaction is configured per workflow under Workflow settings, and reveal access is granted via project or instance settings to specific users only. See the [execution data redaction docs](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/redact-execution-data).
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -654,13 +654,13 @@ This is the foundational T1 feature. It was extended across later releases: node
 
 **Released:** 2026-03-24 in [n8n 2.14](release-notes.md#n8n214)
 
-n8n now connects natively to Databricks. The new node runs SQL with asynchronous polling and chunked results (each row arrives as its own item), manages Unity Catalog objects (catalogs, schemas, tables, volumes, and functions), calls Model Serving endpoints with automatic input detection and validation, interacts with Genie AI, handles file operations up to 5 GiB, and manages Vector Search indexes. Lakehouse data can flow through the same workflows as the rest of your stack, without custom HTTP wiring. Learn more in the [Databricks node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.databricks).
+n8n now connects natively to Databricks. The new node runs SQL with asynchronous polling and chunked results (each row arrives as its own item), manages Unity Catalog objects (catalogs, schemas, tables, volumes, and functions), calls Model Serving endpoints with automatic input detection and validation, interacts with Genie AI, handles file operations up to 5 GiB, and manages Vector Search indexes. Lakehouse data can flow through the same workflows as the rest of your stack, without custom HTTP wiring. Learn more in the [Databricks node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.databricks).
 
 ## Perplexity node v2
 
 **Released:** 2026-03-24 in [n8n 2.14](release-notes.md#n8n214)
 
-The [Perplexity node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.perplexity) moves to v2 with full API coverage, and existing v1 workflows keep working. Agent responses now handle third-party models, tool calls, and JSON-schema structured output, so results come back in a shape the next node can parse. Raw search gains advanced filters, and the node adds embeddings, including contextualized embeddings.
+The [Perplexity node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.perplexity) moves to v2 with full API coverage, and existing v1 workflows keep working. Agent responses now handle third-party models, tool calls, and JSON-schema structured output, so results come back in a shape the next node can parse. Raw search gains advanced filters, and the node adds embeddings, including contextualized embeddings.
 
 ## See what depends on what
 
@@ -686,9 +686,9 @@ Vault connections can now be scoped to a single project. Secrets from that conne
 
 _Instance admin setup released in n8n 2.11 (2026-03-03)._ Instance admins create a project-scoped connection from **Settings > External Secrets**.
 
-_Full team access released in n8n 2.13 (2026-03-16)._ Project admins now manage their own vault connections from **Project Settings > External Secrets**. Instance-level connections shared with them appear as read-only. Project editors can use project-scoped secrets in credentials once an instance admin enables access with the **System Roles** toggle under **Settings > External Secrets**, or through custom roles for finer control. [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) gained five secrets scopes: list, read, create, update, and delete. Instance admins and owners no longer need to be project members for secrets to resolve.
+_Full team access released in n8n 2.13 (2026-03-16)._ Project admins now manage their own vault connections from **Project Settings > External Secrets**. Instance-level connections shared with them appear as read-only. Project editors can use project-scoped secrets in credentials once an instance admin enables access with the **System Roles** toggle under **Settings > External Secrets**, or through custom roles for finer control. [Custom roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) gained five secrets scopes: list, read, create, update, and delete. Instance admins and owners no longer need to be project members for secrets to resolve.
 
-Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information.
+Refer to [External secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) for more information.
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -698,7 +698,7 @@ Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manag
 
 **Released:** 2026-03-09 in [n8n 2.12](release-notes.md#n8n212)
 
-n8n now supports 1Password Connect Server as an [external secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) provider, alongside HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager.
+n8n now supports 1Password Connect Server as an [external secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) provider, alongside HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager.
 
 Secrets are fetched at runtime and never stored in n8n: 1Password stays the single source of truth. Multi-field items are available as structured sub-paths: `$secrets.<vault>.<item>.<field>`.
 
@@ -741,7 +741,7 @@ Available policies include:
 * **Sharing**: control whether users can share workflows and credentials from their personal space.
 * **Workflow publishing**: control whether users can publish workflows from their personal space.
 
-This release builds on recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), to better support policy-driven governance.
+This release builds on recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), to better support policy-driven governance.
 
 <figure><img src=".gitbook/assets/personal_space_policies.png" alt="The new Security &#x26; policies settings section"><figcaption><p>The new Security &#x26; policies settings section</p></figcaption></figure>
 
@@ -753,7 +753,7 @@ This release builds on recent updates to the permissions model, including [custo
 
 **Released:** 2026-02-13 in [n8n 2.8.3](release-notes.md#n8n28)
 
-The project role selector now splits built-in system roles and [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) into separate sections, so a long list of custom roles no longer buries the defaults. Hovering over any role shows a summary of its configured permissions, with an option to open the full permission details. Previously you had to leave the assignment flow and open the role itself to check what you were about to grant.
+The project role selector now splits built-in system roles and [custom roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) into separate sections, so a long list of custom roles no longer buries the defaults. Hovering over any role shows a summary of its configured permissions, with an option to open the full permission details. Previously you had to leave the assignment flow and open the role itself to check what you were about to grant.
 
 <figure><img src=".gitbook/assets/custom_roles_selector.png" alt="System roles and custom roles are now displayed in separate sections"><figcaption><p>System roles and custom roles are now displayed in separate sections</p></figcaption></figure>
 
@@ -780,7 +780,7 @@ What you can do:
 
 To gate a tool, click the **+** icon on its connection from the AI Agent and choose **Add human review step**. The Tools panel opens with nodes you can use to handle the review; select one and configure the approver, the message, and the available actions.
 
-Get precise control over where human judgment is required, without limiting what your agent can do. Learn more in the [human-in-the-loop tools docs](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/human-in-the-loop-for-tools).
+Get precise control over where human judgment is required, without limiting what your agent can do. Learn more in the [human-in-the-loop tools docs](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/human-in-the-loop-for-tools).
 
 {% embed url="https://youtu.be/B-_nIFI27VY" %}
 Human in the loop for AI tool calls
@@ -806,7 +806,7 @@ To set this up:
 
 Keep in mind: if you want an AI Agent to choose between sending a message or waiting for input, add two Chat tool nodes, one for each action. For AI Agents triggered by the Chat Trigger node, adding Send a message and wait for response is recommended so the agent can request clarification when needed.
 
-Learn more in the [Chat node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chat#operation).
+Learn more in the [Chat node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chat#operation).
 
 {% embed url="https://youtu.be/CpFqawY0RCc" %}
 Human in the loop for the Chat node
@@ -816,7 +816,7 @@ Human in the loop for the Chat node
 
 **Released:** 2026-01-12 in [n8n 2.4](release-notes.md#n8n24)
 
-The Syslog [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) destination now supports TLS over TCP. Previously it sent log events over plain UDP or TCP, which ruled it out for SIEM and observability platforms that require encrypted transport. Set the destination's transport protocol to TLS instead of the default UDP, and supply the PEM-formatted CA certificate for the connection.
+The Syslog [log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems) destination now supports TLS over TCP. Previously it sent log events over plain UDP or TCP, which ruled it out for SIEM and observability platforms that require encrypted transport. Set the destination's transport protocol to TLS instead of the default UDP, and supply the PEM-formatted CA certificate for the connection.
 
 {% hint style="info" %}
 **Availability:** Enterprise.

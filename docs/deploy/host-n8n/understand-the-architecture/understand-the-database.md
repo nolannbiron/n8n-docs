@@ -29,7 +29,7 @@ These are the tables n8n creates during setup.
 
 ### auth_identity <a href="#authidentity" id="authidentity"></a>
 
-Stores details of external authentication providers when using [SAML](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-saml).
+Stores details of external authentication providers when using [SAML](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/use-saml).
 
 ### auth_provider_sync_history <a href="#authprovidersynchistory" id="authprovidersynchistory"></a>
 
@@ -41,7 +41,7 @@ Stores the credentials[^1] used to authenticate with integrations.
 
 ### event_destinations <a href="#eventdestinations" id="eventdestinations"></a>
 
-Contains the destination configurations for [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems).
+Contains the destination configurations for [Log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems).
 
 ### execution_data <a href="#executiondata" id="executiondata"></a>
 
@@ -53,11 +53,11 @@ Stores all saved workflow executions. Workflow settings can affect which executi
 
 ### execution_metadata <a href="#executionmetadata" id="executionmetadata"></a>
 
-Stores [Custom executions data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/customize-executions-data).
+Stores [Custom executions data](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/understand-executions/customize-executions-data).
 
 ### installed_nodes <a href="#installednodes" id="installednodes"></a>
 
-Lists the [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) installed in your n8n instance.
+Lists the [community nodes](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/community-nodes/installation-and-management) installed in your n8n instance.
 
 ### installed_packages <a href="#installedpackages" id="installedpackages"></a>
 
@@ -69,11 +69,11 @@ A log of all database migrations. Read more about [Migrations](https://typeorm.i
 
 ### project <a href="#project" id="project"></a>
 
-Lists the [projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects) in your instance.
+Lists the [projects](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects) in your instance.
 
 ### project_relation <a href="#projectrelation" id="projectrelation"></a>
 
-Describes the relationship between a user and a [project](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects), including the user's [role type](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles).
+Describes the relationship between a user and a [project](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects), including the user's [role type](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles).
 
 ### role <a href="#role" id="role"></a>
 
@@ -106,7 +106,7 @@ Contains user data.
 
 ### variables <a href="#variables" id="variables"></a>
 
-Store [variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables).
+Store [variables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/define-custom-variables).
 
 ### webhook_entity <a href="#webhookentity" id="webhookentity"></a>
 

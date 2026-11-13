@@ -43,9 +43,9 @@ You can query these vectors using similarity searches, which construct results b
 Before your agent can access custom knowledge, you need to upload that data to a vector store:
 
 1. Add the nodes needed to fetch your source data.
-2. Insert a **Vector Store** node (e.g. the [Simple Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory)) and choose the **Insert Documents** operation.
+2. Insert a **Vector Store** node (e.g. the [Simple Vector Store](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory)) and choose the **Insert Documents** operation.
 3. Select an **embedding model**, which converts your text into vector embeddings. Consult the FAQ for more information on [choosing the right embedding model](#how-do-i-choose-the-right-embedding-model).
-4. Add a [Default Data Loader](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader) node, which splits your content into chunks. You can use the default settings or define your own chunking strategy:
+4. Add a [Default Data Loader](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader) node, which splits your content into chunks. You can use the default settings or define your own chunking strategy:
 	* **Character Text Splitter:** splits by character length.
 	* **Recursive Character Text Splitter:** recursively splits by Markdown, HTML, code blocks or simple characters (recommended for most use cases).
 	* **Token Text Splitter:** splits by token count.
@@ -57,7 +57,7 @@ You can query the data in two main ways: using an agent or directly through a no
 
 ### Using agents <a href="#using-agents" id="using-agents"></a>
 
-1. Add an [agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) to your workflow.
+1. Add an [agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) to your workflow.
 2. Add the vector store as a **tool** and give it a **description** to help the agent understand when to use it:
 	* Set the **limit** to define how many chunks to return.
 	* Enable **Include Metadata** to provide extra context for each chunk.
@@ -66,7 +66,7 @@ You can query the data in two main ways: using an agent or directly through a no
 {% hint style="info" %}
 **Pro tip**
 
-To save tokens on an expensive model, you can first use the [Vector Store Question Answer tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore) to retrieve relevant data, and only then pass the result to the Agent. To see this in action, check out [this template](https://n8n.io/workflows/5011-save-costs-in-rag-workflows-using-the-qanda-tool-with-multiple-models).
+To save tokens on an expensive model, you can first use the [Vector Store Question Answer tool](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore) to retrieve relevant data, and only then pass the result to the Agent. To see this in action, check out [this template](https://n8n.io/workflows/5011-save-costs-in-rag-workflows-using-the-qanda-tool-with-multiple-models).
 {% endhint %}
 
 ### Using the node directly <a href="#using-the-node-directly" id="using-the-node-directly"></a>

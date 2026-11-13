@@ -21,5 +21,5 @@ There are four ways to install community nodes:
 {% hint style="info" %}
 **Installing from npm only available on self-hosted instances**
 
-Unverified community nodes aren't available on n8n cloud and require [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n.
+Unverified community nodes aren't available on n8n cloud and require [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n.
 {% endhint %}

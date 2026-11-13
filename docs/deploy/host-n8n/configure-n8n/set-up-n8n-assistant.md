@@ -380,9 +380,9 @@ The shared instance context flag and activity log retention settings documented 
 Instance context is in Preview and may change in future releases. n8n hasn't enabled instance context for all instances. Avoid relying on instance context for production work.
 {% endhint %}
 
-Instance context gives n8n Assistant a short summary of the project you open a conversation in. It includes workflows, recent changes, and execution results. It's optional, and the rest of n8n Assistant works without it. See [What n8n Assistant knows about your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant#what-n8n-assistant-knows-about-your-instance).
+Instance context gives n8n Assistant a short summary of the project you open a conversation in. It includes workflows, recent changes, and execution results. It's optional, and the rest of n8n Assistant works without it. See [What n8n Assistant knows about your instance](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/ways-of-building-workflows/n8n-assistant#what-n8n-assistant-knows-about-your-instance).
 
-The `114_instance_activity_context` PostHog flag controls it. n8n evaluates the flag for each instance, not for each user. The same flag controls activity recording, instance context in n8n Assistant, and the instance context tools on the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#instance-context).
+The `114_instance_activity_context` PostHog flag controls it. n8n evaluates the flag for each instance, not for each user. The same flag controls activity recording, instance context in n8n Assistant, and the instance context tools on the [n8n MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server/mcp-server-tools-reference#instance-context).
 
 On a self-hosted instance, set `N8N_FEATURE_FLAG_OVERRIDES` to override the PostHog value. For example, add this value to your `.env` file. Preserve any other entries in the JSON object.
 
@@ -442,7 +442,7 @@ Node type counting reports counts of node types, never parameter values.
 
 ## Enable agents
 
-You can [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) with or without n8n Assistant. Agents are in Preview and available from n8n 2.32.3.
+You can [build and run agents on your instance](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents) with or without n8n Assistant. Agents are in Preview and available from n8n 2.32.3.
 
 {% hint style="info" %}
 **Feature availability**
@@ -458,13 +458,13 @@ To change the instance setting:
 2. Open **Settings > Agents**.
 3. Turn **Enable Agents** on or off.
 
-n8n saves this choice across restarts and license changes. The setting is separate from **Settings > Assistant**. Turning agents off blocks new runs and cancels queued messages for future runs. Active runs can finish. See [Enable or disable agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#enable-or-disable-agents) for details.
+n8n saves this choice across restarts and license changes. The setting is separate from **Settings > Assistant**. Turning agents off blocks new runs and cancels queued messages for future runs. Active runs can finish. See [Enable or disable agents](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents#enable-or-disable-agents) for details.
 
 The `agents` module loads by default. If you disabled it with `N8N_DISABLED_MODULES`, remove `agents` from that list and restart n8n to restore the settings page. Module environment variables don't override the saved agents setting.
 
 ### Shared sandbox and optional features
 
-Use **Settings > Agents > Shared sandbox** to [configure the sandbox connection](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#configure-the-shared-sandbox). Agents and n8n Assistant use the same connection. Changes affect both features. You can configure it while either feature is off.
+Use **Settings > Agents > Shared sandbox** to [configure the sandbox connection](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents#configure-the-shared-sandbox). Agents and n8n Assistant use the same connection. Changes affect both features. You can configure it while either feature is off.
 
 The shared sandbox editor requires the `instance-ai` module, which also loads by default. If you excluded it with `N8N_DISABLED_MODULES`, remove it from that list and restart n8n. You can keep n8n Assistant off in **Settings > Assistant**. You can also configure the sandbox with environment variables.
 
@@ -497,7 +497,7 @@ The knowledge base needs a configured sandbox on self-hosted n8n. Without it, th
 On self-hosted, the knowledge base is in Preview.
 {% endhint %}
 
-For a full deployment example, see [Installation options](../install-options/README.md). To create your first agent, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
+For a full deployment example, see [Installation options](../install-options/README.md). To create your first agent, see [Build and manage agents](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents).
 
 ## Disable n8n Assistant
 

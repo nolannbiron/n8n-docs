@@ -50,7 +50,7 @@ You can include:
 * JavaScript in `<script>` tags. n8n doesn't execute the JavaScript.
 * Expressions, wrapped in `{{}}`.
 
-You can use [Expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes) in the template, including n8n's [Built-in methods and variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/use-built-in-shortcuts). 
+You can use [Expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes) in the template, including n8n's [Built-in methods and variables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/use-built-in-shortcuts). 
 
 ## Extract HTML Content <a href="#extract-html-content" id="extract-html-content"></a>
 

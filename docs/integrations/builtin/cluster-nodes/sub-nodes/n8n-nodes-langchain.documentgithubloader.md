@@ -71,6 +71,6 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 Refer to [LangChain's documentation on document loaders](https://docs.langchain.com/oss/javascript/integrations/document_loaders/file_loaders) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 [^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

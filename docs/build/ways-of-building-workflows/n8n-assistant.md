@@ -52,7 +52,7 @@ n8n Assistant has Limited enterprise readiness. It partially supports the follow
 - **Queue mode and multi-main**
 - **Environments and source control**
 
-Other Enterprise capabilities either don't apply to n8n Assistant or it doesn't support them yet. Refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
+Other Enterprise capabilities either don't apply to n8n Assistant or it doesn't support them yet. Refer to [Understand feature availability](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
 {% endhint %}
 
 n8n Assistant can make mistakes. Always review generated workflows before using them in production.
@@ -64,7 +64,7 @@ You interact with n8n Assistant in a chat. It can use tools inside n8n to help y
 You can ask n8n Assistant to:
 
 * **Create workflows:** describe the automation you want, and n8n Assistant can generate a workflow.
-* **Build agents:** describe the agent you want, and n8n Assistant can suggest instructions, tools, and skills to add. Agents also run on self-hosted with the `agents` module. See [Build and manage agents](../build-and-manage-agents/) and [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
+* **Build agents:** describe the agent you want, and n8n Assistant can suggest instructions, tools, and skills to add. Agents also run on self-hosted with the `agents` module. See [Build and manage agents](../build-and-manage-agents/) and [Enable agents](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
 * **Connect MCP servers:** connect a server from the [MCP servers](../integrate-ai/mcp-servers.md) registry directly to the assistant, both to perform tasks and to gather context while it builds workflows for you.
 * **Work in your browser:** connect [Browser Use](n8n-assistant/browser-use.md) so n8n Assistant can browse sites, fill in forms, and set up credentials for you.
 * **Edit workflows:** ask it to change a workflow, add nodes, update logic, or adjust configuration.
@@ -94,7 +94,7 @@ Instance context draws on three sources:
 
 n8n Assistant gets an initial summary with your first message in a conversation. The summary limits the number of workflows, activity entries, and execution records it includes. n8n Assistant can retrieve more details when needed. After that, each message carries only what changed since then. Start a new conversation for unrelated work, and n8n Assistant reads the project again from the start.
 
-On n8n Cloud, n8n controls access to instance context. On self-hosted instances, an instance admin can override the feature flag to enable instance context. See [Enable instance context](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context).
+On n8n Cloud, n8n controls access to instance context. On self-hosted instances, an instance admin can override the feature flag to enable instance context. See [Enable instance context](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context).
 
 ### What n8n Assistant can look up from instance context
 
@@ -103,11 +103,11 @@ Instance context holds pointers, not contents. From it, n8n Assistant can:
 * **Read further back through recent changes.** Instance context covers a recent window. n8n Assistant can list older entries, filter to workflow or credential changes, or open one entry to see a single workflow's recent change history.
 * **Open the live record.** Every line carries an ID, so n8n Assistant can fetch the workflow, execution, or credential it points to.
 
-Activity entries follow your [activity log retention settings](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context). Executions follow your [execution data retention settings](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/manage-execution-data). If n8n has pruned an activity entry, n8n Assistant continues without it.
+Activity entries follow your [activity log retention settings](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context). Executions follow your [execution data retention settings](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/manage-execution-data). If n8n has pruned an activity entry, n8n Assistant continues without it.
 
 ### How n8n Assistant learns which nodes you use
 
-Node type counting is a separate setting from instance context. An instance admin must enable it. See [Enable node type counting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-node-type-counting).
+Node type counting is a separate setting from instance context. An instance admin must enable it. See [Enable node type counting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-n8n-assistant#enable-node-type-counting).
 
 With it on, n8n Assistant can ask how many workflows in a project use each node type, instead of reading every workflow to work out your conventions. It reports counts of node types, never parameter values, so it can tell that 10 of your 10 workflows use the **Slack** node, never how you configured any of them. To follow a convention rather than just name it, n8n Assistant reads one workflow in full.
 
@@ -277,7 +277,7 @@ Looking up an activity-entry ID outside the conversation's project gives the sam
 
 ## Credit usage
 
-On n8n Cloud, n8n Assistant uses [Assistant credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/assistant-credits), based on the tokens processed by the underlying AI model. Your plan includes a monthly allowance of Assistant credits that resets on the first day of every month. If you use it up, the instance owner can buy extra credits to keep using n8n Assistant until the next reset. Everyone on the instance shares one balance.
+On n8n Cloud, n8n Assistant uses [Assistant credits](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/assistant-credits), based on the tokens processed by the underlying AI model. Your plan includes a monthly allowance of Assistant credits that resets on the first day of every month. If you use it up, the instance owner can buy extra credits to keep using n8n Assistant until the next reset. Everyone on the instance shares one balance.
 
 Assistant credits and [Gateway credits](../understand-workflows/use-gateway-credits.md) are separate. Assistant credits pay for your conversations with n8n Assistant, not for the AI models your workflows or agents call when they run. Gateway credits pay for those model calls, not for n8n Assistant. Topping up one doesn't add to the other.
 
@@ -292,7 +292,7 @@ To reduce unnecessary usage:
 
 To check your balance, open the credits menu in the n8n Assistant panel. For your plan's monthly allowance, see [n8n plans and pricing](https://n8n.io/pricing/).
 
-Self-hosted n8n doesn't use Assistant credits. On a self-hosted instance, n8n Assistant runs on your own AI provider account. Refer to [Set up n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant).
+Self-hosted n8n doesn't use Assistant credits. On a self-hosted instance, n8n Assistant runs on your own AI provider account. Refer to [Set up n8n Assistant](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-n8n-assistant).
 
 ## Related resources
 

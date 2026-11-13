@@ -65,7 +65,7 @@ Unlike the [Code node](../../core-nodes/n8n-nodes-base.code/README.md), the Lang
 * **Execute**: use the LangChain Code node like n8n's own Code node. This takes input data from the workflow, processes it, and returns it as the node output. This mode requires a main input and output. You must create these connections in **Inputs** and **Outputs**.
 * **Supply Data**: use the LangChain Code node as a sub-node, sending data to a root node. This uses an output other than main.
 
-By default, you can't load built-in or external modules in this node. Self-hosted users can [enable built-in and external modules](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration).
+By default, you can't load built-in or external modules in this node. Self-hosted users can [enable built-in and external modules](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration).
 
 ### Inputs <a href="#inputs" id="inputs"></a>
 
@@ -98,8 +98,8 @@ n8n provides these methods to make it easier to perform common tasks in the Lang
 
 | Method | Description |
 | ------ | ----------- |
-| `this.addInputData(inputName, data)` | Populate the data of a specified non-main input. Useful for mocking data.<ul><li>`inputName` is the input connection type, and must be one of: `ai_agent`, `ai_chain`, `ai_document`, `ai_embedding`, `ai_languageModel`, `ai_memory`, `ai_outputParser`, `ai_retriever`, `ai_textSplitter`, `ai_tool`, `ai_vectorRetriever`, `ai_vectorStore`</li><li>`data` contains the data you want to add. Refer to [Data structure](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure) for information on the data structure expected by n8n.</li></ul> |
-| `this.addOutputData(outputName, data)` | Populate the data of a specified non-main output. Useful for mocking data.<ul><li>`outputName` is the input connection type, and must be one of: `ai_agent`, `ai_chain`, `ai_document`, `ai_embedding`, `ai_languageModel`, `ai_memory`, `ai_outputParser`, `ai_retriever`, `ai_textSplitter`, `ai_tool`, `ai_vectorRetriever`, `ai_vectorStore`</li><li>`data` contains the data you want to add. Refer to [Data structure](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure) for information on the data structure expected by n8n.</li></ul> |
+| `this.addInputData(inputName, data)` | Populate the data of a specified non-main input. Useful for mocking data.<ul><li>`inputName` is the input connection type, and must be one of: `ai_agent`, `ai_chain`, `ai_document`, `ai_embedding`, `ai_languageModel`, `ai_memory`, `ai_outputParser`, `ai_retriever`, `ai_textSplitter`, `ai_tool`, `ai_vectorRetriever`, `ai_vectorStore`</li><li>`data` contains the data you want to add. Refer to [Data structure](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure) for information on the data structure expected by n8n.</li></ul> |
+| `this.addOutputData(outputName, data)` | Populate the data of a specified non-main output. Useful for mocking data.<ul><li>`outputName` is the input connection type, and must be one of: `ai_agent`, `ai_chain`, `ai_document`, `ai_embedding`, `ai_languageModel`, `ai_memory`, `ai_outputParser`, `ai_retriever`, `ai_textSplitter`, `ai_tool`, `ai_vectorRetriever`, `ai_vectorStore`</li><li>`data` contains the data you want to add. Refer to [Data structure](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure) for information on the data structure expected by n8n.</li></ul> |
 | `this.getInputConnectionData(inputName, itemIndex, inputIndex?)` | Get data from a specified non-main input.<ul><li>`inputName` is the input connection type, and must be one of: `ai_agent`, `ai_chain`, `ai_document`, `ai_embedding`, `ai_languageModel`, `ai_memory`, `ai_outputParser`, `ai_retriever`, `ai_textSplitter`, `ai_tool`, `ai_vectorRetriever`, `ai_vectorStore`</li><li>`itemIndex` should always be `0` (this parameter will be used in upcoming functionality)</li><li>Use `inputIndex` if there is more than one node connected to the specified input.</li></ul> |
 | `this.getInputData(inputIndex?, inputName?)` | Get data from the main input. |
 | `this.getNode()` | Get the current node. |
@@ -112,4 +112,4 @@ n8n provides these methods to make it easier to perform common tasks in the Lang
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.

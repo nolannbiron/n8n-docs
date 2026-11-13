@@ -123,7 +123,7 @@ This Vector Store node has four modes: **Get Many**, **Insert Documents**, **Ret
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
@@ -171,8 +171,8 @@ Refer to:
 * [LangChain's MongoDB Atlas Vector Search documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/mongodb_atlas) for more information about the service.
 * [MongoDB Atlas Vector Search documentation](https://www.mongodb.com/docs/atlas/atlas-vector-search/) for more information about MongoDB Atlas Vector Search.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Self-hosted AI Starter Kit <a href="#self-hosted-ai-starter-kit" id="self-hosted-ai-starter-kit"></a>
 
-New to working with AI and using self-hosted n8n? Try n8n's [self-hosted AI Starter Kit](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/deploy-with-the-ai-starter-kit) to get started with a proof-of-concept or demo playground using Ollama, Qdrant, and PostgreSQL.
+New to working with AI and using self-hosted n8n? Try n8n's [self-hosted AI Starter Kit](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/deploy-with-the-ai-starter-kit) to get started with a proof-of-concept or demo playground using Ollama, Qdrant, and PostgreSQL.

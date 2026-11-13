@@ -27,7 +27,7 @@ n8n offers two primary deployment options:
 - **n8n Cloud**: a managed setup on an instance run by n8n.
 - **Self-hosted**: run n8n on your own machine or infrastructure, or on your cloud platform of choice.
 
-Most features are available on both platforms. Only a few exist on one platform or the other. For example, the [AI Transform](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aitransform) node is only available on n8n Cloud, while [LangSmith tracing](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance) is only available on self-hosted.
+Most features are available on both platforms. Only a few exist on one platform or the other. For example, the [AI Transform](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.aitransform) node is only available on n8n Cloud, while [LangSmith tracing](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance) is only available on self-hosted.
 
 ### Platform limits in the docs
 
@@ -69,7 +69,7 @@ Credential sharing is available on:
 - **Self-hosted:** Business, Enterprise
 {% endhint %}
 
-For the full breakdown of what each self-hosted edition includes, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For the current feature list per plan, the [pricing page](https://n8n.io/pricing/) is the source of truth, since plan contents can change.
+For the full breakdown of what each self-hosted edition includes, see [Compare plans and editions](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/community-edition-features). For the current feature list per plan, the [pricing page](https://n8n.io/pricing/) is the source of truth, since plan contents can change.
 
 ### Plan limits in the product
 
@@ -86,7 +86,7 @@ Every n8n feature has a maturity status:
 * **Deprecated**: The feature still works, but n8n plans to remove it and recommends moving away from it.
 * **Removed**: The feature no longer exists in the current version. Removal always happens at a major version.
 
-For nodes specifically, check [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) for the current, automatically updated list.
+For nodes specifically, check [Deprecated and versioned nodes](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/deprecated-nodes) for the current, automatically updated list.
 
 ### Maturity status in the docs
 
@@ -102,7 +102,7 @@ Docs mark each status differently:
 
 * **GA**: no marker, since it's the default.
 * **Deprecated**: when a whole page covers a deprecated feature, a **Deprecated** tag appears in the page header and in the navigation menu. A note on the page, setting, or node names the version it was deprecated from and its replacement, where one exists.
-* **Removed**: the version's breaking changes page, for example [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes), records the removal and what to do instead. The feature's own page may no longer exist.
+* **Removed**: the version's breaking changes page, for example [n8n 3.0 breaking changes](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/v30-breaking-changes), records the removal and what to do instead. The feature's own page may no longer exist.
 
 ### Maturity status in the product
 
@@ -112,7 +112,7 @@ A removed feature doesn't appear in the interface. If a workflow relied on it, c
 
 ## Enterprise readiness
 
-Separately from maturity, a feature can have **Limited enterprise readiness**. This status concerns [Enterprise plan](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) admins. It tells them that some Enterprise capabilities don't cover the feature yet. See [Enterprise capabilities](#enterprise-capabilities) for the full list.
+Separately from maturity, a feature can have **Limited enterprise readiness**. This status concerns [Enterprise plan](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) admins. It tells them that some Enterprise capabilities don't cover the feature yet. See [Enterprise capabilities](#enterprise-capabilities) for the full list.
 
 There are two states:
 
@@ -190,7 +190,7 @@ n8n Cloud workspaces choose a release track and an update cadence, rather than a
 * **Release track**: **Beta** delivers new releases as soon as they're ready. **Stable** runs a later, more proven patch that's already spent time on Beta. n8n recommends Stable for mission-critical workloads.
 * **Update cadence**: **Security & stability** upgrades roughly every two weeks. **Every new release** upgrades on every release, on average about once a day. Security and stability fixes apply automatically either way.
 
-Switch tracks or cadence anytime from **Updates & maintenance** in your workspace settings, see [Update your version](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version). Self-hosted instances update on your own schedule instead, see [Update n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/update-n8n).
+Switch tracks or cadence anytime from **Updates & maintenance** in your workspace settings, see [Update your version](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version). Self-hosted instances update on your own schedule instead, see [Update n8n](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/keep-n8n-running/update-n8n).
 
 ### Version availability in the docs
 
@@ -206,8 +206,8 @@ Older features and smaller changes often have no such hint, so a missing hint do
 
 To find out what's available in a given version, use whichever of these matches how much detail you need:
 
-* [Changelog](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/): a curated, narrative summary of the most important features as n8n rolls them out.
-* [Release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes): every feature-level update, one line per feature, newest first, also available as an RSS feed.
+* [Changelog](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/): a curated, narrative summary of the most important features as n8n rolls them out.
+* [Release notes](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/release-notes): every feature-level update, one line per feature, newest first, also available as an RSS feed.
 * [GitHub releases](https://github.com/n8n-io/n8n/releases): full change detail linked to commits, including bug fixes and minor changes the other two skip.
 
 ### Version availability in the product

@@ -37,7 +37,7 @@ To encode messages with an authenticated Confluent Schema Registry (for example,
 {% hint style="info" %}
 **This node can be used as an AI tool**
 
-This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters).
+This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/use-ai-for-parameters).
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>
@@ -66,7 +66,7 @@ Nodes you add from the Nodes panel are already version 2. The editor has no vers
 3. Import the copy into a new, empty workflow (**Workflow menu** > **Import from File**). Importing adds nodes next to any already on the canvas, so don't import into the workflow that still holds the version 1 node.
 4. Re-select the Kafka credential on the node if the import cleared it. To move production to version 2, unpublish the version 1 workflow, then publish the version 2 workflow.
 
-Refer to [Export and import workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import) for details on the menu.
+Refer to [Export and import workflows](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/export-and-import) for details on the menu.
 
 n8n checks with every build that version 2's native component loads in the official n8n Docker images, on both amd64 and arm64. Other install methods, such as npm or custom images, aren't checked.
 
@@ -74,7 +74,7 @@ n8n checks with every build that version 2's native component loads in the offic
 
 The editor has no control to change an existing node's version. If the original version 1 workflow still exists, unpublish the version 2 workflow, then publish the original again. Otherwise, use one of these paths. Prefer the first if you still have the export from step 1 of the switch. Use the second for a workflow that started on version 2 and has no version 1 export.
 
-- **Restore the export:** unpublish the version 2 workflow. Then import the file from step 1 of the switch into a new, empty workflow (**Workflow menu** > **Import from File**), or restore the previous version from [workflow history](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/view-change-history), if your plan keeps it. Re-select the Kafka credential if the import cleared it, then publish the restored workflow.
+- **Restore the export:** unpublish the version 2 workflow. Then import the file from step 1 of the switch into a new, empty workflow (**Workflow menu** > **Import from File**), or restore the previous version from [workflow history](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/view-change-history), if your plan keeps it. Re-select the Kafka credential if the import cleared it, then publish the restored workflow.
 - **Edit the workflow JSON:** unpublish the version 2 workflow and download it (**Workflow menu** > **Download**). In a copy of the file, set `"typeVersion": 1` on the Kafka node, then import the copy into a new, empty workflow. Re-select the Kafka credential if the import cleared it, then publish the restored workflow. A node you add from the Nodes panel is version 2, so adding a new node doesn't roll you back.
 
 To consume messages with version 2, including how to choose the consumer group ID, refer to [Kafka Trigger version 2](../trigger-nodes/n8n-nodes-base.kafkatrigger.md#kafka-trigger-version-2).

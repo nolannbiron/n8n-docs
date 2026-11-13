@@ -21,7 +21,7 @@ The release of n8n 1.0 marks a milestone in n8n's journey to make n8n available 
 
 ### Python support in the Code node <a href="#python-support-in-the-code-node" id="python-support-in-the-code-node"></a>
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/using-the-code-node) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before n8n 1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/using-the-code-node) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before n8n 1.0.
 
 [PR #4295](https://github.com/n8n-io/n8n/pull/4295), [PR #6209](https://github.com/n8n-io/n8n/pull/6209)
 
@@ -33,7 +33,7 @@ In multi-branch workflows, n8n needs to determine the order in which to execute 
 
 n8n used to execute multi-input nodes as long as they received data on their first input. Nodes connected to the second input of multi-input nodes automatically executed regardless of whether they received data. The new execution order introduced in n8n 1.0 simplifies this behavior: Nodes are now executed only when they receive data, and multi-input nodes require data on at least one of their inputs to execute.
 
-Your existing workflows will use the legacy order, while new workflows will execute using the n8n 1.0 order. You can configure the execution order for each workflow in [workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings).
+Your existing workflows will use the legacy order, while new workflows will execute using the n8n 1.0 order. You can configure the execution order for each workflow in [workflow settings](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/configure-workflow-settings).
 
 [PR #4238](https://github.com/n8n-io/n8n/pull/4238), [PR #6246](https://github.com/n8n-io/n8n/pull/6246), [PR #6507](https://github.com/n8n-io/n8n/pull/6507)
 
@@ -49,7 +49,7 @@ n8n has deprecated support for MySQL and MariaDB as storage backends for n8n. Th
 
 Previously, you could use the `EXECUTIONS_PROCESS` environment variable to specify whether executions should run in the `main` process or in their `own` processes. This option and `own` mode are now deprecated and will be removed in a future version of n8n. This is because it led to increased code complexity while offering marginal benefits. Starting from n8n 1.0, `main` will be the new default.
 
-Note that executions start much faster in `main` mode than in `own` mode. However, if a workflow consumes more memory than is available, it might crash the entire n8n application instead of just the worker thread. To mitigate this, make sure to allocate enough system resources or configure [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode) to distribute executions among multiple workers.
+Note that executions start much faster in `main` mode than in `own` mode. However, if a workflow consumes more memory than is available, it might crash the entire n8n application instead of just the worker thread. To mitigate this, make sure to allocate enough system resources or configure [queue mode](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/enable-queue-mode) to distribute executions among multiple workers.
 
 [PR #6196](https://github.com/n8n-io/n8n/pull/6196)
 
@@ -85,7 +85,7 @@ Workflow executions may fail due to syntax or runtime errors in expressions, suc
 
 ### Mandatory owner account <a href="#mandatory-owner-account" id="mandatory-owner-account"></a>
 
-This change makes [User Management](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access) mandatory and removes support for other authentication methods, such as BasicAuth and External JWT. Note that the number of permitted users on [n8n.cloud](https://n8n.cloud/) or custom plans still varies depending on your subscription.
+This change makes [User Management](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access) mandatory and removes support for other authentication methods, such as BasicAuth and External JWT. Note that the number of permitted users on [n8n.cloud](https://n8n.cloud/) or custom plans still varies depending on your subscription.
 
 [PR #6362](https://github.com/n8n-io/n8n/pull/6362)
 
@@ -108,7 +108,7 @@ n8n provides various transformation functions that operate on dates. These funct
 
 To identify any workflows and nodes that might be impacted by this change, you can use this [utility workflow](https://n8n.io/workflows/1929-v1-helper-find-params-with-affected-expressions/).
 
-For more information about date transformation functions, please refer to the [official documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/transform-data/expression-reference).
+For more information about date transformation functions, please refer to the [official documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/transform-data/expression-reference).
 
 [PR #6435](https://github.com/n8n-io/n8n/pull/6435)
 
@@ -122,13 +122,13 @@ Starting from n8n 1.0, all successful, failed, and manual workflow executions wi
 
 The legacy `request` library has been deprecated for some time now. As of n8n 1.0, the ability to fall back to it in the HTTP Request node by setting the `N8N_USE_DEPRECATED_REQUEST_LIB` environment variable has been fully removed. The HTTP Request node will now always use the new `HttpRequest` interface.
 
-If you build custom nodes, refer to [HTTP request helpers](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/http-request-helpers) for more information on migrating to the new interface.
+If you build custom nodes, refer to [HTTP request helpers](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/http-request-helpers) for more information on migrating to the new interface.
 
 [PR #6413](https://github.com/n8n-io/n8n/pull/6413)
 
 ### Removed WEBHOOK_TUNNEL_URL <a href="#removed-webhooktunnelurl" id="removed-webhooktunnelurl"></a>
 
-As of n8n 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration option to `WEBHOOK_URL`. In n8n 1.0, `WEBHOOK_TUNNEL_URL` has been removed. Update your setup to reflect the new name. For more information about this configuration option, refer to [the docs](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy).
+As of n8n 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration option to `WEBHOOK_URL`. In n8n 1.0, `WEBHOOK_TUNNEL_URL` has been removed. Update your setup to reflect the new name. For more information about this configuration option, refer to [the docs](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy).
 
 [PR #1408](https://github.com/n8n-io/n8n/pull/1408)
 

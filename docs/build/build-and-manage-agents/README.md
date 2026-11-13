@@ -79,7 +79,7 @@ On self-hosted instances, an instance owner or admin can configure the connectio
 
 n8n Cloud manages the sandbox connection. If environment variables configure a self-hosted connection, the page shows **Found in server configuration** without edit controls. If that connection is configured but the sandbox is off, select **Enable sandbox**.
 
-For environment variables and module requirements, see [Enable agents on self-hosted n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
+For environment variables and module requirements, see [Enable agents on self-hosted n8n](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
 
 ### Video: how agents fit with workflows and AI
 
@@ -159,7 +159,7 @@ The agent decides which tool to use based on your instructions and the task, usi
 In the **Capabilities** section enable **Web search** to let the agent look up current information such as prices, docs, and news without adding a tool yourself.
 
 * If the model you chose offers its own native web search tool, the agent uses it directly.
-* If it doesn't, choose [Brave Search](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/bravesearch) or a self-hosted [SearXNG](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/searxng) instance as the fallback, and add credentials for whichever one you pick.
+* If it doesn't, choose [Brave Search](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/bravesearch) or a self-hosted [SearXNG](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/searxng) instance as the fallback, and add credentials for whichever one you pick.
 
 #### Bundle capabilities with skills
 
@@ -274,7 +274,7 @@ Open the **Channels** section on the agent and follow the setup for the channel 
 
 ### Manage agents through MCP
 
-You can also build and manage agents from an MCP client, such as Claude Desktop or Claude Code, using n8n's [instance-level MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server). This approach exposes tools to search, create, and configure agents alongside the workflow tools the MCP server already provides.
+You can also build and manage agents from an MCP client, such as Claude Desktop or Claude Code, using n8n's [instance-level MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server). This approach exposes tools to search, create, and configure agents alongside the workflow tools the MCP server already provides.
 
 {% hint style="info" %}
 **Reconnect existing MCP clients**
@@ -303,7 +303,7 @@ You can use agents within your workflows in two ways:
 
 #### Message an Agent node
 
-Both options use the [Message an Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.messageanagent) node. Choose the agent to message and write the message to send. The agent runs its own reasoning loop, calls its own tools and skills, and returns a reply that the nodes after it can use.
+Both options use the [Message an Agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.messageanagent) node. Choose the agent to message and write the message to send. The agent runs its own reasoning loop, calls its own tools and skills, and returns a reply that the nodes after it can use.
 
 The node can also:
 
@@ -320,7 +320,7 @@ To let an agent hand work to another agent, connect **Message an Agent Tool** to
 There are two ways to set up agents on self-hosted n8n:
 
 * **Build manually**: Agents are on by default. You pick the model, write the instructions, and attach tools and skills yourself. An instance owner or admin can turn agents on or off in **Settings > Agents**.
-* **Full experience**: also set up [n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a configured sandbox, and connecting channels needs a public `WEBHOOK_URL`.
+* **Full experience**: also set up [n8n Assistant](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-n8n-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a configured sandbox, and connecting channels needs a public `WEBHOOK_URL`.
 
 {% hint style="info" %}
 **Feature availability**
@@ -332,7 +332,7 @@ Agents are available on all self-hosted plans from n8n 2.32.3.
 Queue mode isn't supported for agents yet, and connecting channels (such as Telegram) can fail. Run agents in regular mode for now.
 {% endhint %}
 
-For the environment variables and setup steps, see [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
+For the environment variables and setup steps, see [Enable agents](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
 
 ### Agent executions and pricing
 

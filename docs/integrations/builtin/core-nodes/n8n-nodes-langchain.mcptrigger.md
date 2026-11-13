@@ -31,7 +31,7 @@ Refer to the [HTTP Request credentials documentation](../credentials/httprequest
 
 The MCP Server Trigger node acts as an entry point into n8n for MCP clients. It operates by exposing a URL that MCP clients can interact with to access n8n tools.
 
-Unlike conventional [trigger nodes](#user-content-fn-1)[^1], which respond to events and pass their output to the next [connected node](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/connect-nodes-together), the MCP Server Trigger node only connects to and executes [tool](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-tools-work) nodes. Clients can list the available tools and call individual tools to perform work.
+Unlike conventional [trigger nodes](#user-content-fn-1)[^1], which respond to events and pass their output to the next [connected node](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/workflow-components/connect-nodes-together), the MCP Server Trigger node only connects to and executes [tool](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/understand-ai-components/how-tools-work) nodes. Clients can list the available tools and call individual tools to perform work.
 
 You can expose n8n workflows to clients by attaching them with the [Custom n8n Workflow Tool](../cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) node.
 
@@ -117,7 +117,7 @@ Be sure to replace the `<MCP_URL>` and `<MCP_BEARER_TOKEN>` placeholders with th
 
 ### Configuring the MCP Server Trigger node with webhook replicas <a href="#configuring-the-mcp-server-trigger-node-with-webhook-replicas" id="configuring-the-mcp-server-trigger-node-with-webhook-replicas"></a>
 
-The MCP Server Trigger node relies on Server-Sent Events (SSE) or streamable HTTP, which require the same server instance to handle persistent connections. This can cause problems when running n8n in [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode) depending on your [webhook processor](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode#webhook-processors) configuration:
+The MCP Server Trigger node relies on Server-Sent Events (SSE) or streamable HTTP, which require the same server instance to handle persistent connections. This can cause problems when running n8n in [queue mode](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/enable-queue-mode) depending on your [webhook processor](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/enable-queue-mode#webhook-processors) configuration:
 
 * If you use queue mode with a **single webhook replica**, the MCP Server Trigger node works as expected.
 * If you run **multiple webhook replicas**, you need to route all `/mcp*` requests to a single, dedicated webhook replica. Create a separate replica set with one webhook container for MCP requests. Afterward, update your ingress or load balancer configuration to direct all `/mcp*` traffic to that instance.

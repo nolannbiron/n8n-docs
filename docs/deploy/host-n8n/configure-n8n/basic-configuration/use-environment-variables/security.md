@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **File-based configuration**
 
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
 {% endhint %}
 
 | Variable | Type  | Default  | Description |
@@ -39,8 +39,8 @@ You can add `_FILE` to individual variables to provide their configuration in a 
 | `N8N_SECURE_COOKIE` | Boolean | `true` | Ensures that cookies are only sent over HTTPS, enhancing security.|
 | `N8N_SAMESITE_COOKIE` | Enum string: `strict`, `lax`, `none` | `lax` | Controls cross-site cookie behavior ([learn more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)):<ul><li>`strict`: Sent only for first-party requests.</li><li>`lax` (default): Sent with top-level navigation requests.</li><li>`none`: Sent in all contexts (requires HTTPS).</li></ul> |
 | `N8N_INSECURE_DISABLE_FORM_HTML_SANDBOX` | Boolean | `false` | Whether to remove the `sandbox` directive from the Content Security Policy (CSP) on form pages. Only for forms on a separate hostname from the editor. Available from n8n 2.15.0. Refer to [Configure webhook URLs with reverse proxy](../configuration-examples/configure-webhook-urls-with-reverse-proxy.md#when-its-safe-to-disable-the-form-sandbox) for full details and safety conditions. |
-| `N8N_GIT_NODE_DISABLE_BARE_REPOS` | Boolean | `false` | Set to `true` to prevent the [Git node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.git) from working with bare repositories, enhancing security. |
-| `N8N_GIT_NODE_ENABLE_HOOKS` | Boolean | `false` | Set to `true` to allow the [Git node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.git) to execute Git hooks. |
+| `N8N_GIT_NODE_DISABLE_BARE_REPOS` | Boolean | `false` | Set to `true` to prevent the [Git node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.git) from working with bare repositories, enhancing security. |
+| `N8N_GIT_NODE_ENABLE_HOOKS` | Boolean | `false` | Set to `true` to allow the [Git node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.git) to execute Git hooks. |
 | `N8N_POSTMESSAGE_ALLOWED_ORIGINS` | String |  | Origins allowed to exchange `postMessage` commands with the editor when it's embedded in another page. Only relevant when embedding the editor is possible, for example when running with `N8N_PREVIEW_MODE=true`. Provide multiple origins as a comma-separated list, for example `https://n8n.io,https://app.example.com`. When empty (the default), the editor accepts messages from any origin. |
 
 ## Security policy using environment variables <a href="#security-policy-using-environment-variables" id="security-policy-using-environment-variables"></a>

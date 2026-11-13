@@ -61,7 +61,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 * **Team projects only:** You can only create end-user credentials in team projects, not in personal projects. This keeps them centrally managed, where an admin sets up the credential template, rather than individual users creating their own in personal projects.
 * **OAuth credentials only:** End-user credentials support OAuth-based credential types only.
 * **One connection per user:** Each user can connect a single account per end-user credential template.
-* **Supported triggers:** End-user credential resolution works with the manual trigger, [Chat Hub](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/chat-hub), the MCP Server Trigger, the [Webhook trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook), the [n8n Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger), and the [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger). The Chat Trigger supports **Hosted Chat** only, not Embedded Chat/webhook mode. The Webhook trigger, Form Trigger, and Chat Trigger resolve end-user credentials when they use **n8n User Auth** authentication, so each user runs the workflow with their own connected account. In the Webhook node, this option is called **n8n User Auth (OAuth2)**.
+* **Supported triggers:** End-user credential resolution works with the manual trigger, [Chat Hub](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/ways-of-building-workflows/chat-hub), the MCP Server Trigger, the [Webhook trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.webhook), the [n8n Form Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.formtrigger), and the [Chat Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chattrigger). The Chat Trigger supports **Hosted Chat** only, not Embedded Chat/webhook mode. The Webhook trigger, Form Trigger, and Chat Trigger resolve end-user credentials when they use **n8n User Auth** authentication, so each user runs the workflow with their own connected account. In the Webhook node, this option is called **n8n User Auth (OAuth2)**.
 
 ## Create an end-user credential
 
@@ -125,5 +125,5 @@ A good practice is to create your end-user credentials (for example Gmail, Linea
 * [Share credentials securely](share-credentials-securely.md)
 * [Credential overwrites](credential-overwrites.md)
 * [Use external secret stores](use-external-secret-stores.md)
-* [Create and edit credentials](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/create-and-edit-credentials)
+* [Create and edit credentials](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/create-and-edit-credentials)
 * [RBAC role types](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md)

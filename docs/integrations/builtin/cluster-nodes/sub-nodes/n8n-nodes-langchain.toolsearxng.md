@@ -74,5 +74,5 @@ The quality and availability of search results depend on the configuration and h
 
 Refer to [SearXNG's documentation](https://docs.searxng.org/) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 

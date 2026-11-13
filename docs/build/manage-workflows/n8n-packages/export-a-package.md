@@ -21,7 +21,7 @@ n8n packages are in Preview. The export options may change in future releases.
 
 Export writes an [n8n package](README.md), a [.n8np archive](package-format.md), containing what you asked for, plus references to everything those workflows need on the target instance. Export doesn't modify the source instance.
 
-Use the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli):
+Use the [n8n CLI](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-cli):
 
 ```bash
 n8n-cli package export --workflow-id=<workflow-id> --output=triage.n8np
@@ -37,7 +37,7 @@ curl -X POST 'https://n8n.example.com/api/v1/n8n-packages/export' \
 	-o triage.n8np
 ```
 
-For the full request and response schema, see the `N8nPackage` section of the [endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference).
+For the full request and response schema, see the `N8nPackage` section of the [endpoint reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/api-reference).
 
 ## Choose what to export
 

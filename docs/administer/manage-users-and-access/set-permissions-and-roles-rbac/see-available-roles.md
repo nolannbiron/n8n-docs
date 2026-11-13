@@ -74,7 +74,7 @@ n8n has two levels of roles. [Instance roles](../understand-instance-roles.md) c
 
 Project roles apply to the credentials the project holds. A project role doesn't let you use another member's personal credential in a project workflow. Only the credential's owner, or people they share it with, can run or publish with it. Refer to [Use personal credentials in projects](../../manage-credentials/use-personal-credentials-in-projects.md).
 
-[Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables) and [tags](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/tag-workflows) aren't affected by RBAC: they're global across the n8n instance.
+[Variables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/define-custom-variables) and [tags](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/tag-workflows) aren't affected by RBAC: they're global across the n8n instance.
 
 ## Related resources
 

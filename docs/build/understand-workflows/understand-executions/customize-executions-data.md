@@ -15,7 +15,7 @@ layout:
 
 # Custom executions data <a href="#custom-executions-data" id="custom-executions-data"></a>
 
-You can set custom data on your workflow using the Code node or the [Execution Data node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executiondata). n8n records this with each execution. You can then use this data when filtering the executions list, or fetch it in your workflows using the Code node.
+You can set custom data on your workflow using the Code node or the [Execution Data node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executiondata). n8n records this with each execution. You can then use this data when filtering the executions list, or fetch it in your workflows using the Code node.
 
 {% hint style="info" %}
 **Feature availability**
@@ -28,7 +28,7 @@ Custom executions data is available on:
 
 ## Set and access custom data using the Code node <a href="#set-and-access-custom-data-using-the-code-node" id="set-and-access-custom-data-using-the-code-node"></a>
 
-This section describes how to set and access data using the Code node. Refer to [Execution Data node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executiondata) for information on using the Execution Data node to set data. You can't retrieve custom data using the Execution Data node.
+This section describes how to set and access data using the Code node. Refer to [Execution Data node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executiondata) for information on using the Execution Data node to set data. You can't retrieve custom data using the Execution Data node.
 
 ### Set custom executions data <a href="#set-custom-executions-data" id="set-custom-executions-data"></a>
 

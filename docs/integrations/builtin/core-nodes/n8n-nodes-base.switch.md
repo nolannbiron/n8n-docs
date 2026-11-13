@@ -66,7 +66,7 @@ To configure the node with this operation, use these parameters:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Splitting with conditionals](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/split-with-conditionals) for more information on using conditionals to create complex logic in n8n.
+Refer to [Splitting with conditionals](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/split-with-conditionals) for more information on using conditionals to create complex logic in n8n.
 
 ## Available data type comparisons <a href="#available-data-type-comparisons" id="available-data-type-comparisons"></a>
 

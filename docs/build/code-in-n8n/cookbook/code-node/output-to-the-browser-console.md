@@ -50,7 +50,7 @@ print(_items)
 {% hint style="info" %}
 **`type()` isn't available**
 
-The Python Code node denies some built-in functions by default, including `type()`. Refer to [task runners environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/task-runners) for the full list and how to change it when self-hosting.
+The Python Code node denies some built-in functions by default, including `type()`. Refer to [task runners environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/task-runners) for the full list and how to change it when self-hosting.
 {% endhint %}
 
 ## Related resources

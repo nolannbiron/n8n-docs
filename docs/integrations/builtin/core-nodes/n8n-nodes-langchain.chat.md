@@ -43,13 +43,13 @@ In previous versions, this node was called "Respond to Chat" and used a single "
 {% hint style="info" %}
 **This node can be used as an AI tool**
 
-This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters).
+This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/use-ai-for-parameters).
 {% endhint %}
 
 {% hint style="info" %}
 **Human-in-the-loop for AI tool calls**
 
-This node can be used as a human review step for AI Agent tool calls. When configured this way, the AI Agent will pause and request human approval through this service before executing tools that require oversight. Learn more in [Human-in-the-loop for AI tool calls](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/human-in-the-loop-for-tools).
+This node can be used as a human review step for AI Agent tool calls. When configured this way, the AI Agent will pause and request human approval through this service before executing tools that require oversight. Learn more in [Human-in-the-loop for AI tool calls](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/human-in-the-loop-for-tools).
 {% endhint %}
 
 Configure this node using the following parameters.
@@ -129,7 +129,7 @@ The Approval response type also offers the following option:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 Refer to the [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) node documentation for information about setting up the chat interface.
 

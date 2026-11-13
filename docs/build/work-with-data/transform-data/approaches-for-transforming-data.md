@@ -26,12 +26,12 @@ n8n provides several approaches for data transformation:
    * **Chained functions**: Combine multiple transformation functions
    * **Complex expressions**: Use JavaScript methods and operators within expression syntax
 * Specialized transformation nodes for common structural transformations:
-   * [Aggregate](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aggregate): group separate items together
-   * [Limit](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.limit): restrict the number of items
-   * [Remove Duplicates](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates): eliminate identical items
-   * [Sort](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.sort): order items or randomize
-   * [Split Out](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitout): separate lists into individual items
-   * [Summarize](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.summarize): aggregate data like Excel pivot tables
+   * [Aggregate](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.aggregate): group separate items together
+   * [Limit](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.limit): restrict the number of items
+   * [Remove Duplicates](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.removeduplicates): eliminate identical items
+   * [Sort](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.sort): order items or randomize
+   * [Split Out](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.splitout): separate lists into individual items
+   * [Summarize](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.summarize): aggregate data like Excel pivot tables
 
 For a comparison of these approaches, see [Expressions versus data nodes](../expressions-versus-data-nodes.md).
 

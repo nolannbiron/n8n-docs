@@ -85,7 +85,7 @@ An instance apply overwrites every team project on the instance to match the env
 
 Workflows are the main unit of promotion. When you select workflows, n8n includes their dependencies: credentials, variables, data tables, and tags. n8n never writes credential secrets, data table rows, or executions to the repository. Variables travel with their values.
 
-Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) to export and import content. To learn what Apply changes on an instance, see [Apply changes](apply-changes.md#what-apply-changes-on-the-instance).
+Promote and apply use [n8n packages](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/n8n-packages) to export and import content. To learn what Apply changes on an instance, see [Apply changes](apply-changes.md#what-apply-changes-on-the-instance).
 
 ### Promotion model
 
@@ -115,4 +115,4 @@ Environments replace [Environments (Classic)](../use-source-control-and-environm
 
 - [Administer](../)
 - [Set permissions and roles](../manage-users-and-access/set-permissions-and-roles-rbac/README.md)
-- [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages)
+- [n8n packages](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/n8n-packages)

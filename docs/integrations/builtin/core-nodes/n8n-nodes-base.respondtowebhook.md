@@ -126,7 +126,7 @@ The node will now have two outputs:
 Returning more than one data item via the workarounds in this section is deprecated from n8n 1.22.0. In later versions, n8n added support for returning all data items using the **All Incoming Items** option.
 {% endhint %}
 
-The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution.
+The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution.
 
 If you need to return more than one data item, choose one of these options:
 

@@ -36,4 +36,4 @@ Securing your n8n instance can take several forms.
 
 * [Configure n8n](./)
 * [Set up token exchange](../deploy-as-an-oem-integration/set-up-token-exchange.md): authenticate users from your own identity provider when embedding n8n.
-* [Require two-factor auth](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/require-two-factor-auth): enable 2FA for your users.
+* [Require two-factor auth](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/require-two-factor-auth): enable 2FA for your users.

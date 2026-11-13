@@ -75,7 +75,7 @@ The Webhook node supports standard [HTTP Request Methods](https://developer.mozi
 * POST
 *   PUT<br>
 
-    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Webhook max payload</strong></p><p>The webhook maximum payload size is 16MB. If you're self-hosting n8n, you can change this using the <a href="https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints">endpoint environment variable</a> <code>N8N_PAYLOAD_SIZE_MAX</code>.</p></div>
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Webhook max payload</strong></p><p>The webhook maximum payload size is 16MB. If you're self-hosting n8n, you can change this using the <a href="https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints">endpoint environment variable</a> <code>N8N_PAYLOAD_SIZE_MAX</code>.</p></div>
 
 ### Path <a href="#path" id="path"></a>
 
@@ -105,7 +105,7 @@ Refer to [Webhook credentials](../../credentials/webhook.md) for more informatio
 
 #### Using n8n User Auth (OAuth2)
 
-Only users logged in to this n8n instance can call the webhook. The caller must send an OAuth2 bearer token issued by this instance. n8n resolves the token to the calling user and runs the execution as that user. [End-user credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials) resolve to the calling user's connected accounts under this mode.
+Only users logged in to this n8n instance can call the webhook. The caller must send an OAuth2 bearer token issued by this instance. n8n resolves the token to the calling user and runs the execution as that user. [End-user credentials](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/end-user-credentials) resolve to the calling user's connected accounts under this mode.
 
 Requests without a bearer token are handled as follows:
 

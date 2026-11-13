@@ -51,7 +51,7 @@ The advantage of this pattern is that work is instantly available to other envir
 
 The disadvantages are:
 
-* If you push by mistake, there is a risk the work will make it into your production instance. If you [use a GitHub Action to automate pulls](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/tutorial-create-environments-with-source-control#optional-use-a-github-action-to-automate-pulls) to production, you must either use the multi-instance, multi-branch pattern, or be careful to never push work that you don't want in production.
+* If you push by mistake, there is a risk the work will make it into your production instance. If you [use a GitHub Action to automate pulls](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/use-source-control-and-environments/tutorial-create-environments-with-source-control#optional-use-a-github-action-to-automate-pulls) to production, you must either use the multi-instance, multi-branch pattern, or be careful to never push work that you don't want in production.
 * Pushing and pulling to the same instance can cause data loss as changes are overridden when performing these actions. You should set up processes to ensure content flows in one direction.
 
 ![Development and production n8n instances both connected to the same single Git branch](../.gitbook/assets/vc-multi-one.png)

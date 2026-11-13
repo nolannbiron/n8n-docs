@@ -32,7 +32,7 @@ If you run n8n behind a reverse proxy, set the following environment variables s
 * `N8N_PROTOCOL`
 * `N8N_EDITOR_BASE_URL`  
 
-More information on these variables is available in [Environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables).
+More information on these variables is available in [Environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables).
 
 ## Related resources
 

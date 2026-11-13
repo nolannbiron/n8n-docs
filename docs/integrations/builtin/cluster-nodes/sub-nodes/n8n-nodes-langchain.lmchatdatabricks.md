@@ -96,7 +96,7 @@ Pay-per-token model services are rate limited per workspace. Three concurrent ag
 - [Databricks AI Agent](../root-nodes/n8n-nodes-langchain.databricksaiagent.md) to export agent runs to MLflow Tracing
 - [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Common issues
 

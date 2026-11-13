@@ -18,7 +18,7 @@ layout:
 
 # Pre-configure Microsoft OAuth credentials <a href="#pre-configure-microsoft-oauth-credentials" id="pre-configure-microsoft-oauth-credentials"></a>
 
-After [setting up a Microsoft Entra ID app registration with delegated access](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoftentra#delegated-access-for-organisation-wide-microsoft-integrations), you can use [credential overwrites](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/credential-overwrites) to inject the Client ID and Client Secret into n8n at startup. This means users in your organisation can connect to Microsoft services without completing their own OAuth app registration.
+After [setting up a Microsoft Entra ID app registration with delegated access](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/microsoftentra#delegated-access-for-organisation-wide-microsoft-integrations), you can use [credential overwrites](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/credential-overwrites) to inject the Client ID and Client Secret into n8n at startup. This means users in your organisation can connect to Microsoft services without completing their own OAuth app registration.
 
 n8n supports three environment variables for credential overwrites. This guide uses `CREDENTIALS_OVERWRITE_DATA_FILE`. Refer to [Credentials environment variables](../use-environment-variables/credentials.md) for the full variable reference.
 
@@ -62,7 +62,7 @@ n8n requires the JSON to be minified (no spaces or newlines). The examples above
 ```
 {% endhint %}
 
-Refer to [Required scopes by integration](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoftentra#required-scopes-by-integration) for the credential type name of each Microsoft service.
+Refer to [Required scopes by integration](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/microsoftentra#required-scopes-by-integration) for the credential type name of each Microsoft service.
 
 ## Docker Compose <a href="#docker-compose" id="docker-compose"></a>
 

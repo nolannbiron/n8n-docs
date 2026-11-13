@@ -194,7 +194,7 @@ An environment variable overrides the value in the settings. You can't change th
 
 To change a locked field, change the environment variable and restart n8n.
 
-Refer to [Deployment environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment) for the full list.
+Refer to [Deployment environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment) for the full list.
 
 ### Multi-main setups
 

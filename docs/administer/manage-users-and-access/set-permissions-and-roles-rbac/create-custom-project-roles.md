@@ -139,8 +139,8 @@ n8n pairs some scopes together, so they don't appear as separate checkboxes:
 * `workflow:publish` - Publish workflows (also grants `workflow:unpublish`)
 * `workflow:delete` - Delete workflows
 * `workflow:move` - Transfer workflows between projects
-* `workflow:enableRedaction` - Turn on data redaction for a workflow (refer to [Execution data redaction](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data))
-* `workflow:disableRedaction` - Turn off data redaction for a workflow (refer to [Execution data redaction](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data))
+* `workflow:enableRedaction` - Turn on data redaction for a workflow (refer to [Execution data redaction](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/redact-execution-data))
+* `workflow:disableRedaction` - Turn off data redaction for a workflow (refer to [Execution data redaction](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/redact-execution-data))
 
 ### Credential scopes <a href="#credential-scopes" id="credential-scopes"></a>
 * `credential:create` - Create new credentials
@@ -164,7 +164,7 @@ n8n pairs some scopes together, so they don't appear as separate checkboxes:
 * `folder:move` - Transfer folders
 
 ### Execution scopes <a href="#execution-scopes" id="execution-scopes"></a>
-* `execution:reveal` - Reveal redacted execution data (refer to [Execution data redaction](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data))
+* `execution:reveal` - Reveal redacted execution data (refer to [Execution data redaction](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/redact-execution-data))
 
 ### Secret vault scopes <a href="#secret-vault-scopes" id="secret-vault-scopes"></a>
 

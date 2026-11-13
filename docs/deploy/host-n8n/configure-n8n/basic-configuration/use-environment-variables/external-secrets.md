@@ -25,10 +25,10 @@ layout:
 {% hint style="info" %}
 **File-based configuration**
 
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
 {% endhint %}
 
-You can use an external secrets store to manage credentials for n8n. Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for details.
+You can use an external secrets store to manage credentials for n8n. Refer to [External secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) for details.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

@@ -77,7 +77,7 @@ Workflows created before these changes keep the **Model (Deployment) Name** text
 
 ## Proxy limitations <a href="#proxy-limitations" id="proxy-limitations"></a>
 
-This node doesn't support the [`NO_PROXY` environment variable](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment).
+This node doesn't support the [`NO_PROXY` environment variable](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment).
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -88,6 +88,6 @@ This node doesn't support the [`NO_PROXY` environment variable](https://app.gitb
 
 Refer to [LangChain's Azure OpenAI documentation](https://docs.langchain.com/oss/javascript/integrations/chat/azure) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 [^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

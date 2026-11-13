@@ -47,13 +47,13 @@ The Start node is no longer supported. This node was the original way to begin w
 
 **Migration path:** Replace the Start node based on how you use your workflow:
 
-- **Manual executions:** Replace the Start node with a [Manual Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger) node.
-- **Sub-workflows:** If another workflow calls this workflow as a sub-workflow, replace the Start node with an [Execute Workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node and activate the workflow.
+- **Manual executions:** Replace the Start node with a [Manual Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger) node.
+- **Sub-workflows:** If another workflow calls this workflow as a sub-workflow, replace the Start node with an [Execute Workflow Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node and activate the workflow.
 - **Disabled Start nodes:** If the Start node is disabled, delete it from the workflow.
 
 ### Saving and publishing workflows <a href="#saving-and-publishing-workflows" id="saving-and-publishing-workflows"></a>
 
-The new workflow publishing system replaces the previous active/inactive toggle. This means that the old "Activate/Deactivate" toggles become the new "Publish/Unpublish" buttons. This change gives you better control over when your workflow changes go live, reducing the risk of accidentally deploying work-in-progress changes to production. More information can be found here: [Saving and publishing workflows.](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/save-and-publish-workflows)
+The new workflow publishing system replaces the previous active/inactive toggle. This means that the old "Activate/Deactivate" toggles become the new "Publish/Unpublish" buttons. This change gives you better control over when your workflow changes go live, reducing the risk of accidentally deploying work-in-progress changes to production. More information can be found here: [Saving and publishing workflows.](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/save-and-publish-workflows)
 
 ### Removed nodes for retired services <a href="#removed-nodes-for-retired-services" id="removed-nodes-for-retired-services"></a>
 
@@ -82,9 +82,9 @@ n8n will require strict file permissions for configuration files to improve secu
 
 ### Enable task runners by default <a href="#enable-task-runners-by-default" id="enable-task-runners-by-default"></a>
 
-n8n will enable [task runners](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners) by default to improve security and isolation. All Code node executions will run on task runners.
+n8n will enable [task runners](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-task-runners) by default to improve security and isolation. All Code node executions will run on task runners.
 
-**Migration path:** Before upgrading to n8n 2.0, set N8N_RUNNERS_ENABLED=true to test this behavior. Make sure your infrastructure meets the requirements for running task runners. For additional security, consider using [external mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners#external-mode).
+**Migration path:** Before upgrading to n8n 2.0, set N8N_RUNNERS_ENABLED=true to test this behavior. Make sure your infrastructure meets the requirements for running task runners. For additional security, consider using [external mode](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-task-runners#external-mode).
 
 ### `$evaluateExpression` no longer works in the Code node <a href="#dollarevaluateexpression-no-longer-works-in-the-code-node" id="dollarevaluateexpression-no-longer-works-in-the-code-node"></a>
 
@@ -106,9 +106,9 @@ Starting with n8n 2.0, the main `n8nio/n8n` Docker image will no longer include 
 
 ### Remove Pyodide-based Python Code node and tool <a href="#remove-pyodide-based-python-code-node-and-tool" id="remove-pyodide-based-python-code-node-and-tool"></a>
 
-n8n will remove the Pyodide-based Python Code node and tool and replace them with a [task runner-based](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners) implementation that uses native Python for better security and performance. Starting in n8n 2.0, you can only use Python Code nodes with task runners in [external mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners#external-mode) and native Python tools.
+n8n will remove the Pyodide-based Python Code node and tool and replace them with a [task runner-based](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-task-runners) implementation that uses native Python for better security and performance. Starting in n8n 2.0, you can only use Python Code nodes with task runners in [external mode](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-task-runners#external-mode) and native Python tools.
 
-The native Python Code node doesn't support built-in variables like `_input` or dot access notation, which were available in the Pyodide-based version. For details, see the [Code node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code#python-native).
+The native Python Code node doesn't support built-in variables like `_input` or dot access notation, which were available in the Pyodide-based version. For details, see the [Code node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code#python-native).
 
 The native Python tool supports `_query` for the input string that the AI Agent passes to the tool when it calls it.
 
@@ -162,7 +162,7 @@ n8n will remove the `default` mode for `N8N_DEFAULT_BINARY_DATA_MODE`, which kee
 
 The `N8N_AVAILABLE_BINARY_DATA_MODES` setting will also be removed, so the mode is now determined only by `N8N_DEFAULT_BINARY_DATA_MODE`.
 
-**Migration path:** Filesystem or database mode will be used automatically based on configuration. Make sure your n8n instance has enough disk space to store binary data. For details, see the [binary data configuration](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/binary-data).
+**Migration path:** Filesystem or database mode will be used automatically based on configuration. Make sure your n8n instance has enough disk space to store binary data. For details, see the [binary data configuration](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/binary-data).
 
 ## Configuration & Environment <a href="#configuration-and-environment" id="configuration-and-environment"></a>
 
@@ -192,7 +192,7 @@ The `QUEUE_WORKER_MAX_STALLED_COUNT` environment variable and the Bull retry mec
 
 The `N8N_CONFIG_FILES` environment variable has been removed.
 
-**Migration path:** Delete this environment variable from your configuration. Move configuration into environment variables, an `.env` file or [`_FILE`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) based configuration.
+**Migration path:** Delete this environment variable from your configuration. Move configuration into environment variables, an `.env` file or [`_FILE`](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) based configuration.
 
 
 ## CLI & Workflow <a href="#cli-and-workflow" id="cli-and-workflow"></a>

@@ -122,4 +122,4 @@ There's no automated tool to convert data encrypted in the new format back to th
 * [Set a custom encryption key](../basic-configuration/configuration-examples/set-a-custom-encryption-key.md): set the instance-level `N8N_ENCRYPTION_KEY` value.
 * [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): reference for `N8N_ENCRYPTION_KEY` and `N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION`.
 * [Configuring queue mode](../scaling/enable-queue-mode.md): make sure all workers share the same instance encryption key.
-* [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes): what changes when you upgrade, including encryption key rotation.
+* [n8n 3.0 breaking changes](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/v30-breaking-changes): what changes when you upgrade, including encryption key rotation.

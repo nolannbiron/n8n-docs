@@ -42,4 +42,4 @@ If the node has to remove items, select where it keeps the input items from:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Learn more about [data structure and data flow](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data) in n8n workflows.
+Learn more about [data structure and data flow](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data) in n8n workflows.

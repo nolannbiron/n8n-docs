@@ -92,7 +92,7 @@ This command creates a volume to store persistent data, downloads the required n
 * Maps and exposes port `5678` on the host.
 * Sets the timezone for the container:
   * the `TZ` environment variable sets the system timezone to control what scripts and commands like `date` return.
-  * the [`GENERIC_TIMEZONE` environment variable](../configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization.md) sets the correct timezone for schedule-oriented nodes like the [Schedule Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger).
+  * the [`GENERIC_TIMEZONE` environment variable](../configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization.md) sets the correct timezone for schedule-oriented nodes like the [Schedule Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.scheduletrigger).
 * Enforces secure file permissions for the n8n configuration file.
 * Mounts the `n8n_data` volume to the `/home/node/.n8n` directory to persist your data across container restarts.
 
@@ -248,8 +248,8 @@ pnpm --filter n8n-containers services:clean
 
 * Find more information about Docker setup in the README file for the [Docker image](https://github.com/n8n-io/n8n/tree/master/docker/images/n8n).
 
-* Learn more about [configuring](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling) n8n.
-* Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow).
+* Learn more about [configuring](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling) n8n.
+* Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow).
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
 

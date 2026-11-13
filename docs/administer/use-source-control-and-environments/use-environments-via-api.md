@@ -33,7 +33,7 @@ The public API exposes three source control operations:
 
 `push` and `pull` are the same actions as the **Push** and **Pull** buttons in the source control menu. `status` matches the file list the UI shows in the push and pull modals before you confirm. The API exposes it as its own endpoint so a script can do the same review the UI does inline.
 
-For the full request and response schemas, refer to the [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference).
+For the full request and response schemas, refer to the [Endpoint reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/api-reference).
 
 ### Authentication and scopes
 
@@ -148,7 +148,7 @@ If your instances use different Git branches, you can't promote directly. Push f
 
 ## Scheduled backup flow
 
-To version your instance in Git on a schedule, fetch every eligible file and push everything on a timer. Run this from a cron job, a CI pipeline, or an n8n workflow on a [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger)
+To version your instance in Git on a schedule, fetch every eligible file and push everything on a timer. Run this from a cron job, a CI pipeline, or an n8n workflow on a [Schedule Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.scheduletrigger)
 
 **1. Get every eligible file.** Call `status` with `direction=push`:
 
@@ -237,5 +237,5 @@ The API commits and applies the same resources as the UI: workflows, credential 
 * [Compare versions](compare-versions.md)
 * [Move work between environments](move-work-between-environments.md)
 * [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)
-* [Source control](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-operations/source-control): Request and response schemas for the source control endpoints.
-* [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference): The complete public API schemas.
+* [Source control](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-operations/source-control): Request and response schemas for the source control endpoints.
+* [Endpoint reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/api-reference): The complete public API schemas.

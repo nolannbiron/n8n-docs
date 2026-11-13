@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **File-based configuration**
 
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
 {% endhint %}
 
 You can run n8n in different modes depending on your needs. Queue mode provides the best scalability. Refer to [Queue mode](../../scaling/enable-queue-mode.md) for more information.
@@ -50,7 +50,7 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 | `QUEUE_WORKER_LOCK_DURATION` | Number | `60000` | How long (in ms) is the lease period for a worker to work on a message. |
 | `QUEUE_WORKER_LOCK_RENEW_TIME` | Number | `10000` | How frequently (in ms) should a worker renew the lease time. |
 | `QUEUE_WORKER_STALLED_INTERVAL` | Number | `30000` | How often should a worker check for stalled jobs (use 0 for never). |
-| `QUEUE_WORKER_MAX_STALLED_COUNT` (**deprecated**) | Number | `1` | **Deprecated** Removed in n8n 2.0. Setting this has no effect. See [Remove QUEUE_WORKER_MAX_STALLED_COUNT](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes#remove-queueworkermaxstalledcount) for migration details. |
+| `QUEUE_WORKER_MAX_STALLED_COUNT` (**deprecated**) | Number | `1` | **Deprecated** Removed in n8n 2.0. Setting this has no effect. See [Remove QUEUE_WORKER_MAX_STALLED_COUNT](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/v20-breaking-changes#remove-queueworkermaxstalledcount) for migration details. |
 
 ## Webhook responses
 

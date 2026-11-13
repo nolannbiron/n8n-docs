@@ -142,7 +142,7 @@ In **Create credential**, create a new credential:
 
 n8n checks the credential with Microsoft. When the check passes, n8n shows **Credential verified with Microsoft Entra.** Each credential can only connect one agent to Teams. If another agent already uses it, register a new app for this agent.
 
-For more about this credential type, see [Microsoft Entra Service Principal credentials](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoftentraserviceprincipal).
+For more about this credential type, see [Microsoft Entra Service Principal credentials](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/microsoftentraserviceprincipal).
 
 ### Deploy the Azure Bot
 
@@ -205,7 +205,7 @@ On self-hosted n8n, the recommended setup needs a Microsoft app that signs users
 	}
 	```
 
-Once the overwrite is in place, the Teams channel shows **Recommended setup**. For how to set credential overwrites, see [Credential overwrites](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/credential-overwrites) and [Pre-configure Microsoft OAuth credentials](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/pre-configure-microsoft-oauth-credentials).
+Once the overwrite is in place, the Teams channel shows **Recommended setup**. For how to set credential overwrites, see [Credential overwrites](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/credential-overwrites) and [Pre-configure Microsoft OAuth credentials](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/configuration-examples/pre-configure-microsoft-oauth-credentials).
 
 ## Microsoft Graph permissions
 
@@ -249,4 +249,4 @@ After you connect the channel, the channel settings check the status for you, in
 
 * [Connect an agent to Microsoft Teams](./)
 * [Manage the Teams channel](manage-the-teams-channel.md)
-* [Microsoft Entra Service Principal credentials](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoftentraserviceprincipal)
+* [Microsoft Entra Service Principal credentials](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/microsoftentraserviceprincipal)

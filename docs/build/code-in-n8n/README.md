@@ -61,15 +61,15 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 - __Write a backend__
 
-	The [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest), [Webhook](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook), and [Code](using-the-code-node.md) nodes help you make API calls, respond to webhooks, and write any JavaScript in your workflow.
+	The [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest), [Webhook](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.webhook), and [Code](using-the-code-node.md) nodes help you make API calls, respond to webhooks, and write any JavaScript in your workflow.
 
 	Use this do things like [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/).
 
-	[→ Core nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes)
+	[→ Core nodes](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes)
 
 - __Represent complex logic__
 
-	You can build complex flows, using nodes like [If](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if), [Switch](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch), and [Merge](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.merge) nodes. 
+	You can build complex flows, using nodes like [If](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.if), [Switch](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.switch), and [Merge](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.merge) nodes. 
 
 	[→ Flow logic](../flow-logic/README.md)
 
@@ -81,21 +81,21 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 - __The n8n API__
 
-	n8n provides an API, where you can programmatically perform many of the same tasks as you can in the GUI. There's an [n8n API node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) to access the API in your workflows.
+	n8n provides an API, where you can programmatically perform many of the same tasks as you can in the GUI. There's an [n8n API node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.n8n) to access the API in your workflows.
 
-	[→ API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api)
+	[→ API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api)
 
 - __Self-host__
 
 	You can self-host n8n. This keeps your data on your own infrastructure.
 
-	[→ Hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n)
+	[→ Hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n)
 
 - __Build your own nodes__
 
 	You can build custom nodes, install them on your n8n instance, and publish them to [npm](https://www.npmjs.com/).
 
-	[→ Creating nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview)
+	[→ Creating nodes](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/overview)
 
 </div>
 

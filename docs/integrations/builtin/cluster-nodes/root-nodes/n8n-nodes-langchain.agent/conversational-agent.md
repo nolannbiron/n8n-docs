@@ -30,7 +30,7 @@ tags:
 
 The Conversational Agent is deprecated from n8n 1.82.0. New or updated AI Agent nodes use the [Tools Agent](tools-agent.md) instead. Only workflows still using node version 1 of the AI Agent node can select the Conversational Agent.
 
-Node version 1 of the AI Agent node is removed from n8n 3.0, so the Conversational Agent stops working for all workflows. See [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes) for details.
+Node version 1 of the AI Agent node is removed from n8n 3.0, so the Conversational Agent stops working for all workflows. See [n8n 3.0 breaking changes](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/v30-breaking-changes) for details.
 {% endhint %}
 
 The Conversational Agent has human-like conversations. It can maintain context, understand user intent, and provide relevant answers. This agent is typically used for building chatbots, virtual assistants, and customer support systems.
@@ -39,7 +39,7 @@ The Conversational Agent describes tools[^1] in the system prompt and parses JSO
 
 Refer to [AI Agent](README.md) for more information on the AI Agent node itself.
 
-You can use this agent with the [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
+You can use this agent with the [Chat Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chattrigger) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -58,9 +58,9 @@ Choose from:
 
 This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
 
-* [Auto-fixing Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
-* [Item List Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
-* [Structured Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
+* [Auto-fixing Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
+* [Item List Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
+* [Structured Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -116,7 +116,7 @@ This could be useful for further refining the agent's behavior based on the step
 
 ### Tracing Metadata <a href="#tracing-metadata" id="tracing-metadata"></a>
 
-Add custom key-value metadata to tracing events for this agent. This is useful for filtering and debugging runs in tracing tools like [LangSmith](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance).
+Add custom key-value metadata to tracing events for this agent. This is useful for filtering and debugging runs in tracing tools like [LangSmith](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance).
 
 Entries with empty keys or values are ignored.
 

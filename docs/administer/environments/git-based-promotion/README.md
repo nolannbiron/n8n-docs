@@ -18,7 +18,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## What n8n writes to the repository
 
-n8n stores promoted content in an `n8n/` folder at the root of the repository. The folder holds an [n8n package](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages). n8n exports it when you promote and imports it when you apply. n8n doesn't change anything outside that folder, so the repository can hold other files, such as CI configuration.
+n8n stores promoted content in an `n8n/` folder at the root of the repository. The folder holds an [n8n package](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/n8n-packages). n8n exports it when you promote and imports it when you apply. n8n doesn't change anything outside that folder, so the repository can hold other files, such as CI configuration.
 
 ## Direct commits and feature branches
 
@@ -43,8 +43,8 @@ GitHub, Bitbucket, and other Git hosts work through Generic Git, without reposit
 
 ## Self-hosted n8n
 
-- If your GitLab instance is on an internal network, allow it for GitLab API calls in [SSRF protection](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/enable-ssrf-protection) with `N8N_SSRF_ALLOWED_HOSTNAMES` or `N8N_SSRF_ALLOWED_IP_RANGES`.
-- If your Git host uses a certificate from a private certificate authority, set `GIT_SSL_CAINFO` or `GIT_SSL_CAPATH` for Git, and [configure custom certificate authorities](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-custom-ssl-certificate-authorities) for API calls.
+- If your GitLab instance is on an internal network, allow it for GitLab API calls in [SSRF protection](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/enable-ssrf-protection) with `N8N_SSRF_ALLOWED_HOSTNAMES` or `N8N_SSRF_ALLOWED_IP_RANGES`.
+- If your Git host uses a certificate from a private certificate authority, set `GIT_SSL_CAINFO` or `GIT_SSL_CAPATH` for Git, and [configure custom certificate authorities](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-custom-ssl-certificate-authorities) for API calls.
 - To get detailed logs, set `N8N_LOG_SCOPES=promotions`.
 
 ## Troubleshooting

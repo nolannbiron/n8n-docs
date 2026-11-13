@@ -47,7 +47,7 @@ When your balance reaches zero, nodes using Gateway credits fail until you add c
 
 - On a paid plan, [top up your balance](top-up-gateway-credits.md) or set up auto top-up to avoid interruptions.
 - On a free trial, top-ups aren't available: upgrade to a paid plan to add more credit.
-- On any plan, you can switch the affected nodes to your own credentials. Refer to [Use Gateway credits](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/use-gateway-credits) for how to switch.
+- On any plan, you can switch the affected nodes to your own credentials. Refer to [Use Gateway credits](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/use-gateway-credits) for how to switch.
 
 ## Related resources
 

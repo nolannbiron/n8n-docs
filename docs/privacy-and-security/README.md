@@ -41,7 +41,7 @@ For self-hosted versions, n8n is neither a Controller nor a Processor, as we don
 
 ### Submitting an account deletion request <a href="#submitting-an-account-deletion-request" id="submitting-an-account-deletion-request"></a>
 
-On n8n Cloud, the instance owner can delete their account in the [n8n Cloud console](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/use-the-cloud-console):
+On n8n Cloud, the instance owner can delete their account in the [n8n Cloud console](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/use-the-cloud-console):
 
 1. Select **Instance settings**.
 1. In the **Danger zone** section, select **Delete account**.
@@ -56,7 +56,7 @@ The sub-processor list is available at [n8n.io/legal/sub-processors](https://n8n
 
 ### GDPR for self-hosted users <a href="#gdpr-for-self-hosted-users" id="gdpr-for-self-hosted-users"></a>
 
-If you self-host n8n, you are responsible for deleting user data. If you need to delete data on behalf of one of your users, you can delete the respective execution. n8n recommends configuring n8n to prune execution data automatically every few days to avoid effortful GDPR request handling as much as possible. Configure this using the `EXECUTIONS_DATA_MAX_AGE` environment variable. Refer to [Environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables) for more information.
+If you self-host n8n, you are responsible for deleting user data. If you need to delete data on behalf of one of your users, you can delete the respective execution. n8n recommends configuring n8n to prune execution data automatically every few days to avoid effortful GDPR request handling as much as possible. Configure this using the `EXECUTIONS_DATA_MAX_AGE` environment variable. Refer to [Environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables) for more information.
 
 
 ## Telemetry
@@ -129,7 +129,7 @@ To disable the templates feature, which prevents background health check calls:
 export N8N_TEMPLATES_ENABLED=false
 ```
 
-See [configuration](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration) for how to set environment variables.
+See [configuration](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration) for how to set environment variables.
 
 {% hint style="warning" %} What the opt-out does not cover
 
@@ -163,7 +163,7 @@ n8n integrates AI-powered features that use large language models. To answer you
 
 - **Credentials.** Any values in the credential fields of your nodes  
 - **Output data.** The actual data processed by your workflows  
-- **Sensitive information** that you have not explicitly put into node parameters or into the code of a [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code)
+- **Sensitive information** that you have not explicitly put into node parameters or into the code of a [Code node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code)
 
 Data is only sent to AI services if your workspace has opted in to use the Assistant, which is on by default for n8n Cloud. Node-specific data is transmitted only during a direct interaction with the Assistant. This data is not used to train the AI services' models.
 

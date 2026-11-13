@@ -87,7 +87,7 @@ To delete a project:
 
 ### Favorite a project <a href="#favorite-a-project" id="favorite-a-project"></a>
 
-You can favorite a team project to pin it for quick access. Open the project and select the star icon in the project header, or select its **three-dot menu** and select **Favorite**. See [Favorite items](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/favorite-items) for details, including how to favorite workflows, folders, and data tables the same way.
+You can favorite a team project to pin it for quick access. Open the project and select the star icon in the project header, or select its **three-dot menu** and select **Favorite**. See [Favorite items](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/favorite-items) for details, including how to favorite workflows, folders, and data tables the same way.
 
 ### Move workflows and credentials between projects or users <a href="#move-workflows-and-credentials-between-projects-or-users" id="move-workflows-and-credentials-between-projects-or-users"></a>
 

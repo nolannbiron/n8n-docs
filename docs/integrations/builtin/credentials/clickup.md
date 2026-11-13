@@ -54,7 +54,7 @@ Refer to [ClickUp's Personal Token documentation](https://clickup.com/api/develo
 Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
 {% endhint %}
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to create an OAuth app:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you'll need to create an OAuth app:
 
 1. In ClickUp, select your avatar and select **Integrations**.
 2. Select **ClickUp API**.

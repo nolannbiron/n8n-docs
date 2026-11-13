@@ -40,7 +40,7 @@ Refer to the [Crypto credentials documentation](../credentials/crypto.md) for au
 {% hint style="info" %}
 **This node can be used as an AI tool**
 
-This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters).
+This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/use-ai-for-parameters).
 {% endhint %}
 
 Node parameters depend on the action you select.
@@ -135,7 +135,7 @@ This action uses the **Hmac Secret** from your [Crypto credentials](../credentia
 
 * **Value**: Enter the value you want to sign.
 * **Property Name**: Enter the name of the property you want to write the signed value to.
-* **Algorithm Name or ID**: Choose an algorithm name from the list or specify an ID using an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
+* **Algorithm Name or ID**: Choose an algorithm name from the list or specify an ID using an [expression](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes).
 * **Encoding**: Select the encoding type to use. Choose from:
 	* **BASE64**
 	* **HEX**

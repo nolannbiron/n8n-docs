@@ -30,7 +30,7 @@ Node type policies are available on:
 Node type policies are available from n8n 2.45.0.
 {% endhint %}
 
-An instance owner or admin sets an instance policy. A project admin can then restrict their project further. You manage policies with the [n8n public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/node-type-policy).
+An instance owner or admin sets an instance policy. A project admin can then restrict their project further. You manage policies with the [n8n public API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-settings/node-type-policy).
 
 ## How node type policies work
 
@@ -69,13 +69,13 @@ Use `delegate` for nodes you want blocked by default but that a project admin ca
 
 Without any policy, every node is available.
 
-Use a policy to block nodes per project and keep them installed. On self-hosted instances, use [`NODES_EXCLUDE`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes) to remove nodes from the whole instance.
+Use a policy to block nodes per project and keep them installed. On self-hosted instances, use [`NODES_EXCLUDE`](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/block-specific-nodes) to remove nodes from the whole instance.
 
 ## Set a policy with the API
 
 ### Authentication and permissions
 
-Send an API key in the `X-N8N-API-KEY` header. The key needs the `nodeTypePolicy:manage` scope. Refer to [Create an API key](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/authentication#create-an-api-key).
+Send an API key in the `X-N8N-API-KEY` header. The key needs the `nodeTypePolicy:manage` scope. Refer to [Create an API key](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/authentication#create-an-api-key).
 
 | Endpoint | Who can call it |
 |----------|-----------------|
@@ -90,9 +90,9 @@ Every policy has a `version`. A `PUT` must send the version you last read. This 
 
 To change a policy:
 
-1. Read the current policy with `GET` for the [instance](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/node-type-policy#get-node-type-policies-instance) or a [project](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/node-type-policy#get-node-type-policies-projects-projectid).
+1. Read the current policy with `GET` for the [instance](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-settings/node-type-policy#get-node-type-policies-instance) or a [project](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-settings/node-type-policy#get-node-type-policies-projects-projectid).
 2. Change the `rules` or the `defaultAction`.
-3. Send the whole policy back with `PUT` for the [instance](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/node-type-policy#put-node-type-policies-instance) or a [project](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/node-type-policy#put-node-type-policies-projects-projectid), with the same `version`.
+3. Send the whole policy back with `PUT` for the [instance](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-settings/node-type-policy#put-node-type-policies-instance) or a [project](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-settings/node-type-policy#put-node-type-policies-projects-projectid), with the same `version`.
 
 A policy that was never set returns `version: 0`, so the first `PUT` sends `0`. If someone changed the policy after you read it, n8n returns `409 Conflict`. Read the policy again and retry.
 
@@ -102,7 +102,7 @@ A `PUT` replaces every rule in the policy. To add one rule, send the existing ru
 
 ### Example: Block nodes for the whole instance
 
-This instance policy blocks the **Execute Command** node and lets project admins turn on the **SSH** node for their own project. Send it with [`PUT /node-type-policies/instance`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/node-type-policy#put-node-type-policies-instance), with the current `version`:
+This instance policy blocks the **Execute Command** node and lets project admins turn on the **SSH** node for their own project. Send it with [`PUT /node-type-policies/instance`](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-settings/node-type-policy#put-node-type-policies-instance), with the current `version`:
 
 ```json
 {
@@ -127,7 +127,7 @@ The response returns the saved policy with its new `version`. It can also includ
 
 ### Example: Turn on a delegated node in one project
 
-The instance policy above delegates the **SSH** node. This project policy turns it on for one project. Send it with [`PUT /node-type-policies/projects/<project-id>`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/node-type-policy#put-node-type-policies-projects-projectid), with the current `version`:
+The instance policy above delegates the **SSH** node. This project policy turns it on for one project. Send it with [`PUT /node-type-policies/projects/<project-id>`](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-settings/node-type-policy#put-node-type-policies-projects-projectid), with the current `version`:
 
 ```json
 {
@@ -147,7 +147,7 @@ The `allow` rule is necessary. The project's `defaultAction: allow` doesn't turn
 
 ### Share one policy across scopes
 
-The `/node-type-policies/policies` and `/node-type-policies/scopes/<scope-id>/attachments` endpoints let instance admins reuse one set of rules in more than one project. Most setups don't need them. A `GET` on the attachments endpoint returns the attached policies and the `version` that the `PUT` needs. Refer to the [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/node-type-policy) for details.
+The `/node-type-policies/policies` and `/node-type-policies/scopes/<scope-id>/attachments` endpoints let instance admins reuse one set of rules in more than one project. Most setups don't need them. A `GET` on the attachments endpoint returns the attached policies and the `version` that the `PUT` needs. Refer to the [Endpoint reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-settings/node-type-policy) for details.
 
 ## What users see when a node is blocked in the editor
 
@@ -187,7 +187,7 @@ A disabled node still counts. Users can't add a blocked node as disabled and tur
 - **No wildcards:** a `name` rule matches one exact node type. To match many nodes, use a `package` rule.
 - **`package` rules need an installed package:** n8n rejects a `package` rule for a package that isn't installed. A `name` rule doesn't have this limit, so you can block a community node before anyone installs it.
 - **No nodes are exempt:** if a policy denies by default, it also blocks nodes like **Manual Trigger** and **Sticky Note**. Add `allow` rules for every node your users need.
-- **Not a data boundary:** blocking a node doesn't block the service behind it. Users can still reach the same API with the **HTTP Request** or **Code** node. On self-hosted instances, to stop n8n from loading a node at all, use [`NODES_EXCLUDE`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes).
+- **Not a data boundary:** blocking a node doesn't block the service behind it. Users can still reach the same API with the **HTTP Request** or **Code** node. On self-hosted instances, to stop n8n from loading a node at all, use [`NODES_EXCLUDE`](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/block-specific-nodes).
 - **Source control pulls:** n8n skips a pulled workflow that uses a blocked node and reports it in the pull result. The workflow in Git and in n8n stay different until you allow the node or remove it.
 - **Sub-workflows inside node parameters:** n8n doesn't check nodes in a sub-workflow that's defined inside another node's parameters.
 
@@ -201,5 +201,5 @@ A disabled node still counts. Users can't add a blocked node as disabled and tur
 * [Verify user identity](verify-user-identity/README.md)
 * [Follow best practices](follow-best-practices.md)
 * [Organize work in projects](set-permissions-and-roles-rbac/organize-work-in-projects.md)
-* [Block specific nodes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes)
-* [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/node-type-policy)
+* [Block specific nodes](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/block-specific-nodes)
+* [Endpoint reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/instance-settings/node-type-policy)

@@ -27,7 +27,7 @@ layout:
 
 # Update your version
 
-n8n recommends keeping your Cloud version up to date. In the **Updates** section of **Instance settings** in the n8n Cloud console, you choose which n8n version your instance runs, and control when and how automatic updates happen. Check the [Release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/) to learn about changes in each version.
+n8n recommends keeping your Cloud version up to date. In the **Updates** section of **Instance settings** in the n8n Cloud console, you choose which n8n version your instance runs, and control when and how automatic updates happen. Check the [Release notes](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/) to learn about changes in each version.
 
 {% hint style="info" %}
 Only instance owners can change these settings. Contact your instance owner if you don't have permission to update n8n Cloud.
@@ -62,7 +62,7 @@ The release track sets which n8n release stream your instance follows. n8n tests
 * **Beta**: new releases delivered as soon as they're ready. Choose Beta to try the latest features first.
 * **Stable**: a later, more proven patch of a release, cut after it's spent time on the Beta track. n8n recommends Stable for all mission-critical workloads.
 
-You can switch between tracks at any time. For how n8n versions and feature availability relate to your release track, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-availability-by-n8n-version).
+You can switch between tracks at any time. For how n8n versions and feature availability relate to your release track, see [Understand feature availability](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/understand-feature-availability#feature-availability-by-n8n-version).
 
 ## Update cadence
 

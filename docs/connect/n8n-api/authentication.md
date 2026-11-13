@@ -51,14 +51,14 @@ curl -X 'GET' \
 
 ## Node configuration <a href="#node-configuration" id="node-configuration"></a>
 
-To call the n8n API from within a workflow, use the [n8n node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n). When you create the credential, fill these fields:
+To call the n8n API from within a workflow, use the [n8n node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.n8n). When you create the credential, fill these fields:
 
 - **API Key**: paste the key you created in [Create an API key](#create-an-api-key).
 - **Base URL**: enter your instance's API root in one of these formats:
 	- Cloud: `https://<name>.app.n8n.cloud/api/v1`, where `<name>` is your Cloud subdomain.
 	- Self-hosted: `https://<your-instance-url>/api/v1`.
 
-For the available operations and parameters, refer to the [n8n node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) documentation.
+For the available operations and parameters, refer to the [n8n node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.n8n) documentation.
 
 ## Delete an API key <a href="#delete-an-api-key" id="delete-an-api-key"></a>
 
@@ -76,7 +76,7 @@ Non-Enterprise API keys have full access to all the account's resources and capa
 {% hint style="info" %}
 **API key scopes vs. project role scopes**
 
-API key scopes control what an API key can do at the instance level. They differ from the **project role scopes** used to define custom roles inside a project. For project role scopes, refer to [Custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles).
+API key scopes control what an API key can do at the instance level. They differ from the **project role scopes** used to define custom roles inside a project. For project role scopes, refer to [Custom project roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles).
 {% endhint %}
 
 The following tables list the scopes available when you create a scoped API key, grouped by resource.

@@ -21,7 +21,7 @@ n8n packages are in Preview. The import options may change in future releases.
 
 Import reads an [n8n package](README.md), a [.n8np archive](package-format.md), and writes its contents to the target instance. n8n checks the whole package first: if anything would block the import, it writes nothing and returns every problem at once. See [How import works](how-import-works.md) for the detail.
 
-Use the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli):
+Use the [n8n CLI](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-cli):
 
 ```bash
 n8n-cli package import --file=triage.n8np --project-id=<target-project-id>
@@ -37,7 +37,7 @@ curl -X POST 'https://n8n.example.com/api/v1/n8n-packages/import' \
 	-F 'projectId=<target-project-id>'
 ```
 
-For the full request and response schema, see the `N8nPackage` section of the [endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference).
+For the full request and response schema, see the `N8nPackage` section of the [endpoint reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/api-reference).
 
 {% hint style="info" %}
 If you call the endpoint rather than using the CLI, the request must be `multipart/form-data`. Any other content type returns a `415`. `conflictPolicy` is a required field, even though the CLI supplies it for you.

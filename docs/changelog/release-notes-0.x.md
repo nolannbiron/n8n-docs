@@ -61,10 +61,10 @@ Current `beta`: 2.48.4
 
 The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
 
-* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version)
 * Self-hosted options:
-    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
-    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
+    * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
 
 ## Semantic versioning in n8n <a href="#semantic-versioning-in-n8n" id="semantic-versioning-in-n8n"></a>
 
@@ -136,7 +136,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 This release includes a [crowd.dev](https://www.crowd.dev/) node and crowd.dev Trigger node. crowd.dev is a tool to help you understand who is engaging with your open source project.
 
-The crowd.dev node was later removed. See [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) for details.
+The crowd.dev node was later removed. See [Deprecated and versioned nodes](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/deprecated-nodes) for details.
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -205,7 +205,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 The Debug Helper node can be used to trigger different error types or generate random datasets to help test n8n workflows.
 
-[Debug Helper node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.debughelper).
+[Debug Helper node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.debughelper).
 {% endhint %}
 
 ## n8n@0.233.1 <a href="#n8n02331" id="n8n02331"></a>
@@ -237,7 +237,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-This release includes a new trigger node for Postgres, which allows you to listen to events, as well as listen to custom channels. Refer to [Postgres Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger) for more information.
+This release includes a new trigger node for Postgres, which allows you to listen to events, as well as listen to custom channels. Refer to [Postgres Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger) for more information.
 
 ## n8n@0.231.3 <a href="#n8n02313" id="n8n02313"></a>
 
@@ -283,7 +283,7 @@ Notable new features.
 
 This release includes a new UI component, the resource mapper. This component is useful for node creators. If your node does insert, update, or upsert operations, you need to send data from the node in a format supported by the service you're integrating with. Often it's necessary to use a Set node before a node that sends data, to get the data to match the schema of the service you're connecting to. The resource mapper UI component provides a way to get data into the required format directly within the node.
 
-Refer to [Node user interface elements | Resource mapper](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/node-ui-elements#resource-mapper) for guidance for node builders.
+Refer to [Node user interface elements | Resource mapper](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/node-ui-elements#resource-mapper) for guidance for node builders.
 
 ## n8n@0.230.3 <a href="#n8n02303" id="n8n02303"></a>
 
@@ -328,7 +328,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 Save metadata for workflow executions. You can then search by this data in the **Executions** list.
 
-[Execution Data node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executiondata).
+[Execution Data node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executiondata).
 {% endhint %}
 
 {% hint style="info" %}
@@ -336,7 +336,7 @@ Save metadata for workflow executions. You can then search by this data in the *
 
 The LDAP node allows you to interact with your LDAP servers from your n8n workflows.
 
-[LDAP node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.ldap).
+[LDAP node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.ldap).
 {% endhint %}
 
 {% hint style="info" %}
@@ -344,7 +344,7 @@ The LDAP node allows you to interact with your LDAP servers from your n8n workfl
 
 Integrate n8n with [LoneScale](https://www.lonescale.com/), a buying intents data platform.
 
-[LoneScale node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.lonescale).
+[LoneScale node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.lonescale).
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -398,7 +398,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 {% hint style="info" %}
 #### npm node <a href="#npm-node" id="npm-node"></a>
 
-This release introduces the [npm](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.npm) node. This is a new core node. It provides a way to query an npm registry within your workflow.
+This release introduces the [npm](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.npm) node. This is a new core node. It provides a way to query an npm registry within your workflow.
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -432,7 +432,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 This release deprecates the following:
 
 * The `EXECUTIONS_PROCESS` environment variable.
-* Running n8n in own mode. Main mode is now the default. Use [Queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode) if you need full execution isolation.
+* Running n8n in own mode. Main mode is now the default. Use [Queue mode](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/enable-queue-mode) if you need full execution isolation.
 * The `WEBHOOK_TUNNEL_URL` flag. Replaced by `WEBHOOK_URL`.
 * Support for MySQL and MariaDB as n8n backend databases. n8n will remove support completely in n8n 1.0. n8n recommends using PostgreSQL instead.
 
@@ -516,7 +516,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.224.1...n8n@0.225
 ### New features <a href="#new-features" id="new-features"></a>
 
 {% hint style="info" %}
-This release introduces [Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables). You can now create variables that allows you to store and reuse values in n8n workflows. This is the first phase of a larger project to support [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments) in n8n.
+This release introduces [Variables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/define-custom-variables). You can now create variables that allows you to store and reuse values in n8n workflows. This is the first phase of a larger project to support [Environments](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/use-source-control-and-environments) in n8n.
 {% endhint %}
 
 * Core: Add support for Google Service account authentication in the HTTP Request node.
@@ -607,7 +607,7 @@ This release contains a new node, updates, and bug fixes.
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-This release introduces the [TOTP](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.totp) node. This is a new core node. It provides a way to generate a TOTP (time-based one-time password) within your workflow.
+This release introduces the [TOTP](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.totp) node. This is a new core node. It provides a way to generate a TOTP (time-based one-time password) within your workflow.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -758,7 +758,7 @@ Upgrade directly to 0.222.1.
 ### New features <a href="#new-features" id="new-features"></a>
 
 {% hint style="info" %}
-This release introduces improvements to the execution lists. You can now save [Custom execution data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/customize-executions-data), and use it to filter both the [All executions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/view-all-executions) and [Single workflow executions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/view-executions-for-a-single-workflow) lists.
+This release introduces improvements to the execution lists. You can now save [Custom execution data](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/understand-executions/customize-executions-data), and use it to filter both the [All executions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/understand-executions/view-all-executions) and [Single workflow executions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/understand-executions/view-executions-for-a-single-workflow) lists.
 {% endhint %}
 
 * Add test overrides.
@@ -769,7 +769,7 @@ This release introduces improvements to the execution lists. You can now save [C
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-This release introduces the [Filter](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.filter) node. The node allows you to filter items based on a condition. If the item meets the condition, the Filter node passes it on to the next node in the Filter node output. If the item doesn't meet the condition, the Filter node omits the item from its output.
+This release introduces the [Filter](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.filter) node. The node allows you to filter items based on a condition. If the item meets the condition, the Filter node passes it on to the next node in the Filter node output. If the item doesn't meet the condition, the Filter node omits the item from its output.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -1019,13 +1019,13 @@ This release contains new features and bug fixes. It includes improvements to th
 
 * Add new event hooks to support telemetry around the new onboarding experience.
 * Update nodes to set required path type.
-* Core: add configurable execution history limit. Use this to improve performance when self-hosting. Refer to [Execution Data | Enable data pruning ](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/manage-execution-data#enable-executions-pruning)for more information.
+* Core: add configurable execution history limit. Use this to improve performance when self-hosting. Refer to [Execution Data | Enable data pruning ](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/manage-execution-data#enable-executions-pruning)for more information.
 * Core: add execution runData recovery and status field. This allows us to show execution statuses on the **Executions** list.
 * Core: add SAML feature flag. This is preparatory for an upcoming feature.
 * Editor: improvements to the nodes panel search. When searching in root view, n8n now displays results from both trigger and regular nodes. When searching in a category view, n8n shows results from the category, and also suggests results from other categories.
 * Hide sensitive value in authentication header credentials and authentication query credentials.
 * Support feature flag evaluation server side.
-* Deprecate the Read Binary File node. Use the [Read Binary Files](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.readwritefile) node instead.
+* Deprecate the Read Binary File node. Use the [Read Binary Files](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.readwritefile) node instead.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -1053,10 +1053,10 @@ This release contains new features and bug fixes. It includes improvements to th
 
 The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
 
-* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version)
 * Self-hosted options:
-    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
-    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
+    * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
 
 ## n8n@0.216.3 <a href="#n8n02163" id="n8n02163"></a>
 
@@ -1087,10 +1087,10 @@ This is a bug fix release. It reverts the `isPending` check on the user entity, 
 
 The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
 
-* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version)
 * Self-hosted options:
-    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
-    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
+    * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
 
 ## n8n@0.215.3 <a href="#n8n02153" id="n8n02153"></a>
 
@@ -1118,10 +1118,10 @@ This is a bug fix release. It reverts the `isPending` check on the user entity, 
 
 The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
 
-* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version)
 * Self-hosted options:
-    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
-    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
+    * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
 
 ## n8n@0.214.4 <a href="#n8n02144" id="n8n02144"></a>
 
@@ -1303,8 +1303,8 @@ Data transformation functions now have autocomplete support in the Expression ed
 * Core: export OpenAPI spec for external tools.
 * Core: set custom Cache-Control headers for static assets.
 * Core: simplify pagination in declarative node design.
-* Editor: support mapping keys with drag and drop. Any field with the hint **Enter the field name as text** should now support mapping a data key using drag and drop. Node builders can enable this in their own nodes. Refer to [Creating nodes | UI elements](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/node-ui-elements#support-drag-and-drop-for-data-keys) for more information.
-* Editor: add the [HTML editor component](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/node-ui-elements#html) for use in parameters. This means node builders can now use the HTML editor that n8n uses in the HTML node as a UI component.
+* Editor: support mapping keys with drag and drop. Any field with the hint **Enter the field name as text** should now support mapping a data key using drag and drop. Node builders can enable this in their own nodes. Refer to [Creating nodes | UI elements](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/node-ui-elements#support-drag-and-drop-for-data-keys) for more information.
+* Editor: add the [HTML editor component](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/node-ui-elements#html) for use in parameters. This means node builders can now use the HTML editor that n8n uses in the HTML node as a UI component.
 * Editor: append expressions in fixed values when mapping to string and JSON inputs.
 * Editor: continue to show mapping tooltip after dismiss.
 * Editor: roll out schema view.
@@ -1353,7 +1353,7 @@ This release introduces LDAP, and a new node for working with HTML in n8n. It al
 {% hint style="info" %}
 #### LDAP <a href="#ldap" id="ldap"></a>
 
-This release introduces support for LDAP on Self-hosted Enterprise and Cloud Enterprise plans. Refer to [LDAP](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/connect-ldap) for more information on this feature.
+This release introduces support for LDAP on Self-hosted Enterprise and Cloud Enterprise plans. Refer to [LDAP](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/connect-ldap) for more information on this feature.
 {% endhint %}
 
 * Simplify the Node Details View by moving authentication details to the Credentials modal.
@@ -1364,7 +1364,7 @@ This release introduces support for LDAP on Self-hosted Enterprise and Cloud Ent
 {% hint style="info" %}
 #### HTML node <a href="#html-node" id="html-node"></a>
 
-n8n has a new [HTML node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.html). This replaces the HTML Extract node, and adds new functionality to generate HTML templates.
+n8n has a new [HTML node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.html). This replaces the HTML Extract node, and adds new functionality to generate HTML templates.
 {% endhint %}
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
@@ -1428,7 +1428,7 @@ This release contains enhancements to the Item Lists node, and bug fixes.
 
 ### New features <a href="#new-features" id="new-features"></a>
 
-This release adds experimental support for more Prometheus metrics. Self-hosting users can configure Prometheus using [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables).
+This release adds experimental support for more Prometheus metrics. Self-hosting users can configure Prometheus using [environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables).
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
@@ -1461,7 +1461,7 @@ This release contains a bug fix for community nodes, and a new trigger node.
 {% hint style="info" %}
 #### Google Sheets Trigger node <a href="#google-sheets-trigger-node" id="google-sheets-trigger-node"></a>
 
-This release adds a new [Google Sheets Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger). You can now start workflows in response to row changes or new rows in a Google Sheet.
+This release adds a new [Google Sheets Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger). You can now start workflows in response to row changes or new rows in a Google Sheet.
 {% endhint %}
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
@@ -1546,7 +1546,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.1...n8n@0.210
 {% hint style="info" %}
 #### Typeahead for expressions <a href="#typeahead-for-expressions" id="typeahead-for-expressions"></a>
 
-When using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes), n8n will now offer you suggestions as you type.
+When using [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes), n8n will now offer you suggestions as you type.
 
 <img src=".gitbook/assets/0.210.2-expressions-type-ahead.gif" alt="&#x22;Animated GIF showing typeahead in action&#x22;" data-size="original">
 {% endhint %}
@@ -1594,13 +1594,13 @@ This release introduces two major new features: log streaming and security audit
 {% hint style="info" %}
 #### Log streaming <a href="#log-streaming" id="log-streaming"></a>
 
-This release introduces [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) for users on Enterprise self-hosted plans and custom Cloud plans. Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.
+This release introduces [log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems) for users on Enterprise self-hosted plans and custom Cloud plans. Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.
 {% endhint %}
 
 {% hint style="info" %}
 #### Security audit <a href="#security-audit" id="security-audit"></a>
 
-This release adds a [security audit](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/run-security-audits) feature. You can now run a security audit on your n8n instance, to detect common security issues.
+This release adds a [security audit](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/run-security-audits) feature. You can now run a security audit on your n8n instance, to detect common security issues.
 {% endhint %}
 
 * Core: add support for Redis 6+ ACLs system using username in queue mode. Add the `QUEUE_BULL_REDIS_USERNAME` environment variable.
@@ -1725,7 +1725,7 @@ This release introduces workflow sharing, and changes to licensing and payment p
 {% hint style="info" %}
 #### Workflow sharing <a href="#workflow-sharing" id="workflow-sharing"></a>
 
-This release introduces workflow sharing for users on some plans. With workflow sharing, users can invite other users on the same n8n instance to use and edit their workflows. Refer to [Workflow sharing](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/share-with-others) for details.
+This release introduces workflow sharing for users on some plans. With workflow sharing, users can invite other users on the same n8n instance to use and edit their workflows. Refer to [Workflow sharing](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/share-with-others) for details.
 {% endhint %}
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
@@ -1783,7 +1783,7 @@ You can now quickly write expressions inline in a node parameter. You can still 
 {% hint style="info" %}
 #### Open AI node <a href="#open-ai-node" id="open-ai-node"></a>
 
-This release adds an integration with OpenAI. Refer to the [OpenAI node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai) for details.
+This release adds an integration with OpenAI. Refer to the [OpenAI node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.openai) for details.
 {% endhint %}
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
@@ -2058,7 +2058,7 @@ This release contains core product improvements and bug fixes.
 * API: report unhandled app crashes using Sentry.
 * API: set up error tracking using Sentry.
 * Core: Add ownership, sharing and credential details to `GET /workflows` in n8n's internal API.
-* Editor: when building nodes, you can now add a property with type `notice` to your credentials `properties`.This was previously available in nodes but not credentials. Refer to [Node UI elements](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/node-ui-elements) for more information.
+* Editor: when building nodes, you can now add a property with type `notice` to your credentials `properties`.This was previously available in nodes but not credentials. Refer to [Node UI elements](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/node-ui-elements) for more information.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -2205,31 +2205,31 @@ This release brings a collection of UI changes, aimed at improving the workflow 
 {% hint style="info" %}
 #### Compare node <a href="#compare-node" id="compare-node"></a>
 
-The Compare Datasets node helps you compare data from two input streams. You can find documentation for the new node [here](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.comparedatasets).
+The Compare Datasets node helps you compare data from two input streams. You can find documentation for the new node [here](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.comparedatasets).
 {% endhint %}
 
 {% hint style="info" %}
 #### Execute Workflow Trigger node <a href="#execute-workflow-trigger-node" id="execute-workflow-trigger-node"></a>
 
-The Execute Workflow Trigger starts a workflow in response to another workflow. You can find documentation for the new node [here](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger).
+The Execute Workflow Trigger starts a workflow in response to another workflow. You can find documentation for the new node [here](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger).
 {% endhint %}
 
 {% hint style="info" %}
 #### Manual Trigger node <a href="#manual-trigger-node" id="manual-trigger-node"></a>
 
-The Manual Trigger allows you to start a workflow by clicking **Execute Workflow**, without any option to run it automatically. You can find documentation for the new node [here](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger).
+The Manual Trigger allows you to start a workflow by clicking **Execute Workflow**, without any option to run it automatically. You can find documentation for the new node [here](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger).
 {% endhint %}
 
 {% hint style="info" %}
 #### Schedule Trigger node <a href="#schedule-trigger-node" id="schedule-trigger-node"></a>
 
-This release introduces the Schedule Trigger node, replacing the Cron node. You can find documentation for the new node [here](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger).
+This release introduces the Schedule Trigger node, replacing the Cron node. You can find documentation for the new node [here](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.scheduletrigger).
 {% endhint %}
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* HubSpot node: you can now use your HubSpot credentials in the HTTP Request node to make a [custom API call](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/custom-api-actions-for-existing-nodes).
-* Rundeck node: you can now use your Rundeck credentials in the HTTP Request node to make a [custom API call](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/custom-api-actions-for-existing-nodes).
+* HubSpot node: you can now use your HubSpot credentials in the HTTP Request node to make a [custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+* Rundeck node: you can now use your Rundeck credentials in the HTTP Request node to make a [custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -2296,7 +2296,7 @@ Please note that this version contains breaking changes to the Merge node. You c
 {% hint style="info" %}
 #### Code node <a href="#code-node" id="code-node"></a>
 
-This release introduces the Code node. This node replaces both the Function and Function Item nodes. Refer to the [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) documentation for more information.
+This release introduces the Code node. This node replaces both the Function and Function Item nodes. Refer to the [Code node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) documentation for more information.
 {% endhint %}
 
 {% hint style="info" %}
@@ -2356,25 +2356,25 @@ This release includes six new nodes, focused around infrastructure management. I
 {% hint style="info" %}
 #### AWS Certificate Manager <a href="#aws-certificate-manager" id="aws-certificate-manager"></a>
 
-A new integration with AWS Certificate Manager. You can find the documentation [here](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awscertificatemanager).
+A new integration with AWS Certificate Manager. You can find the documentation [here](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awscertificatemanager).
 {% endhint %}
 
 {% hint style="info" %}
 #### AWS Elastic Load Balancing <a href="#aws-elastic-load-balancing" id="aws-elastic-load-balancing"></a>
 
-Manage your AWS load balancers from your workflow using the new AWS Elastic Load Balancing node. You can find the documentation [here](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awselb).
+Manage your AWS load balancers from your workflow using the new AWS Elastic Load Balancing node. You can find the documentation [here](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awselb).
 {% endhint %}
 
 {% hint style="info" %}
 #### Citrix ADC <a href="#citrix-adc" id="citrix-adc"></a>
 
-Citrix ADC is an application delivery and load balancing solution for monolithic and microservices-based applications. You can find the documentation [here](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.netscaleradc).
+Citrix ADC is an application delivery and load balancing solution for monolithic and microservices-based applications. You can find the documentation [here](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.netscaleradc).
 {% endhint %}
 
 {% hint style="info" %}
 #### Cloudflare <a href="#cloudflare" id="cloudflare"></a>
 
-Cloudflare provides a range of services to manage and protect your websites. This new node allows you to manage zone certificates in Cloudflare from your workflows. You can find the documentation [here](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.cloudflare).
+Cloudflare provides a range of services to manage and protect your websites. This new node allows you to manage zone certificates in Cloudflare from your workflows. You can find the documentation [here](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.cloudflare).
 {% endhint %}
 
 {% hint style="info" %}
@@ -2421,13 +2421,13 @@ It also contains bug fixes and node enhancements.
 {% hint style="info" %}
 #### Improved item linking <a href="#improved-item-linking" id="improved-item-linking"></a>
 
-Introducing improved support for item linking (paired items). Item linking is a key concept in the n8n data flow. Learn more in [Data item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items).
+Introducing improved support for item linking (paired items). Item linking is a key concept in the n8n data flow. Learn more in [Data item linking](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data/link-data-items).
 {% endhint %}
 
 {% hint style="info" %}
 #### Overhauled built-in variables <a href="#overhauled-built-in-variables" id="overhauled-built-in-variables"></a>
 
-n8n's [built-in methods and variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n) have been overhauled, introducing new variables, and providing greater consistency in behavior and naming.
+n8n's [built-in methods and variables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n) have been overhauled, introducing new variables, and providing greater consistency in behavior and naming.
 {% endhint %}
 
 {% hint style="info" %}
@@ -2446,18 +2446,18 @@ We've redesigned the main navigation (the left hand menu) to create a simpler us
 {% hint style="info" %}
 #### n8n node <a href="#n8n-node" id="n8n-node"></a>
 
-The [n8n node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) allows you to consume the n8n API in your workflows.
+The [n8n node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.n8n) allows you to consume the n8n API in your workflows.
 {% endhint %}
 
 {% hint style="info" %}
 #### WhatsApp Business Platform node <a href="#whatsapp-business-platform-node" id="whatsapp-business-platform-node"></a>
 
-The [WhatsApp Business Platform](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.whatsapp) node allows you to use the WhatsApp Business Platform Cloud API in your workflows.
+The [WhatsApp Business Platform](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.whatsapp) node allows you to use the WhatsApp Business Platform Cloud API in your workflows.
 {% endhint %}
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* HTTP Request node: a major overhaul. It's now much simpler to build a custom API request. Refer to the [HTTP Request node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) for more information.
+* HTTP Request node: a major overhaul. It's now much simpler to build a custom API request. Refer to the [HTTP Request node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) for more information.
 * RabbitMQ Trigger node: now automatically reconnects on disconnect.
 * Slack node: add the 'get many' operation for users.
 
@@ -2545,12 +2545,12 @@ This release introduces user management and credential sharing for n8n's Cloud p
 {% hint style="info" %}
 #### User management and credential sharing for Cloud <a href="#user-management-and-credential-sharing-for-cloud" id="user-management-and-credential-sharing-for-cloud"></a>
 
-This release adds support for n8n's existing [user management](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access) functionality to Cloud, and introduces a new feature: [credential sharing](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely). Credential sharing is currently only available on Cloud.
+This release adds support for n8n's existing [user management](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access) functionality to Cloud, and introduces a new feature: [credential sharing](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/share-credentials-securely). Credential sharing is currently only available on Cloud.
 {% endhint %}
 
 Also in this release:
 
-* Added a `resourceLocator` parameter type for nodes, and started upgrading n8n's built-in nodes to use it. This new option helps users who need to specify the ID of a record or item in an external service. For example, when using the Trello node, you can now search for a specific card by ID, URL, or do a free text search for card titles. Node builders can learn more about working with this new UI element in n8n's [UI elements](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/node-ui-elements) documentation.
+* Added a `resourceLocator` parameter type for nodes, and started upgrading n8n's built-in nodes to use it. This new option helps users who need to specify the ID of a record or item in an external service. For example, when using the Trello node, you can now search for a specific card by ID, URL, or do a free text search for card titles. Node builders can learn more about working with this new UI element in n8n's [UI elements](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/node-ui-elements) documentation.
 * Cache npm dependencies to improve performance on self-hosted n8n
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
@@ -2586,25 +2586,25 @@ This release includes new nodes: a Gmail trigger, Google Cloud Storage, and Adal
 {% hint style="info" %}
 #### Adalo <a href="#adalo" id="adalo"></a>
 
-Adalo is a low code app builder. Refer to n8n's [Adalo node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.adalo) for more information.
+Adalo is a low code app builder. Refer to n8n's [Adalo node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.adalo) for more information.
 {% endhint %}
 
 {% hint style="info" %}
 #### Google Cloud Storage <a href="#google-cloud-storage" id="google-cloud-storage"></a>
 
-n8n now has a [Google Cloud Storage node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlecloudstorage).
+n8n now has a [Google Cloud Storage node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecloudstorage).
 {% endhint %}
 
 {% hint style="info" %}
 #### Gmail Trigger <a href="#gmail-trigger" id="gmail-trigger"></a>
 
-n8n now has a [Gmail Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger). This allows you to trigger workflows in response to a Gmail account receiving an email.
+n8n now has a [Gmail Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger). This allows you to trigger workflows in response to a Gmail account receiving an email.
 {% endhint %}
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* Gmail node: this release includes an overhaul of the [Gmail node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail), with updated resources and operations.
-* Merge node: a major overhaul. Merge mode's have new names, and have been simplified. Refer to the [Merge node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.merge) to learn more.
+* Gmail node: this release includes an overhaul of the [Gmail node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail), with updated resources and operations.
+* Merge node: a major overhaul. Merge mode's have new names, and have been simplified. Refer to the [Merge node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.merge) to learn more.
 * MongoDB node: updated the Mongo driver to 4.9.1.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
@@ -2717,7 +2717,7 @@ This release contains a new node, feature enhancements, and bug fixes.
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-This release adds an integration for [HighLevel](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.highlevel), an all-in-one sales and marketing platform.
+This release adds an integration for [HighLevel](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.highlevel), an all-in-one sales and marketing platform.
 
 ### Enhancements <a href="#enhancements" id="enhancements"></a>
 
@@ -2771,7 +2771,7 @@ This release contains new features and enhancements, as well as bug fixes.
 {% hint style="info" %}
 #### Map nested fields <a href="#map-nested-fields" id="map-nested-fields"></a>
 
-n8n@0.187.0 saw the first release of [data mapping](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data), allowing you to drag and drop top level data from a node's **INPUT** panel into parameter fields. With this release, you can now drag and drop data from any level.
+n8n@0.187.0 saw the first release of [data mapping](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data), allowing you to drag and drop top level data from a node's **INPUT** panel into parameter fields. With this release, you can now drag and drop data from any level.
 {% endhint %}
 
 * Core and editor: support `pairedItem` for pinned data.
@@ -2855,11 +2855,11 @@ This release includes a new node, Sendinblue, as well as bug fixes.
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-[Sendinblue node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.brevo) and Sendinblue Trigger node: introducing n8n's [Sendinblue](https://www.sendinblue.com/) integration.
+[Sendinblue node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.brevo) and Sendinblue Trigger node: introducing n8n's [Sendinblue](https://www.sendinblue.com/) integration.
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-[NocoDB node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.nocodb): add support for v0.90.0+
+[NocoDB node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.nocodb): add support for v0.90.0+
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -2884,7 +2884,7 @@ This release contains a new node for Metabase, bug fixes, and node and product e
 {% hint style="info" %}
 #### Metabase <a href="#metabase" id="metabase"></a>
 
-This release includes a new [Metabase node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.metabase). [Metabase](https://www.metabase.com/) is a business data analysis tool.
+This release includes a new [Metabase node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.metabase). [Metabase](https://www.metabase.com/) is a business data analysis tool.
 {% endhint %}
 
 ### Enhancements <a href="#enhancements" id="enhancements"></a>
@@ -2894,7 +2894,7 @@ This release includes improvements to n8n's core pairedItems functionality.
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
 * Item Lists node: add an operation to create arrays from input items.
-* [Kafka Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger): add more option fields.
+* [Kafka Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger): add more option fields.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -2946,19 +2946,19 @@ This release includes several major new features, including:
 {% hint style="info" %}
 #### Community nodes repository <a href="#community-nodes-repository" id="community-nodes-repository"></a>
 
-This release introduces the [community node repository](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management). This allows developers to build and share nodes as npm packages. Users can install community-built nodes directly in n8n.
+This release introduces the [community node repository](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/community-nodes/installation-and-management). This allows developers to build and share nodes as npm packages. Users can install community-built nodes directly in n8n.
 {% endhint %}
 
 {% hint style="info" %}
 #### Data pinning <a href="#data-pinning" id="data-pinning"></a>
 
-[Data pinning](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/pin-and-mock-data) allows you to freeze and edit data during workflow development. Data pinning means saving the output data of a node, and using the saved data instead of fetching fresh data in future workflow executions. This avoids repeated API calls when developing a workflow, reducing calls to external systems, and speeding up workflow development.
+[Data pinning](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/pin-and-mock-data) allows you to freeze and edit data during workflow development. Data pinning means saving the output data of a node, and using the saved data instead of fetching fresh data in future workflow executions. This avoids repeated API calls when developing a workflow, reducing calls to external systems, and speeding up workflow development.
 {% endhint %}
 
 {% hint style="info" %}
 #### Data mapping <a href="#data-mapping" id="data-mapping"></a>
 
-This release introduces a drag and drop interface for [data mapping](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data), as a quick way to map data without using expressions.
+This release introduces a drag and drop interface for [data mapping](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data), as a quick way to map data without using expressions.
 {% endhint %}
 
 {% hint style="info" %}
@@ -3011,11 +3011,11 @@ export class AsanaApi implements ICredentialType {
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [ERPNext node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.erpnext): add credential tests, and add support for unauthorized certs.
-* [Google Drive node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledrive): add support for move to trash.
-* [Mindee node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mindee): support new version.
-* [Notion node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion): support ignoring the Notion URL property if empty.
-* [Shopify node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.shopify): add OAuth support.
+* [ERPNext node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.erpnext): add credential tests, and add support for unauthorized certs.
+* [Google Drive node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive): add support for move to trash.
+* [Mindee node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mindee): support new version.
+* [Notion node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion): support ignoring the Notion URL property if empty.
+* [Shopify node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.shopify): add OAuth support.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -3051,22 +3051,22 @@ This release contains bug fixes and node enhancements.
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [AWS DynamoDB node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awsdynamodb): improve error handling and add an optional GetAll Scan FilterExpression.
-* [Customer.io node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.customerio): add support for tracking region selection.
-* [Elasticsearch node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.elasticsearch): add 'Source Excludes' and 'Source Includes' options to the Document: getAll operation. Add credential tests, index pipelines, and index refresh.
-* [Freshworks CRM node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.freshworkscrm): add search and lookup functionality.
-* [JIRA node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.jiratrigger): add optional query authentication.
-* [Postgres node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.postgres): improve handling of large numbers.
-* [Redis node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.redis): add push and pop operations.
-* [Rename node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.renamekeys): add regex replace.
-* [Spreadsheet file node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.converttofile): allow skipping headers when writing spreadsheets.
+* [AWS DynamoDB node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awsdynamodb): improve error handling and add an optional GetAll Scan FilterExpression.
+* [Customer.io node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.customerio): add support for tracking region selection.
+* [Elasticsearch node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.elasticsearch): add 'Source Excludes' and 'Source Includes' options to the Document: getAll operation. Add credential tests, index pipelines, and index refresh.
+* [Freshworks CRM node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.freshworkscrm): add search and lookup functionality.
+* [JIRA node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.jiratrigger): add optional query authentication.
+* [Postgres node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.postgres): improve handling of large numbers.
+* [Redis node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.redis): add push and pop operations.
+* [Rename node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.renamekeys): add regex replace.
+* [Spreadsheet file node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.converttofile): allow skipping headers when writing spreadsheets.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * Editor: Fix an error that occurred after repeated executions.
-* [EmailReadImap node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.emailimap): improve handling of network problems.
-* [Google Drive node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledrive): process input items using the list operation.
-* [Telegram node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.telegram): fix for a bug affecting sending binary data (images, documents and so on).
+* [EmailReadImap node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.emailimap): improve handling of network problems.
+* [Google Drive node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive): process input items using the list operation.
+* [Telegram node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.telegram): fix for a bug affecting sending binary data (images, documents and so on).
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3085,23 +3085,23 @@ Core: add the `action` parameter to INodePropertyOptions. This parameter is now 
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-[Google Ads node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googleads): n8n now provides a Google Ads node, allowing you to get data from Google Ad campaigns.
+[Google Ads node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googleads): n8n now provides a Google Ads node, allowing you to get data from Google Ad campaigns.
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [DeepL node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.deepl): Add support for longer text fields, and add credentials tests.
-* [Facebook Graph API node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.facebookgraphapi): Add support for Facebook Graph API 14.
-* [JIRA node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira): Add support for the simplified option with rendered fields.
-* [Webflow Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger): Reduce the chance of webhook duplication. Add a credentials test.
-* [WordPress node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.wordpress): Add a post template option.
+* [DeepL node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.deepl): Add support for longer text fields, and add credentials tests.
+* [Facebook Graph API node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.facebookgraphapi): Add support for Facebook Graph API 14.
+* [JIRA node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jira): Add support for the simplified option with rendered fields.
+* [Webflow Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger): Reduce the chance of webhook duplication. Add a credentials test.
+* [WordPress node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.wordpress): Add a post template option.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [HubSpot node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot): Fix for search endpoints.
-* [KoboToolbox node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.kobotoolbox): Improve attachment matching logic and GeoJSON Polygon format.
-* [Odoo node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.odoo): Prevent possible issues with some custom fields.
+* [HubSpot node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot): Fix for search endpoints.
+* [KoboToolbox node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.kobotoolbox): Improve attachment matching logic and GeoJSON Polygon format.
+* [Odoo node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.odoo): Prevent possible issues with some custom fields.
 * Sticky note node: Fix an issue that was causing the main header to hide.
-* [Todoist node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.todoist): Improve multi-item support.
+* [Todoist node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.todoist): Improve multi-item support.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3126,17 +3126,17 @@ This release includes:
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-[Clockify node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.clockify): added three new resources: Client, User, and Workspace. Also added support for custom API calls.
+[Clockify node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.clockify): added three new resources: Client, User, and Workspace. Also added support for custom API calls.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * Core: fixed an error with logging circular links in JSON.
 * Editor UI: now display the full text of long error messages.
 * Editor UI: fix for an issue with credentials rendering when the node has no parameters.
-* [Cortex node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.cortex): fix an issue preventing all analyzers being returned.
-* [HTTP Request node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest): ensure all OAuth2 credentials work with this node.
-* [LinkedIn node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.linkedin): fix an issue with image preview.
-* [Salesforce node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce): fix an issue that was causing the lead status to not use the new name when name is updated.
+* [Cortex node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.cortex): fix an issue preventing all analyzers being returned.
+* [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest): ensure all OAuth2 credentials work with this node.
+* [LinkedIn node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.linkedin): fix an issue with image preview.
+* [Salesforce node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce): fix an issue that was causing the lead status to not use the new name when name is updated.
 * Fixed an issue with required/optional parameters.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -3156,9 +3156,9 @@ Enhancements to the **Trigger** inputs panel: When using a trigger node, you wil
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [HubSpot node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot): you can now assign a stage on ticket update.
-* [Todoist node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.todoist): it's now possible to move tasks between sections.
-* [Twake node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.twake): updated icon, credential test added, and added support for custom operations.
+* [HubSpot node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot): you can now assign a stage on ticket update.
+* [Todoist node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.todoist): it's now possible to move tasks between sections.
+* [Twake node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.twake): updated icon, credential test added, and added support for custom operations.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -3192,8 +3192,8 @@ Added support for the client\_credentials grant type for OAuth2.
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [Twilio node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.twilio): added the ability to make a voice call using TTS.
-* [Wise node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.wise): added support for downloading statements as JSON, CSV, or PDF.
+* [Twilio node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.twilio): added the ability to make a voice call using TTS.
+* [Wise node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.wise): added support for downloading statements as JSON, CSV, or PDF.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -3201,9 +3201,9 @@ Added support for the client\_credentials grant type for OAuth2.
 * Core: fixes an issue with combined expressions not resolving if one expression was invalid.
 * Core: fixed an issue that was causing the public API to fail to build on Windows.
 * Editor: ensure errors display correctly.
-* [HTTP Request node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest): better handling for requests that return null.
-* [Pipedrive node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive): fixes a limits issue with the GetAll operation on the Lead resource.
-* [Postbin node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.postbin): remove a false error.
+* [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest): better handling for requests that return null.
+* [Pipedrive node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive): fixes a limits issue with the GetAll operation on the Lead resource.
+* [Postbin node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.postbin): remove a false error.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3235,7 +3235,7 @@ This release introduces the public API.
 {% hint style="info" %}
 #### The n8n public API <a href="#the-n8n-public-api" id="the-n8n-public-api"></a>
 
-This release introduces the n8n public REST API. Using n8n's public API, you can programmatically perform many of the same tasks as you can in the GUI. The API includes a built-in Swagger UI playground. Refer to the [API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) for more information.
+This release introduces the n8n public REST API. Using n8n's public API, you can programmatically perform many of the same tasks as you can in the GUI. The API includes a built-in Swagger UI playground. Refer to the [API documentation](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api) for more information.
 {% endhint %}
 
 ### Other new features <a href="#other-new-features" id="other-new-features"></a>
@@ -3272,13 +3272,13 @@ n8n now supports running an error workflow in response to an activation error.
 {% hint style="info" %}
 #### Cal.com trigger <a href="#calcom-trigger" id="calcom-trigger"></a>
 
-This release adds a new trigger node for Cal.com. Refer to the [Cal Trigger documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.caltrigger) for more guidance.
+This release adds a new trigger node for Cal.com. Refer to the [Cal Trigger documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.caltrigger) for more guidance.
 {% endhint %}
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github): add the Get All operation to the Organization resource.
-* [QuickBooks node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.quickbooks): add a new optional field for tax items.
+* [GitHub node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.github): add the Get All operation to the Organization resource.
+* [QuickBooks node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.quickbooks): add a new optional field for tax items.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -3287,8 +3287,8 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal Trigger docu
 * Resolve crashes in queue mode.
 * Correct delete button hover spacing.
 * Resolve a bug causing stuck loading states.
-* [EmailReadImap node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.emailimap): improve error handling.
-* [HubSpot node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot): fix contact loading.
+* [EmailReadImap node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.emailimap): improve error handling.
+* [HubSpot node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot): fix contact loading.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3311,9 +3311,9 @@ PostBin serves as a wrapper for standard HTTP libraries which can be used to tes
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [RabbitMQ Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger): Made message acknowledgement and parallel processing configurable.
-* [ServiceNow node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.servicenow): Added support for attachments.
-* [Todoist node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.todoist): Added support for specifying the parent task when adding and listing tasks.
+* [RabbitMQ Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger): Made message acknowledgement and parallel processing configurable.
+* [ServiceNow node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.servicenow): Added support for attachments.
+* [Todoist node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.todoist): Added support for specifying the parent task when adding and listing tasks.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -3321,11 +3321,11 @@ PostBin serves as a wrapper for standard HTTP libraries which can be used to tes
 * **Core**: Mitigated possible XSS vulnerability when importing workflow templates.
 * **Editor UI**: fixed erroneous hover state detection close to the sticky note button.
 * **Editor UI**: fixed display behavior of credentials assigned to versioned nodes.
-* [Discord node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.discord): Fixed rate limit handling.
-* [Gmail node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail): Fixed sending attachments in filesystem data mode.
-* [Google Sheets node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlesheets): Fixed an error preventing the _Use Header Names as JSON Paths_ option from working as expected.
-* [Nextcloud node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.nextcloud): Updated the node so the list:folder operation works with Nextcloud version 24.
-* [YouTube node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.youtube): Fixed problem with uploading large files.
+* [Discord node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.discord): Fixed rate limit handling.
+* [Gmail node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail): Fixed sending attachments in filesystem data mode.
+* [Google Sheets node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlesheets): Fixed an error preventing the _Use Header Names as JSON Paths_ option from working as expected.
+* [Nextcloud node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.nextcloud): Updated the node so the list:folder operation works with Nextcloud version 24.
+* [YouTube node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.youtube): Fixed problem with uploading large files.
 
 ## n8n@0.178.2 <a href="#n8n01782" id="n8n01782"></a>
 
@@ -3359,7 +3359,7 @@ n8n supplies hundreds of nodes, allowing you to create workflows that link multi
 
 One of the most complex parts of setting up API calls is managing authentication. To simplify this, n8n now provides a way to use existential credential types (credentials associated with n8n nodes) in the HTTP Request node.
 
-For more information, refer to [Custom API operations](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/custom-api-actions-for-existing-nodes).
+For more information, refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
 
 #### Node details view <a href="#node-details-view" id="node-details-view"></a>
 
@@ -3368,13 +3368,13 @@ An improved node view, showing more detail about node inputs.
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-[Salesforce Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce): Add the **Country** field.
+[Salesforce Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce): Add the **Country** field.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * **Editor UI**: don't display the dividing line unless necessary.
 * **Editor UI**: don't display the 'Welcome' sticky in template workflows.
-* [Slack Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack): Fix the kick operation for the channel resource.
+* [Slack Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack): Fix the kick operation for the channel resource.
 
 ## n8n@0.177.0 <a href="#n8n01770" id="n8n01770"></a>
 
@@ -3397,20 +3397,20 @@ n8n now automatically converts Luxon DateTime objects to strings.
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [Google Drive Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledrive): Drive upload, delete, and share operations now support shared Drives.
-* [Microsoft OneDrive](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftonedrive): Add the rename operation for files and folders.
-* [Trello](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.trello): Add support for operations relating to board members.
+* [Google Drive Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive): Drive upload, delete, and share operations now support shared Drives.
+* [Microsoft OneDrive](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftonedrive): Add the rename operation for files and folders.
+* [Trello](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.trello): Add support for operations relating to board members.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * **core:** Fix call to `/executions-current` with unsaved workflow.
 * **core:** Fix issue with fixedCollection having all default values.
-* [Edit Image Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage): Fix font selection.
-* [Ghost Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.ghost): Fix post tags and add credential tests.
-* [Google Calendar Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlecalendar): Make it work with public calendars and clean up.
-* [KoBoToolbox Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.kobotoolbox): Fix query and sort + use question name in attachments.
-* [Mailjet Trigger Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mailjet): Fix issue that node couldn't get activated.
-* [Pipedrive Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive): Fix resolve properties when using multi option field.
+* [Edit Image Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.editimage): Fix font selection.
+* [Ghost Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.ghost): Fix post tags and add credential tests.
+* [Google Calendar Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecalendar): Make it work with public calendars and clean up.
+* [KoBoToolbox Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.kobotoolbox): Fix query and sort + use question name in attachments.
+* [Mailjet Trigger Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mailjet): Fix issue that node couldn't get activated.
+* [Pipedrive Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive): Fix resolve properties when using multi option field.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3425,15 +3425,15 @@ This release contains bug fixes and node enhancements.
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [Pipedrive node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive): adds support for filters to the Organization: Get All operation.
-* [Pushover node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pushover): adds an HTML formatting option, and a credential test.
-* [UProc node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.uproc): adds new tools.
+* [Pipedrive node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive): adds support for filters to the Organization: Get All operation.
+* [Pushover node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pushover): adds an HTML formatting option, and a credential test.
+* [UProc node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.uproc): adds new tools.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * **core**: a fix for filtering the executions list by waiting status.
 * **core**: improved webhook error messages.
-* [Edit Image node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage): node now works correctly with the binary-data-mode 'filesystem'.
+* [Edit Image node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.editimage): node now works correctly with the binary-data-mode 'filesystem'.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3467,18 +3467,18 @@ This release adds support for node versioning, along with node enhancements and 
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [Google Sheets node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlesheets): n8n now handles header names formatted as JSON paths.
-* [Microsoft Dynamics CRM node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm): add support for regions other than North America.
-* [Telegram node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.telegram): add support for querying chat administrators.
+* [Google Sheets node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlesheets): n8n now handles header names formatted as JSON paths.
+* [Microsoft Dynamics CRM node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm): add support for regions other than North America.
+* [Telegram node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.telegram): add support for querying chat administrators.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * **core**: fixed an issue that was causing n8n to apply authentication checks, even when user management was disabled.
 * **core**: n8n now skips credentials checks for disabled nodes.
 * **editor**: fix a bug affecting touchscreen monitors.
-* [HubSpot node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot): fix for search operators.
-* [SendGrid node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.sendgrid): fixed an issue with sending attachments.
-* [Wise node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.wise): respect the time parameter on `get: exchangeRate`.
+* [HubSpot node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot): fix for search operators.
+* [SendGrid node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.sendgrid): fixed an issue with sending attachments.
+* [Wise node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.wise): respect the time parameter on `get: exchangeRate`.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3494,25 +3494,25 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.173.1...n8n@0.174
 {% hint style="info" %}
 #### Sticky Notes <a href="#sticky-notes" id="sticky-notes"></a>
 
-This release adds Sticky Notes, a new feature that allows you to annotate and comment on your workflows. Refer to the [Sticky Notes](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/add-notes-and-documentation) for more information.
+This release adds Sticky Notes, a new feature that allows you to annotate and comment on your workflows. Refer to the [Sticky Notes](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/workflow-components/add-notes-and-documentation) for more information.
 {% endhint %}
 
 ### Enhancements <a href="#enhancements" id="enhancements"></a>
 
 * **core**: allow external OAuth connection. This enhancement adds support for connecting OAuth apps without access to n8n.
 * All AWS nodes now support AWS temporary credentials.
-* [Google Sheets node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlesheets): Added upsert support.
-* [Microsoft Teams node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftteams): adds several enhancements:
+* [Google Sheets node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlesheets): Added upsert support.
+* [Microsoft Teams node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftteams): adds several enhancements:
   * An option to limit groups to "member of", rather than retrieving the whole directory.
   * An option to get all tasks from a plan instead of just a group member.
   * Autocompletion for plans, buckets, labels, and members in update fields for tasks.
-* [MongoDB node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mongodb): you can now parse dates using dot notation.
+* [MongoDB node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mongodb): you can now parse dates using dot notation.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Calendly Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger): updated the logo.
-* [Microsoft OneDrive node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftonedrive): fixed an issue that was preventing upload of files with special characters in the file name.
-* [QuickBooks node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.quickbooks): fixed a pagination issue.
+* [Calendly Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger): updated the logo.
+* [Microsoft OneDrive node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftonedrive): fixed an issue that was preventing upload of files with special characters in the file name.
+* [QuickBooks node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.quickbooks): fixed a pagination issue.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3535,7 +3535,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173
 {% hint style="info" %}
 #### Markdown node <a href="#markdown-node" id="markdown-node"></a>
 
-[Markdown node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.markdown): added a new Markdown node to convert between Markdown and HTML.
+[Markdown node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.markdown): added a new Markdown node to convert between Markdown and HTML.
 {% endhint %}
 
 ### Enhancements <a href="#enhancements" id="enhancements"></a>
@@ -3544,11 +3544,11 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173
 
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
-* [Discord node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.discord): additional fields now available when sending a message to Discord.
-* [GoogleBigQuery](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlebigquery): added support for service account authentication.
-* [Google Cloud Realtime Database node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlecloudrealtimedatabase): you can now select a region.
-* [PagerDuty node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pagerduty): now supports more detail in incidents.
-* [Slack node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack): added support for blocks in Slack message update.
+* [Discord node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.discord): additional fields now available when sending a message to Discord.
+* [GoogleBigQuery](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlebigquery): added support for service account authentication.
+* [Google Cloud Realtime Database node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecloudrealtimedatabase): you can now select a region.
+* [PagerDuty node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pagerduty): now supports more detail in incidents.
+* [Slack node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack): added support for blocks in Slack message update.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -3556,9 +3556,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173
 * **core**: add `rawBody` for XML requests.
 * **editor**: fix a glitch that caused dropdowns to break after adding expressions.
 * **editor**: reset text input value when closed with `Esc`.
-* [Discourse node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.discourse): fix an issue that was causing incomplete results when getting posts. Added a credentials test.
-* [Zendesk Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger): remove deprecated targets, replace with webhooks.
-* [Zoho node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.zohocrm): fix pagination issue.
+* [Discourse node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.discourse): fix an issue that was causing incomplete results when getting posts. Added a credentials test.
+* [Zendesk Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger): remove deprecated targets, replace with webhooks.
+* [Zoho node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.zohocrm): fix pagination issue.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3576,13 +3576,13 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172
 ### Node enhancements <a href="#node-enhancements" id="node-enhancements"></a>
 
 \
-\[Magento 2 Node:]\(https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.magento2) Added credential tests. \[PayPal Node:]\(https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.paypal) Added credential tests and updated the API URL.
+\[Magento 2 Node:]\(https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.magento2) Added credential tests. \[PayPal Node:]\(https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.paypal) Added credential tests and updated the API URL.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-**core**: Luxon now applies the correct timezone. Refer to [Luxon](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information.\
+**core**: Luxon now applies the correct timezone. Refer to [Luxon](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information.\
 **core**: fixed an issue with localization that was preventing i18n files from loading.\
-[Action Network Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.actionnetwork) Fix a pagination issue and add credentials test.
+[Action Network Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.actionnetwork) Fix a pagination issue and add credentials test.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3599,7 +3599,7 @@ This is a small bug fix release.
 
 * **core**: fix issue with current executions not displaying.<br>
 * **core**: fix an issue causing n8n to falsely skip some authentication.<br>
-* [WooCommerce Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.woocommerce) Fix a pagination issue with the GetAll operation.
+* [WooCommerce Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.woocommerce) Fix a pagination issue with the GetAll operation.
 
 ## n8n@0.171.0 <a href="#n8n01710" id="n8n01710"></a>
 
@@ -3627,21 +3627,21 @@ You can now download binary data from individual nodes in your workflow.
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Emelia Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.emelia) Add Campaign > Duplicate functionality.
-* [FTP Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.ftp) Add option to recursively create directories on rename.
-* [Mautic Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mautic) Add credential test and allow trailing slash in host.
-* [Microsoft Teams Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftteams) Add chat message support.
-* [Mocean Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mocean) Add 'Delivery Report URL' option and credential tests.
-* [ServiceNow Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.servicenow) Add basicAuth support and fix getColumns loadOptions.
-* [Strava Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.strava) Add 'Get Streams' operation.
+* [Emelia Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.emelia) Add Campaign > Duplicate functionality.
+* [FTP Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.ftp) Add option to recursively create directories on rename.
+* [Mautic Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mautic) Add credential test and allow trailing slash in host.
+* [Microsoft Teams Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftteams) Add chat message support.
+* [Mocean Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mocean) Add 'Delivery Report URL' option and credential tests.
+* [ServiceNow Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.servicenow) Add basicAuth support and fix getColumns loadOptions.
+* [Strava Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.strava) Add 'Get Streams' operation.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * **core:** Fix crash on webhook when last node did not return data
-* [EmailReadImap Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.emailimap) Fix issue that crashed process if node was configured wrong.
-* [Google Tasks Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googletasks) Fix 'Show Completed' option and hide title field where not needed.
-* [NocoDB Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.nocodb) Fix pagination.
-* [Salesforce Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Fix issue that 'status' did not get used for Case => Create & Update
+* [EmailReadImap Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.emailimap) Fix issue that crashed process if node was configured wrong.
+* [Google Tasks Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googletasks) Fix 'Show Completed' option and hide title field where not needed.
+* [NocoDB Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.nocodb) Fix pagination.
+* [Salesforce Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Fix issue that 'status' did not get used for Case => Create & Update
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3661,19 +3661,19 @@ This release focuses on bug fixes and adding functionality to existing nodes.
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Crypto Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.crypto) Add Generate operation to generate random values.
-* [HTTP Request Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Add support for OPTIONS method.
-* [Jira Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) Add Simplify Output option to Issue > Get.
-* [Reddit Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.reddit) Add possibility to query saved posts.
-* [Zendesk Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.zendesk) Add ticket status On-hold.
+* [Crypto Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.crypto) Add Generate operation to generate random values.
+* [HTTP Request Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Add support for OPTIONS method.
+* [Jira Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jira) Add Simplify Output option to Issue > Get.
+* [Reddit Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.reddit) Add possibility to query saved posts.
+* [Zendesk Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.zendesk) Add ticket status On-hold.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * **core:** Add logs and error catches for possible failures in queue mode.<br>
-* [AWS Lambda Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awslambda) Fix Invocation Type > Continue Workflow.
-* [Supabase Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.supabase) Send token also using Authorization Bearer; fix Row > Get operation.
-* [Xero Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.xero) Fix some operations and add support for setting address and phone number.
-* [Wise Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.wise) Fix issue when executing a transfer.
+* [AWS Lambda Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awslambda) Fix Invocation Type > Continue Workflow.
+* [Supabase Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.supabase) Send token also using Authorization Bearer; fix Row > Get operation.
+* [Xero Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.xero) Fix some operations and add support for setting address and phone number.
+* [Wise Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.wise) Fix issue when executing a transfer.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3704,18 +3704,18 @@ This release changes n8n's license, from [Apache 2.0 with Commons Clause](https:
 
 This change aims to clarify n8n's license terms, and n8n's position as a fair-code project.
 
-Read more about the new license in [Community license](https://app.gitbook.com/s/WcrJOYW6B9JlV5aiivMA).
+Read more about the new license in [Community license](https://app.gitbook.com/s/LdZn7IaCPDncajtWKh1P).
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Linear Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.linear) Add Linear Node.
+* [Linear Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.linear) Add Linear Node.
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [HTTP Request Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Allow Delete requests with body.
-* [KoBoToolbox Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.kobotoolbox) Add KoBoToolbox Regular and Trigger Node.
-* [Mailjet Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mailjet) Add credential tests and support for sandbox, JSON parameters & variables.
-* [Mattermost Node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mattermost) Add support for Channel search.
+* [HTTP Request Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Allow Delete requests with body.
+* [KoBoToolbox Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.kobotoolbox) Add KoBoToolbox Regular and Trigger Node.
+* [Mailjet Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mailjet) Add credential tests and support for sandbox, JSON parameters & variables.
+* [Mattermost Node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mattermost) Add support for Channel search.
 
 ### Other improvements <a href="#other-improvements" id="other-improvements"></a>
 
@@ -3723,8 +3723,8 @@ Read more about the new license in [Community license](https://app.gitbook.com/s
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [GitHub node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) Fix credential tests and File List operation.
-* [Telegram node:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.telegram) Fix sending binary data when disable notification is set.
+* [GitHub node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.github) Fix credential tests and File List operation.
+* [Telegram node:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.telegram) Fix sending binary data when disable notification is set.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3760,7 +3760,7 @@ User management in n8n allows you to invite people to work in your self-hosted n
 * Adding and removing users
 * Two account types: owner and member
 
-Check out the [user management documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access) for more information.
+Check out the [user management documentation](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access) for more information.
 
 ## n8n@0.167.0 <a href="#n8n01670" id="n8n01670"></a>
 
@@ -3806,7 +3806,7 @@ Additionally, Regex is now labelled Regex Match.
 
 Added a Redis Trigger node, so you can now start workflows based on a Redis event.
 
-* [Redis Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.redistrigger) Added a Redis Trigger node.
+* [Redis Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.redistrigger) Added a Redis Trigger node.
 
 ### Core functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -3817,13 +3817,13 @@ Added a Redis Trigger node, so you can now start workflows based on a Redis even
 
 ### Nodes <a href="#nodes" id="nodes"></a>
 
-* [Facebook Graph API:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.facebookgraphapi) Added suport for Facebook Graph API 13.
-* [HubSpot:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot) Added suport for private app token authentication.
-* [MongoDB:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mongodb) Added the aggregate operation.
-* [Redis Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.redistrigger) Added a Redis Trigger node.
-* [Redis:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.redis) Added support for publish operations.
-* [Strapi:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.strapi) Added support for Strapi 4.
-* [WordPress:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.wordpress) Added status as an option to getAll post requests.
+* [Facebook Graph API:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.facebookgraphapi) Added suport for Facebook Graph API 13.
+* [HubSpot:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot) Added suport for private app token authentication.
+* [MongoDB:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mongodb) Added the aggregate operation.
+* [Redis Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.redistrigger) Added a Redis Trigger node.
+* [Redis:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.redis) Added support for publish operations.
+* [Strapi:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.strapi) Added support for Strapi 4.
+* [WordPress:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.wordpress) Added status as an option to getAll post requests.
 
 ### Bugfixes <a href="#bugfixes" id="bugfixes"></a>
 
@@ -3846,11 +3846,11 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Odoo](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.odoo)
+* [Odoo](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.odoo)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Function:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) Added support for items without a JSON key.
+* [Function:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) Added support for items without a JSON key.
 
 ### Core functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -3861,9 +3861,9 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Baserow:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.baserow) Fixed a bug preventing the Sorting option of the Get All operation from working as expected.
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed a bug causing Digest Authentication to fail in some scenarios.
-* [Wise:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.wise) Fixed a bug causing API requests requiring Strong Customer Authentication (SCA) to fail.
+* [Baserow:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.baserow) Fixed a bug preventing the Sorting option of the Get All operation from working as expected.
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed a bug causing Digest Authentication to fail in some scenarios.
+* [Wise:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.wise) Fixed a bug causing API requests requiring Strong Customer Authentication (SCA) to fail.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3882,14 +3882,14 @@ Please note that this version contains breaking changes. You can read more about
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Onfleet](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.onfleet)
+* [Onfleet](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.onfleet)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Asana:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.asana) Added Create operation to the Project resource.
-* [Mautic:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mautic) Added Edit Contact Points, Edit Do Not Contact List, Send Email operations to Contact resource. Also added new Segment Email resource.
-* [Notion (Beta):](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion) Added support for rollup fields to the Simplify Output option. Also added the Parent ID to the Get All operation of the Block resource.
-* [Pipedrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive) Added Marketing Status field to the Create operation of the Person resource, also added User ID field to the Create and Update operations of the Person resource.
+* [Asana:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.asana) Added Create operation to the Project resource.
+* [Mautic:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mautic) Added Edit Contact Points, Edit Do Not Contact List, Send Email operations to Contact resource. Also added new Segment Email resource.
+* [Notion (Beta):](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion) Added support for rollup fields to the Simplify Output option. Also added the Parent ID to the Get All operation of the Block resource.
+* [Pipedrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive) Added Marketing Status field to the Create operation of the Person resource, also added User ID field to the Create and Update operations of the Person resource.
 
 ### Core functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -3903,7 +3903,7 @@ Please note that this version contains breaking changes. You can read more about
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * Orbit: Fixed a bug causing API requests to use an incorrect workspace identifier.
-* [TheHive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.thehive) Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly.
+* [TheHive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.thehive) Fixed a bug causing the Ignore SSL Issues option to be applied incorrectly.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3925,13 +3925,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Google Chat](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlechat)
+* [Google Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlechat)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Grist:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.grist) Added support for self-hosted Grist instances.
-* [Telegram Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger) Added new Extra Large option to Image Size field.
-* [Webhook:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) Added new No Response Body option. Also added support for DELETE, PATCH and PUT methods.
+* [Grist:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.grist) Added support for self-hosted Grist instances.
+* [Telegram Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger) Added new Extra Large option to Image Size field.
+* [Webhook:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.webhook) Added new No Response Body option. Also added support for DELETE, PATCH and PUT methods.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -3959,15 +3959,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [HaloPSA](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.halopsa)
-* [Linear Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.lineartrigger)
-* [Zammad](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.zammad)
+* [HaloPSA](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.halopsa)
+* [Linear Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.lineartrigger)
+* [Zammad](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.zammad)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [GitHub:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) Added Reference option to the Get operation of the File resource.
-* [Twilio:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.twilio) Added Status Callbacks option.
-* [uProc:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.uproc) Sanitized Data Webhook field description.
+* [GitHub:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.github) Added Reference option to the Get operation of the File resource.
+* [Twilio:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.twilio) Added Status Callbacks option.
+* [uProc:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.uproc) Sanitized Data Webhook field description.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -3979,9 +3979,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Function:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) Fixed a bug leaving the code editor size unchanged after resizing the window.
-* [Function Item:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) Fixed a bug leaving the code editor size unchanged after resizing the window.
-* [IF:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) Removed the empty sections left after removing a condition.
+* [Function:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) Fixed a bug leaving the code editor size unchanged after resizing the window.
+* [Function Item:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) Fixed a bug leaving the code editor size unchanged after resizing the window.
+* [IF:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.if) Removed the empty sections left after removing a condition.
 * Item Lists: Fixed an erroneous placeholder text.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -3995,7 +3995,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [GitHub:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) Added new List operation to File resource.
+* [GitHub:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.github) Added new List operation to File resource.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4011,7 +4011,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [XML:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.xml) Fixed a bug causing the node to alter incoming data.
+* [XML:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.xml) Fixed a bug causing the node to alter incoming data.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4040,12 +4040,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Airtable:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.airtable) Improved field description.
-* [Airtable Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger) Improved field description.
-* [erpNext:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.erpnext) Prevented the node from throwing an error when no data is found.
-* [Gmail:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail) Fixed a bug causing the BCC field to be ignored.
-* [Move Binary Data:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.converttofile) Fixed a bug causing the binary data to JSON conversion to fail when using filesystem-based binary data handling.
-* [Slack:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack) Fixed a typo in the Type field.
+* [Airtable:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.airtable) Improved field description.
+* [Airtable Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger) Improved field description.
+* [erpNext:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.erpnext) Prevented the node from throwing an error when no data is found.
+* [Gmail:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail) Fixed a bug causing the BCC field to be ignored.
+* [Move Binary Data:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.converttofile) Fixed a bug causing the binary data to JSON conversion to fail when using filesystem-based binary data handling.
+* [Slack:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack) Fixed a typo in the Type field.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4058,7 +4058,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [BambooHR](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.bamboohr)
+* [BambooHR](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.bamboohr)
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4069,10 +4069,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed a bug causing custom headers from being ignored.
-* [Mautic:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mautic) Fixed a bug preventing all items from being returned in some situations.
-* [Microsoft OneDrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftonedrive) Fixed a bug preventing more than 200 items from being returned.
-* [Spotify:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.spotify) Fixed a bug causing the execution to fail if there are more than 1000 search results, also fixed a bug preventing the Get New Releases operation of the Album resource from working as expected.
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed a bug causing custom headers from being ignored.
+* [Mautic:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mautic) Fixed a bug preventing all items from being returned in some situations.
+* [Microsoft OneDrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftonedrive) Fixed a bug preventing more than 200 items from being returned.
+* [Spotify:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.spotify) Fixed a bug causing the execution to fail if there are more than 1000 search results, also fixed a bug preventing the Get New Releases operation of the Album resource from working as expected.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4094,11 +4094,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Jenkins](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jenkins)
+* [Jenkins](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jenkins)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [GraphQL:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.graphql) Added support for additional authentication methods Basic Auth, Digest Auth, OAuth1, OAuth2, and Query Auth.
+* [GraphQL:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.graphql) Added support for additional authentication methods Basic Auth, Digest Auth, OAuth1, OAuth2, and Query Auth.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4109,10 +4109,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Box:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.box) Fixed a bug causing some files to be corrupted during download.
-* [Philips Hue:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.philipshue) Fixed a bug preventing the node from connecting to Philips Hue.
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Fixed a bug preventing filters on date and datetime fields from working as expected.
-* [Supabase:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.supabase) Fixed an errorneous documentation link.
+* [Box:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.box) Fixed a bug causing some files to be corrupted during download.
+* [Philips Hue:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.philipshue) Fixed a bug preventing the node from connecting to Philips Hue.
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Fixed a bug preventing filters on date and datetime fields from working as expected.
+* [Supabase:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.supabase) Fixed an errorneous documentation link.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4125,17 +4125,17 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Microsoft Graph Security](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity)
-* [SyncroMSP](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.syncromsp)
-* [Supabase](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.supabase)
+* [Microsoft Graph Security](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity)
+* [SyncroMSP](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.syncromsp)
+* [Supabase](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.supabase)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Edit Image:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage) Added Transparent operation.
-* [Kafka:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.kafka) Added Use Schema Registry option.
-* [Kafka Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger) Added Use Schema Registry option.
-* [Redis:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.redis) Added database field to credentials.
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Added Account Number field.
+* [Edit Image:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.editimage) Added Transparent operation.
+* [Kafka:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.kafka) Added Use Schema Registry option.
+* [Kafka Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger) Added Use Schema Registry option.
+* [Redis:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.redis) Added database field to credentials.
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Added Account Number field.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4145,9 +4145,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Edit Image:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage) Fixed a bug causing two items to be returned.
-* [iCalendar:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.converttofile) Fixed a bug preventing dates in January from working as expected.
-* [Merge:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.merge) Fixed causing empty binary data to overwrite other binary data on merge.
+* [Edit Image:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.editimage) Fixed a bug causing two items to be returned.
+* [iCalendar:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.converttofile) Fixed a bug preventing dates in January from working as expected.
+* [Merge:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.merge) Fixed causing empty binary data to overwrite other binary data on merge.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4169,12 +4169,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Function:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) The node now prevents unsupported data from being returned.
-* [Function Item:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) The node now prevents unsupported data from being returned.
-* [HubSpot:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot) Added Engagement resource with Create, Delete, Get, and Get All operations.
-* [Notion (Beta):](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion) Upgraded the Notion node: Added Search operation for the Database resource, Get operation for Database Page resource, Archive operation for the Page resource. Also added Simplify Output option and test for credential validity.
-* [Wait:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait) Added new Ignore Bots option.
-* [Webhook:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) Added new Ignore Bots option.
+* [Function:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) The node now prevents unsupported data from being returned.
+* [Function Item:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) The node now prevents unsupported data from being returned.
+* [HubSpot:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot) Added Engagement resource with Create, Delete, Get, and Get All operations.
+* [Notion (Beta):](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion) Upgraded the Notion node: Added Search operation for the Database resource, Get operation for Database Page resource, Archive operation for the Page resource. Also added Simplify Output option and test for credential validity.
+* [Wait:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait) Added new Ignore Bots option.
+* [Webhook:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.webhook) Added new Ignore Bots option.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4182,7 +4182,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed a bug where using Digest Auth would fail.
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed a bug where using Digest Auth would fail.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4195,10 +4195,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [GitLab Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger) Added new trigger events: Confidential Issue, Confidential Comment, Deployment, Release.
-* [Google Drive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledrive) Added support for downloading and converting native Google files.
-* [Kitemaker:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.kitemaker) Added Space ID field to Create operation of Work Item resource.
-* [Raindrop:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.raindrop) Added Parse Metadata option to Create, Update operations of the Bookmark resource.
+* [GitLab Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger) Added new trigger events: Confidential Issue, Confidential Comment, Deployment, Release.
+* [Google Drive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive) Added support for downloading and converting native Google files.
+* [Kitemaker:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.kitemaker) Added Space ID field to Create operation of Work Item resource.
+* [Raindrop:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.raindrop) Added Parse Metadata option to Create, Update operations of the Bookmark resource.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4230,7 +4230,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Plivo:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.plivo) Added user agent to all API requests.
+* [Plivo:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.plivo) Added user agent to all API requests.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4240,7 +4240,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Todoist:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.todoist) Fixed a bug where using the additional field Due Date Time on the Task resource would cause the Create operation to fail.
+* [Todoist:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.todoist) Fixed a bug where using the additional field Due Date Time on the Task resource would cause the Create operation to fail.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4253,16 +4253,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Figma Trigger (Beta)](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.figmatrigger)
-* [Workable Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.workabletrigger)
+* [Figma Trigger (Beta)](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.figmatrigger)
+* [Workable Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.workabletrigger)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Google Contacts:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlecontacts) Added Query option to Get All operation, also prevented the node from failing when no contacts are found.
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Added support for query-based authentication.
-* [Home Assistant:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.homeassistant) Added support for loading possible options in the Domain, Service, and Entity ID fields.
-* [One Simple API:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.onesimpleapi) Added support for Social Profile resources.
-* [PagerDuty:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pagerduty) Write scope is now requested upon authentication against the PagerDuty OAuth2 API.
+* [Google Contacts:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecontacts) Added Query option to Get All operation, also prevented the node from failing when no contacts are found.
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Added support for query-based authentication.
+* [Home Assistant:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.homeassistant) Added support for loading possible options in the Domain, Service, and Entity ID fields.
+* [One Simple API:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.onesimpleapi) Added support for Social Profile resources.
+* [PagerDuty:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pagerduty) Write scope is now requested upon authentication against the PagerDuty OAuth2 API.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4279,11 +4279,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [APITemplate.io:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.apitemplateio) Fixed a bug where the Create operation on the Image resource would fail when the Download option isn't enabled.
-* [HubSpot:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot) Fixed authentication for new HubSpot applications by using granular scopes when authenticating against the HubSpot OAuth2 API.
-* [HubSpot Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger) Fixed authentication for new HubSpot applications by using granular scopes when authenticating against the HubSpot Developer API.
-* [Jira Software:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) Fixed an issue where the Reporter field would not work as expected on Jira Server instances.
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Fixed a typo preventing the value in the amount field of from being saved.
+* [APITemplate.io:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.apitemplateio) Fixed a bug where the Create operation on the Image resource would fail when the Download option isn't enabled.
+* [HubSpot:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot) Fixed authentication for new HubSpot applications by using granular scopes when authenticating against the HubSpot OAuth2 API.
+* [HubSpot Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger) Fixed authentication for new HubSpot applications by using granular scopes when authenticating against the HubSpot Developer API.
+* [Jira Software:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jira) Fixed an issue where the Reporter field would not work as expected on Jira Server instances.
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Fixed a typo preventing the value in the amount field of from being saved.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4296,11 +4296,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Google Calendar Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger)
+* [Google Calendar Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Telegram Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger) Added support for downloading images to channel\_post updates.
+* [Telegram Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger) Added support for downloading images to channel\_post updates.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4317,9 +4317,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Google BigQuery:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlebigquery) Fixed a bug preventing pagination from working as expected when the Return All option is enabled.
-* [RabbitMQ Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger) Added Trigger to the name of the trigger node.
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Fixed a typo affecting the Type field of the Opportunity resource.
+* [Google BigQuery:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlebigquery) Fixed a bug preventing pagination from working as expected when the Return All option is enabled.
+* [RabbitMQ Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger) Added Trigger to the name of the trigger node.
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Fixed a typo affecting the Type field of the Opportunity resource.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4332,8 +4332,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [DHL](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.dhl)
-* [Grafana](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.grafana)
+* [DHL](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.dhl)
+* [Grafana](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.grafana)
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4344,7 +4344,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Edit Image:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage) Fixed an issue preventing the Composite operation from working correctly in some cases.
+* [Edit Image:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.editimage) Fixed an issue preventing the Composite operation from working correctly in some cases.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4357,7 +4357,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Jira Software:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) Added Components as an additional field.
+* [Jira Software:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jira) Added Components as an additional field.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4370,10 +4370,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed an issue causing the wrong Content-Type header to be set when downloading a file.
-* [ServiceNow:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.servicenow) Fixed incorrect mapping of incident urgency and impact values.
-* [Start:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger) Fixed an issue causing the node to be disabled in a new workflow.
-* [Xero:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.xero) Fixed an issue causing the node to only fetch the first page when querying the Xero API.
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed an issue causing the wrong Content-Type header to be set when downloading a file.
+* [ServiceNow:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.servicenow) Fixed incorrect mapping of incident urgency and impact values.
+* [Start:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger) Fixed an issue causing the node to be disabled in a new workflow.
+* [Xero:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.xero) Fixed an issue causing the node to only fetch the first page when querying the Xero API.
 
 ## n8n@0.149.0 <a href="#n8n01490" id="n8n01490"></a>
 
@@ -4382,13 +4382,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [One Simple API](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.onesimpleapi)
+* [One Simple API](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.onesimpleapi)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Edit Image:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage) Added Circle Primitive to Draw operation. Also added Composite operation.
-* [Zendesk:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.zendesk) Added check for API credentials validity.
-* [Zulip:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.zulip) Added additional field Role to the Update operation of the User resource.
+* [Edit Image:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.editimage) Added Circle Primitive to Draw operation. Also added Composite operation.
+* [Zendesk:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.zendesk) Added check for API credentials validity.
+* [Zulip:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.zulip) Added additional field Role to the Update operation of the User resource.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4399,10 +4399,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Google Tasks:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googletasks) Fixed an issue where the Due Date field had no effect (Update operation) or was unavailable (Create operation).
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed an issue where the Content-Length header was not calculated and sent when using the a Body Content Type of Form-Data Multipart.
-* [Stripe Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.stripetrigger) Fixed an issue preventing the node from being activated when a previously created webhook no longer exists.
-* [Toggl Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.toggltrigger) Updated the API URL used by the node.
+* [Google Tasks:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googletasks) Fixed an issue where the Due Date field had no effect (Update operation) or was unavailable (Create operation).
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed an issue where the Content-Length header was not calculated and sent when using the a Body Content Type of Form-Data Multipart.
+* [Stripe Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.stripetrigger) Fixed an issue preventing the node from being activated when a previously created webhook no longer exists.
+* [Toggl Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.toggltrigger) Updated the API URL used by the node.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4415,16 +4415,16 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Dropcontact](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.dropcontact)
-* [Respond to Webhook](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.respondtowebhook)
+* [Dropcontact](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.dropcontact)
+* [Respond to Webhook](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.respondtowebhook)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Lemlist:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.lemlist) Added additional fields to Create operation of Lead resource.
-* [Slack:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack) Added User Group resource.
-* [Todoist:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.todoist) Added Update operation to Task resource.
-* [Wait:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait) Improved descriptions of available Respond options.
-* [WooCommerce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.woocommerce) Added password field to Crate operation of Customer resource.
+* [Lemlist:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.lemlist) Added additional fields to Create operation of Lead resource.
+* [Slack:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack) Added User Group resource.
+* [Todoist:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.todoist) Added Update operation to Task resource.
+* [Wait:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait) Improved descriptions of available Respond options.
+* [WooCommerce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.woocommerce) Added password field to Crate operation of Customer resource.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4435,8 +4435,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Stripe:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.stripe) Fixed an issue where setting additional Metadata fields would not have the expected effect. Also fixed an issue where pagination would not work as expected.
-* [Zendesk:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.zendesk) Fixed an issue preventing the additional field External ID from being evaulated correctly.
+* [Stripe:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.stripe) Fixed an issue where setting additional Metadata fields would not have the expected effect. Also fixed an issue where pagination would not work as expected.
+* [Zendesk:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.zendesk) Fixed an issue preventing the additional field External ID from being evaulated correctly.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4458,7 +4458,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Local File Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.localfiletrigger)
+* [Local File Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.localfiletrigger)
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4472,13 +4472,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Microsoft Dynamics CRM](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm)
+* [Microsoft Dynamics CRM](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Agile CRM:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.agilecrm) Added Filters to Get All operation of Contact and Company resources.
-* [Date & Time:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datetime) Ensuring the return values are always of type string.
-* [IF:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) Added support for moment types to Date & Time condition.
+* [Agile CRM:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.agilecrm) Added Filters to Get All operation of Contact and Company resources.
+* [Date & Time:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.datetime) Ensuring the return values are always of type string.
+* [IF:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.if) Added support for moment types to Date & Time condition.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4490,7 +4490,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed an issue with the Full Response option not taking effect when used with the Ignore Response Code option.
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed an issue with the Full Response option not taking effect when used with the Ignore Response Code option.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4503,19 +4503,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [AWS Textract](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awstextract)
-* [Google Drive Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger)
+* [AWS Textract](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awstextract)
+* [Google Drive Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Bitbucket Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger) Added check for credentials validity. Removed deprecated User and Team resources, and added the Workspace resource.
-* [GitHub:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) Added check for API credentials validity.
-* [Home Assistant:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.homeassistant) Added check for credentials validity.
-* [Jira Software:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) Added check for credentials validity.
-* [Microsoft OneDrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftonedrive) Added functionality to create folder hierarchy automatically upon subfolder creation.
-* [Pipedrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive) Added All Users option to Get All operation of Activity resource.
-* [Slack:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack) Increase the Slack default query limit from 5 to 100 in order to reduce number of requests.
-* [Twitter:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.twitter) Added Tweet Mode additional field to the Search operation of Tweet resource.
+* [Bitbucket Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger) Added check for credentials validity. Removed deprecated User and Team resources, and added the Workspace resource.
+* [GitHub:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.github) Added check for API credentials validity.
+* [Home Assistant:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.homeassistant) Added check for credentials validity.
+* [Jira Software:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jira) Added check for credentials validity.
+* [Microsoft OneDrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftonedrive) Added functionality to create folder hierarchy automatically upon subfolder creation.
+* [Pipedrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive) Added All Users option to Get All operation of Activity resource.
+* [Slack:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack) Increase the Slack default query limit from 5 to 100 in order to reduce number of requests.
+* [Twitter:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.twitter) Added Tweet Mode additional field to the Search operation of Tweet resource.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4527,10 +4527,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Jira Software:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) Fixed an issue with the Expand option for the Issue resource. Also fixed an issue with using custom fields on Jira Server.
-* [Slack:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack) Fixed an issue with pagination when loading more than 1,000 channels.
-* [Strapi:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.strapi) Fixed an issue using the Where option of the Get All operation.
-* [WooCommerce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.woocommerce) Fixed an issue where a wrong postcode field name was used for the Order resource.
+* [Jira Software:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jira) Fixed an issue with the Expand option for the Issue resource. Also fixed an issue with using custom fields on Jira Server.
+* [Slack:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack) Fixed an issue with pagination when loading more than 1,000 channels.
+* [Strapi:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.strapi) Fixed an issue using the Where option of the Get All operation.
+* [WooCommerce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.woocommerce) Fixed an issue where a wrong postcode field name was used for the Order resource.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4543,8 +4543,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Nextcloud:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.nextcloud) Added Share operation to the File and Folder resources.
-* [Zendesk:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.zendesk) Added support for deleting, listing, getting, and recovering suspended tickets. Added the query option for regular tickets. Added assignee emails, internal notes, and public replies options to the update ticket operation.
+* [Nextcloud:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.nextcloud) Added Share operation to the File and Folder resources.
+* [Zendesk:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.zendesk) Added support for deleting, listing, getting, and recovering suspended tickets. Added the query option for regular tickets. Added assignee emails, internal notes, and public replies options to the update ticket operation.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4552,8 +4552,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Airtable:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.airtable) Fixed an issue with the sort field.
-* [Cron:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger) Set the version of the cron library to 1.7.2.
+* [Airtable:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.airtable) Fixed an issue with the sort field.
+* [Cron:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.scheduletrigger) Set the version of the cron library to 1.7.2.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4566,8 +4566,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Pipedrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive) Added support for getting activities from deal ID.
-* [Facebook Graph API:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.facebookgraphapi) Added support for Facebook Graph API versions 11 and 12.
+* [Pipedrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive) Added support for getting activities from deal ID.
+* [Facebook Graph API:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.facebookgraphapi) Added support for Facebook Graph API versions 11 and 12.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4576,7 +4576,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [FTP:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.ftp) Fixed error when opening FTP/SFTP credentials.
+* [FTP:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.ftp) Fixed error when opening FTP/SFTP credentials.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4589,7 +4589,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Stop and Error](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.stopanderror)
+* [Stop and Error](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.stopanderror)
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4604,9 +4604,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed 'Ignore response code' flag.
-* [Rundeck:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.rundeck) Fixed issue with async loading of credentials.
-* [SeaTable:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.seatable) Fixed issue when entering a Baser URI with a trailing slash.
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Fixed 'Ignore response code' flag.
+* [Rundeck:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.rundeck) Fixed issue with async loading of credentials.
+* [SeaTable:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.seatable) Fixed issue when entering a Baser URI with a trailing slash.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4628,10 +4628,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Grist](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.grist)
-* [SeaTable](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.seatable)
-* [SeaTable Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger)
-* [urlscan.io](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.urlscanio)
+* [Grist](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.grist)
+* [SeaTable](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.seatable)
+* [SeaTable Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger)
+* [urlscan.io](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.urlscanio)
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4649,11 +4649,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Splunk](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.splunk)
+* [Splunk](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.splunk)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Telegram:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.telegram) Added binary data support to the Send Animation, Send Audio, Send Document, Send Photo, Send Video, and Send Sticker operations.
+* [Telegram:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.telegram) Added binary data support to the Send Animation, Send Audio, Send Document, Send Photo, Send Video, and Send Sticker operations.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4681,15 +4681,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Elastic Security](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.elasticsecurity)
-* [Misp](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.misp)
-* [Netlify](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.netlify)
-* [Netlify Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger)
+* [Elastic Security](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.elasticsecurity)
+* [Misp](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.misp)
+* [Netlify](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.netlify)
+* [Netlify Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [HubSpot Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger) Authentication method changed to OAuth2.
-* [Wait:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait) Added improved status messages for Wait behavior.
+* [HubSpot Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger) Authentication method changed to OAuth2.
+* [Wait:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait) Added improved status messages for Wait behavior.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4697,7 +4697,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [SendGrid:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.sendgrid) Fixed issue with adding contacts to lists.
+* [SendGrid:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.sendgrid) Fixed issue with adding contacts to lists.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4711,13 +4711,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
 * Item Lists
-* [Magento 2](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.magento2)
+* [Magento 2](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.magento2)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Baserow:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.baserow) Added the following filter options: Contains, Contains Not, Date Before Date, Date After Date, Filename Contains, Is Empty, Is Not Empty, Link Row Has, Link Row Does Not Have, Single Select Equal, and Single Select Not Equal.
-* [Pipedrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive) Added support for Notes on Leads.
-* [WeKan:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.wekan) Added Sort field to the Card resource.
+* [Baserow:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.baserow) Added the following filter options: Contains, Contains Not, Date Before Date, Date After Date, Filename Contains, Is Empty, Is Not Empty, Link Row Has, Link Row Does Not Have, Single Select Equal, and Single Select Not Equal.
+* [Pipedrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive) Added support for Notes on Leads.
+* [WeKan:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.wekan) Added Sort field to the Card resource.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4726,8 +4726,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Lemlist:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.lemlist) Fixed issue where events were not sent in the correct property.
-* [Notion:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion) Fixed issue listed unnamed databases.
+* [Lemlist:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.lemlist) Fixed issue where events were not sent in the correct property.
+* [Notion:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion) Fixed issue listed unnamed databases.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4740,19 +4740,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Freshservice](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.freshservice)
+* [Freshservice](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.freshservice)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Clockify:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.clockify) Added Task resource.
-* [HubSpot:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot) Added dropdown selection for Properties and Properties with History filters for Get All Deals operations.
-* [Mautic:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mautic) Added Campaign Contact resource.
-* [MongoDB:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mongodb) Added ability to query documents by '\_id'.
-* [MQTT:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mqtt) Added SSL/TLS support to authentication.
-* [MQTT Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger) Added SSL/TLS support to authentication.
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Added File Extension option to the Document resource. Added Type field to Task resource.
-* [Sms77:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.sms77) Added Voice Call resource. Added the following options to SMS resource: Debug, Delay, Foreign ID, Flash, Label, No Reload, Performance Tracking, TTL.
-* [Zendesk:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.zendesk) Added Organization resource. Added Get Organizations and Get Related Data operations to User resource.
+* [Clockify:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.clockify) Added Task resource.
+* [HubSpot:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot) Added dropdown selection for Properties and Properties with History filters for Get All Deals operations.
+* [Mautic:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mautic) Added Campaign Contact resource.
+* [MongoDB:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mongodb) Added ability to query documents by '\_id'.
+* [MQTT:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mqtt) Added SSL/TLS support to authentication.
+* [MQTT Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger) Added SSL/TLS support to authentication.
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Added File Extension option to the Document resource. Added Type field to Task resource.
+* [Sms77:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.sms77) Added Voice Call resource. Added the following options to SMS resource: Debug, Delay, Foreign ID, Flash, Label, No Reload, Performance Tracking, TTL.
+* [Zendesk:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.zendesk) Added Organization resource. Added Get Organizations and Get Related Data operations to User resource.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4762,8 +4762,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [HubSpot:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot) Fixed issue with 'RequestAllItems' API.
-* [WordPress:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.wordpress) Fixed issue with 'RequestAllItems' API only returning the first 10 items.
+* [HubSpot:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot) Fixed issue with 'RequestAllItems' API.
+* [WordPress:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.wordpress) Fixed issue with 'RequestAllItems' API only returning the first 10 items.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4776,7 +4776,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Notion:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion) Added handling of Rich Text when simplifying data.
+* [Notion:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion) Added handling of Rich Text when simplifying data.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4786,9 +4786,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [FTP:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.ftp) Fixed issue where incorrect paths were displayed when using the node.
-* [Wait:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait) Fixed issue when receiving multiple files using On Webhook Call operation.
-* [Webhook:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) Fixed issue when receiving multiple files.
+* [FTP:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.ftp) Fixed issue where incorrect paths were displayed when using the node.
+* [Wait:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait) Fixed issue when receiving multiple files using On Webhook Call operation.
+* [Webhook:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.webhook) Fixed issue when receiving multiple files.
 
 ## n8n@0.135.3 <a href="#n8n01353" id="n8n01353"></a>
 
@@ -4837,9 +4837,9 @@ Please note that this version contains breaking changes. You can read more about
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Form.io Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.formiotrigger)
-* [Formstack Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger)
-* [Wait](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait)
+* [Form.io Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.formiotrigger)
+* [Formstack Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger)
+* [Wait](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait)
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4850,7 +4850,7 @@ Please note that this version contains breaking changes. You can read more about
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Interval:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger) Fixed issue where entering too large a value (> 2147483647ms) resulted in an interval of 1sec being used rather than an error.
+* [Interval:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.scheduletrigger) Fixed issue where entering too large a value (> 2147483647ms) resulted in an interval of 1sec being used rather than an error.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4863,23 +4863,23 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [AWS DynamoDB:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awsdynamodb) Added Scan option to Item > Get All operation.
-* [Google Drive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledrive) Added File Name option to File > Update operation.
-* [Mautic:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mautic) Added the following fields to Company resource: Address, Annual Revenue, Company Email, Custom Fields, Description, Fax, Industry, Number of Employees, Phone, Website.
-* [Notion:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion) Added Timezone option when inserting Date fields.
-* [Pipedrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive) Added the following Filters options to the Deal > Get All operation: Predefined Filter, Stage ID, Status, and User ID.
-* [QuickBooks:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.quickbooks) Added the Transaction resource and Get Report operation.
+* [AWS DynamoDB:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awsdynamodb) Added Scan option to Item > Get All operation.
+* [Google Drive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive) Added File Name option to File > Update operation.
+* [Mautic:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mautic) Added the following fields to Company resource: Address, Annual Revenue, Company Email, Custom Fields, Description, Fax, Industry, Number of Employees, Phone, Website.
+* [Notion:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion) Added Timezone option when inserting Date fields.
+* [Pipedrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive) Added the following Filters options to the Deal > Get All operation: Predefined Filter, Stage ID, Status, and User ID.
+* [QuickBooks:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.quickbooks) Added the Transaction resource and Get Report operation.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
-* Integrated [Nodelinter](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/test-your-node/node-linter) in n8n.
+* Integrated [Nodelinter](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/test-your-node/node-linter) in n8n.
 * Fix to add a trailing slash (`/`) to all webhook URLs for proper functionality.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [AWS SES:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awsses) Fixed issue where special characters in the message were not encoded.
-* [Baserow:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.baserow) Fixed issue where Create operation inserted null values.
-* [HubSpot:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot) Fixed issue when sending context parameter.
+* [AWS SES:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awsses) Fixed issue where special characters in the message were not encoded.
+* [Baserow:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.baserow) Fixed issue where Create operation inserted null values.
+* [HubSpot:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot) Fixed issue when sending context parameter.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4892,12 +4892,12 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Monica CRM](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.monicacrm)
+* [Monica CRM](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.monicacrm)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Added Follow All Redirects option.
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Added Record Type ID field.
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Added Follow All Redirects option.
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Added Record Type ID field.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4905,8 +4905,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Nextcloud:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.nextcloud) Fixed issue where List operation on an empty Folder returned an error.
-* [Spotify:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.spotify) Fixed issues with pagination and infinite executions.
+* [Nextcloud:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.nextcloud) Fixed issue where List operation on an empty Folder returned an error.
+* [Spotify:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.spotify) Fixed issues with pagination and infinite executions.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4919,7 +4919,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Interval:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger) Fixed issue with infinite executions.
+* [Interval:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.scheduletrigger) Fixed issue with infinite executions.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4941,19 +4941,19 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Freshworks CRM](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.freshworkscrm)
-* [Google Perspective](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googleperspective)
-* [Marketstack](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.marketstack)
-* [NocoDB](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.nocodb)
+* [Freshworks CRM](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.freshworkscrm)
+* [Google Perspective](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googleperspective)
+* [Marketstack](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.marketstack)
+* [NocoDB](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.nocodb)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Facebook Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger) Added Fields parameter.
-* [Gmail:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail) Added Sender Name parameter.
-* [Home Assistant:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.homeassistant) Added Event resource.
-* [Pipedrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive) Added Deal Product resource.
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Added Document resource with Upload operation.
-* [WooCommerce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.woocommerce) Added Customer resource.
+* [Facebook Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger) Added Fields parameter.
+* [Gmail:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail) Added Sender Name parameter.
+* [Home Assistant:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.homeassistant) Added Event resource.
+* [Pipedrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive) Added Deal Product resource.
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Added Document resource with Upload operation.
+* [WooCommerce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.woocommerce) Added Customer resource.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4976,13 +4976,13 @@ Please note that this version contains a breaking change. You can read more abou
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Webex by Cisco](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.ciscowebex)
-* [Webex by Cisco Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger)
+* [Webex by Cisco](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.ciscowebex)
+* [Webex by Cisco Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Pipedrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive) Added Lead resource. Added Search operation to Organization resource.
-* [Taiga Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.taigatrigger) Added Resource and Operations filters.
+* [Pipedrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive) Added Lead resource. Added Search operation to Organization resource.
+* [Taiga Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.taigatrigger) Added Resource and Operations filters.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -4993,7 +4993,7 @@ Please note that this version contains a breaking change. You can read more abou
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Spreadsheet File:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.converttofile) Fixed issue when saving dates.
+* [Spreadsheet File:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.converttofile) Fixed issue when saving dates.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5012,16 +5012,16 @@ Please note that this version contains a breaking change. You can read more abou
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [AWS DynamoDB](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awsdynamodb)
-* [Elasticsearch](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.elasticsearch)
-* [ServiceNow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.servicenow)
+* [AWS DynamoDB](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awsdynamodb)
+* [Elasticsearch](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.elasticsearch)
+* [ServiceNow](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.servicenow)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Kafka Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger) Added Read Messages From Beginning option.
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Added Sandbox Environment Type for OAuth2 credentials.
-* [Taiga:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.taiga) Added Epic, Task, and User Story operations.
-* [TheHive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.thehive) Added Custom Fields option to the available Additional Fields.
+* [Kafka Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger) Added Read Messages From Beginning option.
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Added Sandbox Environment Type for OAuth2 credentials.
+* [Taiga:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.taiga) Added Epic, Task, and User Story operations.
+* [TheHive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.thehive) Added Custom Fields option to the available Additional Fields.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5030,7 +5030,7 @@ Please note that this version contains a breaking change. You can read more abou
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Notion:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion) Fixed issue when filtering field data type.
+* [Notion:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion) Fixed issue when filtering field data type.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5043,11 +5043,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Baserow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.baserow)
+* [Baserow](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.baserow)
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [SSH:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.ssh) Fixed issue with access rights when downloading files.
+* [SSH:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.ssh) Fixed issue with access rights when downloading files.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5060,14 +5060,14 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Home Assistant](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.homeassistant)
-* [Stripe](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.stripe)
+* [Home Assistant](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.homeassistant)
+* [Stripe](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.stripe)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Added support for arrays in Querystring. Any parameter appearing multiple times with the same name is grouped into an array.
-* [Mautic:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mautic) Added Contact Segment resource.
-* [Telegram:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.telegram) Added Delete operation to the Message resource.
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Added support for arrays in Querystring. Any parameter appearing multiple times with the same name is grouped into an array.
+* [Mautic:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mautic) Added Contact Segment resource.
+* [Telegram:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.telegram) Added Delete operation to the Message resource.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5077,7 +5077,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Microsoft SQL:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftsql) Fixed an issue with sending the connectionTimeout parameter, and creating and updating data using columns with spaces.
+* [Microsoft SQL:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftsql) Fixed an issue with sending the connectionTimeout parameter, and creating and updating data using columns with spaces.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5096,10 +5096,10 @@ Please note that this version contains a breaking change. You can read more abou
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Airtable:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.airtable) Added Bulk Size option to all Operations.
-* [Box:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.box) Added Share operation to File and Folder resources.
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Added Last Name field to Update operation on Contact resource.
-* [Zoho CRM:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.zohocrm) Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources.
+* [Airtable:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.airtable) Added Bulk Size option to all Operations.
+* [Box:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.box) Added Share operation to File and Folder resources.
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Added Last Name field to Update operation on Contact resource.
+* [Zoho CRM:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.zohocrm) Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5108,8 +5108,8 @@ Please note that this version contains a breaking change. You can read more abou
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Google Sheets:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlesheets) Fixed an issue with handling 0 value that resulted in empty cells.
-* [SSH:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.ssh) Fixed an issue with setting passphrases.
+* [Google Sheets:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlesheets) Fixed an issue with handling 0 value that resulted in empty cells.
+* [SSH:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.ssh) Fixed an issue with setting passphrases.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5126,8 +5126,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Microsoft SQL:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftsql) Fixed an issue with handling of Boolean values when inserting.
-* [Pipedrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive) Fixed an issue with the node icon.
+* [Microsoft SQL:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftsql) Fixed an issue with handling of Boolean values when inserting.
+* [Pipedrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive) Fixed an issue with the node icon.
 
 ## n8n@0.126.0 <a href="#n8n01260" id="n8n01260"></a>
 
@@ -5136,29 +5136,29 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Action Network](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.actionnetwork)
-* [Google Docs](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledocs)
+* [Action Network](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.actionnetwork)
+* [Google Docs](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledocs)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [AWS S3:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awss3) Added Delete operation to the Bucket Resource.
-* [Google Analytics:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googleanalytics) Added Dimension Filters to the available Additional Fields.
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Added Split Into Items option.
-* [MQTT:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mqtt) Added mqqts protocol for MQTT credentials.
-* [QuickBooks:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.quickbooks) Added Purchase resource with Get and Get All operations.
+* [AWS S3:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awss3) Added Delete operation to the Bucket Resource.
+* [Google Analytics:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googleanalytics) Added Dimension Filters to the available Additional Fields.
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Added Split Into Items option.
+* [MQTT:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mqtt) Added mqqts protocol for MQTT credentials.
+* [QuickBooks:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.quickbooks) Added Purchase resource with Get and Get All operations.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
 * Templates from the [n8n Workflows](https://n8n.io/workflows) page can now be directly imported by appending `/workflows/templates/<templateId>` to your instance base URL. For example, `localhost:5678/workflows/templates/1142`.
-* Added new Editor UI shortcuts. See [Keyboard Shortcuts](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/keyboard-shortcuts) for details.
+* Added new Editor UI shortcuts. See [Keyboard Shortcuts](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/keyboard-shortcuts) for details.
 * Fixed an issue causing console errors when deleting a node from the canvas.
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Ghost:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.ghost) Fixed an issue with the Get All operation functionality.
-* [Google Analytics:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googleanalytics) Fixed an issue that caused an error when attempting to sort with no data present.
-* [Microsoft SQL:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftsql) Fixed an issue when escaping single quotes and mapping empty fields.
-* [Notion:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion) Fixed an issue with pagination of databases and users.
+* [Ghost:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.ghost) Fixed an issue with the Get All operation functionality.
+* [Google Analytics:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googleanalytics) Fixed an issue that caused an error when attempting to sort with no data present.
+* [Microsoft SQL:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftsql) Fixed an issue when escaping single quotes and mapping empty fields.
+* [Notion:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion) Fixed an issue with pagination of databases and users.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5171,7 +5171,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Spotify:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.spotify) Added Search operation to Album, Artist, Playlist, and Track resources, and Resume and Volume operations to Player resource.
+* [Spotify:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.spotify) Added Search operation to Album, Artist, Playlist, and Track resources, and Resume and Volume operations to Player resource.
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5179,7 +5179,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [MySQL:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mysql) Fixed an issue where n8n was unable to save data due to collation, resulting in workflows ending with Unknown status.
+* [MySQL:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mysql) Fixed an issue where n8n was unable to save data due to collation, resulting in workflows ending with Unknown status.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5203,11 +5203,11 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Google Drive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledrive) Added APP Properties and Properties options to the Upload operation of the File resource
-* [HTTP Request:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) Added the functionality to log the request to the browser console for testing
-* [Notion:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion) Added the Include Time parameter date field types
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Added Upsert operation to Account, Contact, Custom Object, Lead, and Opportunity resources
-* [Todoist:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.todoist) Added the Description option to the Task resource
+* [Google Drive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive) Added APP Properties and Properties options to the Upload operation of the File resource
+* [HTTP Request:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) Added the functionality to log the request to the browser console for testing
+* [Notion:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion) Added the Include Time parameter date field types
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Added Upsert operation to Account, Contact, Custom Object, Lead, and Opportunity resources
+* [Todoist:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.todoist) Added the Description option to the Task resource
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5216,7 +5216,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Jira:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) Fixed an issues with the API version and fixed an issue with fetching the custom fields for the Issue resource
+* [Jira:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jira) Fixed an issues with the API version and fixed an issue with fetching the custom fields for the Issue resource
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5238,13 +5238,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Git](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.git)
-* [Microsoft To Do](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsofttodo)
+* [Git](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.git)
+* [Microsoft To Do](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsofttodo)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Pipedrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.pipedrive) Added a feature to fetch data from the Pipedrive API, added Search operation to the Deals resource, and added custom fields option
-* [Spotify:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.spotify) Added My Data resource
+* [Pipedrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.pipedrive) Added a feature to fetch data from the Pipedrive API, added Search operation to the Deals resource, and added custom fields option
+* [Spotify:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.spotify) Added My Data resource
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5253,7 +5253,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [ASW Transcribe:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awstranscribe) Fixed issues with options
+* [ASW Transcribe:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awstranscribe) Fixed issues with options
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5273,7 +5273,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Notion:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion) Fixed an issue with parsing the last edited time
+* [Notion:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion) Fixed an issue with parsing the last edited time
 
 ## n8n@0.122.2 <a href="#n8n01222" id="n8n01222"></a>
 
@@ -5282,8 +5282,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Function:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) Added console.log support for writing to browser console
-* [Function Item:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) Added console.log support for writing to browser console
+* [Function:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) Added console.log support for writing to browser console
+* [Function Item:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) Added console.log support for writing to browser console
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5307,15 +5307,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [AWS Transcribe](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awstranscribe)
-* [SSH](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.ssh)
-* [UptimeRobot](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.uptimerobot)
+* [AWS Transcribe](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awstranscribe)
+* [SSH](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.ssh)
+* [UptimeRobot](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.uptimerobot)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [DeepL:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.deepl) Added support for Free API
-* [Function:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) Added the functionality to log console.log messages to the browser console
-* [Function Item:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) Added the functionality to log console.log messages to the browser console
+* [DeepL:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.deepl) Added support for Free API
+* [Function:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) Added the functionality to log console.log messages to the browser console
+* [Function Item:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) Added the functionality to log console.log messages to the browser console
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5327,9 +5327,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Google Drive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledrive) Fixed an issue with the Drive resource
-* [Notion:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion) Fixed an issue with the filtering fields type and fixed an issue with the link option
-* [Switch:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch) Fixed an issue with the Expression mode
+* [Google Drive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive) Fixed an issue with the Drive resource
+* [Notion:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion) Fixed an issue with the filtering fields type and fixed an issue with the link option
+* [Switch:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.switch) Fixed an issue with the Expression mode
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5353,21 +5353,21 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Notion](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.notion)
-* [Notion Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.notiontrigger)
+* [Notion](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.notion)
+* [Notion Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.notiontrigger)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [GraphQL:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.graphql) Added Header Auth authentication method
-* [Twilio:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.twilio) Added API Key authentication method
+* [GraphQL:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.graphql) Added Header Auth authentication method
+* [Twilio:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.twilio) Added API Key authentication method
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [HubSpot:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot) Fixed an issue with pagination for Deals resource
-* [Keap:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.keap) Fixed an issue with the data type of the Order Title field
+* [HubSpot:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot) Fixed an issue with pagination for Deals resource
+* [Keap:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.keap) Fixed an issue with the data type of the Order Title field
 * Orbit: Fixed an issue with the activity type in Post operation
-* [Slack:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack) Fixed an issue with the Get Profile operation
-* [Strava:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.strava) Fixed an issue with the paging parameter
+* [Slack:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack) Fixed an issue with the Get Profile operation
+* [Strava:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.strava) Fixed an issue with the paging parameter
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5380,15 +5380,15 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [iCalendar](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.converttofile)
+* [iCalendar](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.converttofile)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Google Cloud Firestore:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore) Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
-* [IMAP Email:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.emailimap) Added the Force reconnect option
-* [Paddle:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.paddle) Added the Use Sandbox environment API parameter
-* [Spotify:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.spotify) Added the Position parameter to the Add operation of the Playlist resource
-* [WooCommerce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.woocommerce) Added the Include Credentials in Query parameter
+* [Google Cloud Firestore:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore) Added the functionality for GeoPoint parsing and added ISO-8601 format for date validation
+* [IMAP Email:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.emailimap) Added the Force reconnect option
+* [Paddle:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.paddle) Added the Use Sandbox environment API parameter
+* [Spotify:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.spotify) Added the Position parameter to the Add operation of the Playlist resource
+* [WooCommerce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.woocommerce) Added the Include Credentials in Query parameter
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5399,9 +5399,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Clockify Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger) Fixed an issue that occurred when the node returned an empty array
-* [Google Cloud Firestore:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore) Fixed an issue with parsing empty document, and an issue with the detection of date
-* [HubSpot:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.hubspot) Fixed an issue with the Return All option
+* [Clockify Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger) Fixed an issue that occurred when the node returned an empty array
+* [Google Cloud Firestore:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore) Fixed an issue with parsing empty document, and an issue with the detection of date
+* [HubSpot:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.hubspot) Fixed an issue with the Return All option
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5414,13 +5414,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [AWS Comprehend:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awscomprehend) Added the Detect Entities operation
-* [AWS Lambda:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awslambda) Added the ability to list functions recursively if the number of functions exceeds 50
-* [Google Analytics:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googleanalytics) Added pagination to the Report resource
-* [Mailjet:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mailjet) Added Reply To parameter
-* [Redis:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.redis) Added the Increment operation
-* [Spreadsheet File:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.converttofile) Added the Header Row option
-* [Webflow Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger) Added Collection Item Created, Collection Item Updated, and Collection Item Deleted events
+* [AWS Comprehend:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awscomprehend) Added the Detect Entities operation
+* [AWS Lambda:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awslambda) Added the ability to list functions recursively if the number of functions exceeds 50
+* [Google Analytics:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googleanalytics) Added pagination to the Report resource
+* [Mailjet:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mailjet) Added Reply To parameter
+* [Redis:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.redis) Added the Increment operation
+* [Spreadsheet File:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.converttofile) Added the Header Row option
+* [Webflow Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger) Added Collection Item Created, Collection Item Updated, and Collection Item Deleted events
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5429,9 +5429,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Google Cloud Firestore:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore) Fixed an issue with parsing null value
-* [Google Sheets:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlesheets) Fixed an issue with the Key Row parameter
-* [HubSpot:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.zohocrm) Fixed an issue with the authentication
+* [Google Cloud Firestore:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore) Fixed an issue with parsing null value
+* [Google Sheets:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlesheets) Fixed an issue with the Key Row parameter
+* [HubSpot:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.zohocrm) Fixed an issue with the authentication
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5459,23 +5459,23 @@ Please note that this version contains a breaking change. You can read more abou
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Kitemaker](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.kitemaker)
-* [MQTT](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mqtt)
+* [Kitemaker](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.kitemaker)
+* [MQTT](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mqtt)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [CrateDB:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.cratedb) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
-* [ERPNext:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.erpnext) Added support for self-hosted ERPNext instances
-* [FTP:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.ftp) Added the functionality to delete folders
-* [Google Calendar:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlecalendar) Added the Continue on Fail functionality
-* [Google Drive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledrive) Added the functionality to add file name when downloading files
-* [Gmail:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail) Added functionality to handle multiple binary properties
-* [Microsoft Outlook:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftoutlook) Added Is Read and Move option to the Message resource
-* [Postgres:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.postgres) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
-* [QuestDB:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.questdb) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
-* [QuickBase:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.quickbase) Added option to use Field IDs
-* [TimescaleDB:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.timescaledb) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
-* [Twist:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.twist) Added Get, Get All, Delete, and Update operations to the Message Conversation resource. Added Archive, Unarchive, and Delete operations to the Channel resource. Added Thread and Comment resource
+* [CrateDB:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.cratedb) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [ERPNext:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.erpnext) Added support for self-hosted ERPNext instances
+* [FTP:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.ftp) Added the functionality to delete folders
+* [Google Calendar:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecalendar) Added the Continue on Fail functionality
+* [Google Drive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive) Added the functionality to add file name when downloading files
+* [Gmail:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail) Added functionality to handle multiple binary properties
+* [Microsoft Outlook:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftoutlook) Added Is Read and Move option to the Message resource
+* [Postgres:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.postgres) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [QuestDB:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.questdb) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [QuickBase:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.quickbase) Added option to use Field IDs
+* [TimescaleDB:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.timescaledb) Added query parameters. The Execute Query operation returns the result from all queries executed instead of just one of the results.
+* [Twist:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.twist) Added Get, Get All, Delete, and Update operations to the Message Conversation resource. Added Archive, Unarchive, and Delete operations to the Channel resource. Added Thread and Comment resource
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5485,13 +5485,13 @@ Please note that this version contains a breaking change. You can read more abou
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [GetResponse Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger) Fixed an issue with error handling
-* [GitHub Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.githubtrigger) Fixed an issue with error handling
-* [GitLab Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger) Fixed an issue with error handling
-* [Google Sheets:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlesheets) Fixed an issue with the Lookup operation for returning empty rows
+* [GetResponse Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger) Fixed an issue with error handling
+* [GitHub Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.githubtrigger) Fixed an issue with error handling
+* [GitLab Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger) Fixed an issue with error handling
+* [Google Sheets:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlesheets) Fixed an issue with the Lookup operation for returning empty rows
 * Orbit: Fixed issues with the Post resource
-* [Redis:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.redis) Fixed an issue with the node not returning an error
-* [Xero:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.xero) Fixed an issue with the Create operation for the Contact resource
+* [Redis:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.redis) Fixed an issue with the node not returning an error
+* [Xero:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.xero) Fixed an issue with the Create operation for the Contact resource
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5510,20 +5510,20 @@ Please note that this version contains a breaking change. You can read more abou
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Mailcheck](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mailcheck)
-* [n8n Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8ntrigger)
-* [Workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.workflowtrigger)
+* [Mailcheck](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mailcheck)
+* [n8n Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.n8ntrigger)
+* [Workflow Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.workflowtrigger)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [CrateDB:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.cratedb) Added the Mode option that allows you to execute queries as transactions
-* [Nextcloud:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.nextcloud) Added Delete, Get, Get All, and Update operation to the User resource
-* [Postgres:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.postgres) Added the Mode option that allows you to execute queries as transactions
-* [QuestDB:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.questdb) Added the Mode option that allows you to execute queries as transactions
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Added Owner option to the Case and Lead resources. Added custom fields to Create and Update operations of the Case resource
-* [Sentry.io:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.sentryio) Added Delete and Update operations to Project, Release, and Team resources
-* [TimescaleDB:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.timescaledb) Added the Mode option that allows you to execute queries as transactions
-* [Zendesk Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger) Added support to retrieve custom fields
+* [CrateDB:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.cratedb) Added the Mode option that allows you to execute queries as transactions
+* [Nextcloud:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.nextcloud) Added Delete, Get, Get All, and Update operation to the User resource
+* [Postgres:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.postgres) Added the Mode option that allows you to execute queries as transactions
+* [QuestDB:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.questdb) Added the Mode option that allows you to execute queries as transactions
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Added Owner option to the Case and Lead resources. Added custom fields to Create and Update operations of the Case resource
+* [Sentry.io:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.sentryio) Added Delete and Update operations to Project, Release, and Team resources
+* [TimescaleDB:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.timescaledb) Added the Mode option that allows you to execute queries as transactions
+* [Zendesk Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger) Added support to retrieve custom fields
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5532,9 +5532,9 @@ Please note that this version contains a breaking change. You can read more abou
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Google Sheets:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlesheets) Fixed an issue with the Lookup operation for returning multiple empty rows
-* [Intercom:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.intercom) Fixed an issue with the User operation in the Company resource
-* [Mautic:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mautic) Fixed an issue with sending the lastActive parameter
+* [Google Sheets:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlesheets) Fixed an issue with the Lookup operation for returning multiple empty rows
+* [Intercom:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.intercom) Fixed an issue with the User operation in the Company resource
+* [Mautic:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mautic) Fixed an issue with sending the lastActive parameter
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5556,18 +5556,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Google BigQuery](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlebigquery)
-* [Webflow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.webflow)
+* [Google BigQuery](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlebigquery)
+* [Webflow](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.webflow)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Date & Time:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datetime) Added Calculate a Date action that allows you to add or subtract time from a date
-* [GitLab:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gitlab) Added Get, Get All, Update, and Delete operations to the Release resource
-* [Microsoft OneDrive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftonedrive) Added Delete operation to the Folder resource
-* [Monday:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mondaycom) Added support for OAuth2 authentication
-* [MongoDB:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mongodb) Added Limit, Skip, and Sort options to the Find operation and added Upsert parameter to the Update operation. Added the functionality to close the connection after use
-* [MySQL:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mysql) Added support for insert modifiers and added support for SSL
-* [RabbitMQ:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.rabbitmq) Added the functionality to close the connection after use and added support for AMPQS
+* [Date & Time:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.datetime) Added Calculate a Date action that allows you to add or subtract time from a date
+* [GitLab:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gitlab) Added Get, Get All, Update, and Delete operations to the Release resource
+* [Microsoft OneDrive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftonedrive) Added Delete operation to the Folder resource
+* [Monday:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mondaycom) Added support for OAuth2 authentication
+* [MongoDB:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mongodb) Added Limit, Skip, and Sort options to the Find operation and added Upsert parameter to the Update operation. Added the functionality to close the connection after use
+* [MySQL:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mysql) Added support for insert modifiers and added support for SSL
+* [RabbitMQ:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.rabbitmq) Added the functionality to close the connection after use and added support for AMPQS
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5578,10 +5578,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [AWS SQS:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awssqs) Fixed an issue with API version and casing
-* [IMAP:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.emailimap) Fixed re-connection issue
-* [Keap:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.keap) Fixed an issue with the Opt In Reason parameter
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Fixed an issue with loading custom fields
+* [AWS SQS:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awssqs) Fixed an issue with API version and casing
+* [IMAP:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.emailimap) Fixed re-connection issue
+* [Keap:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.keap) Fixed an issue with the Opt In Reason parameter
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Fixed an issue with loading custom fields
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5594,13 +5594,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [Google Slides](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googleslides)
+* [Google Slides](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googleslides)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [GitHub:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) Added Release resource
-* [TheHive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.thehive) Added support to fetch observable data types
-* [RabbitMQ:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.rabbitmq) Added header parameters
+* [GitHub:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.github) Added Release resource
+* [TheHive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.thehive) Added support to fetch observable data types
+* [RabbitMQ:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.rabbitmq) Added header parameters
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5611,9 +5611,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Jira:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) Fixed an issue with loading issue types with classic project type
-* [RabbitMQ Trigger:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger) Fixed an issue with the node reusing the same item
-* [SendGrid:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.sendgrid) Fixed an issue with the dynamic field generation
+* [Jira:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jira) Fixed an issue with loading issue types with classic project type
+* [RabbitMQ Trigger:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger) Fixed an issue with the node reusing the same item
+* [SendGrid:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.sendgrid) Fixed an issue with the dynamic field generation
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5626,18 +5626,18 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 
-* [AWS SQS](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.awssqs)
-* [Copper](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.copper)
-* [ERPNext](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.erpnext)
-* [Oura](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.oura)
+* [AWS SQS](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.awssqs)
+* [Copper](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.copper)
+* [ERPNext](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.erpnext)
+* [Oura](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.oura)
 
 ### Enhanced nodes <a href="#enhanced-nodes" id="enhanced-nodes"></a>
 
-* [Google Drive:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googledrive) Added support for creating folders for shared drives
-* [Google Sheets:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlesheets) Added Create and Remove operation to the Sheet resource
-* [Harvest:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.harvest) Added Update operation to the Task resource
-* [Jira:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) Added Reporter field to the Issue resource
-* [Postgres:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.postgres) Added support for type casting
+* [Google Drive:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive) Added support for creating folders for shared drives
+* [Google Sheets:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlesheets) Added Create and Remove operation to the Sheet resource
+* [Harvest:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.harvest) Added Update operation to the Task resource
+* [Jira:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.jira) Added Reporter field to the Issue resource
+* [Postgres:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.postgres) Added support for type casting
 
 ### Core Functionality <a href="#core-functionality" id="core-functionality"></a>
 
@@ -5645,10 +5645,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-* [Bitwarden:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.bitwarden) Fixed an issue with the Update operation of the Group resource
-* [Cortex:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.cortex) Fixed an issue where only the last item got returned
-* [Invoice Ninja:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.invoiceninja) Fixed an issue with the Project parameter
-* [Salesforce:](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.salesforce) Fixed an issue with the Get All operation of the Custom Object resource
+* [Bitwarden:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.bitwarden) Fixed an issue with the Update operation of the Group resource
+* [Cortex:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.cortex) Fixed an issue where only the last item got returned
+* [Invoice Ninja:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.invoiceninja) Fixed an issue with the Project parameter
+* [Salesforce:](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.salesforce) Fixed an issue with the Get All operation of the Custom Object resource
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5721,7 +5721,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * Spotify: Added Create a Playlist operation to Playlist resource and Get New Releases to the Album resource
 * Bug fixes
 * Airtable: Fixed a bug with updating and deleting records
-* Added the functionality to expose metrics to Prometheus. Read more about that [here](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables)
+* Added the functionality to expose metrics to Prometheus. Read more about that [here](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables)
 * Updated fallback values to match the value type
 * Added the functionality to display debugging information for pending workflows on exit
 * Fixed an issue with queue mode for the executions that shouldn't be saved
@@ -5923,7 +5923,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * AWS SNS: Fixed an issue with signature
 * Fixed an issue with nodes not executing if two input gets passed and one of them didn't return any data
 * The code editor doesn'tget closed when clicked anywhere outside the editor
-* Added CLI commands to [export](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#export-workflows-and-credentials) and [import](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#import-workflows-and-credentials) credentials and workflows
+* Added CLI commands to [export](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/use-the-command-line#export-workflows-and-credentials) and [import](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/use-the-command-line#import-workflows-and-credentials) credentials and workflows
 * The title in the browser tab now resets for new workflows
 
 ## n8n@0.102.0 <a href="#n8n01020" id="n8n01020"></a>
@@ -6558,7 +6558,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * Google Sheets
 * Shopify
 * Todoist
-* Enhanced support for [JWT based authentication](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.jwt)
+* Enhanced support for [JWT based authentication](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.jwt)
 * Added an option to execute a node once, using data of only the first item
 
 ## n8n@0.76.0 <a href="#n8n0760" id="n8n0760"></a>

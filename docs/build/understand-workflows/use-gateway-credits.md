@@ -9,9 +9,9 @@ layout:
 
 # Use Gateway credits
 
-Gateway credits let you run supported AI models and third-party services in your workflows without creating provider accounts or setting up [credentials](create-and-edit-credentials.md). n8n routes the requests through its own gateway and bills the usage from your instance's prepaid credit balance. For how billing works, refer to [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits).
+Gateway credits let you run supported AI models and third-party services in your workflows without creating provider accounts or setting up [credentials](create-and-edit-credentials.md). n8n routes the requests through its own gateway and bills the usage from your instance's prepaid credit balance. For how billing works, refer to [Gateway credits](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits).
 
-Gateway credits don't pay for [n8n Assistant](../ways-of-building-workflows/n8n-assistant.md), which uses separate [Assistant credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/assistant-credits).
+Gateway credits don't pay for [n8n Assistant](../ways-of-building-workflows/n8n-assistant.md), which uses separate [Assistant credits](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/assistant-credits).
 
 {% hint style="info" %}
 **Feature availability**
@@ -52,7 +52,7 @@ Some nodes support Gateway credits for part of what they do. When you use Gatewa
 
 ## When your balance runs out
 
-Nodes using Gateway credits fail when your instance's balance reaches zero. The instance owner can [top up the balance](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits/top-up-gateway-credits) or set up auto top-up, and can [track spend by model or workflow](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits/track-gateway-credit-spend) in the n8n Cloud console. You can also switch the affected nodes to your own credentials at any time.
+Nodes using Gateway credits fail when your instance's balance reaches zero. The instance owner can [top up the balance](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits/top-up-gateway-credits) or set up auto top-up, and can [track spend by model or workflow](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits/track-gateway-credit-spend) in the n8n Cloud console. You can also switch the affected nodes to your own credentials at any time.
 
 ## Gateway credits versus your own API keys
 
@@ -63,7 +63,7 @@ Both approaches run the same nodes. The differences are in setup, billing, and c
 | Setup | None: select and run | Create a provider account, generate a key, add a credential |
 | Billing | One prepaid balance across all supported services, billed by n8n | Separate billing per provider, at your own rates and terms |
 | Coverage | Supported services and models only | Any service or model n8n integrates with, including your own plan's rate limits and features |
-| Spend visibility | One [spend view](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits/track-gateway-credit-spend) by model and workflow in n8n | Each provider's own dashboard |
+| Spend visibility | One [spend view](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits/track-gateway-credit-spend) by model and workflow in n8n | Each provider's own dashboard |
 
 You can switch a node between the two at any time without rebuilding the workflow.
 
@@ -71,7 +71,7 @@ You can switch a node between the two at any time without rebuilding the workflo
 
 Instance owners can turn Gateway credits off for everyone on the instance:
 
-1. Open the [Cloud console](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/use-the-cloud-console) and select **Instance settings**.
+1. Open the [Cloud console](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/use-the-cloud-console) and select **Instance settings**.
 1. In the **Runtime** section, turn off **Gateway credits**.
 1. Select **Save and restart** in the bar at the bottom of the page. Your instance restarts to apply the change, and is offline until the restart completes.
 

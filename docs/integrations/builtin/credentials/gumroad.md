@@ -48,7 +48,7 @@ To configure this credential, you'll need:
 Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
 {% endhint %}
 
-If you're [self-hosting n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n), you'll need:
+If you're [self-hosting n8n](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n), you'll need:
 
 - An **OAuth Redirect URL**
 - A **Client ID**

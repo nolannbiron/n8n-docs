@@ -72,15 +72,15 @@ You can use any of the following services as your human review channel:
 
 | Channel | Description |
 |---------|-------------|
-| [Chat](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chat) | n8n's built-in chat interface |
-| [Slack](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack) | Send approval requests to a Slack channel or DM |
-| [Discord](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.discord) | Send approval requests to a Discord channel |
-| [Telegram](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.telegram) | Send approval requests through Telegram |
-| [Microsoft Teams](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftteams) | Send approval requests to a Teams channel or chat |
-| [Gmail](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail) | Send approval requests via email |
-| [WhatsApp Business Cloud](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.whatsapp) | Send approval requests through WhatsApp |
-| [Google Chat](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlechat) | Send approval requests to Google Chat |
-| [Microsoft Outlook](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftoutlook) | Send approval requests via Outlook email |
+| [Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chat) | n8n's built-in chat interface |
+| [Slack](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack) | Send approval requests to a Slack channel or DM |
+| [Discord](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.discord) | Send approval requests to a Discord channel |
+| [Telegram](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.telegram) | Send approval requests through Telegram |
+| [Microsoft Teams](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftteams) | Send approval requests to a Teams channel or chat |
+| [Gmail](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail) | Send approval requests via email |
+| [WhatsApp Business Cloud](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.whatsapp) | Send approval requests through WhatsApp |
+| [Google Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlechat) | Send approval requests to Google Chat |
+| [Microsoft Outlook](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftoutlook) | Send approval requests via Outlook email |
 
 ## Using expressions in human review tools <a href="#using-expressions-in-human-review-tools" id="using-expressions-in-human-review-tools"></a>
 
@@ -136,6 +136,6 @@ When using an AI Agent as a tool for another AI Agent, human review steps in the
 - [Use website content](use-website-content.md)
 - [Set a human fallback for AI workflows](set-a-human-fallback-for-ai-workflows.md)
 - [Use AI for parameters](use-ai-for-parameters.md)
-- [AI Agent node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
-- [Tools Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent)
+- [AI Agent node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
+- [Tools Agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent)
 - [What is a tool in AI?](../understand-ai-components/how-tools-work.md)

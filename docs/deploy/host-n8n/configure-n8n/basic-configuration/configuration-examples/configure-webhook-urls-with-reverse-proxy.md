@@ -31,7 +31,7 @@ export N8N_PROXY_HOPS=1
 ```
 Refer to [Environment variables reference](../use-environment-variables/endpoints.md) for more information on this variable.
 
-If you also run n8n's [instance-level MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) behind the same reverse proxy, make sure it forwards the [MCP request headers](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server#mcp-request-headers) too.
+If you also run n8n's [instance-level MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server) behind the same reverse proxy, make sure it forwards the [MCP request headers](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server#mcp-request-headers) too.
 
 ## Serve forms from a separate hostname behind an authentication proxy
 
@@ -45,8 +45,8 @@ Some authentication proxies, such as Google Identity-Aware Proxy, use a session 
 
 The setting applies to every page that n8n serves as a form:
 
-* Pages from the [n8n Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger) and [n8n Form](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.form) nodes, including form completion pages
-* Forms from the [Wait](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait#on-form-submitted) node when it resumes **On Form Submitted**
+* Pages from the [n8n Form Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.formtrigger) and [n8n Form](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.form) nodes, including form completion pages
+* Forms from the [Wait](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait#on-form-submitted) node when it resumes **On Form Submitted**
 * Approval forms from the **Send and Wait for Response** operation of app nodes such as Slack and Microsoft Teams
 
 ### Why form submissions fail behind an authentication proxy

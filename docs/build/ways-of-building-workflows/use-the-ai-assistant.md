@@ -40,7 +40,7 @@ Ask n8n AI offers a range of tools to support you:
 * **Answer n8n questions**: Get instant answers to your n8n-related questions, whether they're about specific features or general functionality.
 * **Coding support**: Receive guidance on coding, including SQL and JSON, to optimize your nodes and data processing.
 * **Expression assistance**: Learn how to create and refine [expressions](../work-with-data/expressions-versus-data-nodes.md) to get the most out of your workflows.
-* **Credential setup tips**: Find out how to set up and manage node [credentials](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials) securely and efficiently.
+* **Credential setup tips**: Find out how to set up and manage node [credentials](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials) securely and efficiently.
 
 ## Tips for getting the most out of the Assistant <a href="#tips-for-getting-the-most-out-of-the-assistant" id="tips-for-getting-the-most-out-of-the-assistant"></a>
 
@@ -83,7 +83,7 @@ The **Send actual data values** option is deprecated. Once it's on, you can't tu
 
 ### What context does the Assistant have? <a href="#what-context-does-the-assistant-have" id="what-context-does-the-assistant-have"></a>
 
-Ask n8n AI has access to all elements displayed on your n8n screen, excluding actual input and output data values (like customer information). To learn more about what data n8n shares with Ask n8n AI, refer to [AI in n8n](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa/#ai-in-n8n).
+Ask n8n AI has access to all elements displayed on your n8n screen, excluding actual input and output data values (like customer information). To learn more about what data n8n shares with Ask n8n AI, refer to [AI in n8n](https://app.gitbook.com/s/V7NOibyUfmMLK3v1khVr/#ai-in-n8n).
 
 ### Who can use the Assistant? <a href="#who-can-use-the-assistant" id="who-can-use-the-assistant"></a>
 

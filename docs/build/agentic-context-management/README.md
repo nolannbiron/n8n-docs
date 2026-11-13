@@ -54,7 +54,7 @@ Use this instead of web search for anything about n8n, including building workfl
 You manage context in **Settings** > **Context**. n8n stores it once and passes it to every AI surface that reads it:
 
 * **n8n Assistant** reads context on every message you send, so an edit applies from your next message.
-* **MCP clients** connected to the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) read context through MCP tools, each time they call them.
+* **MCP clients** connected to the [n8n MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server) read context through MCP tools, each time they call them.
 
 Context follows n8n's permissions. Each person only receives the context they're allowed to see, and only people with the right role can change context that applies to others.
 

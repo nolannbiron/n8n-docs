@@ -40,7 +40,7 @@ The question you want to ask.
 
 Refer to [LangChain's semantic search tutorial](https://docs.langchain.com/oss/javascript/langchain/knowledge-base) for an example of how LangChain uses a vector store as a retriever.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

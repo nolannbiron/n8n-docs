@@ -33,10 +33,10 @@ On n8n Cloud, or when using n8n's Docker image, n8n restarts automatically when 
 
 Such problems occur when a workflow execution requires more memory than available to an n8n instance. Factors increasing the memory usage for a workflow execution include:
 
-- Amount of [JSON data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure).
+- Amount of [JSON data](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure).
 - Size of binary data.
 - Number of nodes in a workflow.
-- Some nodes are memory-heavy: the [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) node and the older Function node can increase memory consumption significantly.
+- Some nodes are memory-heavy: the [Code](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) node and the older Function node can increase memory consumption significantly.
 - Manual or automatic workflow executions: manual executions increase memory consumption as n8n makes a copy of the data for the frontend.
 - Additional workflows running at the same time.
 
@@ -59,7 +59,7 @@ This approach is more complex and means re-building the workflows causing the is
 * Avoid manual executions when processing larger amounts of data.
 * Split the workflow up into sub-workflows and ensure each sub-workflow returns a limited amount of data to its parent workflow.
 
-Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two more nodes: the [Loop Over Items](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitinbatches) node to split up the items into smaller batches and the [Execute Workflow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflow) node to start the sub-workflow.
+Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two more nodes: the [Loop Over Items](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.splitinbatches) node to split up the items into smaller batches and the [Execute Workflow](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executeworkflow) node to start the sub-workflow.
 
 However, as long as your sub-workflow does the heavy lifting for each batch and then returns only a small result set to the main workflow, this reduces memory consumption. This is because the sub-workflow only holds the data for the current batch in memory, after which the memory is free again.
 

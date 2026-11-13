@@ -48,4 +48,4 @@ To configure this credential, you'll need a [Gong](https://app.gong.io/welcome/s
 * A **Client ID**: Generated when you create an Oauth app for Gong.
 * A **Client Secret**: Generated when you create an Oauth app for Gong.
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to [create an app](https://help.gong.io/docs/create-an-app-for-gong) to configure OAuth2. Refer to [Gong's OAuth documentation](https://gong.app.gong.io/settings/api/documentation) for more information about setting up OAuth2.
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you'll need to [create an app](https://help.gong.io/docs/create-an-app-for-gong) to configure OAuth2. Refer to [Gong's OAuth documentation](https://gong.app.gong.io/settings/api/documentation) for more information about setting up OAuth2.

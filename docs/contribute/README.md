@@ -53,7 +53,7 @@ Share a workflow that solves a practical problem in the [n8n template library](h
 
 ## Build a node <a href="#build-a-node" id="build-a-node"></a>
 
-Create an integration for a third-party service. Check out [the node creation docs](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview) for guidance on how to create and publish a community node.
+Create an integration for a third-party service. Check out [the node creation docs](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/overview) for guidance on how to create and publish a community node.
 
 ## Contribute to the code <a href="#contribute-to-the-code" id="contribute-to-the-code"></a>
 

@@ -103,7 +103,7 @@ Every plan runs on the same underlying product with different features, usage li
 | **Pro** | Power users and small teams that need higher limits, admin accounts, and insights |
 | **Enterprise** | Organizations that need advanced security, scaling, and dedicated support |
 
-For how to start a trial and upgrade, see [Try free then choose a plan](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/start-your-free-trial). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
+For how to start a trial and upgrade, see [Try free then choose a plan](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/start-your-free-trial). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
 
 ### Pick a plan or edition for self-hosted n8n <a href="#if-you-chose-self-hosted-pick-an-edition" id="if-you-chose-self-hosted-pick-an-edition"></a>
 
@@ -116,7 +116,7 @@ Every self-hosted installation runs on the same underlying product. You can stic
 | **Business** | Paid (license key when you subscribe to Business plan) | Teams needing paid features like SSO, environments, and projects |
 | **Enterprise** | Paid (license key when you subscribe to Enterprise plan) | Organizations needing the most advanced security, scaling, and governance |
 
-For the differences between editions and how to register or license an instance, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
+For the differences between editions and how to register or license an instance, see [Compare plans and editions](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/community-edition-features). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
 
 To register a Community edition instance for the extra free features, go to **Settings > Plan & usage** and select **Unlock**.
 
@@ -135,14 +135,14 @@ Some features require certain paid plan subscriptions, including:
 - Workflow and credential sharing
 - Version control using Git
 
-Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted plans and editions differ. For how your plan, platform, and n8n version determine access, and how maturity status (Preview, GA, deprecated, or removed) affects whether you can rely on a feature, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/community-edition-features) for how the self-hosted plans and editions differ. For how your plan, platform, and n8n version determine access, and how maturity status (Preview, GA, deprecated, or removed) affects whether you can rely on a feature, see [Understand feature availability](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/understand-feature-availability).
 
 ## Getting started <a href="#getting-started" id="getting-started"></a>
 
 Ready to begin?
 
-- **[Get started with n8n Cloud](https://n8n.io/cloud/)** — sign up for instant access, then [choose a plan](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/start-your-free-trial)
-- **[Get started with self-hosted](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n)** — installation and deployment guides, then [choose a plan or edition](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features)
+- **[Get started with n8n Cloud](https://n8n.io/cloud/)** — sign up for instant access, then [choose a plan](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/start-your-free-trial)
+- **[Get started with self-hosted](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n)** — installation and deployment guides, then [choose a plan or edition](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/community-edition-features)
 
 For the current plans, editions, licenses, and prices, always check the [pricing page](https://n8n.io/pricing/).
 

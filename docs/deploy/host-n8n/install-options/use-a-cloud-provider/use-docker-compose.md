@@ -122,7 +122,7 @@ SSL_EMAIL=user@example.com
 
 ## 5. Create local files directory <a href="#5-create-local-files-directory" id="5-create-local-files-directory"></a>
 
-Inside your project directory, create a directory called `local-files` for sharing files between the n8n instance and the host system (for example, using the [Read/Write Files from Disk node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.readwritefile)):
+Inside your project directory, create a directory called `local-files` for sharing files between the n8n instance and the host system (for example, using the [Read/Write Files from Disk node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.readwritefile)):
 
 ```shell
 mkdir local-files
@@ -232,8 +232,8 @@ If you have trouble reaching your instance, check your server's firewall setting
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-* Learn more about [configuring](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling) n8n.
-* Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow).
+* Learn more about [configuring](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling) n8n.
+* Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow).
 
 ## Related resources
 

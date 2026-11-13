@@ -159,7 +159,7 @@ Manage the instance security policy from environment variables, including MFA en
 Managing log streaming from environment variables is available from n8n 2.19.0.
 {% endhint %}
 
-Manage [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) destinations from environment variables. See [Configure using environment variables](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems#configure-using-environment-variables) for the per-destination JSON shape.
+Manage [log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems) destinations from environment variables. See [Configure using environment variables](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems#configure-using-environment-variables) for the per-destination JSON shape.
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
@@ -174,7 +174,7 @@ Manage [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-an
 Managing instance-level MCP access from environment variables is available from n8n 2.20.0.
 {% endhint %}
 
-Manage [instance-level MCP access](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) from environment variables.
+Manage [instance-level MCP access](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server) from environment variables.
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
@@ -189,14 +189,14 @@ Manage [instance-level MCP access](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvc
 Managing installed community packages from environment variables is available from n8n 2.21.0.
 {% endhint %}
 
-Manage the set of installed [community packages](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) from environment variables. n8n reconciles the installed packages against the list on every startup. Managed packages can't be uninstalled or updated through the UI.
+Manage the set of installed [community packages](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/community-nodes/installation-and-management) from environment variables. n8n reconciles the installed packages against the list on every startup. Managed packages can't be uninstalled or updated through the UI.
 
 `N8N_COMMUNITY_PACKAGES_ENABLED` must also be set to `true` (the default). When community packages are disabled, n8n ignores `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` and logs a warning.
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage installed community packages from environment variables. When `true`, n8n reconciles the installed packages against `N8N_COMMUNITY_PACKAGES` on every startup, installing missing packages, correcting versions, and **uninstalling any currently-installed packages that aren't in the list**. The **Community nodes** settings page becomes read-only: you can't install, update, or uninstall packages from the UI while this is enabled. |
-| `N8N_COMMUNITY_PACKAGES` | JSON string | - | JSON array of community packages to install. Each entry is an object with a `name` (required) and optional `version` and `checksum` fields. You can also embed the version in the name as `<package-name>@<version>`. See [environment variable installation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management/environment-variable-installation) for the full per-field reference. |
+| `N8N_COMMUNITY_PACKAGES` | JSON string | - | JSON array of community packages to install. Each entry is an object with a `name` (required) and optional `version` and `checksum` fields. You can also embed the version in the name as `<package-name>@<version>`. See [environment variable installation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/community-nodes/installation-and-management/environment-variable-installation) for the full per-field reference. |
 
 ## Combined example <a href="#combined-example" id="combined-example"></a>
 

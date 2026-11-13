@@ -11,9 +11,9 @@ layout:
 
 # Custom API operations <a href="#custom-api-operations" id="custom-api-operations"></a>
 
-One of the most complex parts of setting up API calls is managing authentication. n8n provides [credentials](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n) support for operations and services beyond those supported by built-in nodes.
+One of the most complex parts of setting up API calls is managing authentication. n8n provides [credentials](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/key-concept-glossary#credential-n8n) support for operations and services beyond those supported by built-in nodes.
 
-* Custom operations for existing nodes: n8n supplies hundreds of nodes to create workflows that link multiple products. However, some nodes don't include all the possible operations supported by a product's API. You can work around this by making a custom API call using the [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) node.
+* Custom operations for existing nodes: n8n supplies hundreds of nodes to create workflows that link multiple products. However, some nodes don't include all the possible operations supported by a product's API. You can work around this by making a custom API call using the [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) node.
 * Credential-only nodes: n8n includes credential-only nodes. These are integrations where n8n supports setting up credentials for use in the HTTP Request node, but doesn't provide a standalone node. You can find a credential-only node in the nodes panel, as you would for any other integration.
 
 ## Predefined credential types <a href="#predefined-credential-types" id="predefined-credential-types"></a>

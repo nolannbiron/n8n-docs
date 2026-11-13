@@ -14,7 +14,7 @@ layout:
 
 The HTTP Request node supports pagination. This page provides some example configurations, including using the [HTTP node variables](../../use-built-in-shortcuts/http-node.md).
 
-Refer to [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) for more information on the node.
+Refer to [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) for more information on the node.
 
 {% hint style="info" %}
 **API differences**

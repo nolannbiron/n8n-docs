@@ -67,7 +67,7 @@ With **Session ID** set to **Connected Chat Trigger Node**, each Databricks Lake
 
 Refer to the [Lakebase Data API documentation](https://docs.databricks.com/aws/en/oltp/projects/data-api) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Common issues
 

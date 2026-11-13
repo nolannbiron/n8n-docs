@@ -101,9 +101,9 @@ Time saved tracking currently only works on parent workflows. Time saved from su
 
 ## Disable or configure insights metrics collection <a href="#disable-or-configure-insights-metrics-collection" id="disable-or-configure-insights-metrics-collection"></a>
 
-If you self-host n8n, you can disable or configure insights and metrics collection using [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/insights).
+If you self-host n8n, you can disable or configure insights and metrics collection using [environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/insights).
 
-By default, n8n keeps compacted insights data for 365 days (`N8N_INSIGHTS_MAX_AGE_DAYS`). n8n caps retention at 730 days (two years); use a lower number for a shorter window. To turn off insights collection entirely, set `N8N_DISABLED_MODULES=insights` (refer to the [environment variables page](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/insights)).
+By default, n8n keeps compacted insights data for 365 days (`N8N_INSIGHTS_MAX_AGE_DAYS`). n8n caps retention at 730 days (two years); use a lower number for a shorter window. To turn off insights collection entirely, set `N8N_DISABLED_MODULES=insights` (refer to the [environment variables page](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/insights)).
 
 {% hint style="info" %}
 **Self-host upgrade**
@@ -111,7 +111,7 @@ By default, n8n keeps compacted insights data for 365 days (`N8N_INSIGHTS_MAX_AG
 In older versions, pruning could follow license-driven defaults (commonly 180 days). `N8N_INSIGHTS_MAX_AGE_DAYS` now controls pruning (default 365). Set `N8N_INSIGHTS_MAX_AGE_DAYS=180` if you want a retention window like that previous default.
 {% endhint %}
 
-n8n stores recent insights at one-hour granularity, then compacts older data into day-level and week-level summaries. Use [Insights environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/insights) to control compaction timing, batch limits, runtime, and delays.
+n8n stores recent insights at one-hour granularity, then compacts older data into day-level and week-level summaries. Use [Insights environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/insights) to control compaction timing, batch limits, runtime, and delays.
 
 Raising those thresholds above the defaults keeps finer detail longer. That adds more rows to `insights_by_period` and uses more database space than extending `N8N_INSIGHTS_MAX_AGE_DAYS` alone. Increase `N8N_INSIGHTS_MAX_AGE_DAYS` first if you only need a longer retention window.
 

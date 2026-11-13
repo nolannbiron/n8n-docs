@@ -177,7 +177,7 @@ All users must select:
 	- To use this option, you must put your app through LinkedIn's [Community Management App Review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review) process.
 - **Legacy**: If turned on, the credential uses legacy scopes for `r_liteprofile` and `r_emailaddress` instead of the newer `profile` and `email` scopes.
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to configure OAuth2 from scratch by creating a new developer app:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you'll need to configure OAuth2 from scratch by creating a new developer app:
 
 1. Log into LinkedIn and select this link to [create a new developer app](https://www.linkedin.com/developers/apps/new).
 2. Enter an **App name** for your app, like `n8n integration`.

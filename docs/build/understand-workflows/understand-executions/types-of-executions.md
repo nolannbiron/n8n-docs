@@ -49,19 +49,19 @@ Some common issues you might come across when running partial executions include
 
 This error message appears when you try to perform a partial execution without connecting the workflow to a trigger. Manual executions, including partial executions, attempt to mimic production executions when possible. Part of this includes requiring a trigger node to describe when the workflow logic should execute.
 
-To work around this, connect a trigger node to the workflow with the node you're trying to execute. Most often, a [manual trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger) is the simplest option.
+To work around this, connect a trigger node to the workflow with the node you're trying to execute. Most often, a [manual trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger) is the simplest option.
 
 > Please execute the whole workflow, rather than just the node. (Existing execution data is too large.)
 
 This error can appear when performing partial executions on workflows with large numbers of branches. Partial executions involve sending data and workflow logic to the n8n backend in a way that isn't required for full executions. This error occurs when your workflow exceeds the maximum size allowed for these messages.
 
-To work around this, consider using the [limit node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.limit) to limit node output while running partial executions. Once the workflow is running as intended, you can disable or delete the limit node before enabling production execution.
+To work around this, consider using the [limit node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.limit) to limit node output while running partial executions. Once the workflow is running as intended, you can disable or delete the limit node before enabling production execution.
 
 ## Production executions <a href="#production-executions" id="production-executions"></a>
 
 Production executions occur when a triggering event or schedule automatically runs a workflow. On [paid plans](https://n8n.io/pricing/), production executions count towards your execution quota. For details on what does and doesn't count, refer to [How executions count towards quotas](README.md#how-executions-count-towards-quotas).
 
-To configure production executions, you must attach a [trigger node](#user-content-fn-2)[^2] (any trigger other than the [manual trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger) works) and [publish the workflow](../save-and-publish-workflows.md) using the **Publish** button. Once published, the workflow automatically executes whenever the trigger condition occurs.
+To configure production executions, you must attach a [trigger node](#user-content-fn-2)[^2] (any trigger other than the [manual trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger) works) and [publish the workflow](../save-and-publish-workflows.md) using the **Publish** button. Once published, the workflow automatically executes whenever the trigger condition occurs.
 
 The execution flow for production executions doesn't display in the Editor tab of the workflow as with manual executions. Instead, you can see executions in the workflow's **Executions** tab according to your [workflow settings](../../manage-workflows/configure-workflow-settings.md). From there, you can explore and troubleshoot problems using the [debug in editor feature](debug-executions.md).
 

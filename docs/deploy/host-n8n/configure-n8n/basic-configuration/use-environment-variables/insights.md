@@ -24,17 +24,17 @@ layout:
 {% hint style="info" %}
 **File-based configuration**
 
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
 {% endhint %}
 
-Insights gives instance owners and admins visibility into how workflows perform over time. Refer to [Insights](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights) for details.
+Insights gives instance owners and admins visibility into how workflows perform over time. Refer to [Insights](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/track-usage-with-insights) for details.
 
 {% hint style="warning" %}
 **Storage and compaction thresholds**
 
 `N8N_INSIGHTS_COMPACTION_HOURLY_TO_DAILY_THRESHOLD_DAYS` and `N8N_INSIGHTS_COMPACTION_DAILY_TO_WEEKLY_THRESHOLD_DAYS` set how many days n8n keeps high-resolution insights (metrics stored in one-hour buckets) before each compaction step (from the hour bucket to the day bucket, then from the day bucket to the week bucket). You configure those day counts on your instance.
 
-Raising the values delays compaction. That adds more rows to `insights_by_period` and increases database usage. For how this relates to retention, see [Insights](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection).
+Raising the values delays compaction. That adds more rows to `insights_by_period` and increases database usage. For how this relates to retention, see [Insights](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection).
 {% endhint %}
 
 If you encounter database load issues during compaction, tune how often compaction runs and how much work n8n does in each run:

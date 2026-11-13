@@ -21,9 +21,9 @@ This guidance applies to programmatic-style nodes. If you're using declarative s
 
 Use n8n's item linking to access data from items that precede the current item. n8n needs to know which input item a given output item comes from. If this information is missing, expressions in other nodes may break. As a node developer, you must ensure any items returned by your node support this. 
 
-This applies to programmatic nodes (including trigger nodes). You don't need to consider item linking when building a declarative-style node. Refer to [Choose your node building approach](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/plan-your-node/choose-a-node-building-style) for more information on node styles.
+This applies to programmatic nodes (including trigger nodes). You don't need to consider item linking when building a declarative-style node. Refer to [Choose your node building approach](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/plan-your-node/choose-a-node-building-style) for more information on node styles.
 
-Start by reading [Item linking concepts](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows), which provides a conceptual overview of item linking, and details of the scenarios where n8n can handle the linking automatically.
+Start by reading [Item linking concepts](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data/link-data-items/how-items-link-through-workflows), which provides a conceptual overview of item linking, and details of the scenarios where n8n can handle the linking automatically.
 
 If you need to handle item linking manually, do this by setting `pairedItem` on each item your node returns:
 

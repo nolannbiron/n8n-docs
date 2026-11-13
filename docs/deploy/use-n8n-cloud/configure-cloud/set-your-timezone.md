@@ -12,7 +12,7 @@ layout:
 
 # Set the Cloud instance timezone <a href="#set-the-cloud-instance-timezone" id="set-the-cloud-instance-timezone"></a>
 
-You can change the timezone for your n8n instance. This affects the [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger) and [Date & Time node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datetime). Users can configure the timezone for individual workflows in [Workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings).
+You can change the timezone for your n8n instance. This affects the [Schedule Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.scheduletrigger) and [Date & Time node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.datetime). Users can configure the timezone for individual workflows in [Workflow settings](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/configure-workflow-settings).
 
 To change the instance timezone:
 

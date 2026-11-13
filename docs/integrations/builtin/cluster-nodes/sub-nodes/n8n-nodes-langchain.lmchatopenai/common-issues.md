@@ -38,7 +38,7 @@ This error displays when you've exceeded [OpenAI's rate limits](https://platform
 
 There are two ways to work around this issue:
 
-1. Split your data up into smaller chunks using the [Loop Over Items](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitinbatches) node and add a [Wait](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait) node at the end for a time amount that will help. Copy the code below and paste it into a workflow to use as a template.
+1. Split your data up into smaller chunks using the [Loop Over Items](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.splitinbatches) node and add a [Wait](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait) node at the end for a time amount that will help. Copy the code below and paste it into a workflow to use as a template.
     ```
     {
         "nodes": [
@@ -147,7 +147,7 @@ There are two ways to work around this issue:
         "pinData": {}
     }
     ```
-2. Use the [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) node with the built-in batch-limit option against the [OpenAI API](https://platform.openai.com/docs/quickstart) instead of using the OpenAI node.
+2. Use the [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) node with the built-in batch-limit option against the [OpenAI API](https://platform.openai.com/docs/quickstart) instead of using the OpenAI node.
 
 ## Insufficient quota <a href="#insufficient-quota" id="insufficient-quota"></a>
 
@@ -176,8 +176,8 @@ After topping up your balance, there may be a delay before your OpenAI account r
 
 In n8n:
 
-* check that the [OpenAI credentials](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/openai) use a valid [OpenAI API key](https://platform.openai.com/api-keys) for the account you've added money to
-* ensure that you connect the [OpenAI node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai) to the correct [OpenAI credentials](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/openai)
+* check that the [OpenAI credentials](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/openai) use a valid [OpenAI API key](https://platform.openai.com/api-keys) for the account you've added money to
+* ensure that you connect the [OpenAI node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.openai) to the correct [OpenAI credentials](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/openai)
 
 If you find yourself frequently running out of account credits, consider turning on auto recharge in your [OpenAI billing settings](https://platform.openai.com/settings/organization/billing/overview) to automatically reload your account with credits when your balance reaches $0.
 
@@ -185,7 +185,7 @@ If you find yourself frequently running out of account credits, consider turning
 
 This error displays when the request results in an error but n8n wasn't able to interpret the error message from OpenAI.
 
-To begin troubleshooting, try running the same operation using the [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) node, which should provide a more detailed error message.
+To begin troubleshooting, try running the same operation using the [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) node, which should provide a more detailed error message.
 
 [^1]: n8n cluster nodes consist of one or more sub-nodes connected to a root node. Sub-nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.
 [^2]: Each n8n cluster node contains a single root node that defines the main functionality of the cluster. One or more sub-nodes attach to the root node to extend its functionality.

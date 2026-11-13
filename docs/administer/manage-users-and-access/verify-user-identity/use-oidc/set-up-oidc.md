@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Configuring OIDC using environment variables instead of the UI is available from n8n 2.18.0. See [SSO environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/sso).
+Configuring OIDC using environment variables instead of the UI is available from n8n 2.18.0. See [SSO environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/sso).
 {% endhint %}
 
 ## Setting up and enabling OIDC <a href="#setting-up-and-enabling-oidc" id="setting-up-and-enabling-oidc"></a>
@@ -34,7 +34,7 @@ Configuring OIDC using environment variables instead of the UI is available from
 1. Under **Select Authentication Protocol**, choose **OIDC** from the dropdown.
 1. Copy the **redirect URL** shown (for example, `https://yourworkspace.app.n8n.cloud/rest/sso/oidc/callback`).<br>
 
-	<div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Extra configuration for load balancers or proxies</strong></p><p>If you are running n8n behind a load balancer, make sure you set the <a href="https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment"><code>N8N_EDITOR_BASE_URL</code> environment variable</a>.</p></div>
+	<div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Extra configuration for load balancers or proxies</strong></p><p>If you are running n8n behind a load balancer, make sure you set the <a href="https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment"><code>N8N_EDITOR_BASE_URL</code> environment variable</a>.</p></div>
 
 1. Set up OIDC with your identity provider (IdP). You'll need to:
 	- Create a new OIDC client/application in your IdP.

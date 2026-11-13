@@ -85,7 +85,7 @@ Required permissions for your token:
 Private certificate authorities for Git connections are available from n8n 2.40.0.
 {% endhint %}
 
-If your Git host uses a certificate from a private certificate authority (CA), set the `GIT_SSL_CAINFO` environment variable on the n8n instance to the path of a PEM file that contains the CA certificate. Git uses its own trust store, so the [custom certificate authority](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-custom-ssl-certificate-authorities) configuration for n8n doesn't apply to Git connections. If you keep the certificates in a directory indexed with `c_rehash`, set `GIT_SSL_CAPATH` to the directory instead.
+If your Git host uses a certificate from a private certificate authority (CA), set the `GIT_SSL_CAINFO` environment variable on the n8n instance to the path of a PEM file that contains the CA certificate. Git uses its own trust store, so the [custom certificate authority](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-custom-ssl-certificate-authorities) configuration for n8n doesn't apply to Git connections. If you keep the certificates in a directory indexed with `c_rehash`, set `GIT_SSL_CAPATH` to the directory instead.
 
 The file or directory replaces the default trust store for Git. If the instance also connects to public Git hosts, include their root certificates.
 

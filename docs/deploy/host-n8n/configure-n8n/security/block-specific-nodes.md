@@ -18,7 +18,7 @@ For security reasons, you may want to block your users from accessing or working
 
 Use the `NODES_EXCLUDE` environment variable to prevent your users from accessing specific nodes.
 
-To block nodes per project, or without restarting n8n, use [node type policies](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/control-node-availability) instead. `NODES_EXCLUDE` stops n8n from loading a node at all, so it's the stronger option for nodes that must never run.
+To block nodes per project, or without restarting n8n, use [node type policies](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/control-node-availability) instead. `NODES_EXCLUDE` stops n8n from loading a node at all, so it's the stronger option for nodes that must never run.
 
 ## Exclude nodes <a href="#exclude-nodes" id="exclude-nodes"></a>
 
@@ -30,7 +30,7 @@ For example, setting the variable this way:
 NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"
 ```
 
-Blocks the [Execute Command](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executecommand) and [Read/Write Files from Disk](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.readwritefile) nodes.
+Blocks the [Execute Command](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executecommand) and [Read/Write Files from Disk](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.readwritefile) nodes.
 
 Your n8n users won't be able to search for or use these nodes.
 
@@ -38,8 +38,8 @@ Your n8n users won't be able to search for or use these nodes.
 
 The nodes that can pose security risks vary based on your use case and user profile. Here are some nodes you might want to start with:
 
-* [Execute Command](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executecommand)
-* [Read/Write Files from Disk](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.readwritefile)
+* [Execute Command](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executecommand)
+* [Read/Write Files from Disk](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.readwritefile)
 
 ## Enable nodes that are blocked by default <a href="#enable-nodes-that-are-blocked-by-default" id="enable-nodes-that-are-blocked-by-default"></a>
 

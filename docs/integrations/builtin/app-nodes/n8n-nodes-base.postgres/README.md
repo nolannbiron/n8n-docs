@@ -31,7 +31,7 @@ Refer to [Postgres credentials](../../credentials/postgres.md) for guidance on s
 {% hint style="info" %}
 **This node can be used as an AI tool**
 
-This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters).
+This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/use-ai-for-parameters).
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>
@@ -82,7 +82,7 @@ Enter these parameters:
 
 - **Credential to connect with**: Create or select an existing [Postgres credential](../../credentials/postgres.md).
 - **Operation**: Select **Execute Query**.
-- **Query**: The SQL query to execute. You can use n8n [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes) and tokens like `$1`, `$2`, and `$3` to build [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) to use with [query parameters](#use-query-parameters).
+- **Query**: The SQL query to execute. You can use n8n [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes) and tokens like `$1`, `$2`, and `$3` to build [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) to use with [query parameters](#use-query-parameters).
 
 #### Execute Query options <a href="#execute-query-options" id="execute-query-options"></a>
 
@@ -120,7 +120,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -149,7 +149,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -179,7 +179,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -206,7 +206,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.

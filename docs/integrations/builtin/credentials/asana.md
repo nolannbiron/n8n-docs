@@ -59,7 +59,7 @@ To configure this credential, you'll need an [Asana](https://asana.com/) account
 Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
 {% endhint %}
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to register an application to set up OAuth:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you'll need to register an application to set up OAuth:
 
 1. Open the Asana [developer console](https://app.asana.com/0/my-apps).
 2. In the **My apps** section, select **Create new app**.

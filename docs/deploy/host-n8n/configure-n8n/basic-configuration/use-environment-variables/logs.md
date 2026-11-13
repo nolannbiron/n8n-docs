@@ -22,7 +22,7 @@ layout:
 {% hint style="info" %}
 **File-based configuration**
 
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
 {% endhint %}
 
 This page lists environment variables to set up logging for debugging. Refer to [Logging in n8n](../../../keep-n8n-running/set-up-logging.md) for details. 
@@ -48,7 +48,7 @@ This page lists environment variables to set up logging for debugging. Refer to 
 
 ## Log streaming <a href="#log-streaming" id="log-streaming"></a>
 
-Refer to [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) for more information on this feature.
+Refer to [Log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems) for more information on this feature.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
@@ -57,12 +57,12 @@ Refer to [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-
 | `N8N_EVENTBUS_LOGWRITER_KEEPLOGCOUNT` | Number | `3` | Number of event log files to keep. |
 | `N8N_EVENTBUS_LOGWRITER_MAXFILESIZEINKB` | Number | `10240` | Maximum size (in kilo-bytes) of an event log file before a new one starts. |
 | `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` | String | `n8nEventLog` | Basename of the event log file. Ignored when `N8N_EVENTBUS_LOGWRITER_LOGFULLPATH` is set. |
-| `N8N_EVENTBUS_LOGWRITER_LOGFULLPATH` | String | `''` | Absolute path to the event log file. Must end in `.log`. When set, this path is used verbatim and overrides `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` and the default per-process suffix. Use this to give each n8n process a unique event log path when multiple processes share a writable filesystem. Refer to [Per-process event log files](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems#per-process-event-log-files) for details. |
+| `N8N_EVENTBUS_LOGWRITER_LOGFULLPATH` | String | `''` | Absolute path to the event log file. Must end in `.log`. When set, this path is used verbatim and overrides `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` and the default per-process suffix. Use this to give each n8n process a unique event log path when multiple processes share a writable filesystem. Refer to [Per-process event log files](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems#per-process-event-log-files) for details. |
 | `N8N_EVENTBUS_LOGWRITER_MAXTOTALMESSAGESPERFILE` | Number | `500000` | Maximum number of lines parsed from a single event log file during recovery. Bounds memory use when an event log file contains many invalid lines. |
 
 ### Manage log streaming destinations from environment variables <a href="#manage-log-streaming-destinations-from-environment-variables" id="manage-log-streaming-destinations-from-environment-variables"></a>
 
-Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` to manage log streaming destinations from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for how the activation pattern works, and [Configure log streaming destinations using environment variables](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems#configure-using-environment-variables) for the per-destination JSON shape.
+Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` to manage log streaming destinations from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for how the activation pattern works, and [Configure log streaming destinations using environment variables](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems#configure-using-environment-variables) for the per-destination JSON shape.
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |

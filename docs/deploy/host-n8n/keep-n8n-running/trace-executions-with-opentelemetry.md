@@ -162,7 +162,7 @@ export N8N_OTEL_TRACES_SAMPLE_RATE=0.1
 n8n uses a trace ID ratio sampler, so the same trace ID is either fully sampled or fully dropped across all spans in the trace.
 
 {% hint style="info" %}
-By default, n8n only outputs traces for [production executions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/types-of-executions). To output traces for all workflow executions, set `N8N_OTEL_TRACES_PRODUCTION_ONLY=false`.
+By default, n8n only outputs traces for [production executions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/understand-executions/types-of-executions). To output traces for all workflow executions, set `N8N_OTEL_TRACES_PRODUCTION_ONLY=false`.
 {% endhint %}
 
 ## Reduce span volume <a href="#reduce-span-volume" id="reduce-span-volume"></a>
@@ -408,7 +408,7 @@ Node attribute values must resolve to a string, number, or boolean.
 
 ### Add attributes programmatically in a custom node <a href="#add-attributes-programmatically-in-a-custom-node" id="add-attributes-programmatically-in-a-custom-node"></a>
 
-If you're [building a custom node](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview), you can attach custom key-value pairs from code. Call `setMetadata` from the node's `execute` method:
+If you're [building a custom node](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/overview), you can attach custom key-value pairs from code. Call `setMetadata` from the node's `execute` method:
 
 ```typescript
 async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {

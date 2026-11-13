@@ -27,7 +27,7 @@ You can use these credentials to authenticate the following nodes:
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a user account with the appropriate permissions on a [MongoDB](https://www.mongodb.com/) server.
-- As a Project Owner, add all the [n8n IP addresses](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/find-your-ip-addresses) to the IP Access List Entries in the project's **Network Access**. Refer to [Add IP Access List entries](https://www.mongodb.com/docs/atlas/security/ip-access-list/#add-ip-access-list-entries) for detailed instructions.
+- As a Project Owner, add all the [n8n IP addresses](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/configure-cloud/find-your-ip-addresses) to the IP Access List Entries in the project's **Network Access**. Refer to [Add IP Access List entries](https://www.mongodb.com/docs/atlas/security/ip-access-list/#add-ip-access-list-entries) for detailed instructions.
 
 If you are setting up MongoDB from scratch, create a cluster and a database. Refer to the [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/) for more detailed instructions on these steps.
 

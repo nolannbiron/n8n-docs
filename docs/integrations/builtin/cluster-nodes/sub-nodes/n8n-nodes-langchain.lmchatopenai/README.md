@@ -37,7 +37,7 @@ layout:
 # OpenAI Chat Model
 
 {% hint style="info" %}
-On n8n Cloud, you can use the OpenAI Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own OpenAI API key. Select **Use Gateway credits** in the node's credential field to run the node without an OpenAI account.
+On n8n Cloud, you can use the OpenAI Chat Model node with [Gateway credits](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits) instead of your own OpenAI API key. Select **Use Gateway credits** in the node's credential field to run the node without an OpenAI account.
 {% endhint %}
 
 Use the OpenAI Chat Model node to use OpenAI's chat models with conversational agents[^1].
@@ -171,7 +171,7 @@ Refer to [LangChain's OpenAI documentation](https://docs.langchain.com/oss/javas
 
 Refer to [OpenAI documentation](https://platform.openai.com/docs/api-reference/responses/create) for more information about the parameters.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

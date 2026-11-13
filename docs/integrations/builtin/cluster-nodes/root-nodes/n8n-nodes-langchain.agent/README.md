@@ -50,9 +50,9 @@ Refer to [LangChain's documentation on agents](https://docs.langchain.com/oss/ja
 
 New to AI Agents? Read the [n8n blog introduction to AI agents](https://blog.n8n.io/ai-agents/).
 
-To connect a registry MCP server as a tool with one click, see [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers).
+To connect a registry MCP server as a tool with one click, see [MCP servers](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/mcp-servers).
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

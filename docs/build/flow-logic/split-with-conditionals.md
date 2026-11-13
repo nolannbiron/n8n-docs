@@ -12,7 +12,7 @@ layout:
 
 # Splitting workflows with conditional nodes <a href="#splitting-workflows-with-conditional-nodes" id="splitting-workflows-with-conditional-nodes"></a>
 
-Splitting uses the [IF](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) or [Switch](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch) nodes. It turns a single-branch workflow into a multi-branch workflow. This is a key piece of n8n's [flow logic](./).
+Splitting uses the [IF](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.if) or [Switch](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.switch) nodes. It turns a single-branch workflow into a multi-branch workflow. This is a key piece of n8n's [flow logic](./).
 
 Compare these workflows:
 
@@ -22,7 +22,7 @@ The first workflow is linear: a user submits a bug and the workflow emails suppo
 
 This is the power of splitting and conditional nodes in n8n.
 
-Refer to the [IF](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) or [Switch](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch) documentation for usage details.
+Refer to the [IF](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.if) or [Switch](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.switch) documentation for usage details.
 
 After splitting, you can [merge the branches back together](merge-data.md). The [execution order](understand-execution-order.md) of a multi-branch workflow depends on how you arrange the branches on the canvas.
 

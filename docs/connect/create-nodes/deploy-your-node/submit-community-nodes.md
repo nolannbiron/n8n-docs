@@ -16,14 +16,14 @@ Community nodes are npm packages, hosted in the npm registry.
 
 When building a node to submit to the community node repository, use the following resources to make sure your node setup is correct:
 
-* n8n recommends using the [`n8n-node` CLI tool](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/using-the-n8n-node-tool) to build and test your node. In particular, this is important if you plan on [submitting your node for verification](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/deploy-your-node/submit-community-nodes#submit-your-node-for-verification-by-n8n). This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
+* n8n recommends using the [`n8n-node` CLI tool](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/using-the-n8n-node-tool) to build and test your node. In particular, this is important if you plan on [submitting your node for verification](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/deploy-your-node/submit-community-nodes#submit-your-node-for-verification-by-n8n). This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
 * View [n8n's own nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes) for examples of patterns you can use in your nodes.
-* Refer to the documentation on [building your own nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview).
+* Refer to the documentation on [building your own nodes](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/overview).
 * Make sure your node respects the following standards for community nodes.
 
 ## Standards <a href="#standards" id="standards"></a>
 
-Developing with the [`n8n-node` tool](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/using-the-n8n-node-tool) ensures that your node adheres to the following standards required to make your node available in the n8n community node repository:
+Developing with the [`n8n-node` tool](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/using-the-n8n-node-tool) ensures that your node adheres to the following standards required to make your node available in the n8n community node repository:
 
 * Make sure the package name starts with `n8n-nodes-` or `@<scope>/n8n-nodes-`. For example, `n8n-nodes-weather` or `@weatherPlugins/n8n-nodes-weather`.
 * Include `n8n-community-node-package` in your package keywords.
@@ -80,9 +80,9 @@ From May 1st 2026, nodes submitted for verification through the [n8n Creator Por
 
 Before submitting your node for review by n8n, you must:
 
-* Start from the [`n8n-node` tool](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/using-the-n8n-node-tool) generated scaffolding. While this isn't strictly required, n8n strongly suggests using the `n8n-node` CLI tool for any community node you plan to submit for verification. Using the tool ensures that your node follows the expected conventions and adheres to the community node requirements.
-* Make sure that your node follows the [technical guidelines for verified community nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/verification-guidelines) and that all automated checks pass. Specifically, verified community nodes aren't allowed to use any run-time dependencies.
-* Ensure that your node follows the [UX guidelines](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/ux-guidelines).
+* Start from the [`n8n-node` tool](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/using-the-n8n-node-tool) generated scaffolding. While this isn't strictly required, n8n strongly suggests using the `n8n-node` CLI tool for any community node you plan to submit for verification. Using the tool ensures that your node follows the expected conventions and adheres to the community node requirements.
+* Make sure that your node follows the [technical guidelines for verified community nodes](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/verification-guidelines) and that all automated checks pass. Specifically, verified community nodes aren't allowed to use any run-time dependencies.
+* Ensure that your node follows the [UX guidelines](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/ux-guidelines).
 * Make sure that the node has appropriate documentation in the form of a README in the [npm package](https://docs.npmjs.com/about-package-readme-files) or a related public repository.
 * Publish your node to npm using a GitHub Actions workflow with provenance, as described in **Publishing to npm**. n8n will fetch it from there for final vetting.
 

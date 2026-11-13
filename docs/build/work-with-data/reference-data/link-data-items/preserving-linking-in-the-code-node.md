@@ -11,7 +11,7 @@ layout:
 ---
 
 # Preserving linking in the Code node <a href="#preserving-linking-in-the-code-node" id="preserving-linking-in-the-code-node"></a>
-When referencing a previous node you need to know which item to use. This is solved by item linking. Most nodes automatically link every output item to an input item, creating a chain of items that you can work back along to access previous items. For a deeper conceptual overview of this topic, refer to [Item linking concepts](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows). This document focuses on practical usage examples.
+When referencing a previous node you need to know which item to use. This is solved by item linking. Most nodes automatically link every output item to an input item, creating a chain of items that you can work back along to access previous items. For a deeper conceptual overview of this topic, refer to [Item linking concepts](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data/link-data-items/how-items-link-through-workflows). This document focuses on practical usage examples.
 
 When using the Code node, there are some scenarios where you need to manually supply item linking information if you want to be able to use `$("<node-name>").item` later in the workflow. All these scenarios only apply if you have more than one incoming item. n8n automatically handles item linking for single items.
 
@@ -21,7 +21,7 @@ These scenarios are when you:
 * Return new items.
 * Want to manually control the item linking.
 
-[n8n's automatic item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) handles the other scenarios.
+[n8n's automatic item linking](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) handles the other scenarios.
 
 To control item linking, set `pairedItem` when returning data. For example, to link to the item at index 0:
 

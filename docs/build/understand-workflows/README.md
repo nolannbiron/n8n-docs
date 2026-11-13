@@ -14,7 +14,7 @@ layout:
 
 A workflow[^1] is a collection of nodes connected together to automate a process. [Create](create-and-run-workflows.md) a workflow, or use a [workflow template](../ways-of-building-workflows/use-templates.md) to help you get started. Once it's running, you can [share](../manage-workflows/share-with-others.md) it with others.
 
-If it's your first time building a workflow, you may want to use the [quickstart guide](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow) to quickly try out n8n features.
+If it's your first time building a workflow, you may want to use the [quickstart guide](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow) to quickly try out n8n features.
 
 ## In this section
 

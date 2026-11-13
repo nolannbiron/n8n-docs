@@ -485,7 +485,7 @@ You need to update the `package.json` to include your own information, such as y
 
 ## Test your node <a href="#test-your-node" id="test-your-node"></a>
 
-You can test your node as you build it by running it in a local n8n instance with the [`n8n-node` tool](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/using-the-n8n-node-tool). `n8n-node` includes n8n, so you don't need a global n8n installation.
+You can test your node as you build it by running it in a local n8n instance with the [`n8n-node` tool](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/using-the-n8n-node-tool). `n8n-node` includes n8n, so you don't need a global n8n installation.
 
 1. In your project's root directory, run the `dev` command:
 	```shell

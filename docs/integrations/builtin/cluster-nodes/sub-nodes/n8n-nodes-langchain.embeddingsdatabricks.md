@@ -82,7 +82,7 @@ To avoid it, keep **Batch Size** at its default so a chunk goes out in one reque
 - [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
 - Migrating from the community package: refer to [Migrate from the n8n-nodes-databricks community package](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/migrate-from-the-community-package.md)
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Common issues
 

@@ -85,7 +85,7 @@ delete nodeStaticData.lastExecution;
 
 To store a marker such as the last processed item in a data table:
 
-1. Add a [Data Table node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable/rows) at the start of your workflow, using the **Get row** operation to read the stored value.
+1. Add a [Data Table node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.datatable/rows) at the start of your workflow, using the **Get row** operation to read the stored value.
 2. Reference the value in later nodes with an expression, such as `{{ $('Get row').item.json.lastExecution }}`.
 3. Add a second Data Table node at the end of your workflow, using the **Upsert row** operation to write the new value.
 

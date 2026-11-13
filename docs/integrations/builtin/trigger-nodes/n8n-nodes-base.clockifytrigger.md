@@ -33,4 +33,4 @@ Refer to the [Clockify credentials documentation](../credentials/clockify.md) fo
 For usage examples and templates to help you get started, refer to n8n's [Clockify Trigger integrations](https://n8n.io/integrations/clockify-trigger/) page.
 {% endhint %}
 
-This node uses the workflow timezone setting to specify the range of time entries starting time. Configure the timezone in your [Workflow Settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings) if you want this trigger node to retrieve the right time entries.
+This node uses the workflow timezone setting to specify the range of time entries starting time. Configure the timezone in your [Workflow Settings](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/configure-workflow-settings) if you want this trigger node to retrieve the right time entries.

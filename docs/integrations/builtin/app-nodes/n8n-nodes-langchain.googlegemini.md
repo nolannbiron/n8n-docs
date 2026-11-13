@@ -20,7 +20,7 @@ layout:
 # Google Gemini node <a href="#google-gemini-node" id="google-gemini-node"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can use the Google Gemini node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Google API key. Select **Use Gateway credits** in the node's credential field to run the node without a Google account.
+On n8n Cloud, you can use the Google Gemini node with [Gateway credits](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits) instead of your own Google API key. Select **Use Gateway credits** in the node's credential field to run the node without a Google account.
 {% endhint %}
 
 Use the Google Gemini node to automate work in Google Gemini and integrate Google Gemini with other applications. n8n has built-in support for a wide range of Google Gemini features, including working with audio, videos, images, documents, and files to analyze, generate, and transcribe.
@@ -71,7 +71,7 @@ Refer to [Google Gemini's documentation](https://ai.google.dev/gemini-api/docs) 
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
 
 You can use the credential you created for this service in the HTTP Request node: 
 
@@ -79,4 +79,4 @@ You can use the credential you created for this service in the HTTP Request node
 1. Select the service you want to connect to.
 1. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.

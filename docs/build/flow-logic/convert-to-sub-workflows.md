@@ -19,7 +19,7 @@ layout:
 Sub-workflow conversion is available from n8n 1.97.0.
 {% endhint %}
 
-Use sub-workflow conversion to refactor your workflows into reusable parts, as part of your workflow's [flow logic](./). Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node.
+Use sub-workflow conversion to refactor your workflows into reusable parts, as part of your workflow's [flow logic](./). Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node.
 
 See [sub-workflows](break-workflows-into-smaller-parts.md) for a general introduction to the concept.
 
@@ -31,10 +31,10 @@ Do this by selecting a group of valid nodes. The selection must be continuous an
 
 - Must not include trigger nodes.
 - Only a single node in the selection can have incoming connections from nodes *outside* of the selection.
-	- That node can have multiple incoming connections, but only a single input *branch* (which means it can't be a [Merge node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.merge) for example).
+	- That node can have multiple incoming connections, but only a single input *branch* (which means it can't be a [Merge node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.merge) for example).
 	- That node can't have incoming connections from other nodes in the selection.
 - Only a single node in the selection can have outgoing connections to nodes *outside* of the selection.
-	- That node can have multiple outgoing connections, but only a single output branch (it can't be an [If node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) for example).
+	- That node can have multiple outgoing connections, but only a single output branch (it can't be an [If node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.if) for example).
 	- That node can't have outgoing connections to other nodes in the selection.
 - The selection must include all nodes between the input and output nodes.
 
@@ -46,7 +46,7 @@ Select the desired nodes on the canvas. Right-click the canvas background and se
 
 Most sub-workflow conversions work without issues, but there are some caveats and limitations to keep in mind:
 
-* **You must set type constraints for input and output manually**: By default, sub-workflow input and output allow all types. You can set expected types in sub-workflow's [Execute Sub-workflow Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) and [Edit Fields (set) node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.set) (labeled as **Return** and only included if the sub-workflow has outputs).
+* **You must set type constraints for input and output manually**: By default, sub-workflow input and output allow all types. You can set expected types in sub-workflow's [Execute Sub-workflow Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) and [Edit Fields (set) node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.set) (labeled as **Return** and only included if the sub-workflow has outputs).
 * **Limited support for AI nodes**: When dealing with sub-nodes like AI tools, you must select them all and may need to duplicate any nodes shared with other AI Agents before conversion.
 - **Uses v1 execution ordering:** New workflows use [`v1` execution ordering](understand-execution-order.md) regardless of the parent workflow's settings - you can change this back in the settings.
 * **Accessor functions like `first()`, `last()`, and `all()` require extra care**: Expressions using these functions don't always translate cleanly to a sub-workflow context. n8n may transform them to try to preserve their functionality, but you should check that they work as intended in their new context.<br>

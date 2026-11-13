@@ -126,7 +126,7 @@ If you're creating an app for use with the [HubSpot Trigger](../trigger-nodes/n8
 Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
 {% endhint %}
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to configure OAuth2 from scratch by creating a new public app:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you'll need to configure OAuth2 from scratch by creating a new public app:
 
 1. Log into your [HubSpot app developer account](https://developers.hubspot.com/).
 2. Select **Apps** from the main navigation bar.

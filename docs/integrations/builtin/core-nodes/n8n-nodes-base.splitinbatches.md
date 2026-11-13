@@ -28,12 +28,12 @@ When the node execution completes, it combines all of the processed data and ret
 
 ## When to use the Loop Over Items node <a href="#when-to-use-the-loop-over-items-node" id="when-to-use-the-loop-over-items-node"></a>
 
-By default, n8n nodes are designed to process a list of input items (with some exceptions, detailed below). Depending on what you're trying to achieve, you often don't need the Loop Over Items node in your workflow. You can learn more about how n8n processes multiple items on the [looping in n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/loop) page.
+By default, n8n nodes are designed to process a list of input items (with some exceptions, detailed below). Depending on what you're trying to achieve, you often don't need the Loop Over Items node in your workflow. You can learn more about how n8n processes multiple items on the [looping in n8n](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/loop) page.
 
 These links highlight some of the cases where the Loop Over Items node can be useful:
 
-* [Loop until all items are processed](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/loop#loop-until-all-items-are-processed): describes how the Loop Over Items node differs from normal item processing and when you might want to incorporate this node.
-* [Node exceptions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/loop#node-exceptions): outlines specific cases and nodes where you may need to use the Loop Over Items node to manually build looping logic.
+* [Loop until all items are processed](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/loop#loop-until-all-items-are-processed): describes how the Loop Over Items node differs from normal item processing and when you might want to incorporate this node.
+* [Node exceptions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/loop#node-exceptions): outlines specific cases and nodes where you may need to use the Loop Over Items node to manually build looping logic.
 * [Avoiding rate limiting](../handle-rate-limits.md): demonstrates how to batch API requests to avoid rate limits from other services.
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
@@ -67,7 +67,7 @@ When enabled, you can adjust the reset conditions by switching the parameter rep
 
 This workflow allows you to read an RSS feed from two different sources using the Loop Over Items node. You need the Loop Over Items node in the workflow as the RSS Feed Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687-read-rss-feed-from-two-different-sources/) on n8n.io.
 
-The example walks through building the workflow, but assumes you are already familiar with n8n. To build your first workflow, including learning how to add nodes to a workflow, refer to [Try it out](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow).
+The example walks through building the workflow, but assumes you are already familiar with n8n. To build your first workflow, including learning how to add nodes to a workflow, refer to [Try it out](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow).
 
 The final workflow looks like this:
 

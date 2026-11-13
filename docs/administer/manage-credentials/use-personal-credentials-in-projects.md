@@ -65,7 +65,7 @@ Every run acts as a person, and that person must be able to use the credentials 
 
 Credentials the project holds work for every run in that project. They keep working on a schedule even if the publisher's own access changes later.
 
-You can't publish a workflow that uses a credential you can't use. The publish check names the credential that blocks it. If a workflow lost its publisher, for example because the publisher's account was deleted, republish it so it runs as you. Refer to [Save and publish workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/save-and-publish-workflows) for how publishing works.
+You can't publish a workflow that uses a credential you can't use. The publish check names the credential that blocks it. If a workflow lost its publisher, for example because the publisher's account was deleted, republish it so it runs as you. Refer to [Save and publish workflows](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/save-and-publish-workflows) for how publishing works.
 
 ## Credential access for Owners and Admins
 

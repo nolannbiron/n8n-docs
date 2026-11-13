@@ -141,7 +141,7 @@ You will need to select your **Environment Type**. Choose between **Production**
 
 ### Create an External Client App (recommended) <a href="#create-an-external-client-app-recommended" id="create-an-external-client-app-recommended"></a>
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to configure OAuth2 from scratch by creating an external client app:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you'll need to configure OAuth2 from scratch by creating an external client app:
 
 1. In n8n, select the **Environment Type** for your connection. Choose the option that best describes your environment from **Production** or **Sandbox**.
 2. Enter your Salesforce **Username**.
@@ -173,7 +173,7 @@ Refer to Salesforce's [External Client App Basics](https://help.salesforce.com/s
 Salesforce is deprecating Connected Apps in favor of External Client Apps. Check Salesforce's own documentation for the retirement timeline. Use External Client Apps instead for new integrations.
 {% endhint %}
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you can also configure OAuth2 by creating a connected app:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you can also configure OAuth2 by creating a connected app:
 
 1. In n8n, select the **Environment Type** for your connection. Choose the option that best describes your environment from **Production** or **Sandbox**.
 2. Enter your Salesforce **Username**.

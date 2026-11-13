@@ -56,4 +56,4 @@ The model which will generate the embeddings. Models are loaded and managed thro
 
 Refer to [Lemonade Server's documentation](https://lemonade-server.ai/docs/) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.

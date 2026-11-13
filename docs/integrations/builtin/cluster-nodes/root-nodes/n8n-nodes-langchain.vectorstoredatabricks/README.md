@@ -115,7 +115,7 @@ The node doesn't offer an **Update Documents** mode. Every mode uses the **Index
 
 ### Rerank Results
 
-Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 ### Get Many parameters
 
@@ -224,11 +224,11 @@ To search a self-managed index instead, set **Content Column** on the vector sto
 - [Vector Store Retriever](../../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) and [Vector Store Question Answer Tool](../../sub-nodes/n8n-nodes-langchain.toolvectorstore.md)
 - [Databricks Vector Search](https://docs.databricks.com/aws/en/generative-ai/vector-search), the [Query index API](https://docs.databricks.com/api/workspace/vectorsearchindexes/queryindex), and the [filtering guide](https://docs.databricks.com/aws/en/ai-search/filtering-guide) in the Databricks documentation
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Self-hosted AI Starter Kit <a href="#self-hosted-ai-starter-kit" id="self-hosted-ai-starter-kit"></a>
 
-New to working with AI and using self-hosted n8n? Try n8n's [self-hosted AI Starter Kit](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/deploy-with-the-ai-starter-kit) to get started with a proof-of-concept or demo playground using Ollama, Qdrant, and PostgreSQL.
+New to working with AI and using self-hosted n8n? Try n8n's [self-hosted AI Starter Kit](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/deploy-with-the-ai-starter-kit) to get started with a proof-of-concept or demo playground using Ollama, Qdrant, and PostgreSQL.
 
 ## Common issues
 

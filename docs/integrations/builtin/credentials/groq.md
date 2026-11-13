@@ -34,7 +34,7 @@ Create a [Groq](https://groq.com/) account.
 
 Refer to [Groq's documentation](https://console.groq.com/docs/quickstart) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

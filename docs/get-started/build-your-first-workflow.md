@@ -50,7 +50,7 @@ Apart from n8n, you don’t need any coding experience. The weather data comes f
 You need an n8n instance. Either:
 
 - **n8n Cloud**: [sign up for a free trial](https://go.n8n.io/ekXKXJ), or
-- **Self-hosted**: follow the [host n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) guide, then [set up n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) with your own AI provider account
+- **Self-hosted**: follow the [host n8n](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) guide, then [set up n8n Assistant](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-n8n-assistant) with your own AI provider account
 
 ## Build the workflow with n8n Assistant
 
@@ -112,14 +112,14 @@ n8n Assistant builds workflows from prompts. You describe what you want, approve
 
 ## What your workflow does
 
-Open **weather log** on the canvas and you'll see four [nodes](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/work-with-nodes), each doing one job and passing its result to the next:
+Open **weather log** on the canvas and you'll see four [nodes](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/workflow-components/work-with-nodes), each doing one job and passing its result to the next:
 
 | Node | What it does |
 | --- | --- |
-| **Every day at 8 AM** | A [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger) that starts the workflow at 8 AM every day. |
-| **Get Berlin weather** | An [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) node that fetches the weather from the Mockingbird API. |
-| **Add weather report** | An [Edit Fields (Set)](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.set) node that builds the `report` text, using an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/transform-data/expressions-for-data-transformation) to pull in the live weather values. |
-| **Save weather log** | A [Data table](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable) node that inserts the report as a new row in the table. |
+| **Every day at 8 AM** | A [Schedule Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.scheduletrigger) that starts the workflow at 8 AM every day. |
+| **Get Berlin weather** | An [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) node that fetches the weather from the Mockingbird API. |
+| **Add weather report** | An [Edit Fields (Set)](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.set) node that builds the `report` text, using an [expression](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/transform-data/expressions-for-data-transformation) to pull in the live weather values. |
+| **Save weather log** | A [Data table](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.datatable) node that inserts the report as a new row in the table. |
 
 {% hint style="info" %}
 n8n Assistant chooses the node names itself, so yours may differ from the ones above.
@@ -210,7 +210,7 @@ Next, you’ll turn the weather data into a short report that anyone can read at
     {% hint style="info" %}
     **What's an expression?**
 
-    `{{ $json.city }}` is a placeholder, called an expression. When the workflow runs, n8n swaps it for the real value. The input panel shows the output from **Get Berlin weather**, which becomes the input to this node. You drag fields in rather than typing them, and the preview under the field shows you the finished sentence. To learn more, see [Expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes#expressions).
+    `{{ $json.city }}` is a placeholder, called an expression. When the workflow runs, n8n swaps it for the real value. The input panel shows the output from **Get Berlin weather**, which becomes the input to this node. You drag fields in rather than typing them, and the preview under the field shows you the finished sentence. To learn more, see [Expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes#expressions).
     {% endhint %}
 
 4. Drag `temp_c` in and update the wording to:
@@ -286,6 +286,6 @@ Your workflow is complete. Test it, then publish it so it runs every day at 8 AM
 
 * [n8n Docs](./)
 * [Choose how to use n8n](choose-how-to-use-n8n.md)
-* [Use n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant)
+* [Use n8n Assistant](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/ways-of-building-workflows/n8n-assistant)
 * [Learning paths](learning-paths.md)
 * [Key concept glossary](key-concept-glossary.md)

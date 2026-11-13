@@ -60,7 +60,7 @@ The advantage of this pattern is that work is instantly available to other envir
 
 The disadvantages are:
 
-* If you push by mistake, there is a risk the work will make it into your production instance. If you [use a GitHub Action to automate pulls](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/tutorial-create-environments-with-source-control#optional-use-a-github-action-to-automate-pulls) to production, you must either use the multi-instance, multi-branch pattern, or be careful to never push work that you don't want in production.
+* If you push by mistake, there is a risk the work will make it into your production instance. If you [use a GitHub Action to automate pulls](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/use-source-control-and-environments/tutorial-create-environments-with-source-control#optional-use-a-github-action-to-automate-pulls) to production, you must either use the multi-instance, multi-branch pattern, or be careful to never push work that you don't want in production.
 * Pushing and pulling to the same instance can cause data loss as changes are overridden when performing these actions. You should set up processes to ensure content flows in one direction.
 
 ## Set up your repository <a href="#set-up-your-repository" id="set-up-your-repository"></a>
@@ -168,7 +168,7 @@ In your production instance, select **Pull** <img src="../.gitbook/assets/pull-i
 
 ### Optional: Use a GitHub Action to automate pulls <a href="#optional-use-a-github-action-to-automate-pulls" id="optional-use-a-github-action-to-automate-pulls"></a>
 
-If you want to avoid logging in to your production instance to pull, you can use a [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions) and the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) to automatically pull every time you push new work to your production or main branch.
+If you want to avoid logging in to your production instance to pull, you can use a [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions) and the [n8n API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api) to automatically pull every time you push new work to your production or main branch.
 
 A GitHub Action example:
 

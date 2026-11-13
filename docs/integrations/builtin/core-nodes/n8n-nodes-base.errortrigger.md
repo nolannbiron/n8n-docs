@@ -49,7 +49,7 @@ Note the following:
 
 You can use the [Stop And Error](n8n-nodes-base.stopanderror.md) node to send custom messages to the Error Trigger.
 
-Read more about [Error workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) in n8n workflows. 
+Read more about [Error workflows](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/handle-errors-gracefully) in n8n workflows. 
 
 ## Error data <a href="#error-data" id="error-data"></a>
 

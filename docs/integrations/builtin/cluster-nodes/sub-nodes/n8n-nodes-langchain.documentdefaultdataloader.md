@@ -43,7 +43,7 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 * **Type of Data**: Select **Binary** or **JSON**.
 * **Mode**: Choose from:
 	* **Load All Input Data**: Use all the node's input data.
-	* **Load Specific Data**: Use [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes) to define the data you want to load. You can add text as well as expressions. This means you can create a custom document from a mix of text and expressions.
+	* **Load Specific Data**: Use [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes) to define the data you want to load. You can add text as well as expressions. This means you can create a custom document from a mix of text and expressions.
 * **Data Format**: Displays when you set **Type of Data** to **Binary**. Select the file MIME type for your binary data. Set to **Automatically Detect by MIME Type** if you want n8n to set the data format for you. If you set a specific data format and the incoming file MIME type doesn't match it, the node errors. If you use **Automatically Detect by MIME Type**, the node falls back to text format if it can't match the file MIME type to a supported data format.
 
 ## Node options <a href="#node-options" id="node-options"></a>
@@ -59,6 +59,6 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 Refer to [LangChain's documentation on document loaders](https://docs.langchain.com/oss/javascript/integrations/document_loaders/file_loaders) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 [^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

@@ -35,8 +35,8 @@ This page gives an overview of what building with MCP looks like in n8n. For set
 {% hint style="info" %}
 **Ready to set it up?** The full how-to lives in Connect:
 
-* [Connect to n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) — enable the server, authenticate clients, and expose workflows.
-* [MCP server tools reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference) — every tool an MCP client can call.
+* [Connect to n8n MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server) — enable the server, authenticate clients, and expose workflows.
+* [MCP server tools reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server/mcp-server-tools-reference) — every tool an MCP client can call.
 {% endhint %}
 
 ## What is MCP?
@@ -58,21 +58,21 @@ When you connect an AI tool to n8n's MCP server, your n8n instance becomes a pla
 * **Search for and run workflows** you already have access to.
 * **Follow your preferences:** the client reads your saved [preferences](../agentic-context-management/preferences.md) before it builds, and can save new ones when you state a lasting rule (n8n 2.42.0 onward, in Preview).
 
-[Enable Instance-level MCP](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server#enabling-mcp-access) to start building, testing, and running your n8n workflows from an AI application.
+[Enable Instance-level MCP](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server#enabling-mcp-access) to start building, testing, and running your n8n workflows from an AI application.
 
 ### Related MCP features
 
 Instance-level MCP isn't the only way n8n works with MCP:
 
-* [**MCP Server Trigger node**](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcptrigger)**:** build a single workflow that acts as its own MCP server, exposing only the tools you design inside it. Use this to hand-craft a custom MCP server for other AI apps to call.
-* [**MCP Client Tool node**](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp)**:** go the other direction and let an n8n workflow act as an MCP client that calls external MCP servers.
+* [**MCP Server Trigger node**](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcptrigger)**:** build a single workflow that acts as its own MCP server, exposing only the tools you design inside it. Use this to hand-craft a custom MCP server for other AI apps to call.
+* [**MCP Client Tool node**](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp)**:** go the other direction and let an n8n workflow act as an MCP client that calls external MCP servers.
 
 ## Learn more
 
-* [Connect to n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) — set up instance-level MCP access, authenticate clients (OAuth or API key), and expose workflows.
-* [MCP client connection examples](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-client-examples) — exact commands and configuration for Lovable, Claude Desktop, Claude Code, Codex, Gemini CLI, Cursor, VS Code, Windsurf, and Google ADK agents.
-* [MCP server tools reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference) — full list of available tools and their parameters.
-* [MCP Server Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcptrigger) — expose tools from a single workflow.
+* [Connect to n8n MCP server](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server) — set up instance-level MCP access, authenticate clients (OAuth or API key), and expose workflows.
+* [MCP client connection examples](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server/mcp-client-examples) — exact commands and configuration for Lovable, Claude Desktop, Claude Code, Codex, Gemini CLI, Cursor, VS Code, Windsurf, and Google ADK agents.
+* [MCP server tools reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server/mcp-server-tools-reference) — full list of available tools and their parameters.
+* [MCP Server Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcptrigger) — expose tools from a single workflow.
 
 ## Related resources
 

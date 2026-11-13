@@ -35,7 +35,7 @@ The n8n instance owner and admin accounts can install and manage verified commun
 
 ## Install a community node <a href="#install-a-community-node" id="install-a-community-node"></a>
 
-To install a [verified community node](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/deploy-your-node/submit-community-nodes#submit-your-node-for-verification-by-n8n):
+To install a [verified community node](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/deploy-your-node/submit-community-nodes#submit-your-node-for-verification-by-n8n):
 
 1. Go to the **Canvas** and open the **nodes panel** (either by selecting '+' or pressing ++n++).
 2. **Search** for the node that you're looking for. If there is a matching verified community node, you will see a **More from the community** section at the bottom of the nodes panel.
@@ -46,7 +46,7 @@ To install a [verified community node](https://app.gitbook.com/s/r7wKI4I1BgdBCuq
 {% hint style="info" %}
 **Enable installation of verified community nodes**
 
-If you don't want verified community nodes to appear in the nodes panel, turn **Verified community nodes** off in **Instance settings** in the [n8n Cloud console](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/use-the-cloud-console). If you're self-hosting, use [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes) to control the availability of this feature.
+If you don't want verified community nodes to appear in the nodes panel, turn **Verified community nodes** off in **Instance settings** in the [n8n Cloud console](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/use-the-cloud-console). If you're self-hosting, use [environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes) to control the availability of this feature.
 {% endhint %}
 
 ## Uninstall a community node <a href="#uninstall-a-community-node" id="uninstall-a-community-node"></a>

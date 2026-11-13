@@ -20,12 +20,12 @@ When designing your [flow logic](./), it's a good practice to consider potential
 To investigate failed executions, you can:
 
 * Review your [Executions](../understand-workflows/understand-executions/README.md), for a [single workflow](../understand-workflows/understand-executions/view-executions-for-a-single-workflow.md) or [all workflows you have access to](../understand-workflows/understand-executions/view-all-executions.md). You can [load data from previous execution](../understand-workflows/understand-executions/debug-executions.md) into your current workflow.
-* Enable [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems).
+* Enable [Log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems).
 {% endhint %}
 
 ## How do I set up an error workflow? <a href="#create-and-set-an-error-workflow" id="create-and-set-an-error-workflow"></a>
 
-For each workflow, you can set an error workflow in **Workflow Settings**. It runs if an execution fails. This means you can, for example, send email or Slack alerts when a workflow execution errors. The error workflow must start with the [Error Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.errortrigger).
+For each workflow, you can set an error workflow in **Workflow Settings**. It runs if an execution fails. This means you can, for example, send email or Slack alerts when a workflow execution errors. The error workflow must start with the [Error Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.errortrigger).
 
 You can use the same error workflow for multiple workflows.
 
@@ -102,7 +102,7 @@ If the error is caused by the trigger node of the main workflow, rather than a l
 
 When you create and set an error workflow, n8n runs it when an execution fails. Usually, this is due to things like errors in node settings, or the workflow running out of memory.
 
-You can add the [Stop And Error](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.stopanderror) node to your workflow to force executions to fail under your chosen circumstances, and trigger the error workflow.
+You can add the [Stop And Error](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.stopanderror) node to your workflow to force executions to fail under your chosen circumstances, and trigger the error workflow.
 
 ## Related resources
 

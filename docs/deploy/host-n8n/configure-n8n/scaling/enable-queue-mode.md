@@ -48,7 +48,7 @@ Workers are n8n instances that do the actual work. They receive information from
 {% hint style="info" %}
 **Per-process event log files**
 
-If your workers share a writable filesystem, give each worker process a unique event log path. Refer to [Per-process event log files](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems#per-process-event-log-files) for details.
+If your workers share a writable filesystem, give each worker process a unique event log path. Refer to [Per-process event log files](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems#per-process-event-log-files) for details.
 {% endhint %}
 
 ### Set encryption key <a href="#set-encryption-key" id="set-encryption-key"></a>
@@ -140,7 +140,7 @@ Each worker process runs a server that exposes optional endpoints:
 
 - `/healthz`: returns whether the worker is up, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
 - `/healthz/readiness`: returns whether worker's DB and Redis connections are ready, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
-- [credentials overwrite endpoint](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/credential-overwrites)
+- [credentials overwrite endpoint](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/credential-overwrites)
 - [`/metrics`](../basic-configuration/configuration-examples/enable-prometheus-metrics.md)
 
 {% hint style="info" %}

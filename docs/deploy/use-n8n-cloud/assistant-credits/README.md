@@ -9,7 +9,7 @@ layout:
 
 # Assistant credits
 
-Assistant credits pay for your usage of [n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant). Your n8n Cloud plan includes a monthly allowance of Assistant credits that resets on the first day of every month, so you can use n8n Assistant without buying anything. If you use up your allowance before it resets, you can buy extra credits to keep going until the next reset.
+Assistant credits pay for your usage of [n8n Assistant](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/ways-of-building-workflows/n8n-assistant). Your n8n Cloud plan includes a monthly allowance of Assistant credits that resets on the first day of every month, so you can use n8n Assistant without buying anything. If you use up your allowance before it resets, you can buy extra credits to keep going until the next reset.
 
 Assistant credits only pay for n8n Assistant. They don't pay for AI model calls that your workflows or agents make when they run, such as the model behind an AI Agent node. Those calls use [Gateway credits](../gateway-credits/README.md) or your own provider credentials.
 
@@ -132,5 +132,5 @@ Self-hosted n8n doesn't use Assistant credits. On a self-hosted instance, n8n As
 - [Gateway credits](../gateway-credits/README.md)
 - [Understand concurrency](../understand-concurrency.md)
 - [Download workflows](../download-workflows.md)
-- [Use n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant)
+- [Use n8n Assistant](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/ways-of-building-workflows/n8n-assistant)
 - [n8n plans and pricing](https://n8n.io/pricing/)

@@ -23,7 +23,7 @@ To do this, configure the corresponding [environment variables](../basic-configu
 {% hint style="info" %}
 **Configuration at workflow level**
 
-You can also configure these settings on an individual workflow basis using the [workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings).
+You can also configure these settings on an individual workflow basis using the [workflow settings](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/configure-workflow-settings).
 {% endhint %}
 You can select which executions data n8n saves. For example, you can save only executions that result in an `Error`.
 

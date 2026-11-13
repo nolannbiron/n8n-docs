@@ -29,7 +29,7 @@ tags:
 
 The ReAct Agent is deprecated from n8n 1.82.0. New or updated AI Agent nodes use the [Tools Agent](tools-agent.md) instead. Only workflows still using node version 1 of the AI Agent node can select the ReAct Agent.
 
-Node version 1 of the AI Agent node is removed from n8n 3.0, so the ReAct Agent stops working for all workflows. See [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes) for details.
+Node version 1 of the AI Agent node is removed from n8n 3.0, so the ReAct Agent stops working for all workflows. See [n8n 3.0 breaking changes](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/v30-breaking-changes) for details.
 {% endhint %}
 
 The ReAct Agent node implements [ReAct](https://react-lm.github.io/) logic. ReAct (reasoning and acting) brings together the reasoning powers of chain-of-thought prompting and action plan generation.
@@ -61,9 +61,9 @@ Choose from:
 
 This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
 
-* [Auto-fixing Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
-* [Item List Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
-* [Structured Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
+* [Auto-fixing Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
+* [Item List Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
+* [Structured Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -101,7 +101,7 @@ This could be useful for further refining the agent's behavior based on the step
 
 ### Tracing Metadata <a href="#tracing-metadata" id="tracing-metadata"></a>
 
-Add custom key-value metadata to tracing events for this agent. This is useful for filtering and debugging runs in tracing tools like [LangSmith](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance).
+Add custom key-value metadata to tracing events for this agent. This is useful for filtering and debugging runs in tracing tools like [LangSmith](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance).
 
 Entries with empty keys or values are ignored.
 

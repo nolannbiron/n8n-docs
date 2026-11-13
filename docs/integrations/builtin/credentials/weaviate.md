@@ -30,7 +30,7 @@ You can use these credentials to authenticate the following nodes:
 
 Refer to [Weaviate's connection documentation](https://docs.weaviate.io/weaviate/connections)for more information on how to connect to Weaviate.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

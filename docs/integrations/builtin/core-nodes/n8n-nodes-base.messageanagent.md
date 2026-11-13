@@ -23,7 +23,7 @@ Use the Message an Agent node to send a message to an agent from a workflow, the
 You can message an agent you've already built, or define an agent inline in the node.
 
 {% hint style="info" %}
-Agents are in preview. To learn how to build, publish, and manage them, refer to [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
+Agents are in preview. To learn how to build, publish, and manage them, refer to [Build and manage agents](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents).
 {% endhint %}
 
 Each message you send counts as one execution, the same as any other workflow execution.
@@ -137,7 +137,7 @@ The node is also available as **Message an Agent Tool**, so an AI Agent can hand
 
 ## Related resources
 
-* [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents)
+* [Build and manage agents](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents)
 * [AI Agent node](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md)
 * [Execute Sub-workflow node](n8n-nodes-base.executeworkflow.md)
 

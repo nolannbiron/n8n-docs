@@ -400,10 +400,10 @@ There are four steps to follow to implement this method:
 
 The details and scope of this workflow will vary greatly according to the individual use case, however there are a few design implementations to keep in mind:
 
-* This workflow must be triggered by a [Webhook](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) node.
+* This workflow must be triggered by a [Webhook](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.webhook) node.
 * The incoming webhook call must contain the user’s credentials and any other workflow parameters required.
-* Each node where the user’s credentials are needed should use an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes) so that the node’s credential field reads the credential provided in the webhook call.
-* Save and publish the workflow, ensuring the production URL is selected for the Webhook node. Refer to [webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) for more information.
+* Each node where the user’s credentials are needed should use an [expression](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes) so that the node’s credential field reads the credential provided in the webhook call.
+* Save and publish the workflow, ensuring the production URL is selected for the Webhook node. Refer to [webhook node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.webhook) for more information.
 
 ### Call the workflow <a href="#call-the-workflow" id="call-the-workflow"></a>
 

@@ -44,12 +44,12 @@ Activating this feature will overwrite any manual definition you may have alread
 
 ## Use the `$fromAI()` function <a href="#use-the-dollarfromai-function" id="use-the-dollarfromai-function"></a>
 
-The `$fromAI()` function uses AI to dynamically fill in parameters for tools connected to the [Tools AI agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent).
+The `$fromAI()` function uses AI to dynamically fill in parameters for tools connected to the [Tools AI agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent).
 
 {% hint style="info" %}
 **Only for tools**
 
-The `$fromAI()` function is only available for tools connected to the AI Agent node. The `$fromAI()` function doesn't work with the [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode) tool or with [other non-tool cluster sub-nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes).
+The `$fromAI()` function is only available for tools connected to the AI Agent node. The `$fromAI()` function doesn't work with the [Code](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode) tool or with [other non-tool cluster sub-nodes](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes).
 {% endhint %}
 
 To use the `$fromAI()` function, call it with the required `key` parameter:

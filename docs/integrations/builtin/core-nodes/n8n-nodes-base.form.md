@@ -74,12 +74,12 @@ When serving the form, you can pass values for hidden fields using [query parame
 
 ### Defining the form using JSON <a href="#defining-the-form-using-json" id="defining-the-form-using-json"></a>
 
-Use **Define Form** > **Using JSON** to define the fields of your form with a [JSON array of objects](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure). Each object defines a single field by using a combination of these keys:
+Use **Define Form** > **Using JSON** to define the fields of your form with a [JSON array of objects](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure). Each object defines a single field by using a combination of these keys:
 
 - `fieldLabel`: The label that appears above the input field on the rendered form. 
 - `fieldName`: The field name that is used in the output of the Form node and to reference the field in expressions.
 - `fieldType`: Choose from `checkbox`, `date`, `dropdown`, `email`, `file`, `hiddenField`, `html`, `number`, `password`, `radio`, `text`, or `textarea`.
-    - Use `date` to include a date picker in the form. Refer to [Date and time with Luxon](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information on formatting dates.
+    - Use `date` to include a date picker in the form. Refer to [Date and time with Luxon](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information on formatting dates.
 	- When using `dropdown`, set the choices with `fieldOptions` (reference the example below). By default, the dropdown is single-choice. To make it multiple-choice, set `multiselect` to `true`. As an alternative, you can use `checkbox` or `radio` together with `fieldOptions` too.
 	- When using `file`, set `multipleFiles` to `true` to allow users to select more than one file. To define the file types to allow, set `acceptFileTypes` to a string containing a comma-separated list of file extensions (reference the example below).
 	- Use `hiddenField` to add a hidden field to your form. Refer to [Including hidden fields](#including-hidden-fields) for more information.
@@ -238,7 +238,7 @@ This workflow demonstrates mutually exclusive branching. Each selection can only
 
 #### Workflows that may execute multiple branches <a href="#workflows-that-may-execute-multiple-branches" id="workflows-that-may-execute-multiple-branches"></a>
 
-Form workflows that send data to multiple branches at the same time require more care. When multiple branches receive data during an execution (for example, from a [switch](n8n-nodes-base.switch.md) node), n8n executes each branch that receives data [sequentially](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/understand-execution-order). Upon reaching the end of one branch, the execution will move to the next branch with data.
+Form workflows that send data to multiple branches at the same time require more care. When multiple branches receive data during an execution (for example, from a [switch](n8n-nodes-base.switch.md) node), n8n executes each branch that receives data [sequentially](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/understand-execution-order). Upon reaching the end of one branch, the execution will move to the next branch with data.
 
 n8n only executes a single **Form Ending** n8n Form node for each execution. When multiple branches of a form workflow receive data, n8n ignores all Form Ending nodes except for the one associated with the final branch.
 

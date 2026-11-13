@@ -23,8 +23,8 @@ Keep your n8n version up to date to get the latest features and fixes.
 Some tips when updating:
 
 * Update frequently: this avoids having to jump multiple versions at once, reducing the risk of a disruptive update. Try to update at least once a month.
-* Check the [Release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes-2.x) for breaking changes.
-* Use [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments) to create a test version of your instance. Test the update there first.
+* Check the [Release notes](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/release-notes-2.x) for breaking changes.
+* Use [Environments](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/use-source-control-and-environments) to create a test version of your instance. Test the update there first.
 
 For instructions on how to update, refer to the documentation for your installation method:
 
@@ -39,7 +39,7 @@ In [queue mode](../configure-n8n/scaling/enable-queue-mode.md), main processes, 
 
 * Take a [full backup](backup-and-restore.md), including the database and the encryption key. If n8n can't revert a migration that the update applies, you need this backup to return to the previous version.
 * Note the newest migration in the `migrations` table of your database, so you know where to stop if you roll back. For example, with no table prefix, run `SELECT name FROM migrations ORDER BY id DESC LIMIT 1;`. If n8n uses a table prefix (`DB_TABLE_PREFIX`), replace `migrations` with the prefixed table name. If n8n uses a custom schema (`DB_POSTGRESDB_SCHEMA`), add the schema name, for example `<schema-name>.migrations`. Either setting can also come from its `_FILE` variable, such as `DB_POSTGRESDB_SCHEMA_FILE`.
-* Read the [release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes) for every version after your current one, up to and including the target version.
+* Read the [release notes](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/release-notes) for every version after your current one, up to and including the target version.
 * If you deploy with the [n8n Helm chart](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n), check whether the target n8n version needs a newer chart version. The chart has its own version number, separate from the n8n version it deploys.
 
 ### Run the same n8n version on every process

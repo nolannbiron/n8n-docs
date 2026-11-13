@@ -29,7 +29,7 @@ An n8n package is a single file that holds a slice of your n8n instance: some wo
 
 A package is a gzipped tar archive with the `.n8np` extension. Inside it, each entity is a small JSON file, and a `manifest.json` lists what's in the package and what the target instance has to supply. See [Package format](package-format.md) for the full layout.
 
-Packages are an API feature. You export and import them through the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api), or through the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli), which wraps the same endpoints. There's no way to export or import a package from the n8n editor.
+Packages are an API feature. You export and import them through the [n8n API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api), or through the [n8n CLI](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-cli), which wraps the same endpoints. There's no way to export or import a package from the n8n editor.
 
 ## Three package shapes
 

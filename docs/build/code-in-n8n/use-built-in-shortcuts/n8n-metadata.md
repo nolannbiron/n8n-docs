@@ -20,7 +20,7 @@ This includes:
 
 * Access to n8n environment variables for self-hosted n8n.
 * Metadata about workflows, executions, and nodes.
-* Information about instance [Variables](../define-custom-variables.md) and [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores).
+* Information about instance [Variables](../define-custom-variables.md) and [External secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores).
 
 {% hint style="info" %}
 **Python support**
@@ -32,11 +32,11 @@ You can use Python in the Code node. It isn't available in expressions.
 
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
-| `$env` | Contains n8n instance configuration [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables). | ✅ |
+| `$env` | Contains n8n instance configuration [environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables). | ✅ |
 | `$execution.customData` | Set and get custom execution data. Refer to [Custom executions data](../../understand-workflows/understand-executions/customize-executions-data.md) for more information. | ✅ | 
 | `$execution.id` | The unique ID of the current workflow execution. | ✅ |
 | `$execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | ✅ |
-| `$execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait). | ✅ |
+| `$execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait). | ✅ |
 | `$getWorkflowStaticData(type)` | This gives access to the static workflow data. Static data doesn't persist when testing workflows: publish the workflow and run it from a trigger or webhook to save static data. For persisting data between executions, consider [data tables](../../work-with-data/data-tables.md) instead. View an [example](../cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md). | ✅ |
 | `$("<node-name>").isExecuted` | Check whether a node has already executed. | ✅ |
 | `$itemIndex` | The index of an item in a list of items. | ❌ |
@@ -45,7 +45,7 @@ You can use Python in the Code node. It isn't available in expressions.
 | `$prevNode.outputIndex` | The index of the output connector that the current input came from. Use this when the previous node had multiple outputs (such as an If or Switch node).  When using the Merge node, note that `$prevNode` always uses the first input connector. | ✅ |
 | `$prevNode.runIndex` | The run of the previous node that generated the current input. When using the Merge node, note that `$prevNode` always uses the first input connector. | ✅ |
 | `$runIndex` | How many times n8n has executed the current node. Zero-based (the first run is 0, the second is 1, and so on). | ✅ |
-| `$secrets` | Contains information about your [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) setup. | ❌ |
+| `$secrets` | Contains information about your [External secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) setup. | ❌ |
 | `$vars` | Contains the [Variables](../define-custom-variables.md) available in the active environment. | ✅ |
 | `$version` | The node version. | ❌ |
 | `$workflow.active` | Whether the workflow is active (true) or not (false). | ✅ |
@@ -66,11 +66,11 @@ Python (Pyodide) support is deprecated from n8n 1.113.2. Use Python (native) ins
 
 | Method | Description |
 | ------ | ----------- |
-| `_env` | Contains n8n instance configuration [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables). |
+| `_env` | Contains n8n instance configuration [environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables). |
 | `_execution.customData` | Set and get custom execution data. Refer to [Custom executions data](../../understand-workflows/understand-executions/customize-executions-data.md) for more information. | 
 | `_execution.id` | The unique ID of the current workflow execution. | 
 | `_execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | 
-| `_execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait). |
+| `_execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait). |
 | `_getWorkflowStaticData(type)` | This gives access to the static workflow data. Static data doesn't persist when testing workflows: publish the workflow and run it from a trigger or webhook to save static data. For persisting data between executions, consider [data tables](../../work-with-data/data-tables.md) instead. View an [example](../cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md). |
 | `_("<node-name>").isExecuted` | Check whether a node has already executed. |
 | `_nodeVersion` | Get the version of the current node. | ✅ |
@@ -78,7 +78,7 @@ Python (Pyodide) support is deprecated from n8n 1.113.2. Use Python (native) ins
 | `_prevNode.outputIndex` | The index of the output connector that the current input came from. Use this when the previous node had multiple outputs (such as an If or Switch node).  When using the Merge node, note that `_prevNode` always uses the first input connector. | 
 | `_prevNode.runIndex` | The run of the previous node that generated the current input. When using the Merge node, note that `_prevNode` always uses the first input connector. |
 | `_runIndex` | How many times n8n has executed the current node. Zero-based (the first run is 0, the second is 1, and so on). |
-| `_secrets` | Contains information about your [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) setup. | 
+| `_secrets` | Contains information about your [External secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) setup. | 
 | `_vars` | Contains the [Variables](../define-custom-variables.md) available in the active environment. | 
 | `_workflow.active` | Whether the workflow is active (true) or not (false). |
 | `_workflow.id` | The workflow ID. | 

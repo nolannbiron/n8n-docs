@@ -48,7 +48,7 @@ It isn't available on self-hosted n8n.
 
 ### Instructions <a href="#instructions" id="instructions"></a>
 
-Enter your prompt for the AI and click the **Generate code** button to automatically populate the **Transformation Code**. For example, you can specify how you want to process or categorize your data. Refer to [Writing good prompts](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/get-coding-help-from-ai#writing-good-prompts) for more information.
+Enter your prompt for the AI and click the **Generate code** button to automatically populate the **Transformation Code**. For example, you can specify how you want to process or categorize your data. Refer to [Writing good prompts](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/get-coding-help-from-ai#writing-good-prompts) for more information.
 
 The prompt should be in plain English and under 500 characters.
 

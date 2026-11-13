@@ -84,7 +84,7 @@ The credential needs the `bedrock:ApplyGuardrail` permission on the guardrail re
 
 ## Proxy limitations <a href="#proxy-limitations" id="proxy-limitations"></a>
 
-This node doesn't support the [`NO_PROXY` environment variable](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment).
+This node doesn't support the [`NO_PROXY` environment variable](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment).
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -95,5 +95,5 @@ This node doesn't support the [`NO_PROXY` environment variable](https://app.gitb
 
 Refer to [LangChain's AWS Bedrock Chat Model documentation](https://docs.langchain.com/oss/javascript/integrations/chat/bedrock_converse) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 

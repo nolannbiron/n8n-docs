@@ -113,7 +113,7 @@ Use Update Documents mode to update documents in a vector database by ID. Fill i
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
@@ -152,7 +152,7 @@ Available in **Get Many** mode. When searching for data, use this to match with 
 
 This is an `AND` query. If you specify more than one metadata filter field, all of them must match.
 
-When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader) for more information on loading documents.
+When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader) for more information on loading documents.
 
 ### Clear Namespace <a href="#clear-namespace" id="clear-namespace"></a>
 
@@ -180,7 +180,7 @@ Connect the Pinecone Vector Store node to the AI agent's tool connector, so the 
 
 Refer to [LangChain's Pinecone documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/pinecone) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ### Find your Pinecone index and namespace <a href="#find-your-pinecone-index-and-namespace" id="find-your-pinecone-index-and-namespace"></a>
 

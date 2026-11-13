@@ -23,7 +23,7 @@ Workflow sharing is available on:
 
 Workflow sharing allows you to share workflows between users of the same n8n instance.
 
-Users can share workflows they created. Instance owners, and users with the admin role, can view and share all workflows in the instance. Refer to [Instance roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/understand-instance-roles) for more information about owners and admins.
+Users can share workflows they created. Instance owners, and users with the admin role, can view and share all workflows in the instance. Refer to [Instance roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/understand-instance-roles) for more information about owners and admins.
 
 ## Share a workflow <a href="#share-a-workflow" id="share-a-workflow"></a>
 
@@ -58,7 +58,7 @@ You can't change the workflow owner, except when deleting the user.
 {% hint style="info" %}
 **Credentials**
 
-Workflow sharing allows editors to use all credentials[^1] used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely).
+Workflow sharing allows editors to use all credentials[^1] used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/share-credentials-securely).
 {% endhint %}
 
 ### Permissions <a href="#permissions" id="permissions"></a>
@@ -77,7 +77,7 @@ Workflow sharing allows editors to use all credentials[^1] used in the workflow.
 
 Sharing in n8n works on the principle of least privilege. This means that if a user shares a workflow with you, but they don't share their credentials, you can't edit the nodes within the workflow that use those credentials. You can view and run the workflow, and edit nodes that don't use unshared credentials.
 
-Refer to [Credential sharing](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely) for guidance on sharing credentials.
+Refer to [Credential sharing](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/share-credentials-securely) for guidance on sharing credentials.
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
 

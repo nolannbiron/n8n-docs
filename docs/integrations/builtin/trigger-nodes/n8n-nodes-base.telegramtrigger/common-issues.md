@@ -38,7 +38,7 @@ To resolve this issue, check your reverse proxy configuration (Nginx, Caddy, Apa
 
 This error occurs when you run n8n behind a reverse proxy and there is a problem with your instance's webhook URL.
 
-When running n8n behind a reverse proxy, you must [configure the `WEBHOOK_URL` environment variable](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy) with the public URL where your n8n instance is running. For Telegram, this URL must use HTTPS.
+When running n8n behind a reverse proxy, you must [configure the `WEBHOOK_URL` environment variable](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy) with the public URL where your n8n instance is running. For Telegram, this URL must use HTTPS.
 
 To fix this issue, configure TLS/SSL termination in your reverse proxy. Afterward, update your `WEBHOOK_URL` environment variable to use the HTTPS address.
 

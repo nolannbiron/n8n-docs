@@ -20,7 +20,7 @@ layout:
 # Google Gemini(PaLM) credentials <a href="#google-geminipalm-credentials" id="google-geminipalm-credentials"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can skip setting up Google Gemini credentials by selecting **Use Gateway credits** in the credential field of nodes that support it. Refer to [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) for details.
+On n8n Cloud, you can skip setting up Google Gemini credentials by selecting **Use Gateway credits** in the credential field of nodes that support it. Refer to [Gateway credits](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits) for details.
 {% endhint %}
 
 You can use these credentials to authenticate the following nodes:
@@ -43,7 +43,7 @@ You can use these credentials to authenticate the following nodes:
 
 Refer to [Google's Gemini API documentation](https://ai.google.dev/gemini-api/docs) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Using Gemini(PaLM) API key <a href="#using-geminipalm-api-key" id="using-geminipalm-api-key"></a>
 

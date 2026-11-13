@@ -82,7 +82,7 @@ State the n8n release you tested when the workflow depends on version-specific b
 
 Name each community node package, document the version you tested, and link to its installation instructions.
 
-Verified community nodes can be available on n8n Cloud and self-hosted instances. Unverified community nodes require self-hosting. Check the specific package and describe the supported setup. See [community node installation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management).
+Verified community nodes can be available on n8n Cloud and self-hosted instances. Unverified community nodes require self-hosting. Check the specific package and describe the supported setup. See [community node installation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/community-nodes/installation-and-management).
 
 Include an image of the workflow when it uses community nodes, so someone can inspect the workflow if its preview doesn't render. Include the setup instructions in text as well.
 

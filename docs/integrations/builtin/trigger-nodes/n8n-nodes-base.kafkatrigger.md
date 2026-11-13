@@ -84,7 +84,7 @@ Triggers you add from the Nodes panel are already version 2. The editor has no v
 3. Import the copy into a new, empty workflow (**Workflow menu** > **Import from File**). Importing adds nodes next to any already on the canvas, so don't import into the workflow that still holds the version 1 trigger.
 4. Re-select the Kafka credential on the node if the import cleared it. If you migrate on the same group ID, unpublish the version 1 workflow first. Then publish the version 2 workflow.
 
-Refer to [Export and import workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import) for details on the menu.
+Refer to [Export and import workflows](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/export-and-import) for details on the menu.
 
 n8n checks with every build that version 2's native component loads in the official n8n Docker images, on both amd64 and arm64. Other install methods, such as npm or custom images, aren't checked.
 
@@ -102,7 +102,7 @@ Rolling back loses no read position: when you unpublish a version 2 workflow, it
 
 The editor has no control to change an existing node's version. If the original version 1 workflow still exists, unpublish the version 2 workflow, then publish the original again. Otherwise, use one of these paths. Prefer the first if you still have the export from step 1 of the switch. Use the second for a workflow that started on version 2 and has no version 1 export.
 
-- **Restore the export:** unpublish the version 2 workflow. Then import the file from step 1 of the switch into a new, empty workflow (**Workflow menu** > **Import from File**), or restore the previous version from [workflow history](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/view-change-history), if your plan keeps it. Re-select the Kafka credential if the import cleared it, then publish the restored workflow.
+- **Restore the export:** unpublish the version 2 workflow. Then import the file from step 1 of the switch into a new, empty workflow (**Workflow menu** > **Import from File**), or restore the previous version from [workflow history](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/view-change-history), if your plan keeps it. Re-select the Kafka credential if the import cleared it, then publish the restored workflow.
 - **Edit the workflow JSON:** unpublish the version 2 workflow and download it (**Workflow menu** > **Download**). In a copy of the file, set `"typeVersion": 1.3` on the Kafka Trigger node and keep the same consumer group ID, then import the copy into a new, empty workflow. Re-select the Kafka credential if the import cleared it, then publish the restored workflow. A trigger you add from the Nodes panel is version 2, so adding a new trigger doesn't roll you back.
 
 What the consumer group does afterward depends on how you ran version 2:

@@ -18,7 +18,7 @@ layout:
 
 ## Combining multiple triggers <a href="#combining-multiple-triggers" id="combining-multiple-triggers"></a>
 
-If you have another trigger in the workflow already, you have two potential starting points: that trigger and the [evaluation trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.evaluationtrigger). To make sure your workflow works as expected no matter which trigger executes, you will need to merge these branches together.
+If you have another trigger in the workflow already, you have two potential starting points: that trigger and the [evaluation trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.evaluationtrigger). To make sure your workflow works as expected no matter which trigger executes, you will need to merge these branches together.
 
 <figure>
 <img src="../../.gitbook/assets/merging-trigger-branches.png" alt="">
@@ -32,18 +32,18 @@ To do so:
     * Open it and navigate to the JSON view of its output pane.
     * Click the **copy** button on the right.
 2. **Re-shape the evaluation trigger data to match**:
-    * Insert an [Edit Fields (Set) node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.set) after the evaluation trigger and connect them together.
+    * Insert an [Edit Fields (Set) node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.set) after the evaluation trigger and connect them together.
     * Change its mode to **JSON**.
     * Paste your data into the 'JSON' field, removing the `[` and `]` on the first and last lines.
     * Switch the field type to **Expression**.
     * Map in the data from the trigger by dragging it from the input pane.
     * For strings, make sure to replace the entire value (including the quotes) and add `.toJsonString()` to the end of the expression.
-3. **Merge the branches using a 'No-op' node**: Insert a [No-op node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.noop) and wire both the other trigger and the Set node up to it. The 'No-op' node just outputs whatever input it receives.
+3. **Merge the branches using a 'No-op' node**: Insert a [No-op node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.noop) and wire both the other trigger and the Set node up to it. The 'No-op' node just outputs whatever input it receives.
 4. **Reference the 'No-op' node outputs in the rest of the workflow**: Since both paths will flow through this node with the same format, you can be sure that your input data will always be there.
 
 ## Avoiding evaluation breaking the chat <a href="#avoiding-evaluation-breaking-the-chat" id="avoiding-evaluation-breaking-the-chat"></a>
 
-n8n's internal chat reads the output data of the last executed node in the workflow. After adding an evaluation node with the ['set outputs' operation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.evaluation#set-outputs), this data may not be in the expected format, or even contain the chat response.
+n8n's internal chat reads the output data of the last executed node in the workflow. After adding an evaluation node with the ['set outputs' operation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.evaluation#set-outputs), this data may not be in the expected format, or even contain the chat response.
 
 ![Agent node with a second output branch wired to a No-op node, positioned to execute last](../../.gitbook/assets/add-second-output-branch.png)
 

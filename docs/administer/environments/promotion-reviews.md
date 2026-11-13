@@ -77,4 +77,4 @@ Because the same GitLab user opens and approves the merge request, GitLab approv
 - [Known limitations](known-limitations.md)
 - [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md)
 - [GitLab](git-based-promotion/gitlab.md)
-- [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews)
+- [Workflow reviews](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/workflow-reviews)

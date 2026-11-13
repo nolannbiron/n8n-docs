@@ -18,7 +18,7 @@ layout:
 
 Variables for working with HTTP node requests and responses when using pagination.
 
-Refer to [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) for guidance on using the HTTP node, including configuring pagination.
+Refer to [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) for guidance on using the HTTP node, including configuring pagination.
 
 Refer to [HTTP Request node cookbook | Pagination](../cookbook/http-request-node/pagination.md) for example pagination configurations.
 

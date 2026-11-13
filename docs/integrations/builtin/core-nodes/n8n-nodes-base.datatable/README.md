@@ -38,7 +38,7 @@ You can use the Data Table node to:
 
 As well as using the Data Tables node in a workflow, you can view and manage data tables manually from the **Data Tables** tab in your project **Overview**.
 
-For information about working with data tables in this tab, and guidance on when to use data tables and their limitations, see [Data tables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables).
+For information about working with data tables in this tab, and guidance on when to use data tables and their limitations, see [Data tables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/data-tables).
 {% endhint %}
 
 ## Resources <a href="#resources" id="resources"></a>
@@ -69,4 +69,4 @@ See available operations below. For detailed information on parameters for diffe
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-[Data tables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables) explains how to create and manage data tables.
+[Data tables](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/data-tables) explains how to create and manage data tables.

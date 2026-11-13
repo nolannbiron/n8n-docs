@@ -104,7 +104,7 @@ The enforcement scope controls which executions n8n redacts across the instance:
 ### How enforcement interacts with workflow settings <a href="#how-enforcement-interacts-with-workflow-settings" id="how-enforcement-interacts-with-workflow-settings"></a>
 
 * **Enforcement applies when execution data is read.** n8n redacts data covered by the enforcement scope whenever anyone views an execution, including executions from workflows that don't have redaction enabled in their own settings.
-* **Workflow settings can't be weaker than the enforced scope.** The workflow settings UI locks the affected redaction toggles, and the [public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) rejects attempts to create or update a workflow with a redaction policy below the floor. Workflows can still opt into stricter redaction than the floor.
+* **Workflow settings can't be weaker than the enforced scope.** The workflow settings UI locks the affected redaction toggles, and the [public API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api) rejects attempts to create or update a workflow with a redaction policy below the floor. Workflows can still opt into stricter redaction than the floor.
 * **New workflows start at the floor.** When you create a workflow while enforcement is active, its redaction policy defaults to the enforced scope. If you create a workflow through the public API without specifying a redaction policy, n8n sets it to the floor.
 * **Existing workflow settings stay as they are.** Enabling enforcement doesn't change the stored settings of existing workflows. Their execution data is still redacted at the enforced scope, and if you later disable enforcement, each workflow returns to its own settings.
 
@@ -152,7 +152,7 @@ n8n denies reveal requests for executions that used dynamic credentials, regardl
 
 ## Audit logging <a href="#audit-logging" id="audit-logging"></a>
 
-[Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) tracks reveal actions and enforcement policy changes. The following audit events are available:
+[Log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems) tracks reveal actions and enforcement policy changes. The following audit events are available:
 
 | Event                                     | Description                                                                                                                                                                |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -164,7 +164,7 @@ These events integrate with your existing log streaming destinations (syslog, we
 
 ## Permission scopes <a href="#permission-scopes" id="permission-scopes"></a>
 
-Execution data redaction introduces the following permission scopes that you can assign through [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles):
+Execution data redaction introduces the following permission scopes that you can assign through [custom project roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles):
 
 | Scope                       | Purpose                                                                                                                  |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -183,7 +183,7 @@ Redaction controls the visibility of execution data when users view executions. 
 * **Authentication headers in outbound requests**: redaction doesn't alter the requests workflows make to external services, including any authentication headers they contain.
 * **No field-level redaction**: redaction applies to a node's entire data payload. You can't configure redaction for individual fields within the data. The exception is fields that node authors declare as sensitive, which n8n always redacts.
 * **Stored data stays as it is**: redaction doesn't encrypt or change execution data in the database. n8n applies redaction when serving the data through the API. Anyone with direct database access can read the underlying data.
-* **Enforcement doesn't propagate through source control**: instance-level enforcement is an instance policy and isn't included when you push workflows with [source control](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments). A workflow pushed from an enforced instance to a non-enforced instance isn't redacted on the target instance. This matches the behavior of other instance-level policies, such as two-factor authentication enforcement.
+* **Enforcement doesn't propagate through source control**: instance-level enforcement is an instance policy and isn't included when you push workflows with [source control](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/use-source-control-and-environments). A workflow pushed from an enforced instance to a non-enforced instance isn't redacted on the target instance. This matches the behavior of other instance-level policies, such as two-factor authentication enforcement.
 
 ## Best practices <a href="#best-practices" id="best-practices"></a>
 
@@ -199,15 +199,15 @@ Redaction controls the visibility of execution data when users view executions. 
 
 * **Start with production redaction**: For most workflows handling sensitive data, redacting production executions while keeping manual executions visible provides a good balance between security and ease of debugging.
 * **Redact manual data when needed**: If your test environment uses real or production-like data, enable manual execution redaction as well.
-* **Use log streaming**: Enable [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) to capture reveal audit events. This provides an audit trail for compliance and allows you to monitor who accesses sensitive execution data.
+* **Use log streaming**: Enable [log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems) to capture reveal audit events. This provides an audit trail for compliance and allows you to monitor who accesses sensitive execution data.
 * **Review redaction settings during workflow reviews**: Include redaction policy as part of your workflow review or approval process, particularly for workflows that handle cross-department or customer-facing data.
 
 ## Security considerations <a href="#security-considerations" id="security-considerations"></a>
 
 * n8n applies redaction at the API level and never sends redacted data to the browser.
-* When you [create custom nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview), you can declare specific output fields as sensitive (using `sensitiveOutputFields` in the node type definition). n8n always redacts these fields and prevents revealing them, even for users with reveal access.
+* When you [create custom nodes](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/overview), you can declare specific output fields as sensitive (using `sensitiveOutputFields` in the node type definition). n8n always redacts these fields and prevents revealing them, even for users with reveal access.
 * If the redaction service can't resolve a node's type definition (for example, after uninstalling a community node), n8n fully redacts all output data for that node. This fail-closed approach prevents unknown nodes from leaking sensitive fields.
-* When redaction is enabled, execution data is also automatically redacted from [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) and logging output.
+* When redaction is enabled, execution data is also automatically redacted from [log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems) and logging output.
 
 ## Related resources
 

@@ -22,7 +22,7 @@ layout:
 # MiniMax Chat Model node <a href="#minimax-chat-model-node" id="minimax-chat-model-node"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can use the MiniMax Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own MiniMax API key. Select **Use Gateway credits** in the node's credential field to run the node without a MiniMax account.
+On n8n Cloud, you can use the MiniMax Chat Model node with [Gateway credits](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits) instead of your own MiniMax API key. Select **Use Gateway credits** in the node's credential field to run the node without a MiniMax account.
 {% endhint %}
 
 Use the MiniMax Chat Model node to use MiniMax's chat models with conversational agents[^1].
@@ -67,6 +67,6 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 Refer to [MiniMax's documentation](https://platform.minimax.io/docs/guides/models-intro) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 [^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

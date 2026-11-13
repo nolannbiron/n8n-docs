@@ -40,7 +40,7 @@ The Execute Command node runs shell commands on the host machine that runs n8n.
 {% hint style="warning" %}
 **Security considerations**
 
-The Execute Command node can introduce significant security risks in environments that operate with untrusted users. Because of this, the node is [disabled](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes#exclude-nodes) by default from n8n 2.0.
+The Execute Command node can introduce significant security risks in environments that operate with untrusted users. Because of this, the node is [disabled](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/block-specific-nodes#exclude-nodes) by default from n8n 2.0.
 {% endhint %}
 
 {% hint style="info" %}
@@ -50,7 +50,7 @@ This node executes the command in the default shell of the host machine. For exa
 
 If you run n8n with Docker, your command will run in the n8n container and not the Docker host.
 
-If you're using [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode), the command runs on the worker that's executing the task in production mode. When running manual executions, it runs on the main instance, unless you set `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS` to `true`.
+If you're using [queue mode](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/enable-queue-mode), the command runs on the worker that's executing the task in production mode. When running manual executions, it runs on the main instance, unless you set `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS` to `true`.
 {% endhint %}
 
 {% hint style="info" %}

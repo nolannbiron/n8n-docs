@@ -81,7 +81,7 @@ Automatic subscription renewal in the Microsoft Teams Trigger node is available 
 
 When you publish a workflow, the Microsoft Teams Trigger node creates a Microsoft Graph change notification subscription for each resource it watches. Microsoft Graph expires Teams subscriptions after three days. The trigger renews a subscription when Microsoft Graph sends a lifecycle notification for it, so a published workflow keeps receiving events with no action from you.
 
-Before n8n 2.45.1, the trigger doesn't renew its subscriptions, so it stops receiving events about three days after you publish the workflow. On those versions, [unpublish the workflow](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/save-and-publish-workflows#how-to-unpublish-a-workflow) and publish it again. The trigger then receives new events for about three more days.
+Before n8n 2.45.1, the trigger doesn't renew its subscriptions, so it stops receiving events about three days after you publish the workflow. On those versions, [unpublish the workflow](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/save-and-publish-workflows#how-to-unpublish-a-workflow) and publish it again. The trigger then receives new events for about three more days.
 
 After you upgrade, the trigger also renews subscriptions that earlier n8n versions created, as long as they haven't expired. If the workflow stopped receiving events before the upgrade, unpublish it and publish it again. If you built a scheduled workflow that renews the subscriptions or republishes the trigger workflow, unpublish the trigger workflow and publish it again after you upgrade. Then you can unpublish that scheduled workflow.
 
@@ -101,7 +101,7 @@ If no renewal succeeds before the subscription expires, the trigger stops receiv
 
 For an expired refresh token, reconnect the credential. For revoked consent, a Microsoft Entra administrator must grant consent again before you reconnect an OAuth2 credential. If you connected the credential before n8n 2.45.0, the reconnect also requests `TeamMember.Read.All`, which needs admin consent, as described in [Required scopes](#required-scopes). Then unpublish the workflow and publish it again to re-create the subscription.
 
-With the default log settings, these log lines don't include the workflow ID or the error message. If you self-host n8n, set `N8N_LOG_FORMAT` to `json` to include them. Refer to [Logs environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs) for more information.
+With the default log settings, these log lines don't include the workflow ID or the error message. If you self-host n8n, set `N8N_LOG_FORMAT` to `json` to include them. Refer to [Logs environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs) for more information.
 
 If the trigger stops receiving events and you can't find one of these log lines, unpublish the workflow and publish it again.
 

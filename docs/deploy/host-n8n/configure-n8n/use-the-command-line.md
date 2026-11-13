@@ -69,7 +69,7 @@ n8n execute --id <ID>
 
 ## Publish or unpublish a workflow <a href="#publish-or-unpublish-a-workflow" id="publish-or-unpublish-a-workflow"></a>
 
-You can publish or unpublish a workflow using the CLI. In n8n 2.0, the [previous active/inactive toggle](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes) was replaced by a publish/unpublish model. Use `publish:workflow` and `unpublish:workflow` to change a workflow's published state from the CLI.
+You can publish or unpublish a workflow using the CLI. In n8n 2.0, the [previous active/inactive toggle](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/v20-breaking-changes) was replaced by a publish/unpublish model. Use `publish:workflow` and `unpublish:workflow` to change a workflow's published state from the CLI.
 
 {% hint style="info" %}
 **When changes take effect**
@@ -147,7 +147,7 @@ n8n unpublish:workflow --all
 {% hint style="warning" %}
 **Feature availability**
 
-The `update:workflow` command is deprecated from n8n 2.0 and will be removed. Use [`publish:workflow`](use-the-command-line.md#publish-a-workflow) and [`unpublish:workflow`](use-the-command-line.md#unpublish-a-workflow) instead. See the [n8n 2.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes) for details.
+The `update:workflow` command is deprecated from n8n 2.0 and will be removed. Use [`publish:workflow`](use-the-command-line.md#publish-a-workflow) and [`unpublish:workflow`](use-the-command-line.md#unpublish-a-workflow) instead. See the [n8n 2.0 breaking changes](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/v20-breaking-changes) for details.
 {% endhint %}
 
 Set the active status of a workflow by its ID to false:
@@ -457,7 +457,7 @@ n8n ldap:reset
 
 ## Uninstall community nodes and credentials <a href="#uninstall-community-nodes-and-credentials" id="uninstall-community-nodes-and-credentials"></a>
 
-You can manage [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) using the n8n CLI. For now, you can only uninstall community nodes and credentials, which is useful if a community node causes instability.
+You can manage [community nodes](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/community-nodes/installation-and-management) using the n8n CLI. For now, you can only uninstall community nodes and credentials, which is useful if a community node causes instability.
 
 Command flags:
 

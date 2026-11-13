@@ -61,10 +61,10 @@ Current `beta`: 2.48.4
 
 The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
 
-* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version)
 * Self-hosted options:
-    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
-    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
+    * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
 
 ## Semantic versioning in n8n <a href="#semantic-versioning-in-n8n" id="semantic-versioning-in-n8n"></a>
 
@@ -724,7 +724,7 @@ This allows you to manage access centrally from your IdP with automated onboardi
 
 Learn more in our dedicated documentation pages.
 
-For [OIDC](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc#instance-and-project-access-provisioning) For [SAML](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-saml/set-up-saml#instance-and-project-access-provisioning)
+For [OIDC](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc#instance-and-project-access-provisioning) For [SAML](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/use-saml/set-up-saml#instance-and-project-access-provisioning)
 
 Notes: User provisioning is not real-time and updates apply on the user’s next login.
 
@@ -734,8 +734,8 @@ User provisioning is only available on n8n Enterprise.
 * The AI Workflow Builder now uses improved internal best-practice instructions, which helps it generate higher quality workflows for users.
 * Core updates allow creating data tables from CSV files, configurable workflow statistics, and improved user role provisioning for enterprise, including SSO settings integration.
 * Enterprise customers using Single Sign On via SAML or OIDC can now provision the instance role and project role of each user in their organisation from their Identity Provider.
-  * See the [new SAML documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-saml/set-up-saml#instance-and-project-access-provisioning)
-  * See the [new OIDC documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc#instance-and-project-access-provisioning)
+  * See the [new SAML documentation](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/use-saml/set-up-saml#instance-and-project-access-provisioning)
+  * See the [new OIDC documentation](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc#instance-and-project-access-provisioning)
 * The editor features a dismissable callout for scaling mode, CSV download for data tables, custom project roles (Beta), and enhanced data table visibility.
 * Additional improvements include Stripe billing meter events, and updates to binary data handling and workflow search.
 
@@ -811,7 +811,7 @@ Once connected, these platforms can discover and interact with your workflows di
 
 \
 \
-This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server)<br>
+This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/connect-to-n8n-mcp-server)<br>
 
 <img src=".gitbook/assets/instance_mcp_settings.png" alt="Enable MCP for an instance in instance settings." data-size="original">\
 <img src=".gitbook/assets/instance_mcp_workflow_settings.png" alt="Enable MCP for each workflow in workflow settings." data-size="original">
@@ -909,13 +909,13 @@ The Guardrails node provides a set of rules and policies that control an AI agen
 * Sanitize Text: Detects and replaces specific data such as PII, URLs, or secrets with placeholders.
 
 The default presets and prompts are adapted from the open-source [guardrails package](https://github.com/openai/openai-guardrails-js) made available by OpenAI.\
-For more info, see [Guardrails documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.guardrails)
+For more info, see [Guardrails documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.guardrails)
 {% endhint %}
 
 {% hint style="info" %}
 ### OAuth for MCP Client Tool node <a href="#oauth-for-mcp-client-tool-node" id="oauth-for-mcp-client-tool-node"></a>
 
-The MCP Client Tool now supports OAuth authentication, enabling secure connections to APIs that implement delegated access flows. [Learn more](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp) about the MCP Client Tool node.<br>
+The MCP Client Tool now supports OAuth authentication, enabling secure connections to APIs that implement delegated access flows. [Learn more](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp) about the MCP Client Tool node.<br>
 
 <img src=".gitbook/assets/oauthmcp.png" alt="Authentication options in MCP Client Tool node" data-size="original"><br>
 {% endhint %}
@@ -1064,10 +1064,10 @@ You can now easily migrate n8n data between different database types. This new t
 The tooling comes in the form of two new CLI commands, `export:entities` and `import:entities`\
 \&#xNAN;**`Export`** The new export command lets you export data from your existing n8n database (SQLite / Postgres), producing a set of encrypted files within a compressed directory for you to move around and use with the import commands.
 
-For details, see [Export entities](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#export-entities)\
+For details, see [Export entities](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/use-the-command-line#export-entities)\
 \&#xNAN;**`Import`** The new import command allows you to read from a compressed and encrypted set of files generated from the new export command, and import them in to your new database of choice (SQLite / Postgres) to be used with your n8n instance.
 
-For details, see [Import entities](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#import-entities)
+For details, see [Import entities](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/use-the-command-line#import-entities)
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -1301,7 +1301,7 @@ Data tables are available today on all plans. They currently support numbers, st
 * Data tables don’t currently support foreign keys or default values.
 * For now, all data tables are accessible to everyone in a project. More granular permissions and sharing options are planned.
 
-Learn more about [**data tables**](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables) and the [**Data table node**](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable).
+Learn more about [**data tables**](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/data-tables) and the [**Data table node**](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.datatable).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -1539,7 +1539,7 @@ This release contains a new CLI tool, editor improvements, node updates, perform
 
 For teams working across different environments, deployments often involve multiple people making changes at different times. Without a clear view of those changes, it’s easy to miss something important.
 
-[Workflow Diff](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/compare-versions) gives you an easy and visual way to review workflow changes before you deploy them between environments.
+[Workflow Diff](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/use-source-control-and-environments/compare-versions) gives you an easy and visual way to review workflow changes before you deploy them between environments.
 
 With it, you can:
 
@@ -1740,7 +1740,7 @@ This release contains core updates, editor improvements, node updates, and bug f
 
 ### **Respond to Chat node** <a href="#respond-to-chat-node" id="respond-to-chat-node"></a>
 
-With the [\*\*Respond to Chat](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chat) node\*\*, you can now access Human-in-the-Loop functionality natively in n8n Chat.
+With the [\*\*Respond to Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chat) node\*\*, you can now access Human-in-the-Loop functionality natively in n8n Chat.
 
 Enable conversational experiences where you can ask for clarification, request approval before taking further action, and get back intermediate results — all within a single workflow execution.
 
@@ -1899,7 +1899,7 @@ You can still define your own custom metrics, but for common use cases, the buil
 
 🛠️ **How to:**
 
-1. Set up your evaluation as described [here](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#how-it-works), using an **Evaluation** node as the trigger and another with the **Set Metrics** operation.
+1. Set up your evaluation as described [here](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#how-it-works), using an **Evaluation** node as the trigger and another with the **Set Metrics** operation.
 2. In the **Set Metrics** node, choose a metric from the dropdown list.
 3. Define any additional parameters required for your selected metric. In most cases, this includes mapping the dataset columns to the appropriate fields.
 
@@ -1918,7 +1918,7 @@ You can still define your own custom metrics, but for common use cases, the buil
 \
 <img src=".gitbook/assets/Built-in_metrics.png" alt="Built-in Metrics" data-size="original"><br>
 
-[Learn more](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test) about setting up and customizing evaluations.
+[Learn more](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test) about setting up and customizing evaluations.
 {% endhint %}
 
 ### AI Agent Tool node <a href="#ai-agent-tool-node" id="ai-agent-tool-node"></a>
@@ -2044,7 +2044,7 @@ This release contains core updates, editor improvements, a new node, node update
 
 ### Model Selector node <a href="#model-selector-node" id="model-selector-node"></a>
 
-The [Model Selector node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.modelselector) gives you more control when working with multiple LLMs in your workflows.
+The [Model Selector node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.modelselector) gives you more control when working with multiple LLMs in your workflows.
 
 Use it to determine which connected model should handle a given input, based on conditions like expressions or global variables. This makes it easier to implement model routing strategies, such as switching models based on performance, task type, cost, or availability.
 
@@ -2073,7 +2073,7 @@ This gives enterprise teams more flexibility to integrate n8n with their existin
 
 Project admins now have the ability to commit workflow and credential changes directly to Git through the environments feature. This update streamlines the workflow deployment process by giving project-level admins direct control over committing their changes. It also ensures that the those who know their workflows best can review and commit updates themselves, without needing to involve instance-level admins.
 
-[Learn more about source control environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments)
+[Learn more about source control environments](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/use-source-control-and-environments)
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -2125,7 +2125,7 @@ To get the benefits of using vector stores, such as returning results based on s
 
 In n8n, uploading and querying vectors stores happens in two workflows. Now, you have an example to get your started and make implementation easier with the **RAG starter template**.
 
-* The **Load Data** workflow shows how to add data with the appropriate embedding model, split it into chunks with the [Default Data Loader](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader), and add metadata as desired.
+* The **Load Data** workflow shows how to add data with the appropriate embedding model, split it into chunks with the [Default Data Loader](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader), and add metadata as desired.
 * The **Retriever** workflow for querying data, shows how agents and vector stores work together to help you define highly relevant results and save tokens using the **Question and Answer** tool.
 
 Enable semantic search and the retrieval of unstructured data for increased quality and relevance of AI responses.
@@ -2134,7 +2134,7 @@ Enable semantic search and the retrieval of unstructured data for increased qual
 
 * Search for **RAG starter template** in the search bar of the Nodes panel to insert it into your workflow.
 
-Learn more about implementing RAG in n8n [here](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/retrieve-relevant-context).<br>
+Learn more about implementing RAG in n8n [here](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/understand-ai-components/retrieve-relevant-context).<br>
 
 <figure><img src=".gitbook/assets/RAG_starter_template.png" alt=""><figcaption><p>RAG starter template</p></figcaption></figure>
 
@@ -2217,7 +2217,7 @@ _Note_: You will need to manually adjust the field types in the Start and Return
 
 This makes it easier to keep workflows modular, performant, and easier to maintain.
 
-Learn more about [sub-workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/break-workflows-into-smaller-parts).
+Learn more about [sub-workflows](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/break-workflows-into-smaller-parts).
 
 This release contains performance improvements and bug fixes.
 
@@ -2340,11 +2340,11 @@ Get started by selecting an AI workflow you want to evaluate that includes one o
 
 1.  Add an **Evaluation** node with the **On new Evaluation event** operation. This node will act as an additional trigger you’ll run only when testing. Configure it to read your dataset from Google Sheets, with each row representing a test input.<br>
 
-    > 💡 Better datasets mean better evaluations. Craft your dataset from a variety of test cases, including edge cases and typical inputs, to get meaningful feedback on how your AI performs. Learn more and access sample datasets [here](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/run-quick-evaluations#1-create-a-dataset).
+    > 💡 Better datasets mean better evaluations. Craft your dataset from a variety of test cases, including edge cases and typical inputs, to get meaningful feedback on how your AI performs. Learn more and access sample datasets [here](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/test-and-improve-ai-workflows/run-quick-evaluations#1-create-a-dataset).
 2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
 3.  To evaluate output quality, add a third **Evaluation** node with the **Set Metrics** operation at a point after you’ve generated the outputs. You can develop workflow logic, custom calculations, or add an LLM-as-Judge to score the outputs. Map these metrics to your dataset in the node’s parameters.<br>
 
-    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#2-add-metrics-to-workflow).
+    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#2-add-metrics-to-workflow).
 
 \
 <img src=".gitbook/assets/Evaluations_workflow.png" alt="Evaluation workflow" data-size="original"><br>
@@ -2364,7 +2364,7 @@ Evaluations for AI Workflows are designed to fit into your development flow, wit
 * Community Edition supports one single evaluation. Pro and Enterprise plans allow unlimited evaluations.
 * AI Evaluations are not enabled for instances in scaling mode at this time.<br>
 
-You can find details, tips, and common troubleshooting info [here](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/fix-common-issues).\
+You can find details, tips, and common troubleshooting info [here](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/test-and-improve-ai-workflows/fix-common-issues).\
 <br>
 
 👉 Learn more about the AI evaluation strategies and practical implementation techniques. [Watch now](https://www.youtube.com/live/QkciQpotQBQ?feature=shared).
@@ -2407,7 +2407,7 @@ Learn more about this update and find out which nodes are already installable fr
 
 💻 **Use a verified node**
 
-Make sure you're on **n8n 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes). In both cases, verified nodes are enabled by default.
+Make sure you're on **n8n 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes). In both cases, verified nodes are enabled by default.
 
 * Open the **Nodes panel** from the editor
 * Search for the Node. Verified nodes are indicated by a shield 🛡️
@@ -2424,10 +2424,10 @@ Once an Owner installs a node, everyone on the instance can start using it—jus
 
 Want your node to be verified and discoverable from the editor? Here’s how to get involved:
 
-1. Review the [community node verification guidelines](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/verification-guidelines).
-2. If you’re building something new, follow the recommendations for [creating nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview).
-3. Check your design against the [UX guidelines](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/ux-guidelines).
-4. [Submit your node](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/deploy-your-node/submit-community-nodes) to npm.
+1. Review the [community node verification guidelines](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/verification-guidelines).
+2. If you’re building something new, follow the recommendations for [creating nodes](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/overview).
+3. Check your design against the [UX guidelines](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/build-your-node/reference/ux-guidelines).
+4. [Submit your node](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/deploy-your-node/submit-community-nodes) to npm.
 5. Request verification by filling out [this form](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b).
 
 <br>
@@ -2594,7 +2594,7 @@ To access the expanded logs view, click on the Logs bar at the bottom of the can
 
 ### Insights enhancements for Enterprise <a href="#insights-enhancements-for-enterprise" id="insights-enhancements-for-enterprise"></a>
 
-Two weeks after the launch of [Insights](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights), we’re releasing some enhancements designed for enterprise users.
+Two weeks after the launch of [Insights](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/track-usage-with-insights), we’re releasing some enhancements designed for enterprise users.
 
 * **Expanded time ranges**. You can now filter insights over a variety of time periods, from the last 24 hours up to 1 year. Pro users are limited to 7 day and 14 day views.
 * **Hourly granularity**. Drill down into the last 24 hours of production executions with hourly granularity, making it easier to analyze workflows and quickly identify issues.
@@ -2694,7 +2694,7 @@ This update also includes support for the `$fromAI` function to dynamically gene
 * In the **Tools panel**, select HTTP **Request Tool.**
 * Configure it just like you would a regular **HTTP Request node** — including advanced options
 
-👉 Learn more about configuring the [HTTP Request tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest).
+👉 Learn more about configuring the [HTTP Request tool](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest).
 
 ### Scoped API keys <a href="#scoped-api-keys" id="scoped-api-keys"></a>
 
@@ -2731,7 +2731,7 @@ Need to reorganize? Just select a workflow or folder and drag it into another fo
 \
 <br>
 
-📁 Folders are available to all [registered](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features#registered-community-edition) users—jump in and get your workspace in order!
+📁 Folders are available to all [registered](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/community-edition-features#registered-community-edition) users—jump in and get your workspace in order!
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -2767,7 +2767,7 @@ This release contains API updates, core updates, editor updates, a new node, nod
 {% hint style="info" %}
 ### Insights <a href="#insights" id="insights"></a>
 
-We're rolling out [Insights](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights), a new dashboard to monitor how your workflows are performing over time. It's designed to give admins (and owners) better visibility of their most important workflow metrics and help troubleshoot potential issues and improvements.\
+We're rolling out [Insights](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/track-usage-with-insights), a new dashboard to monitor how your workflows are performing over time. It's designed to give admins (and owners) better visibility of their most important workflow metrics and help troubleshoot potential issues and improvements.\
 <br>
 
 In this first release, we’re introducing a summary banner, the insights dashboard, and time saved per execution.\
@@ -2836,8 +2836,8 @@ While it’s still early in the development process, we want to give you access 
 
 We are adding two new nodes:
 
-* a MCP [Server Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcptrigger) for any workflow
-* a MCP [Client Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp) for the AI Agent
+* a MCP [Server Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcptrigger) for any workflow
+* a MCP [Client Tool](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp) for the AI Agent
 
 The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to models running outside of n8n. You can run multiple MCP servers from your n8n instance. The MCP Client Tool connects LLMs - and other intelligent agents - to any MCP-enabled service through a single interface.<br>
 
@@ -2853,7 +2853,7 @@ The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to mode
 
 <img src=".gitbook/assets/MCP-Server-Trigger.png" alt="MCP Server Trigger" data-size="original">
 
-[Explore the MCP Server Trigger docs](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcptrigger)
+[Explore the MCP Server Trigger docs](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcptrigger)
 
 ### MCP Client Tool <a href="#mcp-client-tool" id="mcp-client-tool"></a>
 
@@ -2861,7 +2861,7 @@ The MCP Client Tool node is a MCP client, allowing you to use the tools exposed 
 
 <img src=".gitbook/assets/MCP-Client-Tool.png" alt="MCP Client Tools" data-size="original">
 
-[Explore the MCP Client Tool docs](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp)
+[Explore the MCP Client Tool docs](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp)
 {% endhint %}
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
@@ -3005,7 +3005,7 @@ Create and manage folders within your personal space or within projects. You can
 
 <br>
 
-Folders are available for all [registered](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features#registered-community-edition) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
+Folders are available for all [registered](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/community-edition-features#registered-community-edition) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
 
 ### Enhancements to Form Trigger Node <a href="#enhancements-to-form-trigger-node" id="enhancements-to-form-trigger-node"></a>
 
@@ -3602,16 +3602,16 @@ To get the full picture, check out our Studio update with Max and Elias, where t
 
 ### New node: Microsoft Entra ID <a href="#new-node-microsoft-entra-id" id="new-node-microsoft-entra-id"></a>
 
-Microsoft Entra ID (formerly known as Microsoft Azure Active Directory or Azure AD) is used for cloud-based identity and access management. [The new node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftentra) supports a wide range of Microsoft Entra ID features, which includes creating, getting, updating, and deleting users and groups, as well as adding users to and removing them from groups.
+Microsoft Entra ID (formerly known as Microsoft Azure Active Directory or Azure AD) is used for cloud-based identity and access management. [The new node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.microsoftentra) supports a wide range of Microsoft Entra ID features, which includes creating, getting, updating, and deleting users and groups, as well as adding users to and removing them from groups.
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
-* [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent): Vector stores can now be directly used as tools for the agent
-* [Code](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/use-built-in-shortcuts): Tons of new speed and convenience features, see above for details
-* [Google Vertex Chat](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex): Added option to specify the GCP region for the Google API credentials
-* [HighLevel](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.highlevel): Added support for calendar items
+* [AI Agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent): Vector stores can now be directly used as tools for the agent
+* [Code](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/use-built-in-shortcuts): Tons of new speed and convenience features, see above for details
+* [Google Vertex Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex): Added option to specify the GCP region for the Google API credentials
+* [HighLevel](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.highlevel): Added support for calendar items
 
-We also added a custom [projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects) icon selector on top of the available emojis. Pretty!
+We also added a custom [projects](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects) icon selector on top of the available emojis. Pretty!
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3639,16 +3639,16 @@ This release contains node updates, performance improvements, and bug fixes.
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
-* [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent): Updated descriptions for Chat Trigger options
-* [Facebook Graph API](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.facebookgraphapi): Updated for API v21.0
-* [Gmail](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail): Added two new options for the `Send and wait` operation, free text and custom form
-* [Linear Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.lineartrigger): Added support for admin scope
-* [MailerLite](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mailerlite): Now supports the new API
-* [Slack](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack): Added two new options for the `Send and wait` operation, free text and custom form
+* [AI Agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent): Updated descriptions for Chat Trigger options
+* [Facebook Graph API](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.facebookgraphapi): Updated for API v21.0
+* [Gmail](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail): Added two new options for the `Send and wait` operation, free text and custom form
+* [Linear Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.lineartrigger): Added support for admin scope
+* [MailerLite](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mailerlite): Now supports the new API
+* [Slack](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack): Added two new options for the `Send and wait` operation, free text and custom form
 
-We also added credential support for [SolarWinds IPAM](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/solarwindsipam) and [SolarWinds Observability](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/solarwindsobservability).
+We also added credential support for [SolarWinds IPAM](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/solarwindsipam) and [SolarWinds Observability](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/solarwindsobservability).
 
-Last, but not least, we [improved the schema view performance in the node details view by 90%](https://github.com/n8n-io/n8n/pull/12180) and added drag and drop re-ordering to parameters. This comes in very handy in the [If](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) or [Edit Fields](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.set) nodes.
+Last, but not least, we [improved the schema view performance in the node details view by 90%](https://github.com/n8n-io/n8n/pull/12180) and added drag and drop re-ordering to parameters. This comes in very handy in the [If](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.if) or [Edit Fields](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.set) nodes.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3686,12 +3686,12 @@ This release contains node updates, usability improvements, and bug fixes.
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
-* [AI Transform](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aitransform): The `maximum context length` error now retries with reduced payload size
-* [Redis](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.redis): Added support for `continue on fail`
+* [AI Transform](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.aitransform): The `maximum context length` error now retries with reduced payload size
+* [Redis](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.redis): Added support for `continue on fail`
 
 ### Improved commit modal <a href="#improved-commit-modal" id="improved-commit-modal"></a>
 
-We added filters and text search to the commit modal when working with [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments). This will make committing easier as we provide more information and better visibility. Environments are available on the Enterprise plan.
+We added filters and text search to the commit modal when working with [Environments](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/use-source-control-and-environments). This will make committing easier as we provide more information and better visibility. Environments are available on the Enterprise plan.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -3752,15 +3752,15 @@ The Task runner comes in two modes:
 * Internal mode (default): Perfect for getting started, automatically managing task runners as child processes
 * External mode: For advanced hosting scenarios requiring maximum isolation and security
 
-Currently, this feature is opt-in and can be enabled using [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/task-runners). Once stable, it will become the default execution method for Code nodes.
+Currently, this feature is opt-in and can be enabled using [environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/task-runners). Once stable, it will become the default execution method for Code nodes.
 
-To start using Task runners today, [check out the docs](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners).
+To start using Task runners today, [check out the docs](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/set-up-task-runners).
 {% endhint %}
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
-* [AI Transform node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aitransform): We improved the prompt for code generation to transform data
-* [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code): We added a warning if `pairedItem` is absent or could not be auto mapped
+* [AI Transform node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.aitransform): We improved the prompt for code generation to transform data
+* [Code node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code): We added a warning if `pairedItem` is absent or could not be auto mapped
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -3797,9 +3797,9 @@ We're looking forward to your feedback. Should you encounter a bug, you will fin
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
-* We added credential support for [Zabbix](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/zabbix) to the HTTP request node
-* We added new OAuth2 credentials for [Microsoft SharePoint](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoft)
-* The [Slack node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack#operations) now uses markdown for the approval message when using the `Send and Wait for Approval` operation
+* We added credential support for [Zabbix](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/zabbix) to the HTTP request node
+* We added new OAuth2 credentials for [Microsoft SharePoint](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/microsoft)
+* The [Slack node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack#operations) now uses markdown for the approval message when using the `Send and Wait for Approval` operation
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -3885,12 +3885,12 @@ This release contains node updates and bug fixes.
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
-* [AI Transform](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aitransform): Improved usability
-* [Anthropic Chat Model Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic): Added Haiku 3.5 support
-* [Convert to File](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.converttofile): Added delimiter option for writing to CSV
-* [Gmail Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger): Added option to filter for draft messages
-* [Intercom](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.intercom): Credential can now be used in the HTTP Request node
-* [Rapid7 InsightVM](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/rapid7insightvm): Added credential support
+* [AI Transform](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.aitransform): Improved usability
+* [Anthropic Chat Model Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic): Added Haiku 3.5 support
+* [Convert to File](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.converttofile): Added delimiter option for writing to CSV
+* [Gmail Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger): Added option to filter for draft messages
+* [Intercom](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.intercom): Credential can now be used in the HTTP Request node
+* [Rapid7 InsightVM](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/rapid7insightvm): Added credential support
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -3903,7 +3903,7 @@ This release contains performance improvements, a node update and bug fixes.
 
 ### Node update <a href="#node-update" id="node-update"></a>
 
-* [Anthropic Chat Model](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic): Added support for claude-3-5-sonnet-20241022
+* [Anthropic Chat Model](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic): Added support for claude-3-5-sonnet-20241022
 
 We made updates to how projects and workflow ownership are displayed making them easier to understand and navigate.
 
@@ -3960,7 +3960,7 @@ This release contains a new features, new nodes, node enhancements, and bug fixe
 {% hint style="info" %}
 ### New node: n8n Form <a href="#new-node-n8n-form" id="new-node-n8n-form"></a>
 
-Use the [n8n Form node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.form) to create user-facing forms with multiple pages. You can add other nodes with custom logic between to process user input. Start the workflow with a [n8n Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger).
+Use the [n8n Form node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.form) to create user-facing forms with multiple pages. You can add other nodes with custom logic between to process user input. Start the workflow with a [n8n Form Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.formtrigger).
 
 <img src=".gitbook/assets/example_image.png" alt="A multi-page form with branching" data-size="original">
 
@@ -3975,13 +3975,13 @@ Additionally you can:
 
 New nodes:
 
-* [Google Business Profile](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile) and [Google Business Profile Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger): Use these to integrate Google Business Profile reviews and posts with your workflows
+* [Google Business Profile](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile) and [Google Business Profile Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger): Use these to integrate Google Business Profile reviews and posts with your workflows
 
 Enhanced nodes:
 
-* [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent): Removed the requirement to add at least one tool
-* [GitHub](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github): Added workflows as a resource operation
-* [Structured Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured): Added more user-friendly error messages
+* [AI Agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent): Removed the requirement to add at least one tool
+* [GitHub](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.github): Added workflows as a resource operation
+* [Structured Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured): Added more user-friendly error messages
 
 For additional security, we improved how we handle multi-factor authentication, hardened config file permissions and introduced JWT for the public API.
 
@@ -4021,7 +4021,7 @@ This release contains a new node, node enhancements, performance improvements an
 {% hint style="info" %}
 ### Enhanced node: Remove Duplicates <a href="#enhanced-node-remove-duplicates" id="enhanced-node-remove-duplicates"></a>
 
-The [Remove Duplicates node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates) got a major makeover with the addition of two new operations:
+The [Remove Duplicates node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.removeduplicates) got a major makeover with the addition of two new operations:
 
 * Remove Items Processed in Previous Executions: Compare items in the current input to items from previous executions and remove duplicates
 * Clear Deduplication History: Wipe the memory of items from previous executions.
@@ -4031,7 +4031,7 @@ This makes it easier to only process new items from any data source. For example
 
 ### New node: Gong <a href="#new-node-gong" id="new-node-gong"></a>
 
-The new node for [Gong](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gong) allows you to get users and calls to process them further in n8n. Very useful for sales related workflows.
+The new node for [Gong](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gong) allows you to get users and calls to process them further in n8n. Very useful for sales related workflows.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -4125,10 +4125,10 @@ This release contains new features, node enhancements and bug fixes.
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
-* [OpenAI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai): Added the option to choose between the default memory connector to provide memory to the assistant or to specify a thread ID
-* [Gmail](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail) and [Slack](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack): Added custom approval operations to have a human in the loop of a workflow
+* [OpenAI](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.openai): Added the option to choose between the default memory connector to provide memory to the assistant or to specify a thread ID
+* [Gmail](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail) and [Slack](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack): Added custom approval operations to have a human in the loop of a workflow
 
-We have also optimized the [worker health checks](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/monitor-n8n) (see breaking change above).
+We have also optimized the [worker health checks](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/keep-n8n-running/monitor-n8n) (see breaking change above).
 
 Each credential now has a separate url you can link to. This makes sharing much easier.
 
@@ -4172,7 +4172,7 @@ We skipped n8n 1.62.0 and went straight to n8n 1.62.1 with an additional fix.
 {% hint style="info" %}
 #### Additional nodes as tools <a href="#additional-nodes-as-tools" id="additional-nodes-as-tools"></a>
 
-We have made additional nodes usable with the [Tools AI Agent node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent).\
+We have made additional nodes usable with the [Tools AI Agent node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent).\
 <br>
 
 \
@@ -4184,14 +4184,14 @@ Both of these new features enable you to build even more powerful AI agents by d
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
-* [Google BigQuery](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.googlebigquery): Added option to return numeric values as integers and not strings
-* [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest): Added credential support for Sysdig
-* [Invoice Ninja](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.invoiceninja): Additional query params for getAll requests
-* [Question and Answer Chain](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa): Added the option to use a custom prompt
+* [Google BigQuery](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlebigquery): Added option to return numeric values as integers and not strings
+* [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest): Added credential support for Sysdig
+* [Invoice Ninja](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.invoiceninja): Additional query params for getAll requests
+* [Question and Answer Chain](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa): Added the option to use a custom prompt
 
 Drag and drop insertion on cursor position from schema view is now also enabled for code, SQL and Html fields in nodes.
 
-Customers with an enterprise license can now rate, tag and highlight execution data in the executions view. To use highlighting, add an [Execution Data Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executiondata) (or Code node) to the workflow to set [custom executions data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/customize-executions-data).
+Customers with an enterprise license can now rate, tag and highlight execution data in the executions view. To use highlighting, add an [Execution Data Node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executiondata) (or Code node) to the workflow to set [custom executions data](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/understand-executions/customize-executions-data).
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -4211,8 +4211,8 @@ This release contains new features, node enhancements and bug fixes.
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
-* [Brandfetch](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.brandfetch): Updated to use the new API
-* [Slack](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack): Made adding or removing the workflow link to a message easier
+* [Brandfetch](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.brandfetch): Updated to use the new API
+* [Slack](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.slack): Made adding or removing the workflow link to a message easier
 
 Big datasets now render faster thanks to virtual scrolling and execution annotations are harder to delete.
 
@@ -4246,17 +4246,17 @@ This release contains new features, node enhancements and bug fixes.
 {% hint style="info" %}
 #### Queue metrics for workers <a href="#queue-metrics-for-workers" id="queue-metrics-for-workers"></a>
 
-You can now [expose and consume metrics from your workers](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-prometheus-metrics). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints).
+You can now [expose and consume metrics from your workers](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-prometheus-metrics). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints).
 {% endhint %}
 
-You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
+You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
 Enhanced nodes:
 
-* [Invoice Ninja](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.invoiceninja): Added actions for bank transactions
-* [OpenAI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai): Added O1 models to the model select
+* [Invoice Ninja](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.invoiceninja): Added actions for bank transactions
+* [OpenAI](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.openai): Added O1 models to the model select
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -4361,7 +4361,7 @@ This release contains new features and bug fixes.
 {% hint style="info" %}
 #### Improved execution queue handling <a href="#improved-execution-queue-handling" id="improved-execution-queue-handling"></a>
 
-We are [exposing new execution queue metrics](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-prometheus-metrics) to give users more visibility of the queue length. This helps to inform decisions on horizontal scaling, based on queue status. We have also made querying executions faster.
+We are [exposing new execution queue metrics](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-prometheus-metrics) to give users more visibility of the queue length. This helps to inform decisions on horizontal scaling, based on queue status. We have also made querying executions faster.
 {% endhint %}
 
 {% hint style="info" %}
@@ -4492,20 +4492,20 @@ We now also prevent npm downloading community packages from a compromised npm re
 {% hint style="info" %}
 #### New node: AI Transform <a href="#new-node-ai-transform" id="new-node-ai-transform"></a>
 
-This release adds the [AI Transform node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aitransform). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud).
+This release adds the [AI Transform node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.aitransform). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud).
 {% endhint %}
 
 {% hint style="info" %}
 #### New node: Okta <a href="#new-node-okta" id="new-node-okta"></a>
 
-This release adds the [Okta node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.okta). Use the Okta node to automate work in Okta and integrate Okta with other applications. n8n has built-in support for a wide range of Okta features, which includes creating, updating, and deleting users.
+This release adds the [Okta node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.okta). Use the Okta node to automate work in Okta and integrate Okta with other applications. n8n has built-in support for a wide range of Okta features, which includes creating, updating, and deleting users.
 {% endhint %}
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
 Enhanced node:
 
-* [MySQL](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mysql)
+* [MySQL](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.mysql)
 
 This release also adds the new schema view for the expression editor modal.
 
@@ -4538,12 +4538,12 @@ This release contains new features, node enhancements, bug fixes and updates to 
 
 ### API update <a href="#api-update" id="api-update"></a>
 
-Our [public REST API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) now supports additional operations:
+Our [public REST API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api) now supports additional operations:
 
 * Create, delete, and edit roles for users
 * Create, read, update and delete projects
 
-Find the details in the [API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference).
+Find the details in the [API reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/api-reference).
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4583,39 +4583,39 @@ This release contains new features, new nodes, node enhancements, bug fixes and 
 {% hint style="info" %}
 #### Added Google Cloud Platform Secrets Manager support <a href="#added-google-cloud-platform-secrets-manager-support" id="added-google-cloud-platform-secrets-manager-support"></a>
 
-This release adds [Google Cloud Platform Secrets Manager](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) to the list of external secret stores. We already support AWS secrets, Azure Key Vault, Infisical and HashiCorp Vault. External secret stores are available under an enterprise license.
+This release adds [Google Cloud Platform Secrets Manager](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) to the list of external secret stores. We already support AWS secrets, Azure Key Vault, Infisical and HashiCorp Vault. External secret stores are available under an enterprise license.
 {% endhint %}
 
 {% hint style="info" %}
 #### New node: Information Extractor <a href="#new-node-information-extractor" id="new-node-information-extractor"></a>
 
-This release adds the [Information Extractor node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor). The node is specifically tailored for information extraction tasks. It uses Structured Output Parser under the hood, but provides a simpler way to extract information from text in a structured JSON form.
+This release adds the [Information Extractor node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor). The node is specifically tailored for information extraction tasks. It uses Structured Output Parser under the hood, but provides a simpler way to extract information from text in a structured JSON form.
 {% endhint %}
 
 {% hint style="info" %}
 #### New node: Sentiment Analysis <a href="#new-node-sentiment-analysis" id="new-node-sentiment-analysis"></a>
 
-This release adds the [Sentiment Analysis node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis). The node leverages LLMs to analyze and categorize the sentiment of input text. Users can easily integrate this node into their workflows to perform sentiment analysis on text data. The node is flexible enough to handle various use cases, from basic positive/negative classification to more nuanced sentiment categories.
+This release adds the [Sentiment Analysis node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis). The node leverages LLMs to analyze and categorize the sentiment of input text. Users can easily integrate this node into their workflows to perform sentiment analysis on text data. The node is flexible enough to handle various use cases, from basic positive/negative classification to more nuanced sentiment categories.
 {% endhint %}
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
 Enhanced nodes:
 
-* [Calendly Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger)
-* [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest)
-* [n8n Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger)
-* [Shopify](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.shopify)
+* [Calendly Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger)
+* [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest)
+* [n8n Form Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.formtrigger)
+* [Shopify](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.shopify)
 
 ### API update <a href="#api-update" id="api-update"></a>
 
-Our [public REST API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) now supports additional operations:
+Our [public REST API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api) now supports additional operations:
 
 * Create, read, and delete for variables
 * Filtering workflows by project
 * Transferring workflows
 
-Find the details in the [API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference).
+Find the details in the [API reference](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api/api-reference).
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -4669,16 +4669,16 @@ This release contains new features, node enhancements and bug fixes.
 {% hint style="info" %}
 #### Added Azure Key Vault support <a href="#added-azure-key-vault-support" id="added-azure-key-vault-support"></a>
 
-This release adds [Azure Key Vault](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) to the list of external secret stores. We already support AWS secrets, Infisical and HashiCorp Vault and are working on Google Secrets Manager. External secret stores are available under an enterprise license.
+This release adds [Azure Key Vault](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) to the list of external secret stores. We already support AWS secrets, Infisical and HashiCorp Vault and are working on Google Secrets Manager. External secret stores are available under an enterprise license.
 {% endhint %}
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
 Enhanced nodes:
 
-* [Pinecone Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone)
-* [Supabase Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase)
-* [Send Email](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.sendemail)
+* [Pinecone Vector Store](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone)
+* [Supabase Vector Store](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase)
+* [Send Email](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.sendemail)
 
 Deprecated nodes:
 
@@ -4714,19 +4714,19 @@ This release contains new nodes, node enhancements and bug fixes.
 {% hint style="info" %}
 #### New node: Text Classifier <a href="#new-node-text-classifier" id="new-node-text-classifier"></a>
 
-This release adds the [Text Classifier node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier).
+This release adds the [Text Classifier node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier).
 {% endhint %}
 
 {% hint style="info" %}
 #### New node: Postgres Chat Memory <a href="#new-node-postgres-chat-memory" id="new-node-postgres-chat-memory"></a>
 
-This release adds the [Postgres Chat Memory node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat).
+This release adds the [Postgres Chat Memory node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat).
 {% endhint %}
 
 {% hint style="info" %}
 #### New node: Google Vertex Chat Model <a href="#new-node-google-vertex-chat-model" id="new-node-google-vertex-chat-model"></a>
 
-This release adds the [Google Vertex Chat Model node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex).
+This release adds the [Google Vertex Chat Model node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -4777,7 +4777,7 @@ This release contains a new node, node enhancements, and bug fixes.
 
 ### Node updates <a href="#node-updates" id="node-updates"></a>
 
-* New node added: [Vector Store Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore) for the AI Agent
+* New node added: [Vector Store Tool](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore) for the AI Agent
 * Enhanced nodes: Zep Cloud Memory, Copper, Embeddings Cohere, GitHub, Merge, Zammad
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -4874,7 +4874,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 {% hint style="info" %}
 #### New node: HTTP request tool <a href="#new-node-http-request-tool" id="new-node-http-request-tool"></a>
 
-This release adds the HTTP request tool. You can use it with an AI agent as a tool to collect information from a website or API. Refer to the [HTTP request tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) for details.
+This release adds the HTTP request tool. You can use it with an AI agent as a tool to collect information from a website or API. Refer to the [HTTP request tool](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) for details.
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -4982,7 +4982,7 @@ Although this release doesn't include a breaking change, it is a significant upd
 {% hint style="info" %}
 **Credential sharing required for manual executions**
 
-Instance owners and admins: you will see changes if you try to manually execute a workflow where the credentials aren't shared with you. Manual workflow executions now use the same permissions checks as production executions, meaning you can't do a manual execution of a workflow if you don't have access to the credentials. Previously, owners and admins could do manual executions without credentials being shared with them. To resolve this, the credential creator needs to [share the credential](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely) with you.
+Instance owners and admins: you will see changes if you try to manually execute a workflow where the credentials aren't shared with you. Manual workflow executions now use the same permissions checks as production executions, meaning you can't do a manual execution of a workflow if you don't have access to the credentials. Previously, owners and admins could do manual executions without credentials being shared with them. To resolve this, the credential creator needs to [share the credential](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/share-credentials-securely) with you.
 {% endhint %}
 
 {% hint style="info" %}
@@ -4990,7 +4990,7 @@ Instance owners and admins: you will see changes if you try to manually execute 
 
 With projects and roles, you can give your team access to collections of workflows and credentials, rather than having to share each workflow and credential individually. Simultaneously, you tighten security by limiting access to people on the relevant team.\
 \
-Refer to the [RBAC](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac) documentation for information on creating projects and using roles.\
+Refer to the [RBAC](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/set-permissions-and-roles-rbac) documentation for information on creating projects and using roles.\
 \
 The number of projects and role types vary depending on your plan. Refer to [Pricing](https://n8n.io/pricing/) for details.
 {% endhint %}
@@ -4998,12 +4998,12 @@ The number of projects and role types vary depending on your plan. Refer to [Pri
 {% hint style="info" %}
 #### New node: Slack Trigger <a href="#new-node-slack-trigger" id="new-node-slack-trigger"></a>
 
-This release adds a trigger node for Slack. Refer to the [Slack Trigger documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.slacktrigger) for details.
+This release adds a trigger node for Slack. Refer to the [Slack Trigger documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.slacktrigger) for details.
 {% endhint %}
 
 ### Other highlights <a href="#other-highlights" id="other-highlights"></a>
 
-* Improved [memory support for OpenAI assistants](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai).
+* Improved [memory support for OpenAI assistants](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.openai).
 
 ### Rolling back to a previous version <a href="#rolling-back-to-a-previous-version" id="rolling-back-to-a-previous-version"></a>
 
@@ -5053,7 +5053,7 @@ Note that this release removes the AI error debugger. We're working on a new and
 {% hint style="info" %}
 #### New feature: Tools Agent <a href="#new-feature-tools-agent" id="new-feature-tools-agent"></a>
 
-This release adds a new option to the Agent node: the [Tools Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent).
+This release adds a new option to the Agent node: the [Tools Agent](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent).
 
 This agent has an enhanced ability to work with tools, and can ensure a standard output format. This is now the recommended default agent.
 {% endhint %}
@@ -5102,13 +5102,13 @@ You can now ask AI to help create API requests in the HTTP Request node:
 2. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
 3. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
 
-Self-hosted users need to [enable AI features and provide their own API keys](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables)
+Self-hosted users need to [enable AI features and provide their own API keys](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables)
 {% endhint %}
 
 {% hint style="info" %}
 #### New node: Groq Chat Model <a href="#new-node-groq-chat-model" id="new-node-groq-chat-model"></a>
 
-This release adds the [Groq Chat Model node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq).
+This release adds the [Groq Chat Model node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -5161,13 +5161,13 @@ This release contains new nodes, node enhancements, and bug fixes.
 {% hint style="info" %}
 #### New node: WhatsApp Trigger <a href="#new-node-whatsapp-trigger" id="new-node-whatsapp-trigger"></a>
 
-This release adds the [WhatsApp Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger).
+This release adds the [WhatsApp Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger).
 {% endhint %}
 
 {% hint style="info" %}
 #### Node enhancement: Multiple methods, one Webhook node <a href="#node-enhancement-multiple-methods-one-webhook-node" id="node-enhancement-multiple-methods-one-webhook-node"></a>
 
-The Webhook Trigger node can now handle calls to multiple HTTP methods. Refer to the [Webhook node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook/common-issues#listen-for-multiple-http-methods) for information on enabling this.
+The Webhook Trigger node can now handle calls to multiple HTTP methods. Refer to the [Webhook node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.webhook/common-issues#listen-for-multiple-http-methods) for information on enabling this.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -5204,13 +5204,13 @@ This release contains new nodes, bug fixes, and node enhancements.
 {% hint style="info" %}
 #### New node: Google Gemini Chat Model <a href="#new-node-google-gemini-chat-model" id="new-node-google-gemini-chat-model"></a>
 
-This release adds the [Google Gemini Chat Model sub-node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini).
+This release adds the [Google Gemini Chat Model sub-node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini).
 {% endhint %}
 
 {% hint style="info" %}
 #### New node: Embeddings Google Gemini <a href="#new-node-embeddings-google-gemini" id="new-node-embeddings-google-gemini"></a>
 
-This release adds the [Google Gemini Embeddings sub-node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini).
+This release adds the [Google Gemini Embeddings sub-node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -5255,7 +5255,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.0...n8n@1.37.1
 {% hint style="warning" %}
 **Breaking change**
 
-Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line) for more information on CLI options.
+Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/use-the-command-line) for more information on CLI options.
 {% endhint %}
 
 This release contains bug fixes.
@@ -5279,7 +5279,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.1...n8n@1.37.0
 {% hint style="warning" %}
 **Breaking change**
 
-Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line) for more information on CLI options.
+Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/use-the-command-line) for more information on CLI options.
 {% endhint %}
 
 This release contains a new node, improvements to error handling and messaging, node enhancements, and bug fixes.
@@ -5287,7 +5287,7 @@ This release contains a new node, improvements to error handling and messaging, 
 {% hint style="info" %}
 #### New node: JWT <a href="#new-node-jwt" id="new-node-jwt"></a>
 
-This release adds the [JWT core node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.jwt).
+This release adds the [JWT core node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.jwt).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -5315,13 +5315,13 @@ This release contains new nodes, enhancements and bug fixes.
 {% hint style="info" %}
 #### New node: Salesforce Trigger node <a href="#new-node-salesforce-trigger-node" id="new-node-salesforce-trigger-node"></a>
 
-This release adds the [Salesforce Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger).
+This release adds the [Salesforce Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger).
 {% endhint %}
 
 {% hint style="info" %}
 #### New node: Twilio Trigger node <a href="#new-node-twilio-trigger-node" id="new-node-twilio-trigger-node"></a>
 
-This release adds the [Twilio Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger).
+This release adds the [Twilio Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -5363,7 +5363,7 @@ This release contains new features, new nodes, and bug fixes.
 {% hint style="info" %}
 #### New node: Microsoft OneDrive Trigger node <a href="#new-node-microsoft-onedrive-trigger-node" id="new-node-microsoft-onedrive-trigger-node"></a>
 
-This release adds the [Microsoft OneDrive Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger). You can now trigger workflows on file and folder creation and update events.
+This release adds the [Microsoft OneDrive Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger). You can now trigger workflows on file and folder creation and update events.
 {% endhint %}
 
 {% hint style="info" %}
@@ -5448,7 +5448,7 @@ This release contains new features, node enhancements, and bug fixes.
 {% hint style="info" %}
 #### Support for Claude 3 <a href="#support-for-claude-3" id="support-for-claude-3"></a>
 
-This release adds support for Claude 3 to the [Anthropic Chat Model](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic) node.
+This release adds support for Claude 3 to the [Anthropic Chat Model](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic) node.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -5514,8 +5514,8 @@ This release contains new features, new nodes, node enhancements and bug fixes.
 
 This release adds two new nodes.
 
-* [Microsoft Outlook Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger)
-* [Ollama Embeddings](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama)
+* [Microsoft Outlook Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger)
+* [Ollama Embeddings](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama)
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -5561,13 +5561,13 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 {% hint style="info" %}
 #### OpenAI node overhaul <a href="#openai-node-overhaul" id="openai-node-overhaul"></a>
 
-This release includes a new version of the [OpenAI node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai), adding more operations, including support for working with assistants.
+This release includes a new version of the [OpenAI node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.openai), adding more operations, including support for working with assistants.
 {% endhint %}
 
 Other highlights:
 
-* Support for AI events in [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems).
-* Added support for workflow tags in the [public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api).
+* Support for AI events in [log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems).
+* Added support for workflow tags in the [public API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api).
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -5595,8 +5595,8 @@ This release contains new features, new nodes, node enhancements and bug fixes.
 
 This release adds two new nodes to work with [Azure OpenAI](https://azure.microsoft.com/en-gb/products/ai-services/openai-service/) in your advanced AI workflows:
 
-* [Embeddings Azure OpenAI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai)
-* [Azure OpenAI Chat Model](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai)
+* [Embeddings Azure OpenAI](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai)
+* [Azure OpenAI Chat Model](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai)
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -5631,7 +5631,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.26.0...n8n@1.27.0
 {% hint style="warning" %}
 **Breaking change**
 
-This release removes `own` mode for self-hosted n8n. You must now use `EXECUTIONS_MODE` and set to either `regular` or `queue`. Refer to [Queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode) for information on configuring queue mode.
+This release removes `own` mode for self-hosted n8n. You must now use `EXECUTIONS_MODE` and set to either `regular` or `queue`. Refer to [Queue mode](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/enable-queue-mode) for information on configuring queue mode.
 {% endhint %}
 
 {% hint style="info" %}
@@ -5681,7 +5681,7 @@ This release contains a new node, feature improvements, and bug fixes.
 {% hint style="info" %}
 #### New node: Chat Memory Manager <a href="#new-node-chat-memory-manager" id="new-node-chat-memory-manager"></a>
 
-The [Chat Memory Manager](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager) node replaces the Chat Messages Retriever node. It manages chat message memories within your AI workflows.
+The [Chat Memory Manager](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager) node replaces the Chat Messages Retriever node. It manages chat message memories within your AI workflows.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -5714,7 +5714,7 @@ This release contains new nodes for advanced AI, node enhancements, new features
 {% hint style="info" %}
 #### Chat trigger <a href="#chat-trigger" id="chat-trigger"></a>
 
-n8n has created a new [Chat Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger). The new node provides a chat interface that you can make publicly available, with customization and authentication options.
+n8n has created a new [Chat Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chattrigger). The new node provides a chat interface that you can make publicly available, with customization and authentication options.
 {% endhint %}
 
 {% hint style="info" %}
@@ -5722,8 +5722,8 @@ n8n has created a new [Chat Trigger node](https://app.gitbook.com/s/BKcbOzIWja8N
 
 This release introduces two new nodes to support [Mistral AI](https://mistral.ai/):
 
-* [Mistral Cloud Chat Model](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud)
-* [Embeddings Mistral Cloud](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud)
+* [Mistral Cloud Chat Model](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud)
+* [Embeddings Mistral Cloud](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud)
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -5756,11 +5756,11 @@ This release includes a major overhaul of nodes relating to files (binary data).
 
 There are now three key nodes dedicated to handling binary data files:
 
-* [Read/Write Files from Disk](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.readwritefile) to read and write files from/to the machine where n8n is running.
-* [Convert to File](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.converttofile) to take input data and output it as a file.
-* [Extract From File](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.extractfromfile) to get data from a binary format and convert it to JSON.
+* [Read/Write Files from Disk](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.readwritefile) to read and write files from/to the machine where n8n is running.
+* [Convert to File](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.converttofile) to take input data and output it as a file.
+* [Extract From File](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.extractfromfile) to get data from a binary format and convert it to JSON.
 
-n8n has moved support for iCalendar, PDF, and spreadsheet formats into these nodes, and removed the iCalendar, Read PDF, and Spreadsheet File nodes. There are still standalone nodes for [HTML](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.html) and [XML](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.xml).
+n8n has moved support for iCalendar, PDF, and spreadsheet formats into these nodes, and removed the iCalendar, Read PDF, and Spreadsheet File nodes. There are still standalone nodes for [HTML](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.html) and [XML](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.xml).
 {% endhint %}
 
 {% hint style="info" %}
@@ -5768,7 +5768,7 @@ n8n has moved support for iCalendar, PDF, and spreadsheet formats into these nod
 
 This release adds support for [Qdrant](https://qdrant.tech/) with the Qdrant vector store node.
 
-Read n8n's [Qdrant vector store node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant)
+Read n8n's [Qdrant vector store node documentation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant)
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -5875,7 +5875,7 @@ This release contains new features and nodes, node enhancements, and bug fixes.
 
 This release introduces a third account type: admin. This role is available on pro and enterprise plans. Admins have similar permissions to instance owners.
 
-[Read more about user roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/understand-instance-roles)
+[Read more about user roles](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/understand-instance-roles)
 {% endhint %}
 
 {% hint style="info" %}
@@ -5883,12 +5883,12 @@ This release introduces a third account type: admin. This role is available on p
 
 This release replaces the Item Lists node with a collection of nodes for data transformation tasks:
 
-* [Aggregate](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aggregate): take separate items, or portions of them, and group them together into individual items.
-* [Limit](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aggregate): remove items beyond a defined maximum number.
-* [Remove Duplicates](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates): identify and delete items that are identical across all fields or a subset of fields.
-* [Sort](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.sort): organize lists of in a desired ordering, or generate a random selection.
-* [Split Out](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitout): separate a single data item containing a list into multiple items.
-* [Summarize](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.summarize): aggregate items together, in a manner similar to Excel pivot tables.
+* [Aggregate](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.aggregate): take separate items, or portions of them, and group them together into individual items.
+* [Limit](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.aggregate): remove items beyond a defined maximum number.
+* [Remove Duplicates](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.removeduplicates): identify and delete items that are identical across all fields or a subset of fields.
+* [Sort](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.sort): organize lists of in a desired ordering, or generate a random selection.
+* [Split Out](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.splitout): separate a single data item containing a list into multiple items.
+* [Summarize](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.summarize): aggregate items together, in a manner similar to Excel pivot tables.
 {% endhint %}
 
 {% hint style="info" %}
@@ -5965,7 +5965,7 @@ This release contains new features, node enhancements, and bug fixes.
 {% hint style="info" %}
 #### LangChain general availability <a href="#langchain-general-availability" id="langchain-general-availability"></a>
 
-This release adds LangChain support to the main n8n version. Refer to [LangChain](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) for more information on how to build AI tools in n8n, the new nodes n8n has introduced, and related learning resources.
+This release adds LangChain support to the main n8n version. Refer to [LangChain](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) for more information on how to build AI tools in n8n, the new nodes n8n has introduced, and related learning resources.
 {% endhint %}
 
 {% hint style="info" %}
@@ -5999,7 +5999,7 @@ Built a template you want to share? This release introduces the n8n Creator hub.
 {% hint style="info" %}
 #### Node input and output search filter <a href="#node-input-and-output-search-filter" id="node-input-and-output-search-filter"></a>
 
-Cloud Pro and Enterprise users can now search and filter the input and output data in nodes. Refer to [Data filtering](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/filter-out-unwanted-data) for more information.
+Cloud Pro and Enterprise users can now search and filter the input and output data in nodes. Refer to [Data filtering](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/filter-out-unwanted-data) for more information.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6071,7 +6071,7 @@ This release introduces workflow history: view and load previous versions of you
 
 Workflow history is available in Enterprise n8n, and with limited history for Cloud Pro.
 
-Learn more in the [Workflow history](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/view-change-history) documentation.
+Learn more in the [Workflow history](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/view-change-history) documentation.
 {% endhint %}
 
 {% hint style="info" %}
@@ -6094,7 +6094,7 @@ All nodes apart from sub-nodes and trigger nodes have a new optional output: **E
 {% hint style="info" %}
 #### Pagination support added to HTTP Request node <a href="#pagination-support-added-to-http-request-node" id="pagination-support-added-to-http-request-node"></a>
 
-The HTTP Request node now supports an pagination. Read the [node docs](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) for information and examples.
+The HTTP Request node now supports an pagination. Read the [node docs](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) for information and examples.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6131,7 +6131,7 @@ This release contains node enhancements and bug fixes.
 {% hint style="info" %}
 #### Switch node supports more outputs <a href="#switch-node-supports-more-outputs" id="switch-node-supports-more-outputs"></a>
 
-The [Switch node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch) now supports an unlimited number of outputs.
+The [Switch node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.switch) now supports an unlimited number of outputs.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6152,13 +6152,13 @@ This release failed to publish to npm. Upgrade directly to n8n 1.14.0.
 {% hint style="info" %}
 #### RSS Feed Trigger node <a href="#rss-feed-trigger-node" id="rss-feed-trigger-node"></a>
 
-This releases introduces a new node, the [RSS Feed Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger). Use this node to start a workflow when a new RSS feed item is published.
+This releases introduces a new node, the [RSS Feed Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger). Use this node to start a workflow when a new RSS feed item is published.
 {% endhint %}
 
 {% hint style="info" %}
 #### Facebook Lead Ads Trigger node <a href="#facebook-lead-a-ds-trigger-node" id="facebook-lead-a-ds-trigger-node"></a>
 
-This releases add another new node, the [Facebook Lead Ads Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger). Use this node to trigger a workflow when you get a new lead.
+This releases add another new node, the [Facebook Lead Ads Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger). Use this node to trigger a workflow when you get a new lead.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6213,7 +6213,7 @@ This release contains new features, node enhancements, and bug fixes.
 {% hint style="info" %}
 #### Form Trigger node <a href="#form-trigger-node" id="form-trigger-node"></a>
 
-This releases introduces a new node, the [n8n Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger). Use this node to start a workflow based on a user submitting a form. It provides a configurable form interface.
+This releases introduces a new node, the [n8n Form Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.formtrigger). Use this node to start a workflow based on a user submitting a form. It provides a configurable form interface.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6243,7 +6243,7 @@ This release contains new features and bug fixes.
 {% hint style="info" %}
 #### External storage for binary files <a href="#external-storage-for-binary-files" id="external-storage-for-binary-files"></a>
 
-Self-hosted users can now use an external service to store binary data. Learn more in [External storage](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/use-external-storage).
+Self-hosted users can now use an external service to store binary data. Learn more in [External storage](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling/use-external-storage).
 
 If you're using n8n Cloud and are interested in this feature, please [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
 {% endhint %}
@@ -6311,9 +6311,9 @@ With n8n's LangChain nodes you can build AI-powered functionality within your wo
 
 Read more:
 
-* This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) to try it out. Self-hosted and Cloud options are available.
-* Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai).
-* Browse n8n's new [Cluster nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes). This is a new set of node types that allows for multiple nodes to work together to configure each other.
+* This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) to try it out. Self-hosted and Cloud options are available.
+* Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai).
+* Browse n8n's new [Cluster nodes](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes). This is a new set of node types that allows for multiple nodes to work together to configure each other.
 
 ## n8n@1.9.0 <a href="#n8n190" id="n8n190"></a>
 
@@ -6413,9 +6413,9 @@ Skip this version and upgrade directly to n8n 1.6.1, which contains essential bu
 
 This release introduces support for TheHive API version 5. This uses a new node and credentials:
 
-* [TheHive 5 node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.thehive5)
-* [TheHive 5 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger)
-* [TheHive 5 credentials](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/thehive5)
+* [TheHive 5 node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.thehive5)
+* [TheHive 5 Trigger node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger)
+* [TheHive 5 credentials](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/thehive5)
 
 #### `N8N_PERSISTED_BINARY_DATA_TTL` removed <a href="#n8npersistedbinarydatattl-removed" id="n8npersistedbinarydatattl-removed"></a>
 
@@ -6453,13 +6453,13 @@ Skip this version and upgrade directly to n8n 1.5.1, which contains essential bu
 
 Enterprise-tier accounts can now use external secrets vaults to manage credentials in n8n. This allows you to store credential information securely outside your n8n instance. n8n supports Infisical and HashiCorp Vault.
 
-Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for guidance on enabling and using this feature.
+Refer to [External secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) for guidance on enabling and using this feature.
 {% endhint %}
 
 {% hint style="info" %}
 #### Two-factor authentication <a href="#two-factor-authentication" id="two-factor-authentication"></a>
 
-n8n now supports two-factor authentication (2FA) for self-hosted instances. n8n is working on bringing support to Cloud. Refer to [Two-factor authentication](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/require-two-factor-auth) for guidance on enabling and using it.
+n8n now supports two-factor authentication (2FA) for self-hosted instances. n8n is working on bringing support to Cloud. Refer to [Two-factor authentication](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-users-and-access/verify-user-identity/require-two-factor-auth) for guidance on enabling and using it.
 {% endhint %}
 
 {% hint style="info" %}
@@ -6467,7 +6467,7 @@ n8n now supports two-factor authentication (2FA) for self-hosted instances. n8n 
 
 Users on a paid n8n plan can now load data from previous executions into their current workflow. This is useful when debugging a failed execution.
 
-Refer to [Debug executions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/debug-executions) for guidance on using this feature.
+Refer to [Debug executions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/understand-executions/debug-executions) for guidance on using this feature.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6517,7 +6517,7 @@ This release contains new features and bug fixes.
 
 This release introduces limited support for using AI to generate code in the Code node. Initially this feature is only available on Cloud, and will gradually be rolled out, starting with about 20% of users.
 
-Learn how to use the feature, including guidance on writing prompts, in [Generate code with ChatGPT](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/get-coding-help-from-ai).
+Learn how to use the feature, including guidance on writing prompts, in [Generate code with ChatGPT](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/get-coding-help-from-ai).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6565,32 +6565,32 @@ When upgrading, skip this release and go directly to n8n 1.2.1.
 
 This release introduces support for setting up credentials in n8n for the following services:
 
-* [AlienVault](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/alienvault)
-* [Auth0 Management](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/auth0management)
-* [Carbon Black API](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/carbonblack)
-* [Cisco Meraki API](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/ciscomeraki)
-* [Cisco Secure Endpoint](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/ciscosecureendpoint)
-* [Cisco Umbrella API](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/ciscoumbrella)
-* [CrowdStrike](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/crowdstrike)
-* [F5 Big-IP](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/f5bigip)
-* [Fortinet FortiGate](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/fortigate)
-* [Hybrid Analysis](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/hybridanalysis)
-* [Imperva WAF](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/impervawaf)
-* [Kibana](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/kibana)
-* [Microsoft Entra ID](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoftentra)
-* [Mist](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/mist)
-* [Okta](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/okta)
-* [OpenCTI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/opencti)
-* [QRadar](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/qradar)
-* [Qualys](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/qualys)
-* [Recorded Future](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/recordedfuture)
-* [Sekoia](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/sekoia)
-* [Shuffler](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/shuffler)
-* [Trellix ePO](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/trellixepo)
-* [VirusTotal](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/virustotal)
-* [Zscaler ZIA](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/zscalerzia)
+* [AlienVault](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/alienvault)
+* [Auth0 Management](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/auth0management)
+* [Carbon Black API](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/carbonblack)
+* [Cisco Meraki API](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/ciscomeraki)
+* [Cisco Secure Endpoint](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/ciscosecureendpoint)
+* [Cisco Umbrella API](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/ciscoumbrella)
+* [CrowdStrike](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/crowdstrike)
+* [F5 Big-IP](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/f5bigip)
+* [Fortinet FortiGate](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/fortigate)
+* [Hybrid Analysis](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/hybridanalysis)
+* [Imperva WAF](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/impervawaf)
+* [Kibana](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/kibana)
+* [Microsoft Entra ID](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/microsoftentra)
+* [Mist](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/mist)
+* [Okta](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/okta)
+* [OpenCTI](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/opencti)
+* [QRadar](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/qradar)
+* [Qualys](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/qualys)
+* [Recorded Future](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/recordedfuture)
+* [Sekoia](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/sekoia)
+* [Shuffler](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/shuffler)
+* [Trellix ePO](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/trellixepo)
+* [VirusTotal](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/virustotal)
+* [Zscaler ZIA](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/zscalerzia)
 
-This makes it easier to do [Custom operations](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/custom-api-actions-for-existing-nodes) with these services, using the [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) node.
+This makes it easier to do [Custom operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) with these services, using the [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) node.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6632,7 +6632,7 @@ This release introduces source control and environments for enterprise users.
 
 n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.
 
-Refer to [Source control and environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments) to learn more about the features and set up your environments.
+Refer to [Source control and environments](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/use-source-control-and-environments) to learn more about the features and set up your environments.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6737,7 +6737,7 @@ For full details, refer to the [n8n 1.0 migration guide](v10-migration-guide.md)
 {% hint style="info" %}
 #### Python support <a href="#python-support" id="python-support"></a>
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/using-the-code-node) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before n8n 1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/using-the-code-node) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before n8n 1.0.
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>

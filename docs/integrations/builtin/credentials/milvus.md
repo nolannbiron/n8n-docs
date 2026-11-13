@@ -34,7 +34,7 @@ Create and run an [Milvus](https://milvus.io/) instance. Refer to the [Install M
 
 Refer to [Milvus's Authentication documentation](https://milvus.io/docs/authenticate.md?tab=docker#Authenticate-User-Access) for more information about setting up authentication.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 

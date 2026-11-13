@@ -47,7 +47,7 @@ Or:
 
 You can also create new credential in the credential drop down when editing a node on the workflow editor.
 
-Once in the credential modal, enter the details required by your service. Refer to your service's page in the [credentials library](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials) for guidance.
+Once in the credential modal, enter the details required by your service. Refer to your service's page in the [credentials library](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials) for guidance.
 
 When you save a credential, n8n tests it to confirm it works.
 
@@ -64,7 +64,7 @@ When you create or edit an OAuth credential, you choose a **Credential type**:
 * **Fixed credential**: the same credential is used regardless of who runs the workflow. This is the default credential behaviour.
 * **End-user credential**: each user's credential is used at runtime, and can only be seen and used by that user.
 
-End-user credentials let a workflow run with the credentials of the person who triggers it, and keep each user's data private to them. The choice between **Fixed credential** and **End-user credential** types appears for OAuth credentials on n8n Cloud Enterprise and self-hosted Enterprise. To learn how to set them up, see [End-user credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials).
+End-user credentials let a workflow run with the credentials of the person who triggers it, and keep each user's data private to them. The choice between **Fixed credential** and **End-user credential** types appears for OAuth credentials on n8n Cloud Enterprise and self-hosted Enterprise. To learn how to set them up, see [End-user credentials](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/end-user-credentials).
 
 ## Allowed HTTP request domains <a href="#allowed-http-request-domains" id="allowed-http-request-domains"></a>
 

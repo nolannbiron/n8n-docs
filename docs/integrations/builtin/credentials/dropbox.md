@@ -82,7 +82,7 @@ Cloud users need to select the **App Access Type**:
 - **Full Dropbox** grants access to all files and folders in your user's Dropbox.
 - Refer to the [DBX Platform developer guide](https://www.dropbox.com/developers/reference/developer-guide) for more information.
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to configure OAuth2 manually:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you'll need to configure OAuth2 manually:
 
 1. Open the [App Console](https://www.dropbox.com/developers/apps) within the Dropbox developer portal.
 2. Select **Create app**.

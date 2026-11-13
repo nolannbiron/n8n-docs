@@ -26,10 +26,10 @@ While building or testing a workflow, use the **Test** webhook URL.
 
 Using a test webhook ensures that you can view the incoming data in the editor UI, which is useful for debugging. Select **Listen for test event** to register the webhook before sending the data to the test webhook. The test webhook stays active for 120 seconds.
 
-When using the Webhook node on localhost on a [self-hosted](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n instance, run n8n in tunnel mode:
+When using the Webhook node on localhost on a [self-hosted](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n instance, run n8n in tunnel mode:
 
-* [npm with tunnel](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm#n8n-with-tunnel)
-* [Docker with tunnel](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker#n8n-with-tunnel)
+* [npm with tunnel](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm#n8n-with-tunnel)
+* [Docker with tunnel](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker#n8n-with-tunnel)
 
 ## Production workflows <a href="#production-workflows" id="production-workflows"></a>
 
@@ -37,4 +37,4 @@ When your workflow is ready, switch to using the **Production** webhook URL. You
 
 When working with a Production webhook, ensure that you have saved and published the workflow. Data flowing through the webhook isn't visible in the editor UI with the production webhook.
 
-Refer to [Create a workflow](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/create-and-run-workflows) for more information on publishing workflows.
+Refer to [Create a workflow](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/create-and-run-workflows) for more information on publishing workflows.

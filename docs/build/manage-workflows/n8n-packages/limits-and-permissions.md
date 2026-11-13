@@ -35,7 +35,7 @@ Four environment variables cap what an import accepts. They protect the instance
 Exceeding any of them returns a `400` naming which limit was hit.
 
 {% hint style="warning" %}
-The upload itself is capped separately, by [`N8N_PAYLOAD_SIZE_MAX`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints), which defaults to 16 MiB and isn't specific to packages. That cap applies to the compressed file, so it's usually the one you hit first: a package only reaches 300 MiB uncompressed if it compresses to under 16 MiB.
+The upload itself is capped separately, by [`N8N_PAYLOAD_SIZE_MAX`](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints), which defaults to 16 MiB and isn't specific to packages. That cap applies to the compressed file, so it's usually the one you hit first: a package only reaches 300 MiB uncompressed if it compresses to under 16 MiB.
 
 If you're importing large packages, raise `N8N_PAYLOAD_SIZE_MAX` first. Raising the import limits on their own changes nothing. An upload over the cap returns a `413`.
 {% endhint %}
@@ -69,7 +69,7 @@ Importing a project package also needs a license that supports team projects.
 
 A missing license feature returns a `403` naming the feature.
 
-Packages are only reachable through the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api), so the API has to be enabled on the instance. To stop packages moving in or out of an instance, [disable the public API](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/disable-the-public-api), or don't issue API keys carrying the `workflow:export`, `agent:export`, `project:export`, `workflow:import`, and `agent:import` scopes.
+Packages are only reachable through the [n8n API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api), so the API has to be enabled on the instance. To stop packages moving in or out of an instance, [disable the public API](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/security/disable-the-public-api), or don't issue API keys carrying the `workflow:export`, `agent:export`, `project:export`, `workflow:import`, and `agent:import` scopes.
 
 ## API key scopes
 

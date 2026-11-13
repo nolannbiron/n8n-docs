@@ -25,14 +25,14 @@ The Date & Time node manipulates date and time data and convert it to different 
 
 The node relies on the timezone setting. n8n uses either:
 
-1. The workflow timezone, if set. Refer to [Workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings) for more information.
-2. The n8n instance timezone, if the workflow timezone isn't set. The default is `America/New York` for self-hosted instances. n8n Cloud tries to detect the instance owner's timezone when they sign up, falling back to GMT as the default. Self-hosted users can change the instance setting using [Environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization). n8n Cloud instance owners can [change the instance timezone](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/set-your-timezone) in the n8n Cloud console.
+1. The workflow timezone, if set. Refer to [Workflow settings](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/configure-workflow-settings) for more information.
+2. The n8n instance timezone, if the workflow timezone isn't set. The default is `America/New York` for self-hosted instances. n8n Cloud tries to detect the instance owner's timezone when they sign up, falling back to GMT as the default. Self-hosted users can change the instance setting using [Environment variables](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization). n8n Cloud instance owners can [change the instance timezone](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/configure-cloud/set-your-timezone) in the n8n Cloud console.
 {% endhint %}
 
 {% hint style="info" %}
 **Date and time in other nodes**
 
-You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information.
+You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>
@@ -203,7 +203,7 @@ This operation has one option: **Include Input Fields**. If you'd like to includ
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-The Date & Time node uses [Luxon](https://moment.github.io/luxon). You can also use Luxon in the [Code](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/using-the-code-node) node and [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes). Refer to [Date and time with Luxon](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information.
+The Date & Time node uses [Luxon](https://moment.github.io/luxon). You can also use Luxon in the [Code](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/code-in-n8n/using-the-code-node) node and [expressions](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/expressions-versus-data-nodes). Refer to [Date and time with Luxon](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information.
 
 ### Supported date formats <a href="#supported-date-formats" id="supported-date-formats"></a>
 

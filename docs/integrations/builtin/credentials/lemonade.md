@@ -34,7 +34,7 @@ Lemonade runs AI inference locally. These nodes connect directly to a Lemonade s
 
 Refer to [Lemonade's documentation](https://lemonade-server.ai/docs/) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Configuring Lemonade server connection <a href="#configuring-lemonade-server-connection" id="configuring-lemonade-server-connection"></a>
 

@@ -41,11 +41,11 @@ To actually remove or filter data in your workflow, use these approaches:
 
 ### Filter out items <a href="#filter-out-items" id="filter-out-items"></a>
 
-To remove entire items from your workflow based on conditions, use the [Filter node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.filter). This node evaluates conditions and only passes through items that meet your criteria.
+To remove entire items from your workflow based on conditions, use the [Filter node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.filter). This node evaluates conditions and only passes through items that meet your criteria.
 
 ### Filter out fields <a href="#filter-out-fields" id="filter-out-fields"></a>
 
-To remove specific fields from an item or object while keeping the item itself, use the [Edit Fields (Set) node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.set). Configure it to remove the fields you don't need.
+To remove specific fields from an item or object while keeping the item itself, use the [Edit Fields (Set) node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.set). Configure it to remove the fields you don't need.
 
 ### Filter array elements <a href="#filter-array-elements" id="filter-array-elements"></a>
 
@@ -59,7 +59,7 @@ This removes array elements that don't match your condition while preserving the
 
 ### Filter out duplicate items from previous executions <a href="#filter-out-duplicate-items-from-previous-executions" id="filter-out-duplicate-items-from-previous-executions"></a>
 
-To remove items that have been seen in previous executions of a workflow, use the [Remove Duplicates](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates) node. Use this when an event fires multiple times but you only want to process the first occurrence.
+To remove items that have been seen in previous executions of a workflow, use the [Remove Duplicates](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.removeduplicates) node. Use this when an event fires multiple times but you only want to process the first occurrence.
 
 ## Related resources
 

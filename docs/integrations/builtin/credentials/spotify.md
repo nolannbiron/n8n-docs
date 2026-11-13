@@ -38,7 +38,7 @@ Refer to [Spotify's Web API documentation](https://developer.spotify.com/documen
 Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
 {% endhint %}
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need a [Spotify Developer](https://developer.spotify.com/) account so you can create a Spotify app:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you'll need a [Spotify Developer](https://developer.spotify.com/) account so you can create a Spotify app:
 
 1. Open the [Spotify developer dashboard](https://developer.spotify.com/dashboard).
 2. Select **Create an app**.

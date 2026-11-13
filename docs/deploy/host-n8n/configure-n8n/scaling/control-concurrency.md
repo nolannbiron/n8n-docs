@@ -46,7 +46,7 @@ Concurrency control in queue mode is a separate mechanism from concurrency contr
 
 ## Evaluation concurrency <a href="#evaluation-concurrency" id="evaluation-concurrency"></a>
 
-Evaluation test runs use a separate concurrency limit from production executions. By default, the limit follows the instance's license tier (Community/Pro 1, Business 3, Enterprise 5). Override it with [`N8N_CONCURRENCY_EVALUATION_LIMIT`](../basic-configuration/use-environment-variables/executions.md). Refer to [Metric-based evaluations](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#run-test-cases-in-parallel) for how the slider behaves in the UI.
+Evaluation test runs use a separate concurrency limit from production executions. By default, the limit follows the instance's license tier (Community/Pro 1, Business 3, Enterprise 5). Override it with [`N8N_CONCURRENCY_EVALUATION_LIMIT`](../basic-configuration/use-environment-variables/executions.md). Refer to [Metric-based evaluations](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#run-test-cases-in-parallel) for how the slider behaves in the UI.
 
 [^1]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.
 

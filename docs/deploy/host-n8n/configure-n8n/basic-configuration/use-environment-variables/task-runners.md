@@ -25,7 +25,7 @@ layout:
 Unlike the main n8n image, you CANNOT use file-based configuration for secrets in the task runner image. This means that variables with a `_FILE` suffix added will not be recognized.
 {% endhint %}
 
-[Task runners](../../set-up-task-runners.md) execute code defined by the [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code).
+[Task runners](../../set-up-task-runners.md) execute code defined by the [Code node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code).
 
 ## n8n instance environment variables <a href="#n8n-instance-environment-variables" id="n8n-instance-environment-variables"></a>
 

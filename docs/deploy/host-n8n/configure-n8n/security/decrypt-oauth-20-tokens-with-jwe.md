@@ -90,7 +90,7 @@ In the OAuth 2.0 client or application configuration on your IdP:
 
 ## Configure the credential in n8n <a href="#configure-the-credential-in-n8n" id="configure-the-credential-in-n8n"></a>
 
-1. Create or edit an [OAuth 2.0 API credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/httprequest#using-oauth2).
+1. Create or edit an [OAuth 2.0 API credential](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/httprequest#using-oauth2).
 2. Toggle **Encrypted Tokens (JWE)** on.
 3. Copy the value from the **JWKS URI** field and paste it into the JWKS URI setting on your IdP, if you haven't done so already.
 4. Save the credential and connect. n8n decrypts the token returned by your IdP and stores the decrypted form for use in workflows.
@@ -131,7 +131,7 @@ The JWKS schema reserves elliptic-curve algorithms (`ECDH-ES` and variants), but
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 * [Security](../security.md): audit, harden, and restrict a self-hosted instance.
-* [HTTP Request credentials: Using OAuth2](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/httprequest#using-oauth2): set up the generic OAuth 2.0 credential.
+* [HTTP Request credentials: Using OAuth2](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/httprequest#using-oauth2): set up the generic OAuth 2.0 credential.
 * [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): reference for `N8N_ENV_FEAT_OAUTH2_JWE` and `N8N_OAUTH_JWE_JWKS_PER_MINUTE`.
 * [Encryption key rotation](rotate-encryption-keys.md): rotate the data encryption key that protects the JWE private key at rest.
 * [JSON Web Encryption (RFC 7516)](https://datatracker.ietf.org/doc/html/rfc7516): the JWE specification.

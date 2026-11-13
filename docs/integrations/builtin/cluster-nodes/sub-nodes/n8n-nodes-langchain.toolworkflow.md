@@ -48,7 +48,7 @@ Enter a custom code a description. This tells the agent when to use this tool. F
 Tell n8n which workflow to call. You can choose either:
 
 * **Database** to select the workflow from a list or enter a workflow ID.
-* **Define Below** and copy in a complete [workflow JSON](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import).
+* **Define Below** and copy in a complete [workflow JSON](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/export-and-import).
 
 {% hint style="warning" %}
 When using **Database** as the workflow source and running the agent in production (not the manual/chat test panel), the sub-workflow must be published. If it isn't, the tool call fails with the error `Workflow is not active and cannot be executed`. The error text is returned to the agent as the tool result. This can be easy to miss inside a longer agent response. If the agent reports it couldn't retrieve data, check that the sub-workflow has been published and that its execution list shows a run.
@@ -64,8 +64,8 @@ You can define the workflow input values using any combination of the following 
 
 * providing fixed values
 * using expressions to reference data from the current workflow
-* [letting the AI model specify the parameter](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters) by selecting the button AI button on the right side of the field
-* using the [`$fromAI()` function](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters#use-the-fromai-function) in expressions to control the way the model fills in data and to mix AI generated input with other custom input
+* [letting the AI model specify the parameter](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/use-ai-for-parameters) by selecting the button AI button on the right side of the field
+* using the [`$fromAI()` function](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai/ai-examples/use-ai-for-parameters#use-the-fromai-function) in expressions to control the way the model fills in data and to mix AI generated input with other custom input
 
 To reference data from the current workflow, drag fields from the input panel to the field with the Expressions mode selected.
 
@@ -80,7 +80,7 @@ To get started with the `$fromAI()` function, select the "Let the model define t
 
 Refer to [LangChain's documentation on tools](https://langchain-ai.github.io/langgraphjs/how-tos/tool-calling/) for more information about tools in LangChain.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 [^1]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.
 [^2]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

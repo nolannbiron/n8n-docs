@@ -42,7 +42,7 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 Tell n8n which workflow to call. You can choose either:
 
 * **Database** and enter a workflow ID.
-* **Parameter** and copy in a complete [workflow JSON](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import).
+* **Parameter** and copy in a complete [workflow JSON](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/export-and-import).
 
 ### Workflow values <a href="#workflow-values" id="workflow-values"></a>
 
@@ -64,5 +64,5 @@ The expression to access the value of `myCustomValue` is `{{ $('Execute Sub-work
 
 Refer to [LangChain's retriever documentation](https://docs.langchain.com/oss/javascript/integrations/retrievers) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 

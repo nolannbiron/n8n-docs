@@ -62,7 +62,7 @@ Refer to GitLab's [Create a personal access token documentation](https://docs.gi
 Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
 {% endhint %}
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need a [GitLab](https://gitlab.com/) account. Then create a new GitLab application:
+If you're [self-hosting](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) n8n, you'll need a [GitLab](https://gitlab.com/) account. Then create a new GitLab application:
 
 1. In GitLab, select your avatar, then select **Edit profile**.
 2. In the left sidebar, select **Applications**.

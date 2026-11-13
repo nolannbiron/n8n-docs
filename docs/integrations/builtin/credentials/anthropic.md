@@ -19,7 +19,7 @@ layout:
 # Anthropic credentials <a href="#anthropic-credentials" id="anthropic-credentials"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can skip setting up Anthropic credentials by selecting **Use Gateway credits** in the credential field of nodes that support it. Refer to [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) for details.
+On n8n Cloud, you can skip setting up Anthropic credentials by selecting **Use Gateway credits** in the credential field of nodes that support it. Refer to [Gateway credits](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits) for details.
 {% endhint %}
 
 You can use these credentials to authenticate the following nodes:
@@ -35,7 +35,7 @@ You can use these credentials to authenticate the following nodes:
 
 Refer to [Anthropic's documentation](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) for more information about the service.
 
-View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

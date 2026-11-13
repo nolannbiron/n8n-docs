@@ -45,7 +45,7 @@ Metrics can be deterministic functions (such as the distance between two strings
 {% hint style="info" %}
 **Credentials for Google Sheets**
 
-Evaluations use data tables or Google Sheets to store the test dataset. To use Google Sheets as a dataset source, configure a [Google Sheets credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/google).
+Evaluations use data tables or Google Sheets to store the test dataset. To use Google Sheets as a dataset source, configure a [Google Sheets credential](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/google).
 {% endhint %}
 
 1. Set up [light evaluation](run-quick-evaluations.md)
@@ -80,7 +80,7 @@ For example:
 
 * [RAG document relevance](https://n8n.io/workflows/4273): when working with a vector database, whether the documents retrieved are relevant to the question.
 
-Calculating metrics can add latency and cost, so you may only want to do it when running an evaluation and avoid it when making a production execution. You can do this by putting the metric logic after a ['check if evaluating' operation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.evaluation#check-if-evaluating).
+Calculating metrics can add latency and cost, so you may only want to do it when running an evaluation and avoid it when making a production execution. You can do this by putting the metric logic after a ['check if evaluating' operation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.evaluation#check-if-evaluating).
 
 ![Check if evaluating node](../../.gitbook/assets/check-if-evaluating.png)
 
@@ -109,7 +109,7 @@ The default maximum depends on your plan:
 
 When the maximum is `1`, the caret and popover are hidden and **Run Test** is a plain button — runs are sequential, identical to earlier versions.
 
-Self-hosted instances can override the maximum with the [`N8N_CONCURRENCY_EVALUATION_LIMIT`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/executions) environment variable, regardless of plan tier.
+Self-hosted instances can override the maximum with the [`N8N_CONCURRENCY_EVALUATION_LIMIT`](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables/executions) environment variable, regardless of plan tier.
 
 {% hint style="info" %}
 **LLM rate limits**

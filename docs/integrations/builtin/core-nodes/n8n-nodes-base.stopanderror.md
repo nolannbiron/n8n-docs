@@ -50,5 +50,5 @@ The Error Object Error Type adds one parameter, the **Error Object**. Enter a JS
 
 You can use the Stop And Error node with the [Error trigger](n8n-nodes-base.errortrigger.md) node.
 
-Read more about [Error workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) in n8n workflows.
+Read more about [Error workflows](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/handle-errors-gracefully) in n8n workflows.
 

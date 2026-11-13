@@ -30,7 +30,7 @@ Make a `POST` call to the `/audit` endpoint. You must authenticate as the instan
 
 ### n8n node <a href="#n8n-node" id="n8n-node"></a>
 
-Add the [n8n node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) to your workflow. Select **Resource** > **Audit** and **Operation** > **Generate**.
+Add the [n8n node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.n8n) to your workflow. Select **Resource** > **Audit** and **Operation** > **Generate**.
 
 ## What's in the security audit report? <a href="#report-contents" id="report-contents"></a>
 

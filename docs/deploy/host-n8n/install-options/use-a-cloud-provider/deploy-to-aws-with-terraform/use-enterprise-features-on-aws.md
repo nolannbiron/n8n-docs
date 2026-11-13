@@ -73,7 +73,7 @@ The module doesn't deploy a collector. Deploy one separately, for example with t
 Log streaming requires n8n 2.19.0 or later, and an Enterprise license.
 {% endhint %}
 
-Set `n8n_log_streaming_managed_by_env = true` to configure [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) destinations from Terraform instead of the UI:
+Set `n8n_log_streaming_managed_by_env = true` to configure [log streaming](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/observe-and-log/stream-logs-to-external-systems) destinations from Terraform instead of the UI:
 
 ```hcl
 module "n8n" {
@@ -97,7 +97,7 @@ n8n reapplies these destinations on every startup, and the Log Streaming setting
 
 ## External secrets
 
-n8n's [External Secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) feature resolves workflow credential values from an external vault at runtime. It requires an Enterprise license with the `feat:externalSecrets` entitlement, and is on by default (`n8n_external_secrets_enabled = true`); set it to `false` to disable it even on a license that includes it.
+n8n's [External Secrets](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/use-external-secret-stores) feature resolves workflow credential values from an external vault at runtime. It requires an Enterprise license with the `feat:externalSecrets` entitlement, and is on by default (`n8n_external_secrets_enabled = true`); set it to `false` to disable it even on a license that includes it.
 
 Connecting a vault provider is a manual step in the n8n UI (**Settings** > **External Secrets**) in every case. Terraform can't create that connection. What the module can do is grant the n8n pod's Pod Identity role read access to specific AWS Secrets Manager secrets, so you can choose automatic credential detection in the UI instead of pasting static IAM user keys:
 
@@ -114,7 +114,7 @@ module "n8n" {
 
 ## Credential overwrites
 
-[Credential overwrites](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/credential-overwrites) let you preconfigure shared credential fields and hide them from users. Supply the JSON payload through a Kubernetes Secret you manage yourself, and reference it with `n8n_credentials_overwrite_secret_ref`:
+[Credential overwrites](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/credential-overwrites) let you preconfigure shared credential fields and hide them from users. Supply the JSON payload through a Kubernetes Secret you manage yourself, and reference it with `n8n_credentials_overwrite_secret_ref`:
 
 ```hcl
 module "n8n" {

@@ -60,7 +60,7 @@ The way you build workflows affects how much data they consume when executed. Al
 * Avoid manual executions when processing larger amounts of data.
 * Split the workflow up into sub-workflows and ensure each sub-workflow returns a limited amount of data to its parent workflow.
 
-Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two more nodes: the [Loop Over Items](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitinbatches) node to split up the items into smaller batches and the [Execute Workflow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflow) node to start the sub-workflow.
+Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two more nodes: the [Loop Over Items](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.splitinbatches) node to split up the items into smaller batches and the [Execute Workflow](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.executeworkflow) node to start the sub-workflow.
 
 However, as long as your sub-workflow does the heavy lifting for each batch and then returns only a small result set to the main workflow, this reduces memory consumption. This is because the sub-workflow only holds the data for the current batch in memory, after which the memory is free again.
 
