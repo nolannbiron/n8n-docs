@@ -1,8 +1,5 @@
 ---
 title: Action Network node documentation
-description: >-
-  Learn how to use the Action Network node in n8n. Follow technical
-  documentation to integrate Action Network node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,14 +10,34 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork
+description: >-
+  Learn how to use the Action Network node in n8n. Follow technical
+  documentation to integrate Action Network node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Action Network node <a href="#action-network-node" id="action-network-node"></a>
+# Action Network
 
-Use the Action Network node to automate work in Action Network, and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network features, including creating, updating, and deleting events, people, tags, and signatures. 
+Use the Action Network node to automate work in Action Network, and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network features, including creating, updating, and deleting events, people, tags, and signatures.
 
 On this page, you'll find a list of operations the Action Network node supports, and links to more resources.
 
@@ -39,50 +56,48 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Attendance
-    * Create
-    * Get
-    * Get All
+  * Create
+  * Get
+  * Get All
 * Event
-    * Create
-    * Get
-    * Get All
+  * Create
+  * Get
+  * Get All
 * Person
-    * Create
-    * Get
-    * Get All
-    * Update
+  * Create
+  * Get
+  * Get All
+  * Update
 * Person Tag
-    * Add
-    * Remove
+  * Add
+  * Remove
 * Petition
-    * Create
-    * Get
-    * Get All
-    * Update
+  * Create
+  * Get
+  * Get All
+  * Update
 * Signature
-    * Create
-    * Get
-    * Get All
-    * Update
+  * Create
+  * Get
+  * Get All
+  * Update
 * Tag
-    * Create
-    * Get
-    * Get All
+  * Create
+  * Get
+  * Get All
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Action Network node documentation integration templates](https://n8n.io/integrations/action-network) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

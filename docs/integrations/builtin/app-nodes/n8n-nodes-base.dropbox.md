@@ -1,22 +1,39 @@
 ---
 title: Dropbox node documentation
-description: >-
-  Learn how to use the Dropbox node in n8n. Follow technical documentation to
-  integrate Dropbox node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Dropbox node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.dropbox.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.dropbox'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.dropbox'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.dropbox
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.dropbox
+description: >-
+  Learn how to use the Dropbox node in n8n. Follow technical documentation to
+  integrate Dropbox node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Dropbox node <a href="#dropbox-node" id="dropbox-node"></a>
+# Dropbox
 
 Use the Dropbox node to automate work in Dropbox, and integrate Dropbox with other applications. n8n has built-in support for a wide range of Dropbox features, including creating, downloading, moving, and copying files and folders.
 
@@ -37,34 +54,32 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * File
-    * Copy a file
-    * Delete a file
-    * Download a file
-    * Move a file
-    * Upload a file
+  * Copy a file
+  * Delete a file
+  * Download a file
+  * Move a file
+  * Upload a file
 * Folder
-    * Copy a folder
-    * Create a folder
-    * Delete a folder
-    * Return the files and folders in a given folder
-    * Move a folder
+  * Copy a folder
+  * Create a folder
+  * Delete a folder
+  * Return the files and folders in a given folder
+  * Move a folder
 * Search
-    * Query
+  * Query
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Dropbox node documentation integration templates](https://n8n.io/integrations/dropbox) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

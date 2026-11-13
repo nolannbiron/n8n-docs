@@ -11,9 +11,9 @@ originalUrl: >-
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud
 description: >-
-  The Qwen Cloud Chat Model node sends prompts to conversational models available
-  on Qwen Cloud (for advanced AI chains). This page explains how to configure
-  the node in n8n workflows and covers common uses
+  The Qwen Cloud Chat Model node sends prompts to conversational models
+  available on Qwen Cloud (for advanced AI chains). This page explains how to
+  configure the node in n8n workflows and covers common
 layout:
   width: default
   title:
@@ -31,6 +31,8 @@ layout:
   tags:
     visible: true
   actions:
+    visible: true
+  anchors:
     visible: true
 ---
 

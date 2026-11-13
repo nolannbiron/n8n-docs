@@ -1,33 +1,50 @@
 ---
 title: Kibana credentials
-description: >-
-  Documentation for the Kibana credentials. Use these credentials to
-  authenticate Kibana in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Kibana credentials
 originalFilePath: integrations/builtin/credentials/kibana.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/kibana'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/kibana'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/kibana
+url: https://docs.n8n.io/integrations/builtin/credentials/kibana
+description: >-
+  Documentation for the Kibana credentials. Use these credentials to
+  authenticate Kibana in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Kibana credentials <a href="#kibana-credentials" id="kibana-credentials"></a>
+# Kibana credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-- Create an [Elasticsearch](https://www.elastic.co/) account.
-- If you're creating a new account to test with, load some sample data into Kibana. Refer to the [Kibana quick start](https://www.elastic.co/guide/en/kibana/current/get-started.html) for more information.
+* Create an [Elasticsearch](https://www.elastic.co/) account.
+* If you're creating a new account to test with, load some sample data into Kibana. Refer to the [Kibana quick start](https://www.elastic.co/guide/en/kibana/current/get-started.html) for more information.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- Basic auth
+* Basic auth
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -39,6 +56,6 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need:
 
-- The **URL** you use to access Kibana, for example `http://localhost:5601`
-- A **Username**: Use the same username that you use to log in to Elastic.
-- A **Password**: Use the same password that you use to log in to Elastic.
+* The **URL** you use to access Kibana, for example `http://localhost:5601`
+* A **Username**: Use the same username that you use to log in to Elastic.
+* A **Password**: Use the same password that you use to log in to Elastic.

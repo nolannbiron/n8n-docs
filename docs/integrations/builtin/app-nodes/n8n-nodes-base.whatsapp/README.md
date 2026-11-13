@@ -1,24 +1,41 @@
 ---
 title: WhatsApp Business Cloud node documentation
-description: >-
-  Learn how to use the WhatsApp Business Cloud node in n8n. Follow technical
-  documentation to integrate WhatsApp Business Cloud node into your workflows.
 contentType:
   - integration
   - reference
 priority: high
 nodeTitle: n8n-nodes-base.whatsapp
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp
+description: >-
+  Learn how to use the WhatsApp Business Cloud node in n8n. Follow technical
+  documentation to integrate WhatsApp Business Cloud node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# WhatsApp Business Cloud node <a href="#whatsapp-business-cloud-node" id="whatsapp-business-cloud-node"></a>
+# WhatsApp Business Cloud
 
-Use the WhatsApp Business Cloud node to automate work in WhatsApp Business, and integrate WhatsApp Business with other applications. n8n has built-in support for a wide range of WhatsApp Business features, including sending messages, and uploading, downloading, and deleting media. 
+Use the WhatsApp Business Cloud node to automate work in WhatsApp Business, and integrate WhatsApp Business with other applications. n8n has built-in support for a wide range of WhatsApp Business features, including sending messages, and uploading, downloading, and deleting media.
 
 On this page, you'll find a list of operations the WhatsApp Business Cloud node supports and links to more resources.
 
@@ -37,13 +54,13 @@ This node can be used as a human review step for AI Agent tool calls. When confi
 ## Operations <a href="#operations" id="operations"></a>
 
 * Message
-	* Send
-	* Send and Wait for Response
-	* Send Template
+  * Send
+  * Send and Wait for Response
+  * Send Template
 * Media
-	* Upload
-	* Download
-	* Delete
+  * Upload
+  * Download
+  * Delete
 
 ## Waiting for a response <a href="#waiting-for-a-response" id="waiting-for-a-response"></a>
 
@@ -64,7 +81,7 @@ You can customize the waiting and response behavior depending on which response 
 
 ### Approval response customization <a href="#approval-response-customization" id="approval-response-customization"></a>
 
-When using the Approval response type, you can choose whether to present only an approval button or both approval *and* disapproval buttons.
+When using the Approval response type, you can choose whether to present only an approval button or both approval _and_ disapproval buttons.
 
 You can also customize the button labels for the buttons you include.
 
@@ -76,12 +93,11 @@ When using the Free Text response type, you can customize the message button lab
 
 When using the Custom Form response type, you build a form using the fields and options you want.
 
-You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.formtrigger#form-elements). To add more fields, select the **Add Form Element** button.
+You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](../../core-nodes/n8n-nodes-base.formtrigger.md#form-elements). To add more fields, select the **Add Form Element** button.
 
 You'll also be able to customize the message button label, the form title and description, and the response button label.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse WhatsApp Business Cloud integration templates](https://n8n.io/integrations/whatsapp-business-cloud) or [search all templates](https://n8n.io/workflows/)
 
@@ -95,12 +111,12 @@ For common errors or issues and suggested resolution steps, refer to [Common Iss
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../../custom-api-actions-for-existing-nodes.md) for more information.

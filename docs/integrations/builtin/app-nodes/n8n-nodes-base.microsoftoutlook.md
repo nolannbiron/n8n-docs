@@ -1,8 +1,5 @@
 ---
 title: Microsoft Outlook node documentation
-description: >-
-  Learn how to use the Microsoft Outlook node in n8n. Follow technical
-  documentation to integrate Microsoft Outlook node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,14 +10,34 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook
+description: >-
+  Learn how to use the Microsoft Outlook node in n8n. Follow technical
+  documentation to integrate Microsoft Outlook node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Microsoft Outlook node <a href="#microsoft-outlook-node" id="microsoft-outlook-node"></a>
+# Microsoft Outlook
 
-Use the Microsoft Outlook node to automate work in Microsoft Outlook, and integrate Microsoft Outlook with other applications. n8n has built-in support for a wide range of Microsoft Outlook features, including creating, updating, deleting, and getting folders, messages, and drafts. 
+Use the Microsoft Outlook node to automate work in Microsoft Outlook, and integrate Microsoft Outlook with other applications. n8n has built-in support for a wide range of Microsoft Outlook features, including creating, updating, deleting, and getting folders, messages, and drafts.
 
 On this page, you'll find a list of operations the Microsoft Outlook node supports and links to more resources.
 
@@ -29,9 +46,9 @@ On this page, you'll find a list of operations the Microsoft Outlook node suppor
 
 This node's **Authentication** dropdown offers three options:
 
-- **Outlook OAuth2**: the Microsoft Outlook-specific OAuth2 credential (default).
-- **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure you grant the credential the scopes this node needs (for example, `Mail.ReadWrite`, `Mail.Send`, `Calendars.ReadWrite`, and `Contacts.ReadWrite`).
-- **Microsoft Entra Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user, available from version 2 of the node. Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and required application permissions.
+* **Outlook OAuth2**: the Microsoft Outlook-specific OAuth2 credential (default).
+* **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure you grant the credential the scopes this node needs (for example, `Mail.ReadWrite`, `Mail.Send`, `Calendars.ReadWrite`, and `Contacts.ReadWrite`).
+* **Microsoft Entra Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user, available from version 2 of the node. Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and required application permissions.
 
 Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication.
 {% endhint %}
@@ -57,51 +74,51 @@ This node can be used as a human review step for AI Agent tool calls. When confi
 ## Operations <a href="#operations" id="operations"></a>
 
 * Calendar
-	* Create
-	* Delete
-	* Get
-	* Get Many
-	* Update
+  * Create
+  * Delete
+  * Get
+  * Get Many
+  * Update
 * Contact
-	* Create
-	* Delete
-	* Get
-	* Get Many
-	* Update
+  * Create
+  * Delete
+  * Get
+  * Get Many
+  * Update
 * Draft
-	* Create
-	* Delete
-	* Get
-	* Send
-	* Update
+  * Create
+  * Delete
+  * Get
+  * Send
+  * Update
 * Event
-	* Create
-	* Delete
-	* Get
-	* Get Many
-	* Update
+  * Create
+  * Delete
+  * Get
+  * Get Many
+  * Update
 * Folder
-	* Create
-	* Delete
-	* Get
-	* Get Many
-	* Update
+  * Create
+  * Delete
+  * Get
+  * Get Many
+  * Update
 * Folder Message
-    * Get Many
+  * Get Many
 * Message
-	* Delete
-	* Get
-	* Get Many
-	* Move
-	* Reply
-	* Send
-	* Send and Wait for Response
-	* Update
+  * Delete
+  * Get
+  * Get Many
+  * Move
+  * Reply
+  * Send
+  * Send and Wait for Response
+  * Update
 * Message Attachment
-	* Add
-	* Download
-	* Get
-	* Get Many
+  * Add
+  * Download
+  * Get
+  * Get Many
 
 ## Waiting for a response <a href="#waiting-for-a-response" id="waiting-for-a-response"></a>
 
@@ -122,7 +139,7 @@ You can customize the waiting and response behavior depending on which response 
 
 ### Approval response customization <a href="#approval-response-customization" id="approval-response-customization"></a>
 
-When using the Approval response type, you can choose whether to present only an approval button or both approval *and* disapproval buttons.
+When using the Approval response type, you can choose whether to present only an approval button or both approval _and_ disapproval buttons.
 
 You can also customize the button labels for the buttons you include.
 
@@ -134,12 +151,11 @@ When using the Free Text response type, you can customize the message button lab
 
 When using the Custom Form response type, you build a form using the fields and options you want.
 
-You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.formtrigger#form-elements). To add more fields, select the **Add Form Element** button.
+You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](../core-nodes/n8n-nodes-base.formtrigger.md#form-elements). To add more fields, select the **Add Form Element** button.
 
 You'll also be able to customize the message button label, the form title and description, and the response button label.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Microsoft Outlook node documentation integration templates](https://n8n.io/integrations/microsoft-outlook) or [search all templates](https://n8n.io/workflows/)
 
@@ -149,12 +165,12 @@ Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

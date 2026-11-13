@@ -1,21 +1,38 @@
 ---
 title: Databricks node documentation
-description: >-
-  Learn how to use the Databricks node in n8n. Follow technical documentation to
-  integrate Databricks node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Databricks node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.databricks.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.databricks'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.databricks'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.databricks
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.databricks
+description: >-
+  Learn how to use the Databricks node in n8n. Follow technical documentation to
+  integrate Databricks node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Databricks node <a href="#databricks-node" id="databricks-node"></a>
+# Databricks
 
 Use the Databricks node to automate work in Databricks, and integrate Databricks with other applications. n8n has built-in support for a wide range of Databricks features, including running jobs, executing SQL queries, managing Unity Catalog objects, querying ML model serving endpoints, and working with vector search indexes.
 
@@ -36,57 +53,57 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Databricks SQL
-	* Execute Query
+  * Execute Query
 * File
-	* Create Directory
-	* Delete Directory
-	* Delete File
-	* Download File
-	* Get File Metadata
-	* List Directory
-	* Upload File
+  * Create Directory
+  * Delete Directory
+  * Delete File
+  * Download File
+  * Get File Metadata
+  * List Directory
+  * Upload File
 * Genie Agent
-	* Create Conversation Message
-	* Execute Message SQL Query
-	* Get Conversation Message
-	* Get Genie Agent
-	* Get Query Results
-	* Start Conversation
+  * Create Conversation Message
+  * Execute Message SQL Query
+  * Get Conversation Message
+  * Get Genie Agent
+  * Get Query Results
+  * Start Conversation
 * Job
-	* Get
-	* Get Run
-	* Get Run Output
-	* Run
+  * Get
+  * Get Run
+  * Get Run Output
+  * Run
 * Lakebase
-	* Delete
-	* Execute Function
-	* Get Many
-	* Insert
-	* Insert or Update
-	* Update
+  * Delete
+  * Execute Function
+  * Get Many
+  * Insert
+  * Insert or Update
+  * Update
 * Model Serving
-	* Query Endpoint
+  * Query Endpoint
 * Unity Catalog
-	* Create Catalog
-	* Create Function
-	* Create Volume
-	* Delete Catalog
-	* Delete Function
-	* Delete Volume
-	* Get Catalog
-	* Get Function
-	* Get Table
-	* Get Volume
-	* List Catalogs
-	* List Functions
-	* List Tables
-	* List Volumes
-	* Update Catalog
+  * Create Catalog
+  * Create Function
+  * Create Volume
+  * Delete Catalog
+  * Delete Function
+  * Delete Volume
+  * Get Catalog
+  * Get Function
+  * Get Table
+  * Get Volume
+  * List Catalogs
+  * List Functions
+  * List Tables
+  * List Volumes
+  * Update Catalog
 * Vector Search
-	* Create Index
-	* Get Index
-	* List Indexes
-	* Query Index
+  * Create Index
+  * Get Index
+  * List Indexes
+  * Query Index
 
 ## Job operations
 
@@ -116,13 +133,13 @@ The **Job** field (on **Get** and **Run**) and the **Run** field (on **Get Run**
 
 **Get Run** reads the run in the **Run** field and returns the run object from Databricks with five extra fields:
 
-| Field | Value |
-|-------|-------|
-| `run_state` | The life cycle state, for example `RUNNING` or `TERMINATED`. |
-| `run_finished` | `true` when the run has reached a final state. |
-| `run_result` | The termination code, for example `SUCCESS`, `SUCCESS_WITH_FAILURES`, `USER_CANCELED`, or `RUN_EXECUTION_ERROR`. `null` until the run finishes. Refer to `termination_details.code` in the [Databricks API reference](https://docs.databricks.com/api/workspace/jobs/getrun) for the full list. |
-| `run_succeeded` | `true` when `run_result` is `SUCCESS`, `false` for any other result. `null` until the run finishes. |
-| `run_error_message` | The termination message of a run that didn't succeed, cut at 500 characters. `null` otherwise. |
+| Field               | Value                                                                                                                                                                                                                                                                                           |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `run_state`         | The life cycle state, for example `RUNNING` or `TERMINATED`.                                                                                                                                                                                                                                    |
+| `run_finished`      | `true` when the run has reached a final state.                                                                                                                                                                                                                                                  |
+| `run_result`        | The termination code, for example `SUCCESS`, `SUCCESS_WITH_FAILURES`, `USER_CANCELED`, or `RUN_EXECUTION_ERROR`. `null` until the run finishes. Refer to `termination_details.code` in the [Databricks API reference](https://docs.databricks.com/api/workspace/jobs/getrun) for the full list. |
+| `run_succeeded`     | `true` when `run_result` is `SUCCESS`, `false` for any other result. `null` until the run finishes.                                                                                                                                                                                             |
+| `run_error_message` | The termination message of a run that didn't succeed, cut at 500 characters. `null` otherwise.                                                                                                                                                                                                  |
 
 Use these fields in an [If](../core-nodes/n8n-nodes-base.if.md) node to branch on the outcome without reading the nested `status` object.
 
@@ -130,13 +147,13 @@ Use these fields in an [If](../core-nodes/n8n-nodes-base.if.md) node to branch o
 
 **Get Run Output** reads what the tasks of a run produced. Set **Run** to the job run to get every task. A task run ID returns one item for that task only. The node reads the run's tasks, fetches the output of each task, and returns one item per task:
 
-| Field | Value |
-|-------|-------|
-| `run_id` | The run you asked for. |
-| `job_id` | The job the run belongs to. |
-| `task_key` | The key of the task in the job definition. |
-| `task_run_id` | The run ID of this task. |
-| `truncated` | `true` when Databricks cut the notebook output or the logs. |
+| Field                                                                                                                                                                | Value                                                                                                                                                                                                                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `run_id`                                                                                                                                                             | The run you asked for.                                                                                                                                                                                                                                    |
+| `job_id`                                                                                                                                                             | The job the run belongs to.                                                                                                                                                                                                                               |
+| `task_key`                                                                                                                                                           | The key of the task in the job definition.                                                                                                                                                                                                                |
+| `task_run_id`                                                                                                                                                        | The run ID of this task.                                                                                                                                                                                                                                  |
+| `truncated`                                                                                                                                                          | `true` when Databricks cut the notebook output or the logs.                                                                                                                                                                                               |
 | `notebook_output`, `sql_output`, `dbt_output`, `run_job_output`, `clean_rooms_notebook_output`, `logs`, `logs_truncated`, `error`, `error_trace`, `info`, `metadata` | The task output as Databricks returns it. Which fields appear depends on the task type. `notebook_output.result` holds the value a notebook returns with `dbutils.notebook.exit()`. `error` explains why a task failed or why its output isn't available. |
 
 A run with no tasks returns one item for the run itself. When Databricks retried a task, the node returns one item for each attempt, with the same `task_key` and a different `task_run_id`. You can also read a run that hasn't finished, but tasks that are still running have no output yet. The node reads at most 2,000 tasks of one run. Above that it fails with `Run <run-id> has more tasks than the node can read`.
@@ -145,12 +162,12 @@ A run with no tasks returns one item for the run itself. When Databricks retried
 
 **Run** starts a run of the job, the same as **Run now** in Databricks.
 
-| Field | Description |
-|-------|-------------|
-| **Job** | The job to run. |
-| **Job Parameters** | Job-level parameters for this run. Select **Add Parameter** and enter a **Name** and a **Value** for each one. They override the default values defined on the job. The node sends every value as a string. Databricks accepts a parameter the job doesn't define and records it on the run. |
-| **Wait for Completion** | Whether to wait until the run finishes and return the final run. Off by default. |
-| **Timeout** (in **Options**) | Maximum time in seconds to wait for the run to finish. Default `600`, minimum `1`. Shown only when **Wait for Completion** is on. |
+| Field                        | Description                                                                                                                                                                                                                                                                                  |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Job**                      | The job to run.                                                                                                                                                                                                                                                                              |
+| **Job Parameters**           | Job-level parameters for this run. Select **Add Parameter** and enter a **Name** and a **Value** for each one. They override the default values defined on the job. The node sends every value as a string. Databricks accepts a parameter the job doesn't define and records it on the run. |
+| **Wait for Completion**      | Whether to wait until the run finishes and return the final run. Off by default.                                                                                                                                                                                                             |
+| **Timeout** (in **Options**) | Maximum time in seconds to wait for the run to finish. Default `600`, minimum `1`. Shown only when **Wait for Completion** is on.                                                                                                                                                            |
 
 With **Wait for Completion** off, the node returns the new run ID right away and the job keeps running in Databricks:
 
@@ -177,20 +194,20 @@ Some jobs run longer than a workflow execution should wait. For those, start the
 
 The identity the credential authenticates as needs the **Workspace access** entitlement and a permission on the job:
 
-| Operations | Permission on the job |
-|------------|-----------------------|
-| **Get**, **Get Run**, **Get Run Output** | **CAN VIEW** |
-| **Run** | **CAN MANAGE RUN** |
+| Operations                               | Permission on the job |
+| ---------------------------------------- | --------------------- |
+| **Get**, **Get Run**, **Get Run Output** | **CAN VIEW**          |
+| **Run**                                  | **CAN MANAGE RUN**    |
 
 **CAN MANAGE** and **IS OWNER** include both permissions. Databricks returns only the jobs and runs the identity has **CAN VIEW** on, so the **Job** and **Run** lists offer only those. A run started with **Run** executes as the job's run-as identity, not as the credential. **Get** returns this identity as `run_as_user_name`. By default, this is the job owner. Refer to [Required Databricks privileges](../credentials/databricks.md#required-databricks-privileges) for the other resources of the node.
 
 When the permission is missing, Databricks rejects the request with `PERMISSION_DENIED`. n8n shows the Databricks message as the error. The message names the missing permission. n8n adds one of these hints as the error description:
 
-```text
+```
 Grant at least Can View on the job to the signed-in user or service principal in Databricks, then retry.
 ```
 
-```text
+```
 Grant at least Can Manage Run on the job to the signed-in user or service principal in Databricks, then retry.
 ```
 
@@ -200,13 +217,13 @@ This workflow posts one Slack message for each task of a failed run.
 
 1. Add a **Databricks Trigger** node. Set **Resource** to **Job**. Select the job in **Job**. Set **Events** to **Run Failed** only. Keep **Simplify** on. The trigger fires once for each run that ends with any result other than a full success, including canceled and skipped runs. Its output holds the run ID in `run.id`, the run page URL in `run.url`, and the termination code and message in `result.code` and `result.message`.
 2. Add a **Databricks** node. Set **Resource** to **Job** and **Operation** to **Get Run Output**. Set **Run** to **By ID** and enter the expression `{{ $json.run.id }}`. The node returns one item for each task of the failed run.
-3. Add a [Slack](n8n-nodes-base.slack/README.md) node. Set **Resource** to **Message** and **Operation** to **Send**. Select the channel. Use a message text like this:
+3.  Add a [Slack](n8n-nodes-base.slack/) node. Set **Resource** to **Message** and **Operation** to **Send**. Select the channel. Use a message text like this:
 
-	```text
-	Databricks run {{ $('Databricks Trigger').item.json.run.name }} failed ({{ $('Databricks Trigger').item.json.result.code }}).
-	Task {{ $json.task_key }}: {{ $json.error ?? 'no error text' }}
-	{{ $('Databricks Trigger').item.json.run.url }}
-	```
+    ```
+    Databricks run {{ $('Databricks Trigger').item.json.run.name }} failed ({{ $('Databricks Trigger').item.json.result.code }}).
+    Task {{ $json.task_key }}: {{ $json.error ?? 'no error text' }}
+    {{ $('Databricks Trigger').item.json.run.url }}
+    ```
 
 Both Databricks nodes can share one credential. It needs **CAN VIEW** on the job. Use a credential that belongs to a service principal, so the trigger keeps firing when a person leaves or revokes consent.
 
@@ -216,7 +233,7 @@ To send one message for the whole run instead of one for each task, add an [Aggr
 
 Every **Genie Agent** operation returns a `deep_link` field with the URL of the Genie Agent, or of the conversation, in your Databricks workspace. Use it to let users inspect the SQL and the results in Databricks.
 
-When the Databricks node runs as a tool of an [AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node (version 3 or later), the agent appends the **Powered by Databricks Genie** label after its reply. The agent skips the label when **Require Specific Output Format** is on. The label is required by Databricks for Genie-powered integrations. To make the reply link back to Databricks, tell the model in the system message to end its reply with a Markdown link whose text is **Explore in Databricks** and whose URL is the value of the `deep_link` field, for example `[Explore in Databricks](<deep_link value>)`.
+When the Databricks node runs as a tool of an [AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node (version 3 or later), the agent appends the **Powered by Databricks Genie** label after its reply. The agent skips the label when **Require Specific Output Format** is on. The label is required by Databricks for Genie-powered integrations. To make the reply link back to Databricks, tell the model in the system message to end its reply with a Markdown link whose text is **Explore in Databricks** and whose URL is the value of the `deep_link` field, for example `[Explore in Databricks](<deep_link value>)`.
 
 ## Lakebase operations
 
@@ -232,13 +249,13 @@ The Data API is off by default, and the identity the credential authenticates as
 
 Every operation starts with the same five fields. Each offers a **From list** mode and a **By ID** mode.
 
-| Field | Value |
-|-------|-------|
-| **Project** | The Lakebase project. |
-| **Branch** | The branch of the project, for example `production`. Lakebase branches a database the way Git branches code. |
-| **Database** | The Postgres database on the branch, for example `databricks_postgres`. |
-| **Schema** | The schema that holds the table. `public` by default. The list offers only `public`, because Databricks has no endpoint that lists Postgres schemas. For another schema, select **By ID** and enter its name. The Data API has to expose that schema. |
-| **Table** | The table to work on. **Execute Function** takes a **Function** instead. |
+| Field        | Value                                                                                                                                                                                                                                                 |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Project**  | The Lakebase project.                                                                                                                                                                                                                                 |
+| **Branch**   | The branch of the project, for example `production`. Lakebase branches a database the way Git branches code.                                                                                                                                          |
+| **Database** | The Postgres database on the branch, for example `databricks_postgres`.                                                                                                                                                                               |
+| **Schema**   | The schema that holds the table. `public` by default. The list offers only `public`, because Databricks has no endpoint that lists Postgres schemas. For another schema, select **By ID** and enter its name. The Data API has to expose that schema. |
+| **Table**    | The table to work on. **Execute Function** takes a **Function** instead.                                                                                                                                                                              |
 
 The table, column, and function lists, and the **Columns** and **Arguments** mappers, read the project's OpenAPI document. Until you turn on the **OpenAPI specification** setting of the Data API, the **Table**, **Function**, and column lists show an error, and the mappers stay empty with a notice. Select **By ID** and type the table or function name, enter column names with an expression under **Select Rows**, **Sort**, and **Output Columns**, and set **Specify Arguments** to **Using JSON**.
 
@@ -250,20 +267,20 @@ The `orders` table in the examples below has an `id` primary key, plus `status` 
 
 **Get Many** reads rows from the table and returns one item for each row.
 
-| Field | Description |
-|-------|-------------|
-| **Return All** | Whether to return every matching row. Off by default. |
-| **Limit** | Maximum number of rows to return. Default `50`. Shown only when **Return All** is off. |
-| **Select Rows** | The conditions a row has to meet. Select **Add Condition** and set a **Column Name or ID**, a **Condition**, and a **Value**. With no conditions, the node returns every row. |
-| **Combine Conditions** | **AND** requires every condition, **OR** requires any one of them. Default **AND**. |
-| **Sort** | The columns to order by. Select **Add Sort Rule** and set a **Column Name or ID** and a **Direction**. |
-| **Output Columns** (in **Options**) | The columns to return. Returns every column when empty. |
+| Field                               | Description                                                                                                                                                                   |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Return All**                      | Whether to return every matching row. Off by default.                                                                                                                         |
+| **Limit**                           | Maximum number of rows to return. Default `50`. Shown only when **Return All** is off.                                                                                        |
+| **Select Rows**                     | The conditions a row has to meet. Select **Add Condition** and set a **Column Name or ID**, a **Condition**, and a **Value**. With no conditions, the node returns every row. |
+| **Combine Conditions**              | **AND** requires every condition, **OR** requires any one of them. Default **AND**.                                                                                           |
+| **Sort**                            | The columns to order by. Select **Add Sort Rule** and set a **Column Name or ID** and a **Direction**.                                                                        |
+| **Output Columns** (in **Options**) | The columns to return. Returns every column when empty.                                                                                                                       |
 
 The **Condition** list offers **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Like**, **Like (Case-Insensitive)**, **Is Null**, and **Is Not Null**. The two **Like** conditions take `*` in place of `%`, and `_` for a single character. **Is Null** and **Is Not Null** take no value.
 
 The node reads up to 1,000 rows for each request and makes at most 100 requests. When 100 requests don't reach the end of the table, the node fails rather than hand back part of it:
 
-```text
+```
 The table holds more rows than one run can read (100000)
 ```
 
@@ -355,11 +372,11 @@ Set **Specify Arguments** to choose how to pass the arguments:
 
 What the node returns depends on what the function returns:
 
-| The function returns | The node returns |
-|----------------------|------------------|
-| A single value | One item, with the value in `result` |
+| The function returns             | The node returns                                      |
+| -------------------------------- | ----------------------------------------------------- |
+| A single value                   | One item, with the value in `result`                  |
 | `TABLE (...)` or `SETOF <table>` | One item for each row, the same shape as **Get Many** |
-| `void` | One item, `{"success": true}` |
+| `void`                           | One item, `{"success": true}`                         |
 
 #### Example: Call a function that returns a number
 
@@ -393,30 +410,29 @@ Two things to know when a table returns nothing:
 
 ### Common Lakebase issues
 
-| What you see | What to do |
-|--------------|------------|
-| `Lakebase requires OAuth2 authentication` | The node's **Authentication** is set to **Access Token**. The node checks this before it calls the Data API, so the **Table** and **Function** lists fail the same way. Set **Authentication** to **OAuth2** and select a Databricks OAuth2 credential. |
-| `invalid token permissions` (`PGRST301`) | The identity has no Postgres role on this branch. Create one with `databricks_create_role`. If the credential itself expired, reconnect it. |
-| `permission denied to set role` (`42501`) | The role isn't granted to the Data API. Run `GRANT "<role>" TO authenticator` as the role's creator. A project owner can't use the Data API at all, so connect a non-owner identity. |
-| `permission denied for table`, `for schema`, `for sequence`, or `for function` (`42501`) | The role reaches the Data API but holds no grant on the object. Run the data grants in [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-lakebase-for-the-data-api). The node shows the same `authenticator` hint for every `42501`, so read the Postgres message rather than the hint. |
-| `new row violates row-level security policy` (`42501`) | A policy on the table rejects the write for this role. Add a policy that allows it, or write as a role the policy admits. |
-| A **Table**, **Function**, or column list that errors with `Turn on the "OpenAPI specification" setting of the Data API`, or an empty **Columns** mapper | The project doesn't serve its schema document. Turn on **Data API** > **API** > **Advanced settings** > **OpenAPI specification**. Until then, select **By ID** for **Table** and **Function**, and enter column names with an expression. |
-| An empty **Arguments** mapper | The schema document lists no arguments for the function. Either the function takes none, or the project doesn't serve the document. To pass arguments anyway, set **Specify Arguments** to **Using JSON**. |
-| `Could not find the table` (`PGRST205`) | Check the schema and table names, and that the Data API exposes the schema. Right after you create or alter a table, the same request can fail once and succeed on a retry while the API reloads its schema. |
-| `Could not find the '<column>' column of '<table>' in the schema cache` (`PGRST204`) | A mapped column isn't in the table. Reopen the node to refresh the column list. |
-| The schema isn't exposed (`PGRST106`) | Add the schema to the exposed schemas in the project's Data API settings. |
-| `there is no unique or exclusion constraint matching the ON CONFLICT specification` (`42P10`) | The columns in **Columns to match on** don't carry a unique constraint or primary key together. Select every column of the key, or add a constraint in Databricks. |
-| A duplicate key, a null in a `NOT NULL` column, a type mismatch, or a foreign key still in use | The write breaks a rule the table enforces. The node shows the Postgres message and names the column. Fix the value, or the table. |
-| `The branch has no read-write compute endpoint` | The branch serves reads only. Point the node at a branch with read-write compute. |
-| `At least one condition is required` | **Delete** refuses to run without a condition, because the Data API would empty the table. Add one under **Select Rows**. |
-| `The column to match on has no value: <columns>` | An item reached **Update** or **Insert or Update** with nothing in a match column. Check the field the mapper reads for those columns. |
-| `Could not find the function` (`PGRST202`) | **Execute Function** can't see the function. Check the name and that the role holds `EXECUTE` on it. |
-| A table missing from the **Table** list | With **Follow privileges** on, the schema document hides objects the role has no grant on. Grant the role access, or select **By ID** and type the name. |
+| What you see                                                                                                                                             | What to do                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Lakebase requires OAuth2 authentication`                                                                                                                | The node's **Authentication** is set to **Access Token**. The node checks this before it calls the Data API, so the **Table** and **Function** lists fail the same way. Set **Authentication** to **OAuth2** and select a Databricks OAuth2 credential.                                                      |
+| `invalid token permissions` (`PGRST301`)                                                                                                                 | The identity has no Postgres role on this branch. Create one with `databricks_create_role`. If the credential itself expired, reconnect it.                                                                                                                                                                  |
+| `permission denied to set role` (`42501`)                                                                                                                | The role isn't granted to the Data API. Run `GRANT "<role>" TO authenticator` as the role's creator. A project owner can't use the Data API at all, so connect a non-owner identity.                                                                                                                         |
+| `permission denied for table`, `for schema`, `for sequence`, or `for function` (`42501`)                                                                 | The role reaches the Data API but holds no grant on the object. Run the data grants in [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-lakebase-for-the-data-api). The node shows the same `authenticator` hint for every `42501`, so read the Postgres message rather than the hint. |
+| `new row violates row-level security policy` (`42501`)                                                                                                   | A policy on the table rejects the write for this role. Add a policy that allows it, or write as a role the policy admits.                                                                                                                                                                                    |
+| A **Table**, **Function**, or column list that errors with `Turn on the "OpenAPI specification" setting of the Data API`, or an empty **Columns** mapper | The project doesn't serve its schema document. Turn on **Data API** > **API** > **Advanced settings** > **OpenAPI specification**. Until then, select **By ID** for **Table** and **Function**, and enter column names with an expression.                                                                   |
+| An empty **Arguments** mapper                                                                                                                            | The schema document lists no arguments for the function. Either the function takes none, or the project doesn't serve the document. To pass arguments anyway, set **Specify Arguments** to **Using JSON**.                                                                                                   |
+| `Could not find the table` (`PGRST205`)                                                                                                                  | Check the schema and table names, and that the Data API exposes the schema. Right after you create or alter a table, the same request can fail once and succeed on a retry while the API reloads its schema.                                                                                                 |
+| `Could not find the '<column>' column of '<table>' in the schema cache` (`PGRST204`)                                                                     | A mapped column isn't in the table. Reopen the node to refresh the column list.                                                                                                                                                                                                                              |
+| The schema isn't exposed (`PGRST106`)                                                                                                                    | Add the schema to the exposed schemas in the project's Data API settings.                                                                                                                                                                                                                                    |
+| `there is no unique or exclusion constraint matching the ON CONFLICT specification` (`42P10`)                                                            | The columns in **Columns to match on** don't carry a unique constraint or primary key together. Select every column of the key, or add a constraint in Databricks.                                                                                                                                           |
+| A duplicate key, a null in a `NOT NULL` column, a type mismatch, or a foreign key still in use                                                           | The write breaks a rule the table enforces. The node shows the Postgres message and names the column. Fix the value, or the table.                                                                                                                                                                           |
+| `The branch has no read-write compute endpoint`                                                                                                          | The branch serves reads only. Point the node at a branch with read-write compute.                                                                                                                                                                                                                            |
+| `At least one condition is required`                                                                                                                     | **Delete** refuses to run without a condition, because the Data API would empty the table. Add one under **Select Rows**.                                                                                                                                                                                    |
+| `The column to match on has no value: <columns>`                                                                                                         | An item reached **Update** or **Insert or Update** with nothing in a match column. Check the field the mapper reads for those columns.                                                                                                                                                                       |
+| `Could not find the function` (`PGRST202`)                                                                                                               | **Execute Function** can't see the function. Check the name and that the role holds `EXECUTE` on it.                                                                                                                                                                                                         |
+| A table missing from the **Table** list                                                                                                                  | With **Follow privileges** on, the schema document hides objects the role has no grant on. Grant the role access, or select **By ID** and type the name.                                                                                                                                                     |
 
 Refer to [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-lakebase-for-the-data-api) for the role and grant steps these messages point at.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Databricks node documentation integration templates](https://n8n.io/integrations/databricks) or [search all templates](https://n8n.io/workflows/)
 
@@ -424,16 +440,16 @@ Refer to [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-
 
 Refer to [Databricks' REST API documentation](https://docs.databricks.com/api/) for details about their API.
 
-To use Databricks with AI agents, refer to the [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md), [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md), [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md), [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md), and [Databricks Lakebase Chat Memory](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorylakebasechat.md) nodes, and the [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md).
+To use Databricks with AI agents, refer to the [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md), [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/), [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md), [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md), and [Databricks Lakebase Chat Memory](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorylakebasechat.md) nodes, and the [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md).
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

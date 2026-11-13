@@ -29,6 +29,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Gmail
@@ -40,7 +42,7 @@ On this page, you'll find a list of operations the Gmail node supports and links
 {% hint style="info" %}
 **Credentials**
 
-Refer to [Google credentials](../../credentials/google/README.md) for guidance on setting up authentication.
+Refer to [Google credentials](../../credentials/google/) for guidance on setting up authentication.
 {% endhint %}
 
 {% hint style="info" %}
@@ -89,19 +91,19 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 
 Refer to Google's [Gmail API documentation](https://developers.google.com/gmail/api) for detailed information about the API that this node integrates with.
 
-n8n provides a trigger node for Gmail. See the [Gmail Trigger node docs](../../trigger-nodes/n8n-nodes-base.gmailtrigger/README.md).
+n8n provides a trigger node for Gmail. See the [Gmail Trigger node docs](../../trigger-nodes/n8n-nodes-base.gmailtrigger/).
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../../custom-api-actions-for-existing-nodes.md) for more information.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

@@ -1,22 +1,39 @@
 ---
 title: Message an Agent node documentation
-description: >-
-  Learn how to use the Message an Agent node in n8n. Follow technical
-  documentation to integrate the Message an Agent node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Message an Agent
+status: preview
+description: >-
+  Learn how to use the Message an Agent node in n8n. Follow technical
+  documentation to integrate the Message an Agent node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
-status: preview
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 tags:
   - tag: preview
     primary: true
 ---
 
-# Message an Agent node
+# Message an Agent
 
 Use the Message an Agent node to send a message to an agent from a workflow, then use the agent's reply in the nodes that follow. The agent runs its own reasoning loop, calls its own tools and skills, and returns a response to the workflow.
 
@@ -50,8 +67,8 @@ The list shows the agents that belong to the same project as the workflow. If th
 
 Which version of the agent runs depends on how you run the workflow:
 
-- Manual and chat executions use the agent's current draft, so testing always picks up your latest changes.
-- Production executions use the agent's published version.
+* Manual and chat executions use the agent's current draft, so testing always picks up your latest changes.
+* Production executions use the agent's published version.
 
 Publish the agent after you change it, otherwise production runs keep using the previous version.
 
@@ -71,8 +88,8 @@ Turn this on when later nodes need a predictable shape instead of free text. The
 
 Choose how to define the schema with **Schema Type**:
 
-- **Generate From JSON Example**: paste an example object in **JSON Example** and n8n builds the schema from it. Every property in the example becomes required.
-- **Define Using JSON Schema**: write the schema yourself in **Output Schema**, using [JSON Schema](https://json-schema.org/) format.
+* **Generate From JSON Example**: paste an example object in **JSON Example** and n8n builds the schema from it. Every property in the example becomes required.
+* **Define Using JSON Schema**: write the schema yourself in **Output Schema**, using [JSON Schema](https://json-schema.org/) format.
 
 {% hint style="warning" %}
 The model provider enforces structured output, so support varies. Mark every property as required for the most reliable results. Some providers reject optional fields or advanced keywords, and others don't support structured output at all.
@@ -86,14 +103,14 @@ Select **Add Option** under **Advanced** to add these options.
 
 Whether to stream the agent's response as it generates text, instead of waiting for the complete reply. Enabled by default.
 
-Streaming only reaches the caller if the trigger is set up for it. Set **Response Mode** to **Streaming** on the connected [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) or [Webhook](n8n-nodes-base.webhook/README.md) node. With any other response mode the workflow waits for the full reply, and turning this option on makes no visible difference.
+Streaming only reaches the caller if the trigger is set up for it. Set **Response Mode** to **Streaming** on the connected [Chat Trigger](n8n-nodes-langchain.chattrigger/) or [Webhook](n8n-nodes-base.webhook/) node. With any other response mode the workflow waits for the full reply, and turning this option on makes no visible difference.
 
 ### Invoke Agent
 
 Whether to call the agent once for all input items or once for each input item:
 
-- **Once for All Items**: call the agent a single time. The agent can read every input item. This is the default.
-- **Once Per Item**: make one agent call for each input item.
+* **Once for All Items**: call the agent a single time. The agent can read every input item. This is the default.
+* **Once Per Item**: make one agent call for each input item.
 
 This option doesn't apply to inline agents.
 
@@ -103,8 +120,8 @@ Sessions let the agent remember earlier messages. Without one, each execution st
 
 Set **Session ID** to choose where the session key comes from:
 
-- **Connected Chat Trigger Node**: reuse the session from a directly connected Chat Trigger. This is the default, so a Chat Trigger works without extra setup.
-- **Define below**: enter your own key in **Key**, as static text or an expression. Use this to group runs into one conversation, for example by customer ID.
+* **Connected Chat Trigger Node**: reuse the session from a directly connected Chat Trigger. This is the default, so a Chat Trigger works without extra setup.
+* **Define below**: enter your own key in **Key**, as static text or an expression. Use this to group runs into one conversation, for example by customer ID.
 
 A session key can be at most 74 characters.
 
@@ -118,14 +135,14 @@ This option doesn't apply to inline agents.
 
 The node returns one item per agent call, with these fields:
 
-| Field | Description |
-|-------|-------------|
-| `text` | The agent's response. |
+| Field              | Description                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------------ |
+| `text`             | The agent's response.                                                                            |
 | `structuredOutput` | The object matching your schema when **Require Specific Output Format** is on, otherwise `null`. |
-| `usage` | Token usage for the call. |
-| `toolCalls` | The tools the agent called while producing the response. |
-| `finishReason` | Why the agent stopped. |
-| `session` | The session the call ran in. |
+| `usage`            | Token usage for the call.                                                                        |
+| `toolCalls`        | The tools the agent called while producing the response.                                         |
+| `finishReason`     | Why the agent stopped.                                                                           |
+| `session`          | The session the call ran in.                                                                     |
 
 {% hint style="info" %}
 Version 1 of the node returned the response on a field named `response`. Version 2 renamed it to `text`. Existing workflows on version 1 keep the old field name.
@@ -138,7 +155,7 @@ The node is also available as **Message an Agent Tool**, so an AI Agent can hand
 ## Related resources
 
 * [Build and manage agents](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/build-and-manage-agents)
-* [AI Agent node](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md)
+* [AI Agent node](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
 * [Execute Sub-workflow node](n8n-nodes-base.executeworkflow.md)
 
 ## Common issues

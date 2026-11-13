@@ -33,6 +33,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # MongoDB Atlas Vector Store
@@ -101,13 +103,13 @@ You can see an example of this in scenario 1 of [this template](https://n8n.io/w
 
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-You can connect the MongoDB Atlas Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/README.md) to use the vector store as a resource when answering queries.
+You can connect the MongoDB Atlas Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/) to use the vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> MongoDB Atlas Vector Store node.
 
 ### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the MongoDB Atlas Vector Store node to fetch documents from the MongoDB Atlas Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the MongoDB Atlas Vector Store node to fetch documents from the MongoDB Atlas Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
 
 An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> MongoDB Atlas Vector Store.
 
@@ -123,7 +125,7 @@ This Vector Store node has four modes: **Get Many**, **Insert Documents**, **Ret
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](../sub-nodes/n8n-nodes-langchain.rerankercohere.md), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 

@@ -31,6 +31,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Postgres Trigger
@@ -70,6 +72,6 @@ You can configure how the node listens for events.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Postgres. Refer to the [Postgres node documentation](../app-nodes/n8n-nodes-base.postgres/README.md) for more information.
+n8n provides an app node for Postgres. Refer to the [Postgres node documentation](../app-nodes/n8n-nodes-base.postgres/) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/postgres-trigger/) on n8n's website.

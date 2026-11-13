@@ -1,8 +1,5 @@
 ---
 title: AWS Certificate Manager node documentation
-description: >-
-  Learn how to use the AWS Certificate Manager node in n8n. Follow technical
-  documentation to integrate AAWS Certificage Manager node into your workflows.
 contentType:
   - integration
   - reference
@@ -12,12 +9,32 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager
+description: >-
+  Learn how to use the AWS Certificate Manager node in n8n. Follow technical
+  documentation to integrate AAWS Certificage Manager node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# AWS Certificate Manager node <a href="#aws-certificate-manager-node" id="aws-certificate-manager-node"></a>
+# AWS Certificate Manager
 
 Use the AWS Certificate Manager node to automate work in AWS Certificate Manager, and integrate AWS Certificate Manager with other applications. n8n has built-in support for a wide range of AWS Certificate Manager features, including creating, deleting, getting, and renewing SSL certificates.
 
@@ -32,14 +49,13 @@ Refer to [AWS Certificate Manager credentials](../credentials/aws.md) for guidan
 ## Operations <a href="#operations" id="operations"></a>
 
 * Certificate
-	* Delete
-	* Get
-	* Get Many
-	* Get Metadata
-	* Renew
+  * Delete
+  * Get
+  * Get Many
+  * Get Metadata
+  * Renew
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse AWS Certificate Manager node documentation integration templates](https://n8n.io/integrations/aws-certificate-manager) or [search all templates](https://n8n.io/workflows/)
 
@@ -49,13 +65,12 @@ Refer to [AWS Certificate Manager's documentation](https://docs.aws.amazon.com/a
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

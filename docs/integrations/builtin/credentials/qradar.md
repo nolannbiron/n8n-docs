@@ -1,23 +1,40 @@
 ---
 title: QRadar credentials
-description: >-
-  Documentation for the QRadar credentials. Use these credentials to
-  authenticate QRadar in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 nodeTitle: QRadar credentials
 originalFilePath: integrations/builtin/credentials/qradar.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/qradar'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/qradar'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/qradar
+url: https://docs.n8n.io/integrations/builtin/credentials/qradar
+description: >-
+  Documentation for the QRadar credentials. Use these credentials to
+  authenticate QRadar in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# QRadar credentials <a href="#qradar-credentials" id="qradar-credentials"></a>
+# QRadar credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -25,7 +42,7 @@ Create a [Qradar](https://www.ibm.com/qradar) account.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- API key
+* API key
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -37,4 +54,4 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need:
 
-- An **API Key**: Also known as an authorized service token. Use the **Manage Authorized Services** window on the **Admin** tab to create an authentication token. Refer to [Creating an authentication token](https://www.ibm.com/docs/en/qradar-common?topic=forwarding-creating-authentication-token) for more information.
+* An **API Key**: Also known as an authorized service token. Use the **Manage Authorized Services** window on the **Admin** tab to create an authentication token. Refer to [Creating an authentication token](https://www.ibm.com/docs/en/qradar-common?topic=forwarding-creating-authentication-token) for more information.

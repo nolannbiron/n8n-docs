@@ -1,24 +1,41 @@
 ---
 title: F5 Big-IP credentials
-description: >-
-  Documentation for the F5 Big-IP credentials. Use these credentials to
-  authenticate F5 Big-IP in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: F5 Big-IP credentials
 originalFilePath: integrations/builtin/credentials/f5bigip.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/f5bigip'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/f5bigip'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/f5bigip
+url: https://docs.n8n.io/integrations/builtin/credentials/f5bigip
+description: >-
+  Documentation for the F5 Big-IP credentials. Use these credentials to
+  authenticate F5 Big-IP in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# F5 Big-IP credentials <a href="#f5-big-ip-credentials" id="f5-big-ip-credentials"></a>
+# F5 Big-IP credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -26,7 +43,7 @@ Create an [F5 Big-IP](https://www.f5.com/products/big-ip-services) account.
 
 ## Authentication methods <a href="#authentication-methods" id="authentication-methods"></a>
 
-- Account login
+* Account login
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -38,5 +55,5 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need:
 
-- A **Username**: Use the username you use to log in to F5 Big-IP.
-- A **Password**: Use the user password you use to log in to F5 Big-IP.
+* A **Username**: Use the username you use to log in to F5 Big-IP.
+* A **Password**: Use the user password you use to log in to F5 Big-IP.

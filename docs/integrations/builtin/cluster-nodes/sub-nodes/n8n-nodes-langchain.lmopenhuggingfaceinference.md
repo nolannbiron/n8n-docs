@@ -33,6 +33,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Hugging Face Inference Model
@@ -41,7 +43,7 @@ Use the Hugging Face Inference Model node to use Hugging Face's models.
 
 On this page, you'll find the node parameters for the Hugging Face Inference Model node, and links to more resources.
 
-This node lacks tools support, so it won't work with the [AI Agent](../root-nodes/n8n-nodes-langchain.agent/README.md) node. Instead, connect it with the [Basic LLM Chain](../root-nodes/n8n-nodes-langchain.chainllm.md) node.
+This node lacks tools support, so it won't work with the [AI Agent](../root-nodes/n8n-nodes-langchain.agent/) node. Instead, connect it with the [Basic LLM Chain](../root-nodes/n8n-nodes-langchain.chainllm.md) node.
 
 {% hint style="info" %}
 **Credentials**

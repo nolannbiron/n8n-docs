@@ -1,24 +1,41 @@
 ---
 title: Shuffler credentials
-description: >-
-  Documentation for the Shuffler credentials. Use these credentials to
-  authenticate Shuffle in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Shuffler credentials
 originalFilePath: integrations/builtin/credentials/shuffler.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/shuffler'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/shuffler'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/shuffler
+url: https://docs.n8n.io/integrations/builtin/credentials/shuffler
+description: >-
+  Documentation for the Shuffler credentials. Use these credentials to
+  authenticate Shuffle in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Shuffler credentials <a href="#shuffler-credentials" id="shuffler-credentials"></a>
+# Shuffler credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -26,7 +43,7 @@ Create a [Shuffler](https://shuffler.io) account on either a cloud or self-hoste
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- API key
+* API key
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -38,4 +55,4 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need:
 
-- An **API Key**: Get your API key from the **Settings** page.
+* An **API Key**: Get your API key from the **Settings** page.

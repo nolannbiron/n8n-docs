@@ -29,14 +29,16 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Telegram credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [Telegram](../app-nodes/n8n-nodes-base.telegram/README.md)
-* [Telegram Trigger](../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md)
+* [Telegram](../app-nodes/n8n-nodes-base.telegram/)
+* [Telegram Trigger](../trigger-nodes/n8n-nodes-base.telegramtrigger/)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

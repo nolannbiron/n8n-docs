@@ -1,16 +1,36 @@
 ---
 title: Oracle Database Vector Store node documentation
-description: Learn how to use the Oracle Database Vector Store node in n8n. Follow technical documentation to integrate Oracle Database Vector Store node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
+description: >-
+  Learn how to use the Oracle Database Vector Store node in n8n. Follow
+  technical documentation to integrate Oracle Database Vector Store node into
+  your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Oracle Database Vector Store node
+# Oracle Database Vector Store
 
 Use the Oracle Database Vector Store node to interact with Oracle Database as a vector store[^1]. You can insert documents into a vector table, get documents from a vector table, retrieve documents to provide them to a retriever connected to a chain[^2], or connect directly to an agent[^3] as a tool[^4].
 
@@ -25,7 +45,7 @@ Refer to the [Oracle Database credentials documentation](../../credentials/oracl
 {% hint style="info" %}
 **Oracle Database vector support**
 
-Your Oracle Database instance must support Oracle AI Vector Search for vector store operations. For more details, refer to the [Oracle AI Vector Search Guide](https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/26/arpls&id=VECSE-GUID-29B9E7E1-5A99-4D95-8614-58CA07D29957).
+Your Oracle Database instance must support Oracle AI Vector Search for vector store operations. For more details, refer to the [Oracle AI Vector Search Guide](https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/26/arpls\&id=VECSE-GUID-29B9E7E1-5A99-4D95-8614-58CA07D29957).
 {% endhint %}
 
 {% hint style="info" %}
@@ -50,13 +70,13 @@ You can see an example of this in scenario 1 of [this template](https://n8n.io/w
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Oracle Database Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/README.md) to use a vector store as a resource when answering queries.
+You can connect the Oracle Database Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Oracle Database Vector Store node.
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Oracle Database Vector Store node to fetch documents from the Oracle Database Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Oracle Database Vector Store node to fetch documents from the Oracle Database Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
 
 An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Oracle Database Vector Store.
 
@@ -72,11 +92,9 @@ This Vector Store node has four modes: **Get Many**, **Insert Documents**, **Ret
 
 ### Rerank Results
 
-Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](../sub-nodes/n8n-nodes-langchain.rerankercohere.md), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
-<!-- vale off -->
 ### Get Many parameters
-<!-- vale on -->
 
 * **Table Name**: Enter the name of the table you want to query. If the table doesn't exist, the node creates it.
 * **Prompt**: Enter your search query.
@@ -131,6 +149,9 @@ Refer to [Oracle AI Vector Search documentation](https://docs.oracle.com/en/data
 View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 [^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
+
 [^2]: AI chains allow you to interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this).
+
 [^3]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
+
 [^4]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.

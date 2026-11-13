@@ -29,6 +29,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # JWT credentials
@@ -36,7 +38,7 @@ layout:
 You can use these credentials to authenticate the following nodes:
 
 * [JWT](../core-nodes/n8n-nodes-base.jwt.md)
-* [Webhook](../core-nodes/n8n-nodes-base.webhook/README.md)
+* [Webhook](../core-nodes/n8n-nodes-base.webhook/)
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 

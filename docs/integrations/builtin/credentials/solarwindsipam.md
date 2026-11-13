@@ -1,22 +1,40 @@
 ---
 title: SolarWinds IPAM credentials
-description: >-
-  Documentation for the SolarWinds IPAM credentials. Use these credentials to
-  authenticate SolarWinds IPAM in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 nodeTitle: SolarWinds IPAM credentials
 originalFilePath: integrations/builtin/credentials/solarwindsipam.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/solarwindsipam'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/solarwindsipam'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/solarwindsipam
+url: https://docs.n8n.io/integrations/builtin/credentials/solarwindsipam
+description: >-
+  Documentation for the SolarWinds IPAM credentials. Use these credentials to
+  authenticate SolarWinds IPAM in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
-# SolarWinds IPAM credentials <a href="#solarwinds-ipam-credentials" id="solarwinds-ipam-credentials"></a>
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+# SolarWinds IPAM credentials
+
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
@@ -30,8 +48,8 @@ Refer to [SolarWinds IPAM's API documentation](https://github.com/solarwinds/Ori
 
 To configure this credential, you'll need a SolarWinds IPAM account and:
 
-- **URL**: The base URL of your SolarWinds IPAM server
-- **Username**: The username you use to access SolarWinds IPAM
-- **Password**: The password you use to access SolarWinds IPAM
+* **URL**: The base URL of your SolarWinds IPAM server
+* **Username**: The username you use to access SolarWinds IPAM
+* **Password**: The password you use to access SolarWinds IPAM
 
 Refer to [SolarWinds IPAM's API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST) for more information about authenticating to the service.

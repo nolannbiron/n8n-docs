@@ -1,9 +1,5 @@
 ---
 title: Conversational AI Agent node documentation
-description: >-
-  Learn how to use the Conversational Agent of the AI Agent node in n8n. Follow
-  technical documentation to integrate the Conversational Agent into your
-  workflows.
 contentType:
   - integration
   - reference
@@ -15,15 +11,36 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/conversational-agent
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/conversational-agent
+description: >-
+  Learn how to use the Conversational Agent of the AI Agent node in n8n. Follow
+  technical documentation to integrate the Conversational Agent into your
+  workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 tags:
   - tag: deprecated
     primary: true
 ---
 
-# Conversational AI Agent node <a href="#conversational-ai-agent-node" id="conversational-ai-agent-node"></a>
+# Conversational Agent
 
 {% hint style="warning" %}
 **Feature availability**
@@ -37,9 +54,9 @@ The Conversational Agent has human-like conversations. It can maintain context, 
 
 The Conversational Agent describes tools[^1] in the system prompt and parses JSON responses for tool calls. If your preferred AI model doesn't support tool calling or you're handling simpler interactions, this agent is a good general option. It's more flexible but may be less accurate than the [Tools Agent](tools-agent.md).
 
-Refer to [AI Agent](README.md) for more information on the AI Agent node itself.
+Refer to [AI Agent](./) for more information on the AI Agent node itself.
 
-You can use this agent with the [Chat Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chattrigger) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
+You can use this agent with the [Chat Trigger](../../../core-nodes/n8n-nodes-langchain.chattrigger/) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -58,9 +75,9 @@ Choose from:
 
 This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
 
-* [Auto-fixing Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
-* [Item List Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
-* [Structured Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
+* [Auto-fixing Output Parser](../../sub-nodes/n8n-nodes-langchain.outputparserautofixing.md)
+* [Item List Output Parser](../../sub-nodes/n8n-nodes-langchain.outputparseritemlist.md)
+* [Structured Output Parser](../../sub-nodes/n8n-nodes-langchain.outputparserstructured/)
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -122,7 +139,7 @@ Entries with empty keys or values are ignored.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-Refer to the main AI Agent node's [Templates and examples](README.md#templates-and-examples) section.
+Refer to the main AI Agent node's [Templates and examples](./#templates-and-examples) section.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

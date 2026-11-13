@@ -28,26 +28,28 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Google OAuth2 generic
 
 This document contains instructions for creating a generic Google OAuth2 API credential for use with [custom operations](../../custom-api-actions-for-existing-nodes.md).
 
-* [Google Calendar](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecalendar)
-* [Google Calendar Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger)
-* [Google Chat](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlechat)
-* [Google Contacts](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlecontacts)
-* [Google Docs](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledocs)
-* [Google Drive](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googledrive)
-* [Google Drive Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger)
-* [Google Mail](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.gmail)
-* [Google Mail Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger)
-* [Google Sheets](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googlesheets)
-* [Google Sheets Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger)
-* [Google Slides](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googleslides)
-* [Google Tasks](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.googletasks)
-* [YouTube](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-base.youtube)
+* [Google Calendar](../../app-nodes/n8n-nodes-base.googlecalendar/)
+* [Google Calendar Trigger](../../trigger-nodes/n8n-nodes-base.googlecalendartrigger.md)
+* [Google Chat](../../app-nodes/n8n-nodes-base.googlechat.md)
+* [Google Contacts](../../app-nodes/n8n-nodes-base.googlecontacts.md)
+* [Google Docs](../../app-nodes/n8n-nodes-base.googledocs.md)
+* [Google Drive](../../app-nodes/n8n-nodes-base.googledrive/)
+* [Google Drive Trigger](../../trigger-nodes/n8n-nodes-base.googledrivetrigger/)
+* [Google Mail](../../app-nodes/n8n-nodes-base.gmail/)
+* [Google Mail Trigger](../../trigger-nodes/n8n-nodes-base.gmailtrigger/)
+* [Google Sheets](../../app-nodes/n8n-nodes-base.googlesheets/)
+* [Google Sheets Trigger](../../trigger-nodes/n8n-nodes-base.googlesheetstrigger/)
+* [Google Slides](../../app-nodes/n8n-nodes-base.googleslides.md)
+* [Google Tasks](../../app-nodes/n8n-nodes-base.googletasks.md)
+* [YouTube](../../app-nodes/n8n-nodes-base.youtube.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -73,31 +75,22 @@ First, create a Google Cloud Console project. If you already have a project, jum
 4. Select **Create**.
 5. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created.
 
-	<figure>
-	<img src="../../../../../assets/google-cloud-project-dropdown.png" alt="">
-	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
-	</figure>
-
 ### Enable APIs <a href="#enable-apis" id="enable-apis"></a>
 
 With your project created, enable the APIs you'll need access to:
 
 1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
-	<figure>
-	<img src="../../../../../assets/google-cloud-project-dropdown.png" alt="">
-	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
-	</figure>
-1. Go to **APIs & Services > Library**.
-1. Search for and select the API(s) you want to enable. For example, for the Gmail node, search for and enable the Gmail API.
-1. Some integrations require other APIs or require you to request access:<br>
-	* Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started).
-	* Google Ads: Get a [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token).
+2. Go to **APIs & Services > Library**.
+3. Search for and select the API(s) you want to enable. For example, for the Gmail node, search for and enable the Gmail API.
+4.  Some integrations require other APIs or require you to request access:<br>
+
+    * Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started).
+    * Google Ads: Get a [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token).
 
     <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Google Drive API required</strong></p><p>The following integrations require the Google Drive API, as well as their own API:</p><ul><li>Google Docs</li><li>Google Sheets</li><li>Google Slides</li></ul></div>
 
     <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Google Vertex AI API</strong></p><p>In addition to the Vertex AI API you will also need to enable the <a href="https://console.cloud.google.com/apis/api/cloudresourcemanager.googleapis.com/">Cloud Resource Manager API</a>.</p></div>
-
-1. Select **ENABLE**.
+5. Select **ENABLE**.
 
 ### Configure your OAuth consent screen <a href="#configure-your-oauth-consent-screen" id="configure-your-oauth-consent-screen"></a>
 
@@ -105,17 +98,13 @@ If you haven't used OAuth in your Google Cloud project before, you'll need to [c
 
 1.  Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
 
-    <figure><img src="../../../.gitbook/assets/google-cloud-project-dropdown (1).png" alt=""><figcaption><p>Check the project dropdown in the Google Cloud top navigation</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/google-cloud-project-dropdown.png" alt=""><figcaption><p>Check the project dropdown in the Google Cloud top navigation</p></figcaption></figure>
 2. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**. Google will redirect you to the Google Auth Platform overview page.
 3. Select **Get started** on the **Overview** tab to begin configuring OAuth consent.
 4. Enter an **App name** and **User support email** to include on the Oauth screen. Select **Next** to continue.
 5.  For the **Audience**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/15549945?sjid=17061891731152303663-EU#user-type) for more information on user types. Select **Next** to continue.<br>
 
-    {% hint style="info" %}
-    **Testing mode and test users**
-
-    If you select **External**, your app will default to Testing mode. In this mode, only Google accounts you manually add as test users can complete the OAuth flow — everyone else will see an "access denied" screen. See [Google hasn't verified this app](oauth-generic.md#google-hasnt-verified-this-app) to learn how to add them.
-    {% endhint %}
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Testing mode and test users</strong></p><p>If you select <strong>External</strong>, your app will default to Testing mode. In this mode, only Google accounts you manually add as test users can complete the OAuth flow — everyone else will see an "access denied" screen. See <a href="oauth-generic.md#google-hasnt-verified-this-app">Google hasn't verified this app</a> to learn how to add them.</p></div>
 6. Select the **Email addresses** Google should use to contact you about changes to your project. Select **Next** to continue.
 7. Read and accept the Google's User Data Policy. Select **Continue** and then select **Create**.
 8. In the left-hand menu, select **Branding**.
@@ -135,11 +124,7 @@ Next, create the OAuth client credentials in Google:
 5. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
 6.  From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.<br>
 
-    {% hint style="info" %}
-    **OAuth redirect URL for self-hosting**
-
-    If you're running n8n on your local machine, you don't need a public domain, SSL certificate, or port forwarding to use Google OAuth. Google allows localhost as a valid redirect URI for development purposes. Your n8n OAuth redirect URL will look something like this: `http://localhost:5678/rest/oauth2-credential/callback` For more details on acceptable redirect URIs, refer to [Google's redirect URI documentation](https://support.google.com/cloud/answer/15549257?hl=en#zippy=%2Cweb-applications).
-    {% endhint %}
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>OAuth redirect URL for self-hosting</strong></p><p>If you're running n8n on your local machine, you don't need a public domain, SSL certificate, or port forwarding to use Google OAuth. Google allows localhost as a valid redirect URI for development purposes. Your n8n OAuth redirect URL will look something like this: <code>http://localhost:5678/rest/oauth2-credential/callback</code> For more details on acceptable redirect URIs, refer to <a href="https://support.google.com/cloud/answer/15549257?hl=en#zippy=%2Cweb-applications">Google's redirect URI documentation</a>.</p></div>
 7. Select **Create**.
 
 ### Finish your n8n credential <a href="#finish-your-n8n-credential" id="finish-your-n8n-credential"></a>
@@ -202,8 +187,8 @@ n8n doesn't support all scopes. When creating a generic Google OAuth2 API creden
 
 If using the OAuth authentication method, you might see the warning **Google hasn't verified this app**. To avoid this:
 
-- If your app **User Type** is **Internal**, create OAuth credentials from the same account you want to authenticate.  
-- If your app **User Type** is **External**, you can add your email to the list of testers for the app: go to the [**Audience** ](https://console.cloud.google.com/auth/audience) page and add the email you're signing in with to the list of **Test users**.
+* If your app **User Type** is **Internal**, create OAuth credentials from the same account you want to authenticate.
+* If your app **User Type** is **External**, you can add your email to the list of testers for the app: go to the [**Audience** ](https://console.cloud.google.com/auth/audience)page and add the email you're signing in with to the list of **Test users**.
 
 If you need to use credentials generated by another account (by a developer or another third party), follow the instructions in [Google Cloud documentation | Authorization errors: Google hasn't verified this app](https://developers.google.com/nest/device-access/reference/errors/authorization#google_hasnt_verified_this_app).
 

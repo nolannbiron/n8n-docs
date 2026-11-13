@@ -1,23 +1,40 @@
 ---
 title: MISP node documentation
-description: >-
-  Learn how to use the MISP node in n8n. Follow technical documentation to
-  integrate MISP node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: MISP node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.misp.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.misp'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.misp'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.misp
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.misp
+description: >-
+  Learn how to use the MISP node in n8n. Follow technical documentation to
+  integrate MISP node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# MISP node <a href="#misp-node" id="misp-node"></a>
+# MISP
 
-Use the MISP node to automate work in MISP, and integrate MISP with other applications. n8n has built-in support for a wide range of MISP features, including creating, updating, deleting and getting events, feeds, and organizations. 
+Use the MISP node to automate work in MISP, and integrate MISP with other applications. n8n has built-in support for a wide range of MISP features, including creating, updating, deleting and getting events, feeds, and organizations.
 
 On this page, you'll find a list of operations the MISP node supports and links to more resources.
 
@@ -30,74 +47,73 @@ Refer to [MISP credentials](../credentials/misp.md) for guidance on setting up a
 ## Operations <a href="#operations" id="operations"></a>
 
 * Attribute
-    * Create
-    * Delete
-    * Get
-    * Get All
-	* Search
-    * Update
+  * Create
+  * Delete
+  * Get
+  * Get All
+  * Search
+  * Update
 * Event
-    * Create
-    * Delete
-    * Get
-    * Get All
-    * Publish
-	* Search
-    * Unpublish
-    * Update
+  * Create
+  * Delete
+  * Get
+  * Get All
+  * Publish
+  * Search
+  * Unpublish
+  * Update
 * Event Tag
-    * Add
-    * Remove
+  * Add
+  * Remove
 * Feed
-    * Create
-    * Disable
-    * Enable
-    * Get
-    * Get All
-    * Update
+  * Create
+  * Disable
+  * Enable
+  * Get
+  * Get All
+  * Update
 * Galaxy
-    * Delete
-    * Get
-    * Get All
+  * Delete
+  * Get
+  * Get All
 * Noticelist
-    * Get
-    * Get All
+  * Get
+  * Get All
 * Object
-	* Search
+  * Search
 * Organisation
-    * Create
-    * Delete
-    * Get
-    * Get All
-    * Update
+  * Create
+  * Delete
+  * Get
+  * Get All
+  * Update
 * Tag
-    * Create
-    * Delete
-    * Get All
-    * Update
+  * Create
+  * Delete
+  * Get All
+  * Update
 * User
-    * Create
-    * Delete
-    * Get
-    * Get All
-    * Update
+  * Create
+  * Delete
+  * Get
+  * Get All
+  * Update
 * Warninglist
-    * Get
-    * Get All
+  * Get
+  * Get All
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse MISP node documentation integration templates](https://n8n.io/integrations/misp) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

@@ -1,8 +1,5 @@
 ---
 title: Slack Trigger node documentation
-description: >-
-  Learn how to use the Slack Trigger node in n8n. Follow technical documentation
-  to integrate Slack Trigger node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,12 +10,32 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger
 url: >-
   https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger
+description: >-
+  Learn how to use the Slack Trigger node in n8n. Follow technical documentation
+  to integrate Slack Trigger node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Slack Trigger node <a href="#slack-trigger-node" id="slack-trigger-node"></a>
+# Slack Trigger
 
 Use the Slack Trigger node to respond to events in [Slack](https://slack.com/) and integrate Slack with other applications. n8n has built-in support for a wide range of Slack events, including new messages, reactions, and new channels.
 
@@ -29,6 +46,7 @@ On this page, you'll find a list of events the Slack Trigger node can respond to
 
 Refer to the [Slack credentials documentation](../credentials/slack.md) for authentication information for this node.
 {% endhint %}
+
 {% hint style="info" %}
 **Examples and templates**
 
@@ -51,14 +69,13 @@ For usage examples and templates to help you get started, refer to n8n's [Slack 
 
 Once you've set the events to trigger on, use the remaining parameters to further define the node's behavior:
 
-* **Watch Whole Workspace**: Whether the node should watch for the selected **Events** in all channels in the workspace (turned on) or not (turned off, default).<br>
+*   **Watch Whole Workspace**: Whether the node should watch for the selected **Events** in all channels in the workspace (turned on) or not (turned off, default).<br>
 
     <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>Caution</strong></p><p>This will use one execution for every event in any channel your bot or app is in. Use with caution!</p></div>
-
 * **Channel to Watch**: Select the channel your node should watch for the selected **Events**. This parameter only appears if you don't turn on **Watch Whole Workspace**. You can select a channel:
-    * **From list**: The node uses your credential to look up a list of channels in the workspace so you can select the channel you want.
-    * **By ID**: Enter the ID of a channel you want to watch. Slack displays the channel ID at the bottom of the channel details with a one-click copy button.
-    * **By URL**: Enter the URL of the channel you want to watch, formatted as `https://app.slack.com/client/<channel-address>`.
+  * **From list**: The node uses your credential to look up a list of channels in the workspace so you can select the channel you want.
+  * **By ID**: Enter the ID of a channel you want to watch. Slack displays the channel ID at the bottom of the channel details with a one-click copy button.
+  * **By URL**: Enter the URL of the channel you want to watch, formatted as `https://app.slack.com/client/<channel-address>`.
 * **Download Files**: Whether to download files and use them in the node's output (turned on) or not (turned off, default). Use this parameter with the **File Made Public** and **File Shared** events.
 
 ## Options <a href="#options" id="options"></a>
@@ -71,7 +88,7 @@ You can further refine the node's behavior when you **Add Option**s:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Slack. Refer to the [Slack node documentation](../app-nodes/n8n-nodes-base.slack/README.md) for more information.
+n8n provides an app node for Slack. Refer to the [Slack node documentation](../app-nodes/n8n-nodes-base.slack/) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/slack-trigger/) on n8n's website.
 
@@ -101,7 +118,7 @@ Here are some common errors and issues with the Slack Trigger node and steps to 
 
 ### Workflow only works in testing or production <a href="#workflow-only-works-in-testing-or-production" id="workflow-only-works-in-testing-or-production"></a>
 
-Slack only allows you to register a single webhook per app. This means that you can't switch from using the testing URL to the production URL (and vice versa) without reconfiguring the registered webhook URL. 
+Slack only allows you to register a single webhook per app. This means that you can't switch from using the testing URL to the production URL (and vice versa) without reconfiguring the registered webhook URL.
 
 You may have trouble with this if you try to test a workflow that's also published. Slack will only send events to one of the two webhook URLs, so the other will never receive event notifications.
 

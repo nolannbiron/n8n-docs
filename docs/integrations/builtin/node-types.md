@@ -1,16 +1,33 @@
 ---
-description: Learn about n8n's core nodes, cluster nodes, credentials, and community nodes.
 contentType: overview
 nodeTitle: Node types
 originalFilePath: integrations/builtin/node-types.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/node-types'
-url: 'https://docs.n8n.io/integrations/builtin/node-types'
+originalUrl: https://docs.n8n.io/integrations/builtin/node-types
+url: https://docs.n8n.io/integrations/builtin/node-types
+description: Learn about n8n's core nodes, cluster nodes, credentials, and community nodes.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Built-in integrations <a href="#built-in-integrations" id="built-in-integrations"></a>
+# Node types
 
 This section contains the node[^1] library: reference documentation for every built-in node in n8n, and their credentials.
 
@@ -20,7 +37,7 @@ When you add a node to a workflow, n8n displays a list of available operations. 
 
 There are two types of operation:
 
-* Triggers start a workflow in response to specific events or conditions in your services. When you select a Trigger, n8n adds a trigger node to your workflow, with the Trigger operation you chose pre-selected. When you search for a node in n8n, Trigger operations have a bolt icon <img src="../../../assets/trigger.png" alt="Trigger icon" data-size="line">.
+* Triggers start a workflow in response to specific events or conditions in your services. When you select a Trigger, n8n adds a trigger node to your workflow, with the Trigger operation you chose pre-selected. When you search for a node in n8n, Trigger operations have a bolt icon .
 * Actions are operations that represent specific tasks within a workflow, which you can use to manipulate data, perform operations on external systems, and trigger events in other systems as part of your workflows. When you select an Action, n8n adds a node to your workflow, with the Action operation you chose pre-selected.
 
 ## Core nodes <a href="#core-nodes" id="core-nodes"></a>
@@ -30,8 +47,6 @@ Core nodes can be actions or triggers[^2]. Whereas most nodes connect to a speci
 ## Cluster nodes <a href="#cluster-nodes" id="cluster-nodes"></a>
 
 [Cluster nodes](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/key-concept-glossary#cluster-node-n8n) are node groups that work together to provide functionality in an n8n workflow. Instead of using a single node, you use a [root node](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/key-concept-glossary#root-node-n8n) and one or more [sub-nodes](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/key-concept-glossary#sub-node-n8n) that extend the functionality of the node.
-
-![A workflow diagram with one root node connected to two sub-nodes](../../../../assets/root-sub-nodes.png)
 
 ## Credentials <a href="#credentials" id="credentials"></a>
 
@@ -45,12 +60,14 @@ To learn more about creating, managing, and sharing credentials, refer to [Manag
 
 ## Community nodes <a href="#community-nodes" id="community-nodes"></a>
 
-n8n supports community nodes. Refer to [Community nodes](../community-nodes/installation-and-management/README.md) for guidance on installing and using these nodes.
+n8n supports community nodes. Refer to [Community nodes](../community-nodes/installation-and-management/) for guidance on installing and using these nodes.
 
 For help building and publishing your own community nodes to [npm](https://www.npmjs.com/), refer to [Create nodes](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/create-nodes/overview) for more information.
 
 See [Built-in nodes](./) for other integration topics.
 
 [^1]: In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.
+
 [^2]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.
+
 [^3]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

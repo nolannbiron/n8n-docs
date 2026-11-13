@@ -1,9 +1,5 @@
 ---
 title: OpenAI Chat Model node common issues
-description: >-
-  Documentation for common issues and questions in the OpenAI Chat Model node in
-  n8n, a workflow automation platform. Includes details of the issue and
-  suggested solutions.
 contentType:
   - integration
   - reference
@@ -15,14 +11,35 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues
+description: >-
+  Documentation for common issues and questions in the OpenAI Chat Model node in
+  n8n, a workflow automation platform. Includes details of the issue and
+  suggested solutions.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# OpenAI Chat Model node common issues <a href="#openai-chat-model-node-common-issues" id="openai-chat-model-node-common-issues"></a>
+# Common issues
 
-Here are some common errors and issues with the [OpenAI Chat Model node](README.md) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [OpenAI Chat Model node](./) and steps to resolve or troubleshoot them.
 
 ## Processing parameters <a href="#processing-parameters" id="processing-parameters"></a>
 
@@ -38,7 +55,8 @@ This error displays when you've exceeded [OpenAI's rate limits](https://platform
 
 There are two ways to work around this issue:
 
-1. Split your data up into smaller chunks using the [Loop Over Items](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.splitinbatches) node and add a [Wait](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.wait) node at the end for a time amount that will help. Copy the code below and paste it into a workflow to use as a template.
+1.  Split your data up into smaller chunks using the [Loop Over Items](../../../core-nodes/n8n-nodes-base.splitinbatches.md) node and add a [Wait](../../../core-nodes/n8n-nodes-base.wait.md) node at the end for a time amount that will help. Copy the code below and paste it into a workflow to use as a template.
+
     ```
     {
         "nodes": [
@@ -147,7 +165,7 @@ There are two ways to work around this issue:
         "pinData": {}
     }
     ```
-2. Use the [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) node with the built-in batch-limit option against the [OpenAI API](https://platform.openai.com/docs/quickstart) instead of using the OpenAI node.
+2. Use the [HTTP Request](../../../core-nodes/n8n-nodes-base.httprequest/) node with the built-in batch-limit option against the [OpenAI API](https://platform.openai.com/docs/quickstart) instead of using the OpenAI node.
 
 ## Insufficient quota <a href="#insufficient-quota" id="insufficient-quota"></a>
 
@@ -176,8 +194,8 @@ After topping up your balance, there may be a delay before your OpenAI account r
 
 In n8n:
 
-* check that the [OpenAI credentials](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/openai) use a valid [OpenAI API key](https://platform.openai.com/api-keys) for the account you've added money to
-* ensure that you connect the [OpenAI node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/app-nodes/n8n-nodes-langchain.openai) to the correct [OpenAI credentials](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/openai)
+* check that the [OpenAI credentials](../../../credentials/openai.md) use a valid [OpenAI API key](https://platform.openai.com/api-keys) for the account you've added money to
+* ensure that you connect the [OpenAI node](../../../app-nodes/n8n-nodes-langchain.openai/) to the correct [OpenAI credentials](../../../credentials/openai.md)
 
 If you find yourself frequently running out of account credits, consider turning on auto recharge in your [OpenAI billing settings](https://platform.openai.com/settings/organization/billing/overview) to automatically reload your account with credits when your balance reaches $0.
 
@@ -185,7 +203,8 @@ If you find yourself frequently running out of account credits, consider turning
 
 This error displays when the request results in an error but n8n wasn't able to interpret the error message from OpenAI.
 
-To begin troubleshooting, try running the same operation using the [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) node, which should provide a more detailed error message.
+To begin troubleshooting, try running the same operation using the [HTTP Request](../../../core-nodes/n8n-nodes-base.httprequest/) node, which should provide a more detailed error message.
 
 [^1]: n8n cluster nodes consist of one or more sub-nodes connected to a root node. Sub-nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.
+
 [^2]: Each n8n cluster node contains a single root node that defines the main functionality of the cluster. One or more sub-nodes attach to the root node to extend its functionality.

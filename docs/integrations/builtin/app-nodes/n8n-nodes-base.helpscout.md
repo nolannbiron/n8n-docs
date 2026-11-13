@@ -1,21 +1,38 @@
 ---
 title: Help Scout node documentation
-description: >-
-  Learn how to use the Help Scout node in n8n. Follow technical documentation to
-  integrate Help Scout node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Help Scout node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.helpscout.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.helpscout'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.helpscout'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.helpscout
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.helpscout
+description: >-
+  Learn how to use the Help Scout node in n8n. Follow technical documentation to
+  integrate Help Scout node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Help Scout node <a href="#help-scout-node" id="help-scout-node"></a>
+# Help Scout
 
 Use the Help Scout node to automate work in Help Scout, and integrate Help Scout with other applications. n8n has built-in support for a wide range of Help Scout features, including creating, updating, deleting, and getting conversations, and customers.
 
@@ -30,36 +47,35 @@ Refer to [Help Scout credentials](../credentials/helpscout.md) for guidance on s
 ## Operations <a href="#operations" id="operations"></a>
 
 * Conversation
-    * Create a new conversation
-    * Delete a conversation
-    * Get a conversation
-    * Get all conversations
+  * Create a new conversation
+  * Delete a conversation
+  * Get a conversation
+  * Get all conversations
 * Customer
-    * Create a new customer
-    * Get a customer
-    * Get all customers
-    * Get customer property definitions
-    * Update a customer
+  * Create a new customer
+  * Get a customer
+  * Get all customers
+  * Get customer property definitions
+  * Update a customer
 * Mailbox
-    * Get data of a mailbox
-    * Get all mailboxes
+  * Get data of a mailbox
+  * Get all mailboxes
 * Thread
-    * Create a new chat thread
-    * Get all chat threads
+  * Create a new chat thread
+  * Get all chat threads
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Help Scout node documentation integration templates](https://n8n.io/integrations/helpscout) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

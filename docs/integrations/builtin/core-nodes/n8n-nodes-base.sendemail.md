@@ -29,6 +29,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Send Email
@@ -38,7 +40,7 @@ The Send Email node sends emails using an SMTP email server.
 {% hint style="info" %}
 **Credential**
 
-Refer to the [Send Email credentials documentation](../credentials/send-email/README.md) for authentication information for this node.
+Refer to the [Send Email credentials documentation](../credentials/send-email/) for authentication information for this node.
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
@@ -53,7 +55,7 @@ Configure this node using the following parameters.
 
 ### Credential to connect with <a href="#credential-to-connect-with" id="credential-to-connect-with"></a>
 
-Select or create an [SMTP account credential](../credentials/send-email/README.md) for the node to use.
+Select or create an [SMTP account credential](../credentials/send-email/) for the node to use.
 
 ### Operation <a href="#operation" id="operation"></a>
 
@@ -102,7 +104,7 @@ Set whether to include the phrase `This email was sent automatically with n8n` a
 
 Enter the name of the binary properties that contain data to add as an attachment. Some tips on using this option:
 
-* Use the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/README.md) node to upload the file to your workflow.
+* Use the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/) node to upload the file to your workflow.
 * Add multiple attachments by entering a comma-separated list of binary properties.
 * Reference embedded images or other content within the body of an email message, for example `<img src="cid:image_1">`.
 

@@ -1,21 +1,38 @@
 ---
 title: AWS DynamoDB node documentation
-description: >-
-  Learn how to use the AWS DynamoDB node in n8n. Follow technical documentation
-  to integrate AWS DynamoDB node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: AWS DynamoDB node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb
+description: >-
+  Learn how to use the AWS DynamoDB node in n8n. Follow technical documentation
+  to integrate AWS DynamoDB node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# AWS DynamoDB node <a href="#aws-dynamodb-node" id="aws-dynamodb-node"></a>
+# AWS DynamoDB
 
 Use the AWS DynamoDB node to automate work in AWS DynamoDB, and integrate AWS DynamoDB with other applications. n8n has built-in support for a wide range of AWS DynamoDB features, including creating, reading, updating, deleting items, and records on a database.
 
@@ -30,25 +47,23 @@ Refer to [AWS credentials](../credentials/aws.md) for guidance on setting up aut
 ## Operations <a href="#operations" id="operations"></a>
 
 * Item
-    * Create a new record, or update the current one if it already exists (upsert/put)
-    * Delete an item
-    * Get an item
-    * Get all items
+  * Create a new record, or update the current one if it already exists (upsert/put)
+  * Delete an item
+  * Get an item
+  * Get all items
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse AWS DynamoDB node documentation integration templates](https://n8n.io/integrations/aws-dynamodb) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

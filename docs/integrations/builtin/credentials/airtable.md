@@ -29,13 +29,15 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Airtable credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [Airtable](../app-nodes/n8n-nodes-base.airtable/README.md)
+* [Airtable](../app-nodes/n8n-nodes-base.airtable/)
 * [Airtable Trigger](../trigger-nodes/n8n-nodes-base.airtabletrigger.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>

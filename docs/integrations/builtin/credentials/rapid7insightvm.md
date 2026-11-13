@@ -1,23 +1,40 @@
 ---
 title: Rapid7 InsightVM credentials
-description: >-
-  Documentation for the Rapid7 InsightVM credentials. Use these credentials to
-  authenticate Rapid7 InsightVm in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 nodeTitle: Rapid7 InsightVM credentials
 originalFilePath: integrations/builtin/credentials/rapid7insightvm.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/rapid7insightvm'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/rapid7insightvm'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/rapid7insightvm
+url: https://docs.n8n.io/integrations/builtin/credentials/rapid7insightvm
+description: >-
+  Documentation for the Rapid7 InsightVM credentials. Use these credentials to
+  authenticate Rapid7 InsightVm in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Rapid7 InsightVM credentials <a href="#rapid7-insightvm-credentials" id="rapid7-insightvm-credentials"></a>
+# Rapid7 InsightVM credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

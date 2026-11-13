@@ -33,6 +33,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Azure AI Search Vector Store
@@ -142,13 +144,13 @@ Use the node directly in workflows to insert or retrieve documents without an ag
 
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-Connect to an [AI agent's](n8n-nodes-langchain.agent/README.md) tool connector to use the vector store as a searchable knowledge base:
+Connect to an [AI agent's](n8n-nodes-langchain.agent/) tool connector to use the vector store as a searchable knowledge base:
 
 AI agent (tools connector) → Azure AI Search Vector Store node
 
 ### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-Use with [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) and [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) for retrieval-augmented generation:
+Use with [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) and [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) for retrieval-augmented generation:
 
 Question and Answer Chain (Retriever) → Vector Store Retriever (Vector Store) → Azure AI Search Vector Store
 
@@ -166,10 +168,9 @@ See [this example](https://n8n.io/workflows/2465-building-your-first-whatsapp-ch
 
 This Vector Store node has five modes: **Get Many**, **Insert Documents**, **Retrieve Documents (As Vector Store for Chain/Tool)**, **Retrieve Documents (As Tool for AI Agent)**, and **Update Documents**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
 
-
 #### Get Many <a href="#get-many" id="get-many"></a>
 
-In this mode, you can retrieve multiple documents from your vector database by providing a prompt. The prompt will be embedded and used for similarity search. The node will return the documents that are most similar to the prompt with their similarity score. This is useful if you want to retrieve a list of similar documents and pass them to an agent as additional context. 
+In this mode, you can retrieve multiple documents from your vector database by providing a prompt. The prompt will be embedded and used for similarity search. The node will return the documents that are most similar to the prompt with their similarity score. This is useful if you want to retrieve a list of similar documents and pass them to an agent as additional context.
 
 #### Insert Documents <a href="#insert-documents" id="insert-documents"></a>
 
@@ -189,7 +190,7 @@ Use Update Documents mode to update documents in a vector database by ID. Fill i
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](../sub-nodes/n8n-nodes-langchain.rerankercohere.md), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 {% hint style="info" %}
 **Azure AI Search semantic reranking**

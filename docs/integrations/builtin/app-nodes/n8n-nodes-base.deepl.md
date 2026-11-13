@@ -1,21 +1,38 @@
 ---
 title: DeepL node documentation
-description: >-
-  Learn how to use the DeepL node in n8n. Follow technical documentation to
-  integrate DeepL node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: DeepL node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.deepl.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.deepl'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.deepl'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.deepl
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.deepl
+description: >-
+  Learn how to use the DeepL node in n8n. Follow technical documentation to
+  integrate DeepL node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# DeepL node <a href="#deepl-node" id="deepl-node"></a>
+# DeepL
 
 Use the DeepL node to automate work in DeepL, and integrate DeepL with other applications. n8n has built-in support for a wide range of DeepL features, including translating languages.
 
@@ -36,22 +53,20 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Language
-    * Translate data
+  * Translate data
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse DeepL node documentation integration templates](https://n8n.io/integrations/deepl) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

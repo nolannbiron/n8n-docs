@@ -31,6 +31,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Airtable Trigger
@@ -51,7 +53,7 @@ Refer to the [Airtable credentials documentation](../credentials/airtable.md) fo
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Airtable. Refer to the [Airtable node documentation](../app-nodes/n8n-nodes-base.airtable/README.md) for more information.
+n8n provides an app node for Airtable. Refer to the [Airtable node documentation](../app-nodes/n8n-nodes-base.airtable/) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/airtable-trigger/) on n8n's website.
 

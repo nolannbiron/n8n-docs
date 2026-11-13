@@ -1,29 +1,46 @@
 ---
 title: Code node documentation
-description: >-
-  Documentation for the Code node in n8n, a workflow automation platform.
-  Includes guidance on usage, and links to examples.
 contentType:
   - integration
   - reference
 priority: critical
-tags:
-  - code node
-  - code
 hide:
   - tags
 search:
   boost: 1.5
 nodeTitle: n8n-nodes-base.code
 originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.code/index.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code'
-url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code'
+originalUrl: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code
+url: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code
+description: >-
+  Documentation for the Code node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+tags:
+  - code node
+  - code
 ---
 
-# Code node <a href="#code-node" id="code-node"></a>
+# Code
 
 The Code node lets you run your own JavaScript or Python inside a workflow, so you can transform data or add logic the built-in nodes don't cover.
 
@@ -90,7 +107,7 @@ The syntax to use the built-in methods and variables is `$variableName` or `$met
 
 ### Keyboard shortcuts <a href="#keyboard-shortcuts" id="keyboard-shortcuts"></a>
 
-The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. See the full list of [keyboard shortcuts](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts).
+The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. See the full list of [keyboard shortcuts](keyboard-shortcuts.md).
 
 ## Python (Pyodide - legacy) <a href="#python-pyodide-legacy" id="python-pyodide-legacy"></a>
 
@@ -116,14 +133,14 @@ The syntax to use the built-in methods and variables is `_variableName` or `_met
 
 ### Keyboard shortcuts <a href="#keyboard-shortcuts" id="keyboard-shortcuts"></a>
 
-The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. See the full list of [keyboard shortcuts](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts).
+The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. See the full list of [keyboard shortcuts](keyboard-shortcuts.md).
 
 ## File system and HTTP requests <a href="#file-system-and-http-requests" id="file-system-and-http-requests"></a>
 
 You can't access the file system or make HTTP requests. Use the following nodes instead:
 
-* [Read/Write File From Disk](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.readwritefile)
-* [HTTP Request](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest)
+* [Read/Write File From Disk](../n8n-nodes-base.readwritefile.md)
+* [HTTP Request](../n8n-nodes-base.httprequest/)
 
 ## Python (Native) <a href="#python-native" id="python-native"></a>
 

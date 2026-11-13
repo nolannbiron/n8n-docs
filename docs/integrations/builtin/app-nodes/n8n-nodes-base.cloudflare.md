@@ -1,21 +1,38 @@
 ---
 title: Cloudflare node documentation
-description: >-
-  Learn how to use the Cloudflare node in n8n. Follow technical documentation to
-  integrate Cloudflare node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Cloudflare node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.cloudflare.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.cloudflare'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.cloudflare'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.cloudflare
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.cloudflare
+description: >-
+  Learn how to use the Cloudflare node in n8n. Follow technical documentation to
+  integrate Cloudflare node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Cloudflare node <a href="#cloudflare-node" id="cloudflare-node"></a>
+# Cloudflare
 
 Use the Cloudflare node to automate work in Cloudflare, and integrate Cloudflare with other applications. n8n has built-in support for a wide range of Cloudflare features, including deleting, getting, and uploading zone certificates.
 
@@ -24,19 +41,18 @@ On this page, you'll find a list of operations the Cloudflare node supports and 
 {% hint style="info" %}
 **Credentials**
 
-Refer to [Cloudflare  credentials](../credentials/cloudflare.md) for guidance on setting up authentication.
+Refer to [Cloudflare credentials](../credentials/cloudflare.md) for guidance on setting up authentication.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
 * Zone Certificate
-	* Delete
-	* Get
-	* Get Many
-	* Upload
+  * Delete
+  * Get
+  * Get Many
+  * Upload
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Cloudflare node documentation integration templates](https://n8n.io/integrations/cloudflare) or [search all templates](https://n8n.io/workflows/)
 
@@ -46,13 +62,12 @@ Refer to [Cloudflare's API documentation on zone-level authentication](https://a
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

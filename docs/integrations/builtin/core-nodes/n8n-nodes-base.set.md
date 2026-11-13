@@ -29,6 +29,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Edit Fields (Set)
@@ -59,7 +61,7 @@ If you don't want to use expressions:
 
 You can do this for both the name and value of the field.
 
-![A field being dragged from INPUT into Fields to Set, then its Value toggled from Expression to Fixed](<../../.gitbook/assets/drag-drop-fixed-toggle (1).gif>)
+![A field being dragged from INPUT into Fields to Set, then its Value toggled from Expression to Fixed](../../.gitbook/assets/drag-drop-fixed-toggle.gif)
 
 ### Keep Only Set Fields <a href="#keep-only-set-fields" id="keep-only-set-fields"></a>
 

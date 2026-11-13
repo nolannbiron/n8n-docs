@@ -1,22 +1,40 @@
 ---
 title: DFIR-IRIS credentials
-description: >-
-  Documentation for the DFIR-IRIS credentials. Use these credentials to
-  authenticate DFIR-IRIS in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 nodeTitle: DFIR-IRIS credentials
 originalFilePath: integrations/builtin/credentials/dfiriris.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/dfiriris'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/dfiriris'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/dfiriris
+url: https://docs.n8n.io/integrations/builtin/credentials/dfiriris
+description: >-
+  Documentation for the DFIR-IRIS credentials. Use these credentials to
+  authenticate DFIR-IRIS in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
-# DFIR-IRIS credentials <a href="#dfir-iris-credentials" id="dfir-iris-credentials"></a>
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+# DFIR-IRIS credentials
+
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -28,10 +46,9 @@ Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/a
 
 This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/iris-dfir/) on n8n's website.
 
-
 ## Using API Key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/) for instructions on getting your API key.
-- The **Base URL** of your DFIR-IRIS instance.
+* An **API Key**: Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/) for instructions on getting your API key.
+* The **Base URL** of your DFIR-IRIS instance.

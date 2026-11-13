@@ -1,8 +1,5 @@
 ---
 title: Microsoft Graph Security node documentation
-description: >-
-  Learn how to use the Microsoft Graph Security node in n8n. Follow technical
-  documentation to integrate Microsoft Graph Security node into your workflows.
 contentType:
   - integration
   - reference
@@ -12,14 +9,34 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity
+description: >-
+  Learn how to use the Microsoft Graph Security node in n8n. Follow technical
+  documentation to integrate Microsoft Graph Security node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Microsoft Graph Security node <a href="#microsoft-graph-security-node" id="microsoft-graph-security-node"></a>
+# Microsoft Graph Security
 
-Use the Microsoft Graph Security node to automate work in Microsoft Graph Security, and integrate Microsoft Graph Security with other applications. n8n has built-in support for a wide range of Microsoft Graph Security features, including getting, and updating scores, and profiles. 
+Use the Microsoft Graph Security node to automate work in Microsoft Graph Security, and integrate Microsoft Graph Security with other applications. n8n has built-in support for a wide range of Microsoft Graph Security features, including getting, and updating scores, and profiles.
 
 On this page, you'll find a list of operations the Microsoft Graph Security node supports and links to more resources.
 
@@ -38,26 +55,25 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 ## Operations <a href="#operations" id="operations"></a>
 
 * Secure Score
-    * Get
-    * Get All
+  * Get
+  * Get All
 * Secure Score Control Profile
-    * Get
-    * Get All
-    * Update
+  * Get
+  * Get All
+  * Update
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Microsoft Graph Security node documentation integration templates](https://n8n.io/integrations/microsoft-graph-security) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

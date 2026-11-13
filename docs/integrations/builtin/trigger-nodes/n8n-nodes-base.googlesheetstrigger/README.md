@@ -31,6 +31,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Google Sheets Trigger
@@ -40,7 +42,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-Refer to the [Google credentials documentation](../../credentials/google/README.md) for authentication information for this node.
+Refer to the [Google credentials documentation](../../credentials/google/) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -59,7 +61,7 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 
 Refer to [Google Sheet's API documentation](https://developers.google.com/sheets/api) for more information about the service.
 
-n8n provides an app node for Google Sheets. Refer to the [Google Sheets node documentation](../../app-nodes/n8n-nodes-base.googlesheets/README.md) for more information.
+n8n provides an app node for Google Sheets. Refer to the [Google Sheets node documentation](../../app-nodes/n8n-nodes-base.googlesheets/) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/google-sheets-trigger/) on n8n's website.
 

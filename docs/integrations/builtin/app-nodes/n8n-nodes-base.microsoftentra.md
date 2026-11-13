@@ -1,8 +1,5 @@
 ---
 title: Microsoft Entra ID node documentation
-description: >-
-  Learn how to use the Microsoft Entra ID node in n8n. Follow technical
-  documentation to integrate Microsoft Entra ID node into your workflows.
 contentType:
   - integration
   - reference
@@ -12,12 +9,32 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra
+description: >-
+  Learn how to use the Microsoft Entra ID node in n8n. Follow technical
+  documentation to integrate Microsoft Entra ID node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Microsoft Entra ID node <a href="#microsoft-entra-id-node" id="microsoft-entra-id-node"></a>
+# Microsoft Entra ID
 
 Use the Microsoft Entra ID node to automate work in Microsoft Entra ID and integrate Microsoft Entra ID with other applications. n8n has built-in support for a wide range of Microsoft Entra ID features, which includes creating, getting, updating, and deleting users and groups, as well as adding users to and removing them from groups.
 
@@ -35,46 +52,42 @@ Refer to the [Microsoft Entra ID credentials documentation](../credentials/micro
 If you're using a government cloud tenant (US Government, US Government DOD, or China), make sure to select the appropriate **Microsoft Graph API Base URL** in your Microsoft Entra ID credentials configuration.
 {% endhint %}
 
-
 ## Operations <a href="#operations" id="operations"></a>
 
 * **Group**
-	* **Create**: Create a new group
-	* **Delete**: Delete an existing group
-	* **Get**: Retrieve data for a specific group
-	* **Get Many**: Retrieve a list of groups
-	* **Update**: Update a group
+  * **Create**: Create a new group
+  * **Delete**: Delete an existing group
+  * **Get**: Retrieve data for a specific group
+  * **Get Many**: Retrieve a list of groups
+  * **Update**: Update a group
 * **User**
-	* **Create**: Create a new user
-	* **Delete**: Delete an existing user
-	* **Get**: Retrieve data for a specific user
-	* **Get Many**: Retrieve a list of users
-	* **Update**: Update a user
-	* **Add to Group**: Add user to a group
-	* **Remove from Group**: Remove user from a group
+  * **Create**: Create a new user
+  * **Delete**: Delete an existing user
+  * **Get**: Retrieve data for a specific user
+  * **Get Many**: Retrieve a list of users
+  * **Update**: Update a user
+  * **Add to Group**: Add user to a group
+  * **Remove from Group**: Remove user from a group
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Microsoft Entra ID node documentation integration templates](https://n8n.io/integrations/microsoft-entra-id-azure-active-directory) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-
 Refer to [Microsoft Entra ID's documentation](https://learn.microsoft.com/en-us/graph/api/resources/identity-network-access-overview?view=graph-rest-1.0) for more information about the service.
-
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

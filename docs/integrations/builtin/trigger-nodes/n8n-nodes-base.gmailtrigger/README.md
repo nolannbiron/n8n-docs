@@ -31,6 +31,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Gmail Trigger
@@ -40,7 +42,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-Refer to the [Google credentials documentation](../../credentials/google/README.md) for authentication information for this node.
+Refer to the [Google credentials documentation](../../credentials/google/) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -57,7 +59,7 @@ For usage examples and templates to help you get started, refer to n8n's [Gmail 
 
 Configure the node with these parameters:
 
-* **Credential to connect with**: Select or create a new Google credential to use for the trigger. Refer to [Google credentials](../../credentials/google/README.md) for more information on setting up a new credential.
+* **Credential to connect with**: Select or create a new Google credential to use for the trigger. Refer to [Google credentials](../../credentials/google/) for more information on setting up a new credential.
 * **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to [Poll Mode options](poll-mode-options.md) to configure the parameters for each mode type.
 * **Simplify**: Choose whether to return a simplified version of the response (turned on, default) or the raw data (turned off).
   * The simplified version returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
@@ -75,7 +77,7 @@ Use these filters to further refine the node's behavior:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Gmail. Refer to the [Gmail node documentation](../../app-nodes/n8n-nodes-base.gmail/README.md) for more information.
+n8n provides an app node for Gmail. Refer to the [Gmail node documentation](../../app-nodes/n8n-nodes-base.gmail/) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/gmail-trigger/) on n8n's website.
 

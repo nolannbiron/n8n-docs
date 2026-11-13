@@ -1,24 +1,41 @@
 ---
 title: Mautic node documentation
-description: >-
-  Learn how to use the Mautic node in n8n. Follow technical documentation to
-  integrate Mautic node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Mautic node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.mautic.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mautic'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mautic'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mautic
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mautic
+description: >-
+  Learn how to use the Mautic node in n8n. Follow technical documentation to
+  integrate Mautic node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Mautic node <a href="#mautic-node" id="mautic-node"></a>
+# Mautic
 
-Use the Mautic node to automate work in Mautic, and integrate Mautic with other applications. n8n has built-in support for a wide range of Mautic features, including creating, updating, deleting, and getting companies, and contacts, as well as adding and removing campaign contacts. 
+Use the Mautic node to automate work in Mautic, and integrate Mautic with other applications. n8n has built-in support for a wide range of Mautic features, including creating, updating, deleting, and getting companies, and contacts, as well as adding and removing campaign contacts.
 
 On this page, you'll find a list of operations the Mautic node supports and links to more resources.
 
@@ -37,45 +54,44 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Campaign Contact
-    * Add contact to a campaign
-    * Remove contact from a campaign
+  * Add contact to a campaign
+  * Remove contact from a campaign
 * Company
-    * Create a new company
-    * Delete a company
-    * Get data of a company
-    * Get data of all companies
-    * Update a company
+  * Create a new company
+  * Delete a company
+  * Get data of a company
+  * Get data of all companies
+  * Update a company
 * Company Contact
-    * Add contact to a company
-    * Remove a contact from a company
+  * Add contact to a company
+  * Remove a contact from a company
 * Contact
-    * Create a new contact
-    * Delete a contact
-    * Edit contact's points
-    * Add/remove contacts from/to the don't contact list
-    * Get data of a contact
-    * Get data of all contacts
-    * Send email to contact
-    * Update a contact
+  * Create a new contact
+  * Delete a contact
+  * Edit contact's points
+  * Add/remove contacts from/to the don't contact list
+  * Get data of a contact
+  * Get data of all contacts
+  * Send email to contact
+  * Update a contact
 * Contact Segment
-    * Add contact to a segment
-    * Remove contact from a segment
+  * Add contact to a segment
+  * Remove contact from a segment
 * Segment Email
-    * Send
+  * Send
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Mautic node documentation integration templates](https://n8n.io/integrations/mautic) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

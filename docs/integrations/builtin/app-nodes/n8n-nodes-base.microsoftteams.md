@@ -1,8 +1,5 @@
 ---
 title: Microsoft Teams node documentation
-description: >-
-  Learn how to use the Microsoft Teams node in n8n. Follow technical
-  documentation to integrate Microsoft Teams node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,12 +10,32 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams
+description: >-
+  Learn how to use the Microsoft Teams node in n8n. Follow technical
+  documentation to integrate Microsoft Teams node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Microsoft Teams node <a href="#microsoft-teams-node" id="microsoft-teams-node"></a>
+# Microsoft Teams
 
 Use the Microsoft Teams node to automate work in Microsoft Teams, and integrate Microsoft Teams with other applications. n8n has built-in support for a wide range of Microsoft Teams features, including channels, chats, channel and chat messages, chat members, online meetings, and tasks.
 
@@ -29,9 +46,9 @@ On this page, you'll find a list of operations the Microsoft Teams node supports
 
 From version 2 of the node, the **Authentication** dropdown offers three options:
 
-- **Teams OAuth2**: the Microsoft Teams-specific OAuth2 credential (default). Its default scopes cover every resource on this page, including `Chat.ReadWrite` for chat members and chat messages, from n8n 2.39.0, `OnlineMeetings.ReadWrite` for online meetings, and, from n8n 2.41.0, `TeamworkTag.Read` for team tag mentions.
-- **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, grant the credential the scopes this node needs. Refer to [Default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams) for the full list.
-- **Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user. Some resources need a signed-in user and aren't available with this credential. Refer to [Service Principal credential support](#service-principal-credential-support) on this page, and to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and the required application permissions.
+* **Teams OAuth2**: the Microsoft Teams-specific OAuth2 credential (default). Its default scopes cover every resource on this page, including `Chat.ReadWrite` for chat members and chat messages, from n8n 2.39.0, `OnlineMeetings.ReadWrite` for online meetings, and, from n8n 2.41.0, `TeamworkTag.Read` for team tag mentions.
+* **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, grant the credential the scopes this node needs. Refer to [Default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams) for the full list.
+* **Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user. Some resources need a signed-in user and aren't available with this credential. Refer to [Service Principal credential support](n8n-nodes-base.microsoftteams.md#service-principal-credential-support) on this page, and to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and the required application permissions.
 
 If you connected a Teams OAuth2 credential before n8n 2.39.0, reconnect it so it picks up `OnlineMeetings.ReadWrite`. If the credential uses **Custom Scopes**, add the scope to **Enabled Scopes** instead.
 
@@ -63,55 +80,55 @@ This node can be used as a human review step for AI Agent tool calls. When confi
 {% hint style="info" %}
 **Feature availability**
 
-- The Chat Member and Online Meeting resources, and the Channel Message **Get**, **Get Many Replies**, and **Reply** operations, are available from n8n 2.39.0.
-- The Chat Member **Add** and **Remove** operations, the Channel Message and Chat Message **Delete** and **Undo Delete** operations, the Online Meeting **Create or Get**, **Delete**, and **Update** operations, and Online Meeting support for the **Service Principal (App-Only)** credential are available from n8n 2.40.0.
-- The Chat resource is available from n8n 2.41.0.
-- The Activity Notification resource is available from n8n 2.42.0.
+* The Chat Member and Online Meeting resources, and the Channel Message **Get**, **Get Many Replies**, and **Reply** operations, are available from n8n 2.39.0.
+* The Chat Member **Add** and **Remove** operations, the Channel Message and Chat Message **Delete** and **Undo Delete** operations, the Online Meeting **Create or Get**, **Delete**, and **Update** operations, and Online Meeting support for the **Service Principal (App-Only)** credential are available from n8n 2.40.0.
+* The Chat resource is available from n8n 2.41.0.
+* The Activity Notification resource is available from n8n 2.42.0.
 {% endhint %}
 
 * Activity Notification
-    * Send
+  * Send
 * Channel
-    * Create
-    * Delete
-    * Get
-    * Get Many
-    * Update
+  * Create
+  * Delete
+  * Get
+  * Get Many
+  * Update
 * Channel Message
-    * Create
-    * Delete
-    * Get
-    * Get Many
-    * Get Many Replies
-    * Reply
-    * Undo Delete
+  * Create
+  * Delete
+  * Get
+  * Get Many
+  * Get Many Replies
+  * Reply
+  * Undo Delete
 * Chat
-    * Create
-    * Get
-    * Get Many
+  * Create
+  * Get
+  * Get Many
 * Chat Member
-    * Add
-    * Get Many
-    * Remove
+  * Add
+  * Get Many
+  * Remove
 * Chat Message
-	* Create
-	* Delete
-	* Get
-	* Get Many
-	* Send and Wait for Response
-	* Undo Delete
+  * Create
+  * Delete
+  * Get
+  * Get Many
+  * Send and Wait for Response
+  * Undo Delete
 * Online Meeting
-    * Create
-    * Create or Get
-    * Delete
-    * Get
-    * Update
+  * Create
+  * Create or Get
+  * Delete
+  * Get
+  * Update
 * Task
-    * Create
-    * Delete
-    * Get
-    * Get Many
-    * Update
+  * Create
+  * Delete
+  * Get
+  * Get Many
+  * Update
 
 ## Waiting for a response <a href="#waiting-for-a-response" id="waiting-for-a-response"></a>
 
@@ -132,7 +149,7 @@ You can customize the waiting and response behavior depending on which response 
 
 ### Approval response customization <a href="#approval-response-customization" id="approval-response-customization"></a>
 
-When using the Approval response type, you can choose whether to present only an approval button or both approval *and* disapproval buttons.
+When using the Approval response type, you can choose whether to present only an approval button or both approval _and_ disapproval buttons.
 
 You can also customize the button labels for the buttons you include.
 
@@ -144,7 +161,7 @@ When using the Free Text response type, you can customize the message button lab
 
 When using the Custom Form response type, you build a form using the fields and options you want.
 
-You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.formtrigger#form-elements). To add more fields, select the **Add Form Element** button.
+You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](../core-nodes/n8n-nodes-base.formtrigger.md#form-elements). To add more fields, select the **Add Form Element** button.
 
 You'll also be able to customize the message button label, the form title and description, and the response button label.
 
@@ -192,7 +209,7 @@ User mentions need the `User.Read.All` permission and team tag mentions need `Te
 
 If you connected a Teams OAuth2 credential before n8n 2.41.0, reconnect it so it picks up `TeamworkTag.Read`. Without the scope, a team tag mention fails with a permission error.
 
-Mentions aren't available with the **Service Principal (App-Only)** credential, which can't run any of the three operations that support them. Refer to [Service Principal credential support](#service-principal-credential-support).
+Mentions aren't available with the **Service Principal (App-Only)** credential, which can't run any of the three operations that support them. Refer to [Service Principal credential support](n8n-nodes-base.microsoftteams.md#service-principal-credential-support).
 
 ## Delete and restore messages
 
@@ -206,7 +223,7 @@ Deleting and restoring channel messages needs the `ChannelMessage.ReadWrite` sco
 
 Chat messages use the `Chat.ReadWrite` scope, which the credential already includes. With the **Microsoft OAuth2 (Graph)** credential, add the scopes yourself.
 
-The **Delete** and **Undo Delete** operations aren't available with the **Service Principal (App-Only)** credential, because Microsoft Graph offers them only for a signed-in user. Refer to [Service Principal credential support](#service-principal-credential-support).
+The **Delete** and **Undo Delete** operations aren't available with the **Service Principal (App-Only)** credential, because Microsoft Graph offers them only for a signed-in user. Refer to [Service Principal credential support](n8n-nodes-base.microsoftteams.md#service-principal-credential-support).
 
 ## Chats and chat members
 
@@ -219,20 +236,20 @@ For each participant, pick the user from the list or enter their user principal 
 
 The Chat Member **Remove** operation takes the member's membership ID, not their user ID. Pick the member from the list, or use the `id` field from a Chat Member **Get Many** result. Microsoft Teams refuses to remove a member from a one-on-one chat, and refuses to remove the last owner of a group chat.
 
-The Chat and Chat Member resources aren't available with the **Service Principal (App-Only)** credential. Refer to [Service Principal credential support](#service-principal-credential-support).
+The Chat and Chat Member resources aren't available with the **Service Principal (App-Only)** credential. Refer to [Service Principal credential support](n8n-nodes-base.microsoftteams.md#service-principal-credential-support).
 
 ## Service Principal credential support
 
 The **Service Principal (App-Only)** credential has no signed-in user, so the Microsoft Teams node can't run operations that act as one. The list below states what's available for each resource. For the unavailable resources and operations, the node hides their fields and shows a notice when you select this credential. A workflow that still uses one of them fails with an error before the node sends any request.
 
-- **Activity Notification**: Send. It needs the `TeamsActivity.Send` application permission and a companion Teams app installed for the recipient. Refer to [Send an activity notification](#send-an-activity-notification).
-- **Channel**: all operations.
-- **Channel Message**: Get, Get Many, and Get Many Replies. Create and Reply aren't available, because app-only Microsoft Graph only supports migration import for channel messages. Delete and Undo Delete aren't available either, because Microsoft Graph offers them only for a signed-in user. Use an OAuth2 credential for these four operations.
-- **Chat**: not available. App-only Microsoft Graph has no signed-in user whose chats it could list, get, or create.
-- **Chat Member**: not available. The node's chat picker lists the signed-in user's chats, which app-only access can't do, so the node blocks the whole resource, including chats given by ID.
-- **Chat Message**: not available. The node sends and reads chat messages as the signed-in user.
-- **Online Meeting**: all operations, run on behalf of the user you select in the **Organizer** field, which the node shows when you select this credential. Pick the organizer from the list, or enter their user principal name or object ID. The app registration needs the `OnlineMeetings.ReadWrite.All` application permission (`OnlineMeetings.Read.All` is enough for Get), `User.Read.All` to pick the organizer from the list or by user principal name, and a Microsoft Teams application access policy that lets the app act on the organizer's meetings. Without the policy, the operations fail with a 403 error. Refer to [Allow app-only online meetings](../credentials/microsoftentraserviceprincipal.md#allow-app-only-online-meetings) for the setup.
-- **Task**: all operations. Get Many always lists the tasks of a plan: the node hides the **Tasks For** option, so **Group Member** isn't available. The node also hides the **Team** picker, and the **Plan**, **Bucket**, and **Assigned To** fields accept an ID only.
+* **Activity Notification**: Send. It needs the `TeamsActivity.Send` application permission and a companion Teams app installed for the recipient. Refer to [Send an activity notification](n8n-nodes-base.microsoftteams.md#send-an-activity-notification).
+* **Channel**: all operations.
+* **Channel Message**: Get, Get Many, and Get Many Replies. Create and Reply aren't available, because app-only Microsoft Graph only supports migration import for channel messages. Delete and Undo Delete aren't available either, because Microsoft Graph offers them only for a signed-in user. Use an OAuth2 credential for these four operations.
+* **Chat**: not available. App-only Microsoft Graph has no signed-in user whose chats it could list, get, or create.
+* **Chat Member**: not available. The node's chat picker lists the signed-in user's chats, which app-only access can't do, so the node blocks the whole resource, including chats given by ID.
+* **Chat Message**: not available. The node sends and reads chat messages as the signed-in user.
+* **Online Meeting**: all operations, run on behalf of the user you select in the **Organizer** field, which the node shows when you select this credential. Pick the organizer from the list, or enter their user principal name or object ID. The app registration needs the `OnlineMeetings.ReadWrite.All` application permission (`OnlineMeetings.Read.All` is enough for Get), `User.Read.All` to pick the organizer from the list or by user principal name, and a Microsoft Teams application access policy that lets the app act on the organizer's meetings. Without the policy, the operations fail with a 403 error. Refer to [Allow app-only online meetings](../credentials/microsoftentraserviceprincipal.md#allow-app-only-online-meetings) for the setup.
+* **Task**: all operations. Get Many always lists the tasks of a plan: the node hides the **Tasks For** option, so **Group Member** isn't available. The node also hides the **Team** picker, and the **Plan**, **Bucket**, and **Assigned To** fields accept an ID only.
 
 Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for the application permissions each operation needs.
 
@@ -246,18 +263,18 @@ The Activity Notification resource is available from n8n 2.42.0.
 
 The Activity Notification **Send** operation posts a notification to one user's activity feed, the **Activity** tab in Microsoft Teams. It doesn't send a chat or channel message, so it also works with the **Service Principal (App-Only)** credential, which can't send messages. Use it to ping a person from an unattended workflow, for example when an approval is due.
 
-Microsoft Teams only shows the notification if the recipient has a companion Teams app that names your credential's client ID. Without it, Microsoft Graph rejects the request with an HTTP 403 error. An administrator sets the app up once per tenant, then installs it for each recipient. Refer to [Set up the companion Teams app](#set-up-the-companion-teams-app).
+Microsoft Teams only shows the notification if the recipient has a companion Teams app that names your credential's client ID. Without it, Microsoft Graph rejects the request with an HTTP 403 error. An administrator sets the app up once per tenant, then installs it for each recipient. Refer to [Set up the companion Teams app](n8n-nodes-base.microsoftteams.md#set-up-the-companion-teams-app).
 
 ### Fields
 
-| Field | Description |
-|---|---|
-| **Recipient** | The user who gets the notification. **From List** searches your Microsoft Entra directory. **By ID** takes the user's object ID or user principal name (UPN), such as `jacob@contoso.com`. Give a guest user by their object ID: a guest's UPN contains `#EXT#`, which the field rejects. |
-| **Headline** | The bold first line of the notification. Keep it short so it fits on one line. |
-| **Preview Text** | The second line. Teams shows the first 150 characters. |
-| **Topic** | The third line, in grey. Name the item the notification is about, for example the workflow or the order. |
-| **Topic Link** | The Microsoft Teams link that opens when the user selects the notification. It must be an `https` link on a Microsoft Teams domain, such as `https://teams.microsoft.com/l/chat/0/0?users=someone@contoso.com`. Refer to [Topic Link](#topic-link). |
-| **Chain ID** (option) | A number that links related notifications. A new notification with the same Chain ID replaces the earlier one in the activity feed. Leave it at `0` to send the notification without a chain. |
+| Field                 | Description                                                                                                                                                                                                                                                                               |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Recipient**         | The user who gets the notification. **From List** searches your Microsoft Entra directory. **By ID** takes the user's object ID or user principal name (UPN), such as `jacob@contoso.com`. Give a guest user by their object ID: a guest's UPN contains `#EXT#`, which the field rejects. |
+| **Headline**          | The bold first line of the notification. Keep it short so it fits on one line.                                                                                                                                                                                                            |
+| **Preview Text**      | The second line. Teams shows the first 150 characters.                                                                                                                                                                                                                                    |
+| **Topic**             | The third line, in grey. Name the item the notification is about, for example the workflow or the order.                                                                                                                                                                                  |
+| **Topic Link**        | The Microsoft Teams link that opens when the user selects the notification. It must be an `https` link on a Microsoft Teams domain, such as `https://teams.microsoft.com/l/chat/0/0?users=someone@contoso.com`. Refer to [Topic Link](n8n-nodes-base.microsoftteams.md#topic-link).       |
+| **Chain ID** (option) | A number that links related notifications. A new notification with the same Chain ID replaces the earlier one in the activity feed. Leave it at `0` to send the notification without a chain.                                                                                             |
 
 The node calls Microsoft Graph's [`sendActivityNotification`](https://learn.microsoft.com/en-us/graph/api/userteamwork-sendactivitynotification?view=graph-rest-1.0) for the user with the `systemDefault` activity type. On success it returns `{ "success": true }`. Team and chat recipients, and custom activity types, aren't supported.
 
@@ -269,13 +286,9 @@ The companion app must name the client ID of the app registration your credentia
 
 #### Grant the Microsoft Graph permission
 
-<!-- vale off -->
-
-- **Service Principal (App-Only)**: in the [Microsoft Entra admin center](https://entra.microsoft.com/), open the app registration, select **API permissions** > **Add a permission** > **Microsoft Graph** > **Application permissions**, add `TeamsActivity.Send`, and grant admin consent. Refer to [Add application permissions](../credentials/microsoftentraserviceprincipal.md#add-application-permissions). To pick the recipient **From List**, also add `User.Read.All`.
-- **Teams OAuth2**: the credential requests the delegated `TeamsActivity.Send` scope by default from n8n 2.42.0. If you connected the credential before n8n 2.42.0, reconnect it so it picks up the scope. If the credential uses **Custom Scopes**, add `TeamsActivity.Send` to **Enabled Scopes** first.
-- **Microsoft OAuth2 (Graph)**: add `TeamsActivity.Send` to the credential's **Scope** field and reconnect.
-
-<!-- vale on -->
+* **Service Principal (App-Only)**: in the [Microsoft Entra admin center](https://entra.microsoft.com/), open the app registration, select **API permissions** > **Add a permission** > **Microsoft Graph** > **Application permissions**, add `TeamsActivity.Send`, and grant admin consent. Refer to [Add application permissions](../credentials/microsoftentraserviceprincipal.md#add-application-permissions). To pick the recipient **From List**, also add `User.Read.All`.
+* **Teams OAuth2**: the credential requests the delegated `TeamsActivity.Send` scope by default from n8n 2.42.0. If you connected the credential before n8n 2.42.0, reconnect it so it picks up the scope. If the credential uses **Custom Scopes**, add `TeamsActivity.Send` to **Enabled Scopes** first.
+* **Microsoft OAuth2 (Graph)**: add `TeamsActivity.Send` to the credential's **Scope** field and reconnect.
 
 #### Build the app package
 
@@ -357,23 +370,22 @@ Teams opens the **Topic Link** when the user selects the notification. Microsoft
 
 The link must also open something real, or Teams shows an error when the user selects the notification. Use one of these:
 
-- A chat link such as `https://teams.microsoft.com/l/chat/0/0?users=someone@contoso.com`, which opens a chat with that person.
-- A channel, message, or meeting link that you copy from Teams, which opens that item.
+* A chat link such as `https://teams.microsoft.com/l/chat/0/0?users=someone@contoso.com`, which opens a chat with that person.
+* A channel, message, or meeting link that you copy from Teams, which opens that item.
 
 Refer to Microsoft's [deep links to Teams chats, channels, and messages](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-link-teams) for the link formats.
 
 ### Common errors
 
-| Error | Cause | Fix |
-|---|---|---|
-| `The companion Teams app is not installed for this recipient` | Microsoft Graph returned HTTP 403. The recipient has no installed app that names your client ID under `webApplicationInfo.id`, or the install hasn't propagated yet. | Complete [Set up the companion Teams app](#set-up-the-companion-teams-app). Check that `webApplicationInfo.id` matches the credential's client ID. A bot app with the same ID doesn't count. Allow about five minutes after installing. |
-| `The app registration is missing the TeamsActivity.Send application permission` | Microsoft Graph returned HTTP 403 to a Service Principal credential. The app registration lacks the `TeamsActivity.Send` application permission or its admin consent. | Add the permission and grant admin consent. As an alternative, add the `TeamsActivity.Send.User` resource-specific permission to the companion app's manifest and install the updated app for the recipient. |
-| `The credential is missing the TeamsActivity.Send permission` | Microsoft Graph returned HTTP 403 to an OAuth2 credential. The token lacks the delegated `TeamsActivity.Send` scope. | Reconnect the credential. With **Custom Scopes**, add the scope to **Enabled Scopes** first. On a **Microsoft OAuth2 (Graph)** credential, add it to **Scope**. |
-| `The Topic Link is required`, `The Topic Link must be a Microsoft Teams link` | The node checked the link before sending. It's empty, not `https`, or not on a Microsoft Teams domain. | Enter a Teams deep link. Refer to [Topic Link](#topic-link). |
-| `The recipient was not found` | Microsoft Graph returned HTTP 404 for the user ID or UPN. | Check the value, or pick the user **From List**. Give guest users by object ID. |
+| Error                                                                           | Cause                                                                                                                                                                 | Fix                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `The companion Teams app is not installed for this recipient`                   | Microsoft Graph returned HTTP 403. The recipient has no installed app that names your client ID under `webApplicationInfo.id`, or the install hasn't propagated yet.  | Complete [Set up the companion Teams app](n8n-nodes-base.microsoftteams.md#set-up-the-companion-teams-app). Check that `webApplicationInfo.id` matches the credential's client ID. A bot app with the same ID doesn't count. Allow about five minutes after installing. |
+| `The app registration is missing the TeamsActivity.Send application permission` | Microsoft Graph returned HTTP 403 to a Service Principal credential. The app registration lacks the `TeamsActivity.Send` application permission or its admin consent. | Add the permission and grant admin consent. As an alternative, add the `TeamsActivity.Send.User` resource-specific permission to the companion app's manifest and install the updated app for the recipient.                                                            |
+| `The credential is missing the TeamsActivity.Send permission`                   | Microsoft Graph returned HTTP 403 to an OAuth2 credential. The token lacks the delegated `TeamsActivity.Send` scope.                                                  | Reconnect the credential. With **Custom Scopes**, add the scope to **Enabled Scopes** first. On a **Microsoft OAuth2 (Graph)** credential, add it to **Scope**.                                                                                                         |
+| `The Topic Link is required`, `The Topic Link must be a Microsoft Teams link`   | The node checked the link before sending. It's empty, not `https`, or not on a Microsoft Teams domain.                                                                | Enter a Teams deep link. Refer to [Topic Link](n8n-nodes-base.microsoftteams.md#topic-link).                                                                                                                                                                            |
+| `The recipient was not found`                                                   | Microsoft Graph returned HTTP 404 for the user ID or UPN.                                                                                                             | Check the value, or pick the user **From List**. Give guest users by object ID.                                                                                                                                                                                         |
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Microsoft Teams node documentation integration templates](https://n8n.io/integrations/microsoft-teams) or [search all templates](https://n8n.io/workflows/)
 
@@ -383,12 +395,12 @@ Refer to [Microsoft Teams' API documentation](https://learn.microsoft.com/en-us/
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

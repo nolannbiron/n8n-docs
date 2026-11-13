@@ -29,13 +29,15 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # HTTP Request credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [HTTP Request](../core-nodes/n8n-nodes-base.httprequest/README.md)
+* [HTTP Request](../core-nodes/n8n-nodes-base.httprequest/)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -72,10 +74,10 @@ To use a predefined credential type:
 
 1. Open your HTTP Request or GraphQL node, or add a new one to your workflow.
 2. In **Authentication**, select **Predefined Credential Type**.
-3. In **Credential Type**, select the API you want to use. 
+3. In **Credential Type**, select the API you want to use.
 4. In **Credential for `<API name>`**, you can:
-    1. Select an existing credential for that platform, if available.
-    2. Select **Create New** to create a new credential.
+   1. Select an existing credential for that platform, if available.
+   2. Select **Create New** to create a new credential.
 
 Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.
 
@@ -85,8 +87,8 @@ Use this generic authentication if your app or service supports basic authentica
 
 To configure this credential, enter:
 
-- The **Username** you use to access the app or service your HTTP Request is targeting
-- The **Password** that goes with that username
+* The **Username** you use to access the app or service your HTTP Request is targeting
+* The **Password** that goes with that username
 
 ## Using digest auth <a href="#using-digest-auth" id="using-digest-auth"></a>
 
@@ -94,8 +96,8 @@ Use this generic authentication if your app or service supports digest authentic
 
 To configure this credential, enter:
 
-- The **Username** you use to access the app or service your HTTP Request is targeting
-- The **Password** that goes with that username
+* The **Username** you use to access the app or service your HTTP Request is targeting
+* The **Password** that goes with that username
 
 ## Using header auth <a href="#using-header-auth" id="using-header-auth"></a>
 
@@ -103,8 +105,8 @@ Use this generic authentication if your app or service supports header authentic
 
 To configure this credential, enter:
 
-- The header **Name** you need to pass to the app or service your HTTP request is targeting
-- The **Value** for the header 
+* The header **Name** you need to pass to the app or service your HTTP request is targeting
+* The **Value** for the header
 
 Read more about [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#authentication)
 
@@ -114,7 +116,7 @@ Use this generic authentication if your app or service supports bearer authentic
 
 To configure this credential, enter:
 
-- The **Bearer Token** you need to pass to the app or service your HTTP request is targeting
+* The **Bearer Token** you need to pass to the app or service your HTTP request is targeting
 
 Read more about [bearer authentication](https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/).
 

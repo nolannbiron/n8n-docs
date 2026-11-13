@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Install verified community nodes
@@ -54,6 +56,6 @@ If you don't want verified community nodes to appear in the nodes panel, turn **
 To uninstall a community node:
 
 1. Go to **Settings** > **Community nodes**.
-2. On the node you want to install, select **Options** <img src="../../.gitbook/assets/three-dot-options-menu (2).png" alt="Three dots options menu" data-size="line">.
+2. On the node you want to install, select **Options** <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Three dots options menu" data-size="line">.
 3. Select **Uninstall package**.
 4. Select **Uninstall Package** in the confirmation modal.

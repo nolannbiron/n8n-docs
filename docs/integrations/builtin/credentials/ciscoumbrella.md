@@ -1,33 +1,50 @@
 ---
 title: Cisco Umbrella credentials
-description: >-
-  Documentation for the Cisco Umbrella credentials. Use these credentials to
-  authenticate Cisco Umbrella in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Cisco Umbrella credentials
 originalFilePath: integrations/builtin/credentials/ciscoumbrella.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/ciscoumbrella'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/ciscoumbrella'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/ciscoumbrella
+url: https://docs.n8n.io/integrations/builtin/credentials/ciscoumbrella
+description: >-
+  Documentation for the Cisco Umbrella credentials. Use these credentials to
+  authenticate Cisco Umbrella in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Cisco Umbrella credentials <a href="#cisco-umbrella-credentials" id="cisco-umbrella-credentials"></a>
+# Cisco Umbrella credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-- Create a [Cisco DevNet developer account](https://developer.cisco.com).
-- A [Cisco Umbrella user account](https://umbrella.cisco.com/) with **Full Admin** role.
+* Create a [Cisco DevNet developer account](https://developer.cisco.com).
+* A [Cisco Umbrella user account](https://umbrella.cisco.com/) with **Full Admin** role.
 
 ## Authentication methods <a href="#authentication-methods" id="authentication-methods"></a>
 
-- API key
+* API key
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -39,7 +56,7 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need:
 
-- An **API Key**
-- A **Secret**: Provided when you generate an API key
+* An **API Key**
+* A **Secret**: Provided when you generate an API key
 
 Refer to the [Cisco Umbrella Manage API Keys documentation](https://developer.cisco.com/docs/cloud-security/authentication/#manage-api-keys) for instructions on creating an Umbrella API key.

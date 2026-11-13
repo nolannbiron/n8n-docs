@@ -28,13 +28,15 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Chat Trigger
 
 Use the Chat Trigger node when building AI workflows for chatbots and other chat interfaces. You can configure how users access the chat, using one of n8n's provided interfaces, or your own. You can add authentication.
 
-You must connect either an agent or chain [root node](../../cluster-nodes/root-nodes/README.md).
+You must connect either an agent or chain [root node](../../cluster-nodes/root-nodes/).
 
 {% hint style="warning" %}
 **Workflow execution usage**
@@ -60,7 +62,7 @@ Leave this turned off while you're building the workflow. Turn it on when you're
 
 Choose how users access the chat. Select from:
 
-* **Hosted Chat**: Use n8n's hosted chat interface. Recommended for most users because you can configure the interface using the [node options](./README.md#node-options) and don't have to do any other setup.
+* **Hosted Chat**: Use n8n's hosted chat interface. Recommended for most users because you can configure the interface using the [node options](./#node-options) and don't have to do any other setup.
 * **Embedded Chat**: This option requires you to create your own chat interface. You can use n8n's [chat widget](https://www.npmjs.com/package/@n8n/chat) or build your own. Your chat interface must call the webhook URL shown in **Chat URL** in the node.
 
 #### Authentication <a href="#authentication" id="authentication"></a>
@@ -134,8 +136,7 @@ Use this option when building a workflow with steps after the agent or chain tha
 
 * **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
 * **Using Response Nodes**: The Chat Trigger node responds as defined in a [Chat](../n8n-nodes-langchain.chat.md) node or [Respond to Webhook](../n8n-nodes-base.respondtowebhook.md) node. In this response mode, the Chat Trigger will solely show messages as defined in these nodes and not output the data from the last node executed in the workflow. This mode replaces the 'Using Respond to Webhook Node' mode from Chat Trigger node version 1.2.
-
-* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node).
+* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node).
 
 #### Require Button Click to Start Chat <a href="#require-button-click-to-start-chat" id="require-button-click-to-start-chat"></a>
 
@@ -177,7 +178,6 @@ Use this option when building a workflow with steps after the agent or chain tha
 
 * **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
 * **Using Response Nodes**: The Chat Trigger node responds as defined in a [Chat](../n8n-nodes-langchain.chat.md) node or [Respond to Webhook](../n8n-nodes-base.respondtowebhook.md) node. In this response mode, the Chat Trigger will solely show messages as defined in these nodes and not output the data from the last node executed in the workflow. This mode replaces the 'Using Respond to Webhook Node' mode from Chat Trigger node version 1.2.
-
 * **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support enabled.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
@@ -210,11 +210,11 @@ Add the Chat Trigger node as the workflow's trigger, then connect an agent or ch
 
 ### How do I make the chat public or embed it on my site?
 
-Turn on [Make Chat Publicly Available](#make-chat-publicly-available), then choose a **Mode**. **Hosted Chat** uses n8n's hosted interface with no extra setup. **Embedded Chat** lets you use n8n's [chat widget](https://www.npmjs.com/package/@n8n/chat) or your own interface, which calls the **Chat URL** webhook shown in the node.
+Turn on [Make Chat Publicly Available](./#make-chat-publicly-available), then choose a **Mode**. **Hosted Chat** uses n8n's hosted interface with no extra setup. **Embedded Chat** lets you use n8n's [chat widget](https://www.npmjs.com/package/@n8n/chat) or your own interface, which calls the **Chat URL** webhook shown in the node.
 
 ### How do I set the chatbot's response from my workflow?
 
-In a basic workflow, the Chat Trigger sends the Agent or Chain node's `output` or `text` value to the user. To customize the response, create a parameter named `text` or `output`. See [Set the chat response manually](#set-the-chat-response-manually). If you use a Chat node, set **Response Mode** to **Using Response Nodes**.
+In a basic workflow, the Chat Trigger sends the Agent or Chain node's `output` or `text` value to the user. To customize the response, create a parameter named `text` or `output`. See [Set the chat response manually](./#set-the-chat-response-manually). If you use a Chat node, set **Response Mode** to **Using Response Nodes**.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

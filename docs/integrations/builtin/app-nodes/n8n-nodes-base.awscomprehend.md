@@ -1,8 +1,5 @@
 ---
 title: AWS Comprehend node documentation
-description: >-
-  Learn how to use the AWS Comprehend node in n8n. Follow technical
-  documentation to integrate AWS Comprehend node into your workflows.
 contentType:
   - integration
   - reference
@@ -12,12 +9,32 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend
+description: >-
+  Learn how to use the AWS Comprehend node in n8n. Follow technical
+  documentation to integrate AWS Comprehend node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# AWS Comprehend node <a href="#aws-comprehend-node" id="aws-comprehend-node"></a>
+# AWS Comprehend
 
 Use the AWS Comprehend node to automate work in AWS Comprehend, and integrate AWS Comprehend with other applications. n8n has built-in support for a wide range of AWS Comprehend features, including identifying and analyzing texts.
 
@@ -33,23 +50,21 @@ Refer to [AWS Comprehend credentials](../credentials/aws.md) for guidance on set
 
 **Text**
 
-- Identify the dominant language
-- Analyse the sentiment of the text
+* Identify the dominant language
+* Analyse the sentiment of the text
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse AWS Comprehend node documentation integration templates](https://n8n.io/integrations/aws-comprehend) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

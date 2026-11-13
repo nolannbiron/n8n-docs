@@ -1,29 +1,46 @@
 ---
 title: Chat node documentation
-description: >-
-  Learn how to use the Chat node in n8n. Follow technical documentation to
-  integrate the Chat node into your workflows.
 contentType:
   - integration
   - reference
 priority: critical
 nodeTitle: Chat node documentation
 originalFilePath: integrations/builtin/core-nodes/n8n-nodes-langchain.chat.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chat'
-url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chat'
+originalUrl: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chat
+url: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chat
+description: >-
+  Learn how to use the Chat node in n8n. Follow technical documentation to
+  integrate the Chat node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Chat node <a href="#chat-node" id="chat-node"></a>
+# Chat
 
-Use the Chat node with the [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) node to send messages into the chat and optionally wait for responses from users. This enables human-in-the-loop (HITL) use cases in chat workflows, allowing you to have multiple chat interactions within a single execution. The Chat node also works as a tool for AI Agents.
+Use the Chat node with the [Chat Trigger](n8n-nodes-langchain.chattrigger/) node to send messages into the chat and optionally wait for responses from users. This enables human-in-the-loop (HITL) use cases in chat workflows, allowing you to have multiple chat interactions within a single execution. The Chat node also works as a tool for AI Agents.
 
 {% hint style="info" %}
 **Chat Trigger node**
 
-The Chat node requires a [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) node to be present in the workflow, with the [Response Mode](n8n-nodes-langchain.chattrigger/README.md#response-mode) set to 'Using Response Nodes'.
+The Chat node requires a [Chat Trigger](n8n-nodes-langchain.chattrigger/) node to be present in the workflow, with the [Response Mode](n8n-nodes-langchain.chattrigger/#response-mode) set to 'Using Response Nodes'.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -61,7 +78,7 @@ The Chat node supports the following operations:
 * **Send Message**: Send a message to the chat. The workflow execution continues immediately after sending.
 * **Send and Wait for Response**: Send a message to the chat and wait for a response from the user. This operation pauses the workflow execution until the user submits a response.
 
-Choosing **Send and Wait for Response** activates additional parameters and options as discussed in [waiting for a response](#waiting-for-a-response).
+Choosing **Send and Wait for Response** activates additional parameters and options as discussed in [waiting for a response](n8n-nodes-langchain.chat.md#waiting-for-a-response).
 
 ### Message <a href="#message" id="message"></a>
 
@@ -73,7 +90,7 @@ Use these **Options** to further refine the node's behavior.
 
 ### Add Memory Input Connection <a href="#add-memory-input-connection" id="add-memory-input-connection"></a>
 
-Choose whether you want to commit the messages from the Chat node to a connected memory. Using a shared memory between an agent or chain [root node](../cluster-nodes/root-nodes/README.md) and the Chat node attaches the same session key to these messages and lets you capture the full message history.
+Choose whether you want to commit the messages from the Chat node to a connected memory. Using a shared memory between an agent or chain [root node](../cluster-nodes/root-nodes/) and the Chat node attaches the same session key to these messages and lets you capture the full message history.
 
 ## Waiting for a response <a href="#waiting-for-a-response" id="waiting-for-a-response"></a>
 
@@ -93,11 +110,13 @@ Different parameters and options are available depending on which type you choos
 When using the Free Text response type, the user can type any message as their response.
 
 **Use cases:**
-- Open-ended questions
-- Collecting detailed feedback
-- Requesting specific information
+
+* Open-ended questions
+* Collecting detailed feedback
+* Requesting specific information
 
 **Options:**
+
 * **Limit Wait Time**: Whether the workflow automatically resumes execution after a specified time limit. This can be an interval or a specific wall time.
 
 ### Approval parameters and options <a href="#approval-parameters-and-options" id="approval-parameters-and-options"></a>
@@ -105,23 +124,21 @@ When using the Free Text response type, the user can type any message as their r
 When using the Approval response type, the message displays inline buttons that users can click to approve or disapprove. This response type follows the same pattern as other human-in-the-loop (HITL) nodes in n8n.
 
 **Use cases:**
-- Simple yes/no decisions
-- Approval workflows
-- Confirmations
+
+* Simple yes/no decisions
+* Approval workflows
+* Confirmations
 
 When using the Approval response type, the following parameters are available:
 
 * **Type of Approval**: Whether to present only an approval button or both approval and disapproval buttons.
-    - **Approve Only**: Displays a single approval button
-    - **Approve and Disapprove**: Displays both buttons (default)
-
+  * **Approve Only**: Displays a single approval button
+  * **Approve and Disapprove**: Displays both buttons (default)
 * **Approve Button Label**: The text to display on the approval button. Default: `Approve`
-
 * **Disapprove Button Label**: The text to display on the disapproval button (only shown when Type of Approval is "Approve and Disapprove"). Default: `Disapprove`
-
 * **Block User Input**: Whether to prevent users from typing custom messages (enabled) or allow them to type responses (disabled, default).
-    - When **disabled** (default): Users can click buttons or type a custom message. Typed messages are treated as disapproval with a custom message.
-    - When **enabled**: Users can only interact using the buttons.
+  * When **disabled** (default): Users can click buttons or type a custom message. Typed messages are treated as disapproval with a custom message.
+  * When **enabled**: Users can only interact using the buttons.
 
 The Approval response type also offers the following option:
 
@@ -131,7 +148,7 @@ The Approval response type also offers the following option:
 
 View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
-Refer to the [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) node documentation for information about setting up the chat interface.
+Refer to the [Chat Trigger](n8n-nodes-langchain.chattrigger/) node documentation for information about setting up the chat interface.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -139,9 +156,9 @@ Refer to the [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) node docu
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
-- The Chat node isn't supported when the Chat Trigger node's **Mode** is set to **Embedded**. In Embedded mode, the Chat Trigger node only offers **Respond to Webhook** as a response mode. Use the [Respond to Webhook](n8n-nodes-base.respondtowebhook.md) node instead.
-- The Chat node doesn't work when used as a tool of a sub-agent.
-- The Chat node doesn't work when used in a sub-workflow. This includes usage in a sub-workflow that's being used as a tool for an AI Agent.
-- Make sure the Chat Trigger node's Response Mode is set to "Using Response Nodes" for the Chat node to function properly.
+* The Chat node isn't supported when the Chat Trigger node's **Mode** is set to **Embedded**. In Embedded mode, the Chat Trigger node only offers **Respond to Webhook** as a response mode. Use the [Respond to Webhook](n8n-nodes-base.respondtowebhook.md) node instead.
+* The Chat node doesn't work when used as a tool of a sub-agent.
+* The Chat node doesn't work when used in a sub-workflow. This includes usage in a sub-workflow that's being used as a tool for an AI Agent.
+* Make sure the Chat Trigger node's Response Mode is set to "Using Response Nodes" for the Chat node to function properly.
 
 For common questions or issues with the Chat Trigger node, refer to [Common Chat Trigger Node Issues](n8n-nodes-langchain.chattrigger/common-issues.md).

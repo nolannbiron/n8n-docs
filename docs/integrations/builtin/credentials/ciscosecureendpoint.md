@@ -1,33 +1,50 @@
 ---
 title: Cisco Secure Endpoint credentials
-description: >-
-  Documentation for the Cisco Secure Endpoint credentials. Use these credentials
-  to authenticate Cisco Secure Endpoint in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Cisco Secure Endpoint credentials
 originalFilePath: integrations/builtin/credentials/ciscosecureendpoint.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/ciscosecureendpoint'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/ciscosecureendpoint'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/ciscosecureendpoint
+url: https://docs.n8n.io/integrations/builtin/credentials/ciscosecureendpoint
+description: >-
+  Documentation for the Cisco Secure Endpoint credentials. Use these credentials
+  to authenticate Cisco Secure Endpoint in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Cisco Secure Endpoint credentials <a href="#cisco-secure-endpoint-credentials" id="cisco-secure-endpoint-credentials"></a>
+# Cisco Secure Endpoint credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-- Create a [Cisco DevNet developer account](https://developer.cisco.com).
-- Access to a [Cisco Secure Endpoint license](https://www.cisco.com/site/us/en/products/security/endpoint-security/secure-endpoint/index.html).
+* Create a [Cisco DevNet developer account](https://developer.cisco.com).
+* Access to a [Cisco Secure Endpoint license](https://www.cisco.com/site/us/en/products/security/endpoint-security/secure-endpoint/index.html).
 
 ## Authentication methods <a href="#authentication-methods" id="authentication-methods"></a>
 
-- OAuth2
+* OAuth2
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -39,12 +56,11 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need:
 
-- The **Region** for your Cisco Secure Endpoint. Options are:
-    - Asia Pacific, Japan, and China
-    - Europe
-    - North America
-- A **Client ID**: Provided when you register a SecureX API Client
-- A **Client Secret**: Provided when you register a SecureX API Client
+* The **Region** for your Cisco Secure Endpoint. Options are:
+  * Asia Pacific, Japan, and China
+  * Europe
+  * North America
+* A **Client ID**: Provided when you register a SecureX API Client
+* A **Client Secret**: Provided when you register a SecureX API Client
 
 To get a Client ID and Client Secret, you'll need to Register a SecureX API Client. Refer to [Cisco Secure Endpoint's authentication documentation](https://developer.cisco.com/docs/secure-endpoint/authentication/#authentication) for detailed instructions. Use the SecureX **Client Password** as the **Client Secret** within the n8n credential.
-

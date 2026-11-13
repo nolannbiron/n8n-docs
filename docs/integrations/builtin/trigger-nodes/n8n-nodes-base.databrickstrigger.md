@@ -3,11 +3,28 @@ description: >-
   Start n8n workflows when a Databricks job run or pipeline update starts,
   succeeds, or fails. Set up the polling trigger or a webhook alternative.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Databricks Trigger node
+# Databricks Trigger
 
 Use the Databricks Trigger node to respond to events in [Databricks](https://www.databricks.com/) and integrate Databricks with other applications. The node starts a workflow when a run of a Databricks job or an update of a Databricks pipeline starts, succeeds, or fails.
 
@@ -20,16 +37,16 @@ Refer to [Databricks credentials](../credentials/databricks.md) for guidance on 
 ## Set up the trigger
 
 1. Add a **Databricks Trigger** node to a workflow. In the node picker, search for `Databricks` and open the **Databricks** entry. It lists the job events as triggers; pick any of them, then set **Resource** and **Events** in the node.
-2. Set **Authentication** to **Access Token** or **OAuth2** and select the credential. For an **OAuth2** credential, set its **Grant Type** to **Client Credentials (Service Principal)** for a service principal, or to **Authorization Code (User)** for a signed-in user. Refer to [Use a service principal](#use-a-service-principal).
+2. Set **Authentication** to **Access Token** or **OAuth2** and select the credential. For an **OAuth2** credential, set its **Grant Type** to **Client Credentials (Service Principal)** for a service principal, or to **Authorization Code (User)** for a signed-in user. Refer to [Use a service principal](n8n-nodes-base.databrickstrigger.md#use-a-service-principal).
 3. Set **Resource** to **Job** to watch the runs of a job, or to **Pipeline** to watch the updates of a Databricks pipeline.
 4. Select the job in **Job**, or the pipeline in **Pipeline**. Each field offers three modes:
-	* **From List**: select from the workspace. Type to filter by name. The pipeline list also matches the ID. Databricks lists only the jobs the credential's identity has **CAN VIEW** on.
-	* **By ID**: enter the ID. A job ID is a whole number, for example `281874479417551`. A pipeline ID is a UUID, for example `8199cd89-e2f5-4169-a6aa-656a24c8886d`.
-	* **By URL**: paste the page URL from Databricks, for example `https://<your-workspace>/jobs/<job-id>` or `https://<your-workspace>/pipelines/<pipeline-id>`. The node also accepts the hash form of both pages, such as `https://<your-workspace>/?o=<workspace-id>#job/<job-id>` and `https://<your-workspace>/?o=<workspace-id>#joblist/pipelines/<pipeline-id>`.
-5. Select the **Events** that start the workflow. Refer to [Events](#events).
-6. Keep **Simplify** on to get the output described in [Output](#output). Turn it off to get the raw Databricks object.
-7. Under **Poll Times**, select a poll **Mode** to set how often the trigger checks Databricks. The default is **Every Minute**. Refer to [How the trigger polls](#how-the-trigger-polls).
-8. Select **Fetch Test Event** to check the setup. Refer to [Test the trigger](#test-the-trigger).
+   * **From List**: select from the workspace. Type to filter by name. The pipeline list also matches the ID. Databricks lists only the jobs the credential's identity has **CAN VIEW** on.
+   * **By ID**: enter the ID. A job ID is a whole number, for example `281874479417551`. A pipeline ID is a UUID, for example `8199cd89-e2f5-4169-a6aa-656a24c8886d`.
+   * **By URL**: paste the page URL from Databricks, for example `https://<your-workspace>/jobs/<job-id>` or `https://<your-workspace>/pipelines/<pipeline-id>`. The node also accepts the hash form of both pages, such as `https://<your-workspace>/?o=<workspace-id>#job/<job-id>` and `https://<your-workspace>/?o=<workspace-id>#joblist/pipelines/<pipeline-id>`.
+5. Select the **Events** that start the workflow. Refer to [Events](n8n-nodes-base.databrickstrigger.md#events).
+6. Keep **Simplify** on to get the output described in [Output](n8n-nodes-base.databrickstrigger.md#output). Turn it off to get the raw Databricks object.
+7. Under **Poll Times**, select a poll **Mode** to set how often the trigger checks Databricks. The default is **Every Minute**. Refer to [How the trigger polls](n8n-nodes-base.databrickstrigger.md#how-the-trigger-polls).
+8. Select **Fetch Test Event** to check the setup. Refer to [Test the trigger](n8n-nodes-base.databrickstrigger.md#test-the-trigger).
 9. Publish the workflow.
 
 ## Events
@@ -57,7 +74,7 @@ Available when **Resource** is **Pipeline**. The default selection is **Update C
 {% hint style="info" %}
 **Continuous pipelines**
 
-A continuous pipeline runs one update until you stop it, so **Update Completed** never happens for it. **Update Started** happens when the pipeline starts or restarts. **Update Failed** happens when the update fails or when you stop the pipeline. Refer to [Watch a pipeline through a job](#watch-a-pipeline-through-a-job) for a way to get a completion signal.
+A continuous pipeline runs one update until you stop it, so **Update Completed** never happens for it. **Update Started** happens when the pipeline starts or restarts. **Update Failed** happens when the update fails or when you stop the pipeline. Refer to [Watch a pipeline through a job](n8n-nodes-base.databrickstrigger.md#watch-a-pipeline-through-a-job) for a way to get a completion signal.
 {% endhint %}
 
 ## Output
@@ -66,24 +83,24 @@ With **Simplify** on, each item has the same top-level keys for both resources: 
 
 ### Job output
 
-| Field | Value |
-|-------|-------|
-| `event` | `runStarted`, `runSucceeded`, or `runFailed`. |
-| `job.id` | The job ID. |
-| `run.id` | The run ID. Pass it to the **Get Run** or **Get Run Output** operation of the Databricks node, as in [Example: Notify when a job run fails](../app-nodes/n8n-nodes-base.databricks.md#example-notify-when-a-job-run-fails). |
-| `run.name` | The run name. |
-| `run.url` | The run page URL in Databricks. |
-| `run.trigger` | What started the run, for example `ONE_TIME`. |
-| `run.creator` | The user or service principal that created the run. |
-| `run.parameters` | The job parameters of the run, as name and value pairs. A parameter without a value shows its default. |
-| `result.state` | The life cycle state. `TERMINATED` for a finished run. |
-| `result.code` | The termination code, for example `SUCCESS`, `SUCCESS_WITH_FAILURES`, `USER_CANCELED`, or `RUN_EXECUTION_ERROR`. A run canceled by a user has `USER_CANCELED`. `CANCELED` means Databricks canceled the run, for example when it exceeded its maximum duration. Refer to `termination_details.code` in the [Databricks API reference](https://docs.databricks.com/api/workspace/jobs/getrun) for the full list. |
-| `result.type` | The termination type, for example `SUCCESS` or `CLIENT_ERROR`. |
-| `result.message` | The termination message. Absent when Databricks gives none. |
-| `timing.startedAt` | The start time in UTC. |
-| `timing.endedAt` | The end time in UTC. Absent while the run is still going. |
-| `timing.durationMs` | The run duration in milliseconds. On a **Run Started** item, the time the run had been going when the trigger polled. |
-| `timing.queuedMs` | The time the run waited in the queue, in milliseconds. |
+| Field               | Value                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `event`             | `runStarted`, `runSucceeded`, or `runFailed`.                                                                                                                                                                                                                                                                                                                                                                   |
+| `job.id`            | The job ID.                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `run.id`            | The run ID. Pass it to the **Get Run** or **Get Run Output** operation of the Databricks node, as in [Example: Notify when a job run fails](../app-nodes/n8n-nodes-base.databricks.md#example-notify-when-a-job-run-fails).                                                                                                                                                                                     |
+| `run.name`          | The run name.                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `run.url`           | The run page URL in Databricks.                                                                                                                                                                                                                                                                                                                                                                                 |
+| `run.trigger`       | What started the run, for example `ONE_TIME`.                                                                                                                                                                                                                                                                                                                                                                   |
+| `run.creator`       | The user or service principal that created the run.                                                                                                                                                                                                                                                                                                                                                             |
+| `run.parameters`    | The job parameters of the run, as name and value pairs. A parameter without a value shows its default.                                                                                                                                                                                                                                                                                                          |
+| `result.state`      | The life cycle state. `TERMINATED` for a finished run.                                                                                                                                                                                                                                                                                                                                                          |
+| `result.code`       | The termination code, for example `SUCCESS`, `SUCCESS_WITH_FAILURES`, `USER_CANCELED`, or `RUN_EXECUTION_ERROR`. A run canceled by a user has `USER_CANCELED`. `CANCELED` means Databricks canceled the run, for example when it exceeded its maximum duration. Refer to `termination_details.code` in the [Databricks API reference](https://docs.databricks.com/api/workspace/jobs/getrun) for the full list. |
+| `result.type`       | The termination type, for example `SUCCESS` or `CLIENT_ERROR`.                                                                                                                                                                                                                                                                                                                                                  |
+| `result.message`    | The termination message. Absent when Databricks gives none.                                                                                                                                                                                                                                                                                                                                                     |
+| `timing.startedAt`  | The start time in UTC.                                                                                                                                                                                                                                                                                                                                                                                          |
+| `timing.endedAt`    | The end time in UTC. Absent while the run is still going.                                                                                                                                                                                                                                                                                                                                                       |
+| `timing.durationMs` | The run duration in milliseconds. On a **Run Started** item, the time the run had been going when the trigger polled.                                                                                                                                                                                                                                                                                           |
+| `timing.queuedMs`   | The time the run waited in the queue, in milliseconds.                                                                                                                                                                                                                                                                                                                                                          |
 
 A **Run Failed** item looks like this:
 
@@ -116,21 +133,21 @@ A **Run Failed** item looks like this:
 
 ### Pipeline output
 
-| Field | Value |
-|-------|-------|
-| `event` | `updateStarted`, `updateCompleted`, or `updateFailed`. |
-| `pipeline.id` | The pipeline ID. |
-| `pipeline.name` | The pipeline name. Absent when the Databricks event carries none. |
-| `pipeline.url` | The pipeline page URL in Databricks. |
-| `update.id` | The update ID. |
-| `update.url` | The update page URL in Databricks. |
-| `result.state` | `COMPLETED`, `FAILED`, or `CANCELED`. |
-| `result.message` | The message of the Databricks event, for example `Update 01ee1d is COMPLETED.`. |
-| `result.errors` | The exceptions of a failed update. Each entry has `type`, `code`, `sqlState`, `message`, and `stack`, where `stack` lists `class`, `method`, `file`, and `line` for each frame. Absent when the event has no exceptions. |
-| `timing.startedAt` | The time of the first in-flight event the trigger saw for the update. Absent when the trigger saw only the final event, for example when the update was already running when you published the workflow. |
-| `timing.runningAt` | The time the update reached the `RUNNING` state. Absent when the trigger didn't see that event. |
-| `timing.endedAt` | The time of the final event. Absent on **Update Started**. |
-| `timing.durationMs` | `endedAt` minus `runningAt`, in milliseconds. Absent when `runningAt` is absent. |
+| Field               | Value                                                                                                                                                                                                                    |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `event`             | `updateStarted`, `updateCompleted`, or `updateFailed`.                                                                                                                                                                   |
+| `pipeline.id`       | The pipeline ID.                                                                                                                                                                                                         |
+| `pipeline.name`     | The pipeline name. Absent when the Databricks event carries none.                                                                                                                                                        |
+| `pipeline.url`      | The pipeline page URL in Databricks.                                                                                                                                                                                     |
+| `update.id`         | The update ID.                                                                                                                                                                                                           |
+| `update.url`        | The update page URL in Databricks.                                                                                                                                                                                       |
+| `result.state`      | `COMPLETED`, `FAILED`, or `CANCELED`.                                                                                                                                                                                    |
+| `result.message`    | The message of the Databricks event, for example `Update 01ee1d is COMPLETED.`.                                                                                                                                          |
+| `result.errors`     | The exceptions of a failed update. Each entry has `type`, `code`, `sqlState`, `message`, and `stack`, where `stack` lists `class`, `method`, `file`, and `line` for each frame. Absent when the event has no exceptions. |
+| `timing.startedAt`  | The time of the first in-flight event the trigger saw for the update. Absent when the trigger saw only the final event, for example when the update was already running when you published the workflow.                 |
+| `timing.runningAt`  | The time the update reached the `RUNNING` state. Absent when the trigger didn't see that event.                                                                                                                          |
+| `timing.endedAt`    | The time of the final event. Absent on **Update Started**.                                                                                                                                                               |
+| `timing.durationMs` | `endedAt` minus `runningAt`, in milliseconds. Absent when `runningAt` is absent.                                                                                                                                         |
 
 An **Update Completed** item looks like this:
 
@@ -165,7 +182,7 @@ With **Simplify** off, each item is the object Databricks returns, plus the `eve
 
 ## How the trigger polls
 
-The node checks Databricks on the schedule in **Poll Times**. An event reaches the workflow up to one poll interval after it happens. Refer to [Get events in seconds with a webhook](#get-events-in-seconds-with-a-webhook) if that's too slow.
+The node checks Databricks on the schedule in **Poll Times**. An event reaches the workflow up to one poll interval after it happens. Refer to [Get events in seconds with a webhook](n8n-nodes-base.databrickstrigger.md#get-events-in-seconds-with-a-webhook) if that's too slow.
 
 * The first time you publish the workflow, the trigger starts from that moment. For a job, it doesn't report runs that started earlier. For a pipeline, it still reports the end of an update that was already running when you published, without `timing.startedAt`, `timing.runningAt`, or `timing.durationMs`.
 * When you unpublish and publish again, the trigger continues from where it stopped and reports what happened while the workflow stayed unpublished. When you change the job or pipeline, or switch **Resource**, it starts fresh from that moment.
@@ -187,7 +204,7 @@ The credential's identity needs **CAN VIEW** on each job or pipeline you watch. 
 
 ## Get events in seconds with a webhook
 
-The trigger polls, so an event reaches the workflow up to one poll interval after it happens. If you need a job event within seconds, let Databricks push it to a [Webhook](../core-nodes/n8n-nodes-base.webhook/README.md) node instead. Databricks job notifications can call a webhook when a run starts, succeeds, or fails. Pipelines can't send webhooks. Refer to [Watch a pipeline through a job](#watch-a-pipeline-through-a-job).
+The trigger polls, so an event reaches the workflow up to one poll interval after it happens. If you need a job event within seconds, let Databricks push it to a [Webhook](../core-nodes/n8n-nodes-base.webhook/) node instead. Databricks job notifications can call a webhook when a run starts, succeeds, or fails. Pipelines can't send webhooks. Refer to [Watch a pipeline through a job](n8n-nodes-base.databrickstrigger.md#watch-a-pipeline-through-a-job).
 
 Before you start:
 
@@ -232,7 +249,7 @@ A continuous pipeline never produces **Update Completed**. To get a completion s
 
 ### You need the event within seconds
 
-Jobs can send webhooks, but pipelines can't. A job with a pipeline task gives the pipeline the webhook path in [Get events in seconds with a webhook](#get-events-in-seconds-with-a-webhook).
+Jobs can send webhooks, but pipelines can't. A job with a pipeline task gives the pipeline the webhook path in [Get events in seconds with a webhook](n8n-nodes-base.databrickstrigger.md#get-events-in-seconds-with-a-webhook).
 
 Refer to [Pipeline task for jobs](https://docs.databricks.com/aws/en/jobs/tasks/pipeline) and [Triggered vs. continuous pipeline mode](https://docs.databricks.com/aws/en/ldp/concepts/pipeline-mode) for more information.
 
@@ -242,9 +259,9 @@ Refer to [Pipeline task for jobs](https://docs.databricks.com/aws/en/jobs/tasks/
 
 * The first time you publish the workflow, the trigger starts from that moment and doesn't replay older runs. Start a new run or update to test it.
 * Open the **Executions** list. A failed poll shows there with the Databricks error.
-* For a job, a missing **CAN VIEW** permission doesn't produce an error. The trigger polls without failing and never fires. Refer to [Permission errors](#permission-errors).
+* For a job, a missing **CAN VIEW** permission doesn't produce an error. The trigger polls without failing and never fires. Refer to [Permission errors](n8n-nodes-base.databrickstrigger.md#permission-errors).
 * Check the **Events** selection. **Run Started** and **Update Started** aren't selected by default.
-* A continuous pipeline never produces **Update Completed**. Refer to [Watch a pipeline through a job](#watch-a-pipeline-through-a-job).
+* A continuous pipeline never produces **Update Completed**. Refer to [Watch a pipeline through a job](n8n-nodes-base.databrickstrigger.md#watch-a-pipeline-through-a-job).
 * A run that's still going produces only **Run Started**. Its final event follows once Databricks reports it as finished.
 * The credential expired. A service principal secret lasts at most 730 days, and a user-login connection ends when its refresh token expires. Refer to [OAuth secrets expire](../credentials/databricks.md#create-a-service-principal-and-oauth-secret) and [Configure token lifetimes](../credentials/databricks.md#configure-token-lifetimes).
 
@@ -256,15 +273,15 @@ Databricks lists only the jobs the credential's identity has **CAN VIEW** on. Th
 
 When the credential's identity lacks **CAN VIEW**, Databricks rejects the request with `PERMISSION_DENIED`. n8n shows the Databricks message as the error and adds one of these hints as the description:
 
-```text
+```
 Grant Can View on the job to the user or service principal of the credential, then retry.
 ```
 
-```text
+```
 Grant Can View on the pipeline to the user or service principal of the credential, then retry.
 ```
 
-You see the error in the node when you select **Fetch Test Event**. In a published workflow, each failed poll appears as a failed execution in the **Executions** list. Refer to [Grant CAN VIEW](#grant-can-view).
+You see the error in the node when you select **Fetch Test Event**. In a published workflow, each failed poll appears as a failed execution in the **Executions** list. Refer to [Grant CAN VIEW](n8n-nodes-base.databrickstrigger.md#grant-can-view).
 
 For a job, Databricks answers the run list with an empty result instead of `PERMISSION_DENIED` when the identity lacks **CAN VIEW**. **Fetch Test Event** then returns nothing, and a published trigger polls without errors and never fires. The only visible sign is that the job is missing from the **From List** picker. Grant **CAN VIEW** on the job, then select **Fetch Test Event** again. The trigger reports runs that happened in the five minutes before the grant on its next poll.
 

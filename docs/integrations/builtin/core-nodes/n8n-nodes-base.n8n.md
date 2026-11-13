@@ -29,6 +29,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # n8n
@@ -46,7 +48,7 @@ Refer to the [API authentication documentation](https://app.gitbook.com/s/kEx4S6
 {% hint style="warning" %}
 **SSL**
 
-This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](n8n-nodes-base.httprequest/README.md) to call the [n8n API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api). The HTTP Request node has options to [provide the SSL certificate](../credentials/httprequest.md#provide-an-ssl-certificate).
+This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](n8n-nodes-base.httprequest/) to call the [n8n API](https://app.gitbook.com/s/kEx4S6twxP979lboYaa8/n8n-api). The HTTP Request node has options to [provide the SSL certificate](../credentials/httprequest.md#provide-an-ssl-certificate).
 {% endhint %}
 
 {% hint style="info" %}

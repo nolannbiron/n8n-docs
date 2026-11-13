@@ -1,8 +1,5 @@
 ---
 title: Basic LLM Chain node documentation
-description: >-
-  Learn how to use the Basic LLM Chain node in n8n. Follow technical
-  documentation to integrate Basic LLM Chain node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,12 +10,32 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm
+description: >-
+  Learn how to use the Basic LLM Chain node in n8n. Follow technical
+  documentation to integrate Basic LLM Chain node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Basic LLM Chain node <a href="#basic-llm-chain-node" id="basic-llm-chain-node"></a>
+# Basic LLM Chain
 
 Use the Basic LLM Chain node to set the prompt that the model will use along with setting an optional parser for the response.
 
@@ -45,9 +62,9 @@ Choose from:
 
 This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
 
-* [Auto-fixing Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
-* [Item List Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
-* [Structured Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
+* [Auto-fixing Output Parser](../sub-nodes/n8n-nodes-langchain.outputparserautofixing.md)
+* [Item List Output Parser](../sub-nodes/n8n-nodes-langchain.outputparseritemlist.md)
+* [Structured Output Parser](../sub-nodes/n8n-nodes-langchain.outputparserstructured/)
 
 ## Chat Messages <a href="#chat-messages" id="chat-messages"></a>
 
@@ -83,7 +100,6 @@ For both the **Image** types, select the **Image Details** to control how the mo
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-
 [Browse Basic LLM Chain node documentation integration templates](https://n8n.io/integrations/basic-llm-chain) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
@@ -91,7 +107,6 @@ For both the **Image** types, select the **Image Details** to control how the mo
 Refer to [LangChain's models documentation](https://docs.langchain.com/oss/javascript/langchain/models) for more information about the service.
 
 View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
-
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
@@ -104,6 +119,6 @@ This error displays when the **Prompt** is empty or invalid.
 You might see this error in one of two scenarios:
 
 1. When you've set the **Prompt** to **Define below** and haven't entered anything in the **Text** field.
-    * To resolve, enter a valid prompt in the **Text** field.
-2. When you've set the **Prompt** to **Connected Chat Trigger Node** and the incoming data has no field called `chatInput`. 
-    * The node expects the `chatInput` field. If your previous node doesn't have this field, add an [Edit Fields (Set)](../../core-nodes/n8n-nodes-base.set.md) node to edit an incoming field name to `chatInput`.
+   * To resolve, enter a valid prompt in the **Text** field.
+2. When you've set the **Prompt** to **Connected Chat Trigger Node** and the incoming data has no field called `chatInput`.
+   * The node expects the `chatInput` field. If your previous node doesn't have this field, add an [Edit Fields (Set)](../../core-nodes/n8n-nodes-base.set.md) node to edit an incoming field name to `chatInput`.

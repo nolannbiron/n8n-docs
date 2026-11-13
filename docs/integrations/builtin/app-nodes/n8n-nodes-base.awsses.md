@@ -1,21 +1,38 @@
 ---
 title: AWS SES node documentation
-description: >-
-  Learn how to use the AWS SES node in n8n. Follow technical documentation to
-  integrate AWS SES node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: AWS SES node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.awsses.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awsses'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awsses'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awsses
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awsses
+description: >-
+  Learn how to use the AWS SES node in n8n. Follow technical documentation to
+  integrate AWS SES node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# AWS SES node <a href="#aws-ses-node" id="aws-ses-node"></a>
+# AWS SES
 
 Use the AWS SES node to automate work in AWS SES, and integrate AWS SES with other applications. n8n has built-in support for a wide range of AWS SES features, including creating, getting, deleting, sending, updating, and adding templates and emails.
 
@@ -36,36 +53,34 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Custom Verification Email
-    * Create a new custom verification email template
-    * Delete an existing custom verification email template
-    * Get the custom email verification template
-    * Get all the existing custom verification email templates for your account
-    * Add an email address to the list of identities
-    * Update an existing custom verification email template.
+  * Create a new custom verification email template
+  * Delete an existing custom verification email template
+  * Get the custom email verification template
+  * Get all the existing custom verification email templates for your account
+  * Add an email address to the list of identities
+  * Update an existing custom verification email template.
 * Email
-    * Send
-    * Send Template
+  * Send
+  * Send Template
 * Template
-    * Create a template
-    * Delete a template
-    * Get a template
-    * Get all templates
-    * Update a template
+  * Create a template
+  * Delete a template
+  * Get a template
+  * Get all templates
+  * Update a template
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse AWS SES node documentation integration templates](https://n8n.io/integrations/aws-ses) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

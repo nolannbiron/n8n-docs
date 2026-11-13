@@ -1,24 +1,41 @@
 ---
 title: GitLab node documentation
-description: >-
-  Learn how to use the GitLab node in n8n. Follow technical documentation to
-  integrate GitLab node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: GitLab node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gitlab'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gitlab'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gitlab
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gitlab
+description: >-
+  Learn how to use the GitLab node in n8n. Follow technical documentation to
+  integrate GitLab node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# GitLab node <a href="#gitlab-node" id="gitlab-node"></a>
+# GitLab
 
-Use the GitLab node to automate work in GitLab, and integrate GitLab with other applications. n8n has built-in support for a wide range of GitLab features, including creating, updating, deleting, and editing issues, repositories, releases and users. 
+Use the GitLab node to automate work in GitLab, and integrate GitLab with other applications. n8n has built-in support for a wide range of GitLab features, including creating, updating, deleting, and editing issues, repositories, releases and users.
 
 On this page, you'll find a list of operations the GitLab node supports and links to more resources.
 
@@ -37,28 +54,28 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * File
-	* Create
-	* Delete
-	* Edit
-	* Get
-	* List
+  * Create
+  * Delete
+  * Edit
+  * Get
+  * List
 * Issue
-    * Create a new issue
-    * Create a new comment on an issue
-    * Edit an issue
-    * Get the data of a single issue
-    * Lock an issue
+  * Create a new issue
+  * Create a new comment on an issue
+  * Edit an issue
+  * Get the data of a single issue
+  * Lock an issue
 * Release
-    * Create a new release
-    * Delete a new release
-    * Get a new release
-    * Get all releases
-    * Update a new release
+  * Create a new release
+  * Delete a new release
+  * Get a new release
+  * Get all releases
+  * Update a new release
 * Repository
-    * Get the data of a single repository
-    * Returns issues of a repository
+  * Get the data of a single repository
+  * Returns issues of a repository
 * User
-    * Returns the repositories of a user
+  * Returns the repositories of a user
 
 ## Working with subgroups and nested repositories
 
@@ -69,9 +86,7 @@ To configure the node for nested subgroups:
 1. **Project Owner**: Enter the full subgroup hierarchy up to the repository, replacing all forward slashes (`/`) with `%2F`. Example: `org%2Fsubgroup1%2Fsubgroup2`
 2. **Project Name**: Enter the project's repository slug. Example: `my-repo`
 
-
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse GitLab node documentation integration templates](https://n8n.io/integrations/gitlab) or [search all templates](https://n8n.io/workflows/)
 
@@ -83,13 +98,12 @@ n8n provides a trigger node for GitLab. Refer to the [GitLab Trigger node docume
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

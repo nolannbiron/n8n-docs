@@ -1,8 +1,5 @@
 ---
 title: OpenAI node documentation
-description: >-
-  Learn how to use the OpenAI node in n8n. Follow technical documentation to
-  integrate OpenAI node into your workflows.
 contentType:
   - integration
   - reference
@@ -11,20 +8,40 @@ search:
   boost: 3
 nodeTitle: n8n-nodes-langchain.openai
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai
+description: >-
+  Learn how to use the OpenAI node in n8n. Follow technical documentation to
+  integrate OpenAI node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# OpenAI node <a href="#openai-node" id="openai-node"></a>
+# OpenAI
 
 {% hint style="info" %}
 On n8n Cloud, you can use the OpenAI node with [Gateway credits](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits) instead of your own OpenAI API key. Select **Use Gateway credits** in the node's credential field to run the node without an OpenAI account.
 {% endhint %}
 
-Use the OpenAI node to automate work in OpenAI and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and assistants, as well as chatting with models. 
+Use the OpenAI node to automate work in OpenAI and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and assistants, as well as chatting with models.
 
 On this page, you'll find a list of operations the OpenAI node supports and links to more resources.
 
@@ -44,33 +61,31 @@ Refer to [OpenAI credentials](../../credentials/openai.md) for guidance on setti
 
 ## Operations <a href="#operations" id="operations"></a>
 
-- **Text**
-	- [**Generate a Chat Completion**](text-operations.md#generate-a-chat-completion)
-	- [**Generate a Model Response**](text-operations.md#generate-a-model-response)
-	- [**Classify Text for Violations**](text-operations.md#classify-text-for-violations)
-- **Image**
-	- [**Analyze Image**](image-operations.md#analyze-image)
-	- [**Generate an Image**](image-operations.md#generate-an-image)
-	- [**Edit an Image**](image-operations.md#edit-an-image)
-- **Audio**
-	- [**Generate Audio**](audio-operations.md#generate-audio)
-	- [**Transcribe a Recording**](audio-operations.md#transcribe-a-recording)
-	- [**Translate a Recording**](audio-operations.md#translate-a-recording)
-- **File**
-	- [**Delete a File**](file-operations.md#delete-a-file)
-	- [**List Files**](file-operations.md#list-files)
-	- [**Upload a File**](file-operations.md#upload-a-file)
-- **Video**
-	- [**Generate a Video**](video-operations.md#generate-video)
-- **Conversation**
-	- [**Create a Conversation**](conversation-operations.md#create-a-conversation)
-	- [**Get a Conversation**](conversation-operations.md#get-a-conversation)
-	- [**Update a Conversation**](conversation-operations.md#update-a-conversation)
-	- [**Remove a Conversation**](conversation-operations.md#remove-a-conversation)
-
+* **Text**
+  * [**Generate a Chat Completion**](text-operations.md#generate-a-chat-completion)
+  * [**Generate a Model Response**](text-operations.md#generate-a-model-response)
+  * [**Classify Text for Violations**](text-operations.md#classify-text-for-violations)
+* **Image**
+  * [**Analyze Image**](image-operations.md#analyze-image)
+  * [**Generate an Image**](image-operations.md#generate-an-image)
+  * [**Edit an Image**](image-operations.md#edit-an-image)
+* **Audio**
+  * [**Generate Audio**](audio-operations.md#generate-audio)
+  * [**Transcribe a Recording**](audio-operations.md#transcribe-a-recording)
+  * [**Translate a Recording**](audio-operations.md#translate-a-recording)
+* **File**
+  * [**Delete a File**](file-operations.md#delete-a-file)
+  * [**List Files**](file-operations.md#list-files)
+  * [**Upload a File**](file-operations.md#upload-a-file)
+* **Video**
+  * [**Generate a Video**](video-operations.md#generate-video)
+* **Conversation**
+  * [**Create a Conversation**](conversation-operations.md#create-a-conversation)
+  * [**Get a Conversation**](conversation-operations.md#get-a-conversation)
+  * [**Update a Conversation**](conversation-operations.md#update-a-conversation)
+  * [**Remove a Conversation**](conversation-operations.md#remove-a-conversation)
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse n8n-nodes-langchain.openai integration templates](https://n8n.io/integrations/openai) or [search all templates](https://n8n.io/workflows/)
 
@@ -84,15 +99,15 @@ For help dealing with rate limits, refer to [Handling rate limits](../../handle-
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../../custom-api-actions-for-existing-nodes.md) for more information.
 
 ## Using tools with OpenAI assistants <a href="#using-tools-with-openai-assistants" id="using-tools-with-openai-assistants"></a>
 
@@ -104,14 +119,16 @@ Once you add a tool connection, the OpenAI node becomes a [root node](#user-cont
 
 ### Operations that support tool connectors <a href="#operations-that-support-tool-connectors" id="operations-that-support-tool-connectors"></a>
 
-- **Text**
-	- [**Generate a Chat Completion**](text-operations.md#generate-a-chat-completion)
-	- [**Generate a Model Response**](text-operations.md#generate-a-model-response)
+* **Text**
+  * [**Generate a Chat Completion**](text-operations.md#generate-a-chat-completion)
+  * [**Generate a Model Response**](text-operations.md#generate-a-model-response)
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
 
 [^1]: Each n8n cluster node contains a single root node that defines the main functionality of the cluster. One or more sub-nodes attach to the root node to extend its functionality.
+
 [^2]: In n8n, cluster nodes are groups of nodes that work together to provide functionality in a workflow. They consist of a root node and one or more sub-nodes that extend the node's functionality.
+
 [^3]: n8n cluster nodes consist of one or more sub-nodes connected to a root node. Sub-nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.

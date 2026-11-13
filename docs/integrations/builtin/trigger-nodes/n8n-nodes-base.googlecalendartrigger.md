@@ -31,6 +31,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Google Calendar Trigger
@@ -40,7 +42,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-Refer to the [Google credentials documentation](../credentials/google/README.md) for authentication information for this node.
+Refer to the [Google credentials documentation](../credentials/google/) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -61,7 +63,7 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Google Calendar. Refer to the [Google Calendar node documentation](../app-nodes/n8n-nodes-base.googlecalendar/README.md) for more information.
+n8n provides an app node for Google Calendar. Refer to the [Google Calendar node documentation](../app-nodes/n8n-nodes-base.googlecalendar/) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/google-calendar-trigger/) on n8n's website.
 

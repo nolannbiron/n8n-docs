@@ -1,22 +1,39 @@
 ---
 title: LinkedIn node documentation
-description: >-
-  Learn how to use the LinkedIn node in n8n. Follow technical documentation to
-  integrate LinkedIn node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: LinkedIn node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.linkedin.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.linkedin'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.linkedin'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.linkedin
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.linkedin
+description: >-
+  Learn how to use the LinkedIn node in n8n. Follow technical documentation to
+  integrate LinkedIn node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# LinkedIn node <a href="#linkedin-node" id="linkedin-node"></a>
+# LinkedIn
 
 Use the LinkedIn node to automate work in LinkedIn, and integrate LinkedIn with other applications. n8n supports creating posts.
 
@@ -37,20 +54,18 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Post
-    * Create
+  * Create
 
 ## Parameters <a href="#parameters" id="parameters"></a>
 
 * **Post As**: choose whether to post as a **Person** or **Organization**.
-* **Person Name or ID** and **Organization URN**: enter an identifier for the person or organization.<br>
+*   **Person Name or ID** and **Organization URN**: enter an identifier for the person or organization.<br>
 
-	<div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Posting as organization</strong></p><p>If posting as an Organization enter the organization number in the URN field. For example, <code>03262013</code> not <code>urn:li:company:03262013</code>.</p></div>
-	
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Posting as organization</strong></p><p>If posting as an Organization enter the organization number in the URN field. For example, <code>03262013</code> not <code>urn:li:company:03262013</code>.</p></div>
 * **Text**: the post contents.
 * **Media Category**: use this when including images or article URLs in your post.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse LinkedIn node documentation integration templates](https://n8n.io/integrations/linkedin) or [search all templates](https://n8n.io/workflows/)
 
@@ -60,14 +75,12 @@ Refer to [LinkedIn's API documentation](https://learn.microsoft.com/en-us/linked
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

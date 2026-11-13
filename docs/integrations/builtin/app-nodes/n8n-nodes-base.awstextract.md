@@ -1,21 +1,38 @@
 ---
 title: AWS Textract node documentation
-description: >-
-  Learn how to use the AWS Textract node in n8n. Follow technical documentation
-  to integrate AWS Textract node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: AWS Textract node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.awstextract.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awstextract'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awstextract'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awstextract
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awstextract
+description: >-
+  Learn how to use the AWS Textract node in n8n. Follow technical documentation
+  to integrate AWS Textract node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# AWS Textract node <a href="#aws-textract-node" id="aws-textract-node"></a>
+# AWS Textract
 
 Use the AWS Textract node to automate work in AWS Textract, and integrate AWS Textract with other applications. n8n has built-in support for a wide range of AWS Textract features, including analyzing invoices.
 
@@ -35,22 +52,20 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 
 ## Operations <a href="#operations" id="operations"></a>
 
-- Analyze Receipt or Invoice
+* Analyze Receipt or Invoice
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse AWS Textract node documentation integration templates](https://n8n.io/integrations/aws-textract) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

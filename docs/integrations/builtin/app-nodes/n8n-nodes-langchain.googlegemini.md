@@ -1,8 +1,5 @@
 ---
 title: Google Gemini node documentation
-description: >-
-  Learn how to use the Google Gemini node in n8n. Follow technical documentation
-  to integrate Google Gemini node into your workflows.
 contentType:
   - integration
   - reference
@@ -12,12 +9,32 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini
+description: >-
+  Learn how to use the Google Gemini node in n8n. Follow technical documentation
+  to integrate Google Gemini node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Google Gemini node <a href="#google-gemini-node" id="google-gemini-node"></a>
+# Google Gemini
 
 {% hint style="info" %}
 On n8n Cloud, you can use the Google Gemini node with [Gateway credits](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/gateway-credits) instead of your own Google API key. Select **Use Gateway credits** in the node's credential field to run the node without a Google account.
@@ -33,50 +50,47 @@ On this page, you'll find a list of operations the Google Gemini node supports, 
 Refer to the [Google Gemini(PaLM) credentials documentation](../credentials/googleai.md) for authentication information for this node.
 {% endhint %}
 
-
 ## Operations <a href="#operations" id="operations"></a>
 
 * Audio:
-	* Analyze Audio: Take in audio and answer questions about it.
-	* Transcribe a Recording: Transcribes audio into text.
+  * Analyze Audio: Take in audio and answer questions about it.
+  * Transcribe a Recording: Transcribes audio into text.
 * Document:
-	* Analyze Document: Take in documents and answer questions about them.
+  * Analyze Document: Take in documents and answer questions about them.
 * File Search:
-	* Create File Search Store: Create a new File Search store for RAG (Retrieval Augmented Generation)
-	* Delete File Search Store: Delete File Search Store
-	* List File Search Stores: List all File Search stores owned by the user
-	* Upload to File Search Store: Upload a file to a File Search store for RAG (Retrieval Augmented Generation)
+  * Create File Search Store: Create a new File Search store for RAG (Retrieval Augmented Generation)
+  * Delete File Search Store: Delete File Search Store
+  * List File Search Stores: List all File Search stores owned by the user
+  * Upload to File Search Store: Upload a file to a File Search store for RAG (Retrieval Augmented Generation)
 * Image:
-	* Analyze Image: Take in images and answer questions about them.
-	* Generate an Image: Creates an image from a text prompt.
-	* Edit Image: Upload one or more images and apply edits based on a prompt
+  * Analyze Image: Take in images and answer questions about them.
+  * Generate an Image: Creates an image from a text prompt.
+  * Edit Image: Upload one or more images and apply edits based on a prompt
 * Media File:
-	* Upload Media File: Upload a file to the Google Gemini API for later user.
+  * Upload Media File: Upload a file to the Google Gemini API for later user.
 * Text:
-	* Message a Model: Create a completion with a Google Gemini model.
+  * Message a Model: Create a completion with a Google Gemini model.
 * Video:
-	* Analyze Video: Take in videos and answer questions about them.
-	* Generate a Video: Creates a video from a text prompt.
-	* Download Video: Download a generated video from the Google Gemini API using a URL.
+  * Analyze Video: Take in videos and answer questions about them.
+  * Generate a Video: Creates a video from a text prompt.
+  * Download Video: Download a generated video from the Google Gemini API using a URL.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Google Gemini node documentation integration templates](https://n8n.io/integrations/google-gemini) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-
 Refer to [Google Gemini's documentation](https://ai.google.dev/gemini-api/docs) for more information about the service.
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

@@ -31,6 +31,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Execute Command
@@ -58,7 +60,7 @@ If you're using [queue mode](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host
 
 The Execute Command node is available on:
 
-- **Self-hosted:** All editions
+* **Self-hosted:** All editions
 
 It isn't available on n8n Cloud.
 {% endhint %}
@@ -73,7 +75,7 @@ Choose whether you want the node to execute only once (turned on) or once for ev
 
 ### Command <a href="#command" id="command"></a>
 
-Enter the command to execute on the host machine. Refer to sections below for examples of running [multiple commands](./README.md#run-multiple-commands) and [cURL commands](./README.md#run-curl-command).
+Enter the command to execute on the host machine. Refer to sections below for examples of running [multiple commands](./#run-multiple-commands) and [cURL commands](./#run-curl-command).
 
 #### Run multiple commands <a href="#run-multiple-commands" id="run-multiple-commands"></a>
 
@@ -93,7 +95,7 @@ Use one of two methods to run multiple commands in one Execute Command node:
 
 #### Run cURL command <a href="#run-curl-command" id="run-curl-command"></a>
 
-You can also use the [HTTP Request](../n8n-nodes-base.httprequest/README.md) node to make a cURL request.
+You can also use the [HTTP Request](../n8n-nodes-base.httprequest/) node to make a cURL request.
 
 If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux.
 
@@ -118,11 +120,13 @@ The `apk` package manager was removed from the official n8n Docker image. To ins
    RUN apk add --no-cache curl
    USER node
 ```
+
 3. In the same folder, execute the command below to build the Docker image.
 
 ```shell
    docker build -t n8n-curl .
 ```
+
 4. Replace the Docker image you used before. For example, replace `n8nio/n8n` with `n8n-curl`.
 5. Run the newly created Docker image. You'll now be able to execute curl using the Execute Command Node.
 

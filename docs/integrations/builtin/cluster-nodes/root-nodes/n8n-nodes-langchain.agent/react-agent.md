@@ -1,8 +1,5 @@
 ---
 title: ReAct AI Agent node documentation
-description: >-
-  Learn how to use the ReAct Agent of the AI Agent node in n8n. Follow technical
-  documentation to integrate the ReAct Agent into your workflows.
 contentType:
   - integration
   - reference
@@ -14,15 +11,35 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/react-agent
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/react-agent
+description: >-
+  Learn how to use the ReAct Agent of the AI Agent node in n8n. Follow technical
+  documentation to integrate the ReAct Agent into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 tags:
   - tag: deprecated
     primary: true
 ---
 
-# ReAct AI Agent node <a href="#react-ai-agent-node" id="react-ai-agent-node"></a>
+# ReAct Agent
 
 {% hint style="warning" %}
 **Feature availability**
@@ -36,7 +53,7 @@ The ReAct Agent node implements [ReAct](https://react-lm.github.io/) logic. ReAc
 
 The ReAct Agent reasons about a given task, determines the necessary actions, and then executes them. It follows the cycle of reasoning and acting until it completes the task. The ReAct agent can break down complex tasks into smaller sub-tasks, prioritise them, and execute them one after the other.
 
-Refer to [AI Agent](README.md) for more information on the AI Agent node itself.
+Refer to [AI Agent](./) for more information on the AI Agent node itself.
 
 {% hint style="info" %}
 **No memory**
@@ -61,9 +78,9 @@ Choose from:
 
 This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
 
-* [Auto-fixing Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
-* [Item List Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
-* [Structured Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
+* [Auto-fixing Output Parser](../../sub-nodes/n8n-nodes-langchain.outputparserautofixing.md)
+* [Item List Output Parser](../../sub-nodes/n8n-nodes-langchain.outputparseritemlist.md)
+* [Structured Output Parser](../../sub-nodes/n8n-nodes-langchain.outputparserstructured/)
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -111,10 +128,8 @@ Refer to LangChain's [ReAct Agents](https://docs.langchain.com/oss/javascript/la
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-Refer to the main AI Agent node's [Templates and examples](README.md#templates-and-examples) section.
+Refer to the main AI Agent node's [Templates and examples](./#templates-and-examples) section.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
-
-

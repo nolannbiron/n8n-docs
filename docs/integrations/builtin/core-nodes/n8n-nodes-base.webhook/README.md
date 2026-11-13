@@ -31,6 +31,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 tags:
   - webhook set route parameters
   - get webhook URL
@@ -112,7 +114,7 @@ Requests without a bearer token are handled as follows:
 * A GET request from a browser is redirected to the n8n sign-in page. After the user signs in and gives consent, n8n redirects the browser back to the webhook URL and runs the workflow.
 * Any other request receives a 401 response. Only GET requests can be redirected.
 
-The **OAuth2 Client** option in [Node options](#node-options) controls this behavior.
+The **OAuth2 Client** option in [Node options](./#node-options) controls this behavior.
 
 When you select **n8n User Auth (OAuth2)**, a **Require Workflow Execute Permission** toggle appears. It is on by default. When it is on, the calling user must also have permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't trigger it. A request with a bearer token from such a user receives a 403 response.
 
@@ -136,7 +138,7 @@ A token is bound to the webhook trigger it was issued for. A token issued for an
 * **Immediately**: The Webhook node returns the response code and the message **Workflow got started**.
 * **When Last Node Finishes**: The Webhook node returns the response code and the data output from the last node executed in the workflow.
 * **Using 'Respond to Webhook' Node**: The Webhook node responds as defined in the [Respond to Webhook](../n8n-nodes-base.respondtowebhook.md) node.
-* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node).
+* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node).
 
 ### Response Code <a href="#response-code" id="response-code"></a>
 
@@ -176,7 +178,7 @@ Select **Add Option** to view more configuration options. The available options 
 | Binary Property        | <p>Either:<br>HTTP Method > POST<br>HTTP Method > PATCH<br>HTTP Method > PUT</p>      |
 | Ignore Bots            | Any                                                                                   |
 | IP(s) Allowlist        | Any                                                                                   |
-| Only Run If           | Any                                                                                   |
+| Only Run If            | Any                                                                                   |
 | Property Name          | <p>Both:<br>Respond > When Last Node Finishes<br>Response Data > First Entry JSON</p> |
 | No Response Body       | Respond > Immediately                                                                 |
 | OAuth2 Client          | Authentication > n8n User Auth (OAuth2)                                               |
@@ -211,15 +213,15 @@ This has the following implications:
 
 ### How do I trigger a workflow from an external event?
 
-Add the Webhook node as your trigger. It creates a [webhook URL](#webhook-urls) that receives data from apps and services when an event occurs, then starts your workflow with that data. It's useful for services that don't have a dedicated app trigger node.
+Add the Webhook node as your trigger. It creates a [webhook URL](./#webhook-urls) that receives data from apps and services when an event occurs, then starts your workflow with that data. It's useful for services that don't have a dedicated app trigger node.
 
 ### What's the difference between the test and production webhook URLs?
 
-The node has two [webhook URLs](#webhook-urls). The **test** URL works when you select **Listen for Test Event**, and it shows the incoming data in the editor. The **production** URL registers when you publish the workflow, and it doesn't display data in the editor. You can view production runs in the workflow's **Executions** tab.
+The node has two [webhook URLs](./#webhook-urls). The **test** URL works when you select **Listen for Test Event**, and it shows the incoming data in the editor. The **production** URL registers when you publish the workflow, and it doesn't display data in the editor. You can view production runs in the workflow's **Executions** tab.
 
 ### How do I secure a webhook?
 
-Require authentication in [Supported authentication methods](#supported-authentication-methods). You can use Basic auth, Header auth, or JWT auth for any service calling the URL, or n8n User Auth (OAuth2) to limit callers to logged-in users of this n8n instance. You can also limit callers with the **IP(s) Allowlist** node option. Refer to [Webhook credentials](../../credentials/webhook.md).
+Require authentication in [Supported authentication methods](./#supported-authentication-methods). You can use Basic auth, Header auth, or JWT auth for any service calling the URL, or n8n User Auth (OAuth2) to limit callers to logged-in users of this n8n instance. You can also limit callers with the **IP(s) Allowlist** node option. Refer to [Webhook credentials](../../credentials/webhook.md).
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

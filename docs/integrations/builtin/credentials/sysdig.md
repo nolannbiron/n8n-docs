@@ -1,23 +1,40 @@
 ---
 title: Sysdig credentials
-description: >-
-  Documentation for the Sysdig credentials. Use these credentials to
-  authenticate Sysdig in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 nodeTitle: Sysdig credentials
 originalFilePath: integrations/builtin/credentials/sysdig.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/sysdig'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/sysdig'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/sysdig
+url: https://docs.n8n.io/integrations/builtin/credentials/sysdig
+description: >-
+  Documentation for the Sysdig credentials. Use these credentials to
+  authenticate Sysdig in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Sysdig Management credentials <a href="#sysdig-management-credentials" id="sysdig-management-credentials"></a>
+# Sysdig credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -25,7 +42,7 @@ Create a [Sysdig](https://sysdig.com) account or configure a local instance.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- Access Key
+* Access Key
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -37,6 +54,6 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need:
 
-- An **Access Key**
+* An **Access Key**
 
 Refer to the [Sysdig Agent Access Keys documentation](https://docs.sysdig.com/en/docs/administration/agent_access_key/) for instructions on obtaining the Access Key from the application.

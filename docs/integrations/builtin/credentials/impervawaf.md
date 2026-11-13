@@ -1,24 +1,41 @@
 ---
 title: Imperva WAF credentials
-description: >-
-  Documentation for the Imperva WAF credentials. Use these credentials to
-  authenticate Imperva WAF in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Imperva WAF credentials
 originalFilePath: integrations/builtin/credentials/impervawaf.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/impervawaf'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/impervawaf'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/impervawaf
+url: https://docs.n8n.io/integrations/builtin/credentials/impervawaf
+description: >-
+  Documentation for the Imperva WAF credentials. Use these credentials to
+  authenticate Imperva WAF in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Imperva WAF credentials <a href="#imperva-waf-credentials" id="imperva-waf-credentials"></a>
+# Imperva WAF credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -26,7 +43,7 @@ Create an [Imperva WAF](https://www.imperva.com/products/web-application-firewal
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- API key
+* API key
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -38,7 +55,7 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need:
 
-- An **API ID**
-- An **API Key**
+* An **API ID**
+* An **API Key**
 
 Refer to [Imperva WAF's API Key Management documentation](https://docs.imperva.com/bundle/cloud-application-security/page/settings/api-keys.htm) for instructions on generating and viewing API Keys and IDs.

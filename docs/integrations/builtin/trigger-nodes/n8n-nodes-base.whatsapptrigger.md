@@ -31,6 +31,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # WhatsApp Trigger
@@ -66,7 +68,7 @@ For usage examples and templates to help you get started, refer to n8n's [WhatsA
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for WhatsApp. Refer to the [WhatsApp Business Cloud node documentation](../app-nodes/n8n-nodes-base.whatsapp/README.md) for more information.
+n8n provides an app node for WhatsApp. Refer to the [WhatsApp Business Cloud node documentation](../app-nodes/n8n-nodes-base.whatsapp/) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/whatsapp-trigger/) on n8n's website.
 
@@ -105,7 +107,7 @@ To check the subscription and fix it:
 
 1. In the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/), select your app, then go to **WhatsApp** > **API Setup**. Copy the **WhatsApp Business Account ID**. Don't use the **Phone number ID**.
 2. Get an access token for the same Meta app as your n8n WhatsApp Trigger credential. The request in step 4 subscribes the app that the token belongs to. The token needs the `whatsapp_business_management` permission. For example, in Meta's [Graph API Explorer](https://developers.facebook.com/tools/explorer/), select your app under **Meta App**, add the permission, and generate a token.
-3. List the apps subscribed to your WABA:
+3.  List the apps subscribed to your WABA:
 
     ```bash
     curl -X GET 'https://graph.facebook.com/<api-version>/<business-account-id>/subscribed_apps' \
@@ -115,7 +117,7 @@ To check the subscription and fix it:
     Each subscribed app appears in the `data` array with its ID in `whatsapp_business_api_data.id`. Your app's ID is the **Client ID** in your n8n credential. If the response is `{"data": []}`, or none of the IDs match yours, your app isn't subscribed.
 
     If your app's entry also has an `override_callback_uri`, Meta sends message webhooks for this WABA to that URL instead of to your app's webhook URL. An override set on the business phone number takes precedence over both. Check that the URL is the one you expect.
-4. Send this request only if your app isn't subscribed, or if its entry has an `override_callback_uri` you want to remove. A `POST` without a body subscribes your app and removes any `override_callback_uri` from its subscription. If your app is already subscribed and you want to keep its override, skip this step. This request doesn't need a body:
+4.  Send this request only if your app isn't subscribed, or if its entry has an `override_callback_uri` you want to remove. A `POST` without a body subscribes your app and removes any `override_callback_uri` from its subscription. If your app is already subscribed and you want to keep its override, skip this step. This request doesn't need a body:
 
     ```bash
     curl -X POST 'https://graph.facebook.com/<api-version>/<business-account-id>/subscribed_apps' \

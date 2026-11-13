@@ -1,21 +1,38 @@
 ---
 title: Netscaler ADC node documentation
-description: >-
-  Learn how to use the Netscaler ADC node in n8n. Follow technical documentation
-  to integrate Netscaler ADC node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Netscaler ADC node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc
+description: >-
+  Learn how to use the Netscaler ADC node in n8n. Follow technical documentation
+  to integrate Netscaler ADC node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Netscaler ADC node <a href="#netscaler-adc-node" id="netscaler-adc-node"></a>
+# Netscaler ADC
 
 Use the Netscaler ADC node to automate work in Netscaler ADC, and integrate Netscaler ADC with other applications. n8n has built-in support for a wide range of Netscaler ADC features, including creating and installing certificates and files.
 
@@ -30,15 +47,14 @@ Refer to [Netscaler ADC credentials](../credentials/netscaleradc.md) for guidanc
 ## Operations <a href="#operations" id="operations"></a>
 
 * Certificate
-	* Create
-	* Install
+  * Create
+  * Install
 * File
-	* Delete
-	* Download
-	* Upload
+  * Delete
+  * Download
+  * Upload
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Netscaler ADC node documentation integration templates](https://n8n.io/integrations/citrix-adc/) or [search all templates](https://n8n.io/workflows/)
 
@@ -48,13 +64,12 @@ Refer to the [Netscaler ADC documentation](https://docs.netscaler.com/en-us/citr
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

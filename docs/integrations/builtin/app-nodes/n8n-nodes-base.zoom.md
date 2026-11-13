@@ -1,23 +1,40 @@
 ---
 title: Zoom node documentation
-description: >-
-  Learn how to use the Zoom node in n8n. Follow technical documentation to
-  integrate Zoom node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Zoom node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.zoom.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zoom'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zoom'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zoom
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zoom
+description: >-
+  Learn how to use the Zoom node in n8n. Follow technical documentation to
+  integrate Zoom node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Zoom node <a href="#zoom-node" id="zoom-node"></a>
+# Zoom
 
-Use the Zoom node to automate work in Zoom, and integrate Zoom with other applications. n8n has built-in support for a wide range of Zoom features, including creating, retrieving, deleting, and updating meetings. 
+Use the Zoom node to automate work in Zoom, and integrate Zoom with other applications. n8n has built-in support for a wide range of Zoom features, including creating, retrieving, deleting, and updating meetings.
 
 On this page, you'll find a list of operations the Zoom node supports and links to more resources.
 
@@ -36,25 +53,24 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Meeting
-    * Create a meeting
-    * Delete a meeting
-    * Retrieve a meeting
-    * Retrieve all meetings
-    * Update a meeting
+  * Create a meeting
+  * Delete a meeting
+  * Retrieve a meeting
+  * Retrieve all meetings
+  * Update a meeting
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Zoom node documentation integration templates](https://n8n.io/integrations/zoom) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

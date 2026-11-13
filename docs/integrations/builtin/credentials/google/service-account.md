@@ -28,13 +28,15 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Google Service Account
 
 Using service accounts is more complex than OAuth2. Before you begin:
 
-* Check if your node is [compatible](./README.md#compatible-nodes) with Service Account.
+* Check if your node is [compatible](./#compatible-nodes) with Service Account.
 * Make sure you need to use Service Account. For most use cases, [OAuth2](oauth-single-service.md) is a better option.
 * Read the Google documentation on [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts).
 
@@ -61,37 +63,28 @@ First, create a Google Cloud Console project. If you already have a project, jum
 4. Select **Create**.
 5. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created.
 
-	<figure>
-	<img src="../../../../../assets/google-cloud-project-dropdown.png" alt="">
-	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
-	</figure>
-
 ### Enable APIs <a href="#enable-apis" id="enable-apis"></a>
 
 With your project created, enable the APIs you'll need access to:
 
 1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
-	<figure>
-	<img src="../../../../../assets/google-cloud-project-dropdown.png" alt="">
-	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
-	</figure>
-1. Go to **APIs & Services > Library**.
-1. Search for and select the API(s) you want to enable. For example, for the Gmail node, search for and enable the Gmail API.
-1. Some integrations require other APIs or require you to request access:<br>
-	* Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started).
-	* Google Ads: Get a [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token).
+2. Go to **APIs & Services > Library**.
+3. Search for and select the API(s) you want to enable. For example, for the Gmail node, search for and enable the Gmail API.
+4.  Some integrations require other APIs or require you to request access:<br>
+
+    * Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started).
+    * Google Ads: Get a [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token).
 
     <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Google Drive API required</strong></p><p>The following integrations require the Google Drive API, as well as their own API:</p><ul><li>Google Docs</li><li>Google Sheets</li><li>Google Slides</li></ul></div>
 
     <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Google Vertex AI API</strong></p><p>In addition to the Vertex AI API you will also need to enable the <a href="https://console.cloud.google.com/apis/api/cloudresourcemanager.googleapis.com/">Cloud Resource Manager API</a>.</p></div>
-
-1. Select **ENABLE**.
+5. Select **ENABLE**.
 
 ### Set up Google Cloud Service Account <a href="#set-up-google-cloud-service-account" id="set-up-google-cloud-service-account"></a>
 
 1.  Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
 
-    <figure><img src="../../../.gitbook/assets/google-cloud-project-dropdown (1).png" alt=""><figcaption><p>Check the project dropdown in the Google Cloud top navigation</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/google-cloud-project-dropdown.png" alt=""><figcaption><p>Check the project dropdown in the Google Cloud top navigation</p></figcaption></figure>
 2. Open the left navigation menu and go to **APIs & Services > Credentials**. Google takes you to your **Credentials** page.
 3. Select **+ Create credentials > Service account**.
 4. Enter a name in **Service account name** and an ID in **Service account ID**. Refer to [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts?hl=en#creating) for more information.
@@ -114,7 +107,7 @@ With the Google project and credentials fully configured, finish the n8n credent
 4. **Optional**: Choose if you want to [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority) (turned on).
    1. To use this option, you must [Enable domain-wide delegation](service-account.md#enable-domain-wide-delegation) for the service account as a Google Workspace super admin.
    2. Enter the **Email** of the user you want to impersonate.
-5. If you plan to use this credential with the [HTTP Request](../../core-nodes/n8n-nodes-base.httprequest/README.md) node, turn on **Set up for use in HTTP Request node**.
+5. If you plan to use this credential with the [HTTP Request](../../core-nodes/n8n-nodes-base.httprequest/) node, turn on **Set up for use in HTTP Request node**.
    1. With this setting turned on, you'll need to add **Scope(s)** for the node. n8n prepopulates some scopes. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes) for more information.
 6. **Save** your credentials.
 

@@ -1,24 +1,41 @@
 ---
 title: Mist credentials
-description: >-
-  Documentation for the Mist credentials. Use these credentials to authenticate
-  Mist in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Mist credentials
 originalFilePath: integrations/builtin/credentials/mist.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/mist'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/mist'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/mist
+url: https://docs.n8n.io/integrations/builtin/credentials/mist
+description: >-
+  Documentation for the Mist credentials. Use these credentials to authenticate
+  Mist in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Mist credentials <a href="#mist-credentials" id="mist-credentials"></a>
+# Mist credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -26,7 +43,7 @@ Create a [Mist](https://www.mist.com/) account and organization. Refer to [Creat
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- API token
+* API token
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -38,7 +55,7 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need:
 
-- An **API Token**: You can use either a User API token or an Org API token. Refer to [How to generate a user API token](https://www.mist.com/documentation/using-postman/) for instructions on generating a User API token. Refer to [Org API token](https://www.mist.com/documentation/org-api-token/) for instructions on generating an Org API token.
-- Select the **Region** you're in. Options include:
-    - **Europe**: Select this option if your cloud environment is in any of the EMEA regions.
-    - **Global**: Select this option if your cloud environment is in any of the global regions.
+* An **API Token**: You can use either a User API token or an Org API token. Refer to [How to generate a user API token](https://www.mist.com/documentation/using-postman/) for instructions on generating a User API token. Refer to [Org API token](https://www.mist.com/documentation/org-api-token/) for instructions on generating an Org API token.
+* Select the **Region** you're in. Options include:
+  * **Europe**: Select this option if your cloud environment is in any of the EMEA regions.
+  * **Global**: Select this option if your cloud environment is in any of the global regions.

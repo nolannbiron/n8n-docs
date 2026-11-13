@@ -29,6 +29,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # OpenAI credentials
@@ -39,10 +41,10 @@ On n8n Cloud, you can skip setting up OpenAI credentials by selecting **Use Gate
 
 You can use these credentials to authenticate the following nodes:
 
-* [OpenAI](../app-nodes/n8n-nodes-langchain.openai/README.md)
-* [Chat OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md)
+* [OpenAI](../app-nodes/n8n-nodes-langchain.openai/)
+* [Chat OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
 * [Embeddings OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md)
-* [LM OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md)
+* [LM OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

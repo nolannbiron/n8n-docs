@@ -1,8 +1,5 @@
 ---
 title: Error Trigger node documentation
-description: >-
-  Learn how to use the Error Trigger node in n8n. Follow technical documentation
-  to integrate Error Trigger node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,26 +10,44 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger
 url: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger
+description: >-
+  Learn how to use the Error Trigger node in n8n. Follow technical documentation
+  to integrate Error Trigger node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Error Trigger node <a href="#error-trigger-node" id="error-trigger-node"></a>
+# Error Trigger
 
 You can use the Error Trigger node to create error workflows. When another linked workflow fails, this node gets details about the failed workflow and the errors, and runs the error workflow.
 
 ## Usage <a href="#usage" id="usage"></a>
 
-1. Create a new workflow, with the Error Trigger as the first node. 
-2. Give the workflow a name, for example `Error Handler`. 
+1. Create a new workflow, with the Error Trigger as the first node.
+2. Give the workflow a name, for example `Error Handler`.
 3. Select **Save**.
 4. In the workflow where you want to use this error workflow:
-	1. Select **Options** <img src="../../assets/three-dot-options-menu.png" alt="Options menu icon" data-size="line"> > **Settings**.
-	2. In **Error workflow**, select the workflow you just created. For example, if you used the name Error Handler, select **Error handler**.
-	3. Select **Save**.
-	Now, when this workflow errors, the related error workflow runs.
-
+   1. Select **Options**  > **Settings**.
+   2. In **Error workflow**, select the workflow you just created. For example, if you used the name Error Handler, select **Error handler**.
+   3. Select **Save**. Now, when this workflow errors, the related error workflow runs.
 
 Note the following:
 
@@ -42,14 +57,13 @@ Note the following:
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-
 [Browse Error Trigger node documentation integration templates](https://n8n.io/integrations/error-trigger) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 You can use the [Stop And Error](n8n-nodes-base.stopanderror.md) node to send custom messages to the Error Trigger.
 
-Read more about [Error workflows](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/handle-errors-gracefully) in n8n workflows. 
+Read more about [Error workflows](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/flow-logic/handle-errors-gracefully) in n8n workflows.
 
 ## Error data <a href="#error-data" id="error-data"></a>
 
@@ -80,9 +94,9 @@ The default error data received by the Error Trigger is:
 
 All information is always present, except:
 
-- `execution.id`: requires the execution to be saved in the database. Not present if the error is in the trigger node of the main workflow, as the workflow doesn't execute.
-- `execution.url`: requires the execution to be saved in the database. Not present if the error is in the trigger node of the main workflow, as the workflow doesn't execute.
-- `execution.retryOf`: only present when the execution is a retry of a failed execution.
+* `execution.id`: requires the execution to be saved in the database. Not present if the error is in the trigger node of the main workflow, as the workflow doesn't execute.
+* `execution.url`: requires the execution to be saved in the database. Not present if the error is in the trigger node of the main workflow, as the workflow doesn't execute.
+* `execution.retryOf`: only present when the execution is a retry of a failed execution.
 
 If the error is caused by the trigger node of the main workflow, rather than a later stage, the data sent to the error workflow is different. There's less information in `execution{}` and more in `trigger{}`:
 
@@ -110,4 +124,3 @@ If the error is caused by the trigger node of the main workflow, rather than a l
   }
 }
 ```
-

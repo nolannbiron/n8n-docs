@@ -32,6 +32,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Redis Vector Store
@@ -59,7 +61,7 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 {% hint style="info" %}
 **Feature availability**
 
-Redis query filters and the **Metadata Schema** option are available from node version 1.4 of the Redis Vector Store node. For earlier node versions, refer to [Metadata Filter](#metadata-filter).
+Redis query filters and the **Metadata Schema** option are available from node version 1.4 of the Redis Vector Store node. For earlier node versions, refer to [Metadata Filter](n8n-nodes-langchain.vectorstoreredis.md#metadata-filter).
 
 Existing Redis Vector Store nodes keep their node version, and their indexes keep working. To use node version 1.4, add a new Redis Vector Store node with a new index, then reimport your documents. Don't point a node version 1.4 node at an index that an earlier node version created. Its metadata will be missing, and filters will return wrong results.
 {% endhint %}
@@ -90,13 +92,13 @@ You can see an example in [this template](https://n8n.io/workflows/10887-reduce-
 
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-You can connect the Redis Vector Store node directly to the tool[^4] connector of an [AI agent](n8n-nodes-langchain.agent/README.md) to use a vector store as a resource when answering queries.
+You can connect the Redis Vector Store node directly to the tool[^4] connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Redis Vector Store node.
 
 ### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Redis Vector Store node to fetch documents from the Redis Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Redis Vector Store node to fetch documents from the Redis Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
 
 An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Redis Vector Store.
 
@@ -112,7 +114,7 @@ This Vector Store node has four modes: **Get Many**, **Insert Documents**, **Ret
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](../sub-nodes/n8n-nodes-langchain.rerankercohere.md), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
@@ -120,19 +122,19 @@ Enables reranking. If you enable this option, you must connect a reranking node,
 * **Prompt**: Enter the search query.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-This Operation Mode includes the [Metadata Filter](#metadata-filter) **Node option**. From node version 1.4, it also includes the [Metadata Schema](#metadata-schema) **Node option**.
+This Operation Mode includes the [Metadata Filter](n8n-nodes-langchain.vectorstoreredis.md#metadata-filter) **Node option**. From node version 1.4, it also includes the [Metadata Schema](n8n-nodes-langchain.vectorstoreredis.md#metadata-schema) **Node option**.
 
 ### Insert Documents parameters <a href="#insert-documents-parameters" id="insert-documents-parameters"></a>
 
 * **Redis Index**: Enter the name of the Redis vector search index to use. Optionally choose an existing one from the list.
 
-From node version 1.4, this Operation Mode includes the [Metadata Schema](#metadata-schema) **Node option**.
+From node version 1.4, this Operation Mode includes the [Metadata Schema](n8n-nodes-langchain.vectorstoreredis.md#metadata-schema) **Node option**.
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters <a href="#retrieve-documents-as-vector-store-for-chaintool-parameters" id="retrieve-documents-as-vector-store-for-chaintool-parameters"></a>
 
 * **Redis Index**: Enter the name of the Redis vector search index to use. Optionally choose an existing one from the list.
 
-This Operation Mode includes the [Metadata Filter](#metadata-filter) **Node option**. From node version 1.4, it also includes the [Metadata Schema](#metadata-schema) **Node option**.
+This Operation Mode includes the [Metadata Filter](n8n-nodes-langchain.vectorstoreredis.md#metadata-filter) **Node option**. From node version 1.4, it also includes the [Metadata Schema](n8n-nodes-langchain.vectorstoreredis.md#metadata-schema) **Node option**.
 
 ### Retrieve Documents (As Tool for AI Agent) parameters <a href="#retrieve-documents-as-tool-for-ai-agent-parameters" id="retrieve-documents-as-tool-for-ai-agent-parameters"></a>
 
@@ -141,7 +143,7 @@ This Operation Mode includes the [Metadata Filter](#metadata-filter) **Node opti
 * **Redis Index**: Enter the name of the Redis vector search index to use. Optionally choose an existing one from the list.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-This Operation Mode includes the [Metadata Filter](#metadata-filter) **Node option**. From node version 1.4, it also includes the [Metadata Schema](#metadata-schema) **Node option**.
+This Operation Mode includes the [Metadata Filter](n8n-nodes-langchain.vectorstoreredis.md#metadata-filter) **Node option**. From node version 1.4, it also includes the [Metadata Schema](n8n-nodes-langchain.vectorstoreredis.md#metadata-schema) **Node option**.
 
 ### Include Metadata <a href="#include-metadata" id="include-metadata"></a>
 
@@ -153,21 +155,21 @@ You can use this with the [Get Many](n8n-nodes-langchain.vectorstoreredis.md#get
 
 ### Metadata Filter <a href="#metadata-filter" id="metadata-filter"></a>
 
-The **Metadata Filter** option limits results to documents whose metadata matches a filter. It's available for the [Get Many](#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes. The filter syntax depends on the node version.
+The **Metadata Filter** option limits results to documents whose metadata matches a filter. It's available for the [Get Many](n8n-nodes-langchain.vectorstoreredis.md#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](n8n-nodes-langchain.vectorstoreredis.md#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreredis.md#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes. The filter syntax depends on the node version.
 
 When inserting data, the document loader sets the metadata. Refer to [Default Data Loader](../sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md) for more information on loading documents.
 
 #### Redis query filters in node version 1.4
 
-From node version 1.4, **Metadata Filter** takes a Redis query expression. You can filter on tag, numeric, text, and geo fields, and combine conditions with AND and OR logic. A filter only works on a field that the index stores with a matching type. Refer to [Metadata Schema](#metadata-schema) to set field types.
+From node version 1.4, **Metadata Filter** takes a Redis query expression. You can filter on tag, numeric, text, and geo fields, and combine conditions with AND and OR logic. A filter only works on a field that the index stores with a matching type. Refer to [Metadata Schema](n8n-nodes-langchain.vectorstoreredis.md#metadata-schema) to set field types.
 
-| Filter type | Example | Matches documents where |
-|-------------|---------|-------------------------|
-| Tag | `@category:{electronics}` | `category` is `electronics` |
-| Several tags | `@category:{electronics\|books}` | `category` is `electronics` or `books` |
-| Numeric range | `@price:[0 100]` | `price` is from 0 to 100 |
-| Combined | `@category:{electronics} @price:[0 100]` | both conditions match |
-| Text | `@description:laptop` | `description` contains the word `laptop` |
+| Filter type   | Example                                  | Matches documents where                  |
+| ------------- | ---------------------------------------- | ---------------------------------------- |
+| Tag           | `@category:{electronics}`                | `category` is `electronics`              |
+| Several tags  | `@category:{electronics\|books}`         | `category` is `electronics` or `books`   |
+| Numeric range | `@price:[0 100]`                         | `price` is from 0 to 100                 |
+| Combined      | `@category:{electronics} @price:[0 100]` | both conditions match                    |
+| Text          | `@description:laptop`                    | `description` contains the word `laptop` |
 
 For the full syntax, refer to [LangChain's Redis Vector Store advanced features documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/redis#advanced-features) and the [Redis Query Engine documentation](https://redis.io/docs/latest/develop/ai/search-and-query/query/).
 
@@ -177,7 +179,7 @@ In node version 1.3 and earlier, **Metadata Filter** takes a comma-separated lis
 
 ### Metadata Schema
 
-The **Metadata Schema** option sets the type of each metadata field in the index. It's available from node version 1.4 for the [Insert Documents](#insert-documents-parameters), [Get Many](#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
+The **Metadata Schema** option sets the type of each metadata field in the index. It's available from node version 1.4 for the [Insert Documents](n8n-nodes-langchain.vectorstoreredis.md#insert-documents-parameters), [Get Many](n8n-nodes-langchain.vectorstoreredis.md#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](n8n-nodes-langchain.vectorstoreredis.md#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreredis.md#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
 
 Enter a JSON array with one object for each metadata field. Each object needs a `name` and a `type`, and can have an `options` object:
 
@@ -192,30 +194,30 @@ Enter a JSON array with one object for each metadata field. Each object needs a 
 
 If the JSON isn't valid, or a field has a missing name or an unknown type, the node stops with an error and leaves the index unchanged.
 
-| Type | Use it for | Example filter |
-|------|------------|----------------|
-| `tag` | Exact matches on categories, labels, and status values | `@category:{electronics}` |
-| `text` | Full-text search on descriptions and content | `@description:laptop` |
-| `numeric` | Ranges of prices, scores, and dates (store dates as Unix timestamps) | `@price:[0 100]` |
-| `geo` | Locations, stored as `"<longitude>,<latitude>"` | `@location:[-73.98 40.75 5 km]` |
+| Type      | Use it for                                                           | Example filter                  |
+| --------- | -------------------------------------------------------------------- | ------------------------------- |
+| `tag`     | Exact matches on categories, labels, and status values               | `@category:{electronics}`       |
+| `text`    | Full-text search on descriptions and content                         | `@description:laptop`           |
+| `numeric` | Ranges of prices, scores, and dates (store dates as Unix timestamps) | `@price:[0 100]`                |
+| `geo`     | Locations, stored as `"<longitude>,<latitude>"`                      | `@location:[-73.98 40.75 5 km]` |
 
-| Option | Field types | Description |
-|--------|-------------|-------------|
-| `sortable` | `numeric`, `text` | Lets Redis sort results on the field. Default: `false`. |
-| `separator` | `tag` | The character that separates several tags in one value. Default: `,`. |
-| `caseSensitive` | `tag` | Matches tags with case sensitivity. Default: `false`. |
-| `weight` | `text` | The weight of the field when Redis scores text matches. Default: `1.0`. |
-| `noStem` | `text` | Turns off stemming, so `laptops` doesn't match `laptop`. Default: `false`. |
-| `noindex` | All types | Stores the field without indexing it, so you can't filter on it. Default: `false`. |
+| Option          | Field types       | Description                                                                        |
+| --------------- | ----------------- | ---------------------------------------------------------------------------------- |
+| `sortable`      | `numeric`, `text` | Lets Redis sort results on the field. Default: `false`.                            |
+| `separator`     | `tag`             | The character that separates several tags in one value. Default: `,`.              |
+| `caseSensitive` | `tag`             | Matches tags with case sensitivity. Default: `false`.                              |
+| `weight`        | `text`            | The weight of the field when Redis scores text matches. Default: `1.0`.            |
+| `noStem`        | `text`            | Turns off stemming, so `laptops` doesn't match `laptop`. Default: `false`.         |
+| `noindex`       | All types         | Stores the field without indexing it, so you can't filter on it. Default: `false`. |
 
 If you leave **Metadata Schema** empty, the node infers a type for each field from all the documents you insert:
 
-| Metadata values | Inferred type |
-|-----------------|---------------|
-| Numbers or dates | `numeric` |
-| Arrays | `tag` |
-| Strings in the form `"<longitude>,<latitude>"` | `geo` |
-| Any other strings | `text` |
+| Metadata values                                | Inferred type |
+| ---------------------------------------------- | ------------- |
+| Numbers or dates                               | `numeric`     |
+| Arrays                                         | `tag`         |
+| Strings in the form `"<longitude>,<latitude>"` | `geo`         |
+| Any other strings                              | `text`        |
 
 A plain string field becomes `text`, so tag filters such as `@category:{electronics}` don't match it. To use tag filters on a string field, declare the field as `tag` in **Metadata Schema**.
 
@@ -256,6 +258,9 @@ View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrat
 New to working with AI and using self-hosted n8n? Try n8n's [self-hosted AI Starter Kit](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/deploy-with-the-ai-starter-kit) to get started with a proof-of-concept or demo playground using Ollama, Qdrant, and PostgreSQL.
 
 [^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
+
 [^2]: AI chains allow you to interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this).
+
 [^3]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
+
 [^4]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.

@@ -1,4 +1,4 @@
-# Summary
+# Table of contents
 
 * [Nodes](README.md)
 * [Built-in nodes](builtin/README.md)
@@ -49,7 +49,7 @@
     * [Loop Over Items (Split in Batches)](builtin/core-nodes/n8n-nodes-base.splitinbatches.md)
     * [Manual Trigger](builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md)
     * [Markdown](builtin/core-nodes/n8n-nodes-base.markdown.md)
-    * [MCP Client](builtin/core-nodes/n8n-nodes-langchain.mcpClient.md)
+    * [MCP Client](builtin/core-nodes/n8n-nodes-langchain.mcpclient.md)
     * [MCP Server Trigger](builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md)
     * [Merge](builtin/core-nodes/n8n-nodes-base.merge.md)
     * [Message an Agent](builtin/core-nodes/n8n-nodes-base.messageanagent.md)

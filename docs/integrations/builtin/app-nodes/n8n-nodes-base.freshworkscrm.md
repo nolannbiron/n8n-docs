@@ -1,8 +1,5 @@
 ---
 title: Freshworks CRM node documentation
-description: >-
-  Learn how to use the Freshworks CRM node in n8n. Follow technical
-  documentation to integrate Freshworks CRM node into your workflows.
 contentType:
   - integration
   - reference
@@ -12,14 +9,34 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm
+description: >-
+  Learn how to use the Freshworks CRM node in n8n. Follow technical
+  documentation to integrate Freshworks CRM node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Freshworks CRM node <a href="#freshworks-crm-node" id="freshworks-crm-node"></a>
+# Freshworks CRM
 
-Use the Freshworks CRM node to automate work in Freshworks CRM, and integrate Freshworks CRM with other applications. n8n has built-in support for a wide range of Freshworks CRM features, including creating, updating, deleting, and retrieve, accounts, appointments, contacts, deals, notes, sales activity and more. 
+Use the Freshworks CRM node to automate work in Freshworks CRM, and integrate Freshworks CRM with other applications. n8n has built-in support for a wide range of Freshworks CRM features, including creating, updating, deleting, and retrieve, accounts, appointments, contacts, deals, notes, sales activity and more.
 
 On this page, you'll find a list of operations the Freshworks CRM node supports and links to more resources.
 
@@ -32,57 +49,55 @@ Refer to [Freshworks CRM credentials](../credentials/freshworkscrm.md) for guida
 ## Operations <a href="#operations" id="operations"></a>
 
 * Account
-    * Create an account
-    * Delete an account
-    * Retrieve an account
-    * Retrieve all accounts
-    * Update an account
+  * Create an account
+  * Delete an account
+  * Retrieve an account
+  * Retrieve all accounts
+  * Update an account
 * Appointment
-    * Create an appointment
-    * Delete an appointment
-    * Retrieve an appointment
-    * Retrieve all appointments
-    * Update an appointment
+  * Create an appointment
+  * Delete an appointment
+  * Retrieve an appointment
+  * Retrieve all appointments
+  * Update an appointment
 * Contact
-    * Create a contact
-    * Delete a contact
-    * Retrieve a contact
-    * Retrieve all contacts
-    * Update a contact
+  * Create a contact
+  * Delete a contact
+  * Retrieve a contact
+  * Retrieve all contacts
+  * Update a contact
 * Deal
-    * Create a deal
-    * Delete a deal
-    * Retrieve a deal
-    * Retrieve all deals
-    * Update a deal
+  * Create a deal
+  * Delete a deal
+  * Retrieve a deal
+  * Retrieve all deals
+  * Update a deal
 * Note
-    * Create a note
-    * Delete a note
-    * Update a note
+  * Create a note
+  * Delete a note
+  * Update a note
 * Sales Activity
-    * Retrieve a sales activity
-    * Retrieve all sales activities
+  * Retrieve a sales activity
+  * Retrieve all sales activities
 * Task
-    * Create a task
-    * Delete a task
-    * Retrieve a task
-    * Retrieve all tasks
-    * Update a task
+  * Create a task
+  * Delete a task
+  * Retrieve a task
+  * Retrieve all tasks
+  * Update a task
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Freshworks CRM node documentation integration templates](https://n8n.io/integrations/freshworks-crm) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

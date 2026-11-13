@@ -29,13 +29,15 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Facebook App credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [Facebook Trigger](../trigger-nodes/n8n-nodes-base.facebooktrigger/README.md)
+* [Facebook Trigger](../trigger-nodes/n8n-nodes-base.facebooktrigger/)
 
 {% hint style="info" %}
 **Facebook Graph API credentials**
@@ -131,7 +133,7 @@ Now that you have a token, you can configure the Facebook Trigger node:
    4. Some webhook subscriptions, like **User**, prompt you to subscribe to individual events. Subscribe to the events you're interested in.
    5. You can send some **Test** events from Meta to confirm things are working. If you send a test event, verify its receipt in n8n.
 
-Refer to the [Facebook Trigger node](../trigger-nodes/n8n-nodes-base.facebooktrigger/README.md) documentation for more information.
+Refer to the [Facebook Trigger node](../trigger-nodes/n8n-nodes-base.facebooktrigger/) documentation for more information.
 
 ### Optional: Add an App Secret <a href="#optional-add-an-app-secret" id="optional-add-an-app-secret"></a>
 

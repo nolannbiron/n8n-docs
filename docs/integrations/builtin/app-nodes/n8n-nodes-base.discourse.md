@@ -1,21 +1,38 @@
 ---
 title: Discourse node documentation
-description: >-
-  Learn how to use the Discourse node in n8n. Follow technical documentation to
-  integrate Discourse node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Discourse node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.discourse.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.discourse'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.discourse'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.discourse
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.discourse
+description: >-
+  Learn how to use the Discourse node in n8n. Follow technical documentation to
+  integrate Discourse node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Discourse node <a href="#discourse-node" id="discourse-node"></a>
+# Discourse
 
 Use the Discourse node to automate work in Discourse, and integrate Discourse with other applications. n8n has built-in support for a wide range of Discourse features, including creating, getting, updating, and removing categories, groups, posts, and users.
 
@@ -30,41 +47,39 @@ Refer to [Discourse credentials](../credentials/discourse.md) for guidance on se
 ## Operations <a href="#operations" id="operations"></a>
 
 * Category
-    * Create a category
-    * Get all categories
-    * Update a category
+  * Create a category
+  * Get all categories
+  * Update a category
 * Group
-    * Create a group
-    * Get a group
-    * Get all groups
-    * Update a group
+  * Create a group
+  * Get a group
+  * Get all groups
+  * Update a group
 * Post
-    * Create a post
-    * Get a post
-    * Get all posts
-    * Update a post
+  * Create a post
+  * Get a post
+  * Get all posts
+  * Update a post
 * User
-    * Create a user
-    * Get a user
-    * Get all users
+  * Create a user
+  * Get a user
+  * Get all users
 * User Group
-    * Create a user to group
-    * Remove user from group
+  * Create a user to group
+  * Remove user from group
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Discourse node documentation integration templates](https://n8n.io/integrations/discourse) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

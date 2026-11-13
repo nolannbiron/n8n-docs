@@ -29,14 +29,16 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # MySQL credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [MySQL](../app-nodes/n8n-nodes-base.mysql/README.md)
-* [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md)
+* [MySQL](../app-nodes/n8n-nodes-base.mysql/)
+* [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
 
 {% hint style="info" %}
 **Agent node users**

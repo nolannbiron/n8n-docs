@@ -1,22 +1,39 @@
 ---
 title: Asana node documentation
-description: >-
-  Learn how to use the Asana node in n8n. Follow technical documentation to
-  integrate Asana node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Asana node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.asana.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.asana'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.asana'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.asana
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.asana
+description: >-
+  Learn how to use the Asana node in n8n. Follow technical documentation to
+  integrate Asana node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Asana node <a href="#asana-node" id="asana-node"></a>
+# Asana
 
 Use the Asana node to automate work in Asana, and integrate Asana with other applications. n8n has built-in support for a wide range of Asana features, including creating, updating, deleting, and getting users, tasks, projects, and subtasks.
 
@@ -43,48 +60,47 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Project
-    * Create a new project
-    * Delete a project
-    * Get a project
-    * Get all projects
-    * Update a project
+  * Create a new project
+  * Delete a project
+  * Get a project
+  * Get all projects
+  * Update a project
 * Subtask
-    * Create a subtask
-    * Get all subtasks
+  * Create a subtask
+  * Get all subtasks
 * Task
-    * Create a task
-    * Delete a task
-    * Get a task
-    * Get all tasks
-    * Move a task
-    * Search for tasks
-    * Update a task
+  * Create a task
+  * Delete a task
+  * Get a task
+  * Get all tasks
+  * Move a task
+  * Search for tasks
+  * Update a task
 * Task Comment
-    * Add a comment to a task
-    * Remove a comment from a task
+  * Add a comment to a task
+  * Remove a comment from a task
 * Task Tag
-    * Add a tag to a task
-    * Remove a tag from a task
+  * Add a tag to a task
+  * Remove a tag from a task
 * Task Project
-    * Add a task to a project
-    * Remove a task from a project
+  * Add a task to a project
+  * Remove a task from a project
 * User
-    * Get a user
-    * Get all users
+  * Get a user
+  * Get all users
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Asana node documentation integration templates](https://n8n.io/integrations/asana) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

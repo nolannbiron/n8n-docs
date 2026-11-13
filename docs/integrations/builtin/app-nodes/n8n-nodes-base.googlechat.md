@@ -1,31 +1,48 @@
 ---
 title: Google Chat node documentation
-description: >-
-  Learn how to use the Google Chat node in n8n. Follow technical documentation
-  to integrate Google Chat node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Google Chat node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.googlechat.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlechat'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlechat'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlechat
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlechat
+description: >-
+  Learn how to use the Google Chat node in n8n. Follow technical documentation
+  to integrate Google Chat node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Google Chat node <a href="#google-chat-node" id="google-chat-node"></a>
+# Google Chat
 
-Use the Google Chat node to automate work in Google Chat, and integrate Google Chat with other applications. n8n has built-in support for a wide range of Google Chat features, including getting membership and spaces, as well as creating and deleting messages. 
+Use the Google Chat node to automate work in Google Chat, and integrate Google Chat with other applications. n8n has built-in support for a wide range of Google Chat features, including getting membership and spaces, as well as creating and deleting messages.
 
 On this page, you'll find a list of operations the Google Chat node supports and links to more resources.
 
 {% hint style="info" %}
 **Credentials**
 
-Refer to [Google credentials](../credentials/google/README.md) for guidance on setting up authentication.
+Refer to [Google credentials](../credentials/google/) for guidance on setting up authentication.
 {% endhint %}
 
 {% hint style="info" %}
@@ -43,17 +60,17 @@ This node can be used as a human review step for AI Agent tool calls. When confi
 ## Operations <a href="#operations" id="operations"></a>
 
 * Member
-    * Get a membership
-    * Get all memberships in a space
+  * Get a membership
+  * Get all memberships in a space
 * Message
-    * Create a message
-    * Delete a message
-    * Get a message
-	* Send and Wait for Response
-    * Update a message
+  * Create a message
+  * Delete a message
+  * Get a message
+  * Send and Wait for Response
+  * Update a message
 * Space
-    * Get a space
-    * Get all spaces the caller is a member of
+  * Get a space
+  * Get all spaces the caller is a member of
 
 ## Waiting for a response <a href="#waiting-for-a-response" id="waiting-for-a-response"></a>
 
@@ -74,7 +91,7 @@ You can customize the waiting and response behavior depending on which response 
 
 ### Approval response customization <a href="#approval-response-customization" id="approval-response-customization"></a>
 
-When using the Approval response type, you can choose whether to present only an approval button or both approval *and* disapproval buttons.
+When using the Approval response type, you can choose whether to present only an approval button or both approval _and_ disapproval buttons.
 
 You can also customize the button labels for the buttons you include.
 
@@ -86,11 +103,10 @@ When using the Free Text response type, you can customize the message button lab
 
 When using the Custom Form response type, you build a form using the fields and options you want.
 
-You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.formtrigger#form-elements). To add more fields, select the **Add Form Element** button.
+You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](../core-nodes/n8n-nodes-base.formtrigger.md#form-elements). To add more fields, select the **Add Form Element** button.
 
 You'll also be able to customize the message button label, the form title and description, and the response button label.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Google Chat node documentation integration templates](https://n8n.io/integrations/google-chat) or [search all templates](https://n8n.io/workflows/)

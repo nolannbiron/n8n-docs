@@ -1,22 +1,39 @@
 ---
 title: Mattermost node documentation
-description: >-
-  Learn how to use the Mattermost node in n8n. Follow technical documentation to
-  integrate Mattermost node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Mattermost node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mattermost'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mattermost'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mattermost
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mattermost
+description: >-
+  Learn how to use the Mattermost node in n8n. Follow technical documentation to
+  integrate Mattermost node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Mattermost node <a href="#mattermost-node" id="mattermost-node"></a>
+# Mattermost
 
 Use the Mattermost node to automate work in Mattermost, and integrate Mattermost with other applications. n8n has built-in support for a wide range of Mattermost features, including creating, deleting, and getting channels, and users, as well as posting messages, and adding reactions.
 
@@ -37,32 +54,30 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Channel
-    * Add a user to a channel
-    * Create a new channel
-    * Soft delete a channel
-    * Get a page of members for a channel
-    * Restores a soft deleted channel
-    * Search for a channel
-    * Get statistics for a channel
+  * Add a user to a channel
+  * Create a new channel
+  * Soft delete a channel
+  * Get a page of members for a channel
+  * Restores a soft deleted channel
+  * Search for a channel
+  * Get statistics for a channel
 * Message
-    * Soft delete a post, by marking the post as deleted in the database
-    * Post a message into a channel
-    * Post an ephemeral message into a channel
+  * Soft delete a post, by marking the post as deleted in the database
+  * Post a message into a channel
+  * Post an ephemeral message into a channel
 * Reaction
-    * Add a reaction to a post.
-    * Remove a reaction from a post
-    * Get all the reactions to one or more posts
+  * Add a reaction to a post.
+  * Remove a reaction from a post
+  * Get all the reactions to one or more posts
 * User
-    * Create a new user
-    * Deactivates the user and revokes all its sessions by archiving its user object.
-    * Retrieve all users
-    * Get a user by email
-    * Get a user by ID
-    * Invite user to team
-
+  * Create a new user
+  * Deactivates the user and revokes all its sessions by archiving its user object.
+  * Retrieve all users
+  * Get a user by email
+  * Get a user by ID
+  * Invite user to team
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Mattermost node documentation integration templates](https://n8n.io/integrations/mattermost) or [search all templates](https://n8n.io/workflows/)
 
@@ -72,15 +87,15 @@ Refer to [Mattermost's documentation](https://api.mattermost.com/) for more info
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.
 
 ## Channel ID field error <a href="#channel-id-field-error" id="channel-id-field-error"></a>
 
@@ -95,8 +110,3 @@ To find the channel ID in Mattermost:
 1. Select the channel from the left sidebar.
 2. Select the channel name at the top.
 3. Select **View Info**.
-
-
-
-
-

@@ -1,8 +1,5 @@
 ---
 title: Microsoft Excel (OneDrive) node documentation
-description: >-
-  Learn how to use the Microsoft Excel (OneDrive) node in n8n. Follow technical
-  documentation to integrate Microsoft Excel (OneDrive) node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,12 +10,33 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftexcel
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftexcel
+description: >-
+  Learn how to use the Microsoft Excel (OneDrive) node in n8n. Follow technical
+  documentation to integrate Microsoft Excel (OneDrive) node into your
+  workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Microsoft Excel (OneDrive) node <a href="#microsoft-excel-365-node" id="microsoft-excel-365-node"></a>
+# Microsoft Excel (OneDrive)
 
 Use the Microsoft Excel (OneDrive) node to automate work in Microsoft Excel, and integrate Microsoft Excel with other applications. n8n has built-in support for a wide range of Microsoft Excel features, including adding and retrieving lists of table data, and workbooks, as well as getting worksheets. The node operates on workbooks stored in OneDrive.
 
@@ -29,9 +47,9 @@ On this page, you'll find a list of operations the Microsoft Excel (OneDrive) no
 
 This node's **Authentication** dropdown offers three options:
 
-- **Excel OAuth2**: the Microsoft Excel-specific OAuth2 credential (default).
-- **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure you grant the credential the scopes this node needs (for example, `Files.ReadWrite`, or `Files.ReadWrite.All` if that's the permission your administrator has consented).
-- **Microsoft Entra Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user, available from version 2 of the node. Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and required application permissions.
+* **Excel OAuth2**: the Microsoft Excel-specific OAuth2 credential (default).
+* **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure you grant the credential the scopes this node needs (for example, `Files.ReadWrite`, or `Files.ReadWrite.All` if that's the permission your administrator has consented).
+* **Microsoft Entra Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user, available from version 2 of the node. Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and required application permissions.
 
 Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication.
 {% endhint %}
@@ -51,30 +69,29 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Table
-    * Adds rows to the end of the table
-    * Retrieve a list of table columns
-    * Retrieve a list of table rows
-    * Looks for a specific column value and then returns the matching row
+  * Adds rows to the end of the table
+  * Retrieve a list of table columns
+  * Retrieve a list of table rows
+  * Looks for a specific column value and then returns the matching row
 * Workbook
-    * Adds a new worksheet to the workbook.
-    * Get data of all workbooks
+  * Adds a new worksheet to the workbook.
+  * Get data of all workbooks
 * Worksheet
-    * Get all worksheets
-    * Get worksheet content
+  * Get all worksheets
+  * Get worksheet content
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Microsoft Excel (OneDrive) node documentation integration templates](https://n8n.io/integrations/microsoft-excel) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

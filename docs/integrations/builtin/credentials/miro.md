@@ -1,23 +1,40 @@
 ---
 title: Miro credentials
-description: >-
-  Documentation for the Miro credentials. Use these credentials to authenticate
-  Miro in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 nodeTitle: Miro credentials
 originalFilePath: integrations/builtin/credentials/miro.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/miro'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/miro'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/miro
+url: https://docs.n8n.io/integrations/builtin/credentials/miro
+description: >-
+  Documentation for the Miro credentials. Use these credentials to authenticate
+  Miro in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Miro credentials <a href="#miro-credentials" id="miro-credentials"></a>
+# Miro credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -37,8 +54,8 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need a [Miro](https://miro.com/login/) account and app, as well as:
 
-- A **Client ID**: Generated when you create a new OAuth2 application.
-- A **Client Secret**: Generated when you create a new OAuth2 application.
+* A **Client ID**: Generated when you create a new OAuth2 application.
+* A **Client Secret**: Generated when you create a new OAuth2 application.
 
 Refer to [Miro's API documentation](https://developers.miro.com/reference/overview) for more information about authenticating to the service.
 

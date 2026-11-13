@@ -1,24 +1,41 @@
 ---
 title: Jira Software node documentation
-description: >-
-  Learn how to use the Jira Software node in n8n. Follow technical documentation
-  to integrate Jira Software node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Jira Software node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.jira.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.jira'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.jira'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.jira
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.jira
+description: >-
+  Learn how to use the Jira Software node in n8n. Follow technical documentation
+  to integrate Jira Software node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Jira Software node <a href="#jira-software-node" id="jira-software-node"></a>
+# Jira Software
 
-Use the Jira Software node to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users. 
+Use the Jira Software node to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users.
 
 On this page, you'll find a list of operations the Jira Software node supports and links to more resources.
 
@@ -37,46 +54,45 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Issue
-    * Get issue changelog
-    * Create a new issue
-    * Delete an issue
-    * Get an issue
-    * Get all issues
-    * Create an email notification for an issue and add it to the mail queue
-    * Return either all transitions or a transition that can be performed by the user on an issue, based on the issue's status
-    * Update an issue
+  * Get issue changelog
+  * Create a new issue
+  * Delete an issue
+  * Get an issue
+  * Get all issues
+  * Create an email notification for an issue and add it to the mail queue
+  * Return either all transitions or a transition that can be performed by the user on an issue, based on the issue's status
+  * Update an issue
 * Issue Attachment
-    * Add attachment to issue
-    * Get an attachment
-    * Get all attachments
-    * Remove an attachment
+  * Add attachment to issue
+  * Get an attachment
+  * Get all attachments
+  * Remove an attachment
 * Issue Comment
-    * Add comment to issue
-    * Get a comment
-    * Get all comments
-    * Remove a comment
-    * Update a comment
+  * Add comment to issue
+  * Get a comment
+  * Get all comments
+  * Remove a comment
+  * Update a comment
 * User
-    * Create a new user.
-    * Delete a user.
-    * Retrieve a user.
+  * Create a new user.
+  * Delete a user.
+  * Retrieve a user.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Jira Software node documentation integration templates](https://n8n.io/integrations/jira-software) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -88,9 +104,9 @@ The **Get All** operation returns all the issues from Jira. To fetch issues for 
 
 For example, if you want to receive all the issues of a project named `n8n`, you'd do something like this:
 
-- Select **Get All** from the **Operation** dropdown list.
-- Toggle **Return All** to true.
-- Select **Add Option** and select **JQL**.
-- Enter `project=n8n` in the **JQL** field.
+* Select **Get All** from the **Operation** dropdown list.
+* Toggle **Return All** to true.
+* Select **Add Option** and select **JQL**.
+* Enter `project=n8n` in the **JQL** field.
 
 This query will fetch all the issues in the project named `n8n`. Enter the name of your project instead of `n8n` to fetch all the issues for your project.

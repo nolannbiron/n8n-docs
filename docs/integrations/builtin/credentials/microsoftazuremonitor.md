@@ -1,23 +1,41 @@
 ---
 title: Microsoft Azure Monitor credentials
-description: >-
-  Documentation for the Microsoft Azure Monitor credentials. Use these
-  credentials to authenticate Microsoft Azure Monitor in n8n, a workflow
-  automation platform.
 contentType:
   - integration
   - reference
 nodeTitle: Microsoft Azure Monitor credentials
 originalFilePath: integrations/builtin/credentials/microsoftazuremonitor.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/microsoftazuremonitor'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/microsoftazuremonitor'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/microsoftazuremonitor
+url: https://docs.n8n.io/integrations/builtin/credentials/microsoftazuremonitor
+description: >-
+  Documentation for the Microsoft Azure Monitor credentials. Use these
+  credentials to authenticate Microsoft Azure Monitor in n8n, a workflow
+  automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
-# Microsoft Azure Monitor credentials <a href="#microsoft-azure-monitor-credentials" id="microsoft-azure-monitor-credentials"></a>
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+# Microsoft Azure Monitor credentials
+
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -36,9 +54,9 @@ Refer to [Microsoft Azure Monitor's API documentation](https://learn.microsoft.c
 
 To configure this credential, you'll need a Microsoft Azure account and:
 
-- A **Client ID**
-- A **Client Secret**
-- A **Tenant ID**
-- The **Resource** you plan to access
+* A **Client ID**
+* A **Client Secret**
+* A **Tenant ID**
+* The **Resource** you plan to access
 
 Refer to [Microsoft Azure Monitor's API documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/api/access-api?tabs=rest#set-up-authentication) for more information about authenticating to the service.

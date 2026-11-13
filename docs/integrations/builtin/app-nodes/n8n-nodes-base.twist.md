@@ -1,23 +1,40 @@
 ---
 title: Twist node documentation
-description: >-
-  Learn how to use the Twist node in n8n. Follow technical documentation to
-  integrate Twist node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Twist node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.twist.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twist'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twist'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twist
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twist
+description: >-
+  Learn how to use the Twist node in n8n. Follow technical documentation to
+  integrate Twist node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Twist node <a href="#twist-node" id="twist-node"></a>
+# Twist
 
-Use the Twist node to automate work in Twist, and integrate Twist with other applications. n8n has built-in support for a wide range of Twist features, including creating conversations in a channel, as well as creating and deleting comments on a thread. 
+Use the Twist node to automate work in Twist, and integrate Twist with other applications. n8n has built-in support for a wide range of Twist features, including creating conversations in a channel, as well as creating and deleting comments on a thread.
 
 On this page, you'll find a list of operations the Twist node supports and links to more resources.
 
@@ -30,48 +47,47 @@ Refer to [Twist credentials](../credentials/twist.md) for guidance on setting up
 ## Operations <a href="#operations" id="operations"></a>
 
 * Channel
-    * Archive a channel
-    * Initiates a public or private channel-based conversation
-    * Delete a channel
-    * Get information about a channel
-    * Get all channels
-    * Unarchive a channel
-    * Update a channel
+  * Archive a channel
+  * Initiates a public or private channel-based conversation
+  * Delete a channel
+  * Get information about a channel
+  * Get all channels
+  * Unarchive a channel
+  * Update a channel
 * Comment
-    * Create a new comment to a thread
-    * Delete a comment
-    * Get information about a comment
-    * Get all comments
-    * Update a comment
+  * Create a new comment to a thread
+  * Delete a comment
+  * Get information about a comment
+  * Get all comments
+  * Update a comment
 * Message Conversation
-    * Create a message in a conversation
-    * Delete a message in a conversation
-    * Get a message in a conversation
-    * Get all messages in a conversation
-    * Update a message in a conversation
+  * Create a message in a conversation
+  * Delete a message in a conversation
+  * Get a message in a conversation
+  * Get all messages in a conversation
+  * Update a message in a conversation
 * Thread
-    * Create a new thread in a channel
-    * Delete a thread
-    * Get information about a thread
-    * Get all threads
-    * Update a thread
+  * Create a new thread in a channel
+  * Delete a thread
+  * Get information about a thread
+  * Get all threads
+  * Update a thread
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Twist node documentation integration templates](https://n8n.io/integrations/twist) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.
 
 ## Get the User ID <a href="#get-the-user-id" id="get-the-user-id"></a>
 
@@ -80,4 +96,3 @@ To get the User ID for a user:
 1. Open the **Team** tab.
 2. Select a user's avatar.
 3. Copy the string of characters located after `/u/` in your Twist URL. This string is the User ID. For example, if the URL is `https://twist.com/a/4qw45/people/u/475370` the User ID is `475370`.
-

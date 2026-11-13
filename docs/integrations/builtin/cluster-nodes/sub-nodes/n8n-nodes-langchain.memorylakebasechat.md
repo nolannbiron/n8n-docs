@@ -4,11 +4,28 @@ description: >-
   technical documentation to integrate the Databricks Lakebase Chat Memory node
   into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Databricks Lakebase Chat Memory node
+# Databricks Lakebase Chat Memory
 
 Use the Databricks Lakebase Chat Memory node to store chat history in a Databricks Lakebase table as memory[^1] for your AI agents. The node reads and writes the table over the [Lakebase Data API](https://docs.databricks.com/aws/en/oltp/projects/data-api), so it needs no connection string or database driver.
 
@@ -53,10 +70,10 @@ GRANT USAGE ON SEQUENCE "public"."n8n_chat_histories_id_seq" TO "your-role";
 * **Branch**: Select the branch of the project from the list, or select **By ID** and enter its branch ID, for example `production`.
 * **Database**: Select the Postgres database on the branch from the list, or select **By ID** and enter its Postgres database name, for example `databricks_postgres`.
 * **Schema**: The Postgres schema that holds the table. Defaults to `public`, and the list offers only `public`. For another schema, select **By ID** and enter its name. The Data API has to expose that schema.
-* **Table Name**: Enter the name of the table to store the chat history in. Defaults to `n8n_chat_histories`. The node doesn't create the table. Refer to [Create the table](#create-the-table).
+* **Table Name**: Enter the name of the table to store the chat history in. Defaults to `n8n_chat_histories`. The node doesn't create the table. Refer to [Create the table](n8n-nodes-langchain.memorylakebasechat.md#create-the-table).
 * **Session ID**: Select how the node finds the session ID:
-	* **Connected Chat Trigger Node**: Reads the `sessionId` field from the input of a directly connected [Chat Trigger](../../core-nodes/n8n-nodes-langchain.chattrigger/README.md) node.
-	* **Define below**: Enter the **Key** to use to store the session ID in the memory. Use the same key in several memory nodes to share one session between them.
+  * **Connected Chat Trigger Node**: Reads the `sessionId` field from the input of a directly connected [Chat Trigger](../../core-nodes/n8n-nodes-langchain.chattrigger/) node.
+  * **Define below**: Enter the **Key** to use to store the session ID in the memory. Use the same key in several memory nodes to share one session between them.
 * **Context Window Length**: Enter the number of previous interactions to consider for context. Defaults to `5`.
 
 ## Share a session between memory nodes
@@ -73,7 +90,7 @@ View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrat
 
 ### The table is missing
 
-The node fails with `Table <schema>.<table> does not exist`. You haven't created the table yet, or **Schema** or **Table Name** doesn't match it (`PGRST205`), or the Data API schema cache still lists a table you dropped (`42P01`). The error description holds the `CREATE TABLE`, `CREATE INDEX`, and `GRANT` statements for the schema and table you selected. Run them in the Lakebase SQL editor as the identity that created the role. Refer to [Create the table](#create-the-table).
+The node fails with `Table <schema>.<table> does not exist`. You haven't created the table yet, or **Schema** or **Table Name** doesn't match it (`PGRST205`), or the Data API schema cache still lists a table you dropped (`42P01`). The error description holds the `CREATE TABLE`, `CREATE INDEX`, and `GRANT` statements for the schema and table you selected. Run them in the Lakebase SQL editor as the identity that created the role. Refer to [Create the table](n8n-nodes-langchain.memorylakebasechat.md#create-the-table).
 
 ### The role lacks a grant
 

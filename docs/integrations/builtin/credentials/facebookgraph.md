@@ -29,6 +29,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Facebook Graph API credentials
@@ -40,7 +42,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Facebook Trigger credentials**
 
-If you want to create credentials for the [Facebook Trigger](../trigger-nodes/n8n-nodes-base.facebooktrigger/README.md) node, follow the instructions mentioned in the [Facebook App credentials](facebookapp.md) documentation.
+If you want to create credentials for the [Facebook Trigger](../trigger-nodes/n8n-nodes-base.facebooktrigger/) node, follow the instructions mentioned in the [Facebook App credentials](facebookapp.md) documentation.
 {% endhint %}
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
@@ -68,13 +70,9 @@ To create a Meta app:
 4. For **App type**, select **Business** and **Next**.
 5. If you have a business portfolio and you're ready to connect the app to it, select the business portfolio. If you don't have a business portfolio or you're not ready to connect the app to the portfolio, leave it at **No business portfolio selected**.
 6. Select **Create app**.
-7. The **Add products to your app** page opens. Select the products that make sense for your app.
+7.  The **Add products to your app** page opens. Select the products that make sense for your app.
 
-   {% hint style="info" %}
-   **Facebook Login for Business**
-
-   If you're going to use the [OAuth2](facebookgraph.md#using-oauth2) authentication type, you must add **Facebook Login for Business**. You don't need this product if you're only using an app access token.
-   {% endhint %}
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Facebook Login for Business</strong></p><p>If you're going to use the <a href="facebookgraph.md#using-oauth2">OAuth2</a> authentication type, you must add <strong>Facebook Login for Business</strong>. You don't need this product if you're only using an app access token.</p></div>
 
 Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app) documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
 
@@ -139,13 +137,9 @@ Create an app access token to use with your n8n credential and the products you 
 2. Select the **Meta App** you [created](facebookgraph.md#create-a-meta-app) in the **Access Token** section.
 3. In **User or Page**, select **Get App Token**.
 4. Select **Generate Access Token**.
-5. The page prompts you to log in and grant access. Follow the on-screen prompts.
+5.  The page prompts you to log in and grant access. Follow the on-screen prompts.
 
-   {% hint style="warning" %}
-   **App unavailable**
-
-   You may receive a warning that the app isn't available. Once you [take an app live](facebookgraph.md#taking-a-meta-app-live), there may be a few minutes' delay before you can generate an access token.
-   {% endhint %}
+    <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>App unavailable</strong></p><p>You may receive a warning that the app isn't available. Once you <a href="facebookgraph.md#taking-a-meta-app-live">take an app live</a>, there may be a few minutes' delay before you can generate an access token.</p></div>
 6. Copy the token and enter it in your n8n credential as the **Access Token**.
 
 Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started) for more information on generating the token.

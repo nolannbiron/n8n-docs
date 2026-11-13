@@ -1,21 +1,38 @@
 ---
 title: npm node documentation
-description: >-
-  Learn how to use the npm node in n8n. Follow technical documentation to
-  integrate npm node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: npm node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.npm.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.npm'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.npm'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.npm
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.npm
+description: >-
+  Learn how to use the npm node in n8n. Follow technical documentation to
+  integrate npm node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# npm node <a href="#npm-node" id="npm-node"></a>
+# npm
 
 Use the npm node to automate work in npm, and integrate npm with other applications.
 
@@ -30,15 +47,14 @@ Refer to [npm credentials](../credentials/npm.md) for guidance on setting up aut
 ## Operations <a href="#operations" id="operations"></a>
 
 * Package
-	* Get Package Metadata
-	* Get Package Versions
-	* Search for Packages
+  * Get Package Metadata
+  * Get Package Versions
+  * Search for Packages
 * Distribution Tag
-	* Get All Tags
-	* Update a Tag
+  * Get All Tags
+  * Update a Tag
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse npm node documentation integration templates](https://n8n.io/integrations/npm) or [search all templates](https://n8n.io/workflows/)
 
@@ -48,12 +64,12 @@ Refer to [npm's documentation](https://docs.npmjs.com/) for more information abo
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

@@ -1,24 +1,41 @@
 ---
 title: Sekoia credentials
-description: >-
-  Documentation for the Sekoia credentials. Use these credentials to
-  authenticate Sekoia in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Sekoia credentials
 originalFilePath: integrations/builtin/credentials/sekoia.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/sekoia'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/sekoia'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/sekoia
+url: https://docs.n8n.io/integrations/builtin/credentials/sekoia
+description: >-
+  Documentation for the Sekoia credentials. Use these credentials to
+  authenticate Sekoia in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Sekoia credentials <a href="#sekoia-credentials" id="sekoia-credentials"></a>
+# Sekoia credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -26,7 +43,7 @@ Create a [Sekoia SOC platform](https://www.sekoia.io/en/homepage/) account.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- API key
+* API key
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -38,4 +55,4 @@ This is a credential-only node. Refer to [Custom API operations](../custom-api-a
 
 To configure this credential, you'll need:
 
-- An **API Key**: To generate an API key, select **+ API Key**. Refer to [Create an API key](https://docs.sekoia.io/getting_started/manage_api_keys/#create-an-api-key) for more information.
+* An **API Key**: To generate an API key, select **+ API Key**. Refer to [Create an API key](https://docs.sekoia.io/getting_started/manage_api_keys/#create-an-api-key) for more information.

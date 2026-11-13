@@ -29,6 +29,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # SSH
@@ -50,7 +52,7 @@ Refer to the [SSH credentials documentation](../credentials/ssh.md) for authenti
 {% hint style="info" %}
 **Uploading files**
 
-To attach a file for upload, you will need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/README.md) node to pass the file as a data property.
+To attach a file for upload, you will need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/) node to pass the file as a data property.
 {% endhint %}
 
 ### Execute Command <a href="#execute-command" id="execute-command"></a>

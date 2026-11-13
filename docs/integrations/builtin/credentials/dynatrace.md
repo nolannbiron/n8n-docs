@@ -1,22 +1,40 @@
 ---
 title: Dynatrace credentials
-description: >-
-  Documentation for the Dynatrace credentials. Use these credentials to
-  authenticate Dynatrace in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 nodeTitle: Dynatrace credentials
 originalFilePath: integrations/builtin/credentials/dynatrace.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/dynatrace'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/dynatrace'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/dynatrace
+url: https://docs.n8n.io/integrations/builtin/credentials/dynatrace
+description: >-
+  Documentation for the Dynatrace credentials. Use these credentials to
+  authenticate Dynatrace in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
-# Dynatrace credentials <a href="#dynatrace-credentials" id="dynatrace-credentials"></a>
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
+# Dynatrace credentials
+
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -28,11 +46,10 @@ Refer to [Dynatrace's API documentation](https://docs.dynatrace.com/docs/dynatra
 
 This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/dynatrace-api/) on n8n's website.
 
-
 ## Using Access Token <a href="#using-access-token" id="using-access-token"></a>
 
 To configure this credential, you'll need:
 
-- An **Access Token**
-	
+* An **Access Token**
+
 Refer to [Access Tokens](https://docs.dynatrace.com/docs/manage/identity-access-management/access-tokens-and-oauth-clients/access-tokens) on Dynatrace's website for more information.

@@ -1,36 +1,53 @@
 ---
 title: Slack credentials
-description: >-
-  Documentation for Slack credentials. Use these credentials to authenticate
-  Slack in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: high
 nodeTitle: Slack credentials
 originalFilePath: integrations/builtin/credentials/slack.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/slack'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/slack'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/slack
+url: https://docs.n8n.io/integrations/builtin/credentials/slack
+description: >-
+  Documentation for Slack credentials. Use these credentials to authenticate
+  Slack in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Slack credentials <a href="#slack-credentials" id="slack-credentials"></a>
+# Slack credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Slack](../app-nodes/n8n-nodes-base.slack/README.md)
-- [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md)
+* [Slack](../app-nodes/n8n-nodes-base.slack/)
+* [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md)
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- API access token:
-    - Required for the [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md) node.
-    - Works with the [Slack](../app-nodes/n8n-nodes-base.slack/README.md) node, but not recommended.
-- OAuth2:
-    - Recommended method for the [Slack](../app-nodes/n8n-nodes-base.slack/README.md) node.
-    - Doesn't work with the [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md) node.
+* API access token:
+  * Required for the [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md) node.
+  * Works with the [Slack](../app-nodes/n8n-nodes-base.slack/) node, but not recommended.
+* OAuth2:
+  * Recommended method for the [Slack](../app-nodes/n8n-nodes-base.slack/) node.
+  * Doesn't work with the [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md) node.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -40,7 +57,7 @@ Refer to [Slack's API documentation](https://api.slack.com/apis) for more inform
 
 To configure this credential, you'll need a [Slack](https://slack.com/) account and:
 
-- An **Access Token**
+* An **Access Token**
 
 To generate an access token, create a Slack app. n8n recommends creating the app from a manifest, which configures all the scopes in one step:
 
@@ -49,7 +66,7 @@ To generate an access token, create a Slack app. n8n recommends creating the app
 1. Open your [Slack API Apps](https://api.slack.com/apps) page.
 2. Select **Create New App > From a manifest**.
 3. Select the **Workspace** where you'll be developing your app, then select **Next**.
-4. Select the **JSON** tab and replace the default manifest with the JSON below. Adjust the [scopes](#scopes) if needed.
+4. Select the **JSON** tab and replace the default manifest with the JSON below. Adjust the [scopes](slack.md#scopes) if needed.
 5. Select **Next**.
 6. Review the summary and select **Create**. The app details open.
 
@@ -102,7 +119,7 @@ To generate an access token, create a Slack app. n8n recommends creating the app
 4. Select the **Workspace** where you'll be developing your app.
 5. Select **Create App**. The app details open.
 6. In the left menu under **Features**, select **OAuth & Permissions**.
-7. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of recommended scopes.
+7. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](slack.md#scopes) for a list of recommended scopes.
 
 Then install the app and copy the token:
 
@@ -110,7 +127,7 @@ Then install the app and copy the token:
 2. In the **OAuth Tokens** section, select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
 3. Select **Allow**.
 4. Copy the **Bot User OAuth Token** and enter it as the **Access Token** in your n8n credential.
-5. If you're using this credential for the [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md), follow the steps in [Slack Trigger configuration](#slack-trigger-configuration) to finish setting up your app.
+5. If you're using this credential for the [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md), follow the steps in [Slack Trigger configuration](slack.md#slack-trigger-configuration) to finish setting up your app.
 
 Refer to the Slack API [Quickstart](https://api.slack.com/quickstart) for more information.
 
@@ -121,12 +138,11 @@ To use your Slack app with the [Slack Trigger](../trigger-nodes/n8n-nodes-base.s
 1. Go to [Your Apps](https://api.slack.com/apps/) in Slack and select the app you want to use.
 2. Go to **Features** > **Event Subscriptions**.
 3. Turn on the **Enable Events** control.
-4. In n8n, copy the **Webhook URL** and enter it as the **Request URL** in your Slack app.<br>
+4.  In n8n, copy the **Webhook URL** and enter it as the **Request URL** in your Slack app.<br>
 
     <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Request URL</strong></p><p>Slack only allows one request URL per app. If you want to test your workflow, you'll need to do one of the following:</p><ul><li>Test with your <strong>Test URL</strong> first, then change your Slack app to use the <strong>Production URL</strong> once you've verified everything's working</li><li>Use the <strong>Production URL</strong> with execution logging.</li></ul></div>
-
-5. Once verified, select the bot events to subscribe to. Use the **Trigger on** field in n8n to filter these requests. 
-    - To use an event not in the list, add it as a bot event and select **Any Event** in the n8n node.
+5. Once verified, select the bot events to subscribe to. Use the **Trigger on** field in n8n to filter these requests.
+   * To use an event not in the list, add it as a bot event and select **Any Event** in the n8n node.
 
 Refer to [Quickstart | Configuring the app for event listening](https://api.slack.com/quickstart#listening) for more information.
 
@@ -153,8 +169,8 @@ Cloud users don't need to provide connection details. Select **Connect my accoun
 
 If you're [self-hosting n8n](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n) and need to configure OAuth2 from scratch, you'll need a [Slack](https://slack.com/) account and:
 
-- A **Client ID**
-- A **Client Secret**
+* A **Client ID**
+* A **Client Secret**
 
 To get both, create a Slack app. n8n recommends creating the app from a manifest, which configures the scopes and redirect URL in one step:
 
@@ -164,7 +180,7 @@ To get both, create a Slack app. n8n recommends creating the app from a manifest
 2. Open your [Slack API Apps](https://api.slack.com/apps) page.
 3. Select **Create New App > From a manifest**.
 4. Select the **Workspace** where you'll be developing your app, then select **Next**.
-5. Select the **JSON** tab and replace the default manifest with the JSON below. Replace `<your-oauth-callback-url>` with the URL you copied from n8n and adjust the [scopes](#scopes) if needed.
+5. Select the **JSON** tab and replace the default manifest with the JSON below. Replace `<your-oauth-callback-url>` with the URL you copied from n8n and adjust the [scopes](slack.md#scopes) if needed.
 6. Select **Next**.
 7. Review the summary and select **Create**. The app details open.
 
@@ -293,7 +309,7 @@ Some Slack API endpoints, including Slack's MCP endpoints, only work with user t
 8. Copy the **OAuth Callback URL** from n8n and enter it as the new Redirect URL in Slack.
 9. Select **Add**.
 10. Select **Save URLs**.
-11. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of scopes.
+11. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](slack.md#scopes) for a list of scopes.
 
 Then finish connecting the app to n8n:
 
@@ -315,35 +331,35 @@ Scopes determine what permissions an app has.
 
 Here's the list of scopes the OAuth credential requires, which are a good starting point. The app manifests above already include these scopes:
 
-| **Scope name**        | **Notes** |
-|-----------------------| -- |
-| `channels:read`       | |
-| `channels:write`      | Not available as a bot token scope |
-| `channels:history`    | |
-| `chat:write`          | |
-| `files:read`          | |
-| `files:write`         | |
-| `groups:read`         | |
-| `groups:write`        | For private-channel management operations |
-| `groups:history`      | |
-| `im:read`             | |
-| `im:history`          | |
-| `mpim:read`           | |
-| `mpim:history`        | |
-| `reactions:read`      | |
-| `reactions:write`     | |
-| `stars:read`          | Not available as a bot token scope |
-| `stars:write`         | Not available as a bot token scope |
-| `usergroups:read`     | |
-| `usergroups:write`    | | 
-| `users.profile:read`  | |
-| `users.profile:write` | Not available as a bot token scope |
-| `users:read`          | |
+| **Scope name**        | **Notes**                                              |
+| --------------------- | ------------------------------------------------------ |
+| `channels:read`       |                                                        |
+| `channels:write`      | Not available as a bot token scope                     |
+| `channels:history`    |                                                        |
+| `chat:write`          |                                                        |
+| `files:read`          |                                                        |
+| `files:write`         |                                                        |
+| `groups:read`         |                                                        |
+| `groups:write`        | For private-channel management operations              |
+| `groups:history`      |                                                        |
+| `im:read`             |                                                        |
+| `im:history`          |                                                        |
+| `mpim:read`           |                                                        |
+| `mpim:history`        |                                                        |
+| `reactions:read`      |                                                        |
+| `reactions:write`     |                                                        |
+| `stars:read`          | Not available as a bot token scope                     |
+| `stars:write`         | Not available as a bot token scope                     |
+| `usergroups:read`     |                                                        |
+| `usergroups:write`    |                                                        |
+| `users.profile:read`  |                                                        |
+| `users.profile:write` | Not available as a bot token scope                     |
+| `users:read`          |                                                        |
 | `search:read`         | Deprecated by Slack; retained for node versions <= 2.6 |
-| `search:read.public`  | For public-channel message search |
-| `search:read.private` | Not available as a bot token scope |
-| `search:read.im`      | Not available as a bot token scope |
-| `search:read.mpim`    | Not available as a bot token scope |
+| `search:read.public`  | For public-channel message search                      |
+| `search:read.private` | Not available as a bot token scope                     |
+| `search:read.im`      | Not available as a bot token scope                     |
+| `search:read.mpim`    | Not available as a bot token scope                     |
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

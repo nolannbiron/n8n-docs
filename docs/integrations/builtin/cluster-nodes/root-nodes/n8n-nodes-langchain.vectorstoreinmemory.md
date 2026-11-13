@@ -32,6 +32,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Simple Vector Store
@@ -53,7 +55,7 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 {% hint style="info" %}
 **This node is different from AI memory nodes**
 
-The simple vector storage described here is different to the AI memory nodes such as [Simple Memory](../sub-nodes/n8n-nodes-langchain.memorybufferwindow/README.md).
+The simple vector storage described here is different to the AI memory nodes such as [Simple Memory](../sub-nodes/n8n-nodes-langchain.memorybufferwindow/).
 
 This node creates a [vector database](#user-content-fn-2)[^2] in the app memory.
 {% endhint %}
@@ -88,13 +90,13 @@ You can see an example of in step 2 of [this template](https://n8n.io/workflows/
 
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-You can connect the Simple Vector Store node directly to the tool[^3] connector of an [AI agent](n8n-nodes-langchain.agent/README.md) to use a vector store as a resource when answering queries.
+You can connect the Simple Vector Store node directly to the tool[^3] connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Simple Vector Store node.
 
 ### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Simple Vector Store node to fetch documents from the Simple Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Simple Vector Store node to fetch documents from the Simple Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
 
 An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Simple Vector Store.
 
@@ -128,7 +130,7 @@ This Vector Store node has four modes: **Get Many**, **Insert Documents**, **Ret
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](../sub-nodes/n8n-nodes-langchain.rerankercohere.md), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
@@ -163,5 +165,7 @@ Refer to [LangChain's Memory Vector Store documentation](https://docs.langchain.
 View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
 [^1]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.
+
 [^2]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
+
 [^3]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.

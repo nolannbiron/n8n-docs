@@ -33,6 +33,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 tags:
   - tag: deprecated
     primary: true
@@ -50,14 +52,14 @@ Node version 1 of the AI Agent node is removed from n8n 3.0, so the OpenAI Funct
 
 Use the OpenAI Functions Agent node to use an [OpenAI functions model](https://platform.openai.com/docs/guides/function-calling). These are models that detect when a function should be called and respond with the inputs that should be passed to the function.
 
-Refer to [AI Agent](./README.md) for more information on the AI Agent node itself.
+Refer to [AI Agent](./) for more information on the AI Agent node itself.
 
-You can use this agent with the [Chat Trigger](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.chattrigger) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
+You can use this agent with the [Chat Trigger](../../../core-nodes/n8n-nodes-langchain.chattrigger/) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
 
 {% hint style="info" %}
 **OpenAI Chat Model required**
 
-You must use the [OpenAI Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md) with this agent.
+You must use the [OpenAI Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatopenai/) with this agent.
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
@@ -77,9 +79,9 @@ Choose from:
 
 This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
 
-* [Auto-fixing Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
-* [Item List Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
-* [Structured Output Parser](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
+* [Auto-fixing Output Parser](../../sub-nodes/n8n-nodes-langchain.outputparserautofixing.md)
+* [Item List Output Parser](../../sub-nodes/n8n-nodes-langchain.outputparseritemlist.md)
+* [Structured Output Parser](../../sub-nodes/n8n-nodes-langchain.outputparserstructured/)
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -111,7 +113,7 @@ Entries with empty keys or values are ignored.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-Refer to the main AI Agent node's [Templates and examples](./README.md#templates-and-examples) section.
+Refer to the main AI Agent node's [Templates and examples](./#templates-and-examples) section.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

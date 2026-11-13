@@ -1,26 +1,42 @@
 ---
 title: Line node documentation
-description: >-
-  Learn how to use the Line node in n8n. Follow technical documentation to
-  integrate Line node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: Line node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.line.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.line'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.line'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.line
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.line
+description: >-
+  Learn how to use the Line node in n8n. Follow technical documentation to
+  integrate Line node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 tags:
   - tag: deprecated
     primary: true
 ---
 
-# Line node <a href="#line-node" id="line-node"></a>
-
+# Line
 
 {% hint style="warning" %}
 **Feature availability**
@@ -28,8 +44,7 @@ tags:
 The Line node is deprecated from n8n 1.64.0. LINE Notify ends its own service on April 1, 2025, after which the node stops working. View LINE Notify's [end of service announcement](https://notify-bot.line.me/closing-announce) for more information.
 {% endhint %}
 
-
-Use the Line node to automate work in Line, and integrate Line with other applications. n8n has built-in support for a wide range of Line features, including sending notifications. 
+Use the Line node to automate work in Line, and integrate Line with other applications. n8n has built-in support for a wide range of Line features, including sending notifications.
 
 On this page, you'll find a list of operations the Line node supports and links to more resources.
 
@@ -48,21 +63,20 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Notification
-    * Sends notifications to users or groups
+  * Sends notifications to users or groups
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Line node documentation integration templates](https://n8n.io/integrations/line) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

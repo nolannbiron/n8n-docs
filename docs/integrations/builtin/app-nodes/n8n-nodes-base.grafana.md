@@ -1,21 +1,38 @@
 ---
 title: Grafana node documentation
-description: >-
-  Learn how to use the Grafana node in n8n. Follow technical documentation to
-  integrate Grafana node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Grafana node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.grafana.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.grafana'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.grafana'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.grafana
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.grafana
+description: >-
+  Learn how to use the Grafana node in n8n. Follow technical documentation to
+  integrate Grafana node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Grafana node <a href="#grafana-node" id="grafana-node"></a>
+# Grafana
 
 Use the Grafana node to automate work in Grafana, and integrate Grafana with other applications. n8n has built-in support for a wide range of Grafana features, including creating, updating, deleting, and getting dashboards, teams, and users.
 
@@ -36,39 +53,38 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Dashboard
-    * Create a dashboard
-    * Delete a dashboard
-    * Get a dashboard
-    * Get all dashboards
-    * Update a dashboard
+  * Create a dashboard
+  * Delete a dashboard
+  * Get a dashboard
+  * Get all dashboards
+  * Update a dashboard
 * Team
-    * Create a team
-    * Delete a team
-    * Get a team
-    * Retrieve all teams
-    * Update a team
+  * Create a team
+  * Delete a team
+  * Get a team
+  * Retrieve all teams
+  * Update a team
 * Team Member
-    * Add a member to a team
-    * Retrieve all team members
-    * Remove a member from a team
+  * Add a member to a team
+  * Retrieve all team members
+  * Remove a member from a team
 * User
-    * Delete a user from the current organization
-    * Retrieve all users in the current organization
-    * Update a user in the current organization
+  * Delete a user from the current organization
+  * Retrieve all users in the current organization
+  * Update a user in the current organization
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Grafana node documentation integration templates](https://n8n.io/integrations/grafana) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

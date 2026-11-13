@@ -1,23 +1,40 @@
 ---
 title: Harvest node documentation
-description: >-
-  Learn how to use the Harvest node in n8n. Follow technical documentation to
-  integrate Harvest node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Harvest node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.harvest.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.harvest'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.harvest'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.harvest
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.harvest
+description: >-
+  Learn how to use the Harvest node in n8n. Follow technical documentation to
+  integrate Harvest node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Harvest node <a href="#harvest-node" id="harvest-node"></a>
+# Harvest
 
-Use the Harvest node to automate work in Harvest, and integrate Harvest with other applications. n8n has built-in support for a wide range of Harvest features, including creating, updating, deleting, and getting clients, contacts, invoices, tasks, expenses, users, and projects. 
+Use the Harvest node to automate work in Harvest, and integrate Harvest with other applications. n8n has built-in support for a wide range of Harvest features, including creating, updating, deleting, and getting clients, contacts, invoices, tasks, expenses, users, and projects.
 
 On this page, you'll find a list of operations the Harvest node supports and links to more resources.
 
@@ -30,80 +47,79 @@ Refer to [Harvest credentials](../credentials/harvest.md) for guidance on settin
 ## Operations <a href="#operations" id="operations"></a>
 
 * Client
-    * Create a client
-    * Delete a client
-    * Get data of a client
-    * Get data of all clients
-    * Update a client
+  * Create a client
+  * Delete a client
+  * Get data of a client
+  * Get data of all clients
+  * Update a client
 * Company
-    * Retrieves the company for the currently authenticated user
+  * Retrieves the company for the currently authenticated user
 * Contact
-    * Create a contact
-    * Delete a contact
-    * Get data of a contact
-    * Get data of all contacts
-    * Update a contact
+  * Create a contact
+  * Delete a contact
+  * Get data of a contact
+  * Get data of all contacts
+  * Update a contact
 * Estimate
-    * Create an estimate
-    * Delete an estimate
-    * Get data of an estimate
-    * Get data of all estimates
-    * Update an estimate
+  * Create an estimate
+  * Delete an estimate
+  * Get data of an estimate
+  * Get data of all estimates
+  * Update an estimate
 * Expense
-    * Get data of an expense
-    * Get data of all expenses
-    * Create an expense
-    * Update an expense
-    * Delete an expense
+  * Get data of an expense
+  * Get data of all expenses
+  * Create an expense
+  * Update an expense
+  * Delete an expense
 * Invoice
-    * Get data of an invoice
-    * Get data of all invoices
-    * Create an invoice
-    * Update an invoice
-    * Delete an invoice
+  * Get data of an invoice
+  * Get data of all invoices
+  * Create an invoice
+  * Update an invoice
+  * Delete an invoice
 * Project
-    * Create a project
-    * Delete a project
-    * Get data of a project
-    * Get data of all projects
-    * Update a project
+  * Create a project
+  * Delete a project
+  * Get data of a project
+  * Get data of all projects
+  * Update a project
 * Task
-    * Create a task
-    * Delete a task
-    * Get data of a task
-    * Get data of all tasks
-    * Update a task
+  * Create a task
+  * Delete a task
+  * Get data of a task
+  * Get data of all tasks
+  * Update a task
 * Time Entries
-    * Create a time entry using duration
-    * Create a time entry using start and end time
-    * Delete a time entry
-    * Delete a time entry's external reference.
-    * Get data of a time entry
-    * Get data of all time entries
-    * Restart a time entry
-    * Stop a time entry
-    * Update a time entry
+  * Create a time entry using duration
+  * Create a time entry using start and end time
+  * Delete a time entry
+  * Delete a time entry's external reference.
+  * Get data of a time entry
+  * Get data of all time entries
+  * Restart a time entry
+  * Stop a time entry
+  * Update a time entry
 * User
-    * Create a user
-    * Delete a user
-    * Get data of a user
-    * Get data of all users
-    * Get data of authenticated user
-    * Update a user
+  * Create a user
+  * Delete a user
+  * Get data of a user
+  * Get data of all users
+  * Get data of authenticated user
+  * Update a user
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Harvest node documentation integration templates](https://n8n.io/integrations/harvest) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

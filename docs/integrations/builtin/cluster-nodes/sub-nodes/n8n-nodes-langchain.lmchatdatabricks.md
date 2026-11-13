@@ -3,11 +3,28 @@ description: >-
   Learn how to use the Databricks Chat Model node in n8n. Follow technical
   documentation to integrate Databricks Chat Model node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Databricks Chat Model node
+# Databricks Chat Model
 
 Use the Databricks Chat Model node to run AI agents and chains on models served by your Databricks workspace. The node queries [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services), so it works with Databricks-hosted foundation models and with external providers you route through the gateway.
 
@@ -31,13 +48,13 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 ## Prerequisites
 
-- A Databricks workspace with Unity AI Gateway enabled.
-- A [Databricks OAuth2 credential](../../credentials/databricks.md#supported-authentication-methods) in n8n, using either a service principal or user login. The node doesn't support personal access tokens.
-- The identity the credential authenticates as needs **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` model services to all workspace users by default.
+* A Databricks workspace with Unity AI Gateway enabled.
+* A [Databricks OAuth2 credential](../../credentials/databricks.md#supported-authentication-methods) in n8n, using either a service principal or user login. The node doesn't support personal access tokens.
+* The identity the credential authenticates as needs **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` model services to all workspace users by default.
 
 ## Set up the node
 
-1. Add an [AI Agent](../root-nodes/n8n-nodes-langchain.agent/README.md) node (or another root node that takes a chat model) to your workflow.
+1. Add an [AI Agent](../root-nodes/n8n-nodes-langchain.agent/) node (or another root node that takes a chat model) to your workflow.
 2. Select the **+** on the node's **Chat Model** connector, then select **Databricks Chat Model**.
 3. Under **Credential to connect with**, select an existing Databricks OAuth2 credential or create a new one. Follow the steps for your authentication type below.
 4. In **Model**, open the list and pick a model service. n8n loads the chat-capable model services the credential can access. To use a service that isn't listed, switch to **ID** and enter its full name, for example `system.ai.databricks-meta-llama-3-3-70b-instruct`.
@@ -61,27 +78,27 @@ Use user login when the agent should run with your own Databricks permissions an
 
 ## Node parameters
 
-- **Model**: The Unity AI Gateway model service that generates the completion, named `catalog.schema.service`.
-	- **From List**: Choose from the model services the credential can access that support chat completions. Databricks-hosted foundation models in `system.ai` and external provider routes both appear.
-	- **ID**: Enter the full name of a model service directly. Use this for a service that supports chat but isn't advertised as chat-capable.
+* **Model**: The Unity AI Gateway model service that generates the completion, named `catalog.schema.service`.
+  * **From List**: Choose from the model services the credential can access that support chat completions. Databricks-hosted foundation models in `system.ai` and external provider routes both appear.
+  * **ID**: Enter the full name of a model service directly. Use this for a service that supports chat but isn't advertised as chat-capable.
 
 ## Node options
 
-- **Frequency Penalty**: Penalize new tokens based on how often they already appear in the text, to reduce verbatim repetition. Range from `-2` to `2`, default `0`.
-- **Maximum Number of Tokens**: The maximum number of tokens to generate in the completion. Default `-1` (no limit set by n8n).
-- **Response Format**: **Text** (default) or **JSON**. JSON mode requires the word `json` in your prompt and a model service that supports JSON mode.
-- **Presence Penalty**: Penalize new tokens based on whether they appear in the text so far, to encourage new topics. Range from `-2` to `2`, default `0`.
-- **Sampling Temperature**: Control randomness. Lower values give more deterministic completions. Range from 0 to 2, default 0.7.
-- **Timeout**: The maximum time a request may take, in milliseconds. Default 360000 (six minutes).
-- **Max Retries**: How many times to retry a failed request. Default 2.
-- **Top P**: Nucleus sampling. Adjust this or **Sampling Temperature**, not both. Range from 0 to 1, default 1.
+* **Frequency Penalty**: Penalize new tokens based on how often they already appear in the text, to reduce verbatim repetition. Range from `-2` to `2`, default `0`.
+* **Maximum Number of Tokens**: The maximum number of tokens to generate in the completion. Default `-1` (no limit set by n8n).
+* **Response Format**: **Text** (default) or **JSON**. JSON mode requires the word `json` in your prompt and a model service that supports JSON mode.
+* **Presence Penalty**: Penalize new tokens based on whether they appear in the text so far, to encourage new topics. Range from `-2` to `2`, default `0`.
+* **Sampling Temperature**: Control randomness. Lower values give more deterministic completions. Range from 0 to 2, default 0.7.
+* **Timeout**: The maximum time a request may take, in milliseconds. Default 360000 (six minutes).
+* **Max Retries**: How many times to retry a failed request. Default 2.
+* **Top P**: Nucleus sampling. Adjust this or **Sampling Temperature**, not both. Range from 0 to 1, default 1.
 
 ## Choose a model for agents
 
 Not every model service works as an agent's tool-calling model through this node. The model must support tool calling, and some endpoints that advertise it don't return tool calls the AI Agent can execute. In n8n's testing:
 
-- **Llama 3.3 70B** and **Qwen 3.5** call tools reliably and are a good default for the [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) and other tools.
-- **gpt-oss** and **Llama 4 Maverick** endpoints don't return tool calls the AI Agent can execute. Agents using them loop until they hit **Max Iterations** without calling any tool.
+* **Llama 3.3 70B** and **Qwen 3.5** call tools reliably and are a good default for the [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) and other tools.
+* **gpt-oss** and **Llama 4 Maverick** endpoints don't return tool calls the AI Agent can execute. Agents using them loop until they hit **Max Iterations** without calling any tool.
 
 Your workspace may list other model services. To test one, ask the agent a question that requires a tool call and check the execution log. A model that doesn't work shows the same symptom: the agent uses all its iterations without a single tool call.
 
@@ -89,12 +106,12 @@ Pay-per-token model services are rate limited per workspace. Three concurrent ag
 
 ## Related resources
 
-- [Databricks credentials](../../credentials/databricks.md)
-- [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for SQL, Unity Catalog, and Genie Agent REST operations
-- [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) to give an agent access to Genie One
-- [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md) and [Embeddings Databricks](n8n-nodes-langchain.embeddingsdatabricks.md) to let an agent search a Databricks Vector Search index
-- [Databricks AI Agent](../root-nodes/n8n-nodes-langchain.databricksaiagent.md) to export agent runs to MLflow Tracing
-- [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
+* [Databricks credentials](../../credentials/databricks.md)
+* [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for SQL, Unity Catalog, and Genie Agent REST operations
+* [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) to give an agent access to Genie One
+* [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/) and [Embeddings Databricks](n8n-nodes-langchain.embeddingsdatabricks.md) to let an agent search a Databricks Vector Search index
+* [Databricks AI Agent](../root-nodes/n8n-nodes-langchain.databricksaiagent.md) to export agent runs to MLflow Tracing
+* [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
 
 View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 

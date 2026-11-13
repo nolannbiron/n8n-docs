@@ -29,6 +29,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # FTP
@@ -54,7 +56,7 @@ To connect to an SFTP server, use an SFTP credential. Refer to [FTP credentials]
 {% hint style="info" %}
 **Uploading files**
 
-To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/README.md) node to pass the file as a data property.
+To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/) node to pass the file as a data property.
 {% endhint %}
 
 ## Delete <a href="#delete" id="delete"></a>
@@ -110,7 +112,7 @@ Configure this operation with these parameters:
 {% hint style="info" %}
 **Uploading files**
 
-To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/README.md) node to pass the file as a data property.
+To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/) node to pass the file as a data property.
 {% endhint %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>

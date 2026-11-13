@@ -4,13 +4,30 @@ description: >-
   with a Databricks model service and pair the node with the Databricks Vector
   Store node.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Embeddings Databricks node
+# Embeddings Databricks
 
-Use the Embeddings Databricks node to generate embeddings[^1] for text with an embeddings model served by your Databricks workspace. The node queries [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services), the same gateway the [Databricks Chat Model](n8n-nodes-langchain.lmchatdatabricks.md) node uses. Its main job is to pair with the [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md) node, which needs an embeddings connection in every operation mode.
+Use the Embeddings Databricks node to generate embeddings[^1] for text with an embeddings model served by your Databricks workspace. The node queries [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services), the same gateway the [Databricks Chat Model](n8n-nodes-langchain.lmchatdatabricks.md) node uses. Its main job is to pair with the [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/) node, which needs an embeddings connection in every operation mode.
 
 On this page, you'll find the prerequisites, setup steps, pairing rules, node parameters, and known issues for the Embeddings Databricks node.
 
@@ -32,13 +49,13 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 ## Prerequisites
 
-- A Databricks workspace with Unity AI Gateway enabled.
-- A [Databricks OAuth2 credential](../../credentials/databricks.md#supported-authentication-methods) in n8n, using either a service principal or user login.
-- The identity the credential authenticates as needs **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` model services to all workspace users by default. Refer to [Required Databricks privileges](../../credentials/databricks.md#required-databricks-privileges).
+* A Databricks workspace with Unity AI Gateway enabled.
+* A [Databricks OAuth2 credential](../../credentials/databricks.md#supported-authentication-methods) in n8n, using either a service principal or user login.
+* The identity the credential authenticates as needs **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` model services to all workspace users by default. Refer to [Required Databricks privileges](../../credentials/databricks.md#required-databricks-privileges).
 
 ## Set up the node
 
-1. Add a [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md) node, or another node that takes an embeddings sub-node, to your workflow.
+1. Add a [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/) node, or another node that takes an embeddings sub-node, to your workflow.
 2. Select the **+** on the node's **Embedding** connector, then select **Embeddings Databricks**.
 3. Under **Credential to connect with**, select an existing Databricks OAuth2 credential or create a new one.
 4. In **Model**, open the list and pick a model service. n8n loads the model services the credential can access that support embeddings, and leaves out chat models. Type to filter the list. To use a service that isn't listed, switch to **ID** and enter its full name, for example `system.ai.gte-large-en`.
@@ -47,25 +64,25 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 Which model you pick depends on the index the Databricks Vector Store node works with:
 
-- **Managed index** (a Delta Sync index with a Databricks embedding model): Databricks embeds the queries itself with the index's own model. The Embeddings Databricks node must be connected, but it's never called, so any model service works.
-- **Self-managed index** (a Direct Access index, or a Delta Sync index with its own vector column): the Embeddings Databricks node embeds every search query, and on a Direct Access index every inserted document. Pick the model and dimension the index was built with. An index built with `databricks-gte-large-en`, which has 1024 dimensions, needs the `system.ai.gte-large-en` model service. A different model fails with `query vector dimension <n> does not match index vector dimension <m>` on a search, and with `Databricks rejected the upsert into <index>. Failed primary keys: ...` on an insert.
+* **Managed index** (a Delta Sync index with a Databricks embedding model): Databricks embeds the queries itself with the index's own model. The Embeddings Databricks node must be connected, but it's never called, so any model service works.
+* **Self-managed index** (a Direct Access index, or a Delta Sync index with its own vector column): the Embeddings Databricks node embeds every search query, and on a Direct Access index every inserted document. Pick the model and dimension the index was built with. An index built with `databricks-gte-large-en`, which has 1024 dimensions, needs the `system.ai.gte-large-en` model service. A different model fails with `query vector dimension <n> does not match index vector dimension <m>` on a search, and with `Databricks rejected the upsert into <index>. Failed primary keys: ...` on an insert.
 
-Refer to [Index types and embeddings](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md#index-types-and-embeddings) on the Databricks Vector Store page for how the vector store node decides which query form to send.
+Refer to [Index types and embeddings](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/#index-types-and-embeddings) on the Databricks Vector Store page for how the vector store node decides which query form to send.
 
 The node is a standard embeddings sub-node, so it also works with the other vector store nodes in n8n, such as the [Simple Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md).
 
 ## Node parameters
 
-- **Model**: The Unity AI Gateway model service that generates the embeddings, named `catalog.schema.service`.
-	- **From List**: Choose from the model services the credential can access that support embeddings.
-	- **ID**: Enter the full name of a model service directly. Use this for a service that supports embeddings but isn't advertised as embeddings-capable.
+* **Model**: The Unity AI Gateway model service that generates the embeddings, named `catalog.schema.service`.
+  * **From List**: Choose from the model services the credential can access that support embeddings.
+  * **ID**: Enter the full name of a model service directly. Use this for a service that supports embeddings but isn't advertised as embeddings-capable.
 
 ## Node options
 
-- **Batch Size**: The maximum number of documents to send in one request. Default `512`, maximum `2048`. Refer to [Rate limits](#rate-limits) before lowering it.
-- **Strip New Lines**: Whether to remove new line characters from the input text before embedding it. Turned on by default.
-- **Timeout**: The maximum time a request may take, in milliseconds. Default `360000` (six minutes). A request that runs out of time fails with `Request timed out.`
-- **Max Retries**: How many times to retry a failed request. Default `2`.
+* **Batch Size**: The maximum number of documents to send in one request. Default `512`, maximum `2048`. Refer to [Rate limits](n8n-nodes-langchain.embeddingsdatabricks.md#rate-limits) before lowering it.
+* **Strip New Lines**: Whether to remove new line characters from the input text before embedding it. Turned on by default.
+* **Timeout**: The maximum time a request may take, in milliseconds. Default `360000` (six minutes). A request that runs out of time fails with `Request timed out.`
+* **Max Retries**: How many times to retry a failed request. Default `2`.
 
 ## Rate limits
 
@@ -75,12 +92,12 @@ To avoid it, keep **Batch Size** at its default so a chunk goes out in one reque
 
 ## Related resources
 
-- [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md)
-- [Databricks AI Agent](../root-nodes/n8n-nodes-langchain.databricksaiagent.md)
-- [Databricks Chat Model](n8n-nodes-langchain.lmchatdatabricks.md)
-- [Databricks credentials](../../credentials/databricks.md)
-- [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
-- Migrating from the community package: refer to [Migrate from the n8n-nodes-databricks community package](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/migrate-from-the-community-package.md)
+* [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/)
+* [Databricks AI Agent](../root-nodes/n8n-nodes-langchain.databricksaiagent.md)
+* [Databricks Chat Model](n8n-nodes-langchain.lmchatdatabricks.md)
+* [Databricks credentials](../../credentials/databricks.md)
+* [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
+* Migrating from the community package: refer to [Migrate from the n8n-nodes-databricks community package](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/migrate-from-the-community-package.md)
 
 View n8n's [Advanced AI](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/integrate-ai) documentation.
 
@@ -100,11 +117,11 @@ The node fails with `The resource you are requesting could not be found`, and th
 
 ### Query vector dimension doesn't match the index
 
-The model doesn't match the index the Databricks Vector Store node searches. Refer to [Pair the node with a Databricks index](#pair-the-node-with-a-databricks-index).
+The model doesn't match the index the Databricks Vector Store node searches. Refer to [Pair the node with a Databricks index](n8n-nodes-langchain.embeddingsdatabricks.md#pair-the-node-with-a-databricks-index).
 
 ### Rate limit reached
 
-The execution fails with `Databricks rate limit reached for <service>` and a 429 status. Refer to [Rate limits](#rate-limits).
+The execution fails with `Databricks rate limit reached for <service>` and a 429 status. Refer to [Rate limits](n8n-nodes-langchain.embeddingsdatabricks.md#rate-limits).
 
 ### Host must use HTTPS
 

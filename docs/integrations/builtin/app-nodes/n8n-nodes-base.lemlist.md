@@ -1,23 +1,40 @@
 ---
 title: Lemlist node documentation
-description: >-
-  Learn how to use the Lemlist node in n8n. Follow technical documentation to
-  integrate Lemlist node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Lemlist node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.lemlist.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.lemlist'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.lemlist'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.lemlist
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.lemlist
+description: >-
+  Learn how to use the Lemlist node in n8n. Follow technical documentation to
+  integrate Lemlist node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Lemlist node <a href="#lemlist-node" id="lemlist-node"></a>
+# Lemlist
 
-Use the Lemlist node to automate work in Lemlist, and integrate Lemlist with other applications. n8n has built-in support for a wide range of Lemlist features, including getting activities, teams and campaigns, as well as creating, updating, and deleting leads. 
+Use the Lemlist node to automate work in Lemlist, and integrate Lemlist with other applications. n8n has built-in support for a wide range of Lemlist features, including getting activities, teams and campaigns, as well as creating, updating, and deleting leads.
 
 On this page, you'll find a list of operations the Lemlist node supports and links to more resources.
 
@@ -29,45 +46,40 @@ Refer to [Lemlist credentials](../credentials/lemlist.md) for guidance on settin
 
 ## Operations <a href="#operations" id="operations"></a>
 
-
-
 * Activity
-    * Get Many: Get many activities
+  * Get Many: Get many activities
 * Campaign
-    * Get Many: Get many campaigns
-    * Get Stats: Get campaign stats
+  * Get Many: Get many campaigns
+  * Get Stats: Get campaign stats
 * Enrichment
-	* Get: Fetches a previously completed enrichment
-	* Enrich Lead: Enrich a lead using an email or LinkedIn URL
-	* Enrich Person: Enrich a person using an email or LinkedIn URL
+  * Get: Fetches a previously completed enrichment
+  * Enrich Lead: Enrich a lead using an email or LinkedIn URL
+  * Enrich Person: Enrich a person using an email or LinkedIn URL
 * Lead
-    * Create: Create a new lead
-    * Delete: Delete an existing lead
-    * Get: Get an existing lead
-    * Unsubscribe: Unsubscribe an existing lead
+  * Create: Create a new lead
+  * Delete: Delete an existing lead
+  * Get: Get an existing lead
+  * Unsubscribe: Unsubscribe an existing lead
 * Team
-    * Get: Get an existing team
-	* Get Credits: Get an existing team's credits
+  * Get: Get an existing team
+  * Get Credits: Get an existing team's credits
 * Unsubscribe
-    * Add: Add an email to an unsubscribe list
-    * Delete: Delete an email from an unsubscribe list
-    * Get Many: Get many unsubscribed emails
-
-
+  * Add: Add an email to an unsubscribe list
+  * Delete: Delete an email from an unsubscribe list
+  * Get Many: Get many unsubscribed emails
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Lemlist node documentation integration templates](https://n8n.io/integrations/lemlist) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

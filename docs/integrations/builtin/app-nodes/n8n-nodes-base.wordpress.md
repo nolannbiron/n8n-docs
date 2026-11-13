@@ -1,22 +1,39 @@
 ---
 title: WordPress node documentation
-description: >-
-  Learn how to use the WordPress node in n8n. Follow technical documentation to
-  integrate WordPress node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: WordPress node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.wordpress.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.wordpress'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.wordpress'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.wordpress
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.wordpress
+description: >-
+  Learn how to use the WordPress node in n8n. Follow technical documentation to
+  integrate WordPress node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# WordPress node <a href="#wordpress-node" id="wordpress-node"></a>
+# WordPress
 
 Use the WordPress node to automate work in WordPress, and integrate WordPress with other applications. n8n has built-in support for a wide range of WordPress features, including creating, updating, and getting posts and users.
 
@@ -37,35 +54,33 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Post
-    * Create a post
-    * Get a post
-    * Get all posts
-    * Update a post
+  * Create a post
+  * Get a post
+  * Get all posts
+  * Update a post
 * Pages
-    * Create a page
-    * Get a page
-    * Get all pages
-    * Update a page
+  * Create a page
+  * Get a page
+  * Get all pages
+  * Update a page
 * User
-    * Create a user
-    * Get a user
-    * Get all users
-    * Update a user
+  * Create a user
+  * Get a user
+  * Get all users
+  * Update a user
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse WordPress node documentation integration templates](https://n8n.io/integrations/wordpress) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
-
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

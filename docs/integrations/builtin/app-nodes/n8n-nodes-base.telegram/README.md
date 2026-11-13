@@ -30,6 +30,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Telegram
@@ -87,7 +89,7 @@ Refer to [Telegram credentials](../../credentials/telegram.md) for guidance on s
 
 Refer to [Telegram's API documentation](https://core.telegram.org/bots/api) for more information about the service.
 
-n8n provides a trigger node for Telegram. Refer to the [Telegram Trigger node documentation](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) for more information.
+n8n provides a trigger node for Telegram. Refer to the [Telegram Trigger node documentation](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) for more information.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

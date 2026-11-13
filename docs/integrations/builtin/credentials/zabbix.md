@@ -1,24 +1,40 @@
 ---
 title: Zabbix credentials
-description: >-
-  Documentation for the Zabbix credentials. Use these credentials to
-  authenticate Zabbix in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 nodeTitle: Zabbix credentials
 originalFilePath: integrations/builtin/credentials/zabbix.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/zabbix'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/zabbix'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/zabbix
+url: https://docs.n8n.io/integrations/builtin/credentials/zabbix
+description: >-
+  Documentation for the Zabbix credentials. Use these credentials to
+  authenticate Zabbix in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Zabbix credentials <a href="#zabbix-credentials" id="zabbix-credentials"></a>
+# Zabbix credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes).
-
+You can use these credentials to authenticate when using the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](../custom-api-actions-for-existing-nodes.md).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -34,12 +50,11 @@ Refer to [Zabbix's API documentation](https://www.zabbix.com/documentation/curre
 
 This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zabbix/) on n8n's website.
 
-
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 
-- an **API Token**: An API key for your Zabbix user.
-- the **URL**: The URL of your Zabbix server. Don't include `/zabbix` as part of the URL.
+* an **API Token**: An API key for your Zabbix user.
+* the **URL**: The URL of your Zabbix server. Don't include `/zabbix` as part of the URL.
 
 Refer to [Zabbix's API documentation](https://www.zabbix.com/documentation/current/en/manual/api#authentication) for more information about authenticating to the service.

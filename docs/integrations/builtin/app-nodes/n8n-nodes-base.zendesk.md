@@ -1,23 +1,40 @@
 ---
 title: Zendesk node documentation
-description: >-
-  Learn how to use the Zendesk node in n8n. Follow technical documentation to
-  integrate Zendesk node into your workflows.
 contentType:
   - integration
   - reference
 nodeTitle: Zendesk node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.zendesk.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zendesk'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zendesk'
+originalUrl: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zendesk
+url: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zendesk
+description: >-
+  Learn how to use the Zendesk node in n8n. Follow technical documentation to
+  integrate Zendesk node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Zendesk node <a href="#zendesk-node" id="zendesk-node"></a>
+# Zendesk
 
-Use the Zendesk node to automate work in Zendesk, and integrate Zendesk with other applications. n8n has built-in support for a wide range of Zendesk features, including creating, and deleting tickets, users, and organizations. 
+Use the Zendesk node to automate work in Zendesk, and integrate Zendesk with other applications. n8n has built-in support for a wide range of Zendesk features, including creating, and deleting tickets, users, and organizations.
 
 On this page, you'll find a list of operations the Zendesk node supports and links to more resources.
 
@@ -36,32 +53,32 @@ This node can be used to enhance the capabilities of an AI agent. When used in t
 ## Operations <a href="#operations" id="operations"></a>
 
 * Ticket
-    * Create a ticket
-    * Delete a ticket
-    * Get a ticket
-    * Get all tickets
-    * Recover a suspended ticket
-    * Update a ticket
+  * Create a ticket
+  * Delete a ticket
+  * Get a ticket
+  * Get all tickets
+  * Recover a suspended ticket
+  * Update a ticket
 * Ticket Field
-    * Get a ticket field
-    * Get all system and custom ticket fields
+  * Get a ticket field
+  * Get all system and custom ticket fields
 * User
-    * Create a user
-    * Delete a user
-    * Get a user
-    * Get all users
-    * Get a user's organizations
-    * Get data related to the user
-    * Search users
-    * Update a user
+  * Create a user
+  * Delete a user
+  * Get a user
+  * Get all users
+  * Get a user's organizations
+  * Get data related to the user
+  * Search users
+  * Update a user
 * Organization
-    * Create an organization
-    * Delete an organization
-    * Count organizations
-    * Get an organization
-    * Get all organizations
-    * Get data related to the organization
-    * Update a organization
+  * Create an organization
+  * Delete an organization
+  * Count organizations
+  * Get an organization
+  * Get all organizations
+  * Get data related to the organization
+  * Update a organization
 
 {% hint style="warning" %}
 **Tag Replacement Behavior**
@@ -70,26 +87,25 @@ When using the Zendesk node's "Update Ticket" operation and specifying the `Tag 
 
 **To avoid accidental tag removal:**
 
-- First retrieve the ticket's tags and merge them with your new tags before updating.
-- Alternatively, use the HTTP Request node with Zendesk's `additional_tags` property to add tags without removing existing ones.
-- You can also call the ticket's `/tags` endpoint to add tags without replacing existing ones ([Zendesk tags endpoint documentation](https://developer.zendesk.com/api-reference/ticketing/ticket-management/tags/)).
+* First retrieve the ticket's tags and merge them with your new tags before updating.
+* Alternatively, use the HTTP Request node with Zendesk's `additional_tags` property to add tags without removing existing ones.
+* You can also call the ticket's `/tags` endpoint to add tags without replacing existing ones ([Zendesk tags endpoint documentation](https://developer.zendesk.com/api-reference/ticketing/ticket-management/tags/)).
 
 See the official documentation for details: [Adding tags to tickets without overwriting existing tags](https://developer.zendesk.com/documentation/ticketing/managing-tickets/adding-tags-to-tickets-without-overwriting-existing-tags/).
 {% endhint %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-
 [Browse Zendesk node documentation integration templates](https://n8n.io/integrations/zendesk) or [search all templates](https://n8n.io/workflows/)
 
 ## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
 
-If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](../core-nodes/n8n-nodes-base.httprequest/) to call the service's API.
 
-You can use the credential you created for this service in the HTTP Request node: 
+You can use the credential you created for this service in the HTTP Request node:
 
 1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
-1. Select the service you want to connect to.
-1. Select your credential.
+2. Select the service you want to connect to.
+3. Select your credential.
 
-Refer to [Custom API operations](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/custom-api-actions-for-existing-nodes) for more information.
+Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.

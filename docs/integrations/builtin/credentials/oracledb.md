@@ -29,6 +29,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Oracle Database credentials
@@ -36,7 +38,7 @@ layout:
 You can use these credentials to authenticate the following nodes:
 
 * [OracleDB](../app-nodes/n8n-nodes-base.oracledb.md)
-* [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md)
+* [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
 * [Oracle Database Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreoracledb.md)
 * [Embeddings Oracle Database](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb.md)
 

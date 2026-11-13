@@ -2,15 +2,32 @@
 contentType: howto
 nodeTitle: Environment variable installation
 originalFilePath: integrations/community-nodes/installation/env-install.md
-originalUrl: 'https://docs.n8n.io/integrations/community-nodes/installation/env-install'
+originalUrl: https://docs.n8n.io/integrations/community-nodes/installation/env-install
 url: >-
   https://docs.n8n.io/integrations/community-nodes/installation-and-management/environment-variable-installation
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Manage community packages from environment variables <a href="#manage-community-packages-from-environment-variables" id="manage-community-packages-from-environment-variables"></a>
+# Environment variable installation
 
 {% hint style="info" %}
 **Feature availability**
@@ -30,10 +47,10 @@ The first time you start n8n with `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV=true`, 
 
 Set the following environment variables on your n8n instance, then restart:
 
-| Variable | Type | Default | Description |
-| :------- | :--- | :------ | :---------- |
-| `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage installed community packages from environment variables. When `true`, n8n reconciles the installed packages against `N8N_COMMUNITY_PACKAGES` on every startup, installing missing packages, correcting versions, and **uninstalling any currently-installed packages that aren't in the list**. The **Community nodes** settings page becomes read-only: you can't install, update, or uninstall packages from the UI while this is enabled. |
-| `N8N_COMMUNITY_PACKAGES` | JSON string | - | JSON array of community packages to install. Each entry is an object with a `name` (required) and optional `version` and `checksum` fields. You can also embed the version in the name as `<package-name>@<version>`. See [environment variable installation](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/community-nodes/installation-and-management/environment-variable-installation) for the full per-field reference. |
+| Variable                                | Type        | Default | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------------------------- | ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` | Boolean     | `false` | Set to `true` to manage installed community packages from environment variables. When `true`, n8n reconciles the installed packages against `N8N_COMMUNITY_PACKAGES` on every startup, installing missing packages, correcting versions, and **uninstalling any currently-installed packages that aren't in the list**. The **Community nodes** settings page becomes read-only: you can't install, update, or uninstall packages from the UI while this is enabled. |
+| `N8N_COMMUNITY_PACKAGES`                | JSON string | -       | JSON array of community packages to install. Each entry is an object with a `name` (required) and optional `version` and `checksum` fields. You can also embed the version in the name as `<package-name>@<version>`. See [environment variable installation](environment-variable-installation.md) for the full per-field reference.                                                                                                                                |
 
 {% hint style="info" %}
 **Community packages must be enabled**
@@ -52,11 +69,11 @@ While `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` is `true`, the **Community nodes**
 
 ### Per-package fields <a href="#per-package-fields" id="per-package-fields"></a>
 
-| Field | Type | Required | Description |
-| :---- | :--- | :------- | :---------- |
-| `name` | string | Yes | npm package name. You can include the version inline as `<package-name>@<version>`. If you do, don't also set the `version` field to a different value, n8n rejects conflicting versions. |
-| `version` | string | No | Version specifier. If omitted, n8n looks the package up in the vetted-packages registry and uses that version; if the package isn't vetted, n8n installs whatever npm resolves and won't reconcile the version across restarts. |
-| `checksum` | string | No | SHA-512 checksum (`sha512-...`) for the resolved tarball. Requires `version` to be set. n8n resolves the checksum automatically from the vetted registry when possible. |
+| Field      | Type   | Required | Description                                                                                                                                                                                                                     |
+| ---------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`     | string | Yes      | npm package name. You can include the version inline as `<package-name>@<version>`. If you do, don't also set the `version` field to a different value, n8n rejects conflicting versions.                                       |
+| `version`  | string | No       | Version specifier. If omitted, n8n looks the package up in the vetted-packages registry and uses that version; if the package isn't vetted, n8n installs whatever npm resolves and won't reconcile the version across restarts. |
+| `checksum` | string | No       | SHA-512 checksum (`sha512-...`) for the resolved tarball. Requires `version` to be set. n8n resolves the checksum automatically from the vetted registry when possible.                                                         |
 
 Example with all three fields:
 

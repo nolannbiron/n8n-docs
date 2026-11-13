@@ -1,8 +1,5 @@
 ---
 title: Extract From File
-description: >-
-  Documentation for the Extract From File node in n8n, a workflow automation
-  platform. Includes guidance on usage, and links to examples.
 contentType:
   - integration
   - reference
@@ -13,14 +10,34 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile
 url: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile
+description: >-
+  Documentation for the Extract From File node in n8n, a workflow automation
+  platform. Includes guidance on usage, and links to examples.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Extract From File <a href="#extract-from-file" id="extract-from-file"></a>
+# Extract From File
 
-A common pattern in n8n workflows is to receive a file, either from an [HTTP Request node][] (for files you are fetching from a website), a [Webhook Node][] (for files which are sent to your workflow from elsewhere), or from a local source. Data obtained in this way is often in a binary format, for example a spreadsheet or PDF.
+A common pattern in n8n workflows is to receive a file, either from an [HTTP Request node](n8n-nodes-base.httprequest/) (for files you are fetching from a website), a [Webhook Node](n8n-nodes-base.webhook/) (for files which are sent to your workflow from elsewhere), or from a local source. Data obtained in this way is often in a binary format, for example a spreadsheet or PDF.
 
 The Extract From File node extracts data from a binary format file and converts it to JSON, which can then be easily manipulated by the rest of your workflow. For converting JSON back into a binary file type, please see the [Convert to File](n8n-nodes-base.converttofile.md) node.
 
@@ -28,17 +45,17 @@ The Extract From File node extracts data from a binary format file and converts 
 
 Use the **Operations** drop-down to select the format of the source file to extract data from.
 
-- **Extract From CSV**: The "Comma Separated Values" file type is commonly used for tabulated data.
-- **Extract From HTML**: Extract fields from standard web page HTML format files.
-- **Extract From JSON**: Extract JSON data from a binary file.
-- **Extract From ICS**: Extract fields from iCalendar format files.
-- **Extract From ODS**: Extract fields from ODS spreadsheet files.
-- **Extract From PDF**: Extract fields from Portable Document Format files.
-- **Extract From RTF**: Extract fields from Rich Text Format files.
-- **Extract From Text File**: Extract fields from a standard text file format.
-- **Extract From XLS**: Extract fields from a Microsoft Excel file (older format).
-- **Extract From XLSX**: Extract fields from a Microsoft Excel file.
-- **Move File to Base64 String**: Converts binary data to a text-friendly [base64][] format.
+* **Extract From CSV**: The "Comma Separated Values" file type is commonly used for tabulated data.
+* **Extract From HTML**: Extract fields from standard web page HTML format files.
+* **Extract From JSON**: Extract JSON data from a binary file.
+* **Extract From ICS**: Extract fields from iCalendar format files.
+* **Extract From ODS**: Extract fields from ODS spreadsheet files.
+* **Extract From PDF**: Extract fields from Portable Document Format files.
+* **Extract From RTF**: Extract fields from Rich Text Format files.
+* **Extract From Text File**: Extract fields from a standard text file format.
+* **Extract From XLS**: Extract fields from a Microsoft Excel file (older format).
+* **Extract From XLSX**: Extract fields from a Microsoft Excel file.
+* **Move File to Base64 String**: Converts binary data to a text-friendly [base64](https://datatracker.ietf.org/doc/html/rfc4648#section-4) format.
 
 ## Example workflow <a href="#example-workflow" id="example-workflow"></a>
 
@@ -77,16 +94,11 @@ Enter the name of the field in the node output that will contain the extracted d
 
 This parameter is only available for these operations:
 
-- Extract From JSON
-- Extract From ICS
-- Extract From Text File
-- Move File to Base64 String
+* Extract From JSON
+* Extract From ICS
+* Extract From Text File
+* Move File to Base64 String
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-
 [Browse Extract From File integration templates](https://n8n.io/integrations/extract-from-file) or [search all templates](https://n8n.io/workflows/)
-
-[HTTP Request Node]: n8n-nodes-base.httprequest/README.md
-[Webhook Node]: n8n-nodes-base.webhook/README.md
-[base64]: https://datatracker.ietf.org/doc/html/rfc4648#section-4

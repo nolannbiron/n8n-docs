@@ -29,13 +29,15 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Webhook credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [Webhook](../core-nodes/n8n-nodes-base.webhook/README.md)
+* [Webhook](../core-nodes/n8n-nodes-base.webhook/)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -54,8 +56,8 @@ Use this generic authentication if your app or service supports basic authentica
 
 To configure this credential, enter:
 
-- The **Username** you use to access the app or service your HTTP Request is targeting
-- The **Password** that goes with that username
+* The **Username** you use to access the app or service your HTTP Request is targeting
+* The **Password** that goes with that username
 
 ## Using header auth <a href="#using-header-auth" id="using-header-auth"></a>
 
@@ -63,8 +65,8 @@ Use this generic authentication if your app or service supports header authentic
 
 To configure this credential, enter:
 
-- The header **Name** you need to pass to the app or service your HTTP request is targeting
-- The **Value** for the header 
+* The header **Name** you need to pass to the app or service your HTTP request is targeting
+* The **Value** for the header
 
 Read more about [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#authentication)
 
