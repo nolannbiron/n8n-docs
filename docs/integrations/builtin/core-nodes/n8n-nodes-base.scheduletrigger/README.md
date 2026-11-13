@@ -28,7 +28,14 @@ Use the Schedule Trigger node to run workflows at fixed intervals and times. Thi
 If a workflow uses the Schedule node as a trigger, make sure that you save and publish the workflow.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ttmJg4aaEfjB4LyKpCzt/" %}
+{% hint style="info" %}
+**Timezone settings**
+
+The node relies on the timezone setting. n8n uses either:
+
+1. The workflow timezone, if set. Refer to [Workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings) for more information.
+2. The n8n instance timezone, if the workflow timezone isn't set. The default is `America/New York` for self-hosted instances. n8n Cloud tries to detect the instance owner's timezone when they sign up, falling back to GMT as the default. Self-hosted users can change the instance setting using [Environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization). n8n Cloud instance owners can [change the instance timezone](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/set-your-timezone) in the n8n Cloud console.
+{% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 

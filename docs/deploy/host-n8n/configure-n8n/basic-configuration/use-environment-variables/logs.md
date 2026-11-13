@@ -19,7 +19,11 @@ layout:
 
 # Logs environment variables <a href="#logs-environment-variables" id="logs-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
+{% hint style="info" %}
+**File-based configuration**
+
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+{% endhint %}
 
 This page lists environment variables to set up logging for debugging. Refer to [Logging in n8n](../../../keep-n8n-running/set-up-logging.md) for details. 
 
@@ -60,7 +64,10 @@ Refer to [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-
 
 Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` to manage log streaming destinations from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for how the activation pattern works, and [Configure log streaming destinations using environment variables](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems#configure-using-environment-variables) for the per-destination JSON shape.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JvN9TDUUWTwpWaT83YrH/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_LOG_STREAMING_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage log streaming from environment variables. When `true`, n8n applies the log streaming variables on every startup and locks the matching UI controls. |
+| `N8N_LOG_STREAMING_DESTINATIONS` | JSON string | - | JSON array of log streaming destinations. Each destination is an object with a `type` of `webhook`, `syslog`, or `sentry`, plus the configuration for that type. |
 
 ## Related resources
 

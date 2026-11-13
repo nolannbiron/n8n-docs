@@ -44,7 +44,15 @@ Use the Weaviate node to interact with your Weaviate collection as a [vector sto
 Refer to the [Weaviate credentials documentation](../../credentials/weaviate.md) for authentication information for this node.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
+{% hint style="info" %}
+**Parameter resolution in sub-nodes**
+
+Sub-nodes behave differently to other nodes when processing multiple items using an expression.
+
+Most nodes, including root nodes, take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five `name` values, the expression `{{ $json.name }}` resolves to each name in turn.
+
+In sub-nodes, the expression always resolves to the first item. For example, given an input of five `name` values, the expression `{{ $json.name }}` always resolves to the first name.
+{% endhint %}
 
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
 
@@ -76,7 +84,7 @@ Another pattern uses the [Vector Store Question Answer Tool](../sub-nodes/n8n-no
 You can separate your data into isolated tenants for the same collection (for example, for different customers). For that, you must always provide a [Tenant Name](n8n-nodes-langchain.vectorstoreweaviate.md#tenant-name) both when inserting and retrieving objects. [Read more about multi tenancy in Weaviate docs](https://docs.weaviate.io/weaviate/manage-collections/multi-tenancy).
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/eiIkcF23uZ2A8BkFVQM5/" %}
+This Vector Store node has four modes: **Get Many**, **Insert Documents**, **Retrieve Documents (As Vector Store for Chain/Tool)**, and **Retrieve Documents (As Tool for AI Agent)**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
 
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
@@ -108,7 +116,7 @@ You can use this with the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KcxcfJWhy81cjCSzO4vQ/" %}
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -241,7 +249,7 @@ Refer to [LangChain's Weaviate documentation](https://docs.langchain.com/oss/jav
 
 Refer to [Weaviate Installation](https://docs.weaviate.io/deploy) for a self-hosted Weaviate Cluster.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
 [^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
 [^2]: AI chains allow you to interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this).

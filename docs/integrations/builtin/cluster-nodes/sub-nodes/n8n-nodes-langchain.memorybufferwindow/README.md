@@ -31,7 +31,15 @@ On this page, you'll find a list of operations the Simple Memory node supports, 
 If your n8n instance uses [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode), this node doesn't work in an active production workflow. This is because n8n can't guarantee that every call to Simple Memory will go to the same worker.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
+{% hint style="info" %}
+**Parameter resolution in sub-nodes**
+
+Sub-nodes behave differently to other nodes when processing multiple items using an expression.
+
+Most nodes, including root nodes, take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five `name` values, the expression `{{ $json.name }}` resolves to each name in turn.
+
+In sub-nodes, the expression always resolves to the first item. For example, given an input of five `name` values, the expression `{{ $json.name }}` always resolves to the first name.
+{% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -49,7 +57,7 @@ Configure these parameters to configure the node:
 
 Refer to [LangChain's short-term memory documentation](https://docs.langchain.com/oss/javascript/langchain/short-term-memory) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

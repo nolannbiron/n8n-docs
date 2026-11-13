@@ -70,7 +70,11 @@ On the **Settings** tab, you can add other users to your app, even with the acce
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
+{% hint style="info" %}
+**Note for n8n Cloud users**
+
+Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
+{% endhint %}
 
 Cloud users need to select the **App Access Type**:
 

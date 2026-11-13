@@ -37,7 +37,11 @@ Refer to [Azure Storage's API documentation](https://learn.microsoft.com/en-us/r
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
+{% hint style="info" %}
+**Note for n8n Cloud users**
+
+Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
+{% endhint %}
 
 For self-hosted users, there are two main steps to configure OAuth2 from scratch:
 
@@ -93,4 +97,10 @@ Refer to [Manage storage account access keys | Microsoft](https://learn.microsof
 
 Here are the known common errors and issues with Azure Storage credentials.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fXYywkPyzPTxeGOEnYgb/" %}
+### Need admin approval <a href="#need-admin-approval" id="need-admin-approval"></a>
+
+When attempting to add credentials for a Microsoft360 or Microsoft Entra account, users may see a message when following the procedure that this action requires admin approval.
+
+This message will appear when the account attempting to grant permissions for the credential is managed by a Microsoft Entra. In order to issue the credential, the administrator account needs to grant permission to the user (or "tenant") for that application.
+
+The procedure for this is covered in the [Microsoft Entra documentation](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent).

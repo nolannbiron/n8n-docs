@@ -32,7 +32,15 @@ On this page, you'll find the node parameters for the Reranker Cohere node, and 
 Refer to the [Cohere credentials documentation](../../credentials/cohere.md) for authentication information for this node.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
+{% hint style="info" %}
+**Parameter resolution in sub-nodes**
+
+Sub-nodes behave differently to other nodes when processing multiple items using an expression.
+
+Most nodes, including root nodes, take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five `name` values, the expression `{{ $json.name }}` resolves to each name in turn.
+
+In sub-nodes, the expression always resolves to the first item. For example, given an input of five `name` values, the expression `{{ $json.name }}` always resolves to the first name.
+{% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -47,7 +55,7 @@ Choose the reranking model to use. You can find out more about the available mod
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
 [^1]: Reranking is a technique that refines the order of a list of candidate documents to improve the relevance of search results. Retrieval-Augmented Generation (RAG) and other applications use reranking to prioritize the most relevant information for generation or downstream tasks.
 [^2]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

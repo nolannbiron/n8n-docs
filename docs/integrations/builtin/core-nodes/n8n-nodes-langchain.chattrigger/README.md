@@ -186,7 +186,7 @@ Use this option when building a workflow with steps after the agent or chain tha
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
 ## Set the chat response manually <a href="#set-the-chat-response-manually" id="set-the-chat-response-manually"></a>
 

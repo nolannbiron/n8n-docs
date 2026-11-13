@@ -36,6 +36,10 @@ Refer to [Help Scout's API documentation](https://developer.helpscout.com/) for 
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
+{% hint style="info" %}
+**Note for n8n Cloud users**
+
+Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
+{% endhint %}
 
 If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, you'll need to create a Help Scout app. Refer to the instructions in the [Help Scout OAuth documentation](https://developer.helpscout.com/mailbox-api/overview/authentication/#oauth2-application) for more information.

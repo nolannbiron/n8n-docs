@@ -48,9 +48,25 @@ You must use the authentication method required by the app or service you want t
 * JWT auth
 * None
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/vIyn1XsEkjlolZzHTfTG/" %}
+## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fjWxEWe1g0CDvsx1igf6/" %}
+Use this generic authentication if your app or service supports basic authentication.
+
+To configure this credential, enter:
+
+- The **Username** you use to access the app or service your HTTP Request is targeting
+- The **Password** that goes with that username
+
+## Using header auth <a href="#using-header-auth" id="using-header-auth"></a>
+
+Use this generic authentication if your app or service supports header authentication.
+
+To configure this credential, enter:
+
+- The header **Name** you need to pass to the app or service your HTTP request is targeting
+- The **Value** for the header 
+
+Read more about [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#authentication)
 
 ## Using JWT auth <a href="#using-jwt-auth" id="using-jwt-auth"></a>
 

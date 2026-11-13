@@ -83,7 +83,11 @@ Then, in your n8n credential:
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
+{% hint style="info" %}
+**Note for n8n Cloud users**
+
+Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
+{% endhint %}
 
 If you're [self-hosting n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n), create a new GitHub [OAuth app](https://docs.github.com/en/apps/oauth-apps):
 

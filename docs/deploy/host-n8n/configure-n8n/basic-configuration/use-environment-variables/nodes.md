@@ -21,7 +21,11 @@ layout:
 
 # Nodes environment variables <a href="#nodes-environment-variables" id="nodes-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
+{% hint style="info" %}
+**File-based configuration**
+
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+{% endhint %}
 
 This page lists the environment variables configuration options for managing nodes[^1] in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, enabling community nodes, and configuring node-specific limits.
 
@@ -61,7 +65,10 @@ Managing installed community packages from environment variables is available fr
 
 Pre-provision installed [community packages](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for the `*_MANAGED_BY_ENV` pattern.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/w3ftfKhp9KdsaTfUFHE8/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage installed community packages from environment variables. When `true`, n8n reconciles the installed packages against `N8N_COMMUNITY_PACKAGES` on every startup, installing missing packages, correcting versions, and **uninstalling any currently-installed packages that aren't in the list**. The **Community nodes** settings page becomes read-only: you can't install, update, or uninstall packages from the UI while this is enabled. |
+| `N8N_COMMUNITY_PACKAGES` | JSON string | - | JSON array of community packages to install. Each entry is an object with a `name` (required) and optional `version` and `checksum` fields. You can also embed the version in the name as `<package-name>@<version>`. See [environment variable installation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management/environment-variable-installation) for the full per-field reference. |
 
 [^1]: In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.
 

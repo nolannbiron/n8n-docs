@@ -20,7 +20,11 @@ layout:
 
 # User management SMTP, and two-factor authentication environment variables <a href="#user-management-smtp-and-two-factor-authentication-environment-variables" id="user-management-smtp-and-two-factor-authentication-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
+{% hint style="info" %}
+**File-based configuration**
+
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+{% endhint %}
 
 Refer to [User management](../../user-management.md) for more information on setting up user management and emails.
 
@@ -52,7 +56,19 @@ Refer to [User management](../../user-management.md) for more information on set
 
 Set `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` to `true` to pre-provision the instance owner from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for how the activation pattern works.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/75cM0VtFejV1gnDTFOSV/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage the instance owner from environment variables. When `true`, n8n overwrites the instance owner details below on every startup, locks the UI control for that user, and rejects API writes. |
+| `N8N_INSTANCE_OWNER_EMAIL` | String | - | Email address for the instance owner. |
+| `N8N_INSTANCE_OWNER_FIRST_NAME` | String | - | First name for the instance owner. |
+| `N8N_INSTANCE_OWNER_LAST_NAME` | String | - | Last name for the instance owner. |
+| `N8N_INSTANCE_OWNER_PASSWORD_HASH` | String | - | Bcrypt hash of the instance owner's password. Setting a plaintext password breaks login. |
+
+{% hint style="warning" %}
+**Owner email must be unique**
+
+`N8N_INSTANCE_OWNER_EMAIL` must not already belong to another user on the instance. This setting updates the existing instance owner account; it doesn't transfer ownership to another existing user or merge user accounts. To use an email address that already belongs to another user, change or delete that user first so the email becomes available.
+{% endhint %}
 
 ## Related resources
 

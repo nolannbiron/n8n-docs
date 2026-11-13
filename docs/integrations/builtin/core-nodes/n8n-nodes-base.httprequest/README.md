@@ -240,9 +240,21 @@ For example setups, refer to [HTTP Request node cookbook | Pagination](https://a
 
 n8n provides built-in variables for working with HTTP node requests and responses when using pagination:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/I3wrw8MpZtbjn2khruiw/" %}
+| Variable | Description |
+| -------- | ----------- |
+| `$pageCount` | The pagination count. Tracks how many pages the node has fetched. |
+| `$request` | The request object sent by the HTTP node. |
+| `$response` | The response object from the HTTP call. Includes `$response.body`, `$response.headers`, and `$response.statusCode`. The contents of `body` and `headers` depend on the data sent by the API. |
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/91KTZVqkKv8rY72iELNl/" %}
+{% hint style="info" %}
+**API differences**
+
+Different APIs implement pagination in different ways. Check the API documentation for the API you're using for details. You need to find out things like:
+
+* Does the API provide the URL for the next page?
+* Are there API-specific limits on page size or page number?
+* The structure of the data that the API returns.
+{% endhint %}
 
 ### Proxy <a href="#proxy" id="proxy"></a>
 

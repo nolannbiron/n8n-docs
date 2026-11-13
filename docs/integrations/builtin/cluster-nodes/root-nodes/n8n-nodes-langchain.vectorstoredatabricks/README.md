@@ -19,7 +19,15 @@ On this page, you'll find the prerequisites, the index types the node works with
 Refer to [Databricks credentials](../../../credentials/databricks.md) for guidance on setting up authentication. The node accepts the **Databricks OAuth2 API** credential only, with a service principal or user login. It doesn't accept a personal access token.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
+{% hint style="info" %}
+**Parameter resolution in sub-nodes**
+
+Sub-nodes behave differently to other nodes when processing multiple items using an expression.
+
+Most nodes, including root nodes, take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five `name` values, the expression `{{ $json.name }}` resolves to each name in turn.
+
+In sub-nodes, the expression always resolves to the first item. For example, given an input of five `name` values, the expression `{{ $json.name }}` always resolves to the first name.
+{% endhint %}
 
 ## Prerequisites
 
@@ -101,13 +109,13 @@ The connections flow in this case would look like this: AI agent (tools connecto
 
 ## Node parameters
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/eiIkcF23uZ2A8BkFVQM5/" %}
+This Vector Store node has four modes: **Get Many**, **Insert Documents**, **Retrieve Documents (As Vector Store for Chain/Tool)**, and **Retrieve Documents (As Tool for AI Agent)**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
 
 The node doesn't offer an **Update Documents** mode. Every mode uses the **Index** and **Content Column** fields described in [Set up the node](#set-up-the-node), plus the fields below.
 
 ### Rerank Results
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KcxcfJWhy81cjCSzO4vQ/" %}
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 ### Get Many parameters
 
@@ -216,9 +224,11 @@ To search a self-managed index instead, set **Content Column** on the vector sto
 - [Vector Store Retriever](../../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) and [Vector Store Question Answer Tool](../../sub-nodes/n8n-nodes-langchain.toolvectorstore.md)
 - [Databricks Vector Search](https://docs.databricks.com/aws/en/generative-ai/vector-search), the [Query index API](https://docs.databricks.com/api/workspace/vectorsearchindexes/queryindex), and the [filtering guide](https://docs.databricks.com/aws/en/ai-search/filtering-guide) in the Databricks documentation
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/dN5Se1JVH7wYGtmN4n0v/" %}
+## Self-hosted AI Starter Kit <a href="#self-hosted-ai-starter-kit" id="self-hosted-ai-starter-kit"></a>
+
+New to working with AI and using self-hosted n8n? Try n8n's [self-hosted AI Starter Kit](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/deploy-with-the-ai-starter-kit) to get started with a proof-of-concept or demo playground using Ollama, Qdrant, and PostgreSQL.
 
 ## Common issues
 

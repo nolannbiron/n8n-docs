@@ -30,7 +30,11 @@ layout:
 
 n8n saves workflows in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. You can export and import workflows in several ways.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/OlpV1rtc5ZIqBmvX4lBQ/" %}
+{% hint style="warning" %}
+**Sharing credentials**
+
+Exported workflow JSON files include [credential](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n) names and IDs. While IDs aren't sensitive, the names could be, depending on how you name your credentials. HTTP Request nodes may contain authentication headers when imported from cURL. Remove or anonymize this information from the JSON file before sharing to protect your credentials.
+{% endhint %}
 
 ## Copy-Paste <a href="#copy-paste" id="copy-paste"></a>
 

@@ -93,7 +93,18 @@ You can use expressions[^2] to set credentials dynamically as your workflow runs
 
 #### Using the example <a href="#using-the-example" id="using-the-example"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/vKIIq31qrlay3ovXTvUj/" %}
+To load the template into your n8n instance:
+
+1. Download the workflow JSON file.
+1. Open a new workflow in your n8n instance.
+1. Copy in the JSON, or select **Workflow menu** <img src="../assets/three-dots-horizontal.png" alt="Workflow menu icon" data-size="line"> > **Import from file...**.
+
+The example workflows use Sticky Notes to guide you:
+
+* Yellow: notes and information.
+* Green: instructions to run the workflow.
+* Orange: you need to change something to make the workflow work.
+* Blue: draws attention to a key feature of the example.
 
 [^1]: n8n projects allow you to separate workflows, variables, and credentials into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources.
 [^2]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

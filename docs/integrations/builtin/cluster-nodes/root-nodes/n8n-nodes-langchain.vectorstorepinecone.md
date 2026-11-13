@@ -46,7 +46,15 @@ On this page, you'll find the node parameters for the Pinecone node, and links t
 Refer to the [Pinecone credentials documentation](../../credentials/pinecone.md) for authentication information for this node.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
+{% hint style="info" %}
+**Parameter resolution in sub-nodes**
+
+Sub-nodes behave differently to other nodes when processing multiple items using an expression.
+
+Most nodes, including root nodes, take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five `name` values, the expression `{{ $json.name }}` resolves to each name in turn.
+
+In sub-nodes, the expression always resolves to the first item. For example, given an input of five `name` values, the expression `{{ $json.name }}` always resolves to the first name.
+{% endhint %}
 
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
 
@@ -80,11 +88,32 @@ The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-docume
 
 ### Operation Mode <a href="#operation-mode" id="operation-mode"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/5aeZAt5P1m2YndTmiFTG/" %}
+This Vector Store node has five modes: **Get Many**, **Insert Documents**, **Retrieve Documents (As Vector Store for Chain/Tool)**, **Retrieve Documents (As Tool for AI Agent)**, and **Update Documents**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
+
+
+#### Get Many <a href="#get-many" id="get-many"></a>
+
+In this mode, you can retrieve multiple documents from your vector database by providing a prompt. The prompt will be embedded and used for similarity search. The node will return the documents that are most similar to the prompt with their similarity score. This is useful if you want to retrieve a list of similar documents and pass them to an agent as additional context. 
+
+#### Insert Documents <a href="#insert-documents" id="insert-documents"></a>
+
+Use Insert Documents mode to insert new documents into your vector database.
+
+#### Retrieve Documents (As Vector Store for Chain/Tool) <a href="#retrieve-documents-as-vector-store-for-chaintool" id="retrieve-documents-as-vector-store-for-chaintool"></a>
+
+Use Retrieve Documents (As Vector Store for Chain/Tool) mode with a vector-store retriever to retrieve documents from a vector database and provide them to the retriever connected to a chain. In this mode you must connect the node to a retriever node or root node.
+
+#### Retrieve Documents (As Tool for AI Agent) <a href="#retrieve-documents-as-tool-for-ai-agent" id="retrieve-documents-as-tool-for-ai-agent"></a>
+
+Use Retrieve Documents (As Tool for AI Agent) mode to use the vector store as a tool resource when answering queries. When formulating responses, the agent uses the vector store when the vector store name and description match the question details.
+
+#### Update Documents <a href="#update-documents" id="update-documents"></a>
+
+Use Update Documents mode to update documents in a vector database by ID. Fill in the **ID** with the ID of the embedding entry to update.
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KcxcfJWhy81cjCSzO4vQ/" %}
+Enables reranking. If you enable this option, you must connect a reranking node, such as [Reranker Cohere](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere), to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
@@ -119,7 +148,11 @@ Another segregation option for how to store your data within the index.
 
 ### Metadata Filter <a href="#metadata-filter" id="metadata-filter"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9OWZ8hSpVqky4D4xRnYP/" %}
+Available in **Get Many** mode. When searching for data, use this to match with metadata associated with the document.
+
+This is an `AND` query. If you specify more than one metadata filter field, all of them must match.
+
+When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader) for more information on loading documents.
 
 ### Clear Namespace <a href="#clear-namespace" id="clear-namespace"></a>
 
@@ -147,7 +180,7 @@ Connect the Pinecone Vector Store node to the AI agent's tool connector, so the 
 
 Refer to [LangChain's Pinecone documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/pinecone) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
 ### Find your Pinecone index and namespace <a href="#find-your-pinecone-index-and-namespace" id="find-your-pinecone-index-and-namespace"></a>
 

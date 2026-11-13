@@ -165,7 +165,11 @@ Refer to LinkedIn's [Lead Sync API documentation](https://learn.microsoft.com/en
 
 Only use this method for older LinkedIn apps and user accounts.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
+{% hint style="info" %}
+**Note for n8n Cloud users**
+
+Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
+{% endhint %}
 
 All users must select:
 

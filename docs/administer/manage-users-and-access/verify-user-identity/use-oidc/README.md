@@ -12,7 +12,12 @@ layout:
 
 # OpenID Connect (OIDC) <a href="#openid-connect-oidc" id="openid-connect-oidc"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3sB2Mxc1yXYEg1FeAYjK/" %}
+{% hint style="info" %}
+**Feature availability**
+
+* Available on Enterprise plans.
+* You need to be an instance owner or admin to enable and configure OIDC.
+{% endhint %}
 
 
 This section covers how to enable and manage OpenID Connect (OIDC) for single sign-on (SSO). You can learn more about how OIDC works by visiting [what is OpenID Connect](https://openid.net/developers/how-connect-works/) by the OpenID Foundation.

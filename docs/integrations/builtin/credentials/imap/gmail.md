@@ -29,11 +29,29 @@ To follow these instructions, you must first:
 
 ### Enable 2-step Verification <a href="#enable-2-step-verification" id="enable-2-step-verification"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ysY7mHC9pN3kCUPncSi8/" %}
+To enable 2-step Verification:
+
+1. Log in to your [Google Account](https://myaccount.google.com/).
+2. Select **Security** from the left navigation.
+3. Under **How you sign in to Google**, select **2-Step Verification**.
+    - If 2-Step Verification is already enabled, skip to the next section.
+4. Select **Get started**.
+5. Follow the on-screen steps to configure 2-Step Verification.
+
+Refer to [Turn on 2-step Verification](https://support.google.com/accounts/answer/185839) for more information.
+
+If you can't turn on 2-step Verification, check with your email administrator.
 
 ### Generate an app password <a href="#generate-an-app-password" id="generate-an-app-password"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/rJn9WooD0IwP7abKawNZ/" %}
+To generate an app password:
+
+1. In your Google account, go to [App passwords](https://myaccount.google.com/apppasswords).
+2. Enter an **App name** for your new app password, like `n8n credential`.
+3. Select **Create**.
+4. Copy the generated app password. You'll use this in your n8n credential.
+
+Refer to Google's [Sign in with app passwords documentation](https://support.google.com/accounts/answer/185833?hl=en) for more information.
 
 ## Set up the credential <a href="#set-up-the-credential" id="set-up-the-credential"></a>
 

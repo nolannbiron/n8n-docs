@@ -30,7 +30,10 @@ The first time you start n8n with `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV=true`, 
 
 Set the following environment variables on your n8n instance, then restart:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/w3ftfKhp9KdsaTfUFHE8/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage installed community packages from environment variables. When `true`, n8n reconciles the installed packages against `N8N_COMMUNITY_PACKAGES` on every startup, installing missing packages, correcting versions, and **uninstalling any currently-installed packages that aren't in the list**. The **Community nodes** settings page becomes read-only: you can't install, update, or uninstall packages from the UI while this is enabled. |
+| `N8N_COMMUNITY_PACKAGES` | JSON string | - | JSON array of community packages to install. Each entry is an object with a `name` (required) and optional `version` and `checksum` fields. You can also embed the version in the name as `<package-name>@<version>`. See [environment variable installation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management/environment-variable-installation) for the full per-field reference. |
 
 {% hint style="info" %}
 **Community packages must be enabled**

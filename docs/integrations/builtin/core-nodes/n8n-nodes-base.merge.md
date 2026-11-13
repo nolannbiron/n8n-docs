@@ -96,7 +96,14 @@ When merging data by **Mode > Combine**, you can set these **Options**:
 
 ##### Clash Handling <a href="#clash-handling" id="clash-handling"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/VJPiDgC5Bx5FmuGODmCq/" %}
+If multiple items at an index have a field with the same name, this is a clash. For example, if all items in both Input 1 and Input 2 have a field named `language`, these fields clash. By default, n8n prioritizes Input 2, meaning if `language` has a value in Input 2, n8n uses that value when merging the items. 
+
+You can change this behavior by selecting **Options** > **Clash Handling**: 
+
+- **When Field Values Clash**: Choose which input to prioritize, or choose **Always Add Input Number to Field Names** to keep all fields and values, with the input number appended to the field name to show which input it came from.
+- **Merging Nested Fields**
+    - **Deep Merge**: Merge properties at all levels of the items, including nested objects. This is useful when dealing with complex, nested data structures where you need to ensure the merging of all levels of nested properties.
+    - **Shallow Merge**: Merge properties at the top level of the items only, without merging nested objects. This is useful when you have flat data structures or when you only need to merge top-level properties without worrying about nested properties.
 
 ### SQL Query <a href="#sql-query" id="sql-query"></a>
 
@@ -174,7 +181,18 @@ The items passed into Input 1 of the Merge node will take precedence. For exampl
 
 ## Branch execution with If and Merge nodes <a href="#branch-execution-with-if-and-merge-nodes" id="branch-execution-with-if-and-merge-nodes"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/o5sVhTw0cyO5aAAkAVDj/" %}
+{% hint style="info" %}
+**0.236.0 and below**
+
+n8n removed this execution behavior in n8n 1.0. This section applies to workflows using the **v0 (legacy)** workflow execution order. By default, this is all workflows built before n8n 1.0. You can change the execution order in your [workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings).
+{% endhint %}
+If you add a Merge node to a workflow containing an If node, it can result in both output data streams of the If node executing.
+
+One data stream triggers the Merge node, which then goes and executes the other data stream.
+
+For example, in the screenshot below there's a workflow containing an Edit Fields node, If node, and Merge node. The standard If node behavior is to execute one data stream (in the screenshot, this is the **true** output). However, due to the Merge node, both data streams execute, despite the If node not sending any data down the **false** data stream.
+
+![A workflow with an Edit Fields node, an If node, and a Merge node connected in sequence](../../../../../assets/if-merge-node.png)
 
 
 ## Try it out: A step by step example <a href="#try-it-out-a-step-by-step-example" id="try-it-out-a-step-by-step-example"></a>

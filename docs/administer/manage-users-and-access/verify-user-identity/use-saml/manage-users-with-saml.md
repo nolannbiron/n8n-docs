@@ -14,7 +14,12 @@ layout:
 
 # Manage users with SAML <a href="#manage-users-with-saml" id="manage-users-with-saml"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9DXSTQsxYGisAV8xk6p4/" %}
+{% hint style="info" %}
+**Feature availability**
+
+* Available on Business and Enterprise plans.
+* You need to be an instance owner or admin to enable and configure SAML.
+{% endhint %}
 
 There are some user management tasks that are affected by SAML.
 

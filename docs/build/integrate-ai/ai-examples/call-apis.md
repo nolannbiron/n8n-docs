@@ -45,7 +45,18 @@ This workflow uses:
 
 ## Using the example <a href="#using-the-example" id="using-the-example"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/vKIIq31qrlay3ovXTvUj/" %}
+To load the template into your n8n instance:
+
+1. Download the workflow JSON file.
+1. Open a new workflow in your n8n instance.
+1. Copy in the JSON, or select **Workflow menu** <img src="../assets/three-dots-horizontal.png" alt="Workflow menu icon" data-size="line"> > **Import from file...**.
+
+The example workflows use Sticky Notes to guide you:
+
+* Yellow: notes and information.
+* Green: instructions to run the workflow.
+* Orange: you need to change something to make the workflow work.
+* Blue: draws attention to a key feature of the example.
 
 [^1]: APIs, or application programming interfaces, offer programmatic access to a service's data and functionality. APIs make it easier for software to interact with external systems. They're often offered as an alternative to traditional user-focused interfaces accessed through web browsers or UI.
 

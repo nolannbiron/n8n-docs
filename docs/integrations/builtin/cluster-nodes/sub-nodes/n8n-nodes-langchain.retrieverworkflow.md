@@ -25,7 +25,15 @@ Use the Workflow Retriever node to retrieve data from an n8n workflow for use in
 
 On this page, you'll find the node parameters for the Workflow Retriever node, and links to more resources.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
+{% hint style="info" %}
+**Parameter resolution in sub-nodes**
+
+Sub-nodes behave differently to other nodes when processing multiple items using an expression.
+
+Most nodes, including root nodes, take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five `name` values, the expression `{{ $json.name }}` resolves to each name in turn.
+
+In sub-nodes, the expression always resolves to the first item. For example, given an input of five `name` values, the expression `{{ $json.name }}` always resolves to the first name.
+{% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -38,7 +46,14 @@ Tell n8n which workflow to call. You can choose either:
 
 ### Workflow values <a href="#workflow-values" id="workflow-values"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/i66Pv0lYL7QjJ9F9tZUj/" %}
+Set values to pass to the workflow you're calling.
+
+These values appear in the output data of the trigger node in the workflow you call. You can access these values in expressions in the workflow. For example, if you have:
+
+* **Workflow Values** with a **Name** of `myCustomValue`
+* A workflow with an Execute Sub-workflow Trigger node as its trigger
+
+The expression to access the value of `myCustomValue` is `{{ $('Execute Sub-workflow Trigger').item.json.myCustomValue }}`.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -49,5 +64,5 @@ Tell n8n which workflow to call. You can choose either:
 
 Refer to [LangChain's retriever documentation](https://docs.langchain.com/oss/javascript/integrations/retrievers) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 

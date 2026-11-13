@@ -42,9 +42,17 @@ Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on se
 If you're using a government cloud tenant (US Government, US Government DOD, or China), make sure to select the appropriate **Microsoft Graph API Base URL** in your Microsoft credentials configuration.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+{% hint style="info" %}
+**This node can be used as an AI tool**
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
+This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters).
+{% endhint %}
+
+{% hint style="info" %}
+**Human-in-the-loop for AI tool calls**
+
+This node can be used as a human review step for AI Agent tool calls. When configured this way, the AI Agent will pause and request human approval through this service before executing tools that require oversight. Learn more in [Human-in-the-loop for AI tool calls](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/human-in-the-loop-for-tools).
+{% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -95,7 +103,40 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 	* Get
 	* Get Many
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0Jp2CWNEFSR2IfIVdlL/" %}
+## Waiting for a response <a href="#waiting-for-a-response" id="waiting-for-a-response"></a>
+
+By choosing the **Send and Wait for a Response** operation, you can send a message and pause the workflow execution until a person confirms the action or provides more information.
+
+### Response Type <a href="#response-type" id="response-type"></a>
+
+You can choose between the following types of waiting and approval actions:
+
+* **Approval**: Users can approve or disapprove from within the message.
+* **Free Text**: Users can submit a response with a form.
+* **Custom Form**: Users can submit a response with a custom form.
+
+You can customize the waiting and response behavior depending on which response type you choose. You can configure these options in any of the above response types:
+
+* **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
+* **Append n8n Attribution**: Whether to mention in the message that it was sent automatically with n8n (turned on) or not (turned off).
+
+### Approval response customization <a href="#approval-response-customization" id="approval-response-customization"></a>
+
+When using the Approval response type, you can choose whether to present only an approval button or both approval *and* disapproval buttons.
+
+You can also customize the button labels for the buttons you include.
+
+### Free Text response customization <a href="#free-text-response-customization" id="free-text-response-customization"></a>
+
+When using the Free Text response type, you can customize the message button label, the form title and description, and the response button label.
+
+### Custom Form response customization <a href="#custom-form-response-customization" id="custom-form-response-customization"></a>
+
+When using the Custom Form response type, you build a form using the fields and options you want.
+
+You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger#form-elements). To add more fields, select the **Add Form Element** button.
+
+You'll also be able to customize the message button label, the form title and description, and the response button label.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -106,4 +147,14 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 
 Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
+## What to do if your operation isn't supported <a href="#what-to-do-if-your-operation-isnt-supported" id="what-to-do-if-your-operation-isnt-supported"></a>
+
+If this node doesn't support the operation you want to do, you can use the [HTTP Request node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) to call the service's API.
+
+You can use the credential you created for this service in the HTTP Request node: 
+
+1. In the HTTP Request node, select **Authentication** > **Predefined Credential Type**.
+1. Select the service you want to connect to.
+1. Select your credential.
+
+Refer to [Custom API operations](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/custom-api-actions-for-existing-nodes) for more information.

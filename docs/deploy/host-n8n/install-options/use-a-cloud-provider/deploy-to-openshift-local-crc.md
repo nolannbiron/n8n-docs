@@ -1074,7 +1074,8 @@ Log in with `kubeadmin` / your password to see a graphical view of everything ru
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
+* Learn more about [configuring](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling) n8n.
+* Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow).
 
 ## Related resources
 

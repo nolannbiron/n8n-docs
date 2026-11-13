@@ -50,11 +50,20 @@ Configure the ReAct Agent using the following parameters.
 
 ### Prompt <a href="#prompt" id="prompt"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ss9Y6clfLTwlXMx69w6E/" %}
+Select how you want the node to construct the prompt (also known as the user's query or input from the chat).
+
+Choose from:
+
+* **Take from previous node automatically**: If you select this option, the node expects an input from a previous node called `chatInput`.
+* **Define below**: If you select this option, provide either static text or an expression for dynamic content to serve as the prompt in the **Prompt (User Message)** field.
 
 ### Require Specific Output Format <a href="#require-specific-output-format" id="require-specific-output-format"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/IsHMhvgDA3Ok5qdqnHnJ/" %}
+This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
+
+* [Auto-fixing Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
+* [Item List Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
+* [Structured Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -86,11 +95,15 @@ Add text to append after the tools list at the start of the conversation when th
 
 ### Return Intermediate Steps <a href="#return-intermediate-steps" id="return-intermediate-steps"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/skA96E8hAnMMKG7c4Lta/" %}
+Select whether to include intermediate steps the agent took in the final output (turned on) or not (turned off).
+
+This could be useful for further refining the agent's behavior based on the steps it took.
 
 ### Tracing Metadata <a href="#tracing-metadata" id="tracing-metadata"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GAsqtB1RVGEDrT5PMMLl/" %}
+Add custom key-value metadata to tracing events for this agent. This is useful for filtering and debugging runs in tracing tools like [LangSmith](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance).
+
+Entries with empty keys or values are ignored.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

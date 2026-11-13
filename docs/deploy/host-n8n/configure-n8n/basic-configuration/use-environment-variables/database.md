@@ -21,7 +21,11 @@ layout:
 
 # Database environment variables <a href="#database-environment-variables" id="database-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
+{% hint style="info" %}
+**File-based configuration**
+
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+{% endhint %}
 
 By default, n8n uses SQLite. n8n also supports PostgreSQL. n8n [deprecated support for MySQL and MariaDB](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v10-migration-guide#mysql-and-mariadb) from n8n 1.0.
 

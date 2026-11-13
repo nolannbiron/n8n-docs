@@ -55,7 +55,14 @@ n8n gives each instance up to 100GB of data storage.
 
 The way you build workflows affects how much data they consume when executed. Although these guidelines aren't applicable to all cases, they provide a baseline of best practices to avoid exceeding instance memory.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/EzVIOV8i2lmQ5HW3xFoo/" %}
+* Split the data processed into smaller chunks. For example, instead of fetching 10,000 rows with each execution, process 200 rows with each execution.
+* Avoid using the Code node where possible.
+* Avoid manual executions when processing larger amounts of data.
+* Split the workflow up into sub-workflows and ensure each sub-workflow returns a limited amount of data to its parent workflow.
+
+Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two more nodes: the [Loop Over Items](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitinbatches) node to split up the items into smaller batches and the [Execute Workflow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflow) node to start the sub-workflow.
+
+However, as long as your sub-workflow does the heavy lifting for each batch and then returns only a small result set to the main workflow, this reduces memory consumption. This is because the sub-workflow only holds the data for the current batch in memory, after which the memory is free again.
 
 Note that n8n itself consumes memory to run. On average, the software alone uses around 180MiB RAM.
 

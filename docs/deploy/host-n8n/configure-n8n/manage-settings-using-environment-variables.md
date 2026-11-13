@@ -72,7 +72,19 @@ Pre-provision the [instance owner](user-management.md) from environment variable
 This variable expects a pre-hashed bcrypt value. Setting a plaintext password breaks login.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/75cM0VtFejV1gnDTFOSV/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage the instance owner from environment variables. When `true`, n8n overwrites the instance owner details below on every startup, locks the UI control for that user, and rejects API writes. |
+| `N8N_INSTANCE_OWNER_EMAIL` | String | - | Email address for the instance owner. |
+| `N8N_INSTANCE_OWNER_FIRST_NAME` | String | - | First name for the instance owner. |
+| `N8N_INSTANCE_OWNER_LAST_NAME` | String | - | Last name for the instance owner. |
+| `N8N_INSTANCE_OWNER_PASSWORD_HASH` | String | - | Bcrypt hash of the instance owner's password. Setting a plaintext password breaks login. |
+
+{% hint style="warning" %}
+**Owner email must be unique**
+
+`N8N_INSTANCE_OWNER_EMAIL` must not already belong to another user on the instance. This setting updates the existing instance owner account; it doesn't transfer ownership to another existing user or merge user accounts. To use an email address that already belongs to another user, change or delete that user first so the email becomes available.
+{% endhint %}
 
 ## SSO <a href="#sso" id="sso"></a>
 
@@ -92,11 +104,21 @@ Configure [single sign-on](security/configure-sso.md) from environment variables
 
 ### Activation and shared settings <a href="#activation-and-shared-settings" id="activation-and-shared-settings"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TJ7IUBpRrfLoXyEn4T4d/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_SSO_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage SSO from environment variables. When `true`, n8n applies the SSO variables on every startup and locks the matching UI controls. |
+| `N8N_SSO_USER_ROLE_PROVISIONING` | Enum string: `disabled`, `instance_role`, `instance_and_project_roles` | `disabled` | How n8n provisions roles for users who sign in through SSO. `disabled` doesn't provision any roles. `instance_role` provisions the instance-level role only. `instance_and_project_roles` provisions both instance and project roles. |
 
 ### OIDC <a href="#oidc" id="oidc"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/SBpz79jvy94Y5dKIvxqR/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_SSO_OIDC_LOGIN_ENABLED` | Boolean | `false` | Whether to enable OIDC login. |
+| `N8N_SSO_OIDC_CLIENT_ID` | String | - | OIDC client ID issued by your identity provider. |
+| `N8N_SSO_OIDC_CLIENT_SECRET` | String | - | OIDC client secret issued by your identity provider. |
+| `N8N_SSO_OIDC_DISCOVERY_ENDPOINT` | String | - | OIDC discovery endpoint URL (the `.well-known/openid-configuration` URL for your identity provider). |
+| `N8N_SSO_OIDC_PROMPT` | String | - | Optional OIDC `prompt` parameter to send with the authorization request, for example `login` or `consent`. |
+| `N8N_SSO_OIDC_ACR_VALUES` | String | - | Optional OIDC `acr_values` parameter. Use this to request a specific authentication context, for example a step-up MFA flow. |
 
 ### SAML <a href="#saml" id="saml"></a>
 
@@ -106,7 +128,11 @@ Configure [single sign-on](security/configure-sso.md) from environment variables
 Set either `N8N_SSO_SAML_METADATA` (inline XML) or `N8N_SSO_SAML_METADATA_URL` (URL), not both.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/NnYMdwgkElS7TK37owd0/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_SSO_SAML_LOGIN_ENABLED` | Boolean | `false` | Whether to enable SAML login. |
+| `N8N_SSO_SAML_METADATA` | String | - | SAML identity provider metadata as an XML string. Mutually exclusive with `N8N_SSO_SAML_METADATA_URL`; don't set both. |
+| `N8N_SSO_SAML_METADATA_URL` | String | - | URL to fetch SAML identity provider metadata from. Mutually exclusive with `N8N_SSO_SAML_METADATA`; don't set both. |
 
 ## Security policy <a href="#security-policy" id="security-policy"></a>
 
@@ -118,7 +144,12 @@ Managing the security policy from environment variables is available from n8n 2.
 
 Manage the instance security policy from environment variables, including MFA enforcement and personal space restrictions.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/xVIddGVtWAPFZlRYTrwL/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_SECURITY_POLICY_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage the security policy from environment variables. When `true`, n8n applies the security policy variables on every startup and locks the matching UI controls. |
+| `N8N_MFA_ENFORCED_ENABLED` | Boolean | `false` | Whether to enforce two-factor authentication for all users (`true`) or not (`false`). |
+| `N8N_PERSONAL_SPACE_PUBLISHING_ENABLED` | Boolean | `true` | Whether users can publish from their personal space (`true`) or not (`false`). |
+| `N8N_PERSONAL_SPACE_SHARING_ENABLED` | Boolean | `true` | Whether users can share resources from their personal space (`true`) or not (`false`). |
 
 ## Log streaming <a href="#log-streaming" id="log-streaming"></a>
 
@@ -130,7 +161,10 @@ Managing log streaming from environment variables is available from n8n 2.19.0.
 
 Manage [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) destinations from environment variables. See [Configure using environment variables](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems#configure-using-environment-variables) for the per-destination JSON shape.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JvN9TDUUWTwpWaT83YrH/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_LOG_STREAMING_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage log streaming from environment variables. When `true`, n8n applies the log streaming variables on every startup and locks the matching UI controls. |
+| `N8N_LOG_STREAMING_DESTINATIONS` | JSON string | - | JSON array of log streaming destinations. Each destination is an object with a `type` of `webhook`, `syslog`, or `sentry`, plus the configuration for that type. |
 
 ## MCP <a href="#mcp" id="mcp"></a>
 
@@ -142,7 +176,10 @@ Managing instance-level MCP access from environment variables is available from 
 
 Manage [instance-level MCP access](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) from environment variables.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Gf4nC8Xoy8uJDma1fIYg/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_MCP_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage MCP settings from environment variables. When `true`, n8n applies the MCP variables on every startup and locks the matching UI controls. |
+| `N8N_MCP_ACCESS_ENABLED` | Boolean | `false` | Whether to enable instance-level MCP access (`true`) or not (`false`). |
 
 ## Community packages <a href="#community-packages" id="community-packages"></a>
 
@@ -156,7 +193,10 @@ Manage the set of installed [community packages](https://app.gitbook.com/s/BKcbO
 
 `N8N_COMMUNITY_PACKAGES_ENABLED` must also be set to `true` (the default). When community packages are disabled, n8n ignores `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` and logs a warning.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/w3ftfKhp9KdsaTfUFHE8/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage installed community packages from environment variables. When `true`, n8n reconciles the installed packages against `N8N_COMMUNITY_PACKAGES` on every startup, installing missing packages, correcting versions, and **uninstalling any currently-installed packages that aren't in the list**. The **Community nodes** settings page becomes read-only: you can't install, update, or uninstall packages from the UI while this is enabled. |
+| `N8N_COMMUNITY_PACKAGES` | JSON string | - | JSON array of community packages to install. Each entry is an object with a `name` (required) and optional `version` and `checksum` fields. You can also embed the version in the name as `<package-name>@<version>`. See [environment variable installation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management/environment-variable-installation) for the full per-field reference. |
 
 ## Combined example <a href="#combined-example" id="combined-example"></a>
 

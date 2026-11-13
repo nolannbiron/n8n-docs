@@ -12,7 +12,12 @@ layout:
 
 # Security Assertion Markup Language (SAML) <a href="#security-assertion-markup-language-saml" id="security-assertion-markup-language-saml"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9DXSTQsxYGisAV8xk6p4/" %}
+{% hint style="info" %}
+**Feature availability**
+
+* Available on Business and Enterprise plans.
+* You need to be an instance owner or admin to enable and configure SAML.
+{% endhint %}
 
 This section tells you how to enable SAML SSO (single sign-on) in n8n. It assumes you're familiar with SAML. If you're not, [SAML Explained in Plain English](https://www.onelogin.com/learn/saml) can help you understand how SAML works, and its benefits.
 

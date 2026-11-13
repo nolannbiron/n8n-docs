@@ -62,4 +62,4 @@ Enter your custom JavaScript code in the **Code** input field.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/0nvcx1EqJQgGVzUXOOMN/" %}
+Learn more about [data structure and data flow](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data) in n8n workflows.

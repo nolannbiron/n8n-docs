@@ -18,7 +18,11 @@ layout:
 
 The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sVOSvjfqJPLqOGb1x77B/" %}
+{% hint style="info" %}
+**Recommendation: don't push and pull to the same n8n instance**
+
+You can push work from an instance to a branch, and pull to the same instance. n8n doesn't recommend this. To reduce the risk of merge conflicts and overwriting work, try to create a process where work goes in one direction: either to Git, or from Git, but not both.
+{% endhint %}
 
 ## Multiple instances, multiple branches <a href="#multiple-instances-multiple-branches" id="multiple-instances-multiple-branches"></a>
 
@@ -26,7 +30,12 @@ This pattern involves having multiple n8n instances, each one linked to its own 
 
 You can use this pattern for environments. For example, create two n8n instances, development and production. Link them to their own branches. Push work from your development instance to its branch, do a pull request to move work to the production branch, then pull to the production instance.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/O5AqRfApNuiINXZOe5j1/" %}
+The advantages of this pattern are:
+
+* An added safety layer to prevent changes getting into your production environment by mistake. You have to do a pull request in GitHub to copy work between environments.
+* It supports more than two instances.
+
+The disadvantage is more manual steps to copy work between environments.
 
 ![Development and production n8n instances, each connected to its own Git branch, with a pull request moving work between the branches](../.gitbook/assets/vc-multi-multi.png)
 
@@ -38,7 +47,12 @@ You can use this pattern for environments. For example, create two n8n instances
 
 This pattern is also useful when testing a new version of n8n: you can create a new n8n instance with the new version, connect it to the Git branch and test it, while your production instance remains on the older version until you're confident it's safe to upgrade.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Vo4DpZeEyTa0iuufMDB8/" %}
+The advantage of this pattern is that work is instantly available to other environments when you push from one instance.
+
+The disadvantages are:
+
+* If you push by mistake, there is a risk the work will make it into your production instance. If you [use a GitHub Action to automate pulls](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/tutorial-create-environments-with-source-control#optional-use-a-github-action-to-automate-pulls) to production, you must either use the multi-instance, multi-branch pattern, or be careful to never push work that you don't want in production.
+* Pushing and pulling to the same instance can cause data loss as changes are overridden when performing these actions. You should set up processes to ensure content flows in one direction.
 
 ![Development and production n8n instances both connected to the same single Git branch](../.gitbook/assets/vc-multi-one.png)
 

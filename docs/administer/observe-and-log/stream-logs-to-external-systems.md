@@ -282,7 +282,10 @@ n8n supports three destination types:
 
 If you self-host n8n, you can manage log streaming destinations from environment variables instead of the UI. This is available from n8n 2.19.0. Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` and provide your destinations as a JSON array in `N8N_LOG_STREAMING_DESTINATIONS`. n8n reapplies these on every startup and locks the **Log Streaming** UI as read-only. See [Manage instance settings using environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/manage-settings-using-environment-variables) for the full pattern.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JvN9TDUUWTwpWaT83YrH/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_LOG_STREAMING_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage log streaming from environment variables. When `true`, n8n applies the log streaming variables on every startup and locks the matching UI controls. |
+| `N8N_LOG_STREAMING_DESTINATIONS` | JSON string | - | JSON array of log streaming destinations. Each destination is an object with a `type` of `webhook`, `syslog`, or `sentry`, plus the configuration for that type. |
 
 ### Common fields <a href="#common-fields" id="common-fields"></a>
 

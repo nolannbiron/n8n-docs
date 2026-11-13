@@ -75,7 +75,11 @@ Existing credentials that use a legacy `service_role` secret keep working, but S
 
 ## Using OAuth2
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
+{% hint style="info" %}
+**Note for n8n Cloud users**
+
+Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
+{% endhint %}
 
 Managed OAuth2 uses the **Supabase node and MCP server** permissions shown in the permissions table. For custom OAuth2, create a Supabase OAuth app and enter its client credentials in n8n.
 

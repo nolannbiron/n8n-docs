@@ -39,7 +39,11 @@ layout:
 
 Use this operation to create, delete, get, and update shared drives in Google Drive. Refer to [Google Drive](./README.md) for more information on the Google Drive node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+{% hint style="info" %}
+**This node can be used as an AI tool**
+
+This node can be used to enhance the capabilities of an AI agent. When used in this way, many parameters can be set automatically, or with information directed by AI - find out more in the [AI tool parameters documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters).
+{% endhint %}
 
 ## Create a shared drive <a href="#create-a-shared-drive" id="create-a-shared-drive"></a>
 

@@ -21,7 +21,11 @@ layout:
 
 # OpenTelemetry environment variables <a href="#opentelemetry-environment-variables" id="opentelemetry-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
+{% hint style="info" %}
+**File-based configuration**
+
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+{% endhint %}
 
 n8n can export workflow and node execution traces over OTLP to an OpenTelemetry collector. Refer to [OpenTelemetry tracing](../../../keep-n8n-running/trace-executions-with-opentelemetry.md) for details.
 

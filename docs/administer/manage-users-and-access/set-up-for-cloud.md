@@ -26,11 +26,22 @@ Once you upgrade your Cloud instance to an n8n version with user management, you
 
 ## Step one: In-app setup <a href="#step-one-in-app-setup" id="step-one-in-app-setup"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0111xcskz1G8PKOQogB/" %}
+When you set up user management for the first time, you create an owner account.
+
+1. Open n8n. The app displays a signup screen.
+2. Enter your details. Your password must be at least eight characters, including at least one number and one capital letter.
+3. Click **Next**. n8n logs you in with your new owner account.
 
 ## Step two: Invite users <a href="#step-two-invite-users" id="step-two-invite-users"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8qoOEjsLz4RnydVBogNy/" %}
+You can now invite other people to your n8n instance.
+
+1. Sign in to your n8n instance with your owner account. On n8n Cloud, if you're in the n8n Cloud console, select **Open instance** on the **Overview** page.
+2. Click the three dots next to your user icon at the bottom left and click **Settings**.
+3. Click **Users** to go to the **Users** page.
+4. Click **Invite**.
+5. Enter the new user's email address.
+6. Click **Invite user**. n8n sends an email with a link for the new user to join.
 
 ## Related resources
 

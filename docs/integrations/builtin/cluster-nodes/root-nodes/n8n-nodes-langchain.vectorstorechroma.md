@@ -128,7 +128,11 @@ This Operation Mode includes one **Node option**, the Metadata Filter
 
 ### Metadata Filter <a href="#metadata-filter" id="metadata-filter"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9OWZ8hSpVqky4D4xRnYP/" %}
+Available in **Get Many** mode. When searching for data, use this to match with metadata associated with the document.
+
+This is an `AND` query. If you specify more than one metadata filter field, all of them must match.
+
+When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader) for more information on loading documents.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

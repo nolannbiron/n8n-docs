@@ -23,7 +23,14 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ## How to update n8n
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/D8oFoz7X85mQuXGFYlv9/" %}
+## How to update n8n <a href="#how-to-update-n8n" id="how-to-update-n8n"></a>
+
+The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
+
+* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* Self-hosted options:
+    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
 
 ## Semantic versioning in n8n <a href="#semantic-versioning-in-n8n" id="semantic-versioning-in-n8n"></a>
 

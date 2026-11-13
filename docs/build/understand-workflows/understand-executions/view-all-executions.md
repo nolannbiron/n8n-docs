@@ -50,7 +50,14 @@ You can filter the executions list:
    * **Execution start**: see executions that started in the given time.
    * **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](customize-executions-data.md) for information on adding custom data.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hEbJHXcEBce6m2wEE65f/" %}
+{% hint style="info" %}
+**Feature availability**
+
+Custom executions data is available on:
+
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Registered Community, Enterprise
+{% endhint %}
 
 ## Retry failed workflows <a href="#retry-failed-workflows" id="retry-failed-workflows"></a>
 
@@ -59,7 +66,9 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 1. Select the **Executions** tab from within either the **Overview** page or a specific **project** to open the list.
 2. On the execution you want to retry, select **Retry execution** <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Options menu icon" data-size="line">.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yD2T5eTeZvZaPRV8P7MJ/" %}
+3. Select either of the following options to retry the execution:
+    * **Retry with currently saved workflow**: Once you make changes to your workflow, you can select this option to execute the workflow with the previous execution data.
+    * **Retry with original workflow**: If you want to retry the execution without making changes to your workflow, you can select this option to retry the execution with the previous execution data.
 
 ### What a retry runs
 

@@ -27,7 +27,11 @@ Refer to [HTTP Request node cookbook | Pagination](../cookbook/http-request-node
 
 These variables are for use in expressions in the HTTP node. You can't use them in other nodes.
 {% endhint %}
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/I3wrw8MpZtbjn2khruiw/" %}
+| Variable | Description |
+| -------- | ----------- |
+| `$pageCount` | The pagination count. Tracks how many pages the node has fetched. |
+| `$request` | The request object sent by the HTTP node. |
+| `$response` | The response object from the HTTP call. Includes `$response.body`, `$response.headers`, and `$response.statusCode`. The contents of `body` and `headers` depend on the data sent by the API. |
 
 ## Related resources
 

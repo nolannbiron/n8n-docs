@@ -68,17 +68,55 @@ You can use [Predefined credential types](../custom-api-actions-for-existing-nod
 
 ## Using predefined credential type <a href="#using-predefined-credential-type" id="using-predefined-credential-type"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ZmZC9v8B1NG5lgRY44yF/" %}
+To use a predefined credential type:
+
+1. Open your HTTP Request or GraphQL node, or add a new one to your workflow.
+2. In **Authentication**, select **Predefined Credential Type**.
+3. In **Credential Type**, select the API you want to use. 
+4. In **Credential for `<API name>`**, you can:
+    1. Select an existing credential for that platform, if available.
+    2. Select **Create New** to create a new credential.
 
 Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/vIyn1XsEkjlolZzHTfTG/" %}
+## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tq6Yob45CR8oPKrT6Ggr/" %}
+Use this generic authentication if your app or service supports basic authentication.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fjWxEWe1g0CDvsx1igf6/" %}
+To configure this credential, enter:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JeIbggto5Oi1mPf9SOYv/" %}
+- The **Username** you use to access the app or service your HTTP Request is targeting
+- The **Password** that goes with that username
+
+## Using digest auth <a href="#using-digest-auth" id="using-digest-auth"></a>
+
+Use this generic authentication if your app or service supports digest authentication.
+
+To configure this credential, enter:
+
+- The **Username** you use to access the app or service your HTTP Request is targeting
+- The **Password** that goes with that username
+
+## Using header auth <a href="#using-header-auth" id="using-header-auth"></a>
+
+Use this generic authentication if your app or service supports header authentication.
+
+To configure this credential, enter:
+
+- The header **Name** you need to pass to the app or service your HTTP request is targeting
+- The **Value** for the header 
+
+Read more about [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#authentication)
+
+## Using bearer auth <a href="#using-bearer-auth" id="using-bearer-auth"></a>
+
+Use this generic authentication if your app or service supports bearer authentication. This authentication type is actually just header authentication with the `Name` set to `Authorization` and the `Value` set to `Bearer <token>`.
+
+To configure this credential, enter:
+
+- The **Bearer Token** you need to pass to the app or service your HTTP request is targeting
+
+Read more about [bearer authentication](https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/).
 
 ## Using OAuth1 <a href="#using-oauth1" id="using-oauth1"></a>
 

@@ -62,4 +62,4 @@ Choose whether to include binary data from the input in the new output (turned o
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/0nvcx1EqJQgGVzUXOOMN/" %}
+Learn more about [data structure and data flow](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data) in n8n workflows.

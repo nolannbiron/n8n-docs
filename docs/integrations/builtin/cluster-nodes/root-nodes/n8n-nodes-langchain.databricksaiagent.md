@@ -102,7 +102,7 @@ The export makes three calls for each trace: it registers the trace in the exper
 - Migrating from the community package: refer to [Migrate from the n8n-nodes-databricks community package](n8n-nodes-langchain.vectorstoredatabricks/migrate-from-the-community-package.md)
 - [MLflow Tracing](https://docs.databricks.com/aws/en/mlflow3/genai/tracing/) and [MLflow experiment permissions](https://docs.databricks.com/aws/en/security/auth/access-control/#mlflow-experiment-acls) in the Databricks documentation
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
 ## Common issues
 

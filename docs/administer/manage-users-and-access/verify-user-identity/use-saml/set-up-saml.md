@@ -14,7 +14,12 @@ layout:
 
 # Set up SAML <a href="#set-up-saml" id="set-up-saml"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9DXSTQsxYGisAV8xk6p4/" %}
+{% hint style="info" %}
+**Feature availability**
+
+* Available on Business and Enterprise plans.
+* You need to be an instance owner or admin to enable and configure SAML.
+{% endhint %}
 
 {% hint style="info" %}
 **Configure using environment variables**

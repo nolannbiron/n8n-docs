@@ -46,11 +46,25 @@ For a curated summary of the changes that matter most, see the [Changelog](READM
 
 New features and bug fixes for n8n.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+{% hint style="info" %}
+**Stable and Beta versions**
+
+n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+
+Current `stable`: 2.47.7
+Current `beta`: 2.48.4
+{% endhint %}
 
 ## How to update n8n
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/D8oFoz7X85mQuXGFYlv9/" %}
+## How to update n8n <a href="#how-to-update-n8n" id="how-to-update-n8n"></a>
+
+The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
+
+* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* Self-hosted options:
+    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
 
 ## Semantic versioning in n8n <a href="#semantic-versioning-in-n8n" id="semantic-versioning-in-n8n"></a>
 

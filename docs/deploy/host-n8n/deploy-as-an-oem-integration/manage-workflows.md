@@ -16,7 +16,11 @@ layout:
 
 # Managing workflows <a href="#managing-workflows" id="managing-workflows"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6kdIvlPPl0XWVn5z8UJh/" %}
+{% hint style="info" %}
+**OEM agreement required**
+
+OEM deployment of n8n requires a separate commercial agreement with n8n. [Contact n8n](mailto:license@n8n.io) for more information.
+{% endhint %}
 
 When managing an n8n OEM deployment spanning across teams or organizations, you will likely need to run the same (or similar) workflows for multiple users. There are two available options for doing so:
 

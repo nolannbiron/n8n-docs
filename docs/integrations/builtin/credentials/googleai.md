@@ -43,7 +43,7 @@ You can use these credentials to authenticate the following nodes:
 
 Refer to [Google's Gemini API documentation](https://ai.google.dev/gemini-api/docs) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
 ## Using Gemini(PaLM) API key <a href="#using-geminipalm-api-key" id="using-geminipalm-api-key"></a>
 

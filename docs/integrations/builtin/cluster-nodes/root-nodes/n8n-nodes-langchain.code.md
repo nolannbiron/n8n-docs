@@ -96,7 +96,15 @@ By configuring the LangChain Code node connectors (inputs and outputs) you can u
 
 n8n provides these methods to make it easier to perform common tasks in the LangChain Code node.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iIcw3xaOoa9HryGmR8dX/" %}
+| Method | Description |
+| ------ | ----------- |
+| `this.addInputData(inputName, data)` | Populate the data of a specified non-main input. Useful for mocking data.<ul><li>`inputName` is the input connection type, and must be one of: `ai_agent`, `ai_chain`, `ai_document`, `ai_embedding`, `ai_languageModel`, `ai_memory`, `ai_outputParser`, `ai_retriever`, `ai_textSplitter`, `ai_tool`, `ai_vectorRetriever`, `ai_vectorStore`</li><li>`data` contains the data you want to add. Refer to [Data structure](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure) for information on the data structure expected by n8n.</li></ul> |
+| `this.addOutputData(outputName, data)` | Populate the data of a specified non-main output. Useful for mocking data.<ul><li>`outputName` is the input connection type, and must be one of: `ai_agent`, `ai_chain`, `ai_document`, `ai_embedding`, `ai_languageModel`, `ai_memory`, `ai_outputParser`, `ai_retriever`, `ai_textSplitter`, `ai_tool`, `ai_vectorRetriever`, `ai_vectorStore`</li><li>`data` contains the data you want to add. Refer to [Data structure](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure) for information on the data structure expected by n8n.</li></ul> |
+| `this.getInputConnectionData(inputName, itemIndex, inputIndex?)` | Get data from a specified non-main input.<ul><li>`inputName` is the input connection type, and must be one of: `ai_agent`, `ai_chain`, `ai_document`, `ai_embedding`, `ai_languageModel`, `ai_memory`, `ai_outputParser`, `ai_retriever`, `ai_textSplitter`, `ai_tool`, `ai_vectorRetriever`, `ai_vectorStore`</li><li>`itemIndex` should always be `0` (this parameter will be used in upcoming functionality)</li><li>Use `inputIndex` if there is more than one node connected to the specified input.</li></ul> |
+| `this.getInputData(inputIndex?, inputName?)` | Get data from the main input. |
+| `this.getNode()` | Get the current node. |
+| `this.getNodeOutputs()` | Get the outputs of the current node. |
+| `this.getExecutionCancelSignal()` | Use this to stop the execution of a function when the workflow stops. n8n handles this in most workflows, but you may need it if you build your own chains or agents. |
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -104,4 +112,4 @@ n8n provides these methods to make it easier to perform common tasks in the Lang
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.

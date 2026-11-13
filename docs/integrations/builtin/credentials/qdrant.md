@@ -30,7 +30,7 @@ You can use these credentials to authenticate the following nodes:
 
 Refer to [Qdrant's documentation](https://qdrant.tech/documentation/) for more information.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

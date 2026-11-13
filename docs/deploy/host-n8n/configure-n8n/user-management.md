@@ -94,7 +94,11 @@ If you're not familiar with SMTP, this [blog post by SendGrid](https://sendgrid.
 
 ### Step two: In-app setup <a href="#step-two-in-app-setup" id="step-two-in-app-setup"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0111xcskz1G8PKOQogB/" %}
+When you set up user management for the first time, you create an owner account.
+
+1. Open n8n. The app displays a signup screen.
+2. Enter your details. Your password must be at least eight characters, including at least one number and one capital letter.
+3. Click **Next**. n8n logs you in with your new owner account.
 
 #### Pre-provision the instance owner from environment variables <a href="#pre-provision-the-instance-owner-from-environment-variables" id="pre-provision-the-instance-owner-from-environment-variables"></a>
 
@@ -114,11 +118,30 @@ To change the owner email after setup, see [Change the instance owner email for 
 This variable expects a pre-hashed bcrypt value. Setting a plaintext password breaks login.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/75cM0VtFejV1gnDTFOSV/" %}
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage the instance owner from environment variables. When `true`, n8n overwrites the instance owner details below on every startup, locks the UI control for that user, and rejects API writes. |
+| `N8N_INSTANCE_OWNER_EMAIL` | String | - | Email address for the instance owner. |
+| `N8N_INSTANCE_OWNER_FIRST_NAME` | String | - | First name for the instance owner. |
+| `N8N_INSTANCE_OWNER_LAST_NAME` | String | - | Last name for the instance owner. |
+| `N8N_INSTANCE_OWNER_PASSWORD_HASH` | String | - | Bcrypt hash of the instance owner's password. Setting a plaintext password breaks login. |
+
+{% hint style="warning" %}
+**Owner email must be unique**
+
+`N8N_INSTANCE_OWNER_EMAIL` must not already belong to another user on the instance. This setting updates the existing instance owner account; it doesn't transfer ownership to another existing user or merge user accounts. To use an email address that already belongs to another user, change or delete that user first so the email becomes available.
+{% endhint %}
 
 ### Step three: Invite users <a href="#step-three-invite-users" id="step-three-invite-users"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8qoOEjsLz4RnydVBogNy/" %}
+You can now invite other people to your n8n instance.
+
+1. Sign in to your n8n instance with your owner account. On n8n Cloud, if you're in the n8n Cloud console, select **Open instance** on the **Overview** page.
+2. Click the three dots next to your user icon at the bottom left and click **Settings**.
+3. Click **Users** to go to the **Users** page.
+4. Click **Invite**.
+5. Enter the new user's email address.
+6. Click **Invite user**. n8n sends an email with a link for the new user to join.
 
 ## Related resources
 

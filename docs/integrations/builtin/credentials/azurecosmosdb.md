@@ -50,4 +50,10 @@ Refer to [Get your primary key | Microsoft](https://learn.microsoft.com/en-us/pr
 
 Here are the known common errors and issues with Azure Cosmos DB credentials.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fXYywkPyzPTxeGOEnYgb/" %}
+### Need admin approval <a href="#need-admin-approval" id="need-admin-approval"></a>
+
+When attempting to add credentials for a Microsoft360 or Microsoft Entra account, users may see a message when following the procedure that this action requires admin approval.
+
+This message will appear when the account attempting to grant permissions for the credential is managed by a Microsoft Entra. In order to issue the credential, the administrator account needs to grant permission to the user (or "tenant") for that application.
+
+The procedure for this is covered in the [Microsoft Entra documentation](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent).

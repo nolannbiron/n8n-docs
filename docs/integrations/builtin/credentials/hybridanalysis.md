@@ -18,7 +18,7 @@ layout:
 
 # Hybrid Analysis credentials <a href="#hybrid-analysis-credentials" id="hybrid-analysis-credentials"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7QbEnpnpOks3Rq0SiMFb/" %}
+You can use these credentials to authenticate when using the [HTTP Request node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) to make a [Custom API call](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/custom-api-actions-for-existing-nodes).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

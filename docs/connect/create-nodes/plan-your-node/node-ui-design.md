@@ -170,7 +170,13 @@ You should support two ways of specifying the content of a text input that expec
 
 #### Node icons <a href="#node-icons" id="node-icons"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/dGOXJYk0OQgOLlRpyJnn/" %}
+n8n recommends using an SVG for your node icon, but you can also use PNG. If using PNG, the icon resolution should be 60x60px. Node icons should have a square or near-square aspect ratio.
+
+{% hint style="info" %}
+**Don't reference Font Awesome**
+
+If you want to use a Font Awesome icon in your node, download and embed the image. Don't set `defaults.color`: it only tints Font Awesome icons, and n8n 3.0 removes it.
+{% endhint %}
 
 
 ### Common patterns and exceptions <a href="#common-patterns-and-exceptions" id="common-patterns-and-exceptions"></a>

@@ -14,7 +14,14 @@ layout:
 
 This section contains the node[^1] library: reference documentation for every built-in node in n8n, and their credentials.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nqwVeyXZtOyDsX8afllD/" %}
+## Node operations: Triggers and Actions <a href="#node-operations-triggers-and-actions" id="node-operations-triggers-and-actions"></a>
+
+When you add a node to a workflow, n8n displays a list of available operations. An operation is something a node does, such as getting or sending data.
+
+There are two types of operation:
+
+* Triggers start a workflow in response to specific events or conditions in your services. When you select a Trigger, n8n adds a trigger node to your workflow, with the Trigger operation you chose pre-selected. When you search for a node in n8n, Trigger operations have a bolt icon <img src="../../../assets/trigger.png" alt="Trigger icon" data-size="line">.
+* Actions are operations that represent specific tasks within a workflow, which you can use to manipulate data, perform operations on external systems, and trigger events in other systems as part of your workflows. When you select an Action, n8n adds a node to your workflow, with the Action operation you chose pre-selected.
 
 ## Core nodes <a href="#core-nodes" id="core-nodes"></a>
 
@@ -22,7 +29,9 @@ Core nodes can be actions or triggers[^2]. Whereas most nodes connect to a speci
 
 ## Cluster nodes <a href="#cluster-nodes" id="cluster-nodes"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nQYOCBZiuZBtHlBAOFq9/" %}
+[Cluster nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#cluster-node-n8n) are node groups that work together to provide functionality in an n8n workflow. Instead of using a single node, you use a [root node](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#root-node-n8n) and one or more [sub-nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#sub-node-n8n) that extend the functionality of the node.
+
+![A workflow diagram with one root node connected to two sub-nodes](../../../../assets/root-sub-nodes.png)
 
 ## Credentials <a href="#credentials" id="credentials"></a>
 

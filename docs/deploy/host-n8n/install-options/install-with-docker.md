@@ -37,7 +37,18 @@ n8n recommends using [Docker](https://www.docker.com/) for most self-hosting nee
 
 You can also use n8n in Docker with [Docker Compose](use-a-cloud-provider/use-docker-compose.md). You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/YLv7Cqg70tj1alDgktSX/" %}
+{% hint style="info" %}
+**Self-hosting knowledge prerequisites**
+
+Self-hosting n8n requires technical knowledge, including:
+
+* Setting up and configuring servers and containers
+* Managing application resources and scaling
+* Securing servers and applications
+* Configuring n8n
+
+n8n recommends self-hosting for expert users. Mistakes can lead to data loss, security issues, and downtime. If you aren't experienced at managing servers, n8n recommends [n8n Cloud](https://n8n.io/cloud/).
+{% endhint %}
 
 You can also follow along with this video guide:
 
@@ -50,7 +61,14 @@ Before proceeding, install Docker:
 * [Docker Desktop](https://docs.docker.com/get-docker/) is available for Mac, Windows, and Linux. Docker Desktop includes the Docker Engine and Docker Compose.
 * [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/linux/) are also available as separate packages for Linux. Use this for Linux machines without a graphical environment or when you don't want the Docker Desktop UI.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+{% hint style="info" %}
+**Stable and Beta versions**
+
+n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+
+Current `stable`: 2.47.7
+Current `beta`: 2.48.4
+{% endhint %}
 
 ### Starting n8n <a href="#starting-n8n" id="starting-n8n"></a>
 
@@ -157,9 +175,41 @@ docker run --name=<container_name> [options] -d n8nio/n8n
 
 #### Updating Docker Compose <a href="#updating-docker-compose" id="updating-docker-compose"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yA5x9FIRtnDGdghFU93g/" %}
+If you run n8n using a Docker Compose file, follow these steps to update n8n:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WSJc9HCsn26Um2uT6zAQ/" %}
+```sh
+# Navigate to the directory containing your docker compose file <a href="#navigate-to-the-directory-containing-your-docker-compose-file" id="navigate-to-the-directory-containing-your-docker-compose-file"></a>
+cd </path/to/your/compose/file/directory>
+
+# Pull latest version <a href="#pull-latest-version" id="pull-latest-version"></a>
+docker compose pull
+
+# Stop and remove older version <a href="#stop-and-remove-older-version" id="stop-and-remove-older-version"></a>
+docker compose down
+
+# Start the container <a href="#start-the-container" id="start-the-container"></a>
+docker compose up -d
+```
+
+## n8n with tunnel <a href="#n8n-with-tunnel" id="n8n-with-tunnel"></a>
+
+{% hint style="danger" %}
+Use this for local development and testing. It isn't safe to use it in production.
+{% endhint %}
+
+{% hint style="warning" %}
+**Development tooling**
+
+The tunnel feature is a convenience tool for local development. The underlying implementation may change between n8n versions.
+{% endhint %}
+
+Watch a video guide to setting up the tunnel using Cloudflare or ngrok:
+
+{% embed url="https://www.youtube.com/embed/O9dpO81dEQ0" %}
+
+To use webhooks for trigger nodes of external services like GitHub, n8n has to be reachable from the web. n8n provides a tunnel service using [cloudflared](https://github.com/cloudflare/cloudflared) that redirects requests from the web to your local n8n instance. Docker must be installed for the tunnel to work.
+
+There are two ways to use the tunnel, depending on how you run n8n:
 
 #### Full stack <a href="#full-stack" id="full-stack"></a>
 
@@ -198,7 +248,8 @@ pnpm --filter n8n-containers services:clean
 
 * Find more information about Docker setup in the README file for the [Docker image](https://github.com/n8n-io/n8n/tree/master/docker/images/n8n).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
+* Learn more about [configuring](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling) n8n.
+* Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow).
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
 

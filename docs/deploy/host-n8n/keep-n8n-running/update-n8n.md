@@ -22,7 +22,9 @@ Keep your n8n version up to date to get the latest features and fixes.
 
 Some tips when updating:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/1Q2X3RjU5o2jnRfcKzuN/" %}
+* Update frequently: this avoids having to jump multiple versions at once, reducing the risk of a disruptive update. Try to update at least once a month.
+* Check the [Release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes-2.x) for breaking changes.
+* Use [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments) to create a test version of your instance. Test the update there first.
 
 For instructions on how to update, refer to the documentation for your installation method:
 

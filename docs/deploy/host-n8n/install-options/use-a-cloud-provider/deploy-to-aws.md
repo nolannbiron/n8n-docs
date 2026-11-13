@@ -32,9 +32,27 @@ The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS
 
 While not mentioned in the documentation for eksctl, you also need to [install the AWS CLI tool](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), and [configure authentication of the tool](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/YLv7Cqg70tj1alDgktSX/" %}
+{% hint style="info" %}
+**Self-hosting knowledge prerequisites**
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+Self-hosting n8n requires technical knowledge, including:
+
+* Setting up and configuring servers and containers
+* Managing application resources and scaling
+* Securing servers and applications
+* Configuring n8n
+
+n8n recommends self-hosting for expert users. Mistakes can lead to data loss, security issues, and downtime. If you aren't experienced at managing servers, n8n recommends [n8n Cloud](https://n8n.io/cloud/).
+{% endhint %}
+
+{% hint style="info" %}
+**Stable and Beta versions**
+
+n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+
+Current `stable`: 2.47.7
+Current `beta`: 2.48.4
+{% endhint %}
 
 ## Create a cluster <a href="#create-a-cluster" id="create-a-cluster"></a>
 
@@ -126,7 +144,11 @@ resources:
 
 This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n Cloud offerings:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/I9ftZ1V1rwx3OrFOh0bT/" %}
+| Tier | RAM | CPU |
+| :--- | :--- | :--- |
+| Starter | 320mb | 10 millicore burstable |
+| Pro (10k executions) | 640mb | 20 millicore burstable |
+| Pro (50k executions) | 1280mb | 80 millicore burstable |
 
 ### Optional: Environment variables <a href="#optional-environment-variables" id="optional-environment-variables"></a>
 
@@ -204,7 +226,8 @@ kubectl delete -f .
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
+* Learn more about [configuring](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling) n8n.
+* Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow).
 
 ## Related resources
 

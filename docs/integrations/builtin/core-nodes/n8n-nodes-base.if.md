@@ -50,7 +50,18 @@ You can choose to keep data:
 
 ## Branch execution with If and Merge nodes <a href="#branch-execution-with-if-and-merge-nodes" id="branch-execution-with-if-and-merge-nodes"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/o5sVhTw0cyO5aAAkAVDj/" %}
+{% hint style="info" %}
+**0.236.0 and below**
+
+n8n removed this execution behavior in n8n 1.0. This section applies to workflows using the **v0 (legacy)** workflow execution order. By default, this is all workflows built before n8n 1.0. You can change the execution order in your [workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings).
+{% endhint %}
+If you add a Merge node to a workflow containing an If node, it can result in both output data streams of the If node executing.
+
+One data stream triggers the Merge node, which then goes and executes the other data stream.
+
+For example, in the screenshot below there's a workflow containing an Edit Fields node, If node, and Merge node. The standard If node behavior is to execute one data stream (in the screenshot, this is the **true** output). However, due to the Merge node, both data streams execute, despite the If node not sending any data down the **false** data stream.
+
+![A workflow with an Edit Fields node, an If node, and a Merge node connected in sequence](../../../../../assets/if-merge-node.png)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -58,5 +69,93 @@ Refer to [Splitting with conditionals](https://app.gitbook.com/s/rPN1zU5jaYNvwH7
 
 If you need more than two conditional outputs, use the [Switch node](n8n-nodes-base.switch.md).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/bMMOCQFbQ4YpKDnWQQOg/" %}
+## Available data type comparisons <a href="#available-data-type-comparisons" id="available-data-type-comparisons"></a>
+
+### String <a href="#string" id="string"></a>
+
+String data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
+- is equal to
+- is not equal to
+- contains
+- does not contain
+- starts with
+- does not start with
+- ends with
+- does not end with
+- matches regex
+- does not match regex
+
+### Number <a href="#number" id="number"></a>
+
+Number data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
+- is equal to
+- is not equal to
+- is greater than
+- is less than
+- is greater than or equal to
+- is less than or equal to
+
+### Date & Time <a href="#date-and-time" id="date-and-time"></a>
+
+Date & Time data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
+- is equal to
+- is not equal to
+- is after
+- is before
+- is after or equal to
+- is before or equal to
+
+### Boolean <a href="#boolean" id="boolean"></a>
+
+Boolean data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
+- is true
+- is false
+- is equal to
+- is not equal to
+
+### Array <a href="#array" id="array"></a>
+
+Array data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
+- contains
+- does not contain
+- length equal to
+- length not equal to
+- length greater than
+- length less than
+- length greater than or equal to
+- length less than or equal to
+
+### Object <a href="#object" id="object"></a>
+
+Object data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
 

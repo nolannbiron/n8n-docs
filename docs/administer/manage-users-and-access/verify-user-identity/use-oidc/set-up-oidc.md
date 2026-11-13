@@ -14,7 +14,12 @@ layout:
 
 # Set up OIDC <a href="#set-up-oidc" id="set-up-oidc"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3sB2Mxc1yXYEg1FeAYjK/" %}
+{% hint style="info" %}
+**Feature availability**
+
+* Available on Enterprise plans.
+* You need to be an instance owner or admin to enable and configure OIDC.
+{% endhint %}
 
 {% hint style="info" %}
 **Feature availability**

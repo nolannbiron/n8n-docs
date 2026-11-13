@@ -145,7 +145,11 @@ The **Signature Secret** field is also required for [Approvals in Slack](../app-
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
+{% hint style="info" %}
+**Note for n8n Cloud users**
+
+Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
+{% endhint %}
 
 If you're [self-hosting n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) and need to configure OAuth2 from scratch, you'll need a [Slack](https://slack.com/) account and:
 
@@ -345,4 +349,12 @@ Here's the list of scopes the OAuth credential requires, which are a good starti
 
 ### Token expired <a href="#token-expired" id="token-expired"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/aLQxqepKmNn7Oz3PDTB7/" %}
+Slack offers **token rotation** that you can turn on for bot and user tokens. This makes every tokens expire after 12 hours. While this may be useful for testing, n8n credentials using tokens with this enabled will fail after expiry. If you want to use your Slack credentials in production, this feature must be **off**.
+
+To check if your Slack app has token rotation turned on, refer to the [Slack API Documentation | Token Rotation](https://api.slack.com/authentication/rotation).
+
+{% hint style="info" %}
+**If your app uses token rotation**
+
+Please note, if your Slack app uses token rotation, you can't turn it off again. You need to create a new Slack app with token rotation disabled instead.
+{% endhint %}

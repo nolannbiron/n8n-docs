@@ -43,11 +43,20 @@ Configure the Plan and Execute Agent using the following parameters.
 
 ### Prompt <a href="#prompt" id="prompt"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ss9Y6clfLTwlXMx69w6E/" %}
+Select how you want the node to construct the prompt (also known as the user's query or input from the chat).
+
+Choose from:
+
+* **Take from previous node automatically**: If you select this option, the node expects an input from a previous node called `chatInput`.
+* **Define below**: If you select this option, provide either static text or an expression for dynamic content to serve as the prompt in the **Prompt (User Message)** field.
 
 ### Require Specific Output Format <a href="#require-specific-output-format" id="require-specific-output-format"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/IsHMhvgDA3Ok5qdqnHnJ/" %}
+This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
+
+* [Auto-fixing Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
+* [Item List Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
+* [Structured Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -65,7 +74,9 @@ Available LangChain expressions:
 
 ### Tracing Metadata <a href="#tracing-metadata" id="tracing-metadata"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GAsqtB1RVGEDrT5PMMLl/" %}
+Add custom key-value metadata to tracing events for this agent. This is useful for filtering and debugging runs in tracing tools like [LangSmith](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance).
+
+Entries with empty keys or values are ignored.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

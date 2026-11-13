@@ -46,11 +46,25 @@ For a curated summary of the changes that matter most, see the [Changelog](./).
 
 Features and bug fixes for n8n before the release of 1.0.0.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+{% hint style="info" %}
+**Stable and Beta versions**
+
+n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+
+Current `stable`: 2.47.7
+Current `beta`: 2.48.4
+{% endhint %}
 
 ## How to update n8n
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/D8oFoz7X85mQuXGFYlv9/" %}
+## How to update n8n <a href="#how-to-update-n8n" id="how-to-update-n8n"></a>
+
+The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
+
+* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* Self-hosted options:
+    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
 
 ## Semantic versioning in n8n <a href="#semantic-versioning-in-n8n" id="semantic-versioning-in-n8n"></a>
 
@@ -1035,7 +1049,14 @@ This release contains new features and bug fixes. It includes improvements to th
 * Postgres Node: fix for tables containing field named JSON.
 * AWS S3 Node: fix issue with get many buckets not outputting data.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/D8oFoz7X85mQuXGFYlv9/" %}
+## How to update n8n <a href="#how-to-update-n8n" id="how-to-update-n8n"></a>
+
+The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
+
+* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* Self-hosted options:
+    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
 
 ## n8n@0.216.3 <a href="#n8n02163" id="n8n02163"></a>
 
@@ -1062,7 +1083,14 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.215.3...n8n@0.215
 
 This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/D8oFoz7X85mQuXGFYlv9/" %}
+## How to update n8n <a href="#how-to-update-n8n" id="how-to-update-n8n"></a>
+
+The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
+
+* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* Self-hosted options:
+    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
 
 ## n8n@0.215.3 <a href="#n8n02153" id="n8n02153"></a>
 
@@ -1086,7 +1114,14 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.214.4...n8n@0.214
 
 This is a bug fix release. It reverts the `isPending` check on the user entity, resolving an issue with displaying user options when user management is disabled.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/D8oFoz7X85mQuXGFYlv9/" %}
+## How to update n8n <a href="#how-to-update-n8n" id="how-to-update-n8n"></a>
+
+The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
+
+* [Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version)
+* Self-hosted options:
+    * [npm](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm)
+    * [Docker](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker)
 
 ## n8n@0.214.4 <a href="#n8n02144" id="n8n02144"></a>
 

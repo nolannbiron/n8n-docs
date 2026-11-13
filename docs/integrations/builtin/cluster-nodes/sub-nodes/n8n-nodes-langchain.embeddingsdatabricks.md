@@ -20,7 +20,15 @@ On this page, you'll find the prerequisites, setup steps, pairing rules, node pa
 Refer to [Databricks credentials](../../credentials/databricks.md) for guidance on setting up authentication. The node accepts the **Databricks OAuth2 API** credential only, with a service principal or user login. It doesn't accept a personal access token.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
+{% hint style="info" %}
+**Parameter resolution in sub-nodes**
+
+Sub-nodes behave differently to other nodes when processing multiple items using an expression.
+
+Most nodes, including root nodes, take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five `name` values, the expression `{{ $json.name }}` resolves to each name in turn.
+
+In sub-nodes, the expression always resolves to the first item. For example, given an input of five `name` values, the expression `{{ $json.name }}` always resolves to the first name.
+{% endhint %}
 
 ## Prerequisites
 
@@ -74,7 +82,7 @@ To avoid it, keep **Batch Size** at its default so a chunk goes out in one reque
 - [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
 - Migrating from the community package: refer to [Migrate from the n8n-nodes-databricks community package](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/migrate-from-the-community-package.md)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
 ## Common issues
 

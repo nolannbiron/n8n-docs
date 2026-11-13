@@ -44,7 +44,7 @@ The Tools Agent implements [LangChain's tool calling](https://docs.langchain.com
 
 Refer to [AI Agent](./README.md) for more information on the AI Agent node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/cHtfs3gewkhPbGP31rjc/" %}
+You can use this agent with the [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
 
 This agent supports the following chat models:
 
@@ -186,11 +186,20 @@ Configure the Tools Agent using the following parameters.
 
 ### Prompt <a href="#prompt" id="prompt"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ss9Y6clfLTwlXMx69w6E/" %}
+Select how you want the node to construct the prompt (also known as the user's query or input from the chat).
+
+Choose from:
+
+* **Take from previous node automatically**: If you select this option, the node expects an input from a previous node called `chatInput`.
+* **Define below**: If you select this option, provide either static text or an expression for dynamic content to serve as the prompt in the **Prompt (User Message)** field.
 
 ### Require Specific Output Format <a href="#require-specific-output-format" id="require-specific-output-format"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/IsHMhvgDA3Ok5qdqnHnJ/" %}
+This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
+
+* [Auto-fixing Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing)
+* [Item List Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist)
+* [Structured Output Parser](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured)
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -198,23 +207,31 @@ Refine the Tools Agent node's behavior using these options:
 
 ### System Message <a href="#system-message" id="system-message"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ci5NMdJiVoyT9dtdTE9w/" %}
+If you'd like to send a message to the agent before the conversation starts, enter the message you'd like to send.
+
+Use this option to guide the agent's decision-making.
 
 ### Max Iterations <a href="#max-iterations" id="max-iterations"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8UflrA3Nx8LD5bKQn8Xc/" %}
+Enter the number of times the model should run to try and generate a good answer from the user's prompt.
+
+Defaults to `10`.
 
 ### Return Intermediate Steps <a href="#return-intermediate-steps" id="return-intermediate-steps"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/skA96E8hAnMMKG7c4Lta/" %}
+Select whether to include intermediate steps the agent took in the final output (turned on) or not (turned off).
+
+This could be useful for further refining the agent's behavior based on the steps it took.
 
 ### Tracing Metadata <a href="#tracing-metadata" id="tracing-metadata"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GAsqtB1RVGEDrT5PMMLl/" %}
+Add custom key-value metadata to tracing events for this agent. This is useful for filtering and debugging runs in tracing tools like [LangSmith](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance).
+
+Entries with empty keys or values are ignored.
 
 ### Automatically Passthrough Binary Images <a href="#automatically-passthrough-binary-images" id="automatically-passthrough-binary-images"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2rKQZnqDH1pc3xlyYYdX/" %}
+Use this option to control whether binary images should be automatically passed through to the agent as image type messages (turned on) or not (turned off).
 
 ### Enable Streaming <a href="#enable-streaming" id="enable-streaming"></a>
 

@@ -18,7 +18,11 @@ If your n8n instance connects to a Git repository, you need to keep your work in
 
 This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](use-git-in-n8n.md) for an introduction to how n8n works with Git.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sVOSvjfqJPLqOGb1x77B/" %}
+{% hint style="info" %}
+**Recommendation: don't push and pull to the same n8n instance**
+
+You can push work from an instance to a branch, and pull to the same instance. n8n doesn't recommend this. To reduce the risk of merge conflicts and overwriting work, try to create a process where work goes in one direction: either to Git, or from Git, but not both.
+{% endhint %}
 
 ## Fetch other people's work <a href="#fetch-other-peoples-work" id="fetch-other-peoples-work"></a>
 
@@ -30,7 +34,21 @@ You must be an instance owner or instance admin to pull changes from git.
 
 To pull work from Git, select **Pull** <img src="../.gitbook/assets/pull-icon.png" alt="Pull icon" data-size="line"> in the main menu.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/z7oYIete6nifvfi0QZKs/" %}
+<details>
+
+<summary>View screenshot</summary>
+
+<figure markdown>
+	<img src="../../assets/pull-push-menu-closed.png" alt="">
+	<figcaption>Pull and push buttons when menu is closed</figcaption>
+</figure>
+
+<figure markdown>
+	<img src="../../assets/pull-push-menu-open.png" alt="">
+	<figcaption>Pull and push buttons when menu is open</figcaption>
+</figure>
+
+</details>
 
 n8n may display a warning about overriding local changes. Select **Pull and override** to override your local work with the content in Git.
 
@@ -80,7 +98,14 @@ If you pull changes to a published workflow, n8n unpublishes the workflow while 
 You must be an instance owner, instance admin, or project admin to push changes to git.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/jlwygEO1bOtH6HDbN3We/" %}
+To push work to Git:
+
+1. Select **Push** <img src="../../assets/push-icon.png" alt="Push icon" data-size="line"> in the main menu.
+2.  In the **Commit and push changes** modal, select which workflows and data tables you want to push. You can filter by status (new, modified, deleted) and search for items. n8n automatically pushes tags, and variable and credential stubs.
+
+    n8n pushes the current saved version, not the published version, of the workflow. You need to then separately publish versions on the remote server.
+3. Enter a commit message. This should be a one sentence description of the changes you're making.
+4. Select **Commit and Push**. n8n sends the work to Git, and displays a success message on completion.
 
 ## What gets committed <a href="#what-gets-committed" id="what-gets-committed"></a>
 

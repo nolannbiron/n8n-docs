@@ -19,9 +19,27 @@ This hosting guide shows you how to self-host n8n on Heroku. It uses:
 - [Heroku's PostgreSQL service](https://devcenter.heroku.com/categories/heroku-postgres) to host n8n's data storage.
 - A **Deploy to Heroku** button offering a one click, with minor configuration, deployment.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/YLv7Cqg70tj1alDgktSX/" %}
+{% hint style="info" %}
+**Self-hosting knowledge prerequisites**
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+Self-hosting n8n requires technical knowledge, including:
+
+* Setting up and configuring servers and containers
+* Managing application resources and scaling
+* Securing servers and applications
+* Configuring n8n
+
+n8n recommends self-hosting for expert users. Mistakes can lead to data loss, security issues, and downtime. If you aren't experienced at managing servers, n8n recommends [n8n Cloud](https://n8n.io/cloud/).
+{% endhint %}
+
+{% hint style="info" %}
+**Stable and Beta versions**
+
+n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+
+Current `stable`: 2.47.7
+Current `beta`: 2.48.4
+{% endhint %}
 
 
 ## Use the deployment template to create a Heroku project <a href="#use-the-deployment-template-to-create-a-heroku-project" id="use-the-deployment-template-to-create-a-heroku-project"></a>
@@ -80,7 +98,8 @@ The `heroku.yml` file defines the application you want to create on Heroku. It c
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
+* Learn more about [configuring](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling) n8n.
+* Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow).
 
 ## Related resources
 
