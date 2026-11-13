@@ -1,5 +1,7 @@
 ---
-description: Configure a self-hosted n8n instance, including database, security, scaling, and license settings.
+description: >-
+  Configure a self-hosted n8n instance, including database, security, scaling,
+  and license settings.
 layout:
   width: default
   title:
@@ -18,6 +20,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Configure n8n
@@ -26,7 +30,7 @@ Configure a self-hosted n8n instance, including database, security, scaling, and
 
 ## In this section
 
-* [Basic configuration](basic-configuration.md): set environment variables, and browse configuration examples.
+* [Basic configuration](basic-configuration/): set environment variables, and browse configuration examples.
 * [Choose n8n's database](choose-n8ns-database.md): SQLite and PostgreSQL configuration.
 * [External hooks](external-hooks.md): run your own code at specific points in n8n's lifecycle.
 * [Use the command line](use-the-command-line.md): the n8n CLI reference.
@@ -39,15 +43,15 @@ Configure a self-hosted n8n instance, including database, security, scaling, and
 * [Set up n8n Assistant](set-up-n8n-assistant.md): configure AI-assisted building for self-hosted n8n.
 * [Deploy n8n in canvas-only mode](deploy-n8n-in-canvas-only-mode.md): restrict an instance to the workflow canvas.
 * [Manage your license](manage-your-license.md): activate, renew, and manage your n8n license.
-* [Security](security.md): audit, harden, and restrict a self-hosted instance.
-* [Scaling](scaling.md): configure n8n for a large number of users, workflows, or executions.
+* [Security](security/): audit, harden, and restrict a self-hosted instance.
+* [Scaling](scaling/): configure n8n for a large number of users, workflows, or executions.
 
 ## Related resources
 
 * [Host n8n](../)
-* [Install options](../install-options/README.md)
-* [Keep n8n running](../keep-n8n-running/README.md)
-* [Understand the architecture](../understand-the-architecture/README.md)
-* [Deploy as an OEM integration](../deploy-as-an-oem-integration/README.md)
+* [Install options](../install-options/)
+* [Keep n8n running](../keep-n8n-running/)
+* [Understand the architecture](../understand-the-architecture/)
+* [Deploy as an OEM integration](../deploy-as-an-oem-integration/)
 * [Deploy with the AI starter kit](../deploy-with-the-ai-starter-kit.md)
 * [Compare editions](../community-edition-features.md)

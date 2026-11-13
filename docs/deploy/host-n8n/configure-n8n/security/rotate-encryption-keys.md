@@ -1,27 +1,44 @@
 ---
 title: Encryption key rotation
-description: >-
-  Enable and rotate the data encryption key that protects credentials and other
-  sensitive data on your self-hosted n8n instance.
 contentType: howto
 nodeTitle: Rotate encryption keys
 originalFilePath: hosting/securing/encryption-key-rotation.md
-originalUrl: 'https://docs.n8n.io/hosting/securing/encryption-key-rotation'
+originalUrl: https://docs.n8n.io/hosting/securing/encryption-key-rotation
 url: >-
   https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/rotate-encryption-keys
+description: >-
+  Enable and rotate the data encryption key that protects credentials and other
+  sensitive data on your self-hosted n8n instance.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Encryption key rotation <a href="#encryption-key-rotation" id="encryption-key-rotation"></a>
+# Rotate encryption keys
 
 {% hint style="info" %}
 **Feature availability**
 
 Encryption key rotation is available on:
 
-- **Self-hosted:** All editions
+* **Self-hosted:** All editions
 
 It isn't available on n8n Cloud.
 
@@ -46,7 +63,7 @@ When you rotate, n8n generates a new data encryption key and uses it for all fut
 {% hint style="warning" %}
 **Take a full database backup first**
 
-Once n8n writes data with a data encryption key, older n8n versions can't read it. Back up your database before you turn the feature on, and before you upgrade to n8n 3.0, which turns it on for you. See [Backwards compatibility and rollback](#backwards-compatibility-and-rollback) for details.
+Once n8n writes data with a data encryption key, older n8n versions can't read it. Back up your database before you turn the feature on, and before you upgrade to n8n 3.0, which turns it on for you. See [Backwards compatibility and rollback](rotate-encryption-keys.md#backwards-compatibility-and-rollback) for details.
 {% endhint %}
 
 You also need to make sure that:
@@ -60,12 +77,11 @@ From n8n 3.0, encryption key rotation is on by default. You don't need to set an
 
 On n8n 2.x, turn the feature on yourself:
 
-1. Set the following environment variable on **all** n8n instances, both main and workers:
+1.  Set the following environment variable on **all** n8n instances, both main and workers:
 
     ```sh
     N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION=true
     ```
-
 2. Restart all instances. On startup, n8n automatically generates the initial data encryption key and stores it, encrypted, in your database.
 
 To confirm the feature is active, go to **Settings** > **Data Encryption Keys**. You should see the active key listed.
@@ -118,7 +134,7 @@ There's no automated tool to convert data encrypted in the new format back to th
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-* [Security](../security.md): audit, harden, and restrict a self-hosted instance.
+* [Security](./): audit, harden, and restrict a self-hosted instance.
 * [Set a custom encryption key](../basic-configuration/configuration-examples/set-a-custom-encryption-key.md): set the instance-level `N8N_ENCRYPTION_KEY` value.
 * [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): reference for `N8N_ENCRYPTION_KEY` and `N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION`.
 * [Configuring queue mode](../scaling/enable-queue-mode.md): make sure all workers share the same instance encryption key.

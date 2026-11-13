@@ -1,17 +1,34 @@
 ---
 title: License key
-description: How to activate your license key.
 contentType: howto
 nodeTitle: Manage your license
 originalFilePath: license-key.md
-originalUrl: 'https://docs.n8n.io/license-key'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/manage-your-license'
+originalUrl: https://docs.n8n.io/license-key
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/manage-your-license
+description: How to activate your license key.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# License Key <a href="#license-key" id="license-key"></a>
+# Manage your license
 
 To enable certain licensed features, you must first activate your license. You can do this either through the UI or by setting environment variables.
 
@@ -20,16 +37,16 @@ To enable certain licensed features, you must first activate your license. You c
 In your n8n instance:
 
 1. Log in as **Admin** or **Owner**.
-1. Select **Settings** > **Plan & usage**.
-1. Select **Enter activation key**.
-1. Paste in your license key.
-1. Select **Activate**.
+2. Select **Settings** > **Plan & usage**.
+3. Select **Enter activation key**.
+4. Paste in your license key.
+5. Select **Activate**.
 
 ## Add a license key using an environment variable <a href="#add-a-license-key-using-an-environment-variables" id="add-a-license-key-using-an-environment-variables"></a>
 
 In your n8n configuration, set `N8N_LICENSE_ACTIVATION_KEY` to your license key. If the instance already has an activated license, this variable will have no effect.
 
-Refer to [Environment variables](basic-configuration.md) to learn more about configuring n8n.
+Refer to [Environment variables](basic-configuration/) to learn more about configuring n8n.
 
 ### Allowlist the license server IP addresses <a href="#allowlist-the-license-server-ip-addresses" id="allowlist-the-license-server-ip-addresses"></a>
 
@@ -46,8 +63,6 @@ N8N_LICENSE_CERT=<base64-encoded-license-string>
 ```
 
 Set either `N8N_LICENSE_CERT` or `N8N_LICENSE_ACTIVATION_KEY`, never both.
-
-
 
 ## Related resources
 

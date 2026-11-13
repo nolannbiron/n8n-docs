@@ -1,17 +1,34 @@
 ---
 title: Hardening task runners
-description: Harden task runners for better isolation for your self-hosted n8n instance.
 contentType: howto
 nodeTitle: Harden task runners
 originalFilePath: hosting/securing/hardening-task-runners.md
-originalUrl: 'https://docs.n8n.io/hosting/securing/hardening-task-runners'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/harden-task-runners'
+originalUrl: https://docs.n8n.io/hosting/securing/hardening-task-runners
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/harden-task-runners
+description: Harden task runners for better isolation for your self-hosted n8n instance.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Hardening task runners <a href="#hardening-task-runners" id="hardening-task-runners"></a>
+# Harden task runners
 
 [Task runners](../set-up-task-runners.md) are responsible for executing code from the [Code node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code). While Code node executions are secure, you can follow these recommendations to further harden your task runners.
 
@@ -49,4 +66,4 @@ This denies and logs any attempt to read, write, or link to per-process `environ
 
 ## Related resources
 
-* [Security](../security.md)
+* [Security](./)

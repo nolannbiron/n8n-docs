@@ -2,15 +2,32 @@
 contentType: tutorial
 nodeTitle: Deploy to OpenShift Local (CRC)
 originalFilePath: hosting/installation/server-setups/openshift-crc.md
-originalUrl: 'https://docs.n8n.io/hosting/installation/server-setups/openshift-crc'
+originalUrl: https://docs.n8n.io/hosting/installation/server-setups/openshift-crc
 url: >-
   https://docs.n8n.io/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Hosting n8n on OpenShift Local (CRC) <a href="#hosting-n8n-on-openshift-local-crc" id="hosting-n8n-on-openshift-local-crc"></a>
+# Deploy to OpenShift Local (CRC)
 
 This guide walks you through deploying n8n on OpenShift Local (CRC), Red Hat's tool for running a local OpenShift cluster. It mirrors AWS/EKS deployment, but runs entirely on your local machine. It's designed for testing n8n in an OpenShift environment locally, without cloud costs.
 
@@ -20,28 +37,28 @@ You will need a machine with significant resources available, given how many res
 
 OpenShift is built on Kubernetes but uses different terminology and has stricter security defaults. If you are familiar with standard Kubernetes, or with a guide that targets a managed Kubernetes service such as EKS, the table below maps the equivalent concepts so you know what to expect.
 
-| Standard Kubernetes / EKS | OpenShift Local (CRC) |
-| --- | --- |
-| `kubectl` | `oc` (OpenShift CLI; also understands `kubectl` commands) |
-| Namespace | Project (same concept, different command) |
-| Ingress / LoadBalancer | Route (built into OpenShift, no controller needed) |
-| EBS StorageClass (gp3) | CRC built-in storage provisioner (no setup needed) |
-| RDS PostgreSQL | In-cluster PostgreSQL via Helm (Bitnami) |
-| ElastiCache Redis | In-cluster Redis via Helm (Bitnami) |
-| AWS S3 | MinIO in-cluster (S3-compatible) |
-| Pod Identity / IRSA | Access keys via Kubernetes Secret |
-| AWS Load Balancer Controller | Not needed (Routes are built-in) |
-| OIDC / IAM | Not needed |
-| ~$135–400/month | Free (runs on your machine) |
+| Standard Kubernetes / EKS    | OpenShift Local (CRC)                                     |
+| ---------------------------- | --------------------------------------------------------- |
+| `kubectl`                    | `oc` (OpenShift CLI; also understands `kubectl` commands) |
+| Namespace                    | Project (same concept, different command)                 |
+| Ingress / LoadBalancer       | Route (built into OpenShift, no controller needed)        |
+| EBS StorageClass (gp3)       | CRC built-in storage provisioner (no setup needed)        |
+| RDS PostgreSQL               | In-cluster PostgreSQL via Helm (Bitnami)                  |
+| ElastiCache Redis            | In-cluster Redis via Helm (Bitnami)                       |
+| AWS S3                       | MinIO in-cluster (S3-compatible)                          |
+| Pod Identity / IRSA          | Access keys via Kubernetes Secret                         |
+| AWS Load Balancer Controller | Not needed (Routes are built-in)                          |
+| OIDC / IAM                   | Not needed                                                |
+| \~$135–400/month             | Free (runs on your machine)                               |
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Before starting, confirm your machine has:
 
-- **CPU**: 4 or more physical cores (not just threads) with virtualization support
-- **RAM**: 32+ GB free minimum (CRC reserves 9 GB for its VM)
-- **Disk**: 100 GB free
-- **OS**: Ubuntu (22.04 LTS or newer)
+* **CPU**: 4 or more physical cores (not just threads) with virtualization support
+* **RAM**: 32+ GB free minimum (CRC reserves 9 GB for its VM)
+* **Disk**: 100 GB free
+* **OS**: Ubuntu (22.04 LTS or newer)
 
 ## Prepare Ubuntu <a href="#prepare-ubuntu" id="prepare-ubuntu"></a>
 
@@ -73,8 +90,8 @@ CRC runs a virtual machine. Your CPU must support hardware virtualization:
 egrep -c '(vmx|svm)' /proc/cpuinfo
 ```
 
-- **Output `0`**: Virtualization is disabled. Enter your BIOS/UEFI settings and enable VT-x (Intel) or AMD-V (AMD), then reboot and try again.
-- **Output `1` or higher**: You are good to continue.
+* **Output `0`**: Virtualization is disabled. Enter your BIOS/UEFI settings and enable VT-x (Intel) or AMD-V (AMD), then reboot and try again.
+* **Output `1` or higher**: You are good to continue.
 
 ### Install KVM and libvirt <a href="#install-kvm-and-libvirt" id="install-kvm-and-libvirt"></a>
 
@@ -222,7 +239,7 @@ These variables only last for the current terminal session. Re-run this line whe
 
 ### Run CRC setup <a href="#run-crc-setup" id="run-crc-setup"></a>
 
-You only need to run this once. It configures KVM networking, checks system requirements, and downloads the CRC bundle (~2.5 GB):
+You only need to run this once. It configures KVM networking, checks system requirements, and downloads the CRC bundle (\~2.5 GB):
 
 ```shell
 crc setup
@@ -316,7 +333,7 @@ oc version
 oc login -u kubeadmin -p <your-kubeadmin-password> https://api.crc.testing:6443
 ```
 
-Replace `<your-kubeadmin-password>` with the password printed when you [configured CRC memory and started the cluster](#configure-crc-memory-and-start-the-cluster).
+Replace `<your-kubeadmin-password>` with the password printed when you [configured CRC memory and started the cluster](deploy-to-openshift-local-crc.md#configure-crc-memory-and-start-the-cluster).
 
 Verify you are logged in:
 
@@ -501,11 +518,11 @@ Multi-instance queue mode runs multiple n8n pods with a shared database, message
 
 Instead of AWS managed services, this guide uses in-cluster equivalents that mirror what you would find in an on-premises or customer OpenShift environment:
 
-| AWS Service | Local Equivalent |
-| --- | --- |
-| RDS PostgreSQL | PostgreSQL (Bitnami Helm chart) |
-| ElastiCache Redis | Redis (Bitnami Helm chart) |
-| S3 | MinIO (S3-compatible, Bitnami Helm chart) |
+| AWS Service       | Local Equivalent                          |
+| ----------------- | ----------------------------------------- |
+| RDS PostgreSQL    | PostgreSQL (Bitnami Helm chart)           |
+| ElastiCache Redis | Redis (Bitnami Helm chart)                |
+| S3                | MinIO (S3-compatible, Bitnami Helm chart) |
 
 ### Install in-cluster services <a href="#install-in-cluster-services" id="install-in-cluster-services"></a>
 
@@ -548,7 +565,7 @@ Save the endpoint, as it's fixed for in-cluster services:
 postgresql.YOUR_NAMESPACE.svc.cluster.local
 ```
 
-Replace `YOUR_NAMESPACE` with your actual `$NAMESPACE` value (e.g. `n8n-20260306`).
+Replace `YOUR_NAMESPACE` with your actual `$NAMESPACE` value (e.g. `n8n-20260306`).
 
 #### Install Redis <a href="#install-redis" id="install-redis"></a>
 
@@ -591,10 +608,12 @@ oc port-forward svc/minio 9001:9001 -n $NAMESPACE
 Leave this running, then open your browser to `http://localhost:9001`.
 
 Log in with:
-- **Username:** `minioadmin`
-- **Password:** `MinioStrongPassword123`
+
+* **Username:** `minioadmin`
+* **Password:** `MinioStrongPassword123`
 
 In the console:
+
 1. Click **Buckets** in the left sidebar → **Create Bucket**
 2. **Bucket Name:** `n8n-data`
 3. Click **Create Bucket**
@@ -834,7 +853,6 @@ Open your browser to the URL printed above.
 
 **Multi-instance deployment complete.**
 
-
 ## Updating n8n <a href="#updating-n8n" id="updating-n8n"></a>
 
 To change configuration or upgrade the chart version, pull and re-patch the new chart version, then upgrade:
@@ -889,11 +907,9 @@ sudo systemctl start libvirtd
 
 Then re-run `crc setup`.
 
-
 ### `crc start` fails with “insufficient memory” <a href="#crc-start-fails-with-insufficient-memory" id="crc-start-fails-with-insufficient-memory"></a>
 
-CRC requires at least 9 GB of free RAM. Close other applications and try again. If you [followed instructions for configuring CRC memory](#configure-crc-memory-and-start-the-cluster), CRC is configured to use 14 GB.
-
+CRC requires at least 9 GB of free RAM. Close other applications and try again. If you [followed instructions for configuring CRC memory](deploy-to-openshift-local-crc.md#configure-crc-memory-and-start-the-cluster), CRC is configured to use 14 GB.
 
 ### n8n pod stuck in `Pending` or never created SCC error <a href="#n8n-pod-stuck-in-pending-or-never-created-scc-error" id="n8n-pod-stuck-in-pending-or-never-created-scc-error"></a>
 
@@ -984,7 +1000,6 @@ resources:
 
 Then upgrade: `helm upgrade n8n ~/n8n/ -n $NAMESPACE -f n8n-standalone-values.yaml`
 
-
 ### DNS not resolving `.apps-crc.testing` or `api.crc.testing` <a href="#dns-not-resolving-apps-crctesting-or-apicrctesting" id="dns-not-resolving-apps-crctesting-or-apicrctesting"></a>
 
 On Ubuntu, CRC configures DNS automatically. If it fails, restart NetworkManager:
@@ -1010,13 +1025,11 @@ EOF
 When you expose Routes in the multi-instance section, new `*.apps-crc.testing` subdomains are created. Add them to `/etc/hosts` pointing to `127.0.0.1` if your browser can’t reach them.
 {% endhint %}
 
-
 ### n8n pod crashes with `EACCES: permission denied` writing to `/home/node/.n8n/` <a href="#n8n-pod-crashes-with-eacces-permission-denied-writing-to-homenoden8n" id="n8n-pod-crashes-with-eacces-permission-denied-writing-to-homenoden8n"></a>
 
 This means the pod is running as a random OpenShift-assigned UID instead of UID 1000 (the `node` user the n8n image expects). It happens when `securityContext.enabled: false` is set in values without `runAsUser: 1000` and `fsGroup: 1000`, OpenShift assigns a random UID that can’t write to the PVC.
 
 **Fix:** Ensure `securityContext.enabled: true` is set in your values file, and that the chart has been patched to remove `seccompProfile` (see the SCC error section above). Both are required together.
-
 
 ### View pod logs <a href="#view-pod-logs" id="view-pod-logs"></a>
 
@@ -1063,18 +1076,18 @@ Log in with `kubeadmin` / your password to see a graphical view of everything ru
 
 ### Things to save <a href="#things-to-save" id="things-to-save"></a>
 
-| Item | Why it matters |
-| --- | --- |
-| `kubeadmin` password | Log in to the cluster |
-| n8n encryption key | Lose this = all stored credentials unreadable |
-| `n8n-standalone-values.yaml` | Required for `helm upgrade` |
-| `n8n-multimain-ocp-values.yaml` | Required for `helm upgrade` |
-| MinIO root password | Access the MinIO console |
-| PostgreSQL password | Database access |
+| Item                            | Why it matters                                |
+| ------------------------------- | --------------------------------------------- |
+| `kubeadmin` password            | Log in to the cluster                         |
+| n8n encryption key              | Lose this = all stored credentials unreadable |
+| `n8n-standalone-values.yaml`    | Required for `helm upgrade`                   |
+| `n8n-multimain-ocp-values.yaml` | Required for `helm upgrade`                   |
+| MinIO root password             | Access the MinIO console                      |
+| PostgreSQL password             | Database access                               |
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-* Learn more about [configuring](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling) n8n.
+* Learn more about [configuring](../../configure-n8n/basic-configuration/use-environment-variables/) and [scaling](../../configure-n8n/scaling/) n8n.
 * Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow).
 
 ## Related resources

@@ -1,27 +1,44 @@
 ---
-description: >-
-  Manage instance-wide security policies including MFA enforcement and personal
-  space controls.
 contentType: howto
 nodeTitle: Manage security policies
 originalFilePath: security-settings.md
-originalUrl: 'https://docs.n8n.io/security-settings'
+originalUrl: https://docs.n8n.io/security-settings
 url: >-
   https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/manage-security-policies
+description: >-
+  Manage instance-wide security policies including MFA enforcement and personal
+  space controls.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Security settings <a href="#security-settings" id="security-settings"></a>
+# Manage security policies
 
 {% hint style="info" %}
 **Feature availability**
 
 Security settings are available on:
 
-- **n8n Cloud:** Enterprise
-- **Self-hosted:** Business, Enterprise
+* **n8n Cloud:** Enterprise
+* **Self-hosted:** Business, Enterprise
 
 Some settings require specific license features. Settings that aren't available on your plan display an **Upgrade** badge.
 {% endhint %}
@@ -47,8 +64,8 @@ To enforce 2FA:
 
 When you enable this setting:
 
-- All users must set up 2FA before they can continue using the instance.
-- Users who haven't configured 2FA yet are prompted to do so on their next sign-in.
+* All users must set up 2FA before they can continue using the instance.
+* Users who haven't configured 2FA yet are prompted to do so on their next sign-in.
 
 To stop enforcing 2FA, toggle the switch off. Users who already set up 2FA keep it enabled but new users are no longer required to configure it.
 
@@ -70,8 +87,8 @@ To manage sharing:
 
 When you disable sharing:
 
-- Existing shares remain in place. The setting only affects new sharing actions.
-- The number of currently shared workflows and credentials is displayed below the toggle.
+* Existing shares remain in place. The setting only affects new sharing actions.
+* The number of currently shared workflows and credentials is displayed below the toggle.
 
 ### Publishing workflows <a href="#publishing-workflows" id="publishing-workflows"></a>
 
@@ -85,8 +102,8 @@ To manage publishing:
 
 When you disable publishing:
 
-- Currently published workflows remain published. The setting only affects new publish actions.
-- The number of currently published personal workflows is displayed below the toggle.
+* Currently published workflows remain published. The setting only affects new publish actions.
+* The number of currently published personal workflows is displayed below the toggle.
 
 ## Workflow reviews <a href="#workflow-reviews" id="workflow-reviews"></a>
 
@@ -101,8 +118,8 @@ Workflow reviews are in Preview and may change before general availability. Avoi
 
 Workflow reviews are available on:
 
-- **n8n Cloud:** Enterprise
-- **Self-hosted:** Enterprise
+* **n8n Cloud:** Enterprise
+* **Self-hosted:** Enterprise
 
 Workflow reviews are available from n8n 2.37.0.
 {% endhint %}
@@ -125,8 +142,8 @@ You can enforce [execution data redaction](redact-execution-data.md) for all wor
 
 Data redaction enforcement is available on:
 
-- **n8n Cloud:** Enterprise
-- **Self-hosted:** Enterprise
+* **n8n Cloud:** Enterprise
+* **Self-hosted:** Enterprise
 
 Available from n8n 2.26.0.
 {% endhint %}
@@ -136,15 +153,15 @@ To enforce data redaction:
 1. Navigate to **Settings** > **Policies**.
 2. In the **Data redaction** section, toggle **Enforce data redaction** on.
 3. Under **Redact executions**, select the enforcement scope:
-	- **Production executions (Recommended)**: n8n redacts data from production executions in all workflows.
-	- **Manual and production executions**: n8n redacts data from both manual and production executions in all workflows.
+   * **Production executions (Recommended)**: n8n redacts data from production executions in all workflows.
+   * **Manual and production executions**: n8n redacts data from both manual and production executions in all workflows.
 4. Confirm your choice in the dialog.
 
 When you enable enforcement:
 
-- n8n redacts execution data for all workflows within the selected scope, including workflows that don't have redaction enabled in their own settings.
-- Users can't set workflow-level redaction settings weaker than the enforced scope. Workflows can still opt into stricter redaction, for example redacting manual executions when only production enforcement is active.
-- New workflows start with the enforced scope as their redaction policy.
+* n8n redacts execution data for all workflows within the selected scope, including workflows that don't have redaction enabled in their own settings.
+* Users can't set workflow-level redaction settings weaker than the enforced scope. Workflows can still opt into stricter redaction, for example redacting manual executions when only production enforcement is active.
+* New workflows start with the enforced scope as their redaction policy.
 
 Redaction enforcement requires an Enterprise license with the data redaction feature. For details on what redaction covers, revealing data, and permissions, refer to [Execution data redaction](redact-execution-data.md).
 
@@ -154,13 +171,13 @@ You can also manage security policy settings from environment variables instead 
 
 When `N8N_SECURITY_POLICY_MANAGED_BY_ENV` is `true`, the **Enforce two-factor authentication** and **Personal Space** toggles on this page become read-only.
 
-| Variable | Type | Default | Description |
-| :------- | :--- | :------ | :---------- |
-| `N8N_SECURITY_POLICY_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage the security policy from environment variables. When `true`, n8n applies the security policy variables on every startup and locks the matching UI controls. |
-| `N8N_MFA_ENFORCED_ENABLED` | Boolean | `false` | Whether to enforce two-factor authentication for all users (`true`) or not (`false`). |
-| `N8N_PERSONAL_SPACE_PUBLISHING_ENABLED` | Boolean | `true` | Whether users can publish from their personal space (`true`) or not (`false`). |
-| `N8N_PERSONAL_SPACE_SHARING_ENABLED` | Boolean | `true` | Whether users can share resources from their personal space (`true`) or not (`false`). |
+| Variable                                | Type    | Default | Description                                                                                                                                                                         |
+| --------------------------------------- | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `N8N_SECURITY_POLICY_MANAGED_BY_ENV`    | Boolean | `false` | Set to `true` to manage the security policy from environment variables. When `true`, n8n applies the security policy variables on every startup and locks the matching UI controls. |
+| `N8N_MFA_ENFORCED_ENABLED`              | Boolean | `false` | Whether to enforce two-factor authentication for all users (`true`) or not (`false`).                                                                                               |
+| `N8N_PERSONAL_SPACE_PUBLISHING_ENABLED` | Boolean | `true`  | Whether users can publish from their personal space (`true`) or not (`false`).                                                                                                      |
+| `N8N_PERSONAL_SPACE_SHARING_ENABLED`    | Boolean | `true`  | Whether users can share resources from their personal space (`true`) or not (`false`).                                                                                              |
 
 ## Related resources
 
-* [Security](../security.md)
+* [Security](./)

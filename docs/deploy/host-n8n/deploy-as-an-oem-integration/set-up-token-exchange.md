@@ -1,25 +1,44 @@
 ---
 title: Token exchange for embedding partners
-description: Use OAuth 2.0 Token Exchange to authenticate users and act on their behalf inside an embedded n8n instance, through iframe SSO and delegated API access.
 contentType: howto
+status: preview
+description: >-
+  Use OAuth 2.0 Token Exchange to authenticate users and act on their behalf
+  inside an embedded n8n instance, through iframe SSO and delegated API access.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
-status: preview
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 tags:
   - tag: preview
     primary: true
 ---
 
-# Token exchange for embedding partners
+# Set up token exchange
 
 {% hint style="info" %}
 **Feature availability**
 
 Token exchange is available on:
 
-- **n8n Cloud:** Enterprise
-- **Self-hosted:** Enterprise
+* **n8n Cloud:** Enterprise
+* **Self-hosted:** Enterprise
 
 Enabled with the `N8N_ENV_FEAT_TOKEN_EXCHANGE` environment variable set to `true`. Self-hosted instances can set it directly. On n8n Cloud, contact n8n support to request it.
 
@@ -45,7 +64,7 @@ You need:
 
 * An Enterprise license with the token exchange feature enabled.
 * The preview feature flag set on your instance: `N8N_ENV_FEAT_TOKEN_EXCHANGE=true`.
-* An RSA or EC key pair, or a JWKS endpoint that your IdP already publishes. See [Generate a key pair](#generate-a-key-pair).
+* An RSA or EC key pair, or a JWKS endpoint that your IdP already publishes. See [Generate a key pair](set-up-token-exchange.md#generate-a-key-pair).
 * An n8n instance served over HTTPS. Browsers reject the `SameSite=None; Secure` session cookie over plain HTTP, so the iframe SSO flow silently fails without it. If you run n8n behind a TLS-terminating proxy, make sure the proxy sets the `X-Forwarded-Proto` header.
 
 ## Generate a key pair
@@ -76,7 +95,7 @@ openssl ec -in private.pem -pubout -out public.pem
 
 Keep `private.pem` secret in your backend. You register the contents of `public.pem` in n8n's trusted keys configuration.
 
-If your IdP already publishes a JWKS endpoint, as most OAuth 2.0 and OIDC providers do, you can skip key generation and point n8n at the JWKS URL instead. See [JWKS key source](#jwks-key-source).
+If your IdP already publishes a JWKS endpoint, as most OAuth 2.0 and OIDC providers do, you can skip key generation and point n8n at the JWKS URL instead. See [JWKS key source](set-up-token-exchange.md#jwks-key-source).
 
 ## Environment variables
 
@@ -107,7 +126,7 @@ The embed login endpoint doesn't require `N8N_TOKEN_EXCHANGE_ENABLED`, and the t
 {% hint style="info" %}
 **File-based configuration**
 
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](../configure-n8n/basic-configuration.md#keeping-sensitive-data-in-separate-files) for more details.
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](../configure-n8n/basic-configuration/#keeping-sensitive-data-in-separate-files) for more details.
 {% endhint %}
 
 For example, for large or multi-line JSON, store the trusted keys in a file and set `N8N_TOKEN_EXCHANGE_TRUSTED_KEYS_FILE=/path/to/trusted-keys.json`.
@@ -116,14 +135,14 @@ For example, for large or multi-line JSON, store the trusted keys in a file and 
 
 These have sensible defaults. You don't usually need to change them:
 
-| Variable | Default | Description |
-| :------- | :------ | :---------- |
-| `N8N_TOKEN_EXCHANGE_MAX_TOKEN_TTL` | `900` (15 minutes) | Maximum lifetime in seconds for issued n8n tokens. The actual expiry is the minimum of this value, the subject token's remaining lifetime, and the actor token's remaining lifetime (if present). |
-| `N8N_TOKEN_EXCHANGE_KEY_REFRESH_INTERVAL_SECONDS` | `300` (5 minutes) | Fallback interval for refreshing JWKS keys when the endpoint doesn't provide a cache lifetime. Every instance refreshes keys at startup; in multi-main deployments, only the leader instance refreshes them periodically. |
-| `N8N_TOKEN_EXCHANGE_JTI_CLEANUP_INTERVAL_SECONDS` | `60` (1 minute) | How often n8n cleans up expired replay-protection records. |
-| `N8N_TOKEN_EXCHANGE_JTI_CLEANUP_BATCH_SIZE` | `1000` | Maximum expired records deleted per cleanup run. |
-| `N8N_TOKEN_EXCHANGE_EMBED_LOGIN_PER_MINUTE` | `20` | Rate limit for the embed login endpoint (requests per IP per minute). |
-| `N8N_TOKEN_EXCHANGE_TOKEN_EXCHANGE_PER_MINUTE` | `20` | Rate limit for the token exchange endpoint (requests per IP per minute). |
+| Variable                                          | Default            | Description                                                                                                                                                                                                               |
+| ------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `N8N_TOKEN_EXCHANGE_MAX_TOKEN_TTL`                | `900` (15 minutes) | Maximum lifetime in seconds for issued n8n tokens. The actual expiry is the minimum of this value, the subject token's remaining lifetime, and the actor token's remaining lifetime (if present).                         |
+| `N8N_TOKEN_EXCHANGE_KEY_REFRESH_INTERVAL_SECONDS` | `300` (5 minutes)  | Fallback interval for refreshing JWKS keys when the endpoint doesn't provide a cache lifetime. Every instance refreshes keys at startup; in multi-main deployments, only the leader instance refreshes them periodically. |
+| `N8N_TOKEN_EXCHANGE_JTI_CLEANUP_INTERVAL_SECONDS` | `60` (1 minute)    | How often n8n cleans up expired replay-protection records.                                                                                                                                                                |
+| `N8N_TOKEN_EXCHANGE_JTI_CLEANUP_BATCH_SIZE`       | `1000`             | Maximum expired records deleted per cleanup run.                                                                                                                                                                          |
+| `N8N_TOKEN_EXCHANGE_EMBED_LOGIN_PER_MINUTE`       | `20`               | Rate limit for the embed login endpoint (requests per IP per minute).                                                                                                                                                     |
+| `N8N_TOKEN_EXCHANGE_TOKEN_EXCHANGE_PER_MINUTE`    | `20`               | Rate limit for the token exchange endpoint (requests per IP per minute).                                                                                                                                                  |
 
 ## Configure trusted keys
 
@@ -147,15 +166,15 @@ Use this when you generated your own key pair and want to embed the public key d
 }
 ```
 
-| Field | Required | Description |
-| :---- | :------- | :---------- |
-| `type` | Yes | Must be `"static"`. |
-| `kid` | Yes | Key ID. Must match the `kid` header in incoming JWTs. |
-| `algorithms` | Yes | Array of allowed signing algorithms, for example `["RS256"]`. See [Supported algorithms](#supported-algorithms). |
-| `key` | Yes | PEM-encoded public key. Use `\n` for line breaks in JSON. |
-| `issuer` | Yes | Expected `iss` claim in incoming JWTs. |
-| `expectedAudience` | No | If set, the JWT `aud` claim must match this value. If unset, n8n skips audience verification entirely. Always set it in production, using an instance-specific value such as your n8n base URL. |
-| `allowedRoles` | No | If set, only these roles can be assigned through the `role` claim. Only include `global:admin` if you deliberately want the integration to manage admin users. See [Role handling](#role-handling). |
+| Field              | Required | Description                                                                                                                                                                                                                 |
+| ------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`             | Yes      | Must be `"static"`.                                                                                                                                                                                                         |
+| `kid`              | Yes      | Key ID. Must match the `kid` header in incoming JWTs.                                                                                                                                                                       |
+| `algorithms`       | Yes      | Array of allowed signing algorithms, for example `["RS256"]`. See [Supported algorithms](set-up-token-exchange.md#supported-algorithms).                                                                                    |
+| `key`              | Yes      | PEM-encoded public key. Use `\n` for line breaks in JSON.                                                                                                                                                                   |
+| `issuer`           | Yes      | Expected `iss` claim in incoming JWTs.                                                                                                                                                                                      |
+| `expectedAudience` | No       | If set, the JWT `aud` claim must match this value. If unset, n8n skips audience verification entirely. Always set it in production, using an instance-specific value such as your n8n base URL.                             |
+| `allowedRoles`     | No       | If set, only these roles can be assigned through the `role` claim. Only include `global:admin` if you deliberately want the integration to manage admin users. See [Role handling](set-up-token-exchange.md#role-handling). |
 
 ### JWKS key source
 
@@ -171,14 +190,14 @@ Use this when your IdP publishes a JWKS endpoint.
 }
 ```
 
-| Field | Required | Description |
-| :---- | :------- | :---------- |
-| `type` | Yes | Must be `"jwks"`. |
-| `url` | Yes | URL of the JWKS endpoint. |
-| `issuer` | Yes | Expected `iss` claim in incoming JWTs. |
-| `expectedAudience` | No | If set, the JWT `aud` claim must match this value. If unset, n8n skips audience verification entirely. Always set it in production, using an instance-specific value such as your n8n base URL. |
-| `allowedRoles` | No | If set, only these roles can be assigned through the `role` claim. See [Role handling](#role-handling). |
-| `cacheTtlSeconds` | No | Fallback cache duration when the JWKS endpoint doesn't send a `Cache-Control: max-age` header. When the header is present, it takes precedence. Defaults to 3600 seconds. The effective value is bounded between 60 and 86400 seconds. |
+| Field              | Required | Description                                                                                                                                                                                                                            |
+| ------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`             | Yes      | Must be `"jwks"`.                                                                                                                                                                                                                      |
+| `url`              | Yes      | URL of the JWKS endpoint.                                                                                                                                                                                                              |
+| `issuer`           | Yes      | Expected `iss` claim in incoming JWTs.                                                                                                                                                                                                 |
+| `expectedAudience` | No       | If set, the JWT `aud` claim must match this value. If unset, n8n skips audience verification entirely. Always set it in production, using an instance-specific value such as your n8n base URL.                                        |
+| `allowedRoles`     | No       | If set, only these roles can be assigned through the `role` claim. See [Role handling](set-up-token-exchange.md#role-handling).                                                                                                        |
+| `cacheTtlSeconds`  | No       | Fallback cache duration when the JWKS endpoint doesn't send a `Cache-Control: max-age` header. When the header is present, it takes precedence. Defaults to 3600 seconds. The effective value is bounded between 60 and 86400 seconds. |
 
 ### Full example
 
@@ -206,12 +225,12 @@ Use this when your IdP publishes a JWKS endpoint.
 
 n8n accepts only asymmetric algorithms. It excludes HMAC and `none`.
 
-| Family | Algorithms |
-| :----- | :--------- |
-| RSA | `RS256`, `RS384`, `RS512` |
-| RSA-PSS | `PS256`, `PS384`, `PS512` |
+| Family         | Algorithms                |
+| -------------- | ------------------------- |
+| RSA            | `RS256`, `RS384`, `RS512` |
+| RSA-PSS        | `PS256`, `PS384`, `PS512` |
 | Elliptic Curve | `ES256`, `ES384`, `ES512` |
-| Edwards Curve | `EdDSA` |
+| Edwards Curve  | `EdDSA`                   |
 
 For static keys, the algorithms in the config must all belong to the same family and match the key type. For JWKS keys, n8n infers the algorithms from the JWK `alg` and `kty` or `crv` fields automatically.
 
@@ -221,24 +240,24 @@ For static keys, the algorithms in the config must all belong to the same family
 
 Your IdP tokens must include these claims for n8n to accept them:
 
-| Claim | Type | Description |
-| :---- | :--- | :---------- |
-| `sub` | string | Subject identifier. The unique user ID at the IdP. |
-| `iss` | string (URL) | Issuer. Must match the `issuer` in your trusted key config. |
+| Claim | Type                   | Description                                                                                                              |
+| ----- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `sub` | string                 | Subject identifier. The unique user ID at the IdP.                                                                       |
+| `iss` | string (URL)           | Issuer. Must match the `issuer` in your trusted key config.                                                              |
 | `aud` | string or string array | Audience. Must be present. n8n validates the value only when `expectedAudience` is configured on the trusted key source. |
-| `iat` | number | Issued-at timestamp (Unix epoch seconds). |
-| `exp` | number | Expiration timestamp (Unix epoch seconds). |
-| `jti` | string | Unique token ID. n8n accepts each value only once (replay protection). |
+| `iat` | number                 | Issued-at timestamp (Unix epoch seconds).                                                                                |
+| `exp` | number                 | Expiration timestamp (Unix epoch seconds).                                                                               |
+| `jti` | string                 | Unique token ID. n8n accepts each value only once (replay protection).                                                   |
 
 ### Optional claims
 
-| Claim | Type | Description |
-| :---- | :--- | :---------- |
-| `email` | string (valid email) | The user's email, used to match existing n8n users. Required for JIT provisioning, the first login of a user n8n doesn't know yet. Always send it unless you're certain every user already exists. |
-| `given_name` | string | First name, synced to the n8n user profile. |
-| `family_name` | string | Last name, synced to the n8n user profile. |
-| `role` | string | n8n role to assign, for example `global:member` or `global:admin`. See [User provisioning](#user-provisioning). |
-| `nbf` | number | Not-before timestamp. |
+| Claim         | Type                 | Description                                                                                                                                                                                        |
+| ------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `email`       | string (valid email) | The user's email, used to match existing n8n users. Required for JIT provisioning, the first login of a user n8n doesn't know yet. Always send it unless you're certain every user already exists. |
+| `given_name`  | string               | First name, synced to the n8n user profile.                                                                                                                                                        |
+| `family_name` | string               | Last name, synced to the n8n user profile.                                                                                                                                                         |
+| `role`        | string               | n8n role to assign, for example `global:member` or `global:admin`. See [User provisioning](set-up-token-exchange.md#user-provisioning).                                                            |
+| `nbf`         | number               | Not-before timestamp.                                                                                                                                                                              |
 
 ## Iframe SSO flow
 
@@ -315,7 +334,7 @@ There's also a `GET /rest/auth/embed?token=<jwt>&redirectTo=/workflow/abc123` va
 
 ### Step 3: n8n verifies and issues a session
 
-n8n verifies the JWT signature, resolves or provisions the user (see [User provisioning](#user-provisioning)), sets a secure session cookie (`SameSite=None; Secure`), and redirects to the specified path.
+n8n verifies the JWT signature, resolves or provisions the user (see [User provisioning](set-up-token-exchange.md#user-provisioning)), sets a secure session cookie (`SameSite=None; Secure`), and redirects to the specified path.
 
 ### Third-party cookie restrictions
 
@@ -396,17 +415,17 @@ curl -X POST https://your-n8n.example.com/rest/auth/oauth/token \
 
 Request fields (`application/x-www-form-urlencoded`):
 
-| Field | Required | Description |
-| :---- | :------- | :---------- |
-| `grant_type` | Yes | Must be `urn:ietf:params:oauth:grant-type:token-exchange`. |
-| `subject_token` | Yes | JWT representing the end user. |
-| `subject_token_type` | No | Token type identifier. n8n accepts and ignores this field. RFC 8693 requires it, so send `urn:ietf:params:oauth:token-type:jwt` if you use a spec-compliant client library. |
-| `actor_token` | No | JWT representing the actor (for delegation). |
-| `actor_token_type` | No | Actor token type identifier. Accepted and ignored, like `subject_token_type`. |
-| `requested_token_type` | No | Requested token type identifier. Accepted and ignored. n8n always issues an access token. |
-| `scope` | No | Requested scope (maximum 1024 characters). Recorded in the issued token and audit events, but not enforced. |
-| `audience` | No | Intended audience (maximum 1024 characters). Accepted and ignored. |
-| `resource` | No | Target resource URIs, space-separated (maximum 2048 characters). Recorded in the issued token and audit events, but not enforced. |
+| Field                  | Required | Description                                                                                                                                                                 |
+| ---------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `grant_type`           | Yes      | Must be `urn:ietf:params:oauth:grant-type:token-exchange`.                                                                                                                  |
+| `subject_token`        | Yes      | JWT representing the end user.                                                                                                                                              |
+| `subject_token_type`   | No       | Token type identifier. n8n accepts and ignores this field. RFC 8693 requires it, so send `urn:ietf:params:oauth:token-type:jwt` if you use a spec-compliant client library. |
+| `actor_token`          | No       | JWT representing the actor (for delegation).                                                                                                                                |
+| `actor_token_type`     | No       | Actor token type identifier. Accepted and ignored, like `subject_token_type`.                                                                                               |
+| `requested_token_type` | No       | Requested token type identifier. Accepted and ignored. n8n always issues an access token.                                                                                   |
+| `scope`                | No       | Requested scope (maximum 1024 characters). Recorded in the issued token and audit events, but not enforced.                                                                 |
+| `audience`             | No       | Intended audience (maximum 1024 characters). Accepted and ignored.                                                                                                          |
+| `resource`             | No       | Target resource URIs, space-separated (maximum 2048 characters). Recorded in the issued token and audit events, but not enforced.                                           |
 
 {% hint style="warning" %}
 **Scopes aren't enforced**
@@ -448,14 +467,14 @@ When you exchange a token, n8n resolves the external identity to an n8n user in 
 
 If you include the `role` claim, your IdP becomes the source of truth for that user's global role: n8n applies it on every exchange, overwriting roles assigned in the n8n UI. Omit the claim unless you manage roles in your IdP.
 
-| Scenario | Behavior |
-| :------- | :------- |
-| New user, no `role` claim | Assigned `global:member`. |
-| New user, `role` claim present | Assigned the claimed role. The exchange fails if the role is unrecognized, is `global:owner`, or isn't in `allowedRoles`. |
-| Existing user, no `role` claim | Role unchanged. |
-| Existing user, valid `role` claim | Role updated if different. The exchange fails if the role isn't in `allowedRoles`. |
-| Existing user, unrecognized or `global:owner` role claim | Claim ignored with a server-side warning. The login proceeds with the role unchanged. |
-| Existing user who is `global:owner` | Role sync skipped entirely. The owner role can't be changed through token exchange. |
+| Scenario                                                 | Behavior                                                                                                                  |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| New user, no `role` claim                                | Assigned `global:member`.                                                                                                 |
+| New user, `role` claim present                           | Assigned the claimed role. The exchange fails if the role is unrecognized, is `global:owner`, or isn't in `allowedRoles`. |
+| Existing user, no `role` claim                           | Role unchanged.                                                                                                           |
+| Existing user, valid `role` claim                        | Role updated if different. The exchange fails if the role isn't in `allowedRoles`.                                        |
+| Existing user, unrecognized or `global:owner` role claim | Claim ignored with a server-side warning. The login proceeds with the role unchanged.                                     |
+| Existing user who is `global:owner`                      | Role sync skipped entirely. The owner role can't be changed through token exchange.                                       |
 
 ### Profile sync
 
@@ -483,7 +502,7 @@ Always set `expectedAudience` on every trusted key source. Without it, n8n skips
 
 ### Role constraints
 
-The `allowedRoles` field on trusted key sources restricts which roles can be assigned through token exchange. Use it to enforce least privilege, for example to restrict an embedding integration to provisioning only `global:member` users. The OAuth `scope` and `resource` request fields don't restrict permissions. See [Step 2: Exchange for an n8n access token](#step-2-exchange-for-an-n8n-access-token).
+The `allowedRoles` field on trusted key sources restricts which roles can be assigned through token exchange. Use it to enforce least privilege, for example to restrict an embedding integration to provisioning only `global:member` users. The OAuth `scope` and `resource` request fields don't restrict permissions. See [Step 2: Exchange for an n8n access token](set-up-token-exchange.md#step-2-exchange-for-an-n8n-access-token).
 
 ### Restrict framing
 
@@ -497,21 +516,21 @@ To rotate keys without downtime, add a new entry with a new `kid` to `N8N_TOKEN_
 
 n8n emits audit events for all token exchange activity:
 
-| Event | When |
-| :---- | :--- |
-| `n8n.audit.token-exchange.succeeded` | Successful token exchange. |
-| `n8n.audit.token-exchange.failed` | Failed token exchange (with failure reason). |
-| `n8n.audit.token-exchange.embed-login` | Successful embed login. |
-| `n8n.audit.token-exchange.embed-login-failed` | Failed embed login (with failure reason). |
-| `n8n.audit.token-exchange.user-provisioned` | New user created through JIT provisioning. |
-| `n8n.audit.token-exchange.identity-linked` | Existing user linked to a new external identity. |
-| `n8n.audit.token-exchange.role-updated` | User role changed through token exchange. |
+| Event                                         | When                                             |
+| --------------------------------------------- | ------------------------------------------------ |
+| `n8n.audit.token-exchange.succeeded`          | Successful token exchange.                       |
+| `n8n.audit.token-exchange.failed`             | Failed token exchange (with failure reason).     |
+| `n8n.audit.token-exchange.embed-login`        | Successful embed login.                          |
+| `n8n.audit.token-exchange.embed-login-failed` | Failed embed login (with failure reason).        |
+| `n8n.audit.token-exchange.user-provisioned`   | New user created through JIT provisioning.       |
+| `n8n.audit.token-exchange.identity-linked`    | Existing user linked to a new external identity. |
+| `n8n.audit.token-exchange.role-updated`       | User role changed through token exchange.        |
 
 When you use the actor token flow, n8n records both the subject (on whose behalf) and the actor (who performed the action), enabling full attribution in audit logs.
 
 ## Verify your setup
 
-Mint a one-off JWT and exchange it. Save the [Step 1 example](#step-1-mint-a-jwt-in-your-backend) as `mint-token.js`, add `console.log(token);` at the end, and run it:
+Mint a one-off JWT and exchange it. Save the [Step 1 example](set-up-token-exchange.md#step-1-mint-a-jwt-in-your-backend) as `mint-token.js`, add `console.log(token);` at the end, and run it:
 
 ```bash
 node mint-token.js
@@ -530,24 +549,24 @@ A `200` response with an `access_token` confirms your keys, claims, and configur
 
 ## Troubleshooting
 
-| Symptom | Likely cause |
-| :------ | :----------- |
-| `404` on both endpoints | The preview flag `N8N_ENV_FEAT_TOKEN_EXCHANGE` isn't `true`, or your license doesn't include the token exchange feature. n8n doesn't load the module at all. |
-| `501 - Token exchange is not enabled on this instance` | `N8N_TOKEN_EXCHANGE_ENABLED` isn't `true`. |
-| `501 - Embed login is not enabled on this instance` | `N8N_EMBED_LOGIN_ENABLED` isn't `true`. |
-| `400 - unsupported_grant_type` | The `grant_type` field is missing or not exactly `urn:ietf:params:oauth:grant-type:token-exchange`. |
-| `400 - invalid_grant` with description `Token exchange failed` | Any token verification failure on the token exchange endpoint: invalid signature, unknown `kid`, missing `kid` header, replayed `jti`, expired or near-expiry token, audience mismatch, or disallowed role. n8n returns a generic description by design. Check the n8n server logs for the specific reason. |
-| `400 - invalid_request` with description `Token claims validation failed` | On the token exchange endpoint: the JWT is missing a required claim (`sub`, `iss`, `aud`, `iat`, `exp`, `jti`), or a claim has the wrong type. |
-| `401` from the embed endpoint | The response includes the specific failure message, for example `Token has already been used` (replayed `jti`), `Token lifetime exceeds maximum allowed` (embed tokens must have `exp - iat <= 60` seconds), or `Token header missing kid`. |
-| `500` from the embed endpoint | The JWT is missing a required claim or a claim has the wrong type. |
-| Raw JSON error shows in the iframe | Embed login failures return a JSON response without an error redirect. Check the message against the rows above. |
-| Session cookie isn't set after embed login | The instance isn't served over HTTPS, or a TLS-terminating proxy doesn't forward `X-Forwarded-Proto`. Browsers reject `SameSite=None; Secure` cookies over plain HTTP. Third-party cookie restrictions can also block the cookie, see [Third-party cookie restrictions](#third-party-cookie-restrictions). |
-| User not created on first login | The JWT is missing the `email` claim, which is required for JIT provisioning. |
-| Role not applied | For existing users, n8n ignores unrecognized and `global:owner` role claims with a server-side warning. A valid role that's missing from `allowedRoles` rejects the exchange instead. See [Role handling](#role-handling). |
+| Symptom                                                                   | Likely cause                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `404` on both endpoints                                                   | The preview flag `N8N_ENV_FEAT_TOKEN_EXCHANGE` isn't `true`, or your license doesn't include the token exchange feature. n8n doesn't load the module at all.                                                                                                                                                                       |
+| `501 - Token exchange is not enabled on this instance`                    | `N8N_TOKEN_EXCHANGE_ENABLED` isn't `true`.                                                                                                                                                                                                                                                                                         |
+| `501 - Embed login is not enabled on this instance`                       | `N8N_EMBED_LOGIN_ENABLED` isn't `true`.                                                                                                                                                                                                                                                                                            |
+| `400 - unsupported_grant_type`                                            | The `grant_type` field is missing or not exactly `urn:ietf:params:oauth:grant-type:token-exchange`.                                                                                                                                                                                                                                |
+| `400 - invalid_grant` with description `Token exchange failed`            | Any token verification failure on the token exchange endpoint: invalid signature, unknown `kid`, missing `kid` header, replayed `jti`, expired or near-expiry token, audience mismatch, or disallowed role. n8n returns a generic description by design. Check the n8n server logs for the specific reason.                        |
+| `400 - invalid_request` with description `Token claims validation failed` | On the token exchange endpoint: the JWT is missing a required claim (`sub`, `iss`, `aud`, `iat`, `exp`, `jti`), or a claim has the wrong type.                                                                                                                                                                                     |
+| `401` from the embed endpoint                                             | The response includes the specific failure message, for example `Token has already been used` (replayed `jti`), `Token lifetime exceeds maximum allowed` (embed tokens must have `exp - iat <= 60` seconds), or `Token header missing kid`.                                                                                        |
+| `500` from the embed endpoint                                             | The JWT is missing a required claim or a claim has the wrong type.                                                                                                                                                                                                                                                                 |
+| Raw JSON error shows in the iframe                                        | Embed login failures return a JSON response without an error redirect. Check the message against the rows above.                                                                                                                                                                                                                   |
+| Session cookie isn't set after embed login                                | The instance isn't served over HTTPS, or a TLS-terminating proxy doesn't forward `X-Forwarded-Proto`. Browsers reject `SameSite=None; Secure` cookies over plain HTTP. Third-party cookie restrictions can also block the cookie, see [Third-party cookie restrictions](set-up-token-exchange.md#third-party-cookie-restrictions). |
+| User not created on first login                                           | The JWT is missing the `email` claim, which is required for JIT provisioning.                                                                                                                                                                                                                                                      |
+| Role not applied                                                          | For existing users, n8n ignores unrecognized and `global:owner` role claims with a server-side warning. A valid role that's missing from `allowedRoles` rejects the exchange instead. See [Role handling](set-up-token-exchange.md#role-handling).                                                                                 |
 
 ## Related resources
 
-* [OEM deployment overview](./README.md): embed and surface n8n's interface inside your product.
+* [OEM deployment overview](./): embed and surface n8n's interface inside your product.
 * [Prerequisites](prerequisites.md)
 * [Manage workflows](manage-workflows.md)
 * [Set up SSO](../configure-n8n/security/configure-sso.md): organization-wide single sign-on through SAML or OIDC.

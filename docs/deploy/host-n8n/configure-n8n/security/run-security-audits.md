@@ -1,24 +1,40 @@
 ---
 title: Security audit
-description: Run a security audit on your n8n instance.
 contentType: howto
 nodeTitle: Run security audits
 originalFilePath: hosting/securing/security-audit.md
-originalUrl: 'https://docs.n8n.io/hosting/securing/security-audit'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/run-security-audits'
+originalUrl: https://docs.n8n.io/hosting/securing/security-audit
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/run-security-audits
+description: Run a security audit on your n8n instance.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Security audit <a href="#security-audit" id="security-audit"></a>
+# Run security audits
 
 You can run a security audit on your n8n instance, to detect common security issues.
 
 ## How do I run a security audit in n8n? <a href="#run-an-audit" id="run-an-audit"></a>
 
 You can run an audit using the CLI, the public API, or the n8n node.
-
 
 ### CLI <a href="#cli" id="cli"></a>
 
@@ -74,4 +90,4 @@ This report shows:
 
 ## Related resources
 
-* [Security](../security.md)
+* [Security](./)

@@ -1,21 +1,38 @@
 ---
 contentType: tutorial
-description: Install and run n8n using Docker Compose
 nodeTitle: Use Docker Compose
 originalFilePath: hosting/installation/server-setups/docker-compose.md
-originalUrl: 'https://docs.n8n.io/hosting/installation/server-setups/docker-compose'
+originalUrl: https://docs.n8n.io/hosting/installation/server-setups/docker-compose
 url: >-
   https://docs.n8n.io/deploy/host-n8n/install-options/use-a-cloud-provider/use-docker-compose
+description: Install and run n8n using Docker Compose
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Docker-Compose <a href="#docker-compose" id="docker-compose"></a>
+# Use Docker Compose
 
 These instructions cover how to run n8n on a Linux server using Docker Compose.
 
-If you have already installed Docker and Docker-Compose, then you can start with [step 3](#3-dns-setup).
+If you have already installed Docker and Docker-Compose, then you can start with [step 3](use-docker-compose.md#3-dns-setup).
 
 You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
 
@@ -37,11 +54,10 @@ n8n recommends self-hosting for expert users. Mistakes can lead to data loss, se
 
 n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 
-Current `stable`: 2.47.7
-Current `beta`: 2.48.4
+Current `stable`: 2.47.7 Current `beta`: 2.48.4
 {% endhint %}
 
-## 1. Install Docker and Docker Compose <a href="#1-install-docker-and-docker-compose" id="1-install-docker-and-docker-compose"></a>
+## 1. Install Docker and Docker Compose <a href="#id-1-install-docker-and-docker-compose" id="id-1-install-docker-and-docker-compose"></a>
 
 The way that you install Docker and Docker Compose depends on your Linux distribution. You can find specific instructions for each component in the links below:
 
@@ -55,7 +71,7 @@ docker --version
 docker compose version
 ```
 
-## 2. Optional: Non-root user access <a href="#2-optional-non-root-user-access" id="2-optional-non-root-user-access"></a>
+## 2. Optional: Non-root user access <a href="#id-2-optional-non-root-user-access" id="id-2-optional-non-root-user-access"></a>
 
 You can optionally grant access to run Docker without the `sudo` command.
 
@@ -81,17 +97,17 @@ You can verify that your current session recognizes the `docker` group by typing
 groups
 ```
 
-## 3. DNS setup <a href="#3-dns-setup" id="3-dns-setup"></a>
+## 3. DNS setup <a href="#id-3-dns-setup" id="id-3-dns-setup"></a>
 
 To host n8n online or on a network, create a dedicated subdomain pointed at your server.
 
 Add an A record to route the subdomain accordingly:
 
 | Record type | Name                              | Destination                |
-|-------------|-----------------------------------|----------------------------|
+| ----------- | --------------------------------- | -------------------------- |
 | A           | `n8n` (or your desired subdomain) | `<your_server_IP_address>` |
 
-## 4. Create an `.env` file <a href="#4-create-an-env-file" id="4-create-an-env-file"></a>
+## 4. Create an `.env` file <a href="#id-4-create-an-env-file" id="id-4-create-an-env-file"></a>
 
 Create a project directory to store your n8n environment configuration and Docker Compose files and navigate inside:
 
@@ -102,7 +118,7 @@ cd n8n-compose
 
 Inside the `n8n-compose` directory, create an `.env` file to customize your n8n instance's details. Change it to match your own information:
 
-```shell title=".env file"
+```shell
 # DOMAIN_NAME and SUBDOMAIN together determine where n8n will be reachable from <a href="#domainname-and-subdomain-together-determine-where-n8n-will-be-reachable-from" id="domainname-and-subdomain-together-determine-where-n8n-will-be-reachable-from"></a>
 # The top level domain to serve from <a href="#the-top-level-domain-to-serve-from" id="the-top-level-domain-to-serve-from"></a>
 DOMAIN_NAME=example.com
@@ -120,7 +136,7 @@ GENERIC_TIMEZONE=Europe/Berlin
 SSL_EMAIL=user@example.com
 ```
 
-## 5. Create local files directory <a href="#5-create-local-files-directory" id="5-create-local-files-directory"></a>
+## 5. Create local files directory <a href="#id-5-create-local-files-directory" id="id-5-create-local-files-directory"></a>
 
 Inside your project directory, create a directory called `local-files` for sharing files between the n8n instance and the host system (for example, using the [Read/Write Files from Disk node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.readwritefile)):
 
@@ -130,11 +146,11 @@ mkdir local-files
 
 The Docker Compose file below can automatically create this directory, but doing it manually ensures that it's created with the right ownership and permissions.
 
-## 6. Create Docker Compose file <a href="#6-create-docker-compose-file" id="6-create-docker-compose-file"></a>
+## 6. Create Docker Compose file <a href="#id-6-create-docker-compose-file" id="id-6-create-docker-compose-file"></a>
 
 Create a `compose.yaml` file. Paste the following in the file:
 
-```yaml title="compose.yaml file"
+```yaml
 services:
   traefik:
     image: "traefik"
@@ -203,12 +219,12 @@ The Docker Compose file above configures two containers: one for n8n, and one to
 It also creates and mounts two [Docker volumes](https://docs.docker.com/engine/storage/volumes/) and mounts the `local-files` directory you created earlier:
 
 | Name            | Type                                                        | Container mount   | Description                                                                                                                         |
-|-----------------|-------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| --------------- | ----------------------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `n8n_data`      | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/home/node/.n8n` | Where n8n saves its SQLite database file and encryption key.                                                                        |
 | `traefik_data`  | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/letsencrypt`    | Where Traefik saves TLS/SSL certificate data.                                                                                       |
 | `./local-files` | [Bind](https://docs.docker.com/engine/storage/bind-mounts/) | `/files`          | A local directory shared between the n8n instance and host. In n8n, use the `/files` path to read from and write to this directory. |
 
-## 7. Start Docker Compose <a href="#7-start-docker-compose" id="7-start-docker-compose"></a>
+## 7. Start Docker Compose <a href="#id-7-start-docker-compose" id="id-7-start-docker-compose"></a>
 
 Start n8n by typing:
 
@@ -222,7 +238,7 @@ To stop the containers, type:
 sudo docker compose stop
 ```
 
-## 8. Done <a href="#8-done" id="8-done"></a>
+## 8. Done <a href="#id-8-done" id="id-8-done"></a>
 
 You can now reach n8n using the subdomain + domain combination you defined in your `.env` file configuration. The above example would result in `https://n8n.example.com`.
 
@@ -232,7 +248,7 @@ If you have trouble reaching your instance, check your server's firewall setting
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-* Learn more about [configuring](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling) n8n.
+* Learn more about [configuring](../../configure-n8n/basic-configuration/use-environment-variables/) and [scaling](../../configure-n8n/scaling/) n8n.
 * Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow).
 
 ## Related resources

@@ -23,11 +23,13 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Update your version
 
-n8n recommends keeping your Cloud version up to date. In the **Updates** section of **Instance settings** in the n8n Cloud console, you choose which n8n version your instance runs, and control when and how automatic updates happen. Check the [Release notes](https://app.gitbook.com/s/OsW2cybJYwwsKda8DlK8/) to learn about changes in each version.
+n8n recommends keeping your Cloud version up to date. In the **Updates** section of **Instance settings** in the n8n Cloud console, you choose which n8n version your instance runs, and control when and how automatic updates happen. Check the [Release notes](https://app.gitbook.com/o/7xd2CLpTdTqBXztWqAyX/s/OsW2cybJYwwsKda8DlK8/) to learn about changes in each version.
 
 {% hint style="info" %}
 Only instance owners can change these settings. Contact your instance owner if you don't have permission to update n8n Cloud.
@@ -83,8 +85,8 @@ The maintenance window sets when n8n can apply upgrades, so you can reduce disru
 * [Use n8n Cloud](./)
 * [Try free then choose a plan](start-your-free-trial.md)
 * [Use the Cloud console](use-the-cloud-console.md)
-* [Configure Cloud](configure-cloud/README.md)
-* [Gateway credits](gateway-credits/README.md)
-* [Assistant credits](assistant-credits/README.md)
+* [Configure Cloud](configure-cloud/)
+* [Gateway credits](gateway-credits/)
+* [Assistant credits](assistant-credits/)
 * [Understand concurrency](understand-concurrency.md)
 * [Download workflows](download-workflows.md)

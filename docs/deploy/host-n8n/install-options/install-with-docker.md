@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Install with Docker
@@ -66,8 +68,7 @@ Before proceeding, install Docker:
 
 n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 
-Current `stable`: 2.47.7
-Current `beta`: 2.48.4
+Current `stable`: 2.47.7 Current `beta`: 2.48.4
 {% endhint %}
 
 ### Starting n8n <a href="#starting-n8n" id="starting-n8n"></a>
@@ -247,11 +248,8 @@ pnpm --filter n8n-containers services:clean
 ### Next steps <a href="#next-steps" id="next-steps"></a>
 
 * Find more information about Docker setup in the README file for the [Docker image](https://github.com/n8n-io/n8n/tree/master/docker/images/n8n).
-
-* Learn more about [configuring](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling) n8n.
+* Learn more about [configuring](../configure-n8n/basic-configuration/use-environment-variables/) and [scaling](../configure-n8n/scaling/) n8n.
 * Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow).
-
-[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
 
 ## Related resources
 
@@ -260,4 +258,6 @@ pnpm --filter n8n-containers services:clean
 * [Install using Docker Compose](install-using-docker-compose.md)
 * [Install with npm](install-with-npm.md)
 * [Production requirements](production-requirements.md)
-* [Use a cloud provider](use-a-cloud-provider/README.md)
+* [Use a cloud provider](use-a-cloud-provider/)
+
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

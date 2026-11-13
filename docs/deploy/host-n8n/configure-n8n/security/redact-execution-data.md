@@ -27,6 +27,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Redact execution data
@@ -36,8 +38,8 @@ layout:
 
 Data redaction is available on:
 
-- **n8n Cloud:** Enterprise
-- **Self-hosted:** Enterprise
+* **n8n Cloud:** Enterprise
+* **Self-hosted:** Enterprise
 
 Per-workflow execution data redaction is available from n8n 2.16.0. Instance-level enforcement of execution data redaction is available from n8n 2.26.0.
 {% endhint %}
@@ -65,7 +67,7 @@ You configure redaction per workflow in the workflow settings. You need the `wor
 To configure redaction:
 
 1. Open your workflow.
-2. Select the **Workflow menu** <img src="../../../.gitbook/assets/three-dots-horizontal (1).png" alt="Workflow menu icon" data-size="line"> in the upper-right corner.
+2. Select the **Workflow menu** <img src="../../../.gitbook/assets/three-dots-horizontal.png" alt="Workflow menu icon" data-size="line"> in the upper-right corner.
 3. Select **Settings**.
 4. Find the **Redact production execution data** and **Redact manual execution data** settings.
 5. For each setting, choose either **Default - Do not redact** or **Redact**.
@@ -211,4 +213,4 @@ Redaction controls the visibility of execution data when users view executions. 
 
 ## Related resources
 
-* [Security](../security.md)
+* [Security](./)

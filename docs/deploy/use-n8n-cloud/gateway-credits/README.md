@@ -3,15 +3,32 @@ description: >-
   Use Gateway credits to run AI models and third-party services in your n8n
   workflows without provider accounts or API keys.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Gateway credits
 
 Gateway credits let you use supported AI models and third-party services in your workflows without creating provider accounts or managing API keys. Instead of setting up a credential, you select Gateway credits on a supported node, and n8n bills the usage from a prepaid credit balance.
 
-Gateway credits only pay for nodes in your workflows. They don't pay for n8n Assistant, which uses separate [Assistant credits](../assistant-credits/README.md), starting with a monthly allowance included in your plan. Topping up Gateway credits doesn't give n8n Assistant more credits.
+Gateway credits only pay for nodes in your workflows. They don't pay for n8n Assistant, which uses separate [Assistant credits](../assistant-credits/), starting with a monthly allowance included in your plan. Topping up Gateway credits doesn't give n8n Assistant more credits.
 
 ## In this section
 
@@ -23,7 +40,7 @@ Gateway credits only pay for nodes in your workflows. They don't pay for n8n Ass
 
 Gateway credits are available on:
 
-- **n8n Cloud:** Starter, Pro
+* **n8n Cloud:** Starter, Pro
 
 They aren't available on n8n Cloud Enterprise or self-hosted n8n. Gateway credits are available from n8n 2.36.0. Free trials include Gateway credits, but you can't top up until you upgrade to a paid plan.
 {% endhint %}
@@ -40,8 +57,8 @@ To learn how to select Gateway credits on a node and find supported nodes in the
 
 Gateway credits cover two categories of service:
 
-- **AI models**: large language model providers such as OpenAI, Anthropic, and Google Gemini.
-- **Tool services**: services for tasks like web search, web scraping, browser automation, and document parsing, such as Brave Search and Firecrawl.
+* **AI models**: large language model providers such as OpenAI, Anthropic, and Google Gemini.
+* **Tool services**: services for tasks like web search, web scraping, browser automation, and document parsing, such as Brave Search and Firecrawl.
 
 The catalogue grows over time. For the current list of supported services and models, check the [service pricing page](https://app.n8n.cloud/service-pricing). In the editor, the **Included in n8n** section of the nodes panel shows the nodes you can use with Gateway credits.
 
@@ -57,37 +74,37 @@ When your balance reaches zero, nodes using Gateway credits stop working until y
 
 ### Credit expiry and forfeiture
 
-- n8n uses free credits before top-up credits, and uses the credits that expire soonest first.
-- Top-up credits expire 12 months after purchase.
-- Credits aren't cash and you can't transfer them to another account.
-- Top-ups are final. n8n doesn't refund unused credits except where required by law.
-- If you close your n8n account, you forfeit any remaining credits. Canceling your subscription doesn't forfeit credits while your account still exists.
+* n8n uses free credits before top-up credits, and uses the credits that expire soonest first.
+* Top-up credits expire 12 months after purchase.
+* Credits aren't cash and you can't transfer them to another account.
+* Top-ups are final. n8n doesn't refund unused credits except where required by law.
+* If you close your n8n account, you forfeit any remaining credits. Canceling your subscription doesn't forfeit credits while your account still exists.
 
 ## Gateway credits and other credit types
 
 n8n has more than one kind of credit. They have separate balances and pay for different things:
 
-| Credit type | What it pays for | Where you see it |
-|---|---|---|
-| Gateway credits | AI models and tool services used by nodes in your workflows | On supported nodes, and on the **Gateway credits** page in the Cloud console |
-| [Assistant credits](../assistant-credits/README.md) | Your usage of [n8n Assistant](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/ways-of-building-workflows/n8n-assistant), from a monthly allowance included in your plan | In the n8n Assistant panel in the editor, and on the **Assistant credits** page in the Cloud console |
-| Free OpenAI API credits | A legacy one-time OpenAI allowance for new Cloud users | Only on instances without Gateway credits |
+| Credit type                                | What it pays for                                                                                                                                                       | Where you see it                                                                                     |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Gateway credits                            | AI models and tool services used by nodes in your workflows                                                                                                            | On supported nodes, and on the **Gateway credits** page in the Cloud console                         |
+| [Assistant credits](../assistant-credits/) | Your usage of [n8n Assistant](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/ways-of-building-workflows/n8n-assistant), from a monthly allowance included in your plan | In the n8n Assistant panel in the editor, and on the **Assistant credits** page in the Cloud console |
+| Free OpenAI API credits                    | A legacy one-time OpenAI allowance for new Cloud users                                                                                                                 | Only on instances without Gateway credits                                                            |
 
 Topping up Gateway credits doesn't add Assistant credits, and using n8n Assistant doesn't spend your Gateway credit balance.
 
 ## Data handling
 
-When a node runs on Gateway credits, n8n sends the request through its gateway to the service provider under n8n's own provider account. The provider receives the content of the request, such as the prompt you send to a model or the text you send to a parser, but not your identity or n8n account details. For more on how n8n handles your data, refer to [Privacy](https://app.gitbook.com/s/V7NOibyUfmMLK3v1khVr) and n8n's terms of service.
+When a node runs on Gateway credits, n8n sends the request through its gateway to the service provider under n8n's own provider account. The provider receives the content of the request, such as the prompt you send to a model or the text you send to a parser, but not your identity or n8n account details. For more on how n8n handles your data, refer to [Privacy](https://app.gitbook.com/o/7xd2CLpTdTqBXztWqAyX/s/V7NOibyUfmMLK3v1khVr/) and n8n's terms of service.
 
 ## Related resources
 
-- [Use n8n Cloud](../)
-- [Try free then choose a plan](../start-your-free-trial.md)
-- [Use the Cloud console](../use-the-cloud-console.md)
-- [Update your version](../update-your-version.md)
-- [Configure Cloud](../configure-cloud/README.md)
-- [Assistant credits](../assistant-credits/README.md)
-- [Understand concurrency](../understand-concurrency.md)
-- [Download workflows](../download-workflows.md)
-- [Use Gateway credits](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/use-gateway-credits): select Gateway credits on a node and find supported nodes.
-- [Service pricing page](https://app.n8n.cloud/service-pricing): current rates for all supported services and models.
+* [Use n8n Cloud](../)
+* [Try free then choose a plan](../start-your-free-trial.md)
+* [Use the Cloud console](../use-the-cloud-console.md)
+* [Update your version](../update-your-version.md)
+* [Configure Cloud](../configure-cloud/)
+* [Assistant credits](../assistant-credits/)
+* [Understand concurrency](../understand-concurrency.md)
+* [Download workflows](../download-workflows.md)
+* [Use Gateway credits](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/understand-workflows/use-gateway-credits): select Gateway credits on a node and find supported nodes.
+* [Service pricing page](https://app.n8n.cloud/service-pricing): current rates for all supported services and models.

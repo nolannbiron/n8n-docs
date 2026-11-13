@@ -1,17 +1,34 @@
 ---
 title: Restrict account registration to email-verified users
-description: Require all new accounts to be verified by email.
 contentType: howto
 nodeTitle: Verify user emails
 originalFilePath: hosting/securing/restrict-by-email-verification.md
-originalUrl: 'https://docs.n8n.io/hosting/securing/restrict-by-email-verification'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/verify-user-emails'
+originalUrl: https://docs.n8n.io/hosting/securing/restrict-by-email-verification
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/verify-user-emails
+description: Require all new accounts to be verified by email.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Restrict account registration to email-verified users <a href="#restrict-account-registration-to-email-verified-users" id="restrict-account-registration-to-email-verified-users"></a>
+# Verify user emails
 
 You can require all new accounts to be verified by email. This prevents malicious admins from registering accounts without email verification.
 
@@ -27,4 +44,4 @@ For more details on configuring SMTP, see [Set up SMTP](../user-management.md#st
 
 ## Related resources
 
-* [Security](../security.md)
+* [Security](./)

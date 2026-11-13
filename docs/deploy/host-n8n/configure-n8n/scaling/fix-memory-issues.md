@@ -2,30 +2,47 @@
 contentType: explanation
 nodeTitle: Fix memory issues
 originalFilePath: hosting/scaling/memory-errors.md
-originalUrl: 'https://docs.n8n.io/hosting/scaling/memory-errors'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/fix-memory-issues'
+originalUrl: https://docs.n8n.io/hosting/scaling/memory-errors
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/fix-memory-issues
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Memory-related errors <a href="#memory-related-errors" id="memory-related-errors"></a>
+# Fix memory issues
 
 n8n doesn't restrict the amount of data each node can fetch and process. While this gives you freedom, it can lead to errors when workflow executions require more memory than available. This page explains how to identify and avoid these errors.
 
 {% hint style="info" %}
 **Only for self-hosted n8n**
 
-This page describes memory-related errors when [self-hosting n8n](../../README.md). Visit [Cloud data management](../../../use-n8n-cloud/configure-cloud/manage-your-data.md) to learn about memory limits for [n8n Cloud](../../../use-n8n-cloud/README.md).
+This page describes memory-related errors when [self-hosting n8n](../../). Visit [Cloud data management](../../../use-n8n-cloud/configure-cloud/manage-your-data.md) to learn about memory limits for [n8n Cloud](../../../use-n8n-cloud/).
 {% endhint %}
 
 ## Identifying out of memory situations <a href="#identifying-out-of-memory-situations" id="identifying-out-of-memory-situations"></a>
 
 n8n provides error messages that warn you in some out of memory situations. For example, messages such as **Execution stopped at this node (n8n may have run out of memory while executing it)**.
 
-Error messages including **Problem running workflow**, **Connection Lost**, or **503 Service Temporarily Unavailable** suggest that an n8n instance has become unavailable. 
+Error messages including **Problem running workflow**, **Connection Lost**, or **503 Service Temporarily Unavailable** suggest that an n8n instance has become unavailable.
 
-When self-hosting n8n, you may also see error messages such as **Allocation failed - JavaScript heap out of memory** in your server logs. 
+When self-hosting n8n, you may also see error messages such as **Allocation failed - JavaScript heap out of memory** in your server logs.
 
 On n8n Cloud, or when using n8n's Docker image, n8n restarts automatically when encountering such an issue. However, when running n8n with npm you might need to restart it manually.
 
@@ -33,12 +50,12 @@ On n8n Cloud, or when using n8n's Docker image, n8n restarts automatically when 
 
 Such problems occur when a workflow execution requires more memory than available to an n8n instance. Factors increasing the memory usage for a workflow execution include:
 
-- Amount of [JSON data](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure).
-- Size of binary data.
-- Number of nodes in a workflow.
-- Some nodes are memory-heavy: the [Code](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) node and the older Function node can increase memory consumption significantly.
-- Manual or automatic workflow executions: manual executions increase memory consumption as n8n makes a copy of the data for the frontend.
-- Additional workflows running at the same time.
+* Amount of [JSON data](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/work-with-data/understand-n8ns-data-structure).
+* Size of binary data.
+* Number of nodes in a workflow.
+* Some nodes are memory-heavy: the [Code](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-base.code) node and the older Function node can increase memory consumption significantly.
+* Manual or automatic workflow executions: manual executions increase memory consumption as n8n makes a copy of the data for the frontend.
+* Additional workflows running at the same time.
 
 ## Avoiding out of memory situations <a href="#avoiding-out-of-memory-situations" id="avoiding-out-of-memory-situations"></a>
 
@@ -69,7 +86,7 @@ This applies to self-hosting n8n. When encountering **JavaScript heap out of mem
 
 ## Related resources
 
-* [Scaling](../scaling.md)
+* [Scaling](./)
 * [Measure performance](measure-performance.md)
 * [Enable queue mode](enable-queue-mode.md)
 * [Control concurrency](control-concurrency.md)

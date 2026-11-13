@@ -2,15 +2,32 @@
 contentType: howto
 nodeTitle: Manage execution data
 originalFilePath: hosting/scaling/execution-data.md
-originalUrl: 'https://docs.n8n.io/hosting/scaling/execution-data'
+originalUrl: https://docs.n8n.io/hosting/scaling/execution-data
 url: >-
   https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/manage-execution-data
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Execution data <a href="#execution-data" id="execution-data"></a>
+# Manage execution data
 
 Depending on your executions settings and volume, your n8n database can grow in size and run out of storage.
 
@@ -25,6 +42,7 @@ To do this, configure the corresponding [environment variables](../basic-configu
 
 You can also configure these settings on an individual workflow basis using the [workflow settings](https://app.gitbook.com/s/BZpIXw3wFsNVcsJHaGPW/manage-workflows/configure-workflow-settings).
 {% endhint %}
+
 You can select which executions data n8n saves. For example, you can save only executions that result in an `Error`.
 
 ```sh
@@ -71,14 +89,14 @@ Executions pruning deletes finished executions along with their execution data a
 
 n8n prunes executions when **either** of the following condition occur:
 
-- **Age**: The execution finished more than `EXECUTIONS_DATA_MAX_AGE` hours ago (default: 336 hours -> 14 days).
-- **Count**: The total number of executions exceeds `EXECUTIONS_DATA_PRUNE_MAX_COUNT` (default: 10,000). When this occurs, n8n deletes executions from oldest to newest.
+* **Age**: The execution finished more than `EXECUTIONS_DATA_MAX_AGE` hours ago (default: 336 hours -> 14 days).
+* **Count**: The total number of executions exceeds `EXECUTIONS_DATA_PRUNE_MAX_COUNT` (default: 10,000). When this occurs, n8n deletes executions from oldest to newest.
 
 Keep in mind:
 
-- Executions with the `new`, `running`, or `waiting` status aren't eligible for pruning.
-- Annotated executions (for example, executions with tags or ratings) are never pruned.
-- Pruning honors a safety buffer period of `EXECUTIONS_DATA_HARD_DELETE_BUFFER` hours (default: 1h), to ensure recent data remains available while the user is building or debugging a workflow.
+* Executions with the `new`, `running`, or `waiting` status aren't eligible for pruning.
+* Annotated executions (for example, executions with tags or ratings) are never pruned.
+* Pruning honors a safety buffer period of `EXECUTIONS_DATA_HARD_DELETE_BUFFER` hours (default: 1h), to ensure recent data remains available while the user is building or debugging a workflow.
 
 ```sh
 # Enable executions pruning <a href="#enable-executions-pruning" id="enable-executions-pruning"></a>
@@ -124,7 +142,7 @@ Binary data pruning operates on the active binary data mode. For example, if you
 
 ## Related resources
 
-* [Scaling](../scaling.md)
+* [Scaling](./)
 * [Measure performance](measure-performance.md)
 * [Enable queue mode](enable-queue-mode.md)
 * [Control concurrency](control-concurrency.md)

@@ -2,14 +2,31 @@
 contentType: howto
 nodeTitle: Enable queue mode
 originalFilePath: hosting/scaling/queue-mode.md
-originalUrl: 'https://docs.n8n.io/hosting/scaling/queue-mode'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode'
+originalUrl: https://docs.n8n.io/hosting/scaling/queue-mode
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Queue mode <a href="#queue-mode" id="queue-mode"></a>
+# Enable queue mode
 
 You can run n8n in different modes depending on your needs. The queue mode provides the best scalability.
 
@@ -21,23 +38,22 @@ In queue mode, n8n stores binary data in the database by default unless you conf
 
 ## How it works <a href="#how-it-works" id="how-it-works"></a>
 
-When running in queue mode, you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions. 
+When running in queue mode, you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions.
 
-Each worker is its own Node.js instance, running in `main` mode, but able to handle multiple simultaneous workflow executions due to their high IOPS (input-output operations per second). 
+Each worker is its own Node.js instance, running in `main` mode, but able to handle multiple simultaneous workflow executions due to their high IOPS (input-output operations per second).
 
 By using worker instances and running in queue mode, you can scale n8n up (by adding workers) and down (by removing workers) as needed to handle the workload.
 
 This is the process flow:
 
-1. The main n8n instance handles timers and webhook calls, generating (but not running) a workflow execution. 
-1. It passes the execution ID to a message broker, [Redis](#start-redis), which maintains the queue of pending executions and allows the next available worker to pick them up.
-1. A worker in the pool picks up message from Redis.
-1. The worker uses the execution ID to get workflow information from the database.
-1. After completing the workflow execution, the worker:
-	- Writes the results to the database.
-	- Posts to Redis, saying that the execution has finished.
-1. Redis notifies the main instance.
-
+1. The main n8n instance handles timers and webhook calls, generating (but not running) a workflow execution.
+2. It passes the execution ID to a message broker, [Redis](enable-queue-mode.md#start-redis), which maintains the queue of pending executions and allows the next available worker to pick them up.
+3. A worker in the pool picks up message from Redis.
+4. The worker uses the execution ID to get workflow information from the database.
+5. After completing the workflow execution, the worker:
+   * Writes the results to the database.
+   * Posts to Redis, saying that the execution has finished.
+6. Redis notifies the main instance.
 
 ![Diagram showing the flow of data between the main n8n instance, Redis, the n8n workers, and the n8n database](../../../.gitbook/assets/queue-mode-flow.png)
 
@@ -53,11 +69,11 @@ If your workers share a writable filesystem, give each worker process a unique e
 
 ### Set encryption key <a href="#set-encryption-key" id="set-encryption-key"></a>
 
-n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](../basic-configuration/use-environment-variables/README.md) if desired.
+n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](../basic-configuration/use-environment-variables/) if desired.
 
 The encryption key of the main n8n instance must be shared with all worker and webhooks processor nodes to ensure these worker nodes are able to access credentials stored in the database.
 
-Set the encryption key for each worker node in a [configuration file](../basic-configuration.md) or by setting the corresponding environment variable:
+Set the encryption key for each worker node in a [configuration file](../basic-configuration/) or by setting the corresponding environment variable:
 
 ```bash
 export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
@@ -66,10 +82,9 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 ### Set executions mode <a href="#set-executions-mode" id="set-executions-mode"></a>
 
 {% hint style="info" %}
-**Database considerations**
-Refer to [Supported PostgreSQL versions](../choose-n8ns-database.md#supported-postgresql-versions) for n8n's supported PostgreSQL versions.
+**Database considerations** Refer to [Supported PostgreSQL versions](../choose-n8ns-database.md#supported-postgresql-versions) for n8n's supported PostgreSQL versions.
 
-Running n8n with execution mode set to `queue` with an SQLite database isn't recommended. 
+Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
 {% endhint %}
 
 Set the environment variable `EXECUTIONS_MODE` to `queue` on the main instance and any workers using the following command.
@@ -78,7 +93,7 @@ Set the environment variable `EXECUTIONS_MODE` to `queue` on the main instance a
 export EXECUTIONS_MODE=queue
 ```
 
-Alternatively, you can set `executions.mode` to `queue` in the [configuration file](../basic-configuration/use-environment-variables/README.md).
+Alternatively, you can set `executions.mode` to `queue` in the [configuration file](../basic-configuration/use-environment-variables/).
 
 ### Start Redis <a href="#start-redis" id="start-redis"></a>
 
@@ -98,21 +113,20 @@ docker run --name some-redis -p 6379:6379  -d redis
 
 By default, Redis runs on `localhost` on port `6379` with no password. Based on your Redis configuration, set the following configurations for the main n8n process. These will allow n8n to interact with Redis.
 
-| Using configuration file | Using environment variables | Description |
-| ------ | ------ | ----- |
-| `queue.bull.redis.host:localhost` | `QUEUE_BULL_REDIS_HOST=localhost` | By default, Redis runs on `localhost`. |
-| `queue.bull.redis.port:6379` | `QUEUE_BULL_REDIS_PORT=6379` | The default port is `6379`. If Redis is running on a different port, configure the value. |
+| Using configuration file          | Using environment variables       | Description                                                                               |
+| --------------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------- |
+| `queue.bull.redis.host:localhost` | `QUEUE_BULL_REDIS_HOST=localhost` | By default, Redis runs on `localhost`.                                                    |
+| `queue.bull.redis.port:6379`      | `QUEUE_BULL_REDIS_PORT=6379`      | The default port is `6379`. If Redis is running on a different port, configure the value. |
 
 You can also set the following optional configurations:
 
-| Using configuration file | Using environment variables | Description |
-| ------ | ------ | ----- |
-| `queue.bull.redis.username:USERNAME` | `QUEUE_BULL_REDIS_USERNAME` | By default, Redis doesn't require a username. If you're using a specific user, configure it variable. |
-| `queue.bull.redis.password:PASSWORD` | `QUEUE_BULL_REDIS_PASSWORD` | By default, Redis doesn't require a password. If you're using a password, configure it variable. |
-| `queue.bull.redis.db:0` | `QUEUE_BULL_REDIS_DB` | The default value is `0`. If you change this value, update the configuration. |
-| `queue.bull.redis.timeoutThreshold:10000ms` | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000` (ms). |
-| `queue.bull.gracefulShutdownTimeout:30` | `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` | A graceful shutdown timeout for workers to finish executing jobs before terminating the process. The default value is `30` seconds. |
-
+| Using configuration file                    | Using environment variables          | Description                                                                                                                         |
+| ------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `queue.bull.redis.username:USERNAME`        | `QUEUE_BULL_REDIS_USERNAME`          | By default, Redis doesn't require a username. If you're using a specific user, configure it variable.                               |
+| `queue.bull.redis.password:PASSWORD`        | `QUEUE_BULL_REDIS_PASSWORD`          | By default, Redis doesn't require a password. If you're using a password, configure it variable.                                    |
+| `queue.bull.redis.db:0`                     | `QUEUE_BULL_REDIS_DB`                | The default value is `0`. If you change this value, update the configuration.                                                       |
+| `queue.bull.redis.timeoutThreshold:10000ms` | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000` (ms).                        |
+| `queue.bull.gracefulShutdownTimeout:30`     | `N8N_GRACEFUL_SHUTDOWN_TIMEOUT`      | A graceful shutdown timeout for workers to finish executing jobs before terminating the process. The default value is `30` seconds. |
 
 Now you can start your n8n instance and it will connect to your Redis instance.
 
@@ -138,10 +152,10 @@ You can set up multiple worker processes. Make sure that all the worker processe
 
 Each worker process runs a server that exposes optional endpoints:
 
-- `/healthz`: returns whether the worker is up, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
-- `/healthz/readiness`: returns whether worker's DB and Redis connections are ready, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
-- [credentials overwrite endpoint](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/credential-overwrites)
-- [`/metrics`](../basic-configuration/configuration-examples/enable-prometheus-metrics.md)
+* `/healthz`: returns whether the worker is up, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
+* `/healthz/readiness`: returns whether worker's DB and Redis connections are ready, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
+* [credentials overwrite endpoint](https://app.gitbook.com/s/nd4xCXTdU07PkJJRhaDG/manage-credentials/credential-overwrites)
+* [`/metrics`](../basic-configuration/configuration-examples/enable-prometheus-metrics.md)
 
 {% hint style="info" %}
 **Customizing health check endpoints**
@@ -156,7 +170,7 @@ You can customize the health check endpoint path using the [`N8N_ENDPOINT_HEALTH
 
 Viewing running workers is available on:
 
-- **Self-hosted:** Enterprise
+* **Self-hosted:** Enterprise
 
 On n8n Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa) to enable it.
 {% endhint %}
@@ -180,7 +194,7 @@ If you want to migrate data from one database to another, you can use the Export
 {% hint style="info" %}
 **Keep in mind**
 
-Webhook processes rely on Redis and need the `EXECUTIONS_MODE` environment variable set too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
+Webhook processes rely on Redis and need the `EXECUTIONS_MODE` environment variable set too. Follow the [configure the workers](enable-queue-mode.md#configuring-workers) section above to setup webhook processor nodes.
 {% endhint %}
 
 Webhook processors are another layer of scaling in n8n. Configuring the webhook processor is optional, and allows you to scale the incoming webhook requests.
@@ -217,10 +231,10 @@ You can also set this value in the configuration file.
 
 When using multiple webhook processes you will need a load balancer to route requests. If you are using the same domain name for your n8n instance and the webhooks, you can set up your load balancer to route requests as follows:
 
-- Redirect webhook triggers to the webhook servers pool. Paths to consider:
-  - `/webhook/*`: Webhook trigger node endpoints
-  - `/webhook-waiting/*`: Human-in-the-loop webhook endpoints used by nodes that perform "send and wait" operations (for example, the Slack node).
-- All other paths (the n8n internal API, the static files for the editor, etc.) should get routed to the main process
+* Redirect webhook triggers to the webhook servers pool. Paths to consider:
+  * `/webhook/*`: Webhook trigger node endpoints
+  * `/webhook-waiting/*`: Human-in-the-loop webhook endpoints used by nodes that perform "send and wait" operations (for example, the Slack node).
+* All other paths (the n8n internal API, the static files for the editor, etc.) should get routed to the main process
 
 **Note:** The default URL for manual workflow executions is `/webhook-test/*`. Make sure that these URLs route to your main process.
 
@@ -272,12 +286,12 @@ Only main and webhook instances running n8n 2.34.0 or later fully handle an offl
 
 ### Troubleshoot large webhook responses
 
-| Error | Cause | Fix |
-| :---- | :---- | :-- |
-| `The response is too large to be sent back from the worker`, naming `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` | Offloading is off on the worker. | Set the variable on your workers, or raise `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX`. |
-| `The response is too large to be sent back from the worker`, naming `N8N_DEFAULT_BINARY_DATA_MODE` | Binary data storage keeps data in memory, so there's nowhere to offload to. | Set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `database`, `s3`, or `azure`. |
-| `The response is too large for the binary-data store to hold` | `database` mode refused the body for its own size limit. | Raise `N8N_BINARY_DATA_DATABASE_MAX_FILE_SIZE`, up to the 1 GB a database column holds, or switch to `filesystem`, `s3`, or `azure`, which apply no limit of their own. |
-| `The stored webhook response body could not be read` | The main instance can't read the storage the worker wrote to. | Point every instance at the same storage. In `filesystem` mode, every instance needs to mount the same disk, which n8n doesn't recommend. |
+| Error                                                                                                            | Cause                                                                       | Fix                                                                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `The response is too large to be sent back from the worker`, naming `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` | Offloading is off on the worker.                                            | Set the variable on your workers, or raise `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX`.                                                                                       |
+| `The response is too large to be sent back from the worker`, naming `N8N_DEFAULT_BINARY_DATA_MODE`               | Binary data storage keeps data in memory, so there's nowhere to offload to. | Set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `database`, `s3`, or `azure`.                                                                                       |
+| `The response is too large for the binary-data store to hold`                                                    | `database` mode refused the body for its own size limit.                    | Raise `N8N_BINARY_DATA_DATABASE_MAX_FILE_SIZE`, up to the 1 GB a database column holds, or switch to `filesystem`, `s3`, or `azure`, which apply no limit of their own. |
+| `The stored webhook response body could not be read`                                                             | The main instance can't read the storage the worker wrote to.               | Point every instance at the same storage. In `filesystem` mode, every instance needs to mount the same disk, which n8n doesn't recommend.                               |
 
 ## Configure worker concurrency <a href="#configure-worker-concurrency" id="configure-worker-concurrency"></a>
 
@@ -298,22 +312,22 @@ n8n recommends setting concurrency to 5 or higher for your worker instances. Set
 
 Multi-main setup is available on:
 
-- **Self-hosted:** Enterprise
+* **Self-hosted:** Enterprise
 
 It isn't available on n8n Cloud.
 {% endhint %}
 
 In queue mode you can run more than one `main` process for high availability.
 
-In a single-mode setup, the `main` process does two sets of tasks: 
+In a single-mode setup, the `main` process does two sets of tasks:
 
-- **regular tasks**, such as running the API, serving the UI, and listening for webhooks, and 
-- **at-most-once tasks**, such as running non-HTTP triggers (timers, pollers, and persistent connections like RabbitMQ and IMAP), and pruning executions and binary data.
+* **regular tasks**, such as running the API, serving the UI, and listening for webhooks, and
+* **at-most-once tasks**, such as running non-HTTP triggers (timers, pollers, and persistent connections like RabbitMQ and IMAP), and pruning executions and binary data.
 
 In a multi-main setup, there are two kinds of `main` processes:
 
-- **followers**, which run **regular tasks**, and
-- the **leader**, which runs **both regular and at-most-once tasks**.
+* **followers**, which run **regular tasks**, and
+* the **leader**, which runs **both regular and at-most-once tasks**.
 
 ### Leader designation <a href="#leader-designation" id="leader-designation"></a>
 
@@ -321,29 +335,27 @@ In a multi-main setup, all main instances handle the leadership process transpar
 
 ### Configuring multi-main setup <a href="#configuring-multi-main-setup" id="configuring-multi-main-setup"></a>
 
-To deploy n8n in multi-main setup, ensure: 
+To deploy n8n in multi-main setup, ensure:
 
-- All `main` processes are running in queue mode and are connected to Postgres and Redis.
-- All `main` and `worker` processes are running the same version of n8n.
-- All `main` processes have set the environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` to `true`.
-- All `main` processes are running behind a load balancer with session persistence (sticky sessions) enabled.
+* All `main` processes are running in queue mode and are connected to Postgres and Redis.
+* All `main` and `worker` processes are running the same version of n8n.
+* All `main` processes have set the environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` to `true`.
+* All `main` processes are running behind a load balancer with session persistence (sticky sessions) enabled.
 
 If two or more n8n deployments share one Redis, set a different [`N8N_REDIS_KEY_PREFIX`](../basic-configuration/use-environment-variables/queue-mode.md) value for each deployment. Use the same value on every `main` and `worker` process of a deployment. This keeps leader election and messages between instances inside one deployment. Before n8n 2.3.0, the prefix doesn't apply to pub/sub channels, so use a separate Redis for each deployment.
 
 If needed, you can adjust the leader key options:
 
-| Using configuration file | Using environment variables | Description |
-| ------ | ------ | ----- |
-| `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
-| `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
+| Using configuration file    | Using environment variables             | Description                                                   |
+| --------------------------- | --------------------------------------- | ------------------------------------------------------------- |
+| `multiMainSetup.ttl:10`     | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10`       | Time to live (in seconds) for leader key in multi-main setup. |
+| `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup.   |
 
 For a reference multi-main deployment on AWS, including worker autoscaling and Redis high availability, see [Scale and run at high availability on AWS](../../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/scale-and-run-at-high-availability.md).
 
-
-
 ## Related resources
 
-* [Scaling](../scaling.md)
+* [Scaling](./)
 * [Measure performance](measure-performance.md)
 * [Control concurrency](control-concurrency.md)
 * [Manage execution data](manage-execution-data.md)

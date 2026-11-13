@@ -1,18 +1,35 @@
 ---
-description: Configure self-hosted n8n for user management
 contentType: howto
 nodeTitle: User management
 originalFilePath: hosting/configuration/user-management-self-hosted.md
-originalUrl: 'https://docs.n8n.io/hosting/configuration/user-management-self-hosted'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/user-management'
+originalUrl: https://docs.n8n.io/hosting/configuration/user-management-self-hosted
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/user-management
+description: Configure self-hosted n8n for user management
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Configure self-hosted n8n for user management <a href="#configure-self-hosted-n8n-for-user-management" id="configure-self-hosted-n8n-for-user-management"></a>
+# User management
 
-User management in n8n allows you to invite people to work in your n8n instance. 
+User management in n8n allows you to invite people to work in your n8n instance.
 
 This document describes how to configure your n8n instance to support user management, and the steps to start inviting users.
 
@@ -44,13 +61,14 @@ There are three stages to set up user management in n8n:
 
 ### Step one: SMTP <a href="#step-one-smtp" id="step-one-smtp"></a>
 
-n8n recommends setting up an SMTP server, for user invites and password resets. 
+n8n recommends setting up an SMTP server, for user invites and password resets.
 
 {% hint style="info" %}
 **Feature availability**
 
 Setting up SMTP is optional from n8n 0.210.1. You can choose to manually copy and send invite links instead of setting up SMTP. Note that if you skip this step, users can't reset passwords.
 {% endhint %}
+
 Get the following information from your SMTP provider:
 
 * Server name
@@ -58,32 +76,31 @@ Get the following information from your SMTP provider:
 * SMTP password
 * SMTP sender name
 
-To set up SMTP with n8n, configure the SMTP environment variables for your n8n instance. For information on how to set environment variables, refer to [Configuration](basic-configuration.md)
+To set up SMTP with n8n, configure the SMTP environment variables for your n8n instance. For information on how to set environment variables, refer to [Configuration](basic-configuration/)
 
-| Variable | Type | Description | Required? |
-| -------- | ---- | ----------- | --------- |
-| `N8N_EMAIL_MODE` | string | `smtp` | Required |
-| `N8N_SMTP_HOST` | string | _your_SMTP_server_name_ | Required |
-| `N8N_SMTP_PORT` | number | _your_SMTP_server_port_ Default is `465`.| Optional |
-| `N8N_SMTP_USER` | string | _your_SMTP_username_ | Optional |
-| `N8N_SMTP_PASS` | string | _your_SMTP_password_ | Optional |
-| `N8N_SMTP_OAUTH_SERVICE_CLIENT` | string | _your_OAuth_service_client_ | Optional |
-| `N8N_SMTP_OAUTH_PRIVATE_KEY` | string | _your_OAuth_private_key_ | Optional |
-| `N8N_SMTP_SENDER` | string | Sender email address. You can optionally include the sender name. Example with name: _n8n `<contact@n8n.com>`_ | Required |
-| `N8N_SMTP_SSL` | boolean | Whether to use SSL for SMTP (true) or not (false). Defaults to `true`. | Optional | 
-| `N8N_UM_EMAIL_TEMPLATES_INVITE` | string | Full path to your HTML email template. This overrides the default template for invite emails. | Optional |
-| `N8N_UM_EMAIL_TEMPLATES_PWRESET` | string | Full path to your HTML email template. This overrides the default template for password reset emails. | Optional |
-| `N8N_UM_EMAIL_TEMPLATES_WORKFLOW_SHARED` | String | Overrides the default HTML template for notifying users that a credential was shared. Provide the full path to the template. | Optional |
-| `N8N_UM_EMAIL_TEMPLATES_CREDENTIALS_SHARED` | String | Overrides the default HTML template for notifying users that a credential was shared. Provide the full path to the template. | Optional |
-| `N8N_UM_EMAIL_TEMPLATES_PROJECT_SHARED` | String | Overrides the default HTML template for notifying users that a project was shared. Provide the full path to the template. | Optional |
-
+| Variable                                    | Type    | Description                                                                                                                  | Required? |
+| ------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- | --------- |
+| `N8N_EMAIL_MODE`                            | string  | `smtp`                                                                                                                       | Required  |
+| `N8N_SMTP_HOST`                             | string  | _your\_SMTP\_server\_name_                                                                                                   | Required  |
+| `N8N_SMTP_PORT`                             | number  | _your\_SMTP\_server\_port_ Default is `465`.                                                                                 | Optional  |
+| `N8N_SMTP_USER`                             | string  | _your\_SMTP\_username_                                                                                                       | Optional  |
+| `N8N_SMTP_PASS`                             | string  | _your\_SMTP\_password_                                                                                                       | Optional  |
+| `N8N_SMTP_OAUTH_SERVICE_CLIENT`             | string  | _your\_OAuth\_service\_client_                                                                                               | Optional  |
+| `N8N_SMTP_OAUTH_PRIVATE_KEY`                | string  | _your\_OAuth\_private\_key_                                                                                                  | Optional  |
+| `N8N_SMTP_SENDER`                           | string  | Sender email address. You can optionally include the sender name. Example with name: _n8n `<contact@n8n.com>`_               | Required  |
+| `N8N_SMTP_SSL`                              | boolean | Whether to use SSL for SMTP (true) or not (false). Defaults to `true`.                                                       | Optional  |
+| `N8N_UM_EMAIL_TEMPLATES_INVITE`             | string  | Full path to your HTML email template. This overrides the default template for invite emails.                                | Optional  |
+| `N8N_UM_EMAIL_TEMPLATES_PWRESET`            | string  | Full path to your HTML email template. This overrides the default template for password reset emails.                        | Optional  |
+| `N8N_UM_EMAIL_TEMPLATES_WORKFLOW_SHARED`    | String  | Overrides the default HTML template for notifying users that a credential was shared. Provide the full path to the template. | Optional  |
+| `N8N_UM_EMAIL_TEMPLATES_CREDENTIALS_SHARED` | String  | Overrides the default HTML template for notifying users that a credential was shared. Provide the full path to the template. | Optional  |
+| `N8N_UM_EMAIL_TEMPLATES_PROJECT_SHARED`     | String  | Overrides the default HTML template for notifying users that a project was shared. Provide the full path to the template.    | Optional  |
 
 If your n8n instance is already running, you need to restart it to enable the new SMTP settings.
 
 {% hint style="info" %}
 **More configuration options**
 
-There are more configuration options available as environment variables. Refer to [Environment variables](basic-configuration/use-environment-variables/README.md) for a list. These include options to disable tags, workflow templates, and the personalization survey, if you don't want your users to see them.
+There are more configuration options available as environment variables. Refer to [Environment variables](basic-configuration/use-environment-variables/) for a list. These include options to disable tags, workflow templates, and the personalization survey, if you don't want your users to see them.
 {% endhint %}
 
 {% hint style="info" %}
@@ -118,13 +135,13 @@ To change the owner email after setup, see [Change the instance owner email for 
 This variable expects a pre-hashed bcrypt value. Setting a plaintext password breaks login.
 {% endhint %}
 
-| Variable | Type | Default | Description |
-| :------- | :--- | :------ | :---------- |
+| Variable                            | Type    | Default | Description                                                                                                                                                                                                       |
+| ----------------------------------- | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` | Boolean | `false` | Set to `true` to manage the instance owner from environment variables. When `true`, n8n overwrites the instance owner details below on every startup, locks the UI control for that user, and rejects API writes. |
-| `N8N_INSTANCE_OWNER_EMAIL` | String | - | Email address for the instance owner. |
-| `N8N_INSTANCE_OWNER_FIRST_NAME` | String | - | First name for the instance owner. |
-| `N8N_INSTANCE_OWNER_LAST_NAME` | String | - | Last name for the instance owner. |
-| `N8N_INSTANCE_OWNER_PASSWORD_HASH` | String | - | Bcrypt hash of the instance owner's password. Setting a plaintext password breaks login. |
+| `N8N_INSTANCE_OWNER_EMAIL`          | String  | -       | Email address for the instance owner.                                                                                                                                                                             |
+| `N8N_INSTANCE_OWNER_FIRST_NAME`     | String  | -       | First name for the instance owner.                                                                                                                                                                                |
+| `N8N_INSTANCE_OWNER_LAST_NAME`      | String  | -       | Last name for the instance owner.                                                                                                                                                                                 |
+| `N8N_INSTANCE_OWNER_PASSWORD_HASH`  | String  | -       | Bcrypt hash of the instance owner's password. Setting a plaintext password breaks login.                                                                                                                          |
 
 {% hint style="warning" %}
 **Owner email must be unique**

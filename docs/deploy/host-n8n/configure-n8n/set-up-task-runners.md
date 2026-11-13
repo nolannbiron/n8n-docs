@@ -26,6 +26,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Set up task runners
@@ -46,7 +48,7 @@ In production, and on any instance holding sensitive data, use [external mode](s
 
 The task runner feature consists of these components: one or more task runners, a task broker, and a task requester.
 
-![Task runner overview](<../../.gitbook/assets/task-runner-concept (1).png>)
+![Task runner overview](../../.gitbook/assets/task-runner-concept.png)
 
 Task runners connect to the task broker using a websocket connection. A task requester submits a task request to the broker where an available task runner can pick it up for execution.
 
@@ -129,7 +131,7 @@ These are the main environment variables that you can set on the n8n container r
 
 | Environment variables                                  | Description                                                                                                                                                                   |
 | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners. Deprecated from n8n 2.0. Still supported in n8n 1.x.                                                                                    |
+| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners. Deprecated from n8n 2.0. Still supported in n8n 1.x.                                                                                                    |
 | `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                                                                                                                                            |
 | `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker.                                                                                                                    |
 | `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0`            | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |

@@ -24,6 +24,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Control telemetry
@@ -64,6 +66,6 @@ To prevent all communication with n8n's servers, refer to [Isolate n8n](../basic
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-* [Security](../security.md): audit, harden, and restrict a self-hosted instance.
+* [Security](./): audit, harden, and restrict a self-hosted instance.
 * [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): More information on these environment variables.
-* [Configuration](../basic-configuration.md): How to set environment variables.
+* [Configuration](../basic-configuration/): How to set environment variables.

@@ -28,18 +28,20 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 tags:
   - Community edition
   - Enterprise edition
 ---
 
-# Compare plans and editions
+# Compare editions
 
 Every self-hosted installation runs on the same underlying product. You can stick with the free Community edition indefinitely, register for free to unlock extra features, or subscribe to a paid plan for a license key that unlocks that plan's features.
 
-- **Community edition**: the free edition. This is what n8n runs without a license key.
-- **Registered Community edition**: the free Community edition with extra features unlocked by registering your email. Still free.
-- **Business** and **Enterprise** plans: paid plans. Subscribing gives you a license key that unlocks the features for that plan.
+* **Community edition**: the free edition. This is what n8n runs without a license key.
+* **Registered Community edition**: the free Community edition with extra features unlocked by registering your email. Still free.
+* **Business** and **Enterprise** plans: paid plans. Subscribing gives you a license key that unlocks the features for that plan.
 
 {% hint style="info" %}
 **Plan, edition, or license?**
@@ -84,7 +86,7 @@ To register a new Community edition instance, select the option during your init
 
 To register an existing Community edition instance:
 
-1. Select the **three dots icon** <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="three dots icon" data-size="line"> in the lower-left corner.
+1. Select the **three dots icon** <img src="../.gitbook/assets/three-dots-horizontal.png" alt="three dots icon" data-size="line"> in the lower-left corner.
 2. Select **Settings** and then **Plan & usage**.
 3. Select **Unlock** to enter your email and then select **Send me a free license key**.
 4. Check your email for the account you entered.
@@ -99,18 +101,18 @@ When you subscribe to a paid plan, you get a license key that unlocks the featur
 
 ## Which plan or edition is right for you <a href="#which-edition-is-right-for-you" id="which-edition-is-right-for-you"></a>
 
-- Use the **Community edition** to self-host n8n for free with almost the complete feature set.
-- **Register** your Community edition (free) to also get folders, debug in editor, and custom execution data.
-- Subscribe to a **Business** or **Enterprise** plan when you need paid features like SSO, environments, projects, or external secrets. If you'd rather not manage infrastructure at all, consider [n8n Cloud](../use-n8n-cloud/start-your-free-trial.md) instead.
-
-[^1]: Data pinning allows you to temporarily freeze the output data of a node during workflow development. This allows you to develop workflows with predictable data without making repeated requests to external services. Production workflows ignore pinned data and request new data on each execution.
+* Use the **Community edition** to self-host n8n for free with almost the complete feature set.
+* **Register** your Community edition (free) to also get folders, debug in editor, and custom execution data.
+* Subscribe to a **Business** or **Enterprise** plan when you need paid features like SSO, environments, projects, or external secrets. If you'd rather not manage infrastructure at all, consider [n8n Cloud](../use-n8n-cloud/start-your-free-trial.md) instead.
 
 ## Related resources
 
 * [Host n8n](./)
-* [Install options](install-options/README.md)
-* [Configure n8n](configure-n8n/README.md)
-* [Keep n8n running](keep-n8n-running/README.md)
-* [Understand the architecture](understand-the-architecture/README.md)
-* [Deploy as an OEM integration](deploy-as-an-oem-integration/README.md)
+* [Install options](install-options/)
+* [Configure n8n](configure-n8n/)
+* [Keep n8n running](keep-n8n-running/)
+* [Understand the architecture](understand-the-architecture/)
+* [Deploy as an OEM integration](deploy-as-an-oem-integration/)
 * [Deploy with the AI starter kit](deploy-with-the-ai-starter-kit.md)
+
+[^1]: Data pinning allows you to temporarily freeze the output data of a node during workflow development. This allows you to develop workflows with predictable data without making repeated requests to external services. Production workflows ignore pinned data and request new data on each execution.

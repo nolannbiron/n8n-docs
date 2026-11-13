@@ -1,13 +1,6 @@
 ---
 title: External data storage environment variables
-description: >-
-  Environment variables to configure external data storage for your self-hosted
-  n8n instance.
 contentType: reference
-tags:
-  - environment variables
-  - external storage
-  - storage
 hide:
   - toc
   - tags
@@ -17,29 +10,53 @@ originalUrl: >-
   https://docs.n8n.io/hosting/configuration/environment-variables/external-data-storage
 url: >-
   https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-data-storage
+description: >-
+  Environment variables to configure external data storage for your self-hosted
+  n8n instance.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+tags:
+  - environment variables
+  - external storage
+  - storage
 ---
 
-# External data storage environment variables <a href="#external-data-storage-environment-variables" id="external-data-storage-environment-variables"></a>
+# External data storage
 
 {% hint style="info" %}
 **File-based configuration**
 
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](../#keeping-sensitive-data-in-separate-files) for more details.
 {% endhint %}
 
 Refer to [External storage](../../scaling/use-external-storage.md) for more information on using external storage for binary data and execution data.
 
-| Variable | Type  | Default  | Description |
-| :------- | :---- | :------- | :---------- |
-| `N8N_EXTERNAL_STORAGE_S3_HOST` | String | - | Host of the n8n bucket in S3-compatible external storage. For example, `s3.us-east-1.amazonaws.com` |
-| `N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME` | String | - | Name of the n8n bucket in S3-compatible external storage. |
-| `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` | String | - | Region of the n8n bucket in S3-compatible external storage. For example, `us-east-1`|
-| `N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY` | String | - | Access key in S3-compatible external storage |
-| `N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET` | String | - | Access secret in S3-compatible external storage. |
-| `N8N_EXTERNAL_STORAGE_S3_AUTH_AUTO_DETECT` | Boolean | - | Use automatic credential detection to authenticate S3 calls for external storage. This will ignore the access key and access secret and use the default [credential provider chain](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials-node.html#credchain). |
+| Variable                                   | Type    | Default | Description                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------ | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `N8N_EXTERNAL_STORAGE_S3_HOST`             | String  | -       | Host of the n8n bucket in S3-compatible external storage. For example, `s3.us-east-1.amazonaws.com`                                                                                                                                                                                             |
+| `N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME`      | String  | -       | Name of the n8n bucket in S3-compatible external storage.                                                                                                                                                                                                                                       |
+| `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION`    | String  | -       | Region of the n8n bucket in S3-compatible external storage. For example, `us-east-1`                                                                                                                                                                                                            |
+| `N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY`       | String  | -       | Access key in S3-compatible external storage                                                                                                                                                                                                                                                    |
+| `N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET`    | String  | -       | Access secret in S3-compatible external storage.                                                                                                                                                                                                                                                |
+| `N8N_EXTERNAL_STORAGE_S3_AUTH_AUTO_DETECT` | Boolean | -       | Use automatic credential detection to authenticate S3 calls for external storage. This will ignore the access key and access secret and use the default [credential provider chain](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials-node.html#credchain). |
 
 ## Azure Blob Storage <a href="#azure-blob-storage" id="azure-blob-storage"></a>
 
@@ -48,7 +65,7 @@ Refer to [External storage](../../scaling/use-external-storage.md) for more info
 
 Storing execution data or binary data in Azure Blob Storage is available on:
 
-- **Self-hosted:** Business, Enterprise
+* **Self-hosted:** Business, Enterprise
 
 It isn't available on n8n Cloud. Add your [license key](../../manage-your-license.md) to unlock this feature.
 {% endhint %}
@@ -63,14 +80,14 @@ For authentication, choose one of these three options. n8n checks them in this o
 
 Set `N8N_EXTERNAL_STORAGE_AZURE_ENDPOINT` only if you use a custom endpoint, such as Azurite or a sovereign cloud.
 
-| Variable | Type  | Default  | Description |
-| :------- | :---- | :------- | :---------- |
-| `N8N_EXTERNAL_STORAGE_AZURE_CONNECTION_STRING` | String | - | Connection string for Azure Blob Storage. Takes precedence over the account name and key when set. |
-| `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_NAME` | String | - | Storage account name. Use with an account key or managed identity. |
-| `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_KEY` | String | - | Storage account key. Use with the account name. |
-| `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` | String | - | Name of the blob container to store execution data and/or binary data in. Required for Azure Blob Storage. |
-| `N8N_EXTERNAL_STORAGE_AZURE_ENDPOINT` | String | - | Custom blob endpoint, for example for Azurite or sovereign clouds. |
-| `N8N_EXTERNAL_STORAGE_AZURE_AUTH_AUTO_DETECT` | Boolean | `false` | Authenticate via `DefaultAzureCredential` (managed identity, environment, or Azure CLI) instead of an account key. Ignores the account key when enabled. |
+| Variable                                       | Type    | Default | Description                                                                                                                                              |
+| ---------------------------------------------- | ------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `N8N_EXTERNAL_STORAGE_AZURE_CONNECTION_STRING` | String  | -       | Connection string for Azure Blob Storage. Takes precedence over the account name and key when set.                                                       |
+| `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_NAME`      | String  | -       | Storage account name. Use with an account key or managed identity.                                                                                       |
+| `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_KEY`       | String  | -       | Storage account key. Use with the account name.                                                                                                          |
+| `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME`    | String  | -       | Name of the blob container to store execution data and/or binary data in. Required for Azure Blob Storage.                                               |
+| `N8N_EXTERNAL_STORAGE_AZURE_ENDPOINT`          | String  | -       | Custom blob endpoint, for example for Azurite or sovereign clouds.                                                                                       |
+| `N8N_EXTERNAL_STORAGE_AZURE_AUTH_AUTO_DETECT`  | Boolean | `false` | Authenticate via `DefaultAzureCredential` (managed identity, environment, or Azure CLI) instead of an account key. Ignores the account key when enabled. |
 
 ## Related resources
 

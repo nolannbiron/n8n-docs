@@ -2,22 +2,38 @@
 contentType: tutorial
 nodeTitle: Deploy to Heroku
 originalFilePath: hosting/installation/server-setups/heroku.md
-originalUrl: 'https://docs.n8n.io/hosting/installation/server-setups/heroku'
+originalUrl: https://docs.n8n.io/hosting/installation/server-setups/heroku
 url: >-
   https://docs.n8n.io/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-heroku
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Hosting n8n on Heroku <a href="#hosting-n8n-on-heroku" id="hosting-n8n-on-heroku"></a>
+# Deploy to Heroku
 
 This hosting guide shows you how to self-host n8n on Heroku. It uses:
 
-
-- [Docker Compose](https://docs.docker.com/compose/) to create and define the application components and how they work together.
-- [Heroku's PostgreSQL service](https://devcenter.heroku.com/categories/heroku-postgres) to host n8n's data storage.
-- A **Deploy to Heroku** button offering a one click, with minor configuration, deployment.
+* [Docker Compose](https://docs.docker.com/compose/) to create and define the application components and how they work together.
+* [Heroku's PostgreSQL service](https://devcenter.heroku.com/categories/heroku-postgres) to host n8n's data storage.
+* A **Deploy to Heroku** button offering a one click, with minor configuration, deployment.
 
 {% hint style="info" %}
 **Self-hosting knowledge prerequisites**
@@ -37,10 +53,8 @@ n8n recommends self-hosting for expert users. Mistakes can lead to data loss, se
 
 n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 
-Current `stable`: 2.47.7
-Current `beta`: 2.48.4
+Current `stable`: 2.47.7 Current `beta`: 2.48.4
 {% endhint %}
-
 
 ## Use the deployment template to create a Heroku project <a href="#use-the-deployment-template-to-create-a-heroku-project" id="use-the-deployment-template-to-create-a-heroku-project"></a>
 
@@ -56,8 +70,8 @@ Heroku pre-fills the configuration options defined in the `env` section of the `
 
 You can change any of these values to suit your needs. You must change the following values:
 
-- **N8N_ENCRYPTION_KEY**, which n8n uses to [encrypt user account details](../../configure-n8n/basic-configuration/use-environment-variables/deployment.md) before saving to the database.
-- **WEBHOOK_URL** should match the application name you create to ensure that webhooks have the correct URL.
+* **N8N\_ENCRYPTION\_KEY**, which n8n uses to [encrypt user account details](../../configure-n8n/basic-configuration/use-environment-variables/deployment.md) before saving to the database.
+* **WEBHOOK\_URL** should match the application name you create to ensure that webhooks have the correct URL.
 
 ### Deploy n8n <a href="#deploy-n8n" id="deploy-n8n"></a>
 
@@ -98,7 +112,7 @@ The `heroku.yml` file defines the application you want to create on Heroku. It c
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-* Learn more about [configuring](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling) n8n.
+* Learn more about [configuring](../../configure-n8n/basic-configuration/use-environment-variables/) and [scaling](../../configure-n8n/scaling/) n8n.
 * Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow).
 
 ## Related resources

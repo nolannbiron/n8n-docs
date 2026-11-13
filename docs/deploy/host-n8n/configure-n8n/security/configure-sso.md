@@ -1,25 +1,42 @@
 ---
 title: Set up Single Sign-On (SSO)
-description: Set up SAML or OIDC Single Sign-On for your self-hosted n8n instance.
 contentType: howto
 nodeTitle: Configure SSO
 originalFilePath: hosting/securing/set-up-sso.md
-originalUrl: 'https://docs.n8n.io/hosting/securing/set-up-sso'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/configure-sso'
+originalUrl: https://docs.n8n.io/hosting/securing/set-up-sso
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/configure-sso
+description: Set up SAML or OIDC Single Sign-On for your self-hosted n8n instance.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Set up Single Sign-On (SSO) <a href="#set-up-single-sign-on-sso" id="set-up-single-sign-on-sso"></a>
+# Configure SSO
 
 {% hint style="info" %}
 **Feature availability**
 
 Single sign-on is available on:
 
-- **n8n Cloud:** Enterprise
-- **Self-hosted:** Business, Enterprise
+* **n8n Cloud:** Enterprise
+* **Self-hosted:** Business, Enterprise
 
 You need to be an instance owner or admin to enable and configure SAML or OIDC.
 {% endhint %}
@@ -41,4 +58,4 @@ You can also configure SSO from environment variables instead of through the UI.
 
 ## Related resources
 
-* [Security](../security.md)
+* [Security](./)

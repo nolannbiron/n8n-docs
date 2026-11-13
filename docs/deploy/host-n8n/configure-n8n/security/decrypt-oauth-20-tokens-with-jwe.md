@@ -1,24 +1,41 @@
 ---
 title: JWE token decryption for OAuth 2.0 credentials
-description: >-
-  Enable JWE-encrypted OAuth 2.0 tokens on your n8n instance so your identity
-  provider can encrypt access and ID tokens that only your instance can decrypt.
 contentType: howto
 nodeTitle: Decrypt OAuth 2.0 tokens with JWE
 originalFilePath: hosting/securing/oauth2-jwe-token-decryption.md
-originalUrl: 'https://docs.n8n.io/hosting/securing/oauth2-jwe-token-decryption'
+originalUrl: https://docs.n8n.io/hosting/securing/oauth2-jwe-token-decryption
 url: >-
   https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/decrypt-oauth-20-tokens-with-jwe
+status: preview
+description: >-
+  Enable JWE-encrypted OAuth 2.0 tokens on your n8n instance so your identity
+  provider can encrypt access and ID tokens that only your instance can decrypt.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
-status: preview
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 tags:
   - tag: preview
     primary: true
 ---
 
-# JWE token decryption for OAuth 2.0 credentials <a href="#jwe-token-decryption-for-oauth-20-credentials" id="jwe-token-decryption-for-oauth-20-credentials"></a>
+# Decrypt OAuth 2.0 tokens with JWE
 
 {% hint style="info" %}
 **Feature availability**
@@ -56,14 +73,13 @@ You need:
 
 ## Enable JWE token decryption <a href="#enable-jwe-token-decryption" id="enable-jwe-token-decryption"></a>
 
-1. Set the following environment variable on **all** n8n instances, both main and workers:
+1.  Set the following environment variable on **all** n8n instances, both main and workers:
 
     ```sh
     N8N_ENV_FEAT_OAUTH2_JWE=true
     ```
-
 2. Restart all instances. On startup, n8n generates the RSA key pair and publishes the public key at the JWKS endpoint.
-3. To confirm the feature is active, request the JWKS endpoint and check that it returns one key with `"alg": "RSA-OAEP-256"`:
+3.  To confirm the feature is active, request the JWKS endpoint and check that it returns one key with `"alg": "RSA-OAEP-256"`:
 
     ```sh
     curl https://<your-n8n-host>/rest/.well-known/jwks.json
@@ -105,12 +121,12 @@ n8n exposes the instance's public encryption keys at:
 <instance-base-url>/<rest-endpoint>/.well-known/jwks.json
 ```
 
-| Property | Value |
-| :------- | :---- |
-| Default path | `/rest/.well-known/jwks.json` |
-| Authentication | None (publicly accessible, by design) |
-| Rate limit | `N8N_OAUTH_JWE_JWKS_PER_MINUTE` requests per IP per minute (default `60`) |
-| Cache headers | `Cache-Control: public, max-age=3600, must-revalidate` |
+| Property        | Value                                                                            |
+| --------------- | -------------------------------------------------------------------------------- |
+| Default path    | `/rest/.well-known/jwks.json`                                                    |
+| Authentication  | None (publicly accessible, by design)                                            |
+| Rate limit      | `N8N_OAUTH_JWE_JWKS_PER_MINUTE` requests per IP per minute (default `60`)        |
+| Cache headers   | `Cache-Control: public, max-age=3600, must-revalidate`                           |
 | Response format | [JWK Set](https://datatracker.ietf.org/doc/html/rfc7517#section-5) (RFC 7517 §5) |
 
 If you customized `N8N_ENDPOINT_REST`, substitute your value for `rest` in the path.
@@ -130,7 +146,7 @@ The JWKS schema reserves elliptic-curve algorithms (`ECDH-ES` and variants), but
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-* [Security](../security.md): audit, harden, and restrict a self-hosted instance.
+* [Security](./): audit, harden, and restrict a self-hosted instance.
 * [HTTP Request credentials: Using OAuth2](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/credentials/httprequest#using-oauth2): set up the generic OAuth 2.0 credential.
 * [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): reference for `N8N_ENV_FEAT_OAUTH2_JWE` and `N8N_OAUTH_JWE_JWKS_PER_MINUTE`.
 * [Encryption key rotation](rotate-encryption-keys.md): rotate the data encryption key that protects the JWE private key at rest.

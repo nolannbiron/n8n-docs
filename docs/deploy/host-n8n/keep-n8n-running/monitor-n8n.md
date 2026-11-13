@@ -1,19 +1,35 @@
 ---
-description: Get metrics for a health check
 contentType: howto
 nodeTitle: Monitor n8n
 originalFilePath: hosting/logging-monitoring/monitoring.md
-originalUrl: 'https://docs.n8n.io/hosting/logging-monitoring/monitoring'
-url: 'https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/monitor-n8n'
+originalUrl: https://docs.n8n.io/hosting/logging-monitoring/monitoring
+url: https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/monitor-n8n
+description: Get metrics for a health check
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Monitoring <a href="#monitoring" id="monitoring"></a>
+# Monitor n8n
 
 There are three API endpoints you can call to check the status of your instance: `/healthz`, `healthz/readiness`, and `/metrics`.
-
 
 ## healthz and healthz/readiness <a href="#healthz-and-healthzreadiness" id="healthz-and-healthzreadiness"></a>
 
@@ -54,11 +70,10 @@ Access the endpoint:
 
 The `/metrics` endpoint is available on:
 
-- **Self-hosted:** All editions
+* **Self-hosted:** All editions
 
 It isn't available on n8n Cloud.
 {% endhint %}
-
 
 ## How do I enable metrics and health checks? <a href="#enable-metrics-and-health-checks-for-self-hosted-n8n" id="enable-metrics-and-health-checks-for-self-hosted-n8n"></a>
 
@@ -73,7 +88,7 @@ N8N_METRICS=true
 QUEUE_HEALTH_CHECK_ACTIVE=true
 ```
 
-Refer to [Configuration methods](../configure-n8n/basic-configuration.md) for more information on how to configure your instance using environment variables.
+Refer to [Configuration methods](../configure-n8n/basic-configuration/) for more information on how to configure your instance using environment variables.
 
 ## Related resources
 

@@ -2,15 +2,32 @@
 contentType: tutorial
 nodeTitle: Deploy to AWS
 originalFilePath: hosting/installation/server-setups/aws.md
-originalUrl: 'https://docs.n8n.io/hosting/installation/server-setups/aws'
+originalUrl: https://docs.n8n.io/hosting/installation/server-setups/aws
 url: >-
   https://docs.n8n.io/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Hosting n8n on Amazon Web Services <a href="#hosting-n8n-on-amazon-web-services" id="hosting-n8n-on-amazon-web-services"></a>
+# Deploy to AWS
 
 This hosting guide shows you how to self-host n8n with Amazon Web Services (AWS). It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
 
@@ -23,7 +40,7 @@ This guide uses [EKS](https://aws.amazon.com/eks/) as the hosting option. Using 
 {% hint style="info" %}
 **Looking for a production-grade, highly available setup?**
 
-For a multi-main deployment with managed PostgreSQL, Redis, and autoscaling workers, see [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/README.md).
+For a multi-main deployment with managed PostgreSQL, Redis, and autoscaling workers, see [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/).
 {% endhint %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
@@ -50,8 +67,7 @@ n8n recommends self-hosting for expert users. Mistakes can lead to data loss, se
 
 n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 
-Current `stable`: 2.47.7
-Current `beta`: 2.48.4
+Current `stable`: 2.47.7 Current `beta`: 2.48.4
 {% endhint %}
 
 ## Create a cluster <a href="#create-a-cluster" id="create-a-cluster"></a>
@@ -63,7 +79,6 @@ eksctl create cluster --name n8n --region <your-aws-region>
 ```
 
 This can take a while to create the cluster.
-
 
 Once the cluster is created, eksctl automatically sets the kubectl context to the cluster.
 
@@ -90,7 +105,6 @@ For larger scale n8n deployments, Postgres provides a more robust database backe
 ### Configure volume for persistent storage <a href="#configure-volume-for-persistent-storage" id="configure-volume-for-persistent-storage"></a>
 
 To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default AWS storage class, [gp3](https://docs.aws.amazon.com/ebs/latest/userguide/general-purpose.html#gp3-ebs-volume-type), is suitable for this purpose. This is defined in the `postgres-claim0-persistentvolumeclaim.yaml` manifest.
-
 
 ```yaml
 …
@@ -144,17 +158,17 @@ resources:
 
 This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n Cloud offerings:
 
-| Tier | RAM | CPU |
-| :--- | :--- | :--- |
-| Starter | 320mb | 10 millicore burstable |
-| Pro (10k executions) | 640mb | 20 millicore burstable |
+| Tier                 | RAM    | CPU                    |
+| -------------------- | ------ | ---------------------- |
+| Starter              | 320mb  | 10 millicore burstable |
+| Pro (10k executions) | 640mb  | 20 millicore burstable |
 | Pro (50k executions) | 1280mb | 80 millicore burstable |
 
 ### Optional: Environment variables <a href="#optional-environment-variables" id="optional-environment-variables"></a>
 
 You can configure n8n settings and behaviors using environment variables.
 
-Create an `n8n-secret.yaml` file. Refer to [Environment variables](../../configure-n8n/basic-configuration/use-environment-variables/README.md) for n8n environment variables details.
+Create an `n8n-secret.yaml` file. Refer to [Environment variables](../../configure-n8n/basic-configuration/use-environment-variables/) for n8n environment variables details.
 
 ## Deployments <a href="#deployments" id="deployments"></a>
 
@@ -170,11 +184,11 @@ To move an existing database across, follow the official [PostgreSQL upgrade gui
 
 The manifests define the following:
 
-- Send the environment variables defined to each application pod
-- Define the container image to use
-- Set resource consumption limits
-- The `volumes` defined earlier and `volumeMounts` to define the path in the container to mount volumes.
-- Scaling and restart policies. The example manifests define one instance of each pod. You should change this to meet your needs.
+* Send the environment variables defined to each application pod
+* Define the container image to use
+* Set resource consumption limits
+* The `volumes` defined earlier and `volumeMounts` to define the path in the container to mount volumes.
+* Scaling and restart policies. The example manifests define one instance of each pod. You should change this to meet your needs.
 
 ## Services <a href="#services" id="services"></a>
 
@@ -197,7 +211,6 @@ You may see an error message about not finding an "n8n" namespace as that resour
 kubectl apply -f namespace.yaml
 ```
 {% endhint %}
-
 
 ## Set up DNS <a href="#set-up-dns" id="set-up-dns"></a>
 
@@ -226,13 +239,13 @@ kubectl delete -f .
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-* Learn more about [configuring](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling) n8n.
+* Learn more about [configuring](../../configure-n8n/basic-configuration/use-environment-variables/) and [scaling](../../configure-n8n/scaling/) n8n.
 * Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow).
 
 ## Related resources
 
 * [Use a cloud provider](./)
-* [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/README.md)
+* [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/)
 * [DigitalOcean](deploy-to-digital-ocean.md)
 * [Heroku](deploy-to-heroku.md)
 * [Hetzner Cloud](deploy-to-hetzner.md)

@@ -23,6 +23,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Manage your data
@@ -86,7 +88,7 @@ In the n8n Cloud console:
 
 In your workflow settings:
 
-1. Select the **Options** <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Options menu" data-size="line"> menu.
+1. Select the **Options** <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Options menu" data-size="line"> menu.
 2. Select **Settings**. n8n opens the **Workflow settings** modal.
 3. Change **Save successful production executions** to **Do not save**.
 

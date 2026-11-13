@@ -1,18 +1,35 @@
 ---
 title: Configuration examples
-description: An overview containing different configuration examples.
 contentType: overview
 nodeTitle: Configuration examples
 originalFilePath: hosting/configuration/configuration-examples/index.md
-originalUrl: 'https://docs.n8n.io/hosting/configuration/configuration-examples'
+originalUrl: https://docs.n8n.io/hosting/configuration/configuration-examples
 url: >-
   https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples
+description: An overview containing different configuration examples.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Configuration examples <a href="#configuration-examples" id="configuration-examples"></a>
+# Configuration examples
 
 This section contains examples for how to configure n8n to solve particular use cases.
 
@@ -34,7 +51,5 @@ This section contains examples for how to configure n8n to solve particular use 
 
 ## Related resources
 
-* [Basic configuration](../../basic-configuration.md)
-* [Environment variables](../use-environment-variables/README.md)
-
-
+* [Basic configuration](../)
+* [Environment variables](../use-environment-variables/)

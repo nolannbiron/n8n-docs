@@ -1,33 +1,49 @@
 ---
-description: External storage of binary data and execution data for your n8n instance.
 contentType: howto
-tags:
-  - external storage
-  - storage
 hide:
   - tags
 search:
   boost: 1.5
 nodeTitle: Use external storage
 originalFilePath: hosting/scaling/external-storage.md
-originalUrl: 'https://docs.n8n.io/hosting/scaling/external-storage'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/use-external-storage'
+originalUrl: https://docs.n8n.io/hosting/scaling/external-storage
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/use-external-storage
+description: External storage of binary data and execution data for your n8n instance.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+tags:
+  - external storage
+  - storage
 ---
 
-# External storage <a href="#external-storage" id="external-storage"></a>
+# Use external storage
 
 {% hint style="info" %}
 **Feature availability**
 
 External storage is available on:
 
-- **Self-hosted:** Business, Enterprise
+* **Self-hosted:** Business, Enterprise
 
 It isn't available on n8n Cloud.
-
 {% endhint %}
 
 n8n can store binary data and execution data produced by workflow executions externally. This feature is useful to avoid relying on the database or filesystem for storing large amounts of data.
@@ -41,7 +57,7 @@ n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welc
 
 S3 binary data storage is available on:
 
-- **Self-hosted:** Business, Enterprise
+* **Self-hosted:** Business, Enterprise
 
 It isn't available on n8n Cloud.
 
@@ -68,7 +84,7 @@ Create and configure a bucket following the [AWS documentation](https://docs.aws
 
 Set a bucket-level lifecycle configuration so that S3 automatically deletes old binary data. n8n delegates pruning of binary data to S3, so setting a lifecycle configuration is required unless you want to preserve binary data indefinitely.
 
-If the bucket also holds execution data, read [Lifecycle rules when binary data and execution data share storage](#lifecycle-rules-when-binary-data-and-execution-data-share-storage) before you add a rule.
+If the bucket also holds execution data, read [Lifecycle rules when binary data and execution data share storage](use-external-storage.md#lifecycle-rules-when-binary-data-and-execution-data-share-storage) before you add a rule.
 
 Once you finish creating the bucket, you will have a host, bucket name and region, and an access key ID and secret access key. You need to set them in n8n's environment:
 
@@ -90,8 +106,8 @@ If your provider doesn't require a region, you can set `N8N_EXTERNAL_STORAGE_S3_
 
 Starting from n8n 2.6.4, the value of the environment variable `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` must meet these conditions:
 
-- Only contain alphanumeric characters (`a-z`, `A-Z`, `0-9`) and hyphens (`-`).
-- Not contain underscores (`_`) or other special characters.
+* Only contain alphanumeric characters (`a-z`, `A-Z`, `0-9`) and hyphens (`-`).
+* Not contain underscores (`_`) or other special characters.
 
 If these conditions are not met, n8n will fail startup with connection errors even if the storage endpoint is reachable and was previously working in older versions.
 
@@ -103,7 +119,6 @@ Tell n8n to store binary data in S3:
 export N8N_AVAILABLE_BINARY_DATA_MODES=filesystem,s3
 export N8N_DEFAULT_BINARY_DATA_MODE=s3
 ```
-
 
 {% hint style="info" %}
 **Auth autodetection**
@@ -117,7 +132,7 @@ Restart the server to load the new configuration.
 
 After you enable S3, n8n writes and reads any new binary data to and from the S3 bucket. n8n writes binary data to your S3 bucket in this format:
 
-```text
+```
 workflows/<workflow-id>/executions/<execution-id>/binary_data/<binary-file-id>
 ```
 
@@ -150,7 +165,7 @@ n8n supports [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storag
 
 Azure Blob Storage for binary data is available on:
 
-- **Self-hosted:** Business, Enterprise
+* **Self-hosted:** Business, Enterprise
 
 It isn't available on n8n Cloud.
 
@@ -171,7 +186,7 @@ For authentication, n8n supports a connection string, an account name and key, o
 
 n8n delegates pruning of binary data to Azure, so set a [lifecycle management policy](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview) to automatically delete old binary data. Setting a lifecycle policy is required unless you want to preserve binary data indefinitely. You set the policy on the storage account. A rule without a `prefixMatch` applies to all blobs in the account, so scope each rule to your container with a `prefixMatch` that starts with the container name.
 
-If the container also holds execution data, read [Lifecycle rules when binary data and execution data share storage](#lifecycle-rules-when-binary-data-and-execution-data-share-storage) before you add a policy.
+If the container also holds execution data, read [Lifecycle rules when binary data and execution data share storage](use-external-storage.md#lifecycle-rules-when-binary-data-and-execution-data-share-storage) before you add a policy.
 
 Tell n8n to store binary data in Azure Blob Storage:
 
@@ -186,7 +201,7 @@ Restart the server to load the new configuration.
 
 After you enable Azure Blob Storage, n8n writes and reads any new binary data to and from the container. n8n writes binary data to your container in this format:
 
-```text
+```
 workflows/<workflow-id>/executions/<execution-id>/binary_data/<binary-file-id>
 ```
 
@@ -198,7 +213,7 @@ If you store binary data in Azure Blob Storage and later switch to filesystem mo
 
 n8n can also store execution data in S3.
 
-Configure the S3 bucket and credentials as described in the binary data [setup](#setup) section, then tell n8n to store execution data in S3:
+Configure the S3 bucket and credentials as described in the binary data [setup](use-external-storage.md#setup) section, then tell n8n to store execution data in S3:
 
 ```sh
 export N8N_EXECUTION_DATA_STORAGE_MODE=s3
@@ -214,7 +229,7 @@ S3 execution data storage requires a Business or Enterprise plan with an active 
 
 After you enable S3 execution data storage, n8n writes the data of any new execution to your S3 bucket in this format:
 
-```text
+```
 workflows/<workflow-id>/executions/<execution-id>/execution_data/bundle.json
 ```
 
@@ -224,13 +239,13 @@ n8n prunes execution data in S3 itself, using the standard [executions pruning](
 
 If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](../../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md#execution-data-in-s3) for the module-specific setup.
 
-To expire binary data in a bucket that also holds execution data, read [Lifecycle rules when binary data and execution data share storage](#lifecycle-rules-when-binary-data-and-execution-data-share-storage).
+To expire binary data in a bucket that also holds execution data, read [Lifecycle rules when binary data and execution data share storage](use-external-storage.md#lifecycle-rules-when-binary-data-and-execution-data-share-storage).
 
 ## Lifecycle rules when binary data and execution data share storage
 
 When you store both binary data and execution data with the same provider, they share one S3 bucket (`N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME`) or Azure container (`N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME`). Both data types sit under the same prefix for each execution:
 
-```text
+```
 workflows/<workflow-id>/executions/<execution-id>/binary_data/<binary-file-id>
 workflows/<workflow-id>/executions/<execution-id>/execution_data/bundle.json
 ```
@@ -266,7 +281,7 @@ With versioning on, objects that expire or that n8n deletes stay as older versio
 
 ## Related resources
 
-* [Scaling](../scaling.md)
+* [Scaling](./)
 * [Measure performance](measure-performance.md)
 * [Enable queue mode](enable-queue-mode.md)
 * [Control concurrency](control-concurrency.md)

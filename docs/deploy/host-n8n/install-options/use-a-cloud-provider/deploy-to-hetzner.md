@@ -2,15 +2,32 @@
 contentType: tutorial
 nodeTitle: Deploy to Hetzner
 originalFilePath: hosting/installation/server-setups/hetzner.md
-originalUrl: 'https://docs.n8n.io/hosting/installation/server-setups/hetzner'
+originalUrl: https://docs.n8n.io/hosting/installation/server-setups/hetzner
 url: >-
   https://docs.n8n.io/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-hetzner
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Hosting n8n on Hetzner cloud <a href="#hosting-n8n-on-hetzner-cloud" id="hosting-n8n-on-hetzner-cloud"></a>
+# Deploy to Hetzner
 
 This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It uses:
 
@@ -37,8 +54,7 @@ n8n recommends self-hosting for expert users. Mistakes can lead to data loss, se
 
 n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 
-Current `stable`: 2.47.7
-Current `beta`: 2.48.4
+Current `stable`: 2.47.7 Current `beta`: 2.48.4
 {% endhint %}
 
 ## Create a server <a href="#create-a-server" id="create-a-server"></a>
@@ -54,6 +70,7 @@ You can change most of the settings to suit your needs, but as this guide uses D
 
 When creating the server, Hetzner asks you to choose a plan. For most usage levels, the CPX11 type is enough. If you plan to add n8n Assistant, choose a plan with at least 4 GB RAM / 2 vCPU instead. CPX11 doesn't have enough headroom once the sandbox is added.
 {% endhint %}
+
 {% hint style="info" %}
 **SSH keys**
 
@@ -93,8 +110,8 @@ cd n8n-docker-caddy
 
 The host operating system (the server) copies the two folders you created to Docker containers to make them available to Docker. The two folders are:
 
-- `caddy_config`: Holds the Caddy configuration files.
-- `local_files`: A folder for files you upload or add using n8n.
+* `caddy_config`: Holds the Caddy configuration files.
+* `local_files`: A folder for files you upload or add using n8n.
 
 ### Create Docker volume <a href="#create-docker-volume" id="create-docker-volume"></a>
 
@@ -125,7 +142,9 @@ sudo ufw allow 80
 sudo ufw allow 443
 ```
 
-{% hint style="info" %} If you add n8n Assistant later, its sandbox services stay internal to the Compose network. You don't need to open any additional ports for them. {% endhint %}
+{% hint style="info" %}
+If you add n8n Assistant later, its sandbox services stay internal to the Compose network. You don't need to open any additional ports for them.
+{% endhint %}
 
 ## Configure n8n <a href="#configure-n8n" id="configure-n8n"></a>
 
@@ -139,14 +158,14 @@ nano .env
 
 The file contains inline comments to help you know what to change.
 
-Refer to [Environment variables](../../configure-n8n/basic-configuration/use-environment-variables/README.md) for n8n environment variables details.
+Refer to [Environment variables](../../configure-n8n/basic-configuration/use-environment-variables/) for n8n environment variables details.
 
 ## The Docker Compose file <a href="#the-docker-compose-file" id="the-docker-compose-file"></a>
 
 The Docker Compose file (`docker-compose.yml`) defines the services the application needs, in this case Caddy and n8n. There's no separate database service. n8n uses its built-in SQLite database by default.
 
-- The Caddy service definition defines the ports it uses and the local volumes to copy to the containers.
-- The n8n service definition defines the ports it uses, the environment variables n8n needs to run (some defined in the `.env` file), and the volumes it needs to copy to the containers.
+* The Caddy service definition defines the ports it uses and the local volumes to copy to the containers.
+* The n8n service definition defines the ports it uses, the environment variables n8n needs to run (some defined in the `.env` file), and the volumes it needs to copy to the containers.
 
 The Docker Compose file uses the environment variables set in the `.env` file, so you shouldn't need to change it's content, but to take a look, run the following command:
 
@@ -164,7 +183,7 @@ nano caddy_config/Caddyfile
 
 Change the placeholder subdomain to yours. If you followed the steps to name the subdomain n8n, your full domain is similar to `n8n.example.com`. The `n8n` in the `reverse_proxy` setting tells Caddy to use the service definition defined in the `docker-compose.yml` file:
 
-```text
+```
 n8n.<domain>.<suffix> {
     reverse_proxy n8n:5678 {
       flush_interval -1
@@ -202,132 +221,127 @@ n8n Assistant needs a sandbox to run code in. You can add the same sandbox stack
 * **Resize if needed.** The sandbox runner uses Docker-in-Docker, which needs more headroom than n8n alone. Make sure you provision at least 4 GB RAM / 2 vCPU.
 * **No networking changes required.** Caddy only ever proxies n8n itself; the sandbox services stay internal to the Compose network and don't need DNS, firewall, or Caddyfile changes.
 
-1. Add the sandbox secrets to `.env`, alongside the variables already there:
+1.  Add the sandbox secrets to `.env`, alongside the variables already there:
 
-   ```
-   # Sandbox service secrets — pick your own values
-   SANDBOX_API_KEYS=change-me-api-key
-   SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
-   SANDBOX_API_RUNNER_API_KEY=change-me-runner-key
+    ```
+    # Sandbox service secrets — pick your own values
+    SANDBOX_API_KEYS=change-me-api-key
+    SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
+    SANDBOX_API_RUNNER_API_KEY=change-me-runner-key
 
-   # Web search: secret for the bundled SearXNG instance — pick your own value
-   SEARXNG_SECRET=change-me-searxng-secret
-   ```
+    # Web search: secret for the bundled SearXNG instance — pick your own value
+    SEARXNG_SECRET=change-me-searxng-secret
+    ```
+2.  Create a `searxng-settings.yml` file alongside your other config files (the stock SearXNG image only serves HTML; this turns on the JSON API n8n's web search needs):
 
-2. Create a `searxng-settings.yml` file alongside your other config files (the stock SearXNG image only serves HTML; this turns on the JSON API n8n's web search needs):
+    ```yaml
+    use_default_settings: true
+    search:
+      formats:
+        - html
+        - json
+    ```
+3.  Open `docker-compose.yml` and add the sandbox and search services alongside the existing `caddy` and `n8n` services:
 
-   ``` yaml
-   use_default_settings: true
-   search:
-     formats:
-       - html
-       - json
-   ```
+    ```yaml
+    volumes:
+      sandbox-tls:
 
-3. Open `docker-compose.yml` and add the sandbox and search services alongside the existing `caddy` and `n8n` services:
+    services:
+      sandbox-certs:
+        image: ghcr.io/n8n-io/n8n-sandbox-service-api:latest
+        user: '0:0'
+        entrypoint: ['sh', '-c']
+        command:
+          - >
+            bootstrap-mtls.sh --out-dir /tls --api-san sandbox-api
+            --control-san-prefix sandbox-runner &&
+            chown -R sandbox-api:sandbox-api /tls/api
+        environment:
+          NUM_RUNNERS: '1'
+        volumes:
+          - sandbox-tls:/tls
 
-   ```yaml
-   volumes:
-     sandbox-tls:
+      sandbox-api:
+        image: ghcr.io/n8n-io/n8n-sandbox-service-api:latest
+        depends_on:
+          sandbox-certs:
+            condition: service_completed_successfully
+        environment:
+          SANDBOX_API_KEYS: ${SANDBOX_API_KEYS}
+          SANDBOX_API_RUNNER_REGISTRATION_TOKEN: ${SANDBOX_API_RUNNER_REGISTRATION_TOKEN}
+          SANDBOX_API_RUNNER_API_KEY: ${SANDBOX_API_RUNNER_API_KEY}
+          SANDBOX_API_GRPC_TLS_CERT_FILE: /tls/api/grpc-server.crt
+          SANDBOX_API_GRPC_TLS_KEY_FILE: /tls/api/grpc-server.key
+          SANDBOX_API_GRPC_TLS_CLIENT_CA_FILE: /tls/api/ca.crt
+          SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_CA_FILE: /tls/api/ca.crt
+          SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_CERT_FILE: /tls/api/control-grpc-api-client.crt
+          SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_KEY_FILE: /tls/api/control-grpc-api-client.key
+          SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_SERVER_NAME: sandbox-runner-1
+        volumes:
+          - sandbox-tls:/tls:ro
+        healthcheck:
+          test: ["CMD", "wget", "-qO-", "http://localhost:8080/healthz"]
+          interval: 5s
+          timeout: 3s
+          retries: 5
+          start_period: 10s
+        # Never publish 8080/9090 — Caddy never routes to this service, and it shouldn't.
 
-   services:
-     sandbox-certs:
-       image: ghcr.io/n8n-io/n8n-sandbox-service-api:latest
-       user: '0:0'
-       entrypoint: ['sh', '-c']
-       command:
-         - >
-           bootstrap-mtls.sh --out-dir /tls --api-san sandbox-api
-           --control-san-prefix sandbox-runner &&
-           chown -R sandbox-api:sandbox-api /tls/api
-       environment:
-         NUM_RUNNERS: '1'
-       volumes:
-         - sandbox-tls:/tls
+      sandbox-runner-1:
+        image: ghcr.io/n8n-io/n8n-sandbox-service-runner-dind:latest
+        privileged: true
+        depends_on:
+          sandbox-api:
+            condition: service_healthy
+        environment:
+          SANDBOX_RUNNER_API_KEYS: ${SANDBOX_API_RUNNER_API_KEY}
+          SANDBOX_RUNNER_REGISTRATION_TOKEN: ${SANDBOX_API_RUNNER_REGISTRATION_TOKEN}
+          SANDBOX_RUNNER_API_GRPC_ADDR: sandbox-api:9090
+          SANDBOX_RUNNER_HTTP_BASE_URL: http://sandbox-runner-1:8080
+          SANDBOX_RUNNER_CONTROL_GRPC_LISTEN_ADDR: ':9091'
+          SANDBOX_RUNNER_CONTROL_GRPC_ADVERTISE_ADDR: sandbox-runner-1:9091
+          SANDBOX_RUNNER_ID: runner-1
+          SANDBOX_RUNNER_DOCKER_SANDBOX_IMAGE: ghcr.io/n8n-io/n8n-sandbox-service-sandbox:latest
+          SANDBOX_RUNNER_REGISTRATION_GRPC_CA_FILE: /tls/runner/ca.crt
+          SANDBOX_RUNNER_REGISTRATION_GRPC_CERT_FILE: /tls/runner/grpc-client.crt
+          SANDBOX_RUNNER_REGISTRATION_GRPC_KEY_FILE: /tls/runner/grpc-client.key
+          SANDBOX_RUNNER_REGISTRATION_GRPC_SERVER_NAME: sandbox-api
+          SANDBOX_RUNNER_CONTROL_GRPC_TLS_CERT_FILE: /tls/runner/control-grpc-server.crt
+          SANDBOX_RUNNER_CONTROL_GRPC_TLS_KEY_FILE: /tls/runner/control-grpc-server.key
+          SANDBOX_RUNNER_CONTROL_GRPC_TLS_CLIENT_CA_FILE: /tls/runner/ca.crt
+        volumes:
+          - sandbox-tls:/tls:ro
+        # Never expose this container's ports publicly — it runs privileged Docker-in-Docker.
 
+      searxng:
+        image: ghcr.io/searxng/searxng:latest
+        environment:
+          SEARXNG_SECRET: ${SEARXNG_SECRET}
+        volumes:
+          - ./searxng-settings.yml:/etc/searxng/settings.yml:ro
+        # Internal-only: n8n reaches it by service name. Never publish its port, and don't route Caddy to it.
+    ```
+4.  Add the matching sandbox variables to the existing `n8n` service's `environment` block:
+
+    ```yaml
+    environment:
+     # ...your existing N8N_HOST, N8N_PORT, etc. stay as they are
+     - N8N_ENABLED_MODULES=instance-ai
+     - N8N_INSTANCE_AI_SANDBOX_ENABLED=true
+     - N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
+     - N8N_SANDBOX_SERVICE_URL=http://sandbox-api:8080
+     - N8N_SANDBOX_SERVICE_API_KEY=${SANDBOX_API_KEYS}
+     - N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
+    depends_on:
      sandbox-api:
-       image: ghcr.io/n8n-io/n8n-sandbox-service-api:latest
-       depends_on:
-         sandbox-certs:
-           condition: service_completed_successfully
-       environment:
-         SANDBOX_API_KEYS: ${SANDBOX_API_KEYS}
-         SANDBOX_API_RUNNER_REGISTRATION_TOKEN: ${SANDBOX_API_RUNNER_REGISTRATION_TOKEN}
-         SANDBOX_API_RUNNER_API_KEY: ${SANDBOX_API_RUNNER_API_KEY}
-         SANDBOX_API_GRPC_TLS_CERT_FILE: /tls/api/grpc-server.crt
-         SANDBOX_API_GRPC_TLS_KEY_FILE: /tls/api/grpc-server.key
-         SANDBOX_API_GRPC_TLS_CLIENT_CA_FILE: /tls/api/ca.crt
-         SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_CA_FILE: /tls/api/ca.crt
-         SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_CERT_FILE: /tls/api/control-grpc-api-client.crt
-         SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_KEY_FILE: /tls/api/control-grpc-api-client.key
-         SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_SERVER_NAME: sandbox-runner-1
-       volumes:
-         - sandbox-tls:/tls:ro
-       healthcheck:
-         test: ["CMD", "wget", "-qO-", "http://localhost:8080/healthz"]
-         interval: 5s
-         timeout: 3s
-         retries: 5
-         start_period: 10s
-       # Never publish 8080/9090 — Caddy never routes to this service, and it shouldn't.
+       condition: service_healthy
+    ```
+5.  Restart everything so the new services pick up the changes:
 
-     sandbox-runner-1:
-       image: ghcr.io/n8n-io/n8n-sandbox-service-runner-dind:latest
-       privileged: true
-       depends_on:
-         sandbox-api:
-           condition: service_healthy
-       environment:
-         SANDBOX_RUNNER_API_KEYS: ${SANDBOX_API_RUNNER_API_KEY}
-         SANDBOX_RUNNER_REGISTRATION_TOKEN: ${SANDBOX_API_RUNNER_REGISTRATION_TOKEN}
-         SANDBOX_RUNNER_API_GRPC_ADDR: sandbox-api:9090
-         SANDBOX_RUNNER_HTTP_BASE_URL: http://sandbox-runner-1:8080
-         SANDBOX_RUNNER_CONTROL_GRPC_LISTEN_ADDR: ':9091'
-         SANDBOX_RUNNER_CONTROL_GRPC_ADVERTISE_ADDR: sandbox-runner-1:9091
-         SANDBOX_RUNNER_ID: runner-1
-         SANDBOX_RUNNER_DOCKER_SANDBOX_IMAGE: ghcr.io/n8n-io/n8n-sandbox-service-sandbox:latest
-         SANDBOX_RUNNER_REGISTRATION_GRPC_CA_FILE: /tls/runner/ca.crt
-         SANDBOX_RUNNER_REGISTRATION_GRPC_CERT_FILE: /tls/runner/grpc-client.crt
-         SANDBOX_RUNNER_REGISTRATION_GRPC_KEY_FILE: /tls/runner/grpc-client.key
-         SANDBOX_RUNNER_REGISTRATION_GRPC_SERVER_NAME: sandbox-api
-         SANDBOX_RUNNER_CONTROL_GRPC_TLS_CERT_FILE: /tls/runner/control-grpc-server.crt
-         SANDBOX_RUNNER_CONTROL_GRPC_TLS_KEY_FILE: /tls/runner/control-grpc-server.key
-         SANDBOX_RUNNER_CONTROL_GRPC_TLS_CLIENT_CA_FILE: /tls/runner/ca.crt
-       volumes:
-         - sandbox-tls:/tls:ro
-       # Never expose this container's ports publicly — it runs privileged Docker-in-Docker.
-
-     searxng:
-       image: ghcr.io/searxng/searxng:latest
-       environment:
-         SEARXNG_SECRET: ${SEARXNG_SECRET}
-       volumes:
-         - ./searxng-settings.yml:/etc/searxng/settings.yml:ro
-       # Internal-only: n8n reaches it by service name. Never publish its port, and don't route Caddy to it.
-   ```
-
-4. Add the matching sandbox variables to the existing `n8n` service's `environment` block:
-
-   ```yaml
-   environment:
-    # ...your existing N8N_HOST, N8N_PORT, etc. stay as they are
-    - N8N_ENABLED_MODULES=instance-ai
-    - N8N_INSTANCE_AI_SANDBOX_ENABLED=true
-    - N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
-    - N8N_SANDBOX_SERVICE_URL=http://sandbox-api:8080
-    - N8N_SANDBOX_SERVICE_API_KEY=${SANDBOX_API_KEYS}
-    - N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
-   depends_on:
-    sandbox-api:
-      condition: service_healthy
-   ```
-
-5. Restart everything so the new services pick up the changes:
-
-   ```bash
-   sudo docker compose up -d
-   ```
-
+    ```bash
+    sudo docker compose up -d
+    ```
 6. Add your model API key. See [Set up n8n Assistant](../../configure-n8n/set-up-n8n-assistant.md) for the full reference, including how to pick a model provider. Web search works out of the box via the bundled SearXNG service above; add a Brave Search key instead if you'd rather use that.
 
 {% hint style="warning" %}
@@ -354,7 +368,7 @@ docker compose up -d
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-* Learn more about [configuring](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling) n8n.
+* Learn more about [configuring](../../configure-n8n/basic-configuration/use-environment-variables/) and [scaling](../../configure-n8n/scaling/) n8n.
 * Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow).
 
 ## Related resources

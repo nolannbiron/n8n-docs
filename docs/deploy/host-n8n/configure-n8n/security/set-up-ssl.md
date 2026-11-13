@@ -1,17 +1,34 @@
 ---
 title: Set up SSL
-description: Set up SSL for your self-hosted n8n instance.
 contentType: howto
 nodeTitle: Set up SSL
 originalFilePath: hosting/securing/set-up-ssl.md
-originalUrl: 'https://docs.n8n.io/hosting/securing/set-up-ssl'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/set-up-ssl'
+originalUrl: https://docs.n8n.io/hosting/securing/set-up-ssl
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/set-up-ssl
+description: Set up SSL for your self-hosted n8n instance.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Set up SSL <a href="#set-up-ssl" id="set-up-ssl"></a>
+# Set up SSL
 
 There are two methods to support TLS/SSL in n8n.
 
@@ -27,8 +44,8 @@ You can also choose to pass certificates into n8n directly. To do so, set the `N
 
 You'll need to make sure the certificate stays renewed and up to date.
 
-Refer to [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md) for more information on these variables and [Configuration](../basic-configuration.md) for more information on setting environment variables.
+Refer to [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md) for more information on these variables and [Configuration](../basic-configuration/) for more information on setting environment variables.
 
 ## Related resources
 
-* [Security](../security.md)
+* [Security](./)

@@ -1,18 +1,35 @@
 ---
 title: Block access to nodes
-description: Prevent your n8n users from accessing specific nodes.
 contentType: howto
 nodeTitle: Block specific nodes
 originalFilePath: hosting/securing/blocking-nodes.md
-originalUrl: 'https://docs.n8n.io/hosting/securing/blocking-nodes'
+originalUrl: https://docs.n8n.io/hosting/securing/blocking-nodes
 url: >-
   https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/block-specific-nodes
+description: Prevent your n8n users from accessing specific nodes.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Block access to nodes <a href="#block-access-to-nodes" id="block-access-to-nodes"></a>
+# Block specific nodes
 
 For security reasons, you may want to block your users from accessing or working with specific n8n nodes. This is helpful if your users might be untrustworthy.
 
@@ -51,6 +68,6 @@ NODES_EXCLUDE: "[]"
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-* [Security](../security.md): audit, harden, and restrict a self-hosted instance.
+* [Security](./): audit, harden, and restrict a self-hosted instance.
 * [Nodes environment variables](../basic-configuration/use-environment-variables/nodes.md): more information on this environment variable.
-* [Configuration](../basic-configuration.md): how to set environment variables.
+* [Configuration](../basic-configuration/): how to set environment variables.

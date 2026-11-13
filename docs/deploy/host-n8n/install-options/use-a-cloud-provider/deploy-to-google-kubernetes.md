@@ -7,11 +7,28 @@ originalUrl: >-
 url: >-
   https://docs.n8n.io/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# Hosting n8n on Google Kubernetes Engine <a href="#hosting-n8n-on-google-kubernetes-engine" id="hosting-n8n-on-google-kubernetes-engine"></a>
+# Deploy to Google Kubernetes
 
 Google Cloud offers several options suitable for hosting n8n, including Cloud Run (optimized for running containers), Compute Engine (VMs), and Kubernetes Engine (containers running with Kubernetes).
 
@@ -21,8 +38,8 @@ Most of the steps in this guide use the Google Cloud UI, but you can also use th
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-- The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/)
-- The [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke) (install the gcloud CLI first)
+* The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/)
+* The [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke) (install the gcloud CLI first)
 
 {% hint style="info" %}
 **Self-hosting knowledge prerequisites**
@@ -42,8 +59,7 @@ n8n recommends self-hosting for expert users. Mistakes can lead to data loss, se
 
 n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 
-Current `stable`: 2.47.7
-Current `beta`: 2.48.4
+Current `stable`: 2.47.7 Current `beta`: 2.48.4
 {% endhint %}
 
 ## Create project <a href="#create-project" id="create-project"></a>
@@ -142,17 +158,17 @@ resources:
 
 This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n cloud offerings:
 
-| Tier | RAM | CPU |
-| :--- | :--- | :--- |
-| Starter | 320mb | 10 millicore burstable |
-| Pro (10k executions) | 640mb | 20 millicore burstable |
+| Tier                 | RAM    | CPU                    |
+| -------------------- | ------ | ---------------------- |
+| Starter              | 320mb  | 10 millicore burstable |
+| Pro (10k executions) | 640mb  | 20 millicore burstable |
 | Pro (50k executions) | 1280mb | 80 millicore burstable |
 
 ### Optional: Environment variables <a href="#optional-environment-variables" id="optional-environment-variables"></a>
 
 You can configure n8n settings and behaviors using environment variables.
 
-Create an `n8n-secret.yaml` file. Refer to [Environment variables](../../configure-n8n/basic-configuration/use-environment-variables/README.md) for n8n environment variables details.
+Create an `n8n-secret.yaml` file. Refer to [Environment variables](../../configure-n8n/basic-configuration/use-environment-variables/) for n8n environment variables details.
 
 ## Deployments <a href="#deployments" id="deployments"></a>
 
@@ -168,11 +184,11 @@ To move an existing database across, follow the official [PostgreSQL upgrade gui
 
 The manifests define the following:
 
-- Send the environment variables defined to each application pod
-- Define the container image to use
-- Set resource consumption limits with the `resources` object
-- The `volumes` defined earlier and `volumeMounts` to define the path in the container to mount volumes.
-- Scaling and restart policies. The example manifests define one instance of each pod. You should change this to meet your needs.
+* Send the environment variables defined to each application pod
+* Define the container image to use
+* Set resource consumption limits with the `resources` object
+* The `volumes` defined earlier and `volumeMounts` to define the path in the container to mount volumes.
+* Scaling and restart policies. The example manifests define one instance of each pod. You should change this to meet your needs.
 
 ## Services <a href="#services" id="services"></a>
 
@@ -196,7 +212,6 @@ kubectl apply -f namespace.yaml
 ```
 {% endhint %}
 
-
 ## Set up DNS <a href="#set-up-dns" id="set-up-dns"></a>
 
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & Ingress** menu item of the cluster you want to use under the **Endpoints** column.
@@ -217,7 +232,7 @@ kubectl delete -f .
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-* Learn more about [configuring](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/basic-configuration/use-environment-variables) and [scaling](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/configure-n8n/scaling) n8n.
+* Learn more about [configuring](../../configure-n8n/basic-configuration/use-environment-variables/) and [scaling](../../configure-n8n/scaling/) n8n.
 * Or explore using n8n: try the [Quickstarts](https://app.gitbook.com/s/F723O5csUOHtKMrXjQzT/build-your-first-workflow).
 
 ## Related resources
