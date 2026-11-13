@@ -1,0 +1,111 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+version: 1
+site:
+  title: n8n Docs
+  structure:
+    - type: section
+      key: section-get-started
+      title: Get started
+      path: get-started
+      default: true
+      children:
+        - type: space
+          key: space-get-started
+          title: Get started
+          path: get-started
+          default: true
+          content:
+            directory: ./docs/get-started
+        - type: space
+          key: space-changelog
+          title: Release notes
+          path: changelog
+          hidden: true
+          content:
+            directory: ./docs/changelog
+        - type: space
+          key: space-privacy-and-security
+          title: Privacy and security
+          path: privacy-and-security
+          hidden: true
+          content:
+            directory: ./docs/privacy-and-security
+        - type: space
+          key: space-n8n-community-license
+          title: n8n Community license
+          path: n8n-community-license
+          hidden: true
+          content:
+            directory: ./docs/n8n-community-license
+    - type: section
+      key: section-deploy
+      title: Deploy
+      path: deploy
+      children:
+        - type: space
+          key: space-deploy
+          title: Deploy
+          path: deploy
+          default: true
+          content:
+            directory: ./docs/deploy
+    - type: section
+      key: section-build
+      title: Build
+      path: build
+      children:
+        - type: space
+          key: space-build
+          title: Build
+          path: build
+          default: true
+          content:
+            directory: ./docs/build
+    - type: section
+      key: section-integrations
+      title: Nodes
+      path: integrations
+      children:
+        - type: space
+          key: space-integrations
+          title: Integrations (Nodes)
+          path: integrations
+          default: true
+          content:
+            directory: ./docs/integrations
+    - type: section
+      key: section-connect
+      title: Connect
+      path: connect
+      children:
+        - type: space
+          key: space-connect
+          title: Connect
+          path: connect
+          default: true
+          content:
+            directory: ./docs/connect
+    - type: section
+      key: section-administer
+      title: Administer
+      path: administer
+      children:
+        - type: space
+          key: space-administer
+          title: Administer
+          path: administer
+          default: true
+          content:
+            directory: ./docs/administer
+    - type: section
+      key: section-contribute
+      title: Contribute
+      path: contribute
+      children:
+        - type: space
+          key: space-contribute
+          title: Contribute
+          path: contribute
+          default: true
+          content:
+            directory: ./docs/contribute
