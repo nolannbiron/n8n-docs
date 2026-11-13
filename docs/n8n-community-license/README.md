@@ -6,7 +6,7 @@
 Proprietary licenses are available for enterprise customers. [Get in touch](mailto:license@n8n.io) for more information.
 {% endhint %}
 
-n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md) are based on the [fair-code](https://faircode.io/) model. More guidance is available in our [License FAQs](./license-faq.md).
+n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md) are based on the [fair-code](https://faircode.io/) model. More guidance is available in our [License FAQs](readme/license-faq.md).
 
 ## What license do you use? <a href="#what-license-do-you-use" id="what-license-do-you-use"></a>
 
@@ -27,7 +27,7 @@ The Sustainable Use License is a fair-code software license created by n8n in 20
 * You may distribute the software or provide it to others only if you do so free of charge for non-commercial purposes.
 * You may not alter, remove, or obscure any licensing, copyright, or other notices of the licensor in the software. Any use of the licensor's trademarks is subject to applicable law.
 
-For practical guidance on what you can do with n8n community version, please check our [License FAQs](./license-faq.md).
+For practical guidance on what you can do with n8n community version, please check our [License FAQs](readme/license-faq.md).
 
 We encourage anyone who wants to use the Sustainable Use License. If you are building something out in the open, it makes sense to think about licensing earlier in order to avoid problems later. Contact us at [license@n8n.io](mailto:license@n8n.io) if you would like to ask any questions about it.
 
@@ -35,7 +35,7 @@ We encourage anyone who wants to use the Sustainable Use License. If you are bui
 
 You must sign a separate commercial agreement with us. We actively encourage software creators to build with n8n in their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to n8n for using the product in this way. [Contact us](mailto:license@n8n.io) to learn more.
 
-If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, check our [License FAQs](./license-faq.md) or email us at [license@n8n.io](mailto:license@n8n.io).
+If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, check our [License FAQs](readme/license-faq.md) or email us at [license@n8n.io](mailto:license@n8n.io).
 
 ## Why don't you use an open source license? <a href="#why-dont-you-use-an-open-source-license" id="why-dont-you-use-an-open-source-license"></a>
 
@@ -56,7 +56,7 @@ Our goals when we created the Sustainable Use License were:
 
 ## My company has a policy against using code that restricts commercial use – can I still use n8n? <a href="#my-company-has-a-policy-against-using-code-that-restricts-commercial-use-can-i-still-use-n8n" id="my-company-has-a-policy-against-using-code-that-restricts-commercial-use-can-i-still-use-n8n"></a>
 
-Provided you are using n8n for internal business purposes, and not making n8n available to your customers for them to connect their accounts and build workflows, you should be able to use n8n. If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, check our [License FAQs](./license-faq.md) or email us at [license@n8n.io](mailto:license@n8n.io).
+Provided you are using n8n for internal business purposes, and not making n8n available to your customers for them to connect their accounts and build workflows, you should be able to use n8n. If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, check our [License FAQs](readme/license-faq.md) or email us at [license@n8n.io](mailto:license@n8n.io).
 
 ## What happens to the code I contribute to n8n in light of the Sustainable Use License? <a href="#what-happens-to-the-code-i-contribute-to-n8n-in-light-of-the-sustainable-use-license" id="what-happens-to-the-code-i-contribute-to-n8n-in-light-of-the-sustainable-use-license"></a>
 
@@ -64,7 +64,7 @@ Any code you contribute on GitHub is subject to GitHub's [terms of use](https://
 
 n8n asks every contributor to sign our [Contributor License Agreement](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md). In addition to the above, this gives n8n the ability to change its license without seeking additional permission. It also means you aren't liable for your contributions (e.g. in case they cause damage to someone else's business).
 
-It's easy to get started contributing code to n8n [here](https://github.com/n8n-io), and we've listed broader ways of participating in our community [here](https://app.gitbook.com/s/MtULFJy2jwinjt5V0GTy/).
+It's easy to get started contributing code to n8n [here](https://github.com/n8n-io), and we've listed broader ways of participating in our community [here](https://app.gitbook.com/o/7xd2CLpTdTqBXztWqAyX/s/MtULFJy2jwinjt5V0GTy/).
 
 ## Why did you switch to the Sustainable Use License from your previous license arrangement (Apache 2.0 with Commons Clause)? <a href="#why-did-you-switch-to-the-sustainable-use-license-from-your-previous-license-arrangement-apache-20-w" id="why-did-you-switch-to-the-sustainable-use-license-from-your-previous-license-arrangement-apache-20-w"></a>
 
