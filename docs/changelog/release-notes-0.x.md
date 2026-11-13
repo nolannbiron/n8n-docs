@@ -26,6 +26,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 tags:
   - release
   - release notes
@@ -51,8 +53,7 @@ Features and bug fixes for n8n before the release of 1.0.0.
 
 n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 
-Current `stable`: 2.47.7
-Current `beta`: 2.48.4
+Current `stable`: 2.47.7 Current `beta`: 2.48.4
 {% endhint %}
 
 ## How to update n8n
@@ -63,8 +64,8 @@ The steps to update your n8n depend on which n8n platform you use. Refer to the 
 
 * [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version)
 * Self-hosted options:
-    * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
-    * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
+  * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
+  * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
 
 ## Semantic versioning in n8n <a href="#semantic-versioning-in-n8n" id="semantic-versioning-in-n8n"></a>
 
@@ -1055,8 +1056,8 @@ The steps to update your n8n depend on which n8n platform you use. Refer to the 
 
 * [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version)
 * Self-hosted options:
-    * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
-    * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
+  * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
+  * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
 
 ## n8n@0.216.3 <a href="#n8n02163" id="n8n02163"></a>
 
@@ -1089,8 +1090,8 @@ The steps to update your n8n depend on which n8n platform you use. Refer to the 
 
 * [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version)
 * Self-hosted options:
-    * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
-    * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
+  * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
+  * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
 
 ## n8n@0.215.3 <a href="#n8n02153" id="n8n02153"></a>
 
@@ -1120,8 +1121,8 @@ The steps to update your n8n depend on which n8n platform you use. Refer to the 
 
 * [Cloud](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/use-n8n-cloud/update-your-version)
 * Self-hosted options:
-    * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
-    * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
+  * [npm](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-npm)
+  * [Docker](https://app.gitbook.com/s/CVqOCDXNeshWSm0VR543/host-n8n/install-options/install-with-docker)
 
 ## n8n@0.214.4 <a href="#n8n02144" id="n8n02144"></a>
 
@@ -3704,7 +3705,7 @@ This release changes n8n's license, from [Apache 2.0 with Commons Clause](https:
 
 This change aims to clarify n8n's license terms, and n8n's position as a fair-code project.
 
-Read more about the new license in [Community license](https://app.gitbook.com/s/LdZn7IaCPDncajtWKh1P).
+Read more about the new license in [Community license](https://app.gitbook.com/o/7xd2CLpTdTqBXztWqAyX/s/LdZn7IaCPDncajtWKh1P/).
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 

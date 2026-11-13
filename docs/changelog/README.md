@@ -47,8 +47,7 @@ For what Preview, GA, deprecated, and removed mean, what Enterprise readiness me
 
 n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 
-Current `stable`: 2.47.7
-Current `beta`: 2.48.4
+Current `stable`: 2.47.7 Current `beta`: 2.48.4
 {% endhint %}
 
 ## Use your personal credentials in team projects
@@ -103,7 +102,7 @@ Learn more in the [Node Type Policies documentation](https://app.gitbook.com/s/n
 
 ## TypeSafe AI node for smarter workflow routing with Jev
 
-**Released:** 2026-09-30&#x20;
+**Released:** 2026-09-30
 
 You can now use TypeSafe AI's Jev model in n8n to make decisions from unstructured data, without using a general-purpose LLM to generate and parse text.
 
@@ -495,11 +494,11 @@ New [Oracle DB Vector Store](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/buil
 
 **Released:** 2026-05-19 in [n8n 2.22](release-notes.md#n8n222)
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcpclient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 Initial coverage includes some of the most-used services in the official MCP registry (Apify, Linear, monday.com, Notion, and PostHog), and we'll expand the list to cover more services soon.
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/O1TZROfuy5oML7hdsuTl/builtin/core-nodes/n8n-nodes-langchain.mcpclient) with manual configuration.
 
 {% embed url="https://youtu.be/RGhHFbLMXhQ" %}
 Connect to MCP servers with less setup
