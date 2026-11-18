@@ -113,12 +113,12 @@ The line in the message has more (or fewer) fields than the first row. In practi
 
 Fix it in the export by quoting any field that can contain the delimiter, doubling any quote mark inside the value:
 
-```text
+```
 company,email
 "Acme, Inc.",buyer@example.com
 ```
 
-A value containing a line break needs the same treatment. If the source system can't quote properly, clean the file before the node runs. Normalizing rows in a [Code node](n8n-nodes-base.code/README.md) is more reliable than loosening the parse: a row that silently shifts by one column writes the wrong value into the wrong field.
+A value containing a line break needs the same treatment. If the source system can't quote properly, clean the file before the node runs. Normalizing rows in a [Code node](n8n-nodes-base.code/) is more reliable than loosening the parse: a row that silently shifts by one column writes the wrong value into the wrong field.
 
 ### Rows come out as a single column, with no error
 
@@ -127,7 +127,3 @@ This is a delimiter mismatch: a semicolon- or tab-separated export parsed as com
 ### Rows merge together, or the data stops partway through
 
 An unbalanced quote mark: an odd number of `"` characters makes the parser treat everything after it as one long quoted value. As a result, several rows arrive as one item and the following rows look missing. The file usually got there through a manual edit or a hand-rolled export. Scan for a quote mark that has no matching closing quote. Check across line breaks too, because a field that legitimately spans several lines opens its quote on one line and closes it on another.
-
-[HTTP Request Node]: n8n-nodes-base.httprequest/README.md
-[Webhook Node]: n8n-nodes-base.webhook/README.md
-[base64]: https://datatracker.ietf.org/doc/html/rfc4648#section-4
