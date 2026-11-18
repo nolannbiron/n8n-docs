@@ -15,6 +15,8 @@ layout:
 
 # OEM deployment <a href="#oem-deployment" id="oem-deployment"></a>
 
+OEM deployment lets you embed n8n's interface in your own product, so your users build and run workflows without leaving it. It requires a separate OEM agreement and n8n branding.
+
 {% hint style="info" %}
 **OEM agreement required**
 
