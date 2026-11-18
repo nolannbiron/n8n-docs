@@ -1,14 +1,32 @@
 ---
 nodeTitle: Number
 originalFilePath: data/expression-reference/number.md
-originalUrl: 'https://docs.n8n.io/data/expression-reference/number'
+originalUrl: https://docs.n8n.io/data/expression-reference/number
 url: >-
   https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/number
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
-# Number <a href="#number" id="number"></a>
+
+# Number
 
 ## _`Number`_.**`abs()`** <a href="#numberabs" id="numberabs"></a>
 
@@ -18,14 +36,14 @@ layout:
 
 **Returns:** Number
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Examples:**
 
-  ```javascript
-  // x = -1.7
-  x.abs() //=> 1.7
-  ```
+```javascript
+// x = -1.7
+x.abs() //=> 1.7
+```
 
 ## _`Number`_.**`ceil()`** <a href="#numberceil" id="numberceil"></a>
 
@@ -35,14 +53,14 @@ layout:
 
 **Returns:** Number
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Examples:**
 
-  ```javascript
-  // x = 1.234
-  x.ceil() //=> 2
-  ```
+```javascript
+// x = 1.234
+x.ceil() //=> 2
+```
 
 ## _`Number`_.**`floor()`** <a href="#numberfloor" id="numberfloor"></a>
 
@@ -52,45 +70,45 @@ layout:
 
 **Returns:** Number
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Examples:**
 
-  ```javascript
-  // x = 1.234
-  x.floor() //=> 1
-  ```
+```javascript
+// x = 1.234
+x.floor() //=> 1
+```
 
 ## _`Number`_.**`format()`** <a href="#numberformat" id="numberformat"></a>
 
-**Description:** Returns a formatted string representing the number. Useful for formatting for a specific language or currency. The same as <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat”><code>Intl.NumberFormat()</code></a>.
+**Description:** Returns a formatted string representing the number. Useful for formatting for a specific language or currency. The same as \<a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/NumberFormat/NumberFormat”>`Intl.NumberFormat()`.
 
 **Syntax:** _`Number`_.format(locale?, options?)
 
 **Returns:** String
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Parameters:**
 
-  * `locale` (String) - optional - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument”>locale tag</a> for formatting the number, e.g. <code>fr-FR</code>, <code>en-GB</code>, <code>pr-BR</code>
-  * `options` (Object) - optional - Configuration options for number formatting. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat" target="_blank">More info</a>
+* `locale` (String) - optional - A \<a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl#locales\_argument”>locale tag for formatting the number, e.g. `fr-FR`, `en-GB`, `pr-BR`
+* `options` (Object) - optional - Configuration options for number formatting. [More info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)
 
 **Examples:**
 
-  ```javascript
-  // number = 123456.789;
-  number.format('de-DE') //=> 123.456,789
-  ```
+```javascript
+// number = 123456.789;
+number.format('de-DE') //=> 123.456,789
+```
 
-  ```javascript
-  // number = 123456.789;
-  number.format('de-DE', {'style': 'currency', 'currency': 'EUR'}) //=> 123.456,79 €
-  ```
+```javascript
+// number = 123456.789;
+number.format('de-DE', {'style': 'currency', 'currency': 'EUR'}) //=> 123.456,79 €
+```
 
 ## _`Number`_.**`isEmpty()`** <a href="#numberisempty" id="numberisempty"></a>
 
-**Description:** Returns <code>true</code> if the number is <code>0</code>, <code>NaN</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> for every other number.
+**Description:** Returns `true` if the number is `0`, `NaN`, `null`, or `undefined`. Returns `false` for every other number.
 
 {% hint style="warning" %}
 `isEmpty()` isn't a null check. On a number it treats `0` as empty, so `{{ $json.count.isEmpty() }}` returns `true` for both a missing field and a field set to `0`. To test only for a missing value, compare directly, for example `{{ $json.count === null }}`, or use the **exists** operator in the **If** node.
@@ -100,107 +118,107 @@ layout:
 
 **Returns:** Boolean
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Examples:**
 
-  ```javascript
-  // num = 10
-  num.isEmpty() // => false
-  ```
+```javascript
+// num = 10
+num.isEmpty() // => false
+```
 
-  ```javascript
-  // num = 0
-  num.isEmpty() // => true
-  ```
+```javascript
+// num = 0
+num.isEmpty() // => true
+```
 
-  ```javascript
-  // num = null
-  num.isEmpty() // => true
-  ```
+```javascript
+// num = null
+num.isEmpty() // => true
+```
 
 ## _`Number`_.**`isEven()`** <a href="#numberiseven" id="numberiseven"></a>
 
-**Description:** Returns <code>true</code> if the number is even. Throws an error if the number isn’t a whole number.
+**Description:** Returns `true` if the number is even. Throws an error if the number isn’t a whole number.
 
 **Syntax:** _`Number`_.isEven()
 
 **Returns:** Boolean
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Examples:**
 
-  ```javascript
-  // number = 33
-  number.isEven() //=> false
-  ```
+```javascript
+// number = 33
+number.isEven() //=> false
+```
 
 ## _`Number`_.**`isInteger()`** <a href="#numberisinteger" id="numberisinteger"></a>
 
-**Description:** Returns <code>true</code> if the number is a whole number
+**Description:** Returns `true` if the number is a whole number
 
 **Syntax:** _`Number`_.isInteger()
 
 **Returns:** Boolean
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Examples:**
 
-  ```javascript
-  // number = 4
-  number.isInteger() //=> true
-  ```
+```javascript
+// number = 4
+number.isInteger() //=> true
+```
 
-  ```javascript
-  // number = 4.12
-  number.isInteger() //=> false
-  ```
+```javascript
+// number = 4.12
+number.isInteger() //=> false
+```
 
 ## _`Number`_.**`isNotEmpty()`** <a href="#numberisnotempty" id="numberisnotempty"></a>
 
-**Description:** Returns <code>true</code> for every number except <code>0</code> and <code>NaN</code>. Returns <code>false</code> if the number is <code>0</code>, <code>NaN</code>, <code>null</code>, or <code>undefined</code>. This is the inverse of <code>isEmpty()</code>.
+**Description:** Returns `true` for every number except `0` and `NaN`. Returns `false` if the number is `0`, `NaN`, `null`, or `undefined`. This is the inverse of `isEmpty()`.
 
 **Syntax:** _`Number`_.isNotEmpty()
 
 **Returns:** Boolean
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Examples:**
 
-  ```javascript
-  // num = 10
-  num.isNotEmpty() // => true
-  ```
+```javascript
+// num = 10
+num.isNotEmpty() // => true
+```
 
-  ```javascript
-  // num = 0
-  num.isNotEmpty() // => false
-  ```
+```javascript
+// num = 0
+num.isNotEmpty() // => false
+```
 
-  ```javascript
-  // num = null
-  num.isNotEmpty() // => false
-  ```
+```javascript
+// num = null
+num.isNotEmpty() // => false
+```
 
 ## _`Number`_.**`isOdd()`** <a href="#numberisodd" id="numberisodd"></a>
 
-**Description:** Returns <code>true</code> if the number is odd. Throws an error if the number isn’t a whole number.
+**Description:** Returns `true` if the number is odd. Throws an error if the number isn’t a whole number.
 
 **Syntax:** _`Number`_.isOdd()
 
 **Returns:** Boolean
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Examples:**
 
-  ```javascript
-  // number = 33
-  number.isOdd() //=> true
-  ```
+```javascript
+// number = 33
+number.isOdd() //=> true
+```
 
 ## _`Number`_.**`round()`** <a href="#numberround" id="numberround"></a>
 
@@ -210,44 +228,44 @@ layout:
 
 **Returns:** Number
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Parameters:**
 
-  * `decimalPlaces` (Number) - optional - The number of decimal places to round to
+* `decimalPlaces` (Number) - optional - The number of decimal places to round to
 
 **Examples:**
 
-  ```javascript
-  // number = 1.256
-  number.round() //=> 1
-  ```
+```javascript
+// number = 1.256
+number.round() //=> 1
+```
 
-  ```javascript
-  // number = 1.256
-  number.round(1) //=> 1.3
-  number.round(2) //=> 1.26
-  ```
+```javascript
+// number = 1.256
+number.round(1) //=> 1.3
+number.round(2) //=> 1.26
+```
 
 ## _`Number`_.**`toBoolean()`** <a href="#numbertoboolean" id="numbertoboolean"></a>
 
-**Description:** Converts the number to a boolean value. <code>0</code> becomes <code>false</code>; everything else becomes <code>true</code>.
+**Description:** Converts the number to a boolean value. `0` becomes `false`; everything else becomes `true`.
 
 **Syntax:** _`Number`_.toBoolean()
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Examples:**
 
-  ```javascript
-  // number = 12
-  number.toBoolean() //=> true
-  ```
+```javascript
+// number = 12
+number.toBoolean() //=> true
+```
 
-  ```javascript
-  // number = 0
-  number.toBoolean() //=> false
-  ```
+```javascript
+// number = 0
+number.toBoolean() //=> false
+```
 
 ## _`Number`_.**`toDateTime()`** <a href="#numbertodatetime" id="numbertodatetime"></a>
 
@@ -257,28 +275,28 @@ layout:
 
 **Returns:** DateTime
 
-**Source:**  Custom n8n functionality
+**Source:** Custom n8n functionality
 
 **Parameters:**
 
-  * `format` (String) - optional - The type of timestamp to convert. Options are <code>ms</code> (for Unix timestamp in milliseconds), <code>s</code> (for Unix timestamp in seconds) or <code>excel</code> (for days since 1900).
+* `format` (String) - optional - The type of timestamp to convert. Options are `ms` (for Unix timestamp in milliseconds), `s` (for Unix timestamp in seconds) or `excel` (for days since 1900).
 
 **Examples:**
 
-  ```javascript
-  // ts = 1708695471
-  ts.toDateTime('s') //=> 2024-02-23T14:37:51+01:00
-  ```
+```javascript
+// ts = 1708695471
+ts.toDateTime('s') //=> 2024-02-23T14:37:51+01:00
+```
 
-  ```javascript
-  // ts = 1708695471000
-  ts.toDateTime('ms') //=> 2024-02-23T14:37:51+01:00
-  ```
+```javascript
+// ts = 1708695471000
+ts.toDateTime('ms') //=> 2024-02-23T14:37:51+01:00
+```
 
-  ```javascript
-  // ts = 45345
-  ts.toDateTime('excel') //=> 2024-02-23T01:00:00+01:00
-  ```
+```javascript
+// ts = 45345
+ts.toDateTime('excel') //=> 2024-02-23T01:00:00+01:00
+```
 
 ## _`Number`_.**`toLocaleString()`** <a href="#numbertolocalestring" id="numbertolocalestring"></a>
 
@@ -292,29 +310,29 @@ layout:
 
 **Parameters:**
 
-  * `locales` (String|Array<String>) - optional - The locale to assign, e.g. ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. See <a href=”https://www.localeplanet.com/icu/”>full list</a> (unofficial). Also accepts an array of locales. Defaults to the system locale if not specified.
-  * `options` (Object) - optional - An object with <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters”>formatting options</a>
+* `locales` (String|Array) - optional - The locale to assign, e.g. ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. See \<a href=”https://www.localeplanet.com/icu/”>full list (unofficial). Also accepts an array of locales. Defaults to the system locale if not specified.
+* `options` (Object) - optional - An object with \<a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/NumberFormat/NumberFormat#parameters”>formatting options
 
 **Examples:**
 
-  ```javascript
-  // num = 500000.125
-  num.toLocaleString() //=> '500,000.125' (if in US English locale)
-  ```
+```javascript
+// num = 500000.125
+num.toLocaleString() //=> '500,000.125' (if in US English locale)
+```
 
-  ```javascript
-  // num = 500000.125
-  num.toLocaleString('fr-FR') //=> '500 000,125'
-  ```
+```javascript
+// num = 500000.125
+num.toLocaleString('fr-FR') //=> '500 000,125'
+```
 
-  ```javascript
-  // num = 500000.125
-  num.toLocaleString('fr-FR', {style:'currency', currency:'EUR'}) //=> '500 000,13 €'
-  ```
+```javascript
+// num = 500000.125
+num.toLocaleString('fr-FR', {style:'currency', currency:'EUR'}) //=> '500 000,13 €'
+```
 
 ## _`Number`_.**`toString()`** <a href="#numbertostring" id="numbertostring"></a>
 
-**Description:** Converts the number to a simple textual representation. For more formatting options, see <code>toLocaleString()</code>.
+**Description:** Converts the number to a simple textual representation. For more formatting options, see `toLocaleString()`.
 
 **Syntax:** _`Number`_.toString(radix?)
 
@@ -324,20 +342,19 @@ layout:
 
 **Parameters:**
 
-  * `radix` (Number) - optional - The base to use. Must be an integer between 2 and 36. E.g. base <code>2</code> is binary and base <code>16</code> is hexadecimal.
+* `radix` (Number) - optional - The base to use. Must be an integer between 2 and 36. E.g. base `2` is binary and base `16` is hexadecimal.
 
 **Examples:**
 
-  ```javascript
-  // num = 500000.125
-  num.toString() //=> '500000.125'
-  ```
+```javascript
+// num = 500000.125
+num.toString() //=> '500000.125'
+```
 
-  ```javascript
-  // num = 500000.125
-  num.toString(16) //=> '7a120.2'
-  ```
-
+```javascript
+// num = 500000.125
+num.toString(16) //=> '7a120.2'
+```
 
 ## Related resources
 
